@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#dec857;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     d="M 1.8856181,8 H 4.6183979"
+     id="path2" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#dec857;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     id="path4"
+     d="m 10.041357,13.28632 a 5.2863202,5.2863202 0 0 1 -4.5780875,-2.64316 5.2863202,5.2863202 0 0 1 0,-5.2863201 5.2863202,5.2863202 0 0 1 4.5780875,-2.6431601 V 8 Z" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#dec857;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     d="m 11.013102,5.1270532 h 2.73278"
+     id="path5" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#dec857;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+     d="m 11.013102,10.89227 h 2.73278"
+     id="path6" />
+</svg>

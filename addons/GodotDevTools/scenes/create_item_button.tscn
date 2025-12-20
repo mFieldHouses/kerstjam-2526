@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cx8tcjg3ucjy0"]
+
+[node name="CreateItemButton" type="Button"]
+offset_right = 99.0
+offset_bottom = 31.0
+text = "Create Item"

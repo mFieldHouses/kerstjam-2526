@@ -1,0 +1,181 @@
+[gd_scene load_steps=3 format=3 uid="uid://r7voytxkxqwi"]
+
+[ext_resource type="Script" uid="uid://2wx8gcdr7fdi" path="res://addons/GodotDevTools/scenes/item_creation.gd" id="1_0kxbp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kxbp"]
+bg_color = Color(0.21410316, 0.21410301, 0.21410301, 1)
+
+[node name="ItemCreation" type="Window"]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(300, 450)
+script = ExtResource("1_0kxbp")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0kxbp")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="template" type="OptionButton" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+selected = 0
+item_count = 5
+popup/item_0/text = "Choose a creation template"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Simple Item"
+popup/item_1/id = 1
+popup/item_2/text = "Component"
+popup/item_2/id = 2
+popup/item_3/text = "Device Part"
+popup/item_3/id = 3
+popup/item_4/text = "Connector"
+popup/item_4/id = 4
+
+[node name="name" type="LineEdit" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Item Name..."
+alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="template_options" type="Control" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="simple_item" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/template_options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="component" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/template_options"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="create_scene" type="CheckBox" parent="Control/MarginContainer/VBoxContainer/template_options/component"]
+layout_mode = 2
+text = "Create component model scene"
+alignment = 1
+
+[node name="create_pin_layout_scene" type="CheckBox" parent="Control/MarginContainer/VBoxContainer/template_options/component"]
+layout_mode = 2
+text = "Create component pin scene"
+alignment = 1
+
+[node name="device_part" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/template_options"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="part_category" type="OptionButton" parent="Control/MarginContainer/VBoxContainer/template_options/device_part"]
+layout_mode = 2
+alignment = 1
+selected = 0
+item_count = 5
+popup/item_0/text = "Select a part category"
+popup/item_0/id = 10
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "Frames & Casings"
+popup/item_1/id = 0
+popup/item_2/text = "Grips & Handles"
+popup/item_2/id = 1
+popup/item_3/text = "Modules"
+popup/item_3/id = 2
+popup/item_4/text = "Miscellaneous"
+popup/item_4/id = 3
+
+[node name="subcat" type="LineEdit" parent="Control/MarginContainer/VBoxContainer/template_options/device_part"]
+layout_mode = 2
+placeholder_text = "Part Subcategory... (lowercase)"
+alignment = 1
+
+[node name="custom_cat" type="LineEdit" parent="Control/MarginContainer/VBoxContainer/template_options/device_part"]
+layout_mode = 2
+placeholder_text = "Custom category..."
+alignment = 1
+
+[node name="create_scene" type="CheckBox" parent="Control/MarginContainer/VBoxContainer/template_options/device_part"]
+layout_mode = 2
+text = "Create device part scene"
+alignment = 1
+
+[node name="connector" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/template_options"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="create_scene" type="CheckBox" parent="Control/MarginContainer/VBoxContainer/template_options/connector"]
+layout_mode = 2
+text = "Create device part scene"
+alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="create" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+disabled = true
+text = "Create Item"
+
+[node name="start_editing" type="CheckBox" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+button_pressed = true
+text = "Start editing immediately"
+flat = true
+alignment = 1
+
+[connection signal="button_down" from="Control/MarginContainer/VBoxContainer/create" to="." method="_on_create_button_down"]
