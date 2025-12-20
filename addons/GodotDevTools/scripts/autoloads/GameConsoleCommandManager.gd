@@ -81,10 +81,3 @@ func run_command(command_unparsed : String):
 		
 	GameLogger.print_verbose_as_autoload(self, "calling function " + _issued_command.target_callable_name + " on autoload " + _issued_command.target_autoload_name + " with parameters " + str(_casted_parameters))
 	get_node("/root/" + _issued_command.target_autoload_name).callv(_issued_command.target_callable_name, _casted_parameters)
-
-#func open_help_page(command_id : String = "help"):
-	#if _command_list.has(command_id):
-		#GameConsole.print_line("Opening help page for command " + command_id)
-		#PlayerUIState.player_fp_ui_root_instance.get_node("command_catalogue").show_catalogue(command_id)
-	#else:
-		#GameConsole.print_line("Help: Command " + command_id + " not found")
