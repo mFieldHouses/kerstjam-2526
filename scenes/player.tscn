@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cotqedi4mq2rs"]
+[gd_scene load_steps=9 format=3 uid="uid://cotqedi4mq2rs"]
 
 [ext_resource type="Script" uid="uid://p37eo2hx431" path="res://scripts/scenes/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://c616eu7olrg6b" path="res://assets/meshes/Weapons/SantasGun-1/SantaGun-1.fbx" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://t266m1x4e123" path="res://assets/textures/gui/crosshair.png" id="2_g2els"]
 [ext_resource type="Shader" uid="uid://c7id58kkadlqh" path="res://assets/shaders/screen_invert.gdshader" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://dg1n3v81irtsl" path="res://scripts/scenes/player_gun_grip.gd" id="2_qlg0r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvqfc"]
 radius = 0.3
@@ -40,6 +42,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="weapon_viewport" type="SubViewportContainer" parent="gui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="gui/weapon_viewport"]
+transparent_bg = true
+size = Vector2i(1152, 648)
+
+[node name="Node3D" type="Node3D" parent="gui/weapon_viewport/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20, 0)
+
+[node name="weapon_viewport_camera" type="Camera3D" parent="gui/weapon_viewport/SubViewport/Node3D"]
+fov = 56.1
+
+[node name="gun_grip" type="Marker3D" parent="gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera"]
+script = ExtResource("2_qlg0r")
+
+[node name="SantaGun-1" parent="gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip" instance=ExtResource("2_dqkch")]
+transform = Transform3D(0.013011215, -0.02761476, 0.6542883, 0.04112764, 0.65315986, 0.026749289, -0.65357804, 0.040551607, 0.01470858, 0.47774613, -0.42131615, -1.1839336)
 
 [node name="CenterContainer" type="CenterContainer" parent="gui"]
 layout_mode = 1

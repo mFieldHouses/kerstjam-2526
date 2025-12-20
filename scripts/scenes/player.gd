@@ -30,6 +30,8 @@ var controls_enabled : bool = true
 @onready var camera : Camera3D = get_node("camera")
 @onready var crosshair_sprite : TextureRect = $gui/CenterContainer/crosshair
 
+var _bobbing_anim_timer : float = 0.0
+
 func _ready():
 	
 	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_CAPTURED)
@@ -69,9 +71,13 @@ func _physics_process(delta: float) -> void:
 		#position.z += direction.z * delta * 20
 	else:
 		if direction and controls_enabled:
+			_bobbing_anim_timer += delta + (float(sprinting == true) * delta)
+			$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.bob(_bobbing_anim_timer)
 			velocity.x = lerp(velocity.x, direction.x * SPEED + (direction.x * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
 			velocity.z = lerp(velocity.z, direction.z * SPEED + (direction.z * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
 		else:
+			_bobbing_anim_timer = 0
+			$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.return_to_origin()
 			velocity.x *= 0.8
 			velocity.z *= 0.8
 	
@@ -86,6 +92,8 @@ func _physics_process(delta: float) -> void:
 	#
 	previous_camera_rotation_x = camera.rotation.x
 	previous_camera_rotation_y = rotation.y
+	
+	$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera.global_rotation = camera.global_rotation
 	
 	if !noclip:
 		var collision = move_and_slide()

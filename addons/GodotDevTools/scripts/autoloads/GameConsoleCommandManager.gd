@@ -12,7 +12,7 @@ func reload_command_list():
 	GameLogger.print_as_autoload(self, "Loading commands from " + _commands_directory + "...")
 	
 	var dir = DirAccess.open(_commands_directory)
-	if dir.get_open_error() != 0:
+	if DirAccess.get_open_error() != 0:
 		GameLogger.printerr_as_autoload(self, "Could not load commands from directory " + _commands_directory)
 		return
 	
