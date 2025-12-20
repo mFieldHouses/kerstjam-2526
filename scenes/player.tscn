@@ -54,7 +54,9 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="gui/weapon_viewport"]
 transparent_bg = true
+handle_input_locally = false
 size = Vector2i(1152, 648)
+render_target_update_mode = 4
 
 [node name="Node3D" type="Node3D" parent="gui/weapon_viewport/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20, 0)

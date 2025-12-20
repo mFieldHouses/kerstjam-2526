@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c731i0uce0esu"]
+
+[ext_resource type="Script" uid="uid://dqg832ilb8ffw" path="res://scripts/scenes/gun_hit_particles.gd" id="1_8tkhn"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_8tkhn"]
+radius = 0.2
+height = 0.4
+
+[node name="SantaGunHitStandard" type="CPUParticles3D"]
+script = ExtResource("1_8tkhn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_8tkhn")

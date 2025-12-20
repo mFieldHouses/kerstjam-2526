@@ -29,6 +29,7 @@ var controls_enabled : bool = true
 
 @onready var camera : Camera3D = get_node("camera")
 @onready var crosshair_sprite : TextureRect = $gui/CenterContainer/crosshair
+@onready var shoot_ray : RayCast3D = $camera/shoot_ray
 
 var _bobbing_anim_timer : float = 0.0
 
@@ -41,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Add the gravity.
 	if not is_on_floor() and flight == false:
-		velocity += get_gravity() * delta * 2
+		velocity += get_gravity() * delta * 1.7
 	else:
 		camera_time += delta
 
@@ -72,7 +73,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		if direction and controls_enabled:
 			_bobbing_anim_timer += delta + (float(sprinting == true) * delta)
-			$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.bob(_bobbing_anim_timer)
+			$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.bob(_bobbing_anim_timer, 1.0 + (float(sprinting == true) * 0.4))
 			velocity.x = lerp(velocity.x, direction.x * SPEED + (direction.x * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
 			velocity.z = lerp(velocity.z, direction.z * SPEED + (direction.z * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
 		else:
@@ -137,6 +138,9 @@ func _input(event):
 			else:
 				sprinting = false
 				tween_camera_fov(DEFAULT_FOV, 0.2)
+		
+		if event.is_action("shoot") and event.is_pressed():
+			shoot()
 
 func tween_camera_fov(desired_fov : float, time : float):
 	var tween = get_tree().create_tween()
@@ -144,17 +148,9 @@ func tween_camera_fov(desired_fov : float, time : float):
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(camera, "fov", desired_fov, time)
 
-func get_distance_to_player(point : Vector3): ##Returns the distance between the player and said point.
-	return (global_position - point).length()
-
-func get_unit_raycast(layers : Array, bodies : bool = true, areas : bool = false) -> RayCast3D:
-	var result : RayCast3D = $Camera/layer_4_bodies.duplicate()
-	result.target_position = Vector3(0, 0, -1)
-	result.collide_with_areas = areas
-	result.collide_with_bodies = bodies
-	
-	return result
-
-func is_point_in_view(point : Vector3) -> bool: ##NOT IMPLEMENTED YET returns whether a certain point is in the field of view of the player
-	print($Camera.unproject_position(point))
-	return false
+func shoot() -> void:
+	if shoot_ray.get_collider():
+		var _hit_effect : CPUParticles3D = preload("res://scenes/particle_effects/santa_gun_hit_standard.tscn").instantiate()
+		_hit_effect.top_level = true
+		add_child(_hit_effect)
+		_hit_effect.global_position = shoot_ray.get_collision_point()
