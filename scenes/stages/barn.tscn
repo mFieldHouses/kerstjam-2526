@@ -43,8 +43,8 @@ shadow_enabled = true
 [node name="player" parent="." instance=ExtResource("1_78x8d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.062417746, 0.94456065, 0.0437603)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="floor" type="StaticBody3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, 0)
 shape = SubResource("BoxShape3D_78x8d")

@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cotqedi4mq2rs"]
+[gd_scene load_steps=7 format=3 uid="uid://cotqedi4mq2rs"]
 
 [ext_resource type="Script" uid="uid://p37eo2hx431" path="res://scripts/scenes/player.gd" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://t266m1x4e123" path="res://assets/textures/gui/crosshair.png" id="2_g2els"]
+[ext_resource type="Shader" uid="uid://c7id58kkadlqh" path="res://assets/shaders/screen_invert.gdshader" id="2_qhqgy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvqfc"]
 radius = 0.3
@@ -10,11 +12,18 @@ height = 1.175293
 radius = 0.3
 height = 1.16
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dqkch"]
+shader = ExtResource("2_qhqgy")
+shader_parameter/transparency = 1.0
+
 [node name="player" type="CharacterBody3D"]
 script = ExtResource("1_3vyb7")
 
 [node name="camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19622588, -0.3303575)
+
+[node name="shoot_ray" type="RayCast3D" parent="camera"]
+target_position = Vector3(0, 0, -100)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16235352, 0)
@@ -23,3 +32,27 @@ shape = SubResource("CapsuleShape3D_wvqfc")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16256422, 0)
 mesh = SubResource("CapsuleMesh_u8vuu")
+
+[node name="gui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="gui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="crosshair" type="TextureRect" parent="gui/CenterContainer"]
+modulate = Color(1, 1, 1, 0.7137255)
+material = SubResource("ShaderMaterial_dqkch")
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("2_g2els")
+expand_mode = 1
