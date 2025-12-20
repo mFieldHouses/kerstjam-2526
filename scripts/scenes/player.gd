@@ -80,6 +80,7 @@ func _physics_process(delta: float) -> void:
 	camera.rotation.x = lerp(previous_camera_rotation_x, desired_camera_rotation_x, 0.5)
 	rotation.y = lerp(previous_camera_rotation_y, desired_camera_rotation_y, 0.5)
 	
+	#camera bobbing
 	#camera.position.x = (sin(camera_time * (13 + (int(sprinting) * 4))) * ((int(sprinting) * 0.02) + 0.02)) * int(Input.is_action_pressed("forward"))
 	#camera.position.y = 0.775 + (sin(camera_time * 16) * (int(sprinting) * 0.02) + 0.02)
 	#
