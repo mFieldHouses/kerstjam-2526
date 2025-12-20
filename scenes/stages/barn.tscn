@@ -1,3 +1,50 @@
-[gd_scene format=3 uid="uid://deyfnv3650ptg"]
+[gd_scene load_steps=9 format=3 uid="uid://deyfnv3650ptg"]
+
+[ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="1_28ucp"]
+[ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_78x8d"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wvqfc"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_78x8d"]
+sky_material = SubResource("ProceduralSkyMaterial_wvqfc")
+
+[sub_resource type="Environment" id="Environment_28ucp"]
+background_mode = 2
+sky = SubResource("Sky_78x8d")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o4kk"]
+albedo_texture = ExtResource("1_28ucp")
+uv1_scale = Vector3(20, 20, 20)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wvqfc"]
+material = SubResource("StandardMaterial3D_1o4kk")
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_78x8d"]
+size = Vector3(20.504883, 0.49658203, 19.720459)
 
 [node name="barn" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_28ucp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_wvqfc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.6848015, 0.7287296, 0, -0.7287296, -0.6848015, 0, 0, 0)
+shadow_enabled = true
+
+[node name="player" parent="." instance=ExtResource("1_78x8d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.062417746, 0.94456065, 0.0437603)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, 0)
+shape = SubResource("BoxShape3D_78x8d")

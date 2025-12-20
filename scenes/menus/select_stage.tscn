@@ -26,13 +26,13 @@ grow_vertical = 2
 layout_mode = 2
 text = "TUTORIAL_STAGE_BTN"
 
-[node name="STAGE_1_BTN" type="Button" parent="VBoxContainer"]
+[node name="stage1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Stage 1: The Pursuit"
+text = "STAGE_1_BTN"
 
-[node name="STAGE_2_BTN" type="Button" parent="VBoxContainer"]
+[node name="stage2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Stage 1: The Pursuit"
+text = "STAGE_2_BTN"
 
 [node name="back" type="Button" parent="."]
 layout_mode = 0
