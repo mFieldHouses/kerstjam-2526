@@ -28,9 +28,9 @@ var freecam : bool = false
 var controls_enabled : bool = true
 
 @onready var camera : Camera3D = get_node("camera")
+@onready var crosshair_sprite : TextureRect = $gui/CenterContainer/crosshair
 
 func _ready():
-	
 	
 	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_CAPTURED)
 
@@ -88,6 +88,13 @@ func _physics_process(delta: float) -> void:
 	
 	if !noclip:
 		var collision = move_and_slide()
+	
+	if $camera/shoot_ray.get_collider():
+		crosshair_sprite.modulate.a = 1.0
+		crosshair_sprite.custom_minimum_size = Vector2(25, 25)
+	else:
+		crosshair_sprite.modulate.a = 0.5
+		crosshair_sprite.custom_minimum_size = Vector2(20, 20)
 
 func sleep(): #Disables everything about the player except for idle animations.
 	$first_person_camera/layer_1.enabled = false

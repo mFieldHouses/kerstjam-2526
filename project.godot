@@ -65,3 +65,9 @@ sprint={
 locale/translations=PackedStringArray("res://translations/nl.po", "res://translations/en.po")
 locale/test="nl"
 locale/locale_filter_mode=0
+
+[layer_names]
+
+3d_physics/layer_1="General Collisions"
+3d_physics/layer_2="General Interactables"
+3d_physics/layer_3="General Shootabless"
