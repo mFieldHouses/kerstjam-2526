@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponConfiguration" load_steps=3 format=3 uid="uid://fjr7jnavkvku"]
+
+[ext_resource type="Script" uid="uid://dl3o0lopl802x" path="res://classes/resources/WeaponConfiguration.gd" id="1_1jtw6"]
+[ext_resource type="PackedScene" uid="uid://c616eu7olrg6b" path="res://assets/meshes/Weapons/SantasGun-1/SantaGun-1.fbx" id="2_604pu"]
+
+[resource]
+script = ExtResource("1_1jtw6")
+weapon_name = "Santa's Gun"
+weapon_model = ExtResource("2_604pu")
+weapon_model_scale = Vector3(3.935, 0.655, 0.655)
+weapon_grip_offset_position = Vector3(0.47774613, -0.42131615, -1.1839336)
+weapon_grip_offset_rotation = Vector3(-0.040849958, 1.5483198, 0.06288415)
+metadata/_custom_type_script = "uid://dl3o0lopl802x"

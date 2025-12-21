@@ -45,6 +45,17 @@ var noclip : bool = false
 var freecam : bool = false
 var controls_enabled : bool = true
 
+var _selected_weapon_idx : int = 0:
+	set(x):
+		x = clamp(x, 0, $gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child_count() - 1)
+		$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child(_selected_weapon_idx).visible = false
+		$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child(x).visible = true
+		_selected_weapon_idx = x
+const _weapon_selection_scroll_step : int = 2 #The amount of scroll events it takes to make the game register one "step"/select a different weapon.
+var _weapon_selection_scroll_counter : int = 0
+var _weapon_selection_scroll_timer : float = 0.0 #When this reaches the value of _weapon_selection_scroll_timeout_time, _weapon_selection_scroll_counter is set back to 0.
+var _weapon_selection_scroll_timeout_time : float = 0.4
+
 @onready var camera : Camera3D = get_node("camera")
 @onready var crosshair_sprite : TextureRect = $gui/CenterContainer/crosshair
 @onready var shoot_ray : RayCast3D = $camera/shoot_ray
@@ -58,6 +69,10 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	#ResourceLoader.load_threaded_get()
+	
+	_weapon_selection_scroll_timer += delta
+	if _weapon_selection_scroll_timer >= _weapon_selection_scroll_timeout_time:
+		_weapon_selection_scroll_counter = 0
 	
 	# Add the gravity.
 	if not is_on_floor() and flight == false:
@@ -146,9 +161,9 @@ func toggle_freecam(state : bool = true):
 func _input(event):
 	if controls_enabled:
 		if event is InputEventMouseMotion:
-			desired_camera_rotation_x += (event.relative.y / -2000*PI) * sensitivity_multiplier
+			desired_camera_rotation_x += (event.relative.y / -2000*PI) * sensitivity_multiplier * ConfigurableValues.mouse_sensitivity
 			desired_camera_rotation_x = clamp(desired_camera_rotation_x, -0.5 * PI, 0.5 * PI)
-			desired_camera_rotation_y += (event.relative.x / -2000*PI) * sensitivity_multiplier
+			desired_camera_rotation_y += (event.relative.x / -2000*PI) * sensitivity_multiplier * ConfigurableValues.mouse_sensitivity
 		
 		if event.is_action("sprint") and !in_scope:
 			if event.is_pressed():
@@ -163,6 +178,19 @@ func _input(event):
 		
 		elif event.is_action("scope"):
 			toggle_scope_mode(event.is_pressed())
+		
+		elif event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+				_weapon_selection_scroll_counter += 1
+			elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN: 
+				_weapon_selection_scroll_counter -= 1
+			
+			if _weapon_selection_scroll_counter >= _weapon_selection_scroll_step:
+				_selected_weapon_idx += 1
+				_weapon_selection_scroll_counter = 0
+			elif _weapon_selection_scroll_counter <= -_weapon_selection_scroll_step:
+				_selected_weapon_idx -= 1
+				_weapon_selection_scroll_counter = 0
 			
 
 func tween_camera_fov(desired_fov : float, time : float):
