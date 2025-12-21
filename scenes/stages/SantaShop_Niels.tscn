@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=18 format=3 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://lso2mbdefwrb" path="res://assets/meshes/Misc/Chimney-1.glb" id="11_3bagg"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="12_3bagg"]
 [ext_resource type="PackedScene" uid="uid://coqgbgox4wuqd" path="res://scenes/elements/SmallWoodenSupportedRoof-1.tscn" id="13_qh1ma"]
+[ext_resource type="PackedScene" uid="uid://dg0m6iv5odcgv" path="res://assets/meshes/Enemies/Mimic-1.glb" id="14_qh1ma"]
 
 [sub_resource type="Environment" id="Environment_vk2yt"]
 resource_local_to_scene = true
@@ -21049,3 +21050,8 @@ mesh = SubResource("BoxMesh_3bagg")
 
 [node name="Node3D" parent="." instance=ExtResource("13_qh1ma")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9418964, 2.7792485, -0.5885861)
+
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="Mimic-12" parent="." instance=ExtResource("14_qh1ma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3976493, 0.22447562, -3.3140087)
