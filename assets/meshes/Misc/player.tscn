@@ -1,0 +1,111 @@
+[gd_scene load_steps=10 format=3 uid="uid://cotqedi4mq2rs"]
+
+[ext_resource type="Script" uid="uid://p37eo2hx431" path="res://scripts/scenes/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://c616eu7olrg6b" path="res://assets/meshes/Weapons/SantasGun-1/SantaGun-1.fbx" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://t266m1x4e123" path="res://assets/textures/gui/crosshair.png" id="2_g2els"]
+[ext_resource type="Shader" uid="uid://c7id58kkadlqh" path="res://assets/shaders/screen_invert.gdshader" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://dg1n3v81irtsl" path="res://scripts/scenes/player_gun_grip.gd" id="2_qlg0r"]
+[ext_resource type="Script" uid="uid://cqd46xb7r6v6y" path="res://scripts/player_ui.gd" id="2_tuyoq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvqfc"]
+radius = 0.3
+height = 1.175293
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u8vuu"]
+radius = 0.3
+height = 1.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dqkch"]
+shader = ExtResource("2_qhqgy")
+shader_parameter/transparency = 1.0
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_3vyb7")
+
+[node name="camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19622588, -0.3303575)
+
+[node name="shoot_ray" type="RayCast3D" parent="camera"]
+target_position = Vector3(0, 0, -100)
+
+[node name="interact_ray" type="RayCast3D" parent="camera"]
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16235352, 0)
+shape = SubResource("CapsuleShape3D_wvqfc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16256422, 0)
+mesh = SubResource("CapsuleMesh_u8vuu")
+
+[node name="gui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_tuyoq")
+
+[node name="weapon_viewport" type="SubViewportContainer" parent="gui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="gui/weapon_viewport"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Node3D" type="Node3D" parent="gui/weapon_viewport/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20, 0)
+
+[node name="weapon_viewport_camera" type="Camera3D" parent="gui/weapon_viewport/SubViewport/Node3D"]
+fov = 56.1
+
+[node name="gun_grip" type="Marker3D" parent="gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera"]
+script = ExtResource("2_qlg0r")
+
+[node name="SantaGun-1" parent="gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip" instance=ExtResource("2_dqkch")]
+transform = Transform3D(0.013011215, -0.02761476, 0.6542883, 0.04112764, 0.65315986, 0.026749289, -0.65357804, 0.040551607, 0.01470858, 0.47774613, -0.42131615, -1.1839336)
+
+[node name="CenterContainer" type="CenterContainer" parent="gui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="crosshair" type="TextureRect" parent="gui/CenterContainer"]
+modulate = Color(1, 1, 1, 0.7137255)
+material = SubResource("ShaderMaterial_dqkch")
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("2_g2els")
+expand_mode = 1
+
+[node name="prompt_label" type="RichTextLabel" parent="gui"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 240.0
+offset_right = 20.0
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0

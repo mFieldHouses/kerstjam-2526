@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://w07r2jd4pm7c"]
+
+[ext_resource type="Texture2D" uid="uid://wks1l0ihp7il" path="res://assets/textures/Axe-1_christmas_color_atlas_full_blocks_gradients_256.png" id="1_gy8oc"]
+
+[resource]
+albedo_texture = ExtResource("1_gy8oc")

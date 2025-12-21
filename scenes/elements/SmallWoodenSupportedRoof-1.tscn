@@ -1,0 +1,670 @@
+[gd_scene load_steps=6 format=3 uid="uid://coqgbgox4wuqd"]
+
+[ext_resource type="PackedScene" uid="uid://b3mvi5fvx3vo7" path="res://assets/meshes/Misc/SticksAndLogs/LogBend-1.glb" id="1_jm1du"]
+[ext_resource type="PackedScene" uid="uid://cy1eyxi6npyoe" path="res://assets/meshes/Misc/SticksAndLogs/Stick-1.glb" id="2_fmusu"]
+[ext_resource type="PackedScene" uid="uid://b83f3sxc80mk5" path="res://assets/meshes/Misc/SticksAndLogs/StickDiagonal-1.glb" id="3_4iv41"]
+[ext_resource type="PackedScene" uid="uid://dgtu3o8i7jq2r" path="res://assets/meshes/Misc/SticksAndLogs/StickStraight-1.glb" id="4_x4s2b"]
+[ext_resource type="PackedScene" uid="uid://bmm3oxaoe3to5" path="res://assets/meshes/Misc/RoofTile-1.glb" id="5_hnwbi"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WoodConstruction" type="Node3D" parent="."]
+
+[node name="LogBend-12" parent="WoodConstruction" instance=ExtResource("1_jm1du")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.663895, 0, -0.11169624)
+
+[node name="LogBend-13" parent="WoodConstruction" instance=ExtResource("1_jm1du")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4023342, 0.028883517, -0.11169624)
+
+[node name="LogBend-14" parent="WoodConstruction" instance=ExtResource("1_jm1du")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.447188, 0, -0.11169624)
+
+[node name="Stick-12" parent="WoodConstruction" instance=ExtResource("2_fmusu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4360516, -0.6419337, -0.12897289)
+
+[node name="Stick-13" parent="WoodConstruction" instance=ExtResource("2_fmusu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3797649, -0.61305016, -0.12897289)
+
+[node name="Stick-14" parent="WoodConstruction" instance=ExtResource("2_fmusu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6960397, -0.6419337, -0.12897289)
+
+[node name="StickDiagonal-12" parent="WoodConstruction" instance=ExtResource("3_4iv41")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.418471, -0.025924921, -0.18206644)
+
+[node name="StickDiagonal-14" parent="WoodConstruction" instance=ExtResource("3_4iv41")]
+transform = Transform3D(0.5724083, 0.57600856, 0.58357763, -0.37411347, 0.8167735, -0.43922687, -0.7296492, 0.033092983, 0.6830205, 2.418471, 0.0040136576, -0.10175967)
+
+[node name="StickDiagonal-15" parent="WoodConstruction" instance=ExtResource("3_4iv41")]
+transform = Transform3D(0.5724083, 0.57600856, 0.58357763, -0.37411347, 0.8167735, -0.43922687, -0.7296492, 0.033092983, 0.6830205, 0.39136147, 0.0040135384, -0.11270237)
+
+[node name="StickDiagonal-13" parent="WoodConstruction" instance=ExtResource("3_4iv41")]
+transform = Transform3D(0.99962616, -0.0010697581, -0.027320385, 0.004038209, 0.9940519, 0.108831346, 0.027041465, -0.108901, 0.9936847, 0.4613855, 0.0051158667, -0.09937024)
+
+[node name="StickStraight-12" parent="WoodConstruction" instance=ExtResource("4_x4s2b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3239768, -0.32065797, -0.5834398)
+
+[node name="StickStraight-13" parent="WoodConstruction" instance=ExtResource("4_x4s2b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4075387, -0.32065797, -0.5834398)
+
+[node name="Rooftiles" type="Node3D" parent="."]
+
+[node name="Row 1" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.020379066, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 1" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 1" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 1" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 1" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 1" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 1" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 1" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 1" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 2" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16640073, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 2" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 2" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 2" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 2" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 2" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 2" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 2" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 2" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 3" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35406002, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 3" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 3" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 3" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 3" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 3" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 3" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 3" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 3" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 4" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5408398, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 4" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 4" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 4" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 4" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 4" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 4" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 4" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 4" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 5" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72717905, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 5" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 5" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 5" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 5" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 5" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 5" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 5" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 5" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 6" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91395885, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 6" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 6" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 6" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 6" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 6" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 6" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 6" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 6" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 7" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1016182, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 7" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 7" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 7" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 7" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 7" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 7" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 7" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 7" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 8" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2883979, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 8" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 8" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 8" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 8" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 8" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 8" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 8" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 8" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 9" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4717854, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 9" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 9" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 9" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 9" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 9" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 9" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 9" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 9" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 10" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6585653, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 10" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 10" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 10" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 10" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 10" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 10" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 10" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 10" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 11" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8462245, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 11" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 11" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 11" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 11" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 11" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 11" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 11" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 11" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 12" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0330043, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 12" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 12" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 12" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 12" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 12" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 12" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 12" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 12" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 13" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2193437, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 13" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 13" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 13" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 13" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 13" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 13" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 13" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 13" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 14" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4061234, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 14" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 14" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 14" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 14" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 14" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 14" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 14" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 14" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 15" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5937827, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 15" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 15" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 15" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 15" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 15" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 15" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 15" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 15" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 16" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7805624, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 16" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 16" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 16" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 16" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 16" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 16" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 16" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 16" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 17" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9676502, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 17" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 17" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 17" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 17" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 17" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 17" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 17" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 17" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 18" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.15443, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 18" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 18" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 18" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 18" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 18" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 18" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 18" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 18" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 19" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3407693, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 19" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 19" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 19" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 19" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 19" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 19" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 19" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 19" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 20" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.527549, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 20" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 20" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 20" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 20" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 20" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 20" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 20" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 20" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 21" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7152083, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 21" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 21" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 21" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 21" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 21" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 21" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 21" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 21" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 22" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.901988, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 22" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 22" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 22" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 22" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 22" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 22" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 22" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 22" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)
+
+[node name="Row 23" type="Node3D" parent="Rooftiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.086658, 0, 0)
+
+[node name="RoofTile-1" parent="Rooftiles/Row 23" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.3920455, -0.8239423)
+
+[node name="RoofTile-2" parent="Rooftiles/Row 23" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.28458273, -0.67585415)
+
+[node name="RoofTile-3" parent="Rooftiles/Row 23" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.17445017, -0.52160335)
+
+[node name="RoofTile-4" parent="Rooftiles/Row 23" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, -0.066987395, -0.37351513)
+
+[node name="RoofTile-5" parent="Rooftiles/Row 23" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.031727627, -0.23651496)
+
+[node name="RoofTile-6" parent="Rooftiles/Row 23" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.13919042, -0.08842677)
+
+[node name="RoofTile-7" parent="Rooftiles/Row 23" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.24932297, 0.06582397)
+
+[node name="RoofTile-8" parent="Rooftiles/Row 23" instance=ExtResource("5_hnwbi")]
+transform = Transform3D(1, 0, 0, 0, 0.99966097, -0.026037369, 0, 0.026037369, 0.99966097, -0.6118922, 0.35678577, 0.21391222)

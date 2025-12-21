@@ -28,6 +28,10 @@ GlobalGameDefaults="*res://scripts/autoloads/GlobalGameDefaults.gd"
 PersistentUI="*res://scenes/autoloads/PersistentUI.tscn"
 DefaultPaths="*res://scripts/autoloads/DefaultPaths.gd"
 
+[display]
+
+window/size/mode=3
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
