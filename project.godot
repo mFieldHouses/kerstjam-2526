@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="kerstjam2526"
-run/main_scene="uid://deyfnv3650ptg"
+run/main_scene="uid://cli4mcpwy7htl"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -25,6 +25,8 @@ PlayerState="*res://scripts/autoloads/PlayerState.gd"
 SceneManager="*res://scripts/autoloads/SceneManager.gd"
 PlayerUIState="*res://scripts/autoloads/PlayerUIState.gd"
 GlobalGameDefaults="*res://scripts/autoloads/GlobalGameDefaults.gd"
+PersistentUI="*res://scenes/autoloads/PersistentUI.tscn"
+DefaultPaths="*res://scripts/autoloads/DefaultPaths.gd"
 
 [editor]
 

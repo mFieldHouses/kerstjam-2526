@@ -113,7 +113,7 @@ func _physics_process(delta: float) -> void:
 	previous_camera_rotation_x = camera.rotation.x
 	previous_camera_rotation_y = rotation.y
 	
-	$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera.global_rotation = camera.global_rotation
+	$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera.global_rotation.y = camera.global_rotation.y
 	
 	if !noclip:
 		var collision = move_and_slide()
@@ -186,6 +186,7 @@ func toggle_scope_mode(state : bool) -> void:
 		
 		if Input.is_action_pressed("sprint"):
 			sprinting = true
+			tween_camera_fov(DEFAULT_FOV + 20, 0.2)
 
 func shoot() -> void:
 	if shoot_ray.get_collider():
