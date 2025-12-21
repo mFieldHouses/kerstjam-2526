@@ -63,7 +63,7 @@ func _process(delta: float) -> void:
 		
 
 func player_looking_at_area() -> bool: ##Returns whether the player is looking at any of the areas added as children to this [ActionPromptTrigger].
-	var player_looking_at = PlayerState.layer_5_raycast.get_collider()
+	var player_looking_at = PlayerState.layer_2_raycast.get_collider()
 	
 	for area in _areas:
 		if area == player_looking_at:

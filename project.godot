@@ -21,6 +21,10 @@ GameConsole="*res://addons/GodotDevTools/scripts/autoloads/GameConsole.gd"
 GameConsoleCommandManager="*res://addons/GodotDevTools/scripts/autoloads/GameConsoleCommandManager.gd"
 GameLogger="*res://addons/GodotDevTools/scripts/autoloads/GameLogger.gd"
 Utility="*res://addons/GodotDevTools/scripts/autoloads/Utility.gd"
+PlayerState="*res://scripts/autoloads/PlayerState.gd"
+SceneManager="*res://scripts/autoloads/SceneManager.gd"
+PlayerUIState="*res://scripts/autoloads/PlayerUIState.gd"
+GlobalGameDefaults="*res://scripts/autoloads/GlobalGameDefaults.gd"
 
 [editor]
 
