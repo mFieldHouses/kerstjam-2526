@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://deyfnv3650ptg"]
+[gd_scene load_steps=12 format=3 uid="uid://deyfnv3650ptg"]
 
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="1_28ucp"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_78x8d"]
+[ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="3_1o4kk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wvqfc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -28,6 +29,10 @@ size = Vector2(20, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_78x8d"]
 size = Vector3(20.504883, 0.49658203, 19.720459)
 
+[sub_resource type="BoxMesh" id="BoxMesh_28ucp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_me2a5"]
+
 [node name="barn" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -48,3 +53,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.062417746, 0.94456065, 0.04
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, 0)
 shape = SubResource("BoxShape3D_78x8d")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.2922366)
+mesh = SubResource("BoxMesh_28ucp")
+
+[node name="ActionPromptTrigger" type="Node3D" parent="MeshInstance3D2"]
+script = ExtResource("3_1o4kk")
+trigger_key = "E"
+metadata/_custom_type_script = "uid://c7ccd1128l7ea"
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D2/ActionPromptTrigger"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/ActionPromptTrigger/Area3D"]
+shape = SubResource("BoxShape3D_me2a5")

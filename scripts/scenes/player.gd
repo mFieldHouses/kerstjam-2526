@@ -1,13 +1,31 @@
 extends CharacterBody3D
 class_name Player
 
+# CONFIG -------------------
+
 const SPEED = 3.5
 const SPRINT_SPEED_DELTA = 2.0
 const JUMP_VELOCITY = 4.5
 
 const DEFAULT_FOV = 75
 
+var sensitivity_multipliers : Dictionary[String, float] = {
+	"default" : 1.0,
+	"in_scope" : 0.5
+}
+
+var speed_multipliers : Dictionary[String, float] = {
+	"default": 1.0,
+	"in_scope": 0.6
+}
+
+# END CONFIG -------------------
+
+var sensitivity_multiplier : float = 1.0
+var speed_multiplier : float = 1.0
+
 var sprinting : bool = false
+var in_scope : bool = false
 
 var camera_offset_x : float = 0.0
 var camera_offset_y : float = 0.0
@@ -35,6 +53,7 @@ var _bobbing_anim_timer : float = 0.0
 
 func _ready():
 	
+	PlayerState.player_instance = self
 	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
@@ -73,9 +92,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		if direction and controls_enabled:
 			_bobbing_anim_timer += delta + (float(sprinting == true) * delta)
-			$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.bob(_bobbing_anim_timer, 1.0 + (float(sprinting == true) * 0.4))
-			velocity.x = lerp(velocity.x, direction.x * SPEED + (direction.x * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
-			velocity.z = lerp(velocity.z, direction.z * SPEED + (direction.z * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
+			$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.bob(_bobbing_anim_timer, 0.7 + (float(sprinting == true) * 0.4))
+			velocity.x = lerp(velocity.x, direction.x * SPEED * speed_multiplier + (direction.x * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
+			velocity.z = lerp(velocity.z, direction.z * SPEED * speed_multiplier + (direction.z * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
 		else:
 			_bobbing_anim_timer = 0
 			$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.return_to_origin()
@@ -127,11 +146,11 @@ func toggle_freecam(state : bool = true):
 func _input(event):
 	if controls_enabled:
 		if event is InputEventMouseMotion:
-			desired_camera_rotation_x += event.relative.y / -2000*PI
+			desired_camera_rotation_x += (event.relative.y / -2000*PI) * sensitivity_multiplier
 			desired_camera_rotation_x = clamp(desired_camera_rotation_x, -0.5 * PI, 0.5 * PI)
-			desired_camera_rotation_y += event.relative.x / -2000*PI
+			desired_camera_rotation_y += (event.relative.x / -2000*PI) * sensitivity_multiplier
 		
-		if event.is_action("sprint"):
+		if event.is_action("sprint") and !in_scope:
 			if event.is_pressed():
 				sprinting = true
 				tween_camera_fov(DEFAULT_FOV + 20, 0.2)
@@ -139,8 +158,12 @@ func _input(event):
 				sprinting = false
 				tween_camera_fov(DEFAULT_FOV, 0.2)
 		
-		if event.is_action("shoot") and event.is_pressed():
+		elif event.is_action("shoot") and event.is_pressed():
 			shoot()
+		
+		elif event.is_action("scope"):
+			toggle_scope_mode(event.is_pressed())
+			
 
 func tween_camera_fov(desired_fov : float, time : float):
 	var tween = get_tree().create_tween()
@@ -148,9 +171,28 @@ func tween_camera_fov(desired_fov : float, time : float):
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(camera, "fov", desired_fov, time)
 
+func toggle_scope_mode(state : bool) -> void:
+	sprinting = false
+	in_scope = state
+	
+	if state:
+		tween_camera_fov(DEFAULT_FOV - 50, 0.2)
+		sensitivity_multiplier = sensitivity_multipliers["in_scope"]
+		speed_multiplier = speed_multipliers["in_scope"]
+	else:
+		tween_camera_fov(DEFAULT_FOV, 0.2)
+		sensitivity_multiplier = sensitivity_multipliers["default"]
+		speed_multiplier = speed_multipliers["default"]
+		
+		if Input.is_action_pressed("sprint"):
+			sprinting = true
+
 func shoot() -> void:
 	if shoot_ray.get_collider():
 		var _hit_effect : CPUParticles3D = preload("res://scenes/particle_effects/santa_gun_hit_standard.tscn").instantiate()
 		_hit_effect.top_level = true
 		add_child(_hit_effect)
 		_hit_effect.global_position = shoot_ray.get_collision_point()
+
+func get_distance_to_player(point : Vector3): ##Returns the distance between the player and said point.
+	return (global_position - point).length()

@@ -28,8 +28,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19622588, -0.3303575)
 target_position = Vector3(0, 0, -100)
 
 [node name="interact_ray" type="RayCast3D" parent="camera"]
-target_position = Vector3(0, 0, -100)
+target_position = Vector3(0, 0, -5)
 collision_mask = 2
+collide_with_areas = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16235352, 0)
