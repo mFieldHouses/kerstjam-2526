@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cotqedi4mq2rs"]
+[gd_scene load_steps=8 format=3 uid="uid://cotqedi4mq2rs"]
 
 [ext_resource type="Script" uid="uid://p37eo2hx431" path="res://scripts/scenes/player.gd" id="1_3vyb7"]
-[ext_resource type="PackedScene" uid="uid://c616eu7olrg6b" path="res://assets/meshes/Weapons/SantasGun-1/SantaGun-1.fbx" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://t266m1x4e123" path="res://assets/textures/gui/crosshair.png" id="2_g2els"]
-[ext_resource type="Shader" uid="uid://c7id58kkadlqh" path="res://assets/shaders/screen_invert.gdshader" id="2_qhqgy"]
 [ext_resource type="Script" uid="uid://dg1n3v81irtsl" path="res://scripts/scenes/player_gun_grip.gd" id="2_qlg0r"]
 [ext_resource type="Script" uid="uid://cqd46xb7r6v6y" path="res://scripts/player_ui.gd" id="2_tuyoq"]
+[ext_resource type="Material" uid="uid://xtjmhhy5hj80" path="res://assets/resources/materials/invert.tres" id="4_qlg0r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvqfc"]
 radius = 0.3
@@ -14,10 +13,6 @@ height = 1.175293
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u8vuu"]
 radius = 0.3
 height = 1.16
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dqkch"]
-shader = ExtResource("2_qhqgy")
-shader_parameter/transparency = 1.0
 
 [node name="player" type="CharacterBody3D"]
 script = ExtResource("1_3vyb7")
@@ -74,9 +69,6 @@ fov = 56.1
 [node name="gun_grip" type="Marker3D" parent="gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera"]
 script = ExtResource("2_qlg0r")
 
-[node name="SantaGun-1" parent="gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip" instance=ExtResource("2_dqkch")]
-transform = Transform3D(0.013011215, -0.02761476, 0.6542883, 0.04112764, 0.65315986, 0.026749289, -0.65357804, 0.040551607, 0.01470858, 0.47774613, -0.42131615, -1.1839336)
-
 [node name="CenterContainer" type="CenterContainer" parent="gui"]
 layout_mode = 1
 anchors_preset = 15
@@ -87,7 +79,7 @@ grow_vertical = 2
 
 [node name="crosshair" type="TextureRect" parent="gui/CenterContainer"]
 modulate = Color(1, 1, 1, 0.7137255)
-material = SubResource("ShaderMaterial_dqkch")
+material = ExtResource("4_qlg0r")
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 texture = ExtResource("2_g2els")

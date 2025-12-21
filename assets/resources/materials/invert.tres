@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://xtjmhhy5hj80"]
+
+[ext_resource type="Shader" uid="uid://c7id58kkadlqh" path="res://assets/shaders/screen_invert.gdshader" id="1_lcqa8"]
+
+[resource]
+shader = ExtResource("1_lcqa8")
+shader_parameter/transparency = 1.0
