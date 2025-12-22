@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cgf0ua2wdmgjr"]
+
+[ext_resource type="Texture2D" uid="uid://defh3td4er0t1" path="res://assets/textures/misc/arctic_industrial_color_atlas_256_2.png" id="1_nbbxd"]
+
+[resource]
+albedo_texture = ExtResource("1_nbbxd")
