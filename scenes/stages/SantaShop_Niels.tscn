@@ -1,8 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=31 format=3 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
 [ext_resource type="PackedScene" uid="uid://b3xp6v5lsvndw" path="res://assets/meshes/SantaShop/Walls/Wall-1-45d-2x2x05m.fbx" id="2_ffmxs"]
+[ext_resource type="PackedScene" uid="uid://ehhmeed2vnyk" path="res://assets/meshes/Environment/SnowHigh-2.glb" id="3_4keet"]
 [ext_resource type="Texture2D" uid="uid://jfkg7i30emv4" path="res://assets/textures/walls/Brick-2.png" id="3_f5mbd"]
 [ext_resource type="PackedScene" uid="uid://e11s1uc2rpys" path="res://assets/meshes/SantaShop/Walls/CornerStones-1-04x04x03m.fbx" id="3_qp7sl"]
 [ext_resource type="Texture2D" uid="uid://dyrka6tkive4a" path="res://assets/textures/walls/Brick-3-Diffuse.png" id="4_8rtee"]
@@ -84,6 +85,9 @@ transform = Transform3D(-0.9488705, -1.3798183e-08, 0.31566563, -0.31566563, 4.1
 
 [node name="TreeLog-11" parent="WoodLogs" instance=ExtResource("10_77j7p")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.532958, 0.7068356, -0.4659009)
+
+[node name="SnowHigh-2" parent="WoodLogs" instance=ExtResource("3_4keet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.371952, 0, -15.854887)
 
 [node name="Chimney-1" parent="." instance=ExtResource("11_3bagg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 6, -3)
@@ -21297,3 +21301,4 @@ texture_albedo = ExtResource("25_h8udn")
 
 [node name="Yeti-1" parent="." instance=ExtResource("26_86l8b")]
 transform = Transform3D(-0.49005207, 0, 0.87169313, 0, 1, 0, -0.87169313, 0, -0.49005207, -9.9611, 3.4231923, 0.45292485)
+transform = Transform3D(-0.99958587, 0, 0.0287764, 0, 1, 0, -0.0287764, 0, -0.99958587, -9.9611, 3.4231923, 20.175823)
