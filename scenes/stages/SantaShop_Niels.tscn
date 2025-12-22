@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=30 format=3 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
@@ -21,6 +21,11 @@
 [ext_resource type="PackedScene" uid="uid://blny7d2mxqxwg" path="res://assets/meshes/Misc/StreetLantern-1.glb" id="19_4n3p1"]
 [ext_resource type="Script" uid="uid://c0xopaj8p04ph" path="res://scripts/scenes/flickering_streetlight.gd" id="20_ynkcq"]
 [ext_resource type="PackedScene" uid="uid://bpe7uo5td47p7" path="res://assets/meshes/Misc/PineTree-1.glb" id="21_4dun5"]
+[ext_resource type="PackedScene" uid="uid://xiex0fdlw27f" path="res://assets/meshes/Environment/SnowMid-1-col.glb" id="22_5ko26"]
+[ext_resource type="PackedScene" uid="uid://bxxankmgh5hfl" path="res://assets/meshes/Environment/SnowHigh-1-col.glb" id="22_h8udn"]
+[ext_resource type="PackedScene" uid="uid://c6g1y65gmil6h" path="res://assets/meshes/Environment/SteppingStonesPath/SteppingStone-1.glb" id="24_86l8b"]
+[ext_resource type="Texture2D" uid="uid://1ig47fgqlqds" path="res://assets/textures/misc/Snow-Square-1.png" id="25_h8udn"]
+[ext_resource type="PackedScene" uid="uid://d3isuepelisyt" path="res://assets/meshes/Enemies/Yeti-1.glb" id="26_86l8b"]
 
 [sub_resource type="Environment" id="Environment_vk2yt"]
 resource_local_to_scene = true
@@ -951,6 +956,12 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.25
 
 [node name="Wall-1-45d-2x2x05m4" parent="SantasShop/Structure/Walls" instance=ExtResource("2_ffmxs")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19, 10, 2.75)
+
+[node name="Wall-1-DoorCorner-12" parent="SantasShop/Structure/Walls" instance=ExtResource("17_m7iyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 3.25, 3.75)
+
+[node name="Wall-1-DoorCorner-13" parent="SantasShop/Structure/Walls" instance=ExtResource("17_m7iyr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.75, 3.25, 9.723)
 
 [node name="Roofs" type="Node3D" parent="SantasShop/Structure"]
 
@@ -21245,16 +21256,12 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.8
 [node name="BigDoor-L-Detailed" parent="SantasShop/Structure/Doors" instance=ExtResource("15_bcxbn")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.804, 0, 3.773)
 
-[node name="Wall-1-DoorCorner-12" parent="." instance=ExtResource("17_m7iyr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 3.25, 3.75)
+[node name="Decoration" type="Node3D" parent="SantasShop"]
 
-[node name="Wall-1-DoorCorner-13" parent="." instance=ExtResource("17_m7iyr")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.75, 3.25, 9.723)
-
-[node name="Beam-1-Decoration-12" parent="." instance=ExtResource("18_53j7x")]
+[node name="Beam-1-Decoration-12" parent="SantasShop/Decoration" instance=ExtResource("18_53j7x")]
 transform = Transform3D(1, 0, 0, 0, 0.6431098, -0.77145517, 0, 0.6449082, 0.7693039, -1, 9.609789, 11.7729845)
 
-[node name="Beam-1-Decoration-13" parent="." instance=ExtResource("18_53j7x")]
+[node name="Beam-1-Decoration-13" parent="SantasShop/Decoration" instance=ExtResource("18_53j7x")]
 transform = Transform3D(1, 0, 0, 0, 0.6440096, 0.7703803, 0, -0.6440096, 0.7703803, -1, 9.8004055, 1.9290142)
 
 [node name="StreetLanterns" type="Node3D" parent="."]
@@ -21267,5 +21274,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 light_color = Color(1, 0.68235296, 0.09019608, 1)
 script = ExtResource("20_ynkcq")
 
-[node name="PineTree-1" parent="." instance=ExtResource("21_4dun5")]
+[node name="SnowMid-1-col" parent="." instance=ExtResource("22_5ko26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7838355, 0.51704854, -12.3002825)
+
+[node name="SnowHigh-1-col" parent="." instance=ExtResource("22_h8udn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.395544, 0, -12.657028)
+
+[node name="Trees" type="Node3D" parent="."]
+
+[node name="PineTree-1" parent="Trees" instance=ExtResource("21_4dun5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.236102, 0.044078827, -8.372372)
+
+[node name="SteppingStones" type="Node3D" parent="."]
+
+[node name="SteppingStone-1" parent="SteppingStones" instance=ExtResource("24_86l8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.848338, 0.2692616, 3.8059993)
+
+[node name="Decal-Sneeuw" type="Decal" parent="SteppingStones/SteppingStone-1"]
+transform = Transform3D(1.0828844, 0, 0, 0, 1, 0, 0, 0, 0.93317413, 0.0049878657, 0.06461632, 0.012511969)
+size = Vector3(0.4, 0.02, 0.4)
+texture_albedo = ExtResource("25_h8udn")
+
+[node name="Yeti-1" parent="." instance=ExtResource("26_86l8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9611, 3.4231923, 0.45292485)
