@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cy1eyxi6npyoe"
-path="res://.godot/imported/Stick-1.glb-a698d8a137b826ede9491d2e751b179c.scn"
+uid="uid://fnduxq38dwb5"
+path="res://.godot/imported/Wall-1-DoorCorner-1.glb-59bb568aaec450d72fbdce078cbb6f02.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Misc/SticksAndLogs/Stick-1.glb"
-dest_files=["res://.godot/imported/Stick-1.glb-a698d8a137b826ede9491d2e751b179c.scn"]
+source_file="res://assets/meshes/SantaShop/Walls/Wall-1-DoorCorner-1.glb"
+dest_files=["res://.godot/imported/Wall-1-DoorCorner-1.glb-59bb568aaec450d72fbdce078cbb6f02.scn"]
 
 [params]
 
@@ -37,14 +37,6 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"materials": {
-"Texture-Sheet-1": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/materials/Texture-Sheet-1.tres",
-"use_external/path": "uid://gqaoxy6yo14o"
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

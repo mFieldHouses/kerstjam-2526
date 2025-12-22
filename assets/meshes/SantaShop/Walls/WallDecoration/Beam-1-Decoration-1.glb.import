@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cy1eyxi6npyoe"
-path="res://.godot/imported/Stick-1.glb-a698d8a137b826ede9491d2e751b179c.scn"
+uid="uid://bdo60w50wvoit"
+path="res://.godot/imported/Beam-1-Decoration-1.glb-06a4b1269f479e3aa9fae9e384c67104.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Misc/SticksAndLogs/Stick-1.glb"
-dest_files=["res://.godot/imported/Stick-1.glb-a698d8a137b826ede9491d2e751b179c.scn"]
+source_file="res://assets/meshes/SantaShop/Walls/WallDecoration/Beam-1-Decoration-1.glb"
+dest_files=["res://.godot/imported/Beam-1-Decoration-1.glb-06a4b1269f479e3aa9fae9e384c67104.scn"]
 
 [params]
 

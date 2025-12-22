@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cy1eyxi6npyoe"
-path="res://.godot/imported/Stick-1.glb-a698d8a137b826ede9491d2e751b179c.scn"
+uid="uid://myxxjf7k6b3b"
+path="res://.godot/imported/BigDoor-L-Detailed.glb-faace6f026bf1850b621f488a5ab02b6.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Misc/SticksAndLogs/Stick-1.glb"
-dest_files=["res://.godot/imported/Stick-1.glb-a698d8a137b826ede9491d2e751b179c.scn"]
+source_file="res://assets/meshes/SantaShop/Doors/BigDoor-L-Detailed.glb"
+dest_files=["res://.godot/imported/BigDoor-L-Detailed.glb-faace6f026bf1850b621f488a5ab02b6.scn"]
 
 [params]
 
@@ -47,4 +47,4 @@ _subresources={
 }
 }
 gltf/naming_version=2
-gltf/embedded_image_handling=1
+gltf/embedded_image_handling=0
