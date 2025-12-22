@@ -68,15 +68,13 @@ func _ready():
 	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
-	#ResourceLoader.load_threaded_get()
-	
 	_weapon_selection_scroll_timer += delta
 	if _weapon_selection_scroll_timer >= _weapon_selection_scroll_timeout_time:
 		_weapon_selection_scroll_counter = 0
 	
 	# Add the gravity.
 	if not is_on_floor() and flight == false:
-		velocity += get_gravity() * delta * 1.7
+		velocity += get_gravity() * delta
 	else:
 		camera_time += delta
 

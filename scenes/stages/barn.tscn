@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://deyfnv3650ptg"]
+[gd_scene load_steps=14 format=3 uid="uid://deyfnv3650ptg"]
 
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="1_28ucp"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_78x8d"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="3_1o4kk"]
 [ext_resource type="Script" uid="uid://bialli0sq06nb" path="res://scripts/test_triggerable.gd" id="3_me2a5"]
+[ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="5_2rhon"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wvqfc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -71,3 +72,6 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/ActionPromptTrigger/Area3D"]
 shape = SubResource("BoxShape3D_me2a5")
+
+[node name="present_mimic" parent="." instance=ExtResource("5_2rhon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7698226, 7.6608267, -3.6642084)
