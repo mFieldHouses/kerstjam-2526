@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 
 func bob(time : float, magnitude : float) -> void:
 	_influence = lerp(_influence, 1.0, 0.1)
-	position.y = sin(time * 8) * 0.03 * _influence * magnitude
+	position.y = sin(time * 8.3) * 0.03 * _influence * magnitude
 	rotation.x = sin((time + 0.75*PI) * 10) * 0.02 * _influence * magnitude
 
 func return_to_origin() -> void:

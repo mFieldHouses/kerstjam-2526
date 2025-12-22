@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://byxx1uc6vr2m6"]
+
+[ext_resource type="Script" uid="uid://boiy2amcawyeg" path="res://scripts/yeti.gd" id="1_ejn5x"]
+[ext_resource type="PackedScene" uid="uid://d3isuepelisyt" path="res://assets/meshes/Enemies/Yeti-1.glb" id="2_wf2ah"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mns3w"]
+size = Vector3(2.6464844, 4.2458496, 2.334961)
+
+[node name="yeti" type="CharacterBody3D"]
+script = ExtResource("1_ejn5x")
+
+[node name="Yeti-1" parent="." instance=ExtResource("2_wf2ah")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.43293834, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_mns3w")

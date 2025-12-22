@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://dim6i25llpqg4"]
+
+[ext_resource type="PackedScene" uid="uid://ba8ws6pahtdpd" path="res://assets/meshes/Debug/yeti_hollow.gltf" id="1_gosl8"]
+[ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_hpo62"]
+[ext_resource type="PackedScene" uid="uid://byxx1uc6vr2m6" path="res://scenes/characters/yeti.tscn" id="3_hpo62"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gosl8"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_hpo62"]
+sky_material = SubResource("ProceduralSkyMaterial_gosl8")
+
+[sub_resource type="Environment" id="Environment_1pf2o"]
+background_mode = 2
+sky = SubResource("Sky_hpo62")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="YetiChase" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1pf2o")
+
+[node name="yeti_hollow" parent="." instance=ExtResource("1_gosl8")]
+
+[node name="player" parent="." instance=ExtResource("2_hpo62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98690087, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.9957601, 0.07802917, 0.04871639, -0.09198825, 0.844655, 0.52734816, 0, -0.5295936, 0.8482515, 0, 0, 0)
+
+[node name="yeti" parent="." instance=ExtResource("3_hpo62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3992686, 2.1025681, -9.400744)

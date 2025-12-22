@@ -10,7 +10,7 @@ func is_ray_free(from : Vector3, to : Vector3, mask : int = 1) -> bool:
 	
 	var _result = world_3d.direct_space_state.intersect_ray(_parameters)
 	
-	if _result.has("collider"):
-		print(_result.collider)
-	print(!_result.has("collider"))
+	#if _result.has("collider"):
+		#print(_result.collider)
+	#print(!_result.has("collider"))
 	return !_result.has("collider")
