@@ -1,11 +1,15 @@
-[gd_resource type="Resource" script_class="WeaponConfiguration" load_steps=3 format=3 uid="uid://dye3fo6pk5j3k"]
+[gd_resource type="Resource" script_class="WeaponConfiguration" load_steps=4 format=3 uid="uid://dye3fo6pk5j3k"]
 
+[ext_resource type="PackedScene" uid="uid://c731i0uce0esu" path="res://scenes/particle_effects/santa_gun_hit_standard.tscn" id="1_lyii1"]
 [ext_resource type="Script" uid="uid://dl3o0lopl802x" path="res://classes/resources/WeaponConfiguration.gd" id="1_vus3f"]
 [ext_resource type="PackedScene" uid="uid://c616eu7olrg6b" path="res://assets/meshes/Weapons/SantasGun-1/SantaGun-1.fbx" id="2_qkhl7"]
 
 [resource]
 script = ExtResource("1_vus3f")
 weapon_name = "Santa's Gun"
+min_damage_per_hit = 3.0
+max_damage_per_hit = 5.0
+hit_particle_effect_scene = ExtResource("1_lyii1")
 weapon_model = ExtResource("2_qkhl7")
 weapon_model_scale = Vector3(0.65500003, 0.65499985, 0.65500003)
 weapon_grip_offset_position = Vector3(0.47774613, -0.42131615, -1.1839336)

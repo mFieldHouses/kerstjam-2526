@@ -47,10 +47,14 @@ var controls_enabled : bool = true
 
 var _selected_weapon_idx : int = 0:
 	set(x):
-		x = clamp(x, 0, $gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child_count() - 1)
-		$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child(_selected_weapon_idx).visible = false
-		$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child(x).visible = true
+		x = clamp(x, 0, PlayerState.weapons.size() - 1)
+		var _model_children = Utility.get_children_of_type($gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip, "Node3D")
+		_model_children[_selected_weapon_idx].visible = false
+		_model_children[x].visible = true
 		_selected_weapon_idx = x
+		
+		_apply_reach(PlayerState.weapons[x].reach)
+		
 const _weapon_selection_scroll_step : int = 2 #The amount of scroll events it takes to make the game register one "step"/select a different weapon.
 var _weapon_selection_scroll_counter : int = 0
 var _weapon_selection_scroll_timer : float = 0.0 #When this reaches the value of _weapon_selection_scroll_timeout_time, _weapon_selection_scroll_counter is set back to 0.
@@ -59,8 +63,11 @@ var _weapon_selection_scroll_timeout_time : float = 0.4
 @onready var camera : Camera3D = get_node("camera")
 @onready var crosshair_sprite : TextureRect = $gui/CenterContainer/crosshair
 @onready var shoot_ray : RayCast3D = $camera/shoot_ray
+@onready var enemy_ray : RayCast3D = $camera/enemy_ray
 
 var _bobbing_anim_timer : float = 0.0
+
+var _weapon_use_cooldown_timer : float = 0.0
 
 func _ready():
 	
@@ -71,6 +78,8 @@ func _physics_process(delta: float) -> void:
 	_weapon_selection_scroll_timer += delta
 	if _weapon_selection_scroll_timer >= _weapon_selection_scroll_timeout_time:
 		_weapon_selection_scroll_counter = 0
+	
+	_weapon_use_cooldown_timer -= delta
 	
 	# Add the gravity.
 	if not is_on_floor() and flight == false:
@@ -131,7 +140,7 @@ func _physics_process(delta: float) -> void:
 	if !noclip:
 		var collision = move_and_slide()
 	
-	if $camera/shoot_ray.get_collider():
+	if enemy_ray.get_collider():
 		crosshair_sprite.modulate.a = 1.0
 		crosshair_sprite.custom_minimum_size = Vector2(25, 25)
 	else:
@@ -171,7 +180,7 @@ func _input(event):
 				sprinting = false
 				tween_camera_fov(DEFAULT_FOV, 0.2)
 		
-		elif event.is_action("shoot") and event.is_pressed():
+		elif event.is_action("shoot") and event.is_pressed() and _weapon_use_cooldown_timer <= 0.0:
 			shoot()
 		
 		elif event.is_action("scope"):
@@ -197,6 +206,10 @@ func tween_camera_fov(desired_fov : float, time : float):
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(camera, "fov", desired_fov, time)
 
+func _apply_reach(reach : float) -> void:
+	shoot_ray.target_position = Vector3(0.0, 0.0, -reach)
+	enemy_ray.target_position = Vector3(0.0, 0.0, -reach)
+
 func toggle_scope_mode(state : bool) -> void:
 	sprinting = false
 	in_scope = state
@@ -215,11 +228,19 @@ func toggle_scope_mode(state : bool) -> void:
 			tween_camera_fov(DEFAULT_FOV + 20, 0.2)
 
 func shoot() -> void:
-	if shoot_ray.get_collider():
-		var _hit_effect : CPUParticles3D = preload("res://scenes/particle_effects/santa_gun_hit_standard.tscn").instantiate()
+	_weapon_use_cooldown_timer = _get_currently_selected_weapon().weapon_use_cooldown
+	var _shot_collider = shoot_ray.get_collider()
+	if _shot_collider:
+		var _hit_effect : CPUParticles3D = _get_currently_selected_weapon().hit_particle_effect_scene.instantiate()
 		_hit_effect.top_level = true
 		add_child(_hit_effect)
 		_hit_effect.global_position = shoot_ray.get_collision_point()
+		
+		if _shot_collider is Enemy or _shot_collider is Hittable:
+			_shot_collider.hit(_get_currently_selected_weapon().get_hit_damage(), global_position, 1)
 
 func get_distance_to_player(point : Vector3): ##Returns the distance between the player and said point.
 	return (global_position - point).length()
+
+func _get_currently_selected_weapon() -> WeaponConfiguration:
+	return PlayerState.weapons[_selected_weapon_idx]

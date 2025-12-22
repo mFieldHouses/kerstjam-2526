@@ -19,6 +19,11 @@ var layer_3_raycast : RayCast3D = null
 
 var is_sleeping : bool = false
 
+var weapons : Array[WeaponConfiguration] = [
+	load("res://assets/resources/weapon_configurations/santas_gun.tres"),
+	load("res://assets/resources/weapon_configurations/axe.tres")
+]
+
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 

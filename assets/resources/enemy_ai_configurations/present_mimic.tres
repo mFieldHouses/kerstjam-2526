@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemyAIConfiguration" load_steps=3 format=3 uid="uid://bkt5gvfrph3sk"]
+
+[ext_resource type="Script" uid="uid://b5ijej1nmfkeu" path="res://classes/resources/AggressionModifier.gd" id="1_tivte"]
+[ext_resource type="Script" uid="uid://cx4rmxbgm6xo3" path="res://classes/resources/EnemyAIConfiguration.gd" id="2_0up47"]
+
+[resource]
+script = ExtResource("2_0up47")
+aggression_modifiers = Array[ExtResource("1_tivte")]([null])
+eligible_aggression_targets = null
+metadata/_custom_type_script = "uid://cx4rmxbgm6xo3"
