@@ -234,7 +234,7 @@ func shoot() -> void:
 	_weapon_use_cooldown_timer = _get_currently_selected_weapon().weapon_use_cooldown
 	
 	var _animplayer : AnimationPlayer = Utility.get_children_of_type($gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child(_selected_weapon_idx), "AnimationPlayer")[0]
-	_animplayer.play("weapon_use/shoot1")
+	#_animplayer.play("weapon_use/shoot1")
 	
 	await get_tree().create_timer(_used_weapon.hit_delay).timeout
 	

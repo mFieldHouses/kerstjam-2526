@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://1k8qkabd1mqy"]
+[gd_scene load_steps=5 format=3 uid="uid://1k8qkabd1mqy"]
 
 [ext_resource type="Script" uid="uid://bttxst3xwdrvn" path="res://scripts/enemy.gd" id="1_fut4a"]
 [ext_resource type="PackedScene" uid="uid://dg0m6iv5odcgv" path="res://assets/meshes/Enemies/Mimic-1.glb" id="1_wk111"]
+[ext_resource type="Resource" uid="uid://bkt5gvfrph3sk" path="res://assets/resources/enemy_ai_configurations/present_mimic.tres" id="2_ydnvf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wk111"]
 size = Vector3(0.5058594, 0.50439453, 0.51660156)
@@ -10,6 +11,7 @@ size = Vector3(0.5058594, 0.50439453, 0.51660156)
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_fut4a")
+behavior_configuration = ExtResource("2_ydnvf")
 
 [node name="Mimic-12" parent="." instance=ExtResource("1_wk111")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 0, 0, 0)

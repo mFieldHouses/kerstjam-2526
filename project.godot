@@ -30,6 +30,7 @@ DefaultPaths="*res://scripts/autoloads/DefaultPaths.gd"
 ConfigurableValues="*res://scripts/autoloads/ConfigurableValues.gd"
 DisplayManager="*res://scripts/autoloads/DisplayManager.gd"
 PersistentControls="*res://scripts/autoloads/PersistentControls.gd"
+RaycastManager="*res://scripts/autoloads/RaycastManager.gd"
 
 [editor]
 

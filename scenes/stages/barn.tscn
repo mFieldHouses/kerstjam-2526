@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://deyfnv3650ptg"]
+[gd_scene load_steps=19 format=3 uid="uid://deyfnv3650ptg"]
 
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="1_28ucp"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_78x8d"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="3_1o4kk"]
+[ext_resource type="Shader" uid="uid://bty68cujf1q08" path="res://assets/shaders/debug_seethrough.gdshader" id="3_2n0o5"]
 [ext_resource type="Script" uid="uid://bialli0sq06nb" path="res://scripts/test_triggerable.gd" id="3_me2a5"]
 [ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="5_2rhon"]
 
@@ -28,8 +29,23 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_1o4kk")
 size = Vector2(20, 20)
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_2rhon"]
+vertices = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, -10)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_78x8d"]
 size = Vector3(20.504883, 0.49658203, 19.720459)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2rhon"]
+size = Vector3(3.6313477, 2.6030273, 0.53515625)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rg2j8"]
+render_priority = 0
+shader = ExtResource("3_2n0o5")
+
+[sub_resource type="BoxMesh" id="BoxMesh_qle0t"]
+material = SubResource("ShaderMaterial_rg2j8")
+size = Vector3(3.6313477, 2.6030273, 0.53515625)
 
 [sub_resource type="BoxMesh" id="BoxMesh_28ucp"]
 
@@ -43,6 +59,9 @@ environment = SubResource("Environment_28ucp")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_wvqfc")
 
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="MeshInstance3D"]
+navigation_mesh = SubResource("NavigationMesh_2rhon")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.6848015, 0.7287296, 0, -0.7287296, -0.6848015, 0, 0, 0)
 shadow_enabled = true
@@ -55,6 +74,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.062417746, 0.94456065, 0.04
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, 0)
 shape = SubResource("BoxShape3D_78x8d")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(0.8257047, 0, -0.5641026, 0, 1, 0, 0.5641026, 0, 0.8257047, 3.5476584, 0.8015137, -4.6376953)
+shape = SubResource("BoxShape3D_2rhon")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor/CollisionShape3D2"]
+mesh = SubResource("BoxMesh_qle0t")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.2922366)
