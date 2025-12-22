@@ -4,4 +4,6 @@
 
 [resource]
 transparency = 1
+cull_mode = 2
+depth_draw_mode = 1
 albedo_texture = ExtResource("1_pvrlo")

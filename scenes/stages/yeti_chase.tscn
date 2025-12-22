@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dim6i25llpqg4"]
+[gd_scene load_steps=9 format=3 uid="uid://dim6i25llpqg4"]
 
+[ext_resource type="Script" uid="uid://domd8jiottmf8" path="res://scripts/yeti_chase_stage.gd" id="1_1pf2o"]
 [ext_resource type="PackedScene" uid="uid://ba8ws6pahtdpd" path="res://assets/meshes/Debug/yeti_hollow.gltf" id="1_gosl8"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_hpo62"]
 [ext_resource type="PackedScene" uid="uid://byxx1uc6vr2m6" path="res://scenes/characters/yeti.tscn" id="3_hpo62"]
@@ -17,7 +18,12 @@ sky = SubResource("Sky_hpo62")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_1pf2o"]
+vertices = PackedVector3Array(-0.026060581, 0, 1.4358788, 1.3224554, 0, -1.7327518, 0.9738488, 0, 1.4358788, 0.37442207, 0, -2.0120106, -1.1678507, 0, 1.1904697, 4.434236, 0, -0.66490555, 4.1901593, 0, 2.8215923, 4.233216, 0, -4.1476994, 6.320187, 0, 5.7987614, 6.0268292, 0, -2.6043758, 6.3909974, 0, 2.02137, 5.6901526, 0, -5.5572147, 8.549557, 0, 1.9933376, 6.493713, 0, -2.0305214, 7.8946233, 0, -0.3084278, 6.3922944, 0, -6.4045105, 6.9605966, 0, -1.456667, 7.252398, 0, -4.1529884, 8.503128, 0, -1.350357, 9.823631, 0, 1.9092426, 7.8248506, 0, -7.641074, 9.789652, 0, -1.4757061, 6.6275525, 0, -8.943751, 10.369625, 0, 3.0469036, 6.1910157, 0, -12.9163065, 10.25498, 0, -3.4500828, 7.3167243, 0, -15.211725, 10.97813, 0, 4.257025, 5.7754893, 0, -18.148169, 5.37812, 0, -14.389289, 2.8502026, 0, -17.183987, 3.4742708, 0, -14.111617, 0.5920415, 0, -17.160717, 3.0107589, 0, -11.789225, 10.701372, 0, -5.176937, -0.30022526, 0, -15.627969, 2.695094, 0, -9.302873, -0.013091564, 0, -18.578163, -0.44444036, 0, -9.658293, -1.0480173, 0, -16.896267, 0.6890497, 0, -8.19536, -2.200183, 0, -18.871702, -1.4754755, 0, -4.270933, -1.5289075, 0, -21.726166, -0.43043375, 0, -2.2346745, -2.8395543, 0, -21.333195, -2.1890295, 0, -23.455135, -4.105847, 0, -18.164566, -3.1749325, 0, -15.842701, -4.498029, 0, -13.033722, -3.4070773, 0, -13.008864, -3.8773332, 0, -5.8533974, -2.8193226, 0, -8.575638, -1.9260182, 0, -0.30789757, -2.680295, 0, 4.2924595, -1.9433968, 0, 5.9230537, 12.0932045, 0, 4.051281, 10.888126, 0, 11.206219, 11.958326, 0, 10.999947, 11.873251, 0, -5.822193, 12.500431, 0, 1.6654224, 12.445702, 0, -2.3203564, 11.045052, 0, -13.858274, 10.055777, 0, -13.131569)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(0, 3, 1), PackedInt32Array(4, 3, 0), PackedInt32Array(5, 2, 1), PackedInt32Array(2, 5, 6), PackedInt32Array(1, 7, 5), PackedInt32Array(5, 8, 6), PackedInt32Array(7, 9, 5), PackedInt32Array(5, 10, 8), PackedInt32Array(7, 11, 9), PackedInt32Array(10, 12, 8), PackedInt32Array(11, 13, 9), PackedInt32Array(10, 14, 12), PackedInt32Array(11, 15, 13), PackedInt32Array(15, 16, 13), PackedInt32Array(17, 14, 16), PackedInt32Array(15, 17, 16), PackedInt32Array(14, 18, 12), PackedInt32Array(17, 18, 14), PackedInt32Array(18, 19, 12), PackedInt32Array(15, 20, 17), PackedInt32Array(18, 21, 19), PackedInt32Array(15, 22, 20), PackedInt32Array(21, 23, 19), PackedInt32Array(20, 22, 24), PackedInt32Array(21, 25, 23), PackedInt32Array(20, 24, 26), PackedInt32Array(25, 27, 23), PackedInt32Array(28, 26, 24), PackedInt32Array(28, 24, 29), PackedInt32Array(30, 28, 29), PackedInt32Array(30, 29, 31), PackedInt32Array(32, 30, 31), PackedInt32Array(32, 31, 33), PackedInt32Array(25, 34, 27), PackedInt32Array(35, 32, 33), PackedInt32Array(35, 33, 36), PackedInt32Array(35, 37, 32), PackedInt32Array(38, 35, 36), PackedInt32Array(35, 39, 37), PackedInt32Array(38, 36, 40), PackedInt32Array(37, 39, 41), PackedInt32Array(42, 38, 40), PackedInt32Array(37, 41, 43), PackedInt32Array(42, 40, 44), PackedInt32Array(45, 43, 41), PackedInt32Array(45, 46, 43), PackedInt32Array(47, 45, 41), PackedInt32Array(47, 41, 48), PackedInt32Array(49, 47, 48), PackedInt32Array(49, 48, 50), PackedInt32Array(51, 49, 50), PackedInt32Array(51, 50, 52), PackedInt32Array(53, 51, 52), PackedInt32Array(53, 52, 42), PackedInt32Array(4, 53, 42), PackedInt32Array(4, 42, 44), PackedInt32Array(4, 44, 3), PackedInt32Array(4, 54, 53), PackedInt32Array(4, 55, 54), PackedInt32Array(34, 56, 27), PackedInt32Array(56, 57, 27), PackedInt32Array(56, 58, 57), PackedInt32Array(34, 59, 56), PackedInt32Array(59, 60, 56), PackedInt32Array(59, 61, 60), PackedInt32Array(34, 62, 59), PackedInt32Array(34, 63, 62)]
+
 [node name="YetiChase" type="Node3D"]
+script = ExtResource("1_1pf2o")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_1pf2o")
@@ -29,6 +35,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98690087, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.9957601, 0.07802917, 0.04871639, -0.09198825, 0.844655, 0.52734816, 0, -0.5295936, 0.8482515, 0, 0, 0)
+shadow_enabled = true
 
 [node name="yeti" parent="." instance=ExtResource("3_hpo62")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3992686, 2.1025681, -9.400744)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.48796, 3.3064942, -9.400744)
+
+[node name="player_trail_points" type="Node3D" parent="."]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(3.35, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+navigation_mesh = SubResource("NavigationMesh_1pf2o")
