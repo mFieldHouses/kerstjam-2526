@@ -21300,8 +21300,5 @@ size = Vector3(0.4, 0.02, 0.4)
 texture_albedo = ExtResource("25_h8udn")
 
 [node name="Yeti-1" parent="." instance=ExtResource("26_86l8b")]
-<<<<<<< Updated upstream
 transform = Transform3D(-0.49005207, 0, 0.87169313, 0, 1, 0, -0.87169313, 0, -0.49005207, -9.9611, 3.4231923, 0.45292485)
-=======
 transform = Transform3D(-0.99958587, 0, 0.0287764, 0, 1, 0, -0.0287764, 0, -0.99958587, -9.9611, 3.4231923, 20.175823)
->>>>>>> Stashed changes
