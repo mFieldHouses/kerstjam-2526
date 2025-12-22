@@ -54,6 +54,8 @@ var _selected_weapon_idx : int = 0:
 		_selected_weapon_idx = x
 		
 		_apply_reach(PlayerState.weapons[x].reach)
+		if !_get_currently_selected_weapon().scopeable:
+			toggle_scope_mode(false)
 		
 const _weapon_selection_scroll_step : int = 2 #The amount of scroll events it takes to make the game register one "step"/select a different weapon.
 var _weapon_selection_scroll_counter : int = 0
@@ -183,7 +185,7 @@ func _input(event):
 		elif event.is_action("shoot") and event.is_pressed() and _weapon_use_cooldown_timer <= 0.0:
 			shoot()
 		
-		elif event.is_action("scope"):
+		elif event.is_action("scope") and _get_currently_selected_weapon().scopeable:
 			toggle_scope_mode(event.is_pressed())
 		
 		elif event is InputEventMouseButton:
@@ -228,7 +230,14 @@ func toggle_scope_mode(state : bool) -> void:
 			tween_camera_fov(DEFAULT_FOV + 20, 0.2)
 
 func shoot() -> void:
+	var _used_weapon : WeaponConfiguration = _get_currently_selected_weapon()
 	_weapon_use_cooldown_timer = _get_currently_selected_weapon().weapon_use_cooldown
+	
+	var _animplayer : AnimationPlayer = Utility.get_children_of_type($gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child(_selected_weapon_idx), "AnimationPlayer")[0]
+	_animplayer.play("weapon_use/shoot1")
+	
+	await get_tree().create_timer(_used_weapon.hit_delay).timeout
+	
 	var _shot_collider = shoot_ray.get_collider()
 	if _shot_collider:
 		var _hit_effect : CPUParticles3D = _get_currently_selected_weapon().hit_particle_effect_scene.instantiate()

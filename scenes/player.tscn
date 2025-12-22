@@ -106,3 +106,5 @@ grow_vertical = 2
 bbcode_enabled = true
 fit_content = true
 autowrap_mode = 0
+
+[node name="gun_sounds" type="AudioStreamPlayer" parent="."]

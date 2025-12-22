@@ -11,6 +11,10 @@ func _ready() -> void:
 		_model.rotation = _weapon_config.weapon_grip_offset_rotation
 		_model.scale = _weapon_config.weapon_model_scale
 		_model.visible = false
+		
+		var _animation_player : AnimationPlayer = AnimationPlayer.new()
+		_model.add_child(_animation_player)
+		_animation_player.add_animation_library("weapon_use", _weapon_config.weapon_use_animation_library)
 	
 	get_child(0).visible = true
 
