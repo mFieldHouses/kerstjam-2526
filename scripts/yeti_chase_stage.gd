@@ -5,7 +5,10 @@ var _player_trail_points : Array[PlayerTrailPoint] = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_create_new_trail_point(Vector3.ZERO)
-	pass # Replace with function body.
+	
+	await get_tree().create_timer(2.0).timeout
+	
+	DialogManager.initiate_dialog_with("res://assets/dialogs/debug1.txt", $yeti, "Henkie", load("res://addons/GodotDevTools/module.svg"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

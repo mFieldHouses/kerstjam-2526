@@ -163,13 +163,9 @@ func _physics_process(delta: float) -> void:
 		crosshair_sprite.custom_minimum_size = Vector2(20, 20)
 
 func sleep(): #Disables everything about the player except for idle animations.
-	$first_person_camera/layer_1.enabled = false
-	$first_person_camera/layer_5.enabled = false
 	controls_enabled = false
 
 func awaken(): #Re-enables everything disabled by sleep().
-	$first_person_camera/layer_1.enabled = true
-	$first_person_camera/layer_5.enabled = true
 	controls_enabled = true
 
 func toggle_flight(state : bool = true, collision : bool = false):

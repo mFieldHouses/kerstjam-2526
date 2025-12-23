@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcg8qxkedeekp"]
+[gd_scene load_steps=5 format=3 uid="uid://dcg8qxkedeekp"]
 
 [ext_resource type="Script" uid="uid://5cgj6vfrassi" path="res://scripts/rotate_control.gd" id="1_05ad7"]
+[ext_resource type="Script" uid="uid://behc03krddp0w" path="res://scenes/autoloads/persistent_ui.gd" id="1_gpka8"]
+[ext_resource type="Texture2D" uid="uid://cowivfljy5tex" path="res://icon.svg" id="2_qbks3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uchyk"]
 bg_color = Color(0, 0, 0, 1)
 
 [node name="PersistentUI" type="Control"]
+z_index = 525
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_gpka8")
 
 [node name="black" type="Panel" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -42,3 +46,101 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(20, 20)
 script = ExtResource("1_05ad7")
+
+[node name="remote_dialog" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.208
+offset_left = -315.0
+offset_top = -133.0
+offset_right = 318.0
+offset_bottom = -138.784
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="remote_dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="remote_dialog/MarginContainer"]
+layout_mode = 2
+
+[node name="thumbnail" type="TextureRect" parent="remote_dialog/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_qbks3")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="remote_dialog/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="name" type="RichTextLabel" parent="remote_dialog/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Henkie:"
+fit_content = true
+
+[node name="contents" type="RichTextLabel" parent="remote_dialog/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "test test"
+
+[node name="dialog" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.208
+offset_left = -315.0
+offset_top = 650.0
+offset_right = 318.0
+offset_bottom = 644.216
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="dialog/MarginContainer"]
+layout_mode = 2
+
+[node name="thumbnail" type="TextureRect" parent="dialog/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_qbks3")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="dialog/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="name" type="RichTextLabel" parent="dialog/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Henkie:"
+fit_content = true
+
+[node name="contents" type="RichTextLabel" parent="dialog/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "test test"

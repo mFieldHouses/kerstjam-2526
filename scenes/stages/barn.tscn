@@ -1,11 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://deyfnv3650ptg"]
+[gd_scene load_steps=21 format=3 uid="uid://deyfnv3650ptg"]
 
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="1_28ucp"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_78x8d"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="3_1o4kk"]
 [ext_resource type="Shader" uid="uid://bty68cujf1q08" path="res://assets/shaders/debug_seethrough.gdshader" id="3_2n0o5"]
-[ext_resource type="Script" uid="uid://bialli0sq06nb" path="res://scripts/test_triggerable.gd" id="3_me2a5"]
+[ext_resource type="Script" uid="uid://rq3x7p4vncyu" path="res://scenes/stages/mesh_instance_3d_2.gd" id="4_rg2j8"]
 [ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="5_2rhon"]
+[ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="5_rg2j8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wvqfc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -47,7 +48,11 @@ shader = ExtResource("3_2n0o5")
 material = SubResource("ShaderMaterial_rg2j8")
 size = Vector3(3.6313477, 2.6030273, 0.53515625)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rg2j8"]
+transparency = 1
+
 [sub_resource type="BoxMesh" id="BoxMesh_28ucp"]
+material = SubResource("StandardMaterial3D_rg2j8")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_me2a5"]
 
@@ -85,18 +90,23 @@ mesh = SubResource("BoxMesh_qle0t")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.2922366)
 mesh = SubResource("BoxMesh_28ucp")
-script = ExtResource("3_me2a5")
+script = ExtResource("4_rg2j8")
 
-[node name="ActionPromptTrigger" type="Node3D" parent="MeshInstance3D2"]
+[node name="DialogueInitiator" type="Node3D" parent="MeshInstance3D2"]
+script = ExtResource("5_rg2j8")
+dialog_file_path = "res://assets/dialogs/debug1.txt"
+metadata/_custom_type_script = "uid://27xr8j11a8al"
+
+[node name="ActionPromptTrigger" type="Node3D" parent="MeshInstance3D2/DialogueInitiator"]
 script = ExtResource("3_1o4kk")
 trigger_key = "E"
 metadata/_custom_type_script = "uid://c7ccd1128l7ea"
 
-[node name="Area3D" type="Area3D" parent="MeshInstance3D2/ActionPromptTrigger"]
+[node name="Area3D" type="Area3D" parent="MeshInstance3D2/DialogueInitiator/ActionPromptTrigger"]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/ActionPromptTrigger/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/DialogueInitiator/ActionPromptTrigger/Area3D"]
 shape = SubResource("BoxShape3D_me2a5")
 
 [node name="present_mimic" parent="." instance=ExtResource("5_2rhon")]

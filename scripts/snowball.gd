@@ -11,5 +11,5 @@ func _physics_process(delta: float) -> void:
 	position += velocity * delta
 
 func _splat(body) -> void:
-	print('splat')
+	#print('splat')
 	queue_free()

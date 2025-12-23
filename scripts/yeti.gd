@@ -11,7 +11,20 @@ var _player_last_seen_state : Dictionary = {
 var _can_see_player : bool = false
 
 enum BehaviorState {GO_TO_POINT, PATROL, CHASE, FOLLOW_TRAIL}
-var _current_behavior_state : BehaviorState = BehaviorState.GO_TO_POINT
+var _current_behavior_state : BehaviorState = BehaviorState.GO_TO_POINT:
+	set(x):
+		
+		match x:
+			BehaviorState.GO_TO_POINT:
+				print("go to point")
+			BehaviorState.PATROL:
+				print("lost track, start patrolling")
+			BehaviorState.CHASE:
+				print("found player again, start chasing")
+			BehaviorState.FOLLOW_TRAIL:
+				print("lost player, following by trail")
+		
+		_current_behavior_state = x
 
 func _ready() -> void:
 	$NavigationAgent3D.target_position = Vector3.ZERO
@@ -24,29 +37,25 @@ func _physics_process(delta: float) -> void:
 	_can_see_player = RaycastManager.is_ray_free($eyes.global_position, PlayerState.player_instance.global_position + Vector3(0.0, 1.0, 0.0), 1, true)
 	_can_see_player = _can_see_player and _line_of_sight_angle_to_player < 70
 	
-	if _can_see_player:
+	if _can_see_player and _current_behavior_state != BehaviorState.CHASE:
 		_current_behavior_state = BehaviorState.CHASE
 		$NavigationAgent3D.target_position = PlayerState.player_instance.global_position
-	elif _get_visible_trail_points().size() > 0: #can see trail points
+	elif _get_visible_trail_points().size() > 0 and _current_behavior_state != BehaviorState.FOLLOW_TRAIL: #can see trail points
 		_current_behavior_state = BehaviorState.FOLLOW_TRAIL
 		$NavigationAgent3D.target_position = _get_closest_visible_trail_point().global_position
 	
 	if _current_behavior_state == BehaviorState.GO_TO_POINT:
-		print("go to point")
 		print($NavigationAgent3D.is_navigation_finished())
 	
 	elif _current_behavior_state == BehaviorState.CHASE:
-		print("chase ", $NavigationAgent3D.target_position)
 		if !_can_see_player:
 			if $NavigationAgent3D.is_navigation_finished():
 				_current_behavior_state = BehaviorState.PATROL
 		
 	
 	elif _current_behavior_state == BehaviorState.FOLLOW_TRAIL:
-		print("follow trail")
 		if $NavigationAgent3D.is_navigation_finished():
 			if _get_visible_trail_points().size() > 0:
-				print("follow next trail point")
 				$NavigationAgent3D.target_position = get_parent()._player_trail_points[0].global_position
 			else:
 				_current_behavior_state = BehaviorState.PATROL
