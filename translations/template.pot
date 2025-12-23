@@ -31,3 +31,18 @@ msgstr ""
 #: Play
 msgid "PLAY_BTN"
 msgstr ""
+
+msgid "CUBE_DIALOG"
+msgstr ""
+
+msgid "DIALOG_CONTINUE"
+msgstr ""
+
+msgid "DIALOG_END"
+msgstr ""
+
+msgid "SENTIENT_CUBE"
+msgstr ""
+
+msgid "ENTER_YETI_HOLLOW"
+msgstr ""

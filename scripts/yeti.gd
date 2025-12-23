@@ -10,13 +10,11 @@ var _player_last_seen_state : Dictionary = {
 }
 var _can_see_player : bool = false
 
-enum BehaviorState {GO_TO_POINT, PATROL, CHASE, FOLLOW_TRAIL}
-var _current_behavior_state : BehaviorState = BehaviorState.GO_TO_POINT:
+enum BehaviorState {PATROL, CHASE, FOLLOW_TRAIL, SLEEP}
+var _current_behavior_state : BehaviorState = BehaviorState.SLEEP:
 	set(x):
 		
 		match x:
-			BehaviorState.GO_TO_POINT:
-				print("go to point")
 			BehaviorState.PATROL:
 				print("lost track, start patrolling")
 			BehaviorState.CHASE:
@@ -28,8 +26,11 @@ var _current_behavior_state : BehaviorState = BehaviorState.GO_TO_POINT:
 
 func _ready() -> void:
 	$NavigationAgent3D.target_position = Vector3.ZERO
+	DialogManager.dialog_queue.connect(func(did : String, qid : String): if did == "enter_yeti_hollow" and qid == "release_yeti": _current_behavior_state = BehaviorState.PATROL)
 
 func _physics_process(delta: float) -> void:
+	if _current_behavior_state == BehaviorState.SLEEP:
+		return
 	
 	var _yeti_to_player : Vector3 = global_position - PlayerState.player_instance.global_position
 	var _line_of_sight_angle_to_player : float = rad_to_deg(global_basis.z.angle_to(_yeti_to_player))
@@ -43,9 +44,6 @@ func _physics_process(delta: float) -> void:
 	elif _get_visible_trail_points().size() > 0 and _current_behavior_state != BehaviorState.FOLLOW_TRAIL: #can see trail points
 		_current_behavior_state = BehaviorState.FOLLOW_TRAIL
 		$NavigationAgent3D.target_position = _get_closest_visible_trail_point().global_position
-	
-	if _current_behavior_state == BehaviorState.GO_TO_POINT:
-		print($NavigationAgent3D.is_navigation_finished())
 	
 	elif _current_behavior_state == BehaviorState.CHASE:
 		if !_can_see_player:

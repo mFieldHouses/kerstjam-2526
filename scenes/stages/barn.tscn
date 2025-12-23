@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://deyfnv3650ptg"]
+[gd_scene load_steps=22 format=3 uid="uid://deyfnv3650ptg"]
 
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="1_28ucp"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_78x8d"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://rq3x7p4vncyu" path="res://scenes/stages/mesh_instance_3d_2.gd" id="4_rg2j8"]
 [ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="5_2rhon"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="5_rg2j8"]
+[ext_resource type="Texture2D" uid="uid://cowivfljy5tex" path="res://icon.svg" id="6_qle0t"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wvqfc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -94,7 +95,9 @@ script = ExtResource("4_rg2j8")
 
 [node name="DialogueInitiator" type="Node3D" parent="MeshInstance3D2"]
 script = ExtResource("5_rg2j8")
-dialog_file_path = "res://assets/dialogs/debug1.txt"
+name_in_dialog = "SENTIENT_CUBE"
+thumbnail = ExtResource("6_qle0t")
+dialog_file_name = "debug1"
 metadata/_custom_type_script = "uid://27xr8j11a8al"
 
 [node name="ActionPromptTrigger" type="Node3D" parent="MeshInstance3D2/DialogueInitiator"]
@@ -111,3 +114,4 @@ shape = SubResource("BoxShape3D_me2a5")
 
 [node name="present_mimic" parent="." instance=ExtResource("5_2rhon")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7698226, 7.6608267, -3.6642084)
+visible = false

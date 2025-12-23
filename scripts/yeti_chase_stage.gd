@@ -6,9 +6,9 @@ var _player_trail_points : Array[PlayerTrailPoint] = []
 func _ready() -> void:
 	_create_new_trail_point(Vector3.ZERO)
 	
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	
-	DialogManager.initiate_dialog_with("res://assets/dialogs/debug1.txt", $yeti, "Henkie", load("res://addons/GodotDevTools/module.svg"))
+	DialogManager.initiate_remote_dialog("enter_yeti_hollow", "Henkie", load("res://addons/GodotDevTools/module.svg"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

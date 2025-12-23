@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2025-12-20 18:38+0100\n"
-"PO-Revision-Date: 2025-12-20 18:42+0100\n"
+"PO-Revision-Date: 2025-12-23 21:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -24,9 +24,26 @@ msgid "STAGE_1_BTN"
 msgstr "Stage 1: The Pursuit"
 
 #: Stage 2
+#, fuzzy
 msgid "STAGE_2_BTN"
 msgstr "Level 2: __"
 
 #: Play
 msgid "PLAY_BTN"
 msgstr "Play"
+
+msgid "CUBE_DIALOG"
+msgstr ""
+"Who goes there?\n"
+"I'm only a poor old cube. My bones are frail and my skin in wrinkling.\n"
+"*turn_red\n"
+"Cut an old cube some slack in his olden day!"
+
+msgid "DIALOG_CONTINUE"
+msgstr "(Next: %s)"
+
+msgid "DIALOG_END"
+msgstr "(End)"
+
+msgid "SENTIENT_CUBE"
+msgstr "Sentient Cube"
