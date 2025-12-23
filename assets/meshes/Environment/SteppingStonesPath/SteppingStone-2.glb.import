@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://myxxjf7k6b3b"
-path="res://.godot/imported/BigDoor-L-Detailed.glb-faace6f026bf1850b621f488a5ab02b6.scn"
+uid="uid://bgi2ig5fvm3p6"
+path="res://.godot/imported/SteppingStone-2.glb-0deeaa53b20b98a200d2c6d94d686e11.scn"
 
 [deps]
 
-source_file="res://assets/meshes/SantaShop/Doors/BigDoor-L-Detailed.glb"
-dest_files=["res://.godot/imported/BigDoor-L-Detailed.glb-faace6f026bf1850b621f488a5ab02b6.scn"]
+source_file="res://assets/meshes/Environment/SteppingStonesPath/SteppingStone-2.glb"
+dest_files=["res://.godot/imported/SteppingStone-2.glb-0deeaa53b20b98a200d2c6d94d686e11.scn"]
 
 [params]
 
@@ -22,7 +22,7 @@ nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
-meshes/generate_lods=false
+meshes/generate_lods=true
 meshes/create_shadow_meshes=true
 meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
@@ -47,4 +47,4 @@ _subresources={
 }
 }
 gltf/naming_version=2
-gltf/embedded_image_handling=0
+gltf/embedded_image_handling=1

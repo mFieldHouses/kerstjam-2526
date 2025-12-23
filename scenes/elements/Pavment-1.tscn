@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://d8wbgo5c2a7e"]
+
+[ext_resource type="PackedScene" uid="uid://c6g1y65gmil6h" path="res://assets/meshes/Environment/SteppingStonesPath/SteppingStone-1.glb" id="1_qgwdd"]
+[ext_resource type="Texture2D" uid="uid://1ig47fgqlqds" path="res://assets/textures/misc/Snow-Square-1.png" id="2_biqlu"]
+[ext_resource type="PackedScene" uid="uid://bgi2ig5fvm3p6" path="res://assets/meshes/Environment/SteppingStonesPath/SteppingStone-2.glb" id="2_um4tw"]
+[ext_resource type="PackedScene" uid="uid://cjo367g2xq21t" path="res://assets/meshes/Environment/SteppingStonesPath/SteppingStone-3.glb" id="3_biqlu"]
+[ext_resource type="PackedScene" uid="uid://b62uoqognu4g7" path="res://assets/meshes/Environment/SteppingStonesPath/SteppingStone-4.glb" id="4_e18r0"]
+[ext_resource type="PackedScene" uid="uid://w6iwuky8k6p6" path="res://assets/meshes/Environment/SteppingStonesPath/SteppingStone-5.glb" id="5_63m54"]
+[ext_resource type="PackedScene" uid="uid://dpkbhqd1t23g5" path="res://assets/meshes/Environment/SteppingStonesPath/SteppingStone-6.glb" id="6_sbpx3"]
+
+[node name="Pavment-1" type="Node3D"]
+
+[node name="SteppingStone-1" parent="." instance=ExtResource("1_qgwdd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37217456, 0, -0.118480995)
+
+[node name="Decal" type="Decal" parent="SteppingStone-1"]
+transform = Transform3D(-0.9999652, 0, -0.0083425585, 0, 1, 0, 0.0083425585, 0, -0.9999652, -0.0011267662, 0, -0.0055892766)
+size = Vector3(0.414, 0.2, 0.363)
+texture_albedo = ExtResource("2_biqlu")
+
+[node name="SteppingStone-2" parent="." instance=ExtResource("2_um4tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46288592, 0, -0.6670319)
+
+[node name="Decal2" type="Decal" parent="SteppingStone-2"]
+transform = Transform3D(-0.010908074, 0, 0.9999405, 0, 1, 0, -0.9999405, 0, -0.010908074, 0.011595488, 0, -0.011025667)
+size = Vector3(0.414, 0.2, 0.363)
+texture_albedo = ExtResource("2_biqlu")
+
+[node name="SteppingStone-3" parent="." instance=ExtResource("3_biqlu")]
+transform = Transform3D(0.9974308, 0, 0.071636714, 0, 1, 0, -0.071636714, 0, 0.9974308, -0.73672885, 0, -0.28476062)
+
+[node name="Decal3" type="Decal" parent="SteppingStone-3"]
+transform = Transform3D(0.01972096, 0, 0.9998057, 0, 1, 0, -0.9998057, 0, 0.01972096, 0.020548642, 0, -0.01806441)
+size = Vector3(0.414, 0.2, 0.363)
+texture_albedo = ExtResource("2_biqlu")
+
+[node name="SteppingStone-4" parent="." instance=ExtResource("4_e18r0")]
+transform = Transform3D(0.9999304, 0, -0.011798152, 0, 1, 0, 0.011798152, 0, 0.9999304, -0.024959266, 0, -0.34238017)
+
+[node name="SteppingStone-13" parent="." instance=ExtResource("4_e18r0")]
+transform = Transform3D(0.5067345, 0, -0.0061146664, 0, 1, 0, 0.0059789466, 0, 0.5182372, 0.025881112, 0, -0.79316735)
+
+[node name="SteppingStone-14" parent="." instance=ExtResource("4_e18r0")]
+transform = Transform3D(0.5067345, 0, -0.0061146664, 0, 1, 0, 0.0059789466, 0, 0.5182372, 0.036049426, 0, -0.60505694)
+
+[node name="Decal4" type="Decal" parent="SteppingStone-14"]
+transform = Transform3D(-0.066560745, 0, 1.9721191, 0, 0.99999994, 0, -1.9285148, 0, -0.062427964, 0.012112927, 0, -0.0103952885)
+size = Vector3(0.207, 0.2, 0.183)
+texture_albedo = ExtResource("2_biqlu")
+
+[node name="SteppingStone-5" parent="." instance=ExtResource("5_63m54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02358222, 0, 0.009925246)
+
+[node name="SteppingStone-8" parent="." instance=ExtResource("5_63m54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5896083, 0, 0.22854015)
+
+[node name="Decal5" type="Decal" parent="SteppingStone-8"]
+transform = Transform3D(-0.021936402, 0, 0.9997225, 0, 0.99999994, 0, -0.9998261, 0, -0.020561296, 0.008949041, 0, -0.012547523)
+size = Vector3(0.41002637, 0.2, 0.3450664)
+texture_albedo = ExtResource("2_biqlu")
+
+[node name="SteppingStone-6" parent="." instance=ExtResource("6_sbpx3")]
+transform = Transform3D(0.127757, 0, -0.9918055, 0, 1, 0, 0.9918055, 0, 0.127757, -0.22493283, 0, 0.23042445)
+
+[node name="SteppingStone-7" parent="." instance=ExtResource("6_sbpx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3893177, 0, -0.4762606)
+
+[node name="SteppingStone-11" parent="." instance=ExtResource("6_sbpx3")]
+transform = Transform3D(0.07168889, 0, 0.99742705, 0, 1, 0, -0.99742705, 0, 0.07168889, -0.84349436, 0, -0.64742404)
+
+[node name="SteppingStone-12" parent="." instance=ExtResource("6_sbpx3")]
+transform = Transform3D(-0.05043611, 0, 0.9987273, 0, 1, 0, -0.9987273, 0, -0.05043611, -0.25035352, 0, -0.68979126)
+
+[node name="SteppingStone-9" parent="." instance=ExtResource("6_sbpx3")]
+transform = Transform3D(0.8759306, 0, 0.08562353, 0, 1, 0, -0.08562336, 0, 0.8759324, -0.71639246, 0, -0.10173442)
+
+[node name="SteppingStone-10" parent="." instance=ExtResource("6_sbpx3")]
+transform = Transform3D(0.8759306, 0, 0.08562353, 0, 1, 0, -0.08562336, 0, 0.8759324, -0.052074254, 0, 0.20330948)
