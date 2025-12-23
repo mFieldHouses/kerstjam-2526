@@ -12,7 +12,7 @@ func _ready() -> void:
 func _area_entered(area : Area3D) -> void:
 	if area.get_parent() is Yeti:
 		wipe_out_from_point.emit()
-	elif area.get_parent() is Snowball:
+	elif area is Snowball:
 		print("got hit with snowball, wipe me out")
 		wipe_out_this_point.emit()
 

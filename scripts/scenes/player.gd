@@ -45,6 +45,8 @@ var noclip : bool = false
 var freecam : bool = false
 var controls_enabled : bool = true
 
+var _shoot_button_held : bool = false
+
 var _selected_weapon_idx : int = 0:
 	set(x):
 		x = clamp(x, 0, PlayerState.weapons.size() - 1)
@@ -62,6 +64,8 @@ var _weapon_selection_scroll_counter : int = 0
 var _weapon_selection_scroll_timer : float = 0.0 #When this reaches the value of _weapon_selection_scroll_timeout_time, _weapon_selection_scroll_counter is set back to 0.
 var _weapon_selection_scroll_timeout_time : float = 0.4
 
+var _used_ammo : AmmoItemDescription = preload("res://assets/resources/items/ammo/snow.tres")
+
 @onready var camera : Camera3D = get_node("camera")
 @onready var crosshair_sprite : TextureRect = $gui/CenterContainer/crosshair
 @onready var shoot_ray : RayCast3D = $camera/shoot_ray
@@ -70,6 +74,8 @@ var _weapon_selection_scroll_timeout_time : float = 0.4
 var _bobbing_anim_timer : float = 0.0
 
 var _weapon_use_cooldown_timer : float = 0.0
+
+var _snow_cannon_timer : float = 0.0
 
 func _ready():
 	
@@ -96,6 +102,13 @@ func _physics_process(delta: float) -> void:
 		else:
 			if is_on_floor() and controls_enabled:
 				velocity.y = JUMP_VELOCITY
+	
+	if _used_ammo.ammo_type_identifier == "snow":
+		if Input.is_action_pressed("shoot"):
+			_snow_cannon_timer += delta
+			if _snow_cannon_timer > 0.075:
+				shoot()
+				_snow_cannon_timer = 0
 	
 	if Input.is_key_pressed(KEY_CTRL) and flight:
 		position.y -= delta * 20
@@ -182,8 +195,9 @@ func _input(event):
 				sprinting = false
 				tween_camera_fov(DEFAULT_FOV, 0.2)
 		
-		elif event.is_action("shoot") and event.is_pressed() and _weapon_use_cooldown_timer <= 0.0:
-			shoot()
+		elif event.is_action("shoot"):
+			if event.is_pressed() and _weapon_use_cooldown_timer <= 0.0 and _used_ammo.ammo_type_identifier != "snow":
+				shoot()
 		
 		elif event.is_action("scope") and _get_currently_selected_weapon().scopeable:
 			toggle_scope_mode(event.is_pressed())
@@ -237,6 +251,14 @@ func shoot() -> void:
 	#_animplayer.play("weapon_use/shoot1")
 	
 	await get_tree().create_timer(_used_weapon.hit_delay).timeout
+	
+	if _used_ammo.ammo_type_identifier == "snow":
+		var _new_snowball : Snowball = load("res://scenes/projectiles/snowball.tscn").instantiate()
+		get_parent().add_child(_new_snowball)
+		
+		_new_snowball.position = $camera.global_position - $camera.global_basis.z
+		_new_snowball.velocity = -$camera.global_basis.z * 20
+		return
 	
 	var _shot_collider = shoot_ray.get_collider()
 	if _shot_collider:

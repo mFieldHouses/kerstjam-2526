@@ -26,7 +26,6 @@ func _create_new_trail_point(at_position : Vector3) -> void:
 
 func _wipe_trail_from_point(point : PlayerTrailPoint) -> void:
 	var _point_idx : int = _player_trail_points.find(point)
-	print("wiping trail from idx ", _point_idx)
 	for _idx in _point_idx + 1:
 		_player_trail_points[0].queue_free()
 		_player_trail_points.remove_at(0)
@@ -34,3 +33,6 @@ func _wipe_trail_from_point(point : PlayerTrailPoint) -> void:
 func _wipe_out_point(point : PlayerTrailPoint) -> void:
 	_player_trail_points.erase(point)
 	point.queue_free()
+
+func get_random_patrol_waypoint() -> Marker3D:
+	return $yeti_patrol_waypoints.get_child(randi_range(0, $yeti_patrol_waypoints.get_child_count() - 1))

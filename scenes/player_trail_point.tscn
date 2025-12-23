@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://7b8dovp4owic"]
+[gd_scene load_steps=4 format=3 uid="uid://7b8dovp4owic"]
 
 [ext_resource type="Script" uid="uid://cnlikxg1ycnxu" path="res://classes/nodes/PlayerTrailPoint.gd" id="1_5h0bn"]
+[ext_resource type="Texture2D" uid="uid://b5av4rx28i8hm" path="res://assets/textures/debug/footstepts.png" id="2_x1kay"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_5h0bn"]
 radius = 0.53507006
@@ -15,3 +16,7 @@ collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_5h0bn")
+
+[node name="Decal" type="Decal" parent="."]
+size = Vector3(1, 1, 1)
+texture_albedo = ExtResource("2_x1kay")

@@ -3,13 +3,15 @@
 [ext_resource type="Script" uid="uid://q0lolpgsgn0l" path="res://scripts/snowball.gd" id="1_nwkec"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_qtetr"]
-radius = 0.39394292
+radius = 0.15
 
 [sub_resource type="SphereMesh" id="SphereMesh_qtetr"]
-radius = 0.395
-height = 0.8
+radius = 0.15
+height = 0.3
 
-[node name="Snowball" type="CharacterBody3D"]
+[node name="Snowball" type="Area3D"]
+collision_layer = 4
+collision_mask = 7
 script = ExtResource("1_nwkec")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
