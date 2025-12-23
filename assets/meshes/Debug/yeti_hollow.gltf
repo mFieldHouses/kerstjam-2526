@@ -15,12 +15,7 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Plane -col",
-			"scale":[
-				3.351745843887329,
-				1,
-				1
-			]
+			"name":"Plane -col"
 		}
 	],
 	"meshes":[
@@ -42,14 +37,14 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":64,
+			"count":205,
 			"max":[
-				12.500432014465332,
-				0,
+				41.89826965332031,
+				8.340747833251953,
 				11.206218719482422
 			],
 			"min":[
-				-4.4980292320251465,
+				-15.076251029968262,
 				0,
 				-23.455135345458984
 			],
@@ -58,51 +53,51 @@
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":64,
+			"count":205,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":64,
+			"count":205,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":204,
+			"count":483,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":768,
+			"byteLength":2460,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":768,
-			"byteOffset":768,
+			"byteLength":2460,
+			"byteOffset":2460,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":512,
-			"byteOffset":1536,
+			"byteLength":1640,
+			"byteOffset":4920,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":408,
-			"byteOffset":2048,
+			"byteLength":966,
+			"byteOffset":6560,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":2456,
+			"byteLength":7528,
 			"uri":"yeti_hollow.bin"
 		}
 	]

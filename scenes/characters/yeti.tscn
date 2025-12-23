@@ -1,19 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://byxx1uc6vr2m6"]
+[gd_scene load_steps=5 format=3 uid="uid://byxx1uc6vr2m6"]
 
 [ext_resource type="Script" uid="uid://dmtep2wuuphce" path="res://scripts/yeti.gd" id="1_ejn5x"]
 [ext_resource type="PackedScene" uid="uid://d3isuepelisyt" path="res://assets/meshes/Enemies/Yeti-1.glb" id="2_wf2ah"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mns3w"]
-size = Vector3(2.6464844, 4.2458496, 2.334961)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wf2ah"]
+radius = 0.9550781
+height = 4.467285
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_wf2ah"]
+height = 0.4453125
+radius = 2.6152344
 
 [node name="yeti" type="CharacterBody3D"]
 collision_layer = 4
 script = ExtResource("1_ejn5x")
 
 [node name="Yeti-1" parent="." instance=ExtResource("2_wf2ah")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.43293834, 0)
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, 0, 2.5425372, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_mns3w")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2011516, 0)
+shape = SubResource("CapsuleShape3D_wf2ah")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="eyes" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4364657, -1.193794)
+
+[node name="footstep_wiper" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="footstep_wiper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24378234, 0)
+shape = SubResource("CylinderShape3D_wf2ah")

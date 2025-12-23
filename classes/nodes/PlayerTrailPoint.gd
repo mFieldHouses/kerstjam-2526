@@ -7,12 +7,12 @@ signal wipe_out_from_point
 signal wipe_out_this_point
 
 func _ready() -> void:
-	area.body_entered.connect(_body_entered)
+	area.area_entered.connect(_area_entered)
 
-func _body_entered(body : PhysicsBody3D) -> void:
-	if body is Yeti:
+func _area_entered(area : Area3D) -> void:
+	if area.get_parent() is Yeti:
 		wipe_out_from_point.emit()
-	elif body is Snowball:
+	elif area.get_parent() is Snowball:
 		print("got hit with snowball, wipe me out")
 		wipe_out_this_point.emit()
 
