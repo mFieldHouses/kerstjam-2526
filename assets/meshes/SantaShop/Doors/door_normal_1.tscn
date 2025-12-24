@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmt43o30mx2hs"]
+
+[ext_resource type="PackedScene" uid="uid://pdv7a2hf7yhf" path="res://assets/meshes/SantaShop/Doors/Door-Normal-1.glb" id="1_yg42h"]
+[ext_resource type="Material" uid="uid://bdfblnw3d5ot" path="res://assets/materials/Concrete-1.tres" id="2_2nt6g"]
+[ext_resource type="Material" uid="uid://dn6kf4xctrw2a" path="res://assets/materials/Metal-Brons-1.tres" id="3_ydwos"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3dhcx"]
+noise_type = 0
+frequency = 0.076
+fractal_octaves = 1
+fractal_lacunarity = 0.515
+fractal_gain = -0.225
+fractal_weighted_strength = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_a5bl6"]
+noise = SubResource("FastNoiseLite_3dhcx")
+as_normal_map = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdmee"]
+albedo_color = Color(0.4931714, 0.2579644, 0.09770084, 1)
+metallic_specular = 0.0
+roughness_texture = SubResource("NoiseTexture2D_a5bl6")
+
+[node name="Door-Normal-1" instance=ExtResource("1_yg42h")]
+
+[node name="Cube_551_Cutout_002" parent="Wall-1-2x2x05" index="0"]
+visible = false
+
+[node name="Deur-Norma-1" parent="Wall-1-2x2x05" index="1"]
+material_override = SubResource("StandardMaterial3D_hdmee")
+
+[node name="DeurOmlijsting-1" parent="." index="1"]
+material_override = ExtResource("2_2nt6g")
+
+[node name="Scharnier" parent="." index="2"]
+material_override = ExtResource("3_ydwos")
+
+[node name="Scharnier_001" parent="." index="3"]
+material_override = ExtResource("3_ydwos")

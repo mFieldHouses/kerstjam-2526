@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bikd1xas7guuo"]
+
+[ext_resource type="PackedScene" uid="uid://cv8oyheirq5ah" path="res://assets/meshes/SantaShop/Windows/WindowNormal-1.glb" id="1_3lrmm"]
+[ext_resource type="Material" uid="uid://dp518jf7gfjkn" path="res://assets/materials/Glass-Orange-1.tres" id="2_sb5ac"]
+[ext_resource type="PackedScene" uid="uid://cy6v2rht6lbna" path="res://assets/meshes/SantaShop/Windows/VensterBank-1.glb" id="2_t8j6j"]
+
+[node name="WindowNormal-1" instance=ExtResource("1_3lrmm")]
+
+[node name="WindowNormal-1" parent="." index="0"]
+surface_material_override/2 = ExtResource("2_sb5ac")
+
+[node name="VensterBank-1" parent="." index="1" instance=ExtResource("2_t8j6j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019302636, 0.0626654, -0.0075092614)
