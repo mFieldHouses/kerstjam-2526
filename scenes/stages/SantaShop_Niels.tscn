@@ -21358,8 +21358,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4716835, 0.3407644, 8.8359
 [node name="Yeti-1" parent="." instance=ExtResource("26_86l8b")]
 transform = Transform3D(-0.99958587, 0, 0.0287764, 0, 1, 0, -0.0287764, 0, -0.99958587, -9.9611, 3.4231923, 20.175823)
 
-[node name="Sled-1" parent="." instance=ExtResource("28_ipl6n")]
-transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, 8.463606, 0.4176345, 6.553652)
-
 [node name="Elf-SizeCheck-1" parent="." instance=ExtResource("29_ipl6n")]
 transform = Transform3D(0.046234764, 0, -0.9989306, 0, 1, 0, 0.9989306, 0, 0.046234764, 6.186256, 0.7930064, 6.488616)
+
+[node name="Sled-1" parent="." instance=ExtResource("28_ipl6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.398246, -0.019072056, 6.4615192)
