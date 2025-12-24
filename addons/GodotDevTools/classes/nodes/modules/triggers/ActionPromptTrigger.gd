@@ -56,6 +56,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
 	if player_looking_at_area():
 		if PlayerState.get_distance_to_player(global_position) <= GlobalGameDefaults.standard_interaction_range:
 			if _show_prompt == false:

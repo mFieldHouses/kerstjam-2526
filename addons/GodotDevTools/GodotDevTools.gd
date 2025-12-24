@@ -12,6 +12,12 @@ func _enter_tree() -> void:
 	
 	add_tool_menu_item("Create item...", _open_item_creation_menu)
 	
+	var _add_action_prompt_button : Button = Button.new()
+	_add_action_prompt_button.text = "Setup action prompt for object"
+	_add_action_prompt_button.button_down.connect(_setup_action_prompt_for_object)
+	_add_action_prompt_button.flat = true
+	add_control_to_container(EditorPlugin.CONTAINER_SPATIAL_EDITOR_MENU, _add_action_prompt_button)
+	
 	
 func _open_item_creation_menu() -> void:
 	var _new_menu : Window = preload("res://addons/GodotDevTools/scenes/item_creation.tscn").instantiate()
@@ -47,3 +53,25 @@ func _process(delta: float) -> void:
 
 func _exit_tree() -> void:
 	remove_tool_menu_item("Create item...")
+
+func _setup_action_prompt_for_object() -> void:
+	var _object = EditorInterface.get_selection().get_selected_nodes()[0]
+	if _object is not VisualInstance3D:
+		_object = Utility.get_children_of_type(_object, "MeshInstance3D")[0]
+	
+	var _aabb : AABB = _object.get_aabb()
+	
+	var _apt : ActionPromptTrigger = ActionPromptTrigger.new()
+	_object.add_child(_apt)
+	_apt.owner = EditorInterface.get_edited_scene_root()
+	var _area3d : Area3D = Area3D.new()
+	_area3d.collision_layer = 2
+	_apt.add_child(_area3d)
+	_area3d.owner = EditorInterface.get_edited_scene_root()
+	var _cls : CollisionShape3D = CollisionShape3D.new()
+	var _boxmesh : BoxShape3D = BoxShape3D.new()
+	_boxmesh.size = _aabb.size
+	_cls.shape = _boxmesh
+	_area3d.add_child(_cls)
+	_cls.owner = EditorInterface.get_edited_scene_root()
+	

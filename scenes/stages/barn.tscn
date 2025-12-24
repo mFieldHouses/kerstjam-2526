@@ -54,13 +54,13 @@ shader = ExtResource("3_2n0o5")
 material = SubResource("ShaderMaterial_rg2j8")
 size = Vector3(3.6313477, 2.6030273, 0.53515625)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_me2a5"]
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rg2j8"]
 transparency = 1
 
 [sub_resource type="BoxMesh" id="BoxMesh_28ucp"]
 material = SubResource("StandardMaterial3D_rg2j8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_me2a5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eew6s"]
 
@@ -98,20 +98,6 @@ mesh = SubResource("BoxMesh_qle0t")
 [node name="DoorController" type="Node3D" parent="floor/CollisionShape3D2/MeshInstance3D"]
 script = ExtResource("4_l1jfg")
 metadata/_custom_type_script = "uid://dnjwa0xk782tk"
-
-[node name="ActionPromptTrigger" type="Node3D" parent="floor/CollisionShape3D2/MeshInstance3D/DoorController"]
-script = ExtResource("3_1o4kk")
-prompt_prefix = "Open"
-prompt_subject = "door"
-trigger_key = "E"
-metadata/_custom_type_script = "uid://c7ccd1128l7ea"
-
-[node name="Area3D" type="Area3D" parent="floor/CollisionShape3D2/MeshInstance3D/DoorController/ActionPromptTrigger"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/CollisionShape3D2/MeshInstance3D/DoorController/ActionPromptTrigger/Area3D"]
-shape = SubResource("BoxShape3D_me2a5")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.2922366)
