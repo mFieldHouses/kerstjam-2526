@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=34 format=3 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bdo60w50wvoit" path="res://assets/meshes/SantaShop/Walls/WallDecoration/Beam-1-Decoration-1.glb" id="18_53j7x"]
 [ext_resource type="Texture2D" uid="uid://ceooxe2w7sgx8" path="res://assets/textures/misc/Snow-Line-2.png" id="19_4keet"]
 [ext_resource type="PackedScene" uid="uid://blny7d2mxqxwg" path="res://assets/meshes/Misc/StreetLantern-1.glb" id="19_4n3p1"]
+[ext_resource type="PackedScene" uid="uid://3aixdblns36c" path="res://scenes/elements/window_tall_1.tscn" id="20_vlajn"]
 [ext_resource type="Script" uid="uid://c0xopaj8p04ph" path="res://scripts/scenes/flickering_streetlight.gd" id="20_ynkcq"]
 [ext_resource type="PackedScene" uid="uid://bpe7uo5td47p7" path="res://assets/meshes/Misc/PineTree-1.glb" id="21_4dun5"]
 [ext_resource type="PackedScene" uid="uid://xiex0fdlw27f" path="res://assets/meshes/Environment/SnowMid-1-col.glb" id="22_5ko26"]
@@ -741,9 +742,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 13.5)
 [node name="Wall-1-2x2x05m37" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 13.5)
 
-[node name="Wall-1-2x2x05m38" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 13.5)
-
 [node name="Wall-1-2x2x05m39" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 13.5)
 
@@ -762,12 +760,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 13.5)
 [node name="Wall-1-2x2x05m44" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, 13.5)
 
-[node name="Wall-1-2x2x05m45" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 13.5)
-
-[node name="Wall-1-2x2x05m46" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, 13.5)
-
 [node name="Wall-1-2x2x05m47" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 13.5)
 
@@ -777,29 +769,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 13.5)
 [node name="Wall-1-2x2x05m49" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 13.5)
 
-[node name="Wall-1-2x2x05m50" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 2, 13.5)
-
 [node name="Wall-1-2x2x05m51" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 13.5)
 
 [node name="Wall-1-2x2x05m52" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2, 13.5)
 
-[node name="Wall-1-2x2x05m53" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 2, 13.5)
-
-[node name="Wall-1-2x2x05m54" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 13.5)
-
 [node name="Wall-1-2x2x05m89" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 13.5)
 
 [node name="Wall-1-2x2x05m90" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 13.5)
-
-[node name="Wall-1-2x2x05m91" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 13.5)
 
 [node name="Wall-1-2x2x05m92" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 6, 13.5)
@@ -891,12 +871,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.7
 [node name="Wall-1-2x2x05m160" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.75, 6, 0.75)
 
-[node name="Wall-1-2x2x05m95" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 13.5)
-
-[node name="Wall-1-2x2x05m96" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 13.5)
-
 [node name="Wall-1-2x2x05m97" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, 13.5)
 
@@ -908,15 +882,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 6, 13.5)
 
 [node name="Wall-1-2x2x05m100" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 6, 13.5)
-
-[node name="Wall-1-2x2x05m101" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4, 13.5)
-
-[node name="Wall-1-2x2x05m102" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 4, 13.5)
-
-[node name="Wall-1-2x2x05m103" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4.002124, 13.5)
 
 [node name="Wall-1-2x2x05m104" parent="SantasShop/Structure/Walls" instance=ExtResource("1_bihwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 6, 13.5)
@@ -21275,6 +21240,26 @@ size = Vector3(0.61325073, 1.3010559, 1.3066101)
 texture_albedo = ExtResource("19_4keet")
 upper_fade = 1e-05
 lower_fade = 0.06306803
+
+[node name="Windows" type="Node3D" parent="SantasShop/Structure"]
+
+[node name="WindowTall-1" parent="SantasShop/Structure/Windows" instance=ExtResource("20_vlajn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 2, 13.5)
+
+[node name="WindowTall-2" parent="SantasShop/Structure/Windows" instance=ExtResource("20_vlajn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 2, 13.5)
+
+[node name="WindowTall-3" parent="SantasShop/Structure/Windows" instance=ExtResource("20_vlajn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8, 2, 13.5)
+
+[node name="WindowTall-4" parent="SantasShop/Structure/Windows" instance=ExtResource("20_vlajn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12, 2, 13.5)
+
+[node name="WindowTall-5" parent="SantasShop/Structure/Windows" instance=ExtResource("20_vlajn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 2, 13.5)
+
+[node name="WindowTall-6" parent="SantasShop/Structure/Windows" instance=ExtResource("20_vlajn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 2, 13.5)
 
 [node name="Decoration" type="Node3D" parent="SantasShop"]
 
