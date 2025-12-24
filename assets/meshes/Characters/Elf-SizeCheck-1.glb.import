@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cp5vr5ao75u81"
-path="res://.godot/imported/FullShop-1.glb-d9096bf32c02b961d86ae8ae2fa00da5.scn"
+uid="uid://ctj1pr4680eus"
+path="res://.godot/imported/Elf-SizeCheck-1.glb-97ebff1b7d45f6923c0dffbe97cdd16e.scn"
 
 [deps]
 
-source_file="res://assets/meshes/SantaShop/FullShop-1.glb"
-dest_files=["res://.godot/imported/FullShop-1.glb-d9096bf32c02b961d86ae8ae2fa00da5.scn"]
+source_file="res://assets/meshes/Characters/Elf-SizeCheck-1.glb"
+dest_files=["res://.godot/imported/Elf-SizeCheck-1.glb-97ebff1b7d45f6923c0dffbe97cdd16e.scn"]
 
 [params]
 
