@@ -1,0 +1,6 @@
+Ehhh... Deze Yeti is iets slimmer dan verwacht...
+...hij volgt je voetsporen!
+Met je sneeuwkanon kun je je voetsporen uitwissen, dat helpt misschien wat!
+Wees wel spaarzaam met je ammunitie!
+Ik zal de Yeti bijhouden en aangeven wat hij aan het doen is terwijl jij zoekt naar het onderdeel!
+*show_yeti_state_ui

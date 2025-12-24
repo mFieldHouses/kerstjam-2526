@@ -5,8 +5,6 @@ class_name AreaTrigger
 
 ##Requires an [Area3D] as a child. Any [Character] within this range will fire this trigger.
 
-@export var trigger_distance : float = 0
-
 @onready var _areas : Array[Area3D] = get_area_3ds()
 
 var _triggered : bool = false

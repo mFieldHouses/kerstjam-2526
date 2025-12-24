@@ -8,6 +8,10 @@ signal wipe_out_this_point
 
 func _ready() -> void:
 	area.area_entered.connect(_area_entered)
+	
+	await get_tree().create_timer(6.0).timeout
+	
+	wipe_out_this_point.emit()
 
 func _area_entered(area : Area3D) -> void:
 	if area.get_parent() is Yeti:

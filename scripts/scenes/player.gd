@@ -64,7 +64,8 @@ var _weapon_selection_scroll_counter : int = 0
 var _weapon_selection_scroll_timer : float = 0.0 #When this reaches the value of _weapon_selection_scroll_timeout_time, _weapon_selection_scroll_counter is set back to 0.
 var _weapon_selection_scroll_timeout_time : float = 0.4
 
-var _used_ammo : AmmoItemDescription = preload("res://assets/resources/items/ammo/snow.tres")
+var _ammo : Dictionary[AmmoItemDescription, int] = {load("res://assets/resources/items/ammo/snow.tres") : 10}
+@onready var _used_ammo : AmmoItemDescription = load("res://assets/resources/items/ammo/snow.tres")
 
 @onready var camera : Camera3D = get_node("camera")
 @onready var crosshair_sprite : TextureRect = $gui/CenterContainer/crosshair
@@ -102,9 +103,9 @@ func _physics_process(delta: float) -> void:
 		else:
 			if is_on_floor() and controls_enabled:
 				velocity.y = JUMP_VELOCITY
-	
+
 	if _used_ammo.ammo_type_identifier == "snow":
-		if Input.is_action_pressed("shoot"):
+		if Input.is_action_pressed("shoot") and _selected_weapon_idx == 0 and _ammo[_used_ammo] > 0:
 			_snow_cannon_timer += delta
 			if _snow_cannon_timer > 0.075:
 				shoot()
@@ -192,7 +193,8 @@ func _input(event):
 				tween_camera_fov(DEFAULT_FOV, 0.2)
 		
 		elif event.is_action("shoot"):
-			if event.is_pressed() and _weapon_use_cooldown_timer <= 0.0 and _used_ammo.ammo_type_identifier != "snow":
+			if event.is_pressed() and _weapon_use_cooldown_timer <= 0.0 and (_used_ammo.ammo_type_identifier != "snow" or _selected_weapon_idx != 0):
+				print('shoot single')
 				shoot()
 		
 		elif event.is_action("scope") and _get_currently_selected_weapon().scopeable:
@@ -240,6 +242,7 @@ func toggle_scope_mode(state : bool) -> void:
 			tween_camera_fov(DEFAULT_FOV + 20, 0.2)
 
 func shoot() -> void:
+	_ammo[_used_ammo] -= 1
 	var _used_weapon : WeaponConfiguration = _get_currently_selected_weapon()
 	_weapon_use_cooldown_timer = _get_currently_selected_weapon().weapon_use_cooldown
 	
@@ -248,7 +251,7 @@ func shoot() -> void:
 	
 	await get_tree().create_timer(_used_weapon.hit_delay).timeout
 	
-	if _used_ammo.ammo_type_identifier == "snow":
+	if _used_ammo.ammo_type_identifier == "snow" and _selected_weapon_idx == 0:
 		var _new_snowball : Snowball = load("res://scenes/projectiles/snowball.tscn").instantiate()
 		get_parent().add_child(_new_snowball)
 		

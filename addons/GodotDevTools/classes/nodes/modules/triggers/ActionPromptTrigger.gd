@@ -20,6 +20,8 @@ class_name ActionPromptTrigger
 
 @onready var _areas : Array[Area3D] = get_area_3ds()
 
+var _toggle_state : bool = false
+
 var _show_prompt : bool = false: ##Determines whether the prompt is visible in UI and whether this trigger can be activated.
 	set(x):
 		_show_prompt = x
@@ -41,6 +43,8 @@ func _input(event: InputEvent) -> void:
 		if event.is_action(trigger_action) and event.is_pressed() and enabled:
 			get_viewport().set_input_as_handled()
 			trigger.emit(Utility.get_action_key(trigger_action))
+			toggle.emit(Utility.get_action_key(trigger_action), !_toggle_state)
+			_toggle_state = !_toggle_state
 			
 			multi_state_index += 1
 			_show_prompt = true #Update prompt text

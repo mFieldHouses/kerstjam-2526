@@ -37,67 +37,67 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":205,
+			"count":629,
 			"max":[
 				41.89826965332031,
-				8.340747833251953,
-				11.206218719482422
+				11.035197257995605,
+				26.009836196899414
 			],
 			"min":[
-				-15.076251029968262,
+				-15.55395793914795,
 				0,
-				-23.455135345458984
+				-34.075584411621094
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":205,
+			"count":629,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":205,
+			"count":629,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":483,
+			"count":1281,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":2460,
+			"byteLength":7548,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":2460,
-			"byteOffset":2460,
+			"byteLength":7548,
+			"byteOffset":7548,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":1640,
-			"byteOffset":4920,
+			"byteLength":5032,
+			"byteOffset":15096,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":966,
-			"byteOffset":6560,
+			"byteLength":2562,
+			"byteOffset":20128,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":7528,
+			"byteLength":22692,
 			"uri":"yeti_hollow.bin"
 		}
 	]

@@ -9,7 +9,7 @@ func _ready() -> void:
 	await get_tree().create_timer(1.0).timeout
 	
 	DialogManager.initiate_remote_dialog("enter_yeti_hollow", "Henkie", load("res://addons/GodotDevTools/module.svg"))
-
+	DialogManager.dialog_queue.connect(_queue)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -17,6 +17,13 @@ func _process(delta: float) -> void:
 		_create_new_trail_point(PlayerState.player_instance.global_position)
 	elif PlayerState.player_instance.global_position.distance_to(_player_trail_points.back().position) > 1.5:
 		_create_new_trail_point(PlayerState.player_instance.global_position)
+	
+	var _distance_fac : float = 1.0 - PlayerState.player_instance.global_position.distance_to($part.global_position) / 100.0
+	$Control/distance_indicator/MarginContainer/ColorRect.custom_minimum_size.x = ($Control/distance_indicator.size.x - 10) * _distance_fac
+
+func _queue(did: String, qid: String) -> void:
+	if did == "enter_yeti_hollow" and qid == "show_distance_indicator":
+		$Control/distance_indicator.visible = true
 
 func _create_new_trail_point(at_position : Vector3) -> void:
 	#print("added new point")

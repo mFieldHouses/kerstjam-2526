@@ -100,3 +100,7 @@ func get_player_unit_raycast(layers : Array, bodies : bool = true, areas : bool 
 	else:
 		
 		return null
+
+func add_item_to_inventory(item : ItemDescription, count : int) -> void:
+	if item is AmmoItemDescription:
+		player_instance._ammo[item as AmmoItemDescription] += count

@@ -21,14 +21,14 @@
 [ext_resource type="PackedScene" uid="uid://bdo60w50wvoit" path="res://assets/meshes/SantaShop/Walls/WallDecoration/Beam-1-Decoration-1.glb" id="18_53j7x"]
 [ext_resource type="Texture2D" uid="uid://ceooxe2w7sgx8" path="res://assets/textures/misc/Snow-Line-2.png" id="19_4keet"]
 [ext_resource type="PackedScene" uid="uid://blny7d2mxqxwg" path="res://assets/meshes/Misc/StreetLantern-1.glb" id="19_4n3p1"]
-[ext_resource type="PackedScene" uid="uid://3aixdblns36c" path="res://scenes/elements/window_tall_1.tscn" id="20_vlajn"]
+[ext_resource type="PackedScene" path="res://scenes/elements/window_tall_1.tscn" id="20_vlajn"]
 [ext_resource type="Script" uid="uid://c0xopaj8p04ph" path="res://scripts/scenes/flickering_streetlight.gd" id="20_ynkcq"]
 [ext_resource type="PackedScene" uid="uid://bpe7uo5td47p7" path="res://assets/meshes/Misc/PineTree-1.glb" id="21_4dun5"]
 [ext_resource type="PackedScene" uid="uid://xiex0fdlw27f" path="res://assets/meshes/Environment/SnowMid-1-col.glb" id="22_5ko26"]
 [ext_resource type="PackedScene" uid="uid://bxxankmgh5hfl" path="res://assets/meshes/Environment/SnowHigh-1-col.glb" id="22_h8udn"]
 [ext_resource type="PackedScene" uid="uid://d3isuepelisyt" path="res://assets/meshes/Enemies/Yeti-1.glb" id="26_86l8b"]
 [ext_resource type="PackedScene" uid="uid://8qin0wvv51wp" path="res://assets/meshes/Sled/Sled-1.glb" id="28_ipl6n"]
-[ext_resource type="PackedScene" uid="uid://d8wbgo5c2a7e" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
+[ext_resource type="PackedScene" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
 [ext_resource type="PackedScene" uid="uid://ctj1pr4680eus" path="res://assets/meshes/Characters/Elf-SizeCheck-1.glb" id="29_ipl6n"]
 
 [sub_resource type="Environment" id="Environment_vk2yt"]
@@ -99,7 +99,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 6, -3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.592699, 6, -3)
 
 [node name="player" parent="." instance=ExtResource("12_3bagg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.29828, 1.8599155, -1.3464986)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.29828, 0.23373544, 1.5666488)
 
 [node name="floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1.585, 0, 0, 0, 1, 0, 0, 0, 1.675, 0, 0, 0)
@@ -21259,7 +21259,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12, 
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 2, 13.5)
 
 [node name="WindowTall-6" parent="SantasShop/Structure/Windows" instance=ExtResource("20_vlajn")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16, 2, 13.5)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.052992, 2, 13.513258)
+
+[node name="Elf-SizeCheck-1" parent="SantasShop/Structure/Windows" instance=ExtResource("29_ipl6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80357, 0.17551261, 0.8224209)
 
 [node name="Decoration" type="Node3D" parent="SantasShop"]
 
