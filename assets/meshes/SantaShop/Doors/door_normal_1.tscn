@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmt43o30mx2hs"]
+[gd_scene load_steps=11 format=3 uid="uid://cmt43o30mx2hs"]
 
 [ext_resource type="PackedScene" uid="uid://pdv7a2hf7yhf" path="res://assets/meshes/SantaShop/Doors/Door-Normal-1.glb" id="1_yg42h"]
 [ext_resource type="Material" uid="uid://bdfblnw3d5ot" path="res://assets/materials/Concrete-1.tres" id="2_2nt6g"]
+[ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="2_a5bl6"]
+[ext_resource type="Script" uid="uid://dnjwa0xk782tk" path="res://addons/GodotDevTools/classes/nodes/modules/DoorController.gd" id="2_ydwos"]
 [ext_resource type="Material" uid="uid://dn6kf4xctrw2a" path="res://assets/materials/Metal-Brons-1.tres" id="3_ydwos"]
+[ext_resource type="PackedScene" uid="uid://jqr5jx3r8a3e" path="res://assets/meshes/SantaShop/Decoration/hanging_lamp_1.tscn" id="5_ydwos"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_3dhcx"]
 noise_type = 0
@@ -21,19 +24,46 @@ albedo_color = Color(0.4931714, 0.2579644, 0.09770084, 1)
 metallic_specular = 0.0
 roughness_texture = SubResource("NoiseTexture2D_a5bl6")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_u434r"]
+size = Vector3(1, 1, 1.0820313)
+
 [node name="Door-Normal-1" instance=ExtResource("1_yg42h")]
 
 [node name="Cube_551_Cutout_002" parent="Wall-1-2x2x05" index="0"]
 visible = false
 
 [node name="Deur-Norma-1" parent="Wall-1-2x2x05" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39633042, 0.56467336, -0.8393004)
 material_override = SubResource("StandardMaterial3D_hdmee")
+
+[node name="DoorController" type="Node3D" parent="Wall-1-2x2x05/Deur-Norma-1" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28254345, 0, 0)
+script = ExtResource("2_ydwos")
+metadata/_custom_type_script = "uid://dnjwa0xk782tk"
+
+[node name="ActionPromptTrigger" type="Node3D" parent="Wall-1-2x2x05/Deur-Norma-1/DoorController" index="0"]
+script = ExtResource("2_a5bl6")
+trigger_key = "E"
+metadata/_custom_type_script = "uid://c7ccd1128l7ea"
+
+[node name="Area3D" type="Area3D" parent="Wall-1-2x2x05/Deur-Norma-1/DoorController/ActionPromptTrigger" index="0"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall-1-2x2x05/Deur-Norma-1/DoorController/ActionPromptTrigger/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.041015625)
+shape = SubResource("BoxShape3D_u434r")
 
 [node name="DeurOmlijsting-1" parent="." index="1"]
 material_override = ExtResource("2_2nt6g")
 
 [node name="Scharnier" parent="." index="2"]
 material_override = ExtResource("3_ydwos")
+surface_material_override/0 = ExtResource("3_ydwos")
 
 [node name="Scharnier_001" parent="." index="3"]
 material_override = ExtResource("3_ydwos")
+surface_material_override/0 = ExtResource("3_ydwos")
+
+[node name="HangingLamp-1" parent="." index="4" instance=ExtResource("5_ydwos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8399706, 1.2666248, -0.22904819)

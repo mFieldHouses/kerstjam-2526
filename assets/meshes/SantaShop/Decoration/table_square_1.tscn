@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://dupj43bb4yow8"]
+
+[ext_resource type="PackedScene" uid="uid://ctpol27c16fl2" path="res://assets/meshes/SantaShop/Decoration/Table-Square-1.glb" id="1_v1kg6"]
+[ext_resource type="Material" uid="uid://cjfb6diua0fr2" path="res://assets/materials/Wood-1.tres" id="2_a8hbc"]
+[ext_resource type="PackedScene" uid="uid://cw8k4agt15axj" path="res://assets/meshes/SantaShop/Decoration/Tekening-1.glb" id="3_kn0jw"]
+[ext_resource type="Texture2D" uid="uid://tk5vl1tecvu8" path="res://assets/textures/misc/BluePrint-1.png" id="4_6qtou"]
+[ext_resource type="PackedScene" uid="uid://dwuy34xm1q4l8" path="res://assets/meshes/SantaShop/Decoration/Mok-1.glb" id="5_o24qk"]
+[ext_resource type="Material" uid="uid://b5jeubau3fxjm" path="res://assets/materials/Porcelain-1.tres" id="6_v1eg8"]
+[ext_resource type="PackedScene" uid="uid://bh0wigheuaig3" path="res://assets/meshes/SantaShop/Decoration/Pen-1.glb" id="7_6qtou"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7tkm6"]
+albedo_texture = ExtResource("4_6qtou")
+stencil_flags = 2
+
+[node name="Table-Square-1" instance=ExtResource("1_v1kg6")]
+
+[node name="Table-Square-1" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_a8hbc")
+
+[node name="Tekening-12" parent="." index="1" instance=ExtResource("3_kn0jw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10529646, 0.5460121, 0.12051594)
+
+[node name="Tekening-1" parent="Tekening-12" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7tkm6")
+
+[node name="Mok-12" parent="." index="2" instance=ExtResource("5_o24qk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.27850732, 0.546012, -0.20608813)
+
+[node name="Mok-1" parent="Mok-12" index="0"]
+surface_material_override/0 = ExtResource("6_v1eg8")
+
+[node name="Pen-12" parent="." index="3" instance=ExtResource("7_6qtou")]
+transform = Transform3D(0.23250476, 0.32815465, -0.29707918, -0.39374733, -1.7211242e-08, -0.30816072, -0.20224877, 0.37724596, 0.25842005, -0.37623525, 0.56136405, -0.1554656)
+
+[node name="Pen-13" parent="." index="4" instance=ExtResource("7_6qtou")]
+transform = Transform3D(0.2181572, -0.3531397, -0.2787468, -0.39374736, -1.7211244e-08, -0.3081607, 0.21764754, 0.3539666, -0.27809563, 0.030403614, 0.56136405, -0.48045903)
+
+[editable path="Tekening-12"]
+[editable path="Mok-12"]

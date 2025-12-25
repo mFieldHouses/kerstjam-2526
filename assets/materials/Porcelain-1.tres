@@ -1,0 +1,4 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b5jeubau3fxjm"]
+
+[resource]
+clearcoat_enabled = true

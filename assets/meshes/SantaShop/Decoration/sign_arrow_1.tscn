@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://2p8ccpuk0532"]
+
+[ext_resource type="PackedScene" uid="uid://cog6ur063ywjk" path="res://assets/meshes/SantaShop/Decoration/SignArrow-1.glb" id="1_q647b"]
+[ext_resource type="Material" uid="uid://dn6kf4xctrw2a" path="res://assets/materials/Metal-Brons-1.tres" id="2_q8xs5"]
+[ext_resource type="Material" uid="uid://dxrpipn2avk4y" path="res://assets/materials/Emit-Red-1.tres" id="3_0lb2e"]
+[ext_resource type="Script" uid="uid://dh7o8c407v5oy" path="res://assets/meshes/SantaShop/Decoration/arrow_sign.gd" id="3_q8xs5"]
+[ext_resource type="Material" uid="uid://bom3q2dvv1trg" path="res://assets/materials/Emit-Green-1.tres" id="4_00mg2"]
+
+[node name="SignArrow-1" instance=ExtResource("1_q647b")]
+script = ExtResource("3_q8xs5")
+
+[node name="Arrow-Sign" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_q8xs5")
+
+[node name="SignLamp-1" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_0lb2e")
+
+[node name="SignLamp-2" parent="." index="2"]
+surface_material_override/0 = ExtResource("4_00mg2")
+
+[node name="SignLamp-3" parent="." index="3"]
+surface_material_override/0 = ExtResource("3_0lb2e")
+
+[node name="SignLamp-4" parent="." index="4"]
+surface_material_override/0 = ExtResource("4_00mg2")
+
+[node name="SignLamp-5" parent="." index="5"]
+surface_material_override/0 = ExtResource("3_0lb2e")
+
+[node name="SignLamp-6" parent="." index="6"]
+surface_material_override/0 = ExtResource("4_00mg2")
+
+[node name="SignLamp-7" parent="." index="7"]
+surface_material_override/0 = ExtResource("3_0lb2e")
+
+[node name="SignLamp-8" parent="." index="8"]
+surface_material_override/0 = ExtResource("4_00mg2")

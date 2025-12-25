@@ -1,0 +1,14 @@
+[gd_resource type="NoiseTexture2D" load_steps=2 format=3 uid="uid://c5wwctlbhqquw"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_lriqd"]
+noise_type = 3
+seed = 150
+frequency = 0.0988
+fractal_weighted_strength = 0.5
+domain_warp_enabled = true
+
+[resource]
+height = 92
+noise = SubResource("FastNoiseLite_lriqd")
+as_normal_map = true
+bump_strength = 1.8

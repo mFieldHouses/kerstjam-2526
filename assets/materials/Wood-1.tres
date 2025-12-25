@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cjfb6diua0fr2"]
+
+[ext_resource type="Texture2D" uid="uid://c5wwctlbhqquw" path="res://assets/textures/wood/wood-noise-texture-1.tres" id="1_0qse2"]
+
+[resource]
+albedo_color = Color(0.57709426, 0.41752926, 0.33397582, 1)
+metallic_specular = 0.2
+roughness_texture = ExtResource("1_0qse2")
+normal_enabled = true
+normal_texture = ExtResource("1_0qse2")
+heightmap_enabled = true
+heightmap_texture = ExtResource("1_0qse2")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://clakxx8owqay4"]
+
+[ext_resource type="PackedScene" uid="uid://cgky0gpr30jfc" path="res://assets/meshes/SantaShop/Decoration/SignWorkShop-1_NL.glb" id="1_n473g"]
+[ext_resource type="Material" uid="uid://dn6kf4xctrw2a" path="res://assets/materials/Metal-Brons-1.tres" id="2_x33da"]
+[ext_resource type="Material" uid="uid://bom3q2dvv1trg" path="res://assets/materials/Emit-Green-1.tres" id="3_xq4ax"]
+
+[node name="SignWorkShop-1_NL" instance=ExtResource("1_n473g")]
+
+[node name="Sign-Workshop" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_x33da")
+
+[node name="Sign_WorkShop_NL" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_xq4ax")
