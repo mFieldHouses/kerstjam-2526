@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=57 format=4 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
@@ -39,7 +39,13 @@
 [ext_resource type="PackedScene" uid="uid://8qin0wvv51wp" path="res://assets/meshes/Sled/Sled-1.glb" id="28_ipl6n"]
 [ext_resource type="PackedScene" uid="uid://d8wbgo5c2a7e" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
 [ext_resource type="PackedScene" uid="uid://ctj1pr4680eus" path="res://assets/meshes/Characters/Elf-SizeCheck-1.glb" id="29_ipl6n"]
+[ext_resource type="PackedScene" uid="uid://bpxoxrgixhkbp" path="res://assets/meshes/SantaShop/Floors/Plint-1.glb" id="30_8d78k"]
+[ext_resource type="Material" uid="uid://da7ow5w2larpw" path="res://assets/materials/Wood-2.tres" id="31_3fhnc"]
 [ext_resource type="PackedScene" uid="uid://cogmnnofnvcg3" path="res://assets/meshes/SantaShop/Decoration/lamp_hanging_ceiling_1.tscn" id="40_iwwnf"]
+[ext_resource type="PackedScene" uid="uid://bgru0h4cvr1vr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1.glb" id="41_jhtxq"]
+[ext_resource type="Material" uid="uid://bo6ysfjfwynng" path="res://assets/materials/Floor-Wood-1.tres" id="42_mjwaw"]
+[ext_resource type="Texture2D" uid="uid://db5ek0ciwfy2m" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1_Floor-Wood-Baked-1.png" id="43_8d78k"]
+[ext_resource type="Texture2D" uid="uid://fl5qi1kb13nr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1_Floor-Wood-1-normal.png" id="44_3fhnc"]
 
 [sub_resource type="Environment" id="Environment_vk2yt"]
 resource_local_to_scene = true
@@ -51,6 +57,78 @@ volumetric_fog_sky_affect = 0.586
 size = Vector3(20.504883, 0.49658203, 19.720459)
 
 [sub_resource type="BoxMesh" id="BoxMesh_3bagg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gabd0"]
+resource_name = "Floor-Wood-1-Baked"
+cull_mode = 2
+albedo_texture = ExtResource("43_8d78k")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("44_3fhnc")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dk5ty"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Floor-Wood-1-Baked",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cvggq"]
+resource_name = "Wood-Floor-1_Plane_370"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_gabd0"),
+"name": "Floor-Wood-1-Baked",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP///7///wAAAAD/v///AAD///+/AAAAAAAA/7////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dk5ty")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q23m3"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6kmlv"]
+_surfaces = [{
+"aabb": AABB(-1, -1.9073486e-06, -0.88022757, 2, 1.192586, 1.6406828),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAwACAAEABAADAAEAAAAEAAEABAAFAAMABgAAAAIABAAHAAUABAAAAAcABQAIAAMAAwAIAAIABQAHAAgAAAAGAAkAAAAJAAcABgACAAoACAAKAAIACQAGAAoABwALAAgABwAJAAsACAALAAoACQAKAAsA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAAecAAAAAB2gAAAAAAAA//8HnAAA//8doAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAP//AAD//wAAB5wAAP////8HnAAA//8AAP//AAAAAP////8AAP///////wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_b214w"]
+resource_name = "Plint-1_Cube_237"
+_surfaces = [{
+"aabb": AABB(-1, -1.9073486e-06, -0.88022757, 2, 1.192586, 1.6406828),
+"attribute_data": PackedByteArray("/1//3/+f/7//n//f/1//v/9f////n////1//v/+f/3//n/+//1//f/9f/1//n/8//5//X/9f/z//X/9//5//f/9f/z//nwAA/5//P/9fAAD/H/9f/1//P/9f/1//H/8//x//f/9f/3//n/9f/9//P//f/1//n/8//5//f//f/1//3/9//5//Xw=="),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUABgAHAAgABgAJAAcACgALAAwACgANAAsADgAKAAwADgAMAA8AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAUABYAGAAWABkAGgAbABwAGgAdABsAHgAfACAAHgAhAB8A"),
+"material": SubResource("StandardMaterial3D_q23m3"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 34,
+"vertex_data": PackedByteArray("AAAAAAecVNUAAB2gAABU1QAA//8HnFTVAAAAAAAAVNUAAAAA//9U1QAA/////1TVAAAAAAAA/////x2gAAD//wAAHaAAAP////8AAAAA/////wAAB5xU1f///////1TV/////wecVNX//wAA//9U1f//AAAAAFTV//8doAAAVNX//wAA////vwAA//////+//////////78AAAAA////vwAAAAAHnP+///8AAP///7///wAAB5z/vwAAAAD///+/AAAAAAAA/7///wAAAAD/v/////8HnP//AAD///////8AAP//B5z///////////////8doAAA//8AAP//B5z//wAAHaAAAP///////wec//9U1VTVVNVU1VTVVNVU1VTVVNVU1VTVVNX/v/+//7//v/+//7//v/+/qiqqKqoqqiqqKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/38AAP9/AAD/f/9//7//f/+//3//v/9//7//f6PN/3+jzf9/o83/f6PN")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6kmlv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jmilc"]
 clearcoat_enabled = true
@@ -21381,6 +21459,768 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -6)
 [node name="WindowNormal-2" parent="SantasShop/Structure/Windows" instance=ExtResource("21_jbcui")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -6)
 
+[node name="Floors" type="Node3D" parent="SantasShop/Structure"]
+
+[node name="Wood-Floor-1-Workshop" parent="SantasShop/Structure/Floors" instance=ExtResource("41_jhtxq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.50285, -0.7721931, -4.1095886)
+
+[node name="Floor-Wood-1" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop" index="0"]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -0.48837566, 1.0352974, -1.5235229)
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-2" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.48837566, 1.035, -0.52352285)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-3" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -1.4883757, 1.035, -0.52352285)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-4" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.4883757, 1.035, -1.5235229)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-5" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -0.49053288, 1.0352974, 0.4726305)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-6" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.49053288, 1.035, 1.4726305)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-7" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -1.4905329, 1.035, 1.4726305)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-8" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.4905329, 1.035, 0.4726305)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-9" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -0.49053288, 1.0352974, 2.47218)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-10" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.49053288, 1.035, 3.47218)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-11" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -1.4905329, 1.035, 3.47218)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-12" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.4905329, 1.035, 2.47218)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-13" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 1.5103722, 1.0352974, -1.5235229)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-14" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.5103722, 1.035, -0.52352285)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-15" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.51037216, 1.035, -0.52352285)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-16" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.51037216, 1.035, -1.5235229)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-17" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 1.508215, 1.0352974, 0.4726305)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-18" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.508215, 1.035, 1.4726305)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-19" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.50821495, 1.035, 1.4726305)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-20" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.50821495, 1.035, 0.4726305)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-21" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 1.508215, 1.0352974, 2.47218)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-22" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.508215, 1.035, 3.47218)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-25" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 2.5088062, 1.0352974, -1.5235229)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-26" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5088062, 1.035, -0.52352285)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-27" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 2.506649, 1.0352974, 0.4726305)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-28" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.506649, 1.035, 1.4726305)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-29" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 2.506649, 1.0352974, 2.47218)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-30" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.506649, 1.035, 3.47218)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-23" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.50821495, 1.035, 3.47218)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-24" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.50821495, 1.035, 2.47218)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Plint-12" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop" instance=ExtResource("30_8d78k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4584427, 1.0594525, 3.8132386)
+
+[node name="Plint-1" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12" index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.02515542, 0, 0, 0, 0.060950235, 0, -0.025684536, 0)
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-2" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(0.5, 0, 0, 0, 0.02515542, 0, 0, 0, 0.060950235, 1, -0.025684536, 0)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-9" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(0.5, 0, 0, 0, 0.02515542, 0, 0, 0, 0.060950235, -2.9083233, -0.025684536, 0)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-10" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(0.5, 0, 0, 0, 0.02515542, 0, 0, 0, 0.060950235, -1.9083233, -0.025684536, 0)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-11" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-2.1855694e-08, 0, -0.060950235, 0, 0.025155423, 0, 0.5, 0, -2.6642193e-09, -3.409872, -0.025684536, -1.337133)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-14" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-2.1855694e-08, 0, -0.060950235, 0, 0.025155423, 0, 0.5, 0, -2.6642193e-09, -3.409872, -0.025684536, -3.900013)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-15" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-2.1855694e-08, 0, -0.060950235, 0, 0.025155423, 0, 0.5, 0, -2.6642193e-09, -3.409872, -0.025684536, -4.900013)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-16" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-0.5, 0, 5.3284386e-09, 0, 0.025155423, 0, -4.371139e-08, 0, -0.060950235, -2.951191, -0.025684536, -5.4089384)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-17" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-0.5, 0, 5.3284386e-09, 0, 0.025155423, 0, -4.371139e-08, 0, -0.060950235, -1.951191, -0.025684536, -5.4089384)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-18" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-0.5, 0, 5.3284386e-09, 0, 0.025155423, 0, -4.371139e-08, 0, -0.060950235, -0.95119095, -0.025684536, -5.4089384)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-19" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-0.5, 0, 5.3284386e-09, 0, 0.025155423, 0, -4.371139e-08, 0, -0.060950235, 0.04880905, -0.025684536, -5.4089384)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-20" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-0.5, 0, 5.3284386e-09, 0, 0.025155423, 0, -4.371139e-08, 0, -0.060950235, 1.048809, -0.025684536, -5.4089384)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-13" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-1.44912935e-08, 0, -0.060950235, 0, 0.025155423, 0, 0.33152214, 0, -2.6642193e-09, -3.409872, -0.025684536, -2.1556075)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-12" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-2.1855694e-08, 0, -0.060950235, 0, 0.025155423, 0, 0.5, 0, -2.6642193e-09, -3.409872, -0.025684536, -0.33713305)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-3" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-2.1855694e-08, 0, 0.060950235, 0, 0.025155423, 0, -0.5, 0, -2.6642193e-09, 1.5, -0.025684536, -0.3439536)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-4" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-2.1855694e-08, 0, 0.060950235, 0, 0.025155423, 0, -0.5, 0, -2.6642193e-09, 1.5, -0.025684536, -1.3439536)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-5" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-2.1855694e-08, 0, 0.060950235, 0, 0.025155423, 0, -0.5, 0, -2.6642193e-09, 1.5, -0.025684536, -2.3439536)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-6" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-2.1855694e-08, 0, 0.060950235, 0, 0.025155423, 0, -0.5, 0, -2.6642193e-09, 1.5, -0.025684536, -3.3439536)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-7" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-2.1855694e-08, 0, 0.060950235, 0, 0.025155423, 0, -0.5, 0, -2.6642193e-09, 1.5, -0.025684536, -4.3439536)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Plint-8" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+transform = Transform3D(-2.1855694e-08, 0, 0.060950235, 0, 0.025155423, 0, -0.5, 0, -2.6642193e-09, 1.5, -0.025684536, -5.3439536)
+mesh = SubResource("ArrayMesh_b214w")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("31_3fhnc")
+
+[node name="Floor-LargeShop" type="Node3D" parent="SantasShop/Structure/Floors"]
+
+[node name="Floor-Wood-31" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 9.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-32" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 10.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-33" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 11.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-34" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 12.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-41" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 5.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-42" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-43" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 7.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-44" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 8.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-45" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 1.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-46" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 2.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-50" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.47384262, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-47" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 3.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-48" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 4.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-35" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 13.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-36" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-37" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 15.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-38" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 16.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-39" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 17.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-40" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 18.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-49" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 9.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-51" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 10.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-52" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 11.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-53" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 12.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-54" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 5.4738426, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-55" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.4738426, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-56" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 7.4738426, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-57" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 8.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-58" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 1.4738426, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-59" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 2.4738426, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-60" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.47384262, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-61" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 3.4738426, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-62" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 4.4738426, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-63" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 13.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-64" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-65" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 15.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-66" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 16.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-67" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 17.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-68" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 18.473843, 0.2628069, 12.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-69" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 9.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-70" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 10.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-71" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 11.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-72" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 12.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-73" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 5.4738426, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-74" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.4738426, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-75" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 7.4738426, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-76" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 8.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-77" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 1.4738426, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-78" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 2.4738426, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-79" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.47384262, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-80" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 3.4738426, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-81" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 4.4738426, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-82" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 13.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-83" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-84" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 15.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-85" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 16.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-86" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 17.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-87" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 18.473843, 0.2628069, 11.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-88" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 9.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-89" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 10.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-90" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 11.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-91" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 12.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-92" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 5.4738426, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-93" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.4738426, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-94" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 7.4738426, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-95" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 8.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-96" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 1.4738426, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-97" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 2.4738426, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-98" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.47384262, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-99" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 3.4738426, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-100" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 4.4738426, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-101" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 13.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-102" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-103" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 15.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-104" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 16.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-105" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 17.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-106" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 18.473843, 0.2628069, 10.716469)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
 [node name="Decoration" type="Node3D" parent="SantasShop"]
 
 [node name="Beam-1-Decoration-12" parent="SantasShop/Decoration" instance=ExtResource("18_53j7x")]
@@ -21512,4 +22352,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7896595, 1.4916401, -2.9731
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m59"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m60"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m61"]
+[editable path="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
+[editable path="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
 [editable path="SantasShop/Mok-12"]
