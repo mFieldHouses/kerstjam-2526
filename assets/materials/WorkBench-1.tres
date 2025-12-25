@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://q8ibnub1ja58"]
+
+[ext_resource type="Texture2D" uid="uid://d4c2esfcypnwa" path="res://assets/textures/misc/WorkBench-1.png" id="1_mrn2u"]
+
+[resource]
+albedo_texture = ExtResource("1_mrn2u")
+emission = Color(0.7092279, 0.38323605, 0.40297097, 1)
+emission_energy_multiplier = 8.55
+emission_operator = 1
+emission_on_uv2 = true
