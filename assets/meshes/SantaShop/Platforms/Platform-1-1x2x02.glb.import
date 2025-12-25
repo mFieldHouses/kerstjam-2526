@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c2idrwdaabkg2"
-path="res://.godot/imported/Platform-1-1x2x02.glb-767ccfde14f7c787a6aa633c7eed4a27.scn"
+path="res://.godot/imported/Platform-1-1x2x02.glb-8a1296ea85da3fca451f2341d5b7cf2f.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Platforms/Platform-1-1x2x02.glb"
-dest_files=["res://.godot/imported/Platform-1-1x2x02.glb-767ccfde14f7c787a6aa633c7eed4a27.scn"]
+source_file="res://assets/meshes/SantaShop/Platforms/Platform-1-1x2x02.glb"
+dest_files=["res://.godot/imported/Platform-1-1x2x02.glb-8a1296ea85da3fca451f2341d5b7cf2f.scn"]
 
 [params]
 
