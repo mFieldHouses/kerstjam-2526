@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://cogmnnofnvcg3"]
+
+[ext_resource type="PackedScene" uid="uid://bf1f4x4wl5m8u" path="res://assets/meshes/SantaShop/Decoration/LampHangingCeiling-1.glb" id="1_whdnd"]
+[ext_resource type="Material" uid="uid://cjfb6diua0fr2" path="res://assets/materials/Wood-1.tres" id="2_2s8ii"]
+[ext_resource type="Material" uid="uid://dp518jf7gfjkn" path="res://assets/materials/Glass-Orange-1.tres" id="3_86xp4"]
+
+[node name="LampHangingCeiling-1" instance=ExtResource("1_whdnd")]
+
+[node name="Cube_612" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_2s8ii")
+
+[node name="Cube_613" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_2s8ii")
+
+[node name="Cylinder_194" parent="." index="2"]
+surface_material_override/0 = ExtResource("3_86xp4")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Cylinder_194" index="0"]
+transform = Transform3D(1.4958266, 0, 0, 0, 1.4958266, 0, 0, 0, 1.4958266, 0, 0.17480683, 0)
+
+[node name="Cylinder_195" parent="." index="3"]
+surface_material_override/0 = ExtResource("3_86xp4")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Cylinder_195" index="0"]
+transform = Transform3D(1.4958266, 0, 0, 0, 1.4958266, 0, 0, 0, 1.4958266, 0.026153147, 0.17480683, 0.020609498)
+
+[node name="Cylinder_196" parent="." index="4"]
+surface_material_override/0 = ExtResource("3_86xp4")
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Cylinder_196" index="0"]
+transform = Transform3D(1.4941154, -0.07153226, 0, 0.07153226, 1.4941154, 0, 0, 0, 1.4958266, 0.016522527, 0.17480683, -0.009079516)
+
+[node name="Cylinder_197" parent="." index="5"]
+surface_material_override/0 = ExtResource("3_86xp4")
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Cylinder_197" index="0"]
+transform = Transform3D(1.4941154, -0.07153225, 0, 0.07153225, 1.4941154, 0, 0, 0, 1.4958266, 0.011866838, 0.17480683, -0.0013750196)
+
+[node name="Circle_019" parent="." index="6"]
+surface_material_override/0 = ExtResource("2_2s8ii")

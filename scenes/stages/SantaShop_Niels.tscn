@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=45 format=3 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
@@ -39,6 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://8qin0wvv51wp" path="res://assets/meshes/Sled/Sled-1.glb" id="28_ipl6n"]
 [ext_resource type="PackedScene" uid="uid://d8wbgo5c2a7e" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
 [ext_resource type="PackedScene" uid="uid://ctj1pr4680eus" path="res://assets/meshes/Characters/Elf-SizeCheck-1.glb" id="29_ipl6n"]
+[ext_resource type="PackedScene" uid="uid://cogmnnofnvcg3" path="res://assets/meshes/SantaShop/Decoration/lamp_hanging_ceiling_1.tscn" id="40_iwwnf"]
 
 [sub_resource type="Environment" id="Environment_vk2yt"]
 resource_local_to_scene = true
@@ -65,6 +66,21 @@ light_energy = 0.578
 shadow_enabled = true
 shadow_opacity = 0.74
 shadow_blur = 10.0
+
+[node name="Beam-1-Decoration-12" parent="WorldEnvironment" instance=ExtResource("18_53j7x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.512182, 2.2021587, -2.8859205)
+
+[node name="Beam-1-Decoration-13" parent="WorldEnvironment" instance=ExtResource("18_53j7x")]
+transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 7.5629153, 2.2021587, -2.8859205)
+
+[node name="Beam-1-Decoration-14" parent="WorldEnvironment" instance=ExtResource("18_53j7x")]
+transform = Transform3D(-7.54979e-08, 0, -1, 0, 1, 0, 1, 0, -7.54979e-08, 9.899112, 2.2021587, -0.24321628)
+
+[node name="Beam-1-Decoration-15" parent="WorldEnvironment" instance=ExtResource("18_53j7x")]
+transform = Transform3D(-1.1924875e-08, 0, 1, 0, 1, 0, -1, 0, -1.1924875e-08, 9.899112, 2.2021587, -5.587388)
+
+[node name="Beam-1-Decoration-16" parent="WorldEnvironment" instance=ExtResource("18_53j7x")]
+transform = Transform3D(-1.1924875e-08, 0, 1, 1, -4.371139e-08, 1.1924875e-08, 4.371139e-08, 1, 5.2125285e-16, 10.059383, 2.2021587, -2.946695)
 
 [node name="WoodLogs" type="Node" parent="."]
 
@@ -21479,6 +21495,9 @@ transform = Transform3D(0.018493906, 0, -0.39957222, 0, 0.4, 0, 0.39957222, 0, 0
 
 [node name="Sled-1" parent="." instance=ExtResource("28_ipl6n")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 9.398246, -0.019072056, 6.4615192)
+
+[node name="LampHangingCeiling-1" parent="." instance=ExtResource("40_iwwnf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7896595, 1.4916401, -2.9731727)
 
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49"]

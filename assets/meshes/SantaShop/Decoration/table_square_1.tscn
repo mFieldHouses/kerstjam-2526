@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dupj43bb4yow8"]
+[gd_scene load_steps=11 format=3 uid="uid://dupj43bb4yow8"]
 
 [ext_resource type="PackedScene" uid="uid://ctpol27c16fl2" path="res://assets/meshes/SantaShop/Decoration/Table-Square-1.glb" id="1_v1kg6"]
 [ext_resource type="Material" uid="uid://cjfb6diua0fr2" path="res://assets/materials/Wood-1.tres" id="2_a8hbc"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dwuy34xm1q4l8" path="res://assets/meshes/SantaShop/Decoration/Mok-1.glb" id="5_o24qk"]
 [ext_resource type="Material" uid="uid://b5jeubau3fxjm" path="res://assets/materials/Porcelain-1.tres" id="6_v1eg8"]
 [ext_resource type="PackedScene" uid="uid://bh0wigheuaig3" path="res://assets/meshes/SantaShop/Decoration/Pen-1.glb" id="7_6qtou"]
+[ext_resource type="PackedScene" uid="uid://b72hhfehmnnyn" path="res://assets/meshes/SantaShop/Decoration/TheePot-1.glb" id="8_v1eg8"]
+[ext_resource type="Texture2D" uid="uid://cno282mv73mf8" path="res://assets/textures/misc/I-Santa.png" id="9_7tkm6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7tkm6"]
 albedo_texture = ExtResource("4_6qtou")
@@ -35,5 +37,17 @@ transform = Transform3D(0.23250476, 0.32815465, -0.29707918, -0.39374733, -1.721
 [node name="Pen-13" parent="." index="4" instance=ExtResource("7_6qtou")]
 transform = Transform3D(0.2181572, -0.3531397, -0.2787468, -0.39374736, -1.7211244e-08, -0.3081607, 0.21764754, 0.3539666, -0.27809563, 0.030403614, 0.56136405, -0.48045903)
 
+[node name="TheePot-12" parent="." index="5" instance=ExtResource("8_v1eg8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35489747, 0.546012, 0.4084065)
+
+[node name="TheePot-1" parent="TheePot-12" index="0"]
+surface_material_override/0 = ExtResource("6_v1eg8")
+
+[node name="Decal" type="Decal" parent="TheePot-12/TheePot-1" index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.01723215, 0.083358705, 0.072143555)
+size = Vector3(0.13955688, 0.14526367, 0.09152222)
+texture_albedo = ExtResource("9_7tkm6")
+
 [editable path="Tekening-12"]
 [editable path="Mok-12"]
+[editable path="TheePot-12"]
