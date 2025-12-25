@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=44 format=3 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://plgrmg3pf5bw" path="res://assets/meshes/Weapons/Axe-1/Axe-1.glb" id="5_0o0or"]
 [ext_resource type="Texture2D" uid="uid://bygvk1q845hvl" path="res://assets/textures/walls/Brick-3-Normal.png" id="5_r8clu"]
 [ext_resource type="PackedScene" uid="uid://bmm3oxaoe3to5" path="res://assets/meshes/Misc/RoofTile-1.glb" id="8_r8clu"]
+[ext_resource type="Material" uid="uid://dlkqvf0x4wews" path="res://assets/materials/BrickColor-1.tres" id="9_jmilc"]
 [ext_resource type="PackedScene" uid="uid://beeg1uomills8" path="res://assets/meshes/Misc/SticksAndLogs/TreeLog-2.glb" id="10_77j7p"]
+[ext_resource type="Material" uid="uid://dvcsb58dlj0yy" path="res://assets/materials/BrickColor-2.tres" id="10_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://lso2mbdefwrb" path="res://assets/meshes/Misc/Chimney-1.glb" id="11_3bagg"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="12_3bagg"]
 [ext_resource type="PackedScene" uid="uid://coqgbgox4wuqd" path="res://scenes/elements/SmallWoodenSupportedRoof-1.tscn" id="13_qh1ma"]
@@ -58,7 +60,7 @@ clearcoat_enabled = true
 environment = SubResource("Environment_vk2yt")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 24.743122, 0)
+transform = Transform3D(-0.16981284, -0.5752001, -0.8001928, -0.8492135, -0.32656536, 0.4149597, -0.50000006, 0.75, -0.43301266, 4.8888206, 24.743122, 11.761875)
 light_energy = 0.578
 shadow_enabled = true
 shadow_opacity = 0.74
@@ -141,6 +143,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.474972, 0.22447562, 22.71
 [node name="CornerStones-1-04x04x03m" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.169, 0, 13.716533)
 
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
+
 [node name="CornerStones-1-04x04x03m2" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.169, 0.56660235, 13.716533)
 
@@ -186,23 +194,65 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.122591, 0, -0.14172935)
 [node name="CornerStones-1-04x04x03m49" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.851034, 0, -6.139999)
 
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
+
 [node name="CornerStones-1-04x04x03m50" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.851034, 0.57038355, -6.139999)
+
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m50" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m50/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
 
 [node name="CornerStones-1-04x04x03m51" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.851034, 1.1243775, -6.139999)
 
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m51" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m51/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
+
 [node name="CornerStones-1-04x04x03m52" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.851034, 1.7046959, -6.139999)
+
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m52" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m52/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
 
 [node name="CornerStones-1-04x04x03m53" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.851034, 2.2718837, -6.139999)
 
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m53" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m53/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
+
 [node name="CornerStones-1-04x04x03m54" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.851034, 2.8443248, -6.139999)
 
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m54" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m54/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
+
 [node name="CornerStones-1-04x04x03m56" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0921354, 0, -6.139999)
+
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m56" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m56/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
 
 [node name="CornerStones-1-04x04x03m62" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9078646, 0.23063147, -0.11524105)
@@ -285,17 +335,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9078646, 7.180551, 13.6158
 [node name="CornerStones-1-04x04x03m57" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0921354, 0.57038355, -6.139999)
 
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m57" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m57/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
+
 [node name="CornerStones-1-04x04x03m58" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0921354, 1.1243775, -6.139999)
+
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m58" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m58/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
 
 [node name="CornerStones-1-04x04x03m59" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0921354, 1.7046959, -6.139999)
 
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m59" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m59/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
+
 [node name="CornerStones-1-04x04x03m60" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0921354, 2.2718837, -6.139999)
 
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m60" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m60/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
+
 [node name="CornerStones-1-04x04x03m61" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0921354, 2.8443248, -6.139999)
+
+[node name="Cube_039" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m61" index="0"]
+surface_material_override/0 = ExtResource("9_jmilc")
+
+[node name="Cube_040" parent="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m61/Cube_039" index="0"]
+surface_material_override/0 = ExtResource("10_iwwnf")
 
 [node name="CornerStones-1-04x04x03m29" parent="SantasShop/Structure/Walls/CornerStones" instance=ExtResource("3_qp7sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.106325, 0, -0.15187097)
@@ -499,6 +579,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, -6)
 
 [node name="Decal2" type="Decal" parent="SantasShop/Structure/Walls/Wall-1-2x2x05m132"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 1.0077174, -1.2209492, -0.285403)
+size = Vector3(0.75, 0.5, 0.75)
+texture_albedo = ExtResource("2_0o0or")
+upper_fade = 6.158919e-05
+lower_fade = 1e-05
+
+[node name="Decal3" type="Decal" parent="SantasShop/Structure/Walls/Wall-1-2x2x05m132"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 3.2566395, -0.36097002, -0.28540325)
+size = Vector3(0.75, 0.5, 0.75)
+texture_albedo = ExtResource("2_0o0or")
+upper_fade = 6.158919e-05
+lower_fade = 1e-05
+
+[node name="Decal4" type="Decal" parent="SantasShop/Structure/Walls/Wall-1-2x2x05m132"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.8719044, -1.0984399, -0.28540325)
 size = Vector3(0.75, 0.5, 0.75)
 texture_albedo = ExtResource("2_0o0or")
 upper_fade = 6.158919e-05
@@ -21386,4 +21480,17 @@ transform = Transform3D(0.018493906, 0, -0.39957222, 0, 0.4, 0, 0.39957222, 0, 0
 [node name="Sled-1" parent="." instance=ExtResource("28_ipl6n")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 9.398246, -0.019072056, 6.4615192)
 
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m50"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m51"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m52"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m53"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m54"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m56"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m57"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m58"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m59"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m60"]
+[editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m61"]
 [editable path="SantasShop/Mok-12"]
