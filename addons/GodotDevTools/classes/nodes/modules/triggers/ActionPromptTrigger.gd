@@ -53,6 +53,9 @@ func _input(event: InputEvent) -> void:
 func _ready() -> void:
 	if _areas == []:
 		no_area_3ds_error()
+	
+	if !PlayerState.player_instance:
+		await PlayerState.player_set
 
 
 func _process(delta: float) -> void:

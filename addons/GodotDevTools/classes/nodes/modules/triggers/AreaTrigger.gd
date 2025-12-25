@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 		if _triggered == false:
 			_triggered = true
 			toggle.emit("E", true)
+			trigger.emit("E")
 	else:
 		if _triggered == true:
 			_triggered = false

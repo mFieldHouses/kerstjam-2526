@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dim6i25llpqg4"]
+[gd_scene load_steps=18 format=3 uid="uid://dim6i25llpqg4"]
 
 [ext_resource type="Script" uid="uid://domd8jiottmf8" path="res://scripts/yeti_chase_stage.gd" id="1_1pf2o"]
 [ext_resource type="PackedScene" uid="uid://ba8ws6pahtdpd" path="res://assets/meshes/Debug/yeti_hollow.gltf" id="1_gosl8"]
@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://bf4lpuapwa1nv" path="res://assets/resources/items/ammo/snow.tres" id="6_qx2td"]
 [ext_resource type="Script" uid="uid://c1o611u1w5h24" path="res://scripts/part1.gd" id="7_3hkpr"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="8_ptbmf"]
-[ext_resource type="Script" uid="uid://dnjwa0xk782tk" path="res://addons/GodotDevTools/classes/nodes/modules/DoorController.gd" id="9_ptbmf"]
+[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_ptbmf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gosl8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -37,6 +37,9 @@ size = Vector3(0.4, 0.4, 0.4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_3hkpr"]
 size = Vector3(0.4, 0.4, 0.4)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xudux"]
+size = Vector3(1, 2.475, 5.18)
+
 [node name="YetiChase" type="Node3D"]
 script = ExtResource("1_1pf2o")
 
@@ -50,7 +53,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.99666, 0, 0)
 navigation_mesh = SubResource("NavigationMesh_1pf2o")
 
 [node name="player" parent="." instance=ExtResource("2_hpo62")]
-transform = Transform3D(-0.067667045, 0, 0.99770796, 0, 1, 0, -0.99770796, 0, -0.067667045, 3.3991973, 0.98690087, 0.11800122)
+transform = Transform3D(-0.067667045, 0, 0.99770796, 0, 1, 0, -0.99770796, 0, -0.067667045, -0.49437213, 0.98690087, 0.11800122)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.9957601, 0.07802917, 0.04871639, -0.09198825, 0.844655, 0.52734816, 0, -0.5295936, 0.8482515, 0, 0, 0)
@@ -210,7 +213,7 @@ held_item = ExtResource("6_qx2td")
 count = 20
 
 [node name="part" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.76889765, 0, -0.63937193, 0, 1, 0, 0.63937193, 0, 0.76889765, -45.223255, 0.2, -20.855904)
+transform = Transform3D(0.76889765, 0, -0.63937193, 0, 1, 0, 0.63937193, 0, 0.76889765, -45.223255, 0.22974052, -20.855904)
 mesh = SubResource("PrismMesh_dnfum")
 script = ExtResource("7_3hkpr")
 
@@ -220,11 +223,26 @@ script = ExtResource("8_ptbmf")
 metadata/_custom_type_script = "uid://b7dvxli4hd1ni"
 
 [node name="Area3D" type="Area3D" parent="part/AreaTrigger"]
-collision_mask = 6
+collision_layer = 0
+collision_mask = 9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="part/AreaTrigger/Area3D"]
 shape = SubResource("BoxShape3D_3hkpr")
 
-[node name="DoorController" type="Node3D" parent="."]
+[node name="StageLauncher" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.932323, 0, 0)
 script = ExtResource("9_ptbmf")
-metadata/_custom_type_script = "uid://dnjwa0xk782tk"
+stage_id = "to_warehouse"
+metadata/_custom_type_script = "uid://dytis7djokgek"
+
+[node name="AreaTrigger" type="Node3D" parent="StageLauncher"]
+script = ExtResource("8_ptbmf")
+metadata/_custom_type_script = "uid://b7dvxli4hd1ni"
+
+[node name="@Area3D@38913" type="Area3D" parent="StageLauncher/AreaTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0381228, 0)
+collision_layer = 0
+collision_mask = 8
+
+[node name="@CollisionShape3D@38914" type="CollisionShape3D" parent="StageLauncher/AreaTrigger/@Area3D@38913"]
+shape = SubResource("BoxShape3D_xudux")

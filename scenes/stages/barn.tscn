@@ -1,10 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://deyfnv3650ptg"]
+[gd_scene load_steps=27 format=3 uid="uid://deyfnv3650ptg"]
 
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="1_28ucp"]
-[ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_78x8d"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="3_1o4kk"]
 [ext_resource type="Shader" uid="uid://bty68cujf1q08" path="res://assets/shaders/debug_seethrough.gdshader" id="3_2n0o5"]
-[ext_resource type="Script" uid="uid://dnjwa0xk782tk" path="res://addons/GodotDevTools/classes/nodes/modules/DoorController.gd" id="4_l1jfg"]
 [ext_resource type="Script" uid="uid://rq3x7p4vncyu" path="res://scenes/stages/mesh_instance_3d_2.gd" id="4_rg2j8"]
 [ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="5_2rhon"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="5_rg2j8"]
@@ -13,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="10_xd7gd"]
 [ext_resource type="PackedScene" uid="uid://bxlrivssc0tm0" path="res://scenes/ammo_crate.tscn" id="11_xd7gd"]
 [ext_resource type="Resource" uid="uid://bf4lpuapwa1nv" path="res://assets/resources/items/ammo/snow.tres" id="12_eew6s"]
+[ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="13_l1jfg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wvqfc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -66,6 +65,8 @@ material = SubResource("StandardMaterial3D_rg2j8")
 
 [node name="barn" type="Node3D"]
 
+[node name="player" parent="." instance=ExtResource("13_l1jfg")]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_28ucp")
 
@@ -79,9 +80,6 @@ navigation_mesh = SubResource("NavigationMesh_2rhon")
 transform = Transform3D(1, 0, 0, 0, -0.6848015, 0.7287296, 0, -0.7287296, -0.6848015, 0, 0, 0)
 shadow_enabled = true
 
-[node name="player" parent="." instance=ExtResource("1_78x8d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.062417746, 0.94456065, 0.0437603)
-
 [node name="floor" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
@@ -94,10 +92,6 @@ shape = SubResource("BoxShape3D_2rhon")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor/CollisionShape3D2"]
 mesh = SubResource("BoxMesh_qle0t")
-
-[node name="DoorController" type="Node3D" parent="floor/CollisionShape3D2/MeshInstance3D"]
-script = ExtResource("4_l1jfg")
-metadata/_custom_type_script = "uid://dnjwa0xk782tk"
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.2922366)
@@ -125,7 +119,6 @@ shape = SubResource("BoxShape3D_me2a5")
 
 [node name="present_mimic" parent="." instance=ExtResource("5_2rhon")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7698226, 7.6608267, -3.6642084)
-visible = false
 
 [node name="StageLauncher" type="Node3D" parent="."]
 script = ExtResource("9_6tfxw")

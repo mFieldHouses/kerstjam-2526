@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2igi16yoyihl"]
+
+[ext_resource type="PackedScene" uid="uid://crg2b7h1aiks" path="res://assets/meshes/Enemies/Snowman-1.glb" id="1_28eu1"]
+[ext_resource type="Script" uid="uid://ct8syyffl5yxq" path="res://scripts/snowman.gd" id="1_nldfl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_28eu1"]
+radius = 0.47851563
+height = 1.753418
+
+[node name="Snowman" type="CharacterBody3D"]
+script = ExtResource("1_nldfl")
+
+[node name="Snowman-1" parent="." instance=ExtResource("1_28eu1")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8619885, 0)
+shape = SubResource("CapsuleShape3D_28eu1")

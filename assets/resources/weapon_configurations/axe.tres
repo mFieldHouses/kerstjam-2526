@@ -11,7 +11,6 @@ weapon_name = "Santa's Gun"
 reach = 2.0
 min_damage_per_hit = 10.0
 max_damage_per_hit = 6.0
-hit_delay = 0.2
 hit_particle_effect_scene = ExtResource("1_abg1w")
 weapon_model = ExtResource("2_boxxi")
 weapon_model_scale = Vector3(0.54, 0.54, 0.53999996)

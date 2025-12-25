@@ -17,4 +17,5 @@ weapon_model_scale = Vector3(0.65500003, 0.65499985, 0.65500003)
 weapon_grip_offset_position = Vector3(0.47774613, -0.42131615, -1.1839336)
 weapon_grip_offset_rotation = Vector3(-0.040849958, 1.5483198, 0.06288415)
 weapon_use_animation_library = ExtResource("4_dm8uy")
+weapon_use_cooldown = 0.0
 metadata/_custom_type_script = "uid://dl3o0lopl802x"

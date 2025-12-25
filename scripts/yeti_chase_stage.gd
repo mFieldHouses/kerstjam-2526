@@ -18,12 +18,15 @@ func _process(delta: float) -> void:
 	elif PlayerState.player_instance.global_position.distance_to(_player_trail_points.back().position) > 1.5:
 		_create_new_trail_point(PlayerState.player_instance.global_position)
 	
-	var _distance_fac : float = 1.0 - PlayerState.player_instance.global_position.distance_to($part.global_position) / 100.0
-	$Control/distance_indicator/MarginContainer/ColorRect.custom_minimum_size.x = ($Control/distance_indicator.size.x - 10) * _distance_fac
+	if !$part.found:
+		var _distance_fac : float = 1.0 - PlayerState.player_instance.global_position.distance_to($part.global_position) / 60.0
+		$Control/distance_indicator/MarginContainer/ColorRect.custom_minimum_size.x = ($Control/distance_indicator.size.x - 10) * _distance_fac
 
 func _queue(did: String, qid: String) -> void:
 	if did == "enter_yeti_hollow" and qid == "show_distance_indicator":
 		$Control/distance_indicator.visible = true
+	elif did == "find_part_1" and qid == "hide_distance_indicator":
+		$Control/distance_indicator.visible = false
 
 func _create_new_trail_point(at_position : Vector3) -> void:
 	#print("added new point")

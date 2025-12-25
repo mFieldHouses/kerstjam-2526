@@ -1,0 +1,125 @@
+[gd_scene load_steps=16 format=3 uid="uid://dj36hldakta6k"]
+
+[ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
+[ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
+[ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="3_8to8g"]
+[ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="4_22f0a"]
+[ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="5_dqy33"]
+[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="6_0su6h"]
+[ext_resource type="PackedScene" uid="uid://b2yajy7wt0yx1" path="res://assets/meshes/Debug/to_warehouse.glb" id="6_dqy33"]
+[ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="8_jbe65"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_22f0a"]
+sky_material = SubResource("ProceduralSkyMaterial_fo0y1")
+
+[sub_resource type="Environment" id="Environment_dqy33"]
+background_mode = 2
+sky = SubResource("Sky_22f0a")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
+size = Vector3(100, 0.497, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o4kk"]
+albedo_texture = ExtResource("3_8to8g")
+uv1_scale = Vector3(20, 20, 20)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0su6h"]
+material = SubResource("StandardMaterial3D_1o4kk")
+size = Vector2(100, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0su6h"]
+size = Vector3(36.680664, 5.66626, 4.5615234)
+
+[node name="ToWarehouse" type="Node3D"]
+script = ExtResource("1_g5j8t")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dqy33")
+
+[node name="floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.7196975, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, -43.194565)
+shape = SubResource("BoxShape3D_2uw2f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -42.99329)
+mesh = SubResource("PlaneMesh_0su6h")
+skeleton = NodePath("../..")
+
+[node name="player" parent="." instance=ExtResource("2_ft2jl")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9145295, 0.40451908, 0, -0.40451908, 0.9145295, 0, 0, 0)
+shadow_enabled = true
+
+[node name="DialogueInitiator" type="Node3D" parent="."]
+transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -25.277561, -0.511219, -4.331296)
+script = ExtResource("4_22f0a")
+dialog_mode = 1
+name_in_dialog = "Henkie"
+dialog_file_name = "more_snowmen"
+metadata/_custom_type_script = "uid://27xr8j11a8al"
+
+[node name="AreaTrigger" type="Node3D" parent="DialogueInitiator"]
+script = ExtResource("5_dqy33")
+metadata/_custom_type_script = "uid://b7dvxli4hd1ni"
+
+[node name="Area3D" type="Area3D" parent="DialogueInitiator/AreaTrigger"]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueInitiator/AreaTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6064053, 0)
+shape = SubResource("BoxShape3D_0su6h")
+
+[node name="discover_warehouse" type="Node3D" parent="."]
+transform = Transform3D(-0.46732825, 0, 0.88408387, 0, 1, 0, -0.88408387, 0, -0.46732825, -98.97288, 8.090727, -70.26393)
+script = ExtResource("4_22f0a")
+dialog_mode = 1
+name_in_dialog = "Henkie"
+dialog_file_name = "discover_warehouse"
+metadata/_custom_type_script = "uid://27xr8j11a8al"
+
+[node name="AreaTrigger" type="Node3D" parent="discover_warehouse"]
+script = ExtResource("5_dqy33")
+metadata/_custom_type_script = "uid://b7dvxli4hd1ni"
+
+[node name="Area3D" type="Area3D" parent="discover_warehouse/AreaTrigger"]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="discover_warehouse/AreaTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6064053, 0)
+shape = SubResource("BoxShape3D_0su6h")
+
+[node name="to_warehouse2" type="Node3D" parent="."]
+transform = Transform3D(-0.46732825, 0, 0.88408387, 0, 1, 0, -0.88408387, 0, -0.46732825, -119.90802, 0.91564894, -59.19758)
+script = ExtResource("6_0su6h")
+stage_id = "warehouse_1"
+metadata/_custom_type_script = "uid://dytis7djokgek"
+
+[node name="AreaTrigger" type="Node3D" parent="to_warehouse2"]
+script = ExtResource("5_dqy33")
+metadata/_custom_type_script = "uid://b7dvxli4hd1ni"
+
+[node name="Area3D" type="Area3D" parent="to_warehouse2/AreaTrigger"]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="to_warehouse2/AreaTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6064053, 0)
+shape = SubResource("BoxShape3D_0su6h")
+
+[node name="to_warehouse" parent="." instance=ExtResource("6_dqy33")]
+
+[node name="Snowman" parent="." instance=ExtResource("8_jbe65")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.873486, 0.019802412, -17.050003)

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AmmoItemDescription" load_steps=2 format=3 uid="uid://b060qwaalhnug"]
+
+[ext_resource type="Script" uid="uid://d4epkoylgw48b" path="res://classes/resources/AmmoItemDescription.gd" id="1_g353f"]
+
+[resource]
+script = ExtResource("1_g353f")
+ammo_type_identifier = "big"
+shoot_delay = 0.5
+item_name = "Snow Shooter Ammo"
+metadata/_custom_type_script = "uid://d4epkoylgw48b"

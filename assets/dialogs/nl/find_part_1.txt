@@ -1,2 +1,3 @@
+*hide_distance_indicator
 Ja! Dat is het onderdeel! De sterrenstof-condensator!
 Ok, tijd om weg te wezen. Er moet wel een tweede uitgang zijn, toch?

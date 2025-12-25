@@ -5,5 +5,7 @@
 [resource]
 script = ExtResource("1_pno0h")
 ammo_type_identifier = "snow"
+automatic = true
+shoot_delay = 0.075
 item_name = "Snow Shooter Ammo"
 metadata/_custom_type_script = "uid://d4epkoylgw48b"

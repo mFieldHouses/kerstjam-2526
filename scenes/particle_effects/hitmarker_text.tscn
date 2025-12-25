@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://3bke2bivrb7j"]
+
+[ext_resource type="Script" uid="uid://c7mirbyng2dow" path="res://scripts/hitmarker_text.gd" id="1_opeeb"]
+
+[node name="hitmarker_text" type="Label3D"]
+billboard = 1
+no_depth_test = true
+script = ExtResource("1_opeeb")
