@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=81 format=4 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
@@ -28,7 +28,6 @@
 [ext_resource type="Script" uid="uid://c0xopaj8p04ph" path="res://scripts/scenes/flickering_streetlight.gd" id="20_ynkcq"]
 [ext_resource type="PackedScene" uid="uid://bpe7uo5td47p7" path="res://assets/meshes/Misc/PineTree-1.glb" id="21_4dun5"]
 [ext_resource type="PackedScene" uid="uid://bikd1xas7guuo" path="res://assets/meshes/SantaShop/Windows/window_normal_1.tscn" id="21_jbcui"]
-[ext_resource type="PackedScene" uid="uid://xiex0fdlw27f" path="res://assets/meshes/Environment/SnowMid-1-col.glb" id="22_5ko26"]
 [ext_resource type="PackedScene" uid="uid://bxxankmgh5hfl" path="res://assets/meshes/Environment/SnowHigh-1-col.glb" id="22_h8udn"]
 [ext_resource type="PackedScene" uid="uid://2p8ccpuk0532" path="res://assets/meshes/SantaShop/Decoration/sign_arrow_1.tscn" id="24_6hnht"]
 [ext_resource type="PackedScene" uid="uid://clakxx8owqay4" path="res://assets/meshes/SantaShop/Decoration/sign_work_shop_1_nl.tscn" id="25_o8cmb"]
@@ -41,12 +40,36 @@
 [ext_resource type="PackedScene" uid="uid://ctj1pr4680eus" path="res://assets/meshes/Characters/Elf-SizeCheck-1.glb" id="29_ipl6n"]
 [ext_resource type="PackedScene" uid="uid://bpxoxrgixhkbp" path="res://assets/meshes/SantaShop/Floors/Plint-1.glb" id="30_8d78k"]
 [ext_resource type="Material" uid="uid://da7ow5w2larpw" path="res://assets/materials/Wood-2.tres" id="31_3fhnc"]
+[ext_resource type="PackedScene" uid="uid://d14kp2nm7cq1v" path="res://assets/meshes/SantaShop/Platforms/Supports/Support-1.glb" id="32_7xj8n"]
+[ext_resource type="PackedScene" uid="uid://bjg01dfvdatl2" path="res://assets/meshes/SantaShop/Platforms/Supports/PlatformSupport1-Electric-col.glb" id="33_dis63"]
+[ext_resource type="PackedScene" uid="uid://dvln5vd6exm4y" path="res://assets/meshes/SantaShop/Ladders/Ladder-1.glb" id="34_cjgns"]
+[ext_resource type="Material" uid="uid://c1n0fg1gi7d6m" path="res://assets/materials/Metal-SteelGreenBlue-1.tres" id="35_vlgpt"]
+[ext_resource type="PackedScene" uid="uid://jc6hcju511fq" path="res://assets/meshes/SantaShop/Ladders/Ladder-End-1.glb" id="36_tfrpy"]
 [ext_resource type="PackedScene" uid="uid://c2idrwdaabkg2" path="res://assets/meshes/SantaShop/Platforms/Platform-1-1x2x02.glb" id="37_3fhnc"]
+[ext_resource type="PackedScene" uid="uid://dcolyse4bqfee" path="res://assets/meshes/Misc/WorkBench-1.glb" id="37_7dqpe"]
+[ext_resource type="PackedScene" uid="uid://gfxuk4g6ca4e" path="res://assets/meshes/SantaShop/Decoration/Lighting/Ceiling-Lamp-2.glb" id="38_c0op5"]
+[ext_resource type="Material" uid="uid://q8ibnub1ja58" path="res://assets/materials/WorkBench-1.tres" id="39_7xj8n"]
+[ext_resource type="PackedScene" uid="uid://8v36r6sbpf2p" path="res://assets/meshes/SantaShop/Decoration/Vice-1.glb" id="40_dis63"]
 [ext_resource type="PackedScene" uid="uid://cogmnnofnvcg3" path="res://assets/meshes/SantaShop/Decoration/lamp_hanging_ceiling_1.tscn" id="40_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://bgru0h4cvr1vr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1.glb" id="41_jhtxq"]
+[ext_resource type="Material" uid="uid://cn451fvlr28am" path="res://assets/materials/Metal-SteelRed-1.tres" id="41_ouroh"]
+[ext_resource type="Material" uid="uid://brgjh3uq3yn2k" path="res://assets/materials/Metal-Steel-1.tres" id="42_evrpk"]
 [ext_resource type="Material" uid="uid://bo6ysfjfwynng" path="res://assets/materials/Floor-Wood-1.tres" id="42_mjwaw"]
 [ext_resource type="Texture2D" uid="uid://db5ek0ciwfy2m" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1_Floor-Wood-Baked-1.png" id="43_8d78k"]
+[ext_resource type="PackedScene" uid="uid://cppumb700vwwr" path="res://assets/meshes/Misc/Stool-1.glb" id="43_cjgns"]
 [ext_resource type="Texture2D" uid="uid://fl5qi1kb13nr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1_Floor-Wood-1-normal.png" id="44_3fhnc"]
+[ext_resource type="Material" uid="uid://dquf6x7y8mf53" path="res://assets/materials/brown-1.tres" id="44_n7477"]
+[ext_resource type="PackedScene" uid="uid://ddp8e2211v4nn" path="res://assets/meshes/SantaShop/Platforms/Platform-2-1x1x02.glb" id="48_dis63"]
+[ext_resource type="PackedScene" uid="uid://dwhgagkjgjfux" path="res://assets/meshes/SantaShop/Platforms/Platform-2-1x1x02-EndStop-1.glb" id="49_ouroh"]
+[ext_resource type="Material" uid="uid://bom3q2dvv1trg" path="res://assets/materials/Emit-Green-1.tres" id="50_evrpk"]
+[ext_resource type="PackedScene" uid="uid://dcgaosbqiq2ya" path="res://assets/meshes/SantaShop/Platforms/Fence-1.glb" id="54_p25ic"]
+[ext_resource type="Material" uid="uid://ce4huh81528hv" path="res://assets/materials/Glass-Orange-2.tres" id="55_cl0gn"]
+[ext_resource type="PackedScene" uid="uid://c5sao4uo5graf" path="res://assets/meshes/SantaShop/Decoration/Computers/Computer-1.glb" id="56_cl0gn"]
+[ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="67_hph74"]
+[ext_resource type="PackedScene" uid="uid://chaq4m8cgusm1" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-2.glb" id="67_urcp6"]
+[ext_resource type="PackedScene" uid="uid://dem01mj4o0xaa" path="res://assets/meshes/Environment/IcePatches/Floor-Ice-1.glb" id="68_ad3co"]
+[ext_resource type="PackedScene" uid="uid://drw7r3wtmcqa8" path="res://assets/meshes/Environment/IcePatches/IceSpikes-1.glb" id="69_uljrr"]
+[ext_resource type="PackedScene" uid="uid://dfnh5u5toi70c" path="res://assets/meshes/Environment/IcePatches/IceArch-1-col.glb" id="70_3kejl"]
 
 [sub_resource type="Environment" id="Environment_vk2yt"]
 resource_local_to_scene = true
@@ -141,7 +164,6 @@ environment = SubResource("Environment_vk2yt")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(-0.16981284, -0.5752001, -0.8001928, -0.8492135, -0.32656536, 0.4149597, -0.50000006, 0.75, -0.43301266, 4.8888206, 24.743122, 11.761875)
-light_energy = 0.578
 shadow_enabled = true
 shadow_opacity = 0.74
 shadow_blur = 10.0
@@ -206,13 +228,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 6, -3)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.592699, 6, -3)
 
 [node name="player" parent="." instance=ExtResource("12_3bagg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.29828, 0.23373544, 1.5666488)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.29828, 2.2337356, 1.5666488)
 
 [node name="floor" type="StaticBody3D" parent="."]
-transform = Transform3D(1.585, 0, 0, 0, 1, 0, 0, 0, 1.675, 0, 0, 0)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, 0)
+transform = Transform3D(5, 0, 0, 0, 0.1, 0, 0, 0, 5, 0, -0.25170898, 0)
 shape = SubResource("BoxShape3D_3bagg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor/CollisionShape3D"]
@@ -21763,120 +21785,6 @@ surface_material_override/0 = ExtResource("31_3fhnc")
 
 [node name="Floor-LargeShop" type="Node3D" parent="SantasShop/Structure/Floors"]
 
-[node name="Floor-Wood-31" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 9.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-32" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 10.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-33" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 11.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-34" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 12.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-41" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 5.4738426, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-42" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.4738426, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-43" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 7.4738426, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-44" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 8.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-45" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 1.4738426, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-46" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 2.4738426, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-50" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.47384262, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-47" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 3.4738426, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-48" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 4.4738426, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-35" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 13.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-36" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-37" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 15.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-38" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 16.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-39" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 17.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
-[node name="Floor-Wood-40" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 18.473843, 0.2628069, 0.71646833)
-mesh = SubResource("ArrayMesh_cvggq")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("42_mjwaw")
-
 [node name="Floor-Wood-49" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 9.473843, 0.2628069, 12.716469)
 mesh = SubResource("ArrayMesh_cvggq")
@@ -22219,6 +22127,513 @@ mesh = SubResource("ArrayMesh_cvggq")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("42_mjwaw")
 
+[node name="Row 2" type="Node3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+
+[node name="Floor-Wood-31" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 9.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-32" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 10.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-33" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 11.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-34" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 12.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-41" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 5.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-42" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-43" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 7.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-44" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 8.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-45" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 1.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-46" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 2.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-50" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.47384262, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-47" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 3.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-48" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 4.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-35" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 13.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-36" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-37" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 15.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-38" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 16.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-39" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 17.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-40" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 18.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Row 3" type="Node3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="Floor-Wood-31" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 9.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-32" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 10.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-33" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 11.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-34" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 12.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-41" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 5.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-42" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-43" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 7.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-44" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 8.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-45" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 1.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-46" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 2.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-50" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.47384262, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-47" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 3.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-48" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 4.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-35" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 13.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-36" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-37" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 15.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-38" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 16.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-39" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 17.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-40" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 18.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Row 4" type="Node3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Floor-Wood-31" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 9.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-32" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 10.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-33" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 11.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-34" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 12.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-41" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 5.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-42" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-43" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 7.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-44" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 8.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-45" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 1.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-46" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 2.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-50" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0.47384262, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-47" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 3.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-48" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 4.4738426, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-35" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 13.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-36" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 14.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-37" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 15.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-38" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 16.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-39" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 17.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Floor-Wood-40" type="MeshInstance3D" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4"]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 18.473843, 0.2628069, 0.71646833)
+mesh = SubResource("ArrayMesh_cvggq")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("42_mjwaw")
+
+[node name="Platforms" type="Node3D" parent="SantasShop/Structure"]
+
+[node name="Supports" type="Node3D" parent="SantasShop/Structure/Platforms"]
+
+[node name="Support-1" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.6099212, 3.2968948, 13.070771)
+
+[node name="Support-11" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6099212, 1.1464208, 0.47561264)
+
+[node name="Support-12" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.722616, 1.1464208, 0.47561264)
+
+[node name="Support-24" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.722616, 5.8475876, 0.47561264)
+
+[node name="Support-25" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8523355, 5.8475876, 0.47561264)
+
+[node name="Support-27" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49568605, 5.8475876, 0.47561264)
+
+[node name="Support-28" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.596105, 5.8475876, 0.47561264)
+
+[node name="Support-29" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.359568, 5.8475876, 0.47561264)
+
+[node name="Support-26" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.701202, 5.8475876, 0.47561264)
+
+[node name="Support-13" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.309564, 1.1464208, 0.47561264)
+
+[node name="Support-14" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.140648, 1.1464208, 0.47561264)
+
+[node name="Support-15" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.602966, 3.2475517, 3.3600163)
+
+[node name="Support-16" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.602966, 3.2475517, 6.9766893)
+
+[node name="Support-17" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.602966, 3.2475517, 11.170387)
+
+[node name="Support-2" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.610294, 3.2968948, 13.070771)
+
+[node name="Support-6" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.6099212, 5.952284, 13.070771)
+
+[node name="Support-30" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-0.8660253, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660253, -0.33515263, 3.9206977, 13.070771)
+
+[node name="Support-31" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -0.33515263, 3.939033, 9.839693)
+
+[node name="Support-32" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -0.33515263, 3.9366908, 3.7790794)
+
+[node name="Support-33" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -0.33515263, 3.9185143, 2.175712)
+
+[node name="Support-34" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(1, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, 0.41703165, 1.9083016, 0.39591002)
+
+[node name="Support-7" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.355623, 5.952284, 13.070771)
+
+[node name="Support-8" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.766848, 5.952284, 13.070771)
+
+[node name="Support-9" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.74207, 5.952284, 13.070771)
+
+[node name="Support-10" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.945477, 5.952284, 13.070771)
+
+[node name="PlatformSupport1-Electric-col2" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("33_dis63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6062324, 5.0101004, 11.384996)
+
+[node name="PlatformSupport1-Electric-col3" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("33_dis63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.596652, 5.0101004, 11.386765)
+
+[node name="Support-18" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6.6070166, 3.2968948, 13.070771)
+
+[node name="PlatformSupport1-Electric-col4" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("33_dis63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5933747, 5.0101004, 11.386765)
+
+[node name="Support-19" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.602237, 3.2968948, 13.070771)
+
+[node name="PlatformSupport1-Electric-col5" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("33_dis63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.588595, 5.0101004, 11.386765)
+
+[node name="Support-20" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 10.601899, 3.2968948, 13.070771)
+
+[node name="PlatformSupport1-Electric-col6" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("33_dis63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.588258, 5.0101004, 11.386765)
+
+[node name="Support-21" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.599018, 3.2968948, 13.070771)
+
+[node name="PlatformSupport1-Electric-col7" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("33_dis63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.585377, 5.0101004, 11.386765)
+
+[node name="Support-22" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 14.598029, 3.2968948, 13.070771)
+
+[node name="PlatformSupport1-Electric-col8" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("33_dis63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.584388, 5.0101004, 11.386765)
+
+[node name="Support-23" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("32_7xj8n")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.581173, 3.2968948, 13.070771)
+
+[node name="PlatformSupport1-Electric-col9" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("33_dis63")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.567532, 5.0101004, 11.386765)
+
+[node name="Ladders" type="Node3D" parent="SantasShop/Structure"]
+
+[node name="Ladder-1" type="Node3D" parent="SantasShop/Structure/Ladders"]
+
+[node name="Ladder-2" parent="SantasShop/Structure/Ladders/Ladder-1" instance=ExtResource("34_cjgns")]
+transform = Transform3D(0.99501735, -0.099701814, 0, 0.099701814, 0.99501735, 0, 0, 0, 1, 16.926613, 5.4250116, 1.2496156)
+
+[node name="Ladder-1" parent="SantasShop/Structure/Ladders/Ladder-1/Ladder-2" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Ladder-3" parent="SantasShop/Structure/Ladders/Ladder-1" instance=ExtResource("34_cjgns")]
+transform = Transform3D(0.99501735, -0.099701814, 0, 0.099701814, 0.99501735, 0, 0, 0, 1, 16.870579, 5.9868383, 1.2491604)
+
+[node name="Ladder-1" parent="SantasShop/Structure/Ladders/Ladder-1/Ladder-3" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Ladder-4" parent="SantasShop/Structure/Ladders/Ladder-1" instance=ExtResource("34_cjgns")]
+transform = Transform3D(0.99501735, -0.099701814, 0, 0.099701814, 0.99501735, 0, 0, 0, 1, 16.814205, 6.5468388, 1.2496156)
+
+[node name="Ladder-1" parent="SantasShop/Structure/Ladders/Ladder-1/Ladder-4" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Ladder-5" parent="SantasShop/Structure/Ladders/Ladder-1" instance=ExtResource("34_cjgns")]
+transform = Transform3D(0.99501735, -0.099701814, 0, 0.099701814, 0.99501735, 0, 0, 0, 1, 16.75817, 7.108665, 1.2491604)
+
+[node name="Ladder-1" parent="SantasShop/Structure/Ladders/Ladder-1/Ladder-5" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Ladder-End-1" parent="SantasShop/Structure/Ladders/Ladder-1" instance=ExtResource("36_tfrpy")]
+transform = Transform3D(0.99501735, -0.099701814, 0, 0.099701814, 0.99501735, 0, 0, 0, 1, 16.700785, 7.6724195, 1.2500113)
+
+[node name="Ladder-End-1" parent="SantasShop/Structure/Ladders/Ladder-1/Ladder-End-1" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Node3D" type="Node3D" parent="SantasShop/Structure/Ladders"]
+
 [node name="Decoration" type="Node3D" parent="SantasShop"]
 
 [node name="Beam-1-Decoration-12" parent="SantasShop/Decoration" instance=ExtResource("18_53j7x")]
@@ -22255,30 +22670,133 @@ texture_albedo = ExtResource("28_87l1b")
 
 [node name="Circuit" type="Node3D" parent="SantasShop/WorkStations"]
 
-[node name="Walls" type="Node3D" parent="SantasShop/WorkStations/Circuit"]
+[node name="WorkBench-1" parent="SantasShop/WorkStations/Circuit" instance=ExtResource("37_7dqpe")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.6998161, 0.24555057, 12.793294)
 
-[node name="Wall-1-2x2x05m37" parent="SantasShop/WorkStations/Circuit/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(-4.371139e-08, 0, 0.4, 0, 1, 0, -1, 0, -1.7484556e-08, 3, 0, 12.3)
+[node name="WorkBench-2" parent="SantasShop/WorkStations/Circuit" instance=ExtResource("37_7dqpe")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.551584, 0.24555057, 12.160483)
 
-[node name="Wall-1-2x2x05m38" parent="SantasShop/WorkStations/Circuit/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(-4.371139e-08, 0, 0.4, 0, 1, 0, -1, 0, -1.7484556e-08, 7, 0, 12.3)
+[node name="Ceiling-Lamp-2" parent="SantasShop/WorkStations/Circuit" instance=ExtResource("38_c0op5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 1.866, 11.38)
 
-[node name="Wall-1-2x2x05m39" parent="SantasShop/WorkStations/Circuit/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(-4.371139e-08, 0, 0.4, 0, 1, 0, -1, 0, -1.7484556e-08, 11, 0, 12.3)
+[node name="OmniLight3D" type="OmniLight3D" parent="SantasShop/WorkStations/Circuit/Ceiling-Lamp-2"]
+shadow_enabled = true
+shadow_opacity = 0.45
+shadow_blur = 10.0
+omni_range = 2.0
 
-[node name="Wall-1-2x2x05m40" parent="SantasShop/WorkStations/Circuit/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(-4.371139e-08, 0, 0.4, 0, 1, 0, -1, 0, -1.7484556e-08, 15, 0, 12.3)
+[node name="Ceiling-Lamp-3" parent="SantasShop/WorkStations/Circuit" instance=ExtResource("38_c0op5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.866, 11.38)
 
-[node name="Wall-1-2x2x05m41" parent="SantasShop/WorkStations/Circuit/Walls" instance=ExtResource("1_bihwt")]
-transform = Transform3D(-4.371139e-08, 0, 0.4, 0, 1, 0, -1, 0, -1.7484556e-08, 15, 0, 12.3)
+[node name="OmniLight3D" type="OmniLight3D" parent="SantasShop/WorkStations/Circuit/Ceiling-Lamp-3"]
+shadow_enabled = true
+shadow_opacity = 0.45
+shadow_blur = 10.0
+omni_range = 2.0
 
 [node name="Forge" type="Node3D" parent="SantasShop/WorkStations"]
 
+[node name="WorkBench-3" parent="SantasShop/WorkStations/Forge" instance=ExtResource("37_7dqpe")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.7045603, 0.24555057, 12.160483)
+
+[node name="Cube_630" parent="SantasShop/WorkStations/Forge/WorkBench-3" index="0"]
+surface_material_override/0 = ExtResource("39_7xj8n")
+
+[node name="Ceiling-Lamp-4" parent="SantasShop/WorkStations/Forge" instance=ExtResource("38_c0op5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.866, 11.38)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SantasShop/WorkStations/Forge/Ceiling-Lamp-4"]
+shadow_enabled = true
+shadow_opacity = 0.45
+shadow_blur = 10.0
+omni_range = 2.0
+
+[node name="Vice-1" parent="SantasShop/WorkStations/Forge" instance=ExtResource("40_dis63")]
+transform = Transform3D(-3.4969112e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.4969112e-08, 6.500173, 0.9159603, 12.586892)
+
+[node name="Cube_636" parent="SantasShop/WorkStations/Forge/Vice-1" index="0"]
+surface_material_override/0 = ExtResource("41_ouroh")
+
+[node name="Cube_637" parent="SantasShop/WorkStations/Forge/Vice-1" index="1"]
+surface_material_override/0 = ExtResource("41_ouroh")
+
+[node name="Cylinder_204" parent="SantasShop/WorkStations/Forge/Vice-1" index="2"]
+surface_material_override/0 = ExtResource("42_evrpk")
+
+[node name="Cylinder_205" parent="SantasShop/WorkStations/Forge/Vice-1" index="3"]
+surface_material_override/0 = ExtResource("42_evrpk")
+
+[node name="Cube_638" parent="SantasShop/WorkStations/Forge/Vice-1" index="4"]
+surface_material_override/0 = ExtResource("42_evrpk")
+
+[node name="Cylinder_206" parent="SantasShop/WorkStations/Forge/Vice-1" index="5"]
+surface_material_override/0 = ExtResource("42_evrpk")
+
 [node name="Assembly" type="Node3D" parent="SantasShop/WorkStations"]
+
+[node name="WorkBench-4" parent="SantasShop/WorkStations/Assembly" instance=ExtResource("37_7dqpe")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.619073, 0.24555057, 12.160483)
+
+[node name="Ceiling-Lamp-5" parent="SantasShop/WorkStations/Assembly" instance=ExtResource("38_c0op5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.186, 1.866, 11.38)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SantasShop/WorkStations/Assembly/Ceiling-Lamp-5"]
+shadow_enabled = true
+shadow_opacity = 0.45
+shadow_blur = 10.0
+omni_range = 2.0
 
 [node name="Clockwork" type="Node3D" parent="SantasShop/WorkStations"]
 
+[node name="WorkBench-5" parent="SantasShop/WorkStations/Clockwork" instance=ExtResource("37_7dqpe")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.657948, 0.24555057, 12.160483)
+
+[node name="Ceiling-Lamp-6" parent="SantasShop/WorkStations/Clockwork" instance=ExtResource("38_c0op5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.328, 1.866, 11.38)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SantasShop/WorkStations/Clockwork/Ceiling-Lamp-6"]
+shadow_enabled = true
+shadow_opacity = 0.45
+shadow_blur = 10.0
+omni_range = 2.0
+
 [node name="Arcane" type="Node3D" parent="SantasShop/WorkStations"]
+
+[node name="WorkBench-6" parent="SantasShop/WorkStations/Arcane" instance=ExtResource("37_7dqpe")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.488453, 0.24555057, 12.160483)
+
+[node name="Stool-13" parent="SantasShop/WorkStations/Arcane" instance=ExtResource("43_cjgns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6361526, 0.26499897, 12.048068)
+
+[node name="Stool-1" parent="SantasShop/WorkStations/Arcane/Stool-13" index="0"]
+transform = Transform3D(0.6405973, 0, 0, 0, 1, 0, 0, 0, 0.6405973, 0.2863754, 0.20489448, -0.075891495)
+surface_material_override/0 = ExtResource("44_n7477")
+
+[node name="Ceiling-Lamp-7" parent="SantasShop/WorkStations/Arcane" instance=ExtResource("38_c0op5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.419, 1.866, 11.38)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SantasShop/WorkStations/Arcane/Ceiling-Lamp-7"]
+shadow_enabled = true
+shadow_opacity = 0.45
+shadow_blur = 10.0
+omni_range = 2.0
+
+[node name="Walls" type="Node3D" parent="SantasShop/WorkStations"]
+
+[node name="Wall-1-2x2x05m37" parent="SantasShop/WorkStations/Walls" instance=ExtResource("1_bihwt")]
+transform = Transform3D(-4.371139e-08, 0, 0.4, 0, 1, 0, -1, 0, -1.7484556e-08, 3, 0, 12.3)
+
+[node name="Wall-1-2x2x05m38" parent="SantasShop/WorkStations/Walls" instance=ExtResource("1_bihwt")]
+transform = Transform3D(-4.371139e-08, 0, 0.4, 0, 1, 0, -1, 0, -1.7484556e-08, 7, 0, 12.3)
+
+[node name="Wall-1-2x2x05m39" parent="SantasShop/WorkStations/Walls" instance=ExtResource("1_bihwt")]
+transform = Transform3D(-4.371139e-08, 0, 0.4, 0, 1, 0, -1, 0, -1.7484556e-08, 11, 0, 12.3)
+
+[node name="Wall-1-2x2x05m40" parent="SantasShop/WorkStations/Walls" instance=ExtResource("1_bihwt")]
+transform = Transform3D(-4.371139e-08, 0, 0.4, 0, 1, 0, -1, 0, -1.7484556e-08, 15, 0, 12.3)
+
+[node name="Wall-1-2x2x05m41" parent="SantasShop/WorkStations/Walls" instance=ExtResource("1_bihwt")]
+transform = Transform3D(-4.371139e-08, 0, 0.4, 0, 1, 0, -1, 0, -1.7484556e-08, 15, 0, 12.3)
 
 [node name="Stairs" type="Node3D" parent="SantasShop"]
 
@@ -22347,41 +22865,35 @@ transform = Transform3D(0.3, 0, 3.5527137e-15, 0, 0.5, 0, -1.7763568e-15, 0, 0.6
 [node name="Platform-1-1x2x72" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
 transform = Transform3D(0.3, 0, 3.5527137e-15, 0, 0.5, 0, -1.7763568e-15, 0, 0.6, 16.44473, 5.1209755, 1.8953639)
 
-[node name="Platform-1-1x2x31" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-0.16058306, 0, 2.0883181e-08, 0, 0.5, 0, -1.4038617e-08, 0, -0.23887576, 3.7264235, 3.300415, 0.81200945)
-
-[node name="Platform-1-1x2x32" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-0.16058306, 0, 2.0883181e-08, 0, 0.5, 0, -1.4038617e-08, 0, -0.23887576, 3.7264235, 3.5095105, 0.81200945)
-
 [node name="Platform-1-1x2x33" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-0.16058306, 0, 2.0883181e-08, 0, 0.5, 0, -1.4038617e-08, 0, -0.23887576, 3.7264235, 3.7634368, 0.81200945)
+transform = Transform3D(-0.16058306, 0, 2.0883181e-08, 0, 0.5, 0, -1.4038617e-08, 0, -0.23887576, 2.220827, 3.5441484, 0.81200945)
 
 [node name="Platform-1-1x2x34" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-0.16058306, 0, 2.0883181e-08, 0, 0.5, 0, -1.4038617e-08, 0, -0.23887576, 3.7264235, 3.958632, 0.81200945)
+transform = Transform3D(-0.16058306, 0, 2.0883181e-08, 0, 0.5, 0, -1.4038617e-08, 0, -0.23887576, 2.0334237, 3.712244, 0.81200945)
 
 [node name="Platform-1-1x2x35" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-0.16058306, 0, 2.0883181e-08, 0, 0.5, 0, -1.4038617e-08, 0, -0.23887576, 3.7264235, 4.191437, 0.81200945)
+transform = Transform3D(-0.16058306, 0, 2.0883181e-08, 0, 0.5, 0, -1.4038617e-08, 0, -0.23887576, 1.807365, 3.8525114, 0.81200945)
 
 [node name="Platform-1-1x2x36" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-0.16058306, 0, 2.0883181e-08, 0, 0.5, 0, -1.4038617e-08, 0, -0.23887576, 3.7264235, 4.3834257, 0.81200945)
+transform = Transform3D(-0.16058306, 0, 2.0883181e-08, 0, 0.5, 0, -1.4038617e-08, 0, -0.23887576, 1.602, 3.9862218, 0.81200945)
 
 [node name="Platform-1-1x2x37" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.1841327, 4.5684247, 2.136697)
+transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.058175087, 4.5684247, 1.6142132)
 
 [node name="Platform-1-1x2x38" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.1841327, 4.77752, 2.136697)
+transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.058175087, 4.77752, 1.6142132)
 
 [node name="Platform-1-1x2x39" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.1841327, 5.0314465, 2.136697)
+transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.058175087, 5.0314465, 1.6142132)
 
 [node name="Platform-1-1x2x40" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.1841327, 5.2266417, 2.136697)
+transform = Transform3D(-7.019311e-09, 0, -0.23887579, -0.0031360257, 0.49990463, 2.0391376e-10, 0.16055246, 0.009764496, -1.04396e-08, -0.058175087, 5.2266836, 1.6099324)
 
 [node name="Platform-1-1x2x41" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.1841327, 5.4594464, 2.136697)
+transform = Transform3D(-7.019311e-09, 0, -0.23887579, -0.0031360257, 0.49990463, 2.0391376e-10, 0.16055246, 0.009764496, -1.04396e-08, -0.058175087, 5.459444, 1.6144788)
 
 [node name="Platform-1-1x2x42" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.1841327, 5.6514354, 2.136697)
+transform = Transform3D(-7.019311e-09, 0, -0.23887579, -0.0031360257, 0.49990463, 2.0391376e-10, 0.16055246, 0.009764496, -1.04396e-08, -0.058175087, 5.6513963, 1.6182282)
 
 [node name="Platform-1-1x2x43" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
 transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.1841327, 6.3317175, 10.958565)
@@ -22400,30 +22912,6 @@ transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, 
 
 [node name="Platform-1-1x2x48" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
 transform = Transform3D(-7.01931e-09, 0, -0.23887576, 0, 0.5, 0, 0.16058308, 0, -1.0441592e-08, -0.1841327, 7.414728, 10.958565)
-
-[node name="Platform-1-1x2x49" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(0.15613373, -0.116883904, -8.6356915e-16, 0.037539158, 0.4861462, -2.0762752e-16, 8.881785e-16, 0, 0.23887579, 16.532131, 5.868846, 1.279506)
-
-[node name="Platform-1-1x2x50" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(0.15613373, -0.116883904, -8.6356915e-16, 0.037539158, 0.4861462, -2.0762752e-16, 8.881785e-16, 0, 0.23887579, 16.483252, 6.072148, 1.279506)
-
-[node name="Platform-1-1x2x51" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(0.15613373, -0.116883904, -8.6356915e-16, 0.037539158, 0.4861462, -2.0762752e-16, 8.881785e-16, 0, 0.23887579, 16.423891, 6.3190384, 1.279506)
-
-[node name="Platform-1-1x2x52" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(0.15613373, -0.116883904, -8.6356915e-16, 0.037539158, 0.4861462, -2.0762752e-16, 8.881785e-16, 0, 0.23887579, 16.378262, 6.5088253, 1.279506)
-
-[node name="Platform-1-1x2x53" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(0.15613373, -0.116883904, -8.6356915e-16, 0.037539158, 0.4861462, -2.0762752e-16, 8.881785e-16, 0, 0.23887579, 16.32384, 6.7351794, 1.279506)
-
-[node name="Platform-1-1x2x54" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(0.15613373, -0.116883904, -8.6356915e-16, 0.037539158, 0.4861462, -2.0762752e-16, 8.881785e-16, 0, 0.23887579, 16.278957, 6.9218493, 1.279506)
-
-[node name="Platform-1-1x2x55" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(0.15613373, -0.116883904, -8.6356915e-16, 0.037539158, 0.4861462, -2.0762752e-16, 8.881785e-16, 0, 0.23887579, 16.195473, 7.189251, 1.279506)
-
-[node name="Platform-1-1x2x56" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(0.15613373, -0.116883904, -8.6356915e-16, 0.037539158, 0.4861462, -2.0762752e-16, 8.881785e-16, 0, 0.23887579, 16.110659, 7.4345884, 1.279506)
 
 [node name="Platform-1-1x2x57" parent="SantasShop/Stairs/Steps-1" instance=ExtResource("37_3fhnc")]
 transform = Transform3D(0.15613373, -0.116883904, -8.6356915e-16, 0.037539158, 0.4861462, -2.0762752e-16, 8.881785e-16, 0, 0.23887579, 16.021727, 5.967756, 11.590981)
@@ -22501,209 +22989,734 @@ transform = Transform3D(0.14305097, 0, 0.52739525, 0, 0.5, 0, -0.26369762, 0, 0.
 
 [node name="Platform-1" type="Node3D" parent="SantasShop/Platforms"]
 
-[node name="Platform-1-1x2x23" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.04458, 2.1863244, 6.3178887)
+[node name="Platform-2" type="Node3D" parent="SantasShop/Platforms"]
 
-[node name="Platform-1-1x2x24" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.04458, 2.1863244, 4.305414)
+[node name="Platform-2-1x1x02" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.032173, 2.1262817, 6.463704)
 
-[node name="Platform-1-1x2x25" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.036045, 2.1863244, 6.3178887)
+[node name="Platform-2-1x1x07" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.032173, 2.1262817, 6.463704)
 
-[node name="Platform-1-1x2x26" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.036045, 2.1863244, 4.305414)
+[node name="Platform-2-1x1x03" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.032173, 2.1262817, 5.463704)
 
-[node name="Platform-1-1x2x27" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.04458, 2.1863244, 2.2848625)
+[node name="Platform-2-1x1x08" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.032173, 2.1262817, 5.463704)
 
-[node name="Platform-1-1x2x29" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.556814, 2.1863244, 0.7581415)
+[node name="Platform-2-1x1x04" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.032173, 2.1262817, 4.463704)
 
-[node name="Platform-1-1x2x30" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.219911, 3.111393, 0.7581415)
+[node name="Platform-2-1x1x09" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.032173, 2.1262817, 4.463704)
 
-[node name="Platform-1-1x2x90" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.219911, 3.111393, 1.7532623)
+[node name="Platform-2-1x1x05" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.032173, 2.1262817, 3.463704)
 
-[node name="Platform-1-1x2x31" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11.244578, 3.111393, 0.7581415)
+[node name="Platform-2-1x1x10" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.032173, 2.1262817, 3.463704)
 
-[node name="Platform-1-1x2x32" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.270013, 3.111393, 0.7581415)
+[node name="Platform-2-1x1x06" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.032173, 2.1262817, 2.463704)
 
-[node name="Platform-1-1x2x33" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.284526, 3.111393, 0.7581415)
+[node name="Platform-2-1x1x11" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.032173, 2.1262817, 2.463704)
 
-[node name="Platform-1-1x2x34" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.2912226, 3.111393, 0.7581415)
+[node name="Platform-2-1x1x16" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.735395, 3.1262817, 0.78578043)
 
-[node name="Platform-1-1x2x35" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.3047934, 3.111393, 0.7581415)
+[node name="Platform-2-1x1x30" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 0.7537986)
 
-[node name="Platform-1-1x2x36" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.4476748, 4.4559655, 0.7581415)
+[node name="Platform-2-1x1x32" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 1.7537986)
 
-[node name="Platform-1-1x2x37" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.05305624, 4.4559655, 1.1922202)
+[node name="Platform-2-1x1x34" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 2.7537985)
 
-[node name="Platform-1-1x2x38" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.05305624, 6.0109253, 3.1041324)
+[node name="Platform-2-1x1x31" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 0.7537986)
 
-[node name="Platform-1-1x2x39" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.05305624, 6.0109253, 5.1056128)
+[node name="Platform-2-1x1x33" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 1.7537986)
 
-[node name="Platform-1-1x2x40" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.05305624, 6.0109253, 7.0495872)
+[node name="Platform-2-1x1x35" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 2.7537985)
 
-[node name="Platform-1-1x2x41" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.05305624, 6.0109253, 9.031818)
+[node name="Platform-2-1x1x37" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 3.7537985)
 
-[node name="Platform-1-1x2x42" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.05305624, 6.0109253, 11.03548)
+[node name="Platform-2-1x1x38" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 4.7537985)
 
-[node name="Platform-1-1x2x69" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.05305624, 6.0109253, 12.309533)
+[node name="Platform-2-1x1x143" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 3.7537985)
 
-[node name="Platform-1-1x2x28" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.036045, 2.1863244, 2.2848625)
+[node name="Platform-2-1x1x39" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 4.7537985)
 
-[node name="Platform-1-1x2x43" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0483, 5.3394103, 6.3178725)
+[node name="Platform-2-1x1x40" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 5.7537985)
 
-[node name="Platform-1-1x2x44" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0483, 5.3394103, 4.305398)
+[node name="Platform-2-1x1x41" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 5.7537985)
 
-[node name="Platform-1-1x2x45" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.039764, 5.3394103, 6.3178725)
+[node name="Platform-2-1x1x42" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 6.7537985)
 
-[node name="Platform-1-1x2x50" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0483, 5.3394103, 8.316128)
+[node name="Platform-2-1x1x43" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 6.7537985)
 
-[node name="Platform-1-1x2x51" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.039764, 5.3394103, 8.316128)
+[node name="Platform-2-1x1x44" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 7.7537985)
 
-[node name="Platform-1-1x2x52" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0483, 5.3394103, 10.292178)
+[node name="Platform-2-1x1x45" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 7.7537985)
 
-[node name="Platform-1-1x2x53" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.039764, 5.3394103, 10.292178)
+[node name="Platform-2-1x1x46" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 8.7537985)
 
-[node name="Platform-1-1x2x54" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0483, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x47" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 8.7537985)
 
-[node name="Platform-1-1x2x55" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.039764, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x56" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.243088, 5.2471223, 4.7537985)
 
-[node name="Platform-1-1x2x56" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.037594, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x57" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.243088, 5.2471223, 5.7537985)
 
-[node name="Platform-1-1x2x57" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.029058, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x58" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.243088, 5.2471223, 6.7537985)
 
-[node name="Platform-1-1x2x58" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.02874, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x59" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.243088, 5.2471223, 7.7537985)
 
-[node name="Platform-1-1x2x59" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.020205, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x60" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.243088, 5.2471223, 8.7537985)
 
-[node name="Platform-1-1x2x60" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.015057, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x61" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.243088, 5.2471223, 4.7537985)
 
-[node name="Platform-1-1x2x61" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.006521, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x144" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.243088, 5.2471223, 3.7537985)
 
-[node name="Platform-1-1x2x62" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.022854, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x145" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.243088, 5.2471223, 3.7537985)
 
-[node name="Platform-1-1x2x63" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.014318, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x62" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.243088, 5.2471223, 5.7537985)
 
-[node name="Platform-1-1x2x64" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.006206, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x63" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.243088, 5.2471223, 6.7537985)
 
-[node name="Platform-1-1x2x65" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.99767, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x64" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.243088, 5.2471223, 7.7537985)
 
-[node name="Platform-1-1x2x66" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.991844, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x65" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.243088, 5.2471223, 8.7537985)
 
-[node name="Platform-1-1x2x67" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.983309, 5.3394103, 12.261967)
+[node name="Platform-2-1x1x48" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 9.7537985)
 
-[node name="Platform-1-1x2x68" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.5061526, 5.3394103, 12.291897)
+[node name="Platform-2-1x1x49" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 9.7537985)
 
-[node name="Platform-1-1x2x70" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.50328124, 6.0088334, 12.291897)
+[node name="Platform-2-1x1x50" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 10.7537985)
 
-[node name="Platform-1-1x2x71" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5016668, 7.8858914, 11.578781)
+[node name="Platform-2-1x1x51" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 10.7537985)
 
-[node name="Platform-1-1x2x72" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.4867136, 7.8858914, 11.578781)
+[node name="Platform-2-1x1x52" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x73" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.513521, 7.8858914, 11.578781)
+[node name="Platform-2-1x1x53" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x74" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.47192, 7.8858914, 11.578781)
+[node name="Platform-2-1x1x54" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.243088, 5.2471223, 12.7537985)
 
-[node name="Platform-1-1x2x75" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.42999, 7.8858914, 11.578781)
+[node name="Platform-2-1x1x55" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.243088, 5.2471223, 12.7537985)
 
-[node name="Platform-1-1x2x76" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.45822, 7.8858914, 11.578781)
+[node name="Platform-2-1x1x66" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x77" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.484899, 7.8858914, 11.578781)
+[node name="Platform-2-1x1x67" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.243088, 5.2471223, 12.7537985)
 
-[node name="Platform-1-1x2x78" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.504965, 7.8858914, 11.578781)
+[node name="Platform-2-1x1x68" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x79" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5016668, 7.8858914, 1.1342193)
+[node name="Platform-2-1x1x69" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.243088, 5.2471223, 12.7537985)
 
-[node name="Platform-1-1x2x80" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.4867136, 7.8858914, 1.1342193)
+[node name="Platform-2-1x1x70" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x81" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.513521, 7.8858914, 1.1342193)
+[node name="Platform-2-1x1x71" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.243088, 5.2471223, 12.7537985)
 
-[node name="Platform-1-1x2x82" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.47192, 7.8858914, 1.1342193)
+[node name="Platform-2-1x1x72" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x83" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.42999, 7.8858914, 1.1342193)
+[node name="Platform-2-1x1x73" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.243088, 5.2471223, 12.7537985)
 
-[node name="Platform-1-1x2x84" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.45822, 7.8858914, 1.1342193)
+[node name="Platform-2-1x1x74" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x85" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.484899, 7.8858914, 1.1342193)
+[node name="Platform-2-1x1x75" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.243088, 5.2471223, 12.7537985)
 
-[node name="Platform-1-1x2x86" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.504965, 7.8858914, 1.1342193)
+[node name="Platform-2-1x1x76" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x46" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.039764, 5.3394103, 4.305398)
+[node name="Platform-2-1x1x77" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.243088, 5.2471223, 12.7537985)
 
-[node name="Platform-1-1x2x87" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.080591, 5.3394103, 6.3178725)
+[node name="Platform-2-1x1x78" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x88" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.080591, 5.3394103, 8.316128)
+[node name="Platform-2-1x1x79" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.243088, 5.2471223, 12.7537985)
 
-[node name="Platform-1-1x2x89" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.080591, 5.3394103, 4.305398)
+[node name="Platform-2-1x1x80" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x47" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0483, 5.3394103, 2.2848463)
+[node name="Platform-2-1x1x81" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.243088, 5.2471223, 12.7537985)
 
-[node name="Platform-1-1x2x48" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.560534, 5.3394103, 0.7581253)
+[node name="Platform-2-1x1x82" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.243088, 5.2471223, 11.7537985)
 
-[node name="Platform-1-1x2x49" parent="SantasShop/Platforms/Platform-1" instance=ExtResource("37_3fhnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.039764, 5.3394103, 2.2848463)
+[node name="Platform-2-1x1x83" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.243088, 5.2471223, 12.7537985)
+
+[node name="Platform-2-1x1x84" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.243088, 5.2471223, 11.7537985)
+
+[node name="Platform-2-1x1x85" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.243088, 5.2471223, 12.7537985)
+
+[node name="Platform-2-1x1x86" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.243088, 5.2471223, 11.7537985)
+
+[node name="Platform-2-1x1x87" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.243088, 5.2471223, 12.7537985)
+
+[node name="Platform-2-1x1x88" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.243088, 5.2471223, 11.7537985)
+
+[node name="Platform-2-1x1x89" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.243088, 5.2471223, 12.7537985)
+
+[node name="Platform-2-1x1x90" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.243088, 5.2471223, 11.7537985)
+
+[node name="Platform-2-1x1x91" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.243088, 5.2471223, 12.7537985)
+
+[node name="Platform-2-1x1x92" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.2430878, 5.2471223, 11.7537985)
+
+[node name="Platform-2-1x1x93" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.2430878, 5.2471223, 12.7537985)
+
+[node name="Platform-2-1x1x94" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.2430878, 5.2471223, 11.7537985)
+
+[node name="Platform-2-1x1x95" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.2430878, 5.2471223, 12.7537985)
+
+[node name="Platform-2-1x1x96" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.9722223, 5.920679, 12.283584)
+
+[node name="Platform-2-1x1x97" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 12.283584)
+
+[node name="Platform-2-1x1x98" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 11.283584)
+
+[node name="Platform-2-1x1x99" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 10.283584)
+
+[node name="Platform-2-1x1x100" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 9.283584)
+
+[node name="Platform-2-1x1x101" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 8.283584)
+
+[node name="Platform-2-1x1x102" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 7.2835836)
+
+[node name="Platform-2-1x1x103" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 6.2835836)
+
+[node name="Platform-2-1x1x104" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 5.2835836)
+
+[node name="Platform-2-1x1x105" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 4.2835836)
+
+[node name="Platform-2-1x1x106" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 3.2835836)
+
+[node name="Platform-2-1x1x107" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 5.920679, 2.2835836)
+
+[node name="Platform-2-1x1x110" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x126" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x127" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.9722223, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x128" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.9722223, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x129" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9722223, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x130" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.9722223, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x131" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.9722223, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x132" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.9722223, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x133" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.9722223, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x134" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.9722223, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x135" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.972222, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x136" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.972222, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x137" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.972222, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x138" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.972222, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x139" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.972222, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x140" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.972222, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x141" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.972222, 7.943285, 11.536626)
+
+[node name="Platform-2-1x1x111" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.9722223, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x112" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.9722223, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x113" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9722223, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x114" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.9722223, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x115" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.9722223, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x116" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.9722223, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x117" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.9722223, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x118" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.9722223, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x119" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.972222, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x120" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.972222, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x121" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.972222, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x122" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.972222, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x123" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.972222, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x124" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.972222, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x125" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.972222, 7.8261204, 1.25)
+
+[node name="Platform-2-1x1x142" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.972, 7.826, 1.25)
+
+[node name="Platform-2-1x1x108" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.027777672, 3.920679, 0.7472992)
+
+[node name="Platform-2-1x1x109" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.9722223, 3.920679, 0.7472992)
+
+[node name="Platform-2-1x1x17" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.735395, 3.1262817, 1.7857804)
+
+[node name="Platform-2-1x1x18" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.735395, 3.1262817, 1.7857804)
+
+[node name="Platform-2-1x1x19" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.735395, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x20" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.735395, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x21" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.735395, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x36" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.735395, 0.22628176, 9.708946)
+
+[node name="Platform-2-1x1x146" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.735395, 0.22628176, 8.708946)
+
+[node name="Platform-2-1x1x147" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.735395, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x150" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.735395, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x151" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.735395, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x152" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.7353954, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x153" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.7353954, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x154" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.7353954, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x157" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.7353954, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x158" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.7353954, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x159" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.7353954, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x160" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.7353954, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x161" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.7353954, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x162" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.7353954, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x163" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.7353954, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x164" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.7353954, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x165" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.7353954, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x166" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.735395, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x167" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.735395, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x168" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.735395, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x169" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.735395, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x170" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.735395, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x171" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.735395, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x172" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.735395, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x173" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.735395, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x174" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.735395, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x175" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.735395, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x176" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.735395, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x177" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.735395, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x178" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.735395, 0.22628176, 6.708946)
+
+[node name="Platform-2-1x1x179" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.735395, 0.22628176, 5.708946)
+
+[node name="Platform-2-1x1x148" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.735395, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x149" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.735395, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x155" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.735395, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x156" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.735395, 0.22628176, 7.708946)
+
+[node name="Platform-2-1x1x22" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.735395, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x23" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.735395, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x24" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.7353954, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x25" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.7353954, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x26" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.7353954, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x27" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.7353954, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x28" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7353954, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x29" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.7353954, 3.1262817, 0.78578043)
+
+[node name="Platform-2-1x1x12" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.032173, 2.1262817, 1.4637041)
+
+[node name="Platform-2-1x1x14" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.032173, 2.1262817, 1.4637041)
+
+[node name="Platform-2-1x1x15" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.032173, 2.1262817, 0.4637041)
+
+[node name="Platform-2-1x1x13" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("48_dis63")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.032173, 2.1262817, 0.4637041)
+
+[node name="Platform-2-1x1x02-EndStop-1" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("49_ouroh")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.532137, 2.126, 6.463)
+
+[node name="Platform-2-EndStop-1" parent="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-1" index="0"]
+surface_material_override/1 = ExtResource("50_evrpk")
+
+[node name="Platform-2-1x1x02-EndStop-2" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("49_ouroh")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.532137, 2.126, 5.463)
+
+[node name="Platform-2-EndStop-1" parent="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-2" index="0"]
+surface_material_override/1 = ExtResource("50_evrpk")
+
+[node name="Platform-2-1x1x02-EndStop-3" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("49_ouroh")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.532137, 2.126, 4.463)
+
+[node name="Platform-2-EndStop-1" parent="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-3" index="0"]
+surface_material_override/1 = ExtResource("50_evrpk")
+
+[node name="Platform-2-1x1x02-EndStop-4" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("49_ouroh")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.532137, 2.126, 3.4629998)
+
+[node name="Platform-2-EndStop-1" parent="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-4" index="0"]
+surface_material_override/1 = ExtResource("50_evrpk")
+
+[node name="Platform-2-1x1x02-EndStop-5" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("49_ouroh")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.532137, 2.126, 2.4629998)
+
+[node name="Platform-2-EndStop-1" parent="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-5" index="0"]
+surface_material_override/1 = ExtResource("50_evrpk")
+
+[node name="Platform-2-1x1x02-EndStop-6" parent="SantasShop/Platforms/Platform-2" instance=ExtResource("49_ouroh")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.532137, 2.126, 1.4629998)
+
+[node name="Platform-2-EndStop-1" parent="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-6" index="0"]
+surface_material_override/1 = ExtResource("50_evrpk")
+
+[node name="Fences" type="Node3D" parent="SantasShop/Platforms"]
+
+[node name="Fence-3" parent="SantasShop/Platforms/Fences" instance=ExtResource("54_p25ic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.486078, 5.262354, 7.7538424)
+
+[node name="Fence-1" parent="SantasShop/Platforms/Fences/Fence-3" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-Ends-1" parent="SantasShop/Platforms/Fences/Fence-3" index="1"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-1_002" parent="SantasShop/Platforms/Fences/Fence-3" index="2"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="FenceGlass" parent="SantasShop/Platforms/Fences/Fence-3" index="3"]
+surface_material_override/0 = ExtResource("55_cl0gn")
+
+[node name="Fence-4" parent="SantasShop/Platforms/Fences" instance=ExtResource("54_p25ic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.486078, 5.262354, 8.753842)
+
+[node name="Fence-1" parent="SantasShop/Platforms/Fences/Fence-4" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-Ends-1" parent="SantasShop/Platforms/Fences/Fence-4" index="1"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-1_002" parent="SantasShop/Platforms/Fences/Fence-4" index="2"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="FenceGlass" parent="SantasShop/Platforms/Fences/Fence-4" index="3"]
+surface_material_override/0 = ExtResource("55_cl0gn")
+
+[node name="Fence-5" parent="SantasShop/Platforms/Fences" instance=ExtResource("54_p25ic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.486078, 5.262354, 6.7538424)
+
+[node name="Fence-1" parent="SantasShop/Platforms/Fences/Fence-5" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-Ends-1" parent="SantasShop/Platforms/Fences/Fence-5" index="1"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-1_002" parent="SantasShop/Platforms/Fences/Fence-5" index="2"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="FenceGlass" parent="SantasShop/Platforms/Fences/Fence-5" index="3"]
+surface_material_override/0 = ExtResource("55_cl0gn")
+
+[node name="Fence-6" parent="SantasShop/Platforms/Fences" instance=ExtResource("54_p25ic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.486078, 5.262354, 5.7538424)
+
+[node name="Fence-1" parent="SantasShop/Platforms/Fences/Fence-6" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-Ends-1" parent="SantasShop/Platforms/Fences/Fence-6" index="1"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-1_002" parent="SantasShop/Platforms/Fences/Fence-6" index="2"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="FenceGlass" parent="SantasShop/Platforms/Fences/Fence-6" index="3"]
+surface_material_override/0 = ExtResource("55_cl0gn")
+
+[node name="Fence-7" parent="SantasShop/Platforms/Fences" instance=ExtResource("54_p25ic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.486078, 5.262354, 4.7538424)
+
+[node name="Fence-1" parent="SantasShop/Platforms/Fences/Fence-7" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-Ends-1" parent="SantasShop/Platforms/Fences/Fence-7" index="1"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-1_002" parent="SantasShop/Platforms/Fences/Fence-7" index="2"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="FenceGlass" parent="SantasShop/Platforms/Fences/Fence-7" index="3"]
+surface_material_override/0 = ExtResource("55_cl0gn")
+
+[node name="Fence-12" parent="SantasShop/Platforms/Fences" instance=ExtResource("54_p25ic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.486078, 5.262354, 3.7538424)
+
+[node name="Fence-1" parent="SantasShop/Platforms/Fences/Fence-12" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-Ends-1" parent="SantasShop/Platforms/Fences/Fence-12" index="1"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-1_002" parent="SantasShop/Platforms/Fences/Fence-12" index="2"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="FenceGlass" parent="SantasShop/Platforms/Fences/Fence-12" index="3"]
+surface_material_override/0 = ExtResource("55_cl0gn")
+
+[node name="Fence-8" parent="SantasShop/Platforms/Fences" instance=ExtResource("54_p25ic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.276875, 2.1288645, 6.4574165)
+
+[node name="Fence-1" parent="SantasShop/Platforms/Fences/Fence-8" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-Ends-1" parent="SantasShop/Platforms/Fences/Fence-8" index="1"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-1_002" parent="SantasShop/Platforms/Fences/Fence-8" index="2"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="FenceGlass" parent="SantasShop/Platforms/Fences/Fence-8" index="3"]
+surface_material_override/0 = ExtResource("55_cl0gn")
+
+[node name="Fence-9" parent="SantasShop/Platforms/Fences" instance=ExtResource("54_p25ic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.276875, 2.1288645, 5.4574165)
+
+[node name="Fence-1" parent="SantasShop/Platforms/Fences/Fence-9" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-Ends-1" parent="SantasShop/Platforms/Fences/Fence-9" index="1"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-1_002" parent="SantasShop/Platforms/Fences/Fence-9" index="2"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="FenceGlass" parent="SantasShop/Platforms/Fences/Fence-9" index="3"]
+surface_material_override/0 = ExtResource("55_cl0gn")
+
+[node name="Fence-10" parent="SantasShop/Platforms/Fences" instance=ExtResource("54_p25ic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.276875, 2.1288645, 4.4574165)
+
+[node name="Fence-1" parent="SantasShop/Platforms/Fences/Fence-10" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-Ends-1" parent="SantasShop/Platforms/Fences/Fence-10" index="1"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-1_002" parent="SantasShop/Platforms/Fences/Fence-10" index="2"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="FenceGlass" parent="SantasShop/Platforms/Fences/Fence-10" index="3"]
+surface_material_override/0 = ExtResource("55_cl0gn")
+
+[node name="Fence-11" parent="SantasShop/Platforms/Fences" instance=ExtResource("54_p25ic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.276875, 2.1288645, 3.4574165)
+
+[node name="Fence-1" parent="SantasShop/Platforms/Fences/Fence-11" index="0"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-Ends-1" parent="SantasShop/Platforms/Fences/Fence-11" index="1"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="Fence-1_002" parent="SantasShop/Platforms/Fences/Fence-11" index="2"]
+surface_material_override/0 = ExtResource("35_vlgpt")
+
+[node name="FenceGlass" parent="SantasShop/Platforms/Fences/Fence-11" index="3"]
+surface_material_override/0 = ExtResource("55_cl0gn")
+
+[node name="Computers" type="Node3D" parent="SantasShop/Platforms"]
+
+[node name="Computer-1" parent="SantasShop/Platforms/Computers" instance=ExtResource("56_cl0gn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2, 5.216126, 7)
 
 [node name="StreetLanterns" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
@@ -22714,9 +23727,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 light_color = Color(1, 0.68235296, 0.09019608, 1)
 script = ExtResource("20_ynkcq")
-
-[node name="SnowMid-1-col" parent="." instance=ExtResource("22_5ko26")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7838355, 0.51704854, -12.3002825)
 
 [node name="SnowHigh-1-col" parent="." instance=ExtResource("22_h8udn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.395544, 0, -12.657028)
@@ -22783,7 +23793,10 @@ transform = Transform3D(-0.99958587, 0, 0.0287764, 0, 1, 0, -0.0287764, 0, -0.99
 transform = Transform3D(0.018493906, 0, -0.39957222, 0, 0.4, 0, 0.39957222, 0, 0.018493906, -3.1745718, 0.2001754, 1.8800335)
 
 [node name="Elf-SizeCheck-2" parent="." instance=ExtResource("29_ipl6n")]
-transform = Transform3D(0.018493906, 0, -0.39957222, 0, 0.4, 0, 0.39957222, 0, 0.018493906, 6.123079, 0.23582375, 8.89661)
+transform = Transform3D(0.018493906, 0, -0.39957222, 0, 0.4, 0, 0.39957222, 0, 0.018493906, 6.3072915, 0.23582375, 8.89661)
+
+[node name="Elf-SizeCheck-4" parent="." instance=ExtResource("29_ipl6n")]
+transform = Transform3D(0.2952456, 0, 0.2698705, 0, 0.40000007, 0, -0.2698705, 0, 0.2952456, 0.9588171, 0.23582375, 11.645556)
 
 [node name="Elf-SizeCheck-3" parent="." instance=ExtResource("29_ipl6n")]
 transform = Transform3D(0.018493906, 0, -0.39957222, 0, 0.4, 0, 0.39957222, 0, 0.018493906, 17.540956, 5.4064336, 8.89661)
@@ -22793,6 +23806,151 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 9.398246, -0.019072056,
 
 [node name="LampHangingCeiling-1" parent="." instance=ExtResource("40_iwwnf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7896595, 1.4916401, -2.9731727)
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Ground (level 0)" type="Node3D" parent="World"]
+
+[node name="Ice-SnowPatches" type="Node3D" parent="World/Ground (level 0)"]
+
+[node name="Floor-IcePatch-1" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -11)
+
+[node name="Floor-IcePatch-2" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -16)
+
+[node name="Floor-IcePatch-3" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 15, 0, -14)
+
+[node name="Floor-IcePatch-4" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 18, 0, -18)
+
+[node name="Floor-IcePatch-5" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.7894056, 0, 0.61387193, 0, 1, 0, -0.61387193, 0, -0.7894056, 13, -0.2, -21)
+
+[node name="Floor-IcePatch-34" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.7894056, 0, 0.61387193, 0, 1, 0, -0.61387193, 0, -0.7894056, 19.5, 1.5999999, -31.4)
+
+[node name="Floor-IcePatch-38" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.7894056, 0, 0.61387193, 0, 1, 0, -0.61387193, 0, -0.7894056, 20.5, 1.5999999, -35.4)
+
+[node name="Floor-IcePatch-37" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.68033725, 0, -0.7328992, 0, 1, 0, 0.7328992, 0, -0.68033725, 23.5, 1.5999999, -29.4)
+
+[node name="Floor-IcePatch-35" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.61387193, 0, -0.7894056, 0, 1, 0, 0.7894056, 0, -0.61387193, 15.5, 1.5999999, -35.4)
+
+[node name="Floor-IcePatch-36" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.61387193, 0, -0.7894056, 0, 1, 0, 0.7894056, 0, -0.61387193, 12.5, 1.5999999, -31.400002)
+
+[node name="Floor-IcePatch-6" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.7894056, 0, 0.61387193, 0.07478026, 0.9925525, 0.09616332, -0.60930014, 0.12181737, -0.7835265, 17, -0.05854483, -24)
+
+[node name="Floor-IcePatch-32" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.7894056, 7.3950925e-09, 0.61387193, 0.19982678, 0.9455357, 0.2569663, -0.5804378, 0.32551867, -0.7464111, 17, 0.8650976, -28)
+
+[node name="Floor-IcePatch-33" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.32237324, -0.13095313, -0.93751097, -0.2843592, 0.95804024, -0.03604061, 0.9028927, 0.25497133, -0.34608427, 21.366474, 0.46499807, -25)
+
+[node name="Floor-IcePatch-30" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.7894056, 0, 0.61387193, 0.07478026, 0.9925525, 0.09616332, -0.60930014, 0.12181737, -0.7835265, 21, -0.05854483, -21)
+
+[node name="Floor-IcePatch-7" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.7894056, 0, 0.61387193, 0.07478026, 0.9925525, 0.09616332, -0.60930014, 0.12181737, -0.7835265, 3, -0.05854483, -8)
+
+[node name="Floor-IcePatch-8" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 6, -0.37484246, -1.3)
+
+[node name="Floor-IcePatch-28" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 1, -0.37484246, -1.3)
+
+[node name="Floor-IcePatch-29" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 1, -0.37484246, -4.3)
+
+[node name="Floor-IcePatch-9" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.9357152, 0, -0.35275638, 0, 1, 0, 0.3527564, 0, -0.93571514, 6, -0.37484246, -6)
+
+[node name="Floor-IcePatch-10" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.6498196, 0, -0.76008844, 0, 1, 0, 0.76008844, 0, 0.6498196, 10, -0.37484246, -6)
+
+[node name="Floor-IcePatch-11" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.6498196, 0, -0.76008844, 0, 1, 0, 0.76008844, 0, 0.6498196, 13, -0.37484246, -2)
+
+[node name="Floor-IcePatch-12" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.6498196, 0, -0.76008844, 0, 1, 0, 0.76008844, 0, 0.6498196, 17, -0.37484246, -2)
+
+[node name="Floor-IcePatch-16" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.6498196, 0, -0.76008844, 0, 1, 0, 0.76008844, 0, 0.6498196, 20, -0.37484246, 3)
+
+[node name="Floor-IcePatch-17" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.94480026, 0, -0.32764673, 0, 1, 0, 0.32764673, 0, -0.94480026, 20, -0.37484246, 7)
+
+[node name="Floor-IcePatch-18" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.18864968, 0, -0.98204446, 0, 1, 0, 0.98204446, 0, -0.18864968, 20, -0.37484246, 12)
+
+[node name="Floor-IcePatch-19" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.18864968, 0, -0.98204446, 0, 1, 0, 0.98204446, 0, -0.18864968, 16, -0.37484246, 14)
+
+[node name="Floor-IcePatch-20" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.9974083, 0, -0.07195024, 0, 1, 0, 0.07195024, 0, -0.9974083, 11, -0.37484246, 14)
+
+[node name="Floor-IcePatch-21" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(-0.9974083, 0, -0.07195024, 0, 1, 0, 0.07195024, 0, -0.9974083, 6, -0.37484246, 14)
+
+[node name="Floor-IcePatch-22" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.75615066, 0, -0.65439767, 0, 1, 0, 0.65439767, 0, 0.75615066, 1, -0.37484246, 14)
+
+[node name="Floor-IcePatch-23" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.75615066, 0, -0.65439767, 0, 1, 0, 0.65439767, 0, 0.75615066, -2, -0.37484246, 12)
+
+[node name="Floor-IcePatch-24" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.75615066, 0, -0.65439767, 0, 1, 0, 0.65439767, 0, 0.75615066, -2, -0.37484246, 9)
+
+[node name="Floor-IcePatch-25" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.75615066, 0, -0.65439767, 0, 1, 0, 0.65439767, 0, 0.75615066, -2, -0.37484246, 6)
+
+[node name="Floor-IcePatch-26" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.75615066, 0, -0.65439767, 0, 1, 0, 0.65439767, 0, 0.75615066, -2, -0.37484246, 2)
+
+[node name="Floor-IcePatch-27" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.75615066, 0, -0.65439767, 0, 1, 0, 0.65439767, 0, 0.75615066, -1, -0.37484246, -9)
+
+[node name="Floor-IcePatch-13" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.6498196, 0, -0.76008844, 0, 1, 0, 0.76008844, 0, 0.6498196, 15, -0.37484246, -6)
+
+[node name="Floor-IcePatch-14" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.6498196, 0, -0.76008844, 0, 1, 0, 0.76008844, 0, 0.6498196, 16, -0.37484246, -11.4)
+
+[node name="Floor-IcePatch-15" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_hph74")]
+transform = Transform3D(0.33116415, -0.11422627, 0.93663365, 0.038076874, 0.99345475, 0.107693054, -0.9428045, -2.220446e-16, 0.33334598, 19, -0.17484246, -8.4)
+
+[node name="Floor-IcePatch-31" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_urcp6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12)
+
+[node name="Ice" type="Node3D" parent="World/Ground (level 0)"]
+
+[node name="Floor-Ice-1" parent="World/Ground (level 0)" instance=ExtResource("68_ad3co")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, -0.034999132, -10)
+
+[node name="Floor-Ice-2" parent="World/Ground (level 0)" instance=ExtResource("68_ad3co")]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 6.7, -0.17759097, -10)
+
+[node name="Floor-Ice-3" parent="World/Ground (level 0)" instance=ExtResource("68_ad3co")]
+transform = Transform3D(0.90000004, 0, 0, 0, 1, 0, 0, 0, 0.90000004, 12.7, -0.17759097, -9.5)
+
+[node name="Ground (level 1)" type="Node3D" parent="World"]
+
+[node name="IceSpikes-1" parent="World" instance=ExtResource("69_uljrr")]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 15, -0.25514197, -23)
+
+[node name="IceSpikes-2" parent="World" instance=ExtResource("69_uljrr")]
+transform = Transform3D(-4.371139e-08, 0.25881904, -0.9659258, 0, 0.96592593, 0.25881907, 1.0000001, 1.13133405e-08, -4.2221963e-08, 22, -0.25514197, -23)
+
+[node name="IceArch-1-col2" parent="." instance=ExtResource("70_3kejl")]
+transform = Transform3D(0.4829629, 0, -0.12940952, 0, 0.5, 0, 0.12940952, 0, 0.4829629, 19, 0.49549723, -32)
+
+[node name="IceArch-1-col3" parent="." instance=ExtResource("70_3kejl")]
+transform = Transform3D(0.4346666, 0, -0.11646858, 0, 0.45, 0, 0.11646858, 0, 0.4346666, 19, 0.8098788, -33)
 
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49"]
@@ -22809,4 +23967,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7896595, 1.4916401, -2.9731
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m61"]
 [editable path="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
 [editable path="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
+[editable path="SantasShop/Structure/Ladders/Ladder-1/Ladder-2"]
+[editable path="SantasShop/Structure/Ladders/Ladder-1/Ladder-3"]
+[editable path="SantasShop/Structure/Ladders/Ladder-1/Ladder-4"]
+[editable path="SantasShop/Structure/Ladders/Ladder-1/Ladder-5"]
+[editable path="SantasShop/Structure/Ladders/Ladder-1/Ladder-End-1"]
 [editable path="SantasShop/Decoration/Mok-12"]
+[editable path="SantasShop/WorkStations/Forge/WorkBench-3"]
+[editable path="SantasShop/WorkStations/Forge/Vice-1"]
+[editable path="SantasShop/WorkStations/Arcane/Stool-13"]
+[editable path="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-1"]
+[editable path="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-2"]
+[editable path="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-3"]
+[editable path="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-4"]
+[editable path="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-5"]
+[editable path="SantasShop/Platforms/Platform-2/Platform-2-1x1x02-EndStop-6"]
+[editable path="SantasShop/Platforms/Fences/Fence-3"]
+[editable path="SantasShop/Platforms/Fences/Fence-4"]
+[editable path="SantasShop/Platforms/Fences/Fence-5"]
+[editable path="SantasShop/Platforms/Fences/Fence-6"]
+[editable path="SantasShop/Platforms/Fences/Fence-7"]
+[editable path="SantasShop/Platforms/Fences/Fence-12"]
+[editable path="SantasShop/Platforms/Fences/Fence-8"]
+[editable path="SantasShop/Platforms/Fences/Fence-9"]
+[editable path="SantasShop/Platforms/Fences/Fence-10"]
+[editable path="SantasShop/Platforms/Fences/Fence-11"]
