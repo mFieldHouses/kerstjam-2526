@@ -7,5 +7,7 @@ script = ExtResource("1_rxvep")
 ammo_type_identifier = "fast"
 automatic = true
 shoot_delay = 0.15
+max_damage = 3.0
+min_damage = 1.0
 item_name = "Snow Shooter Ammo"
 metadata/_custom_type_script = "uid://d4epkoylgw48b"

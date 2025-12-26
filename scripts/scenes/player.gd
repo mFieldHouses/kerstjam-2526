@@ -9,6 +9,9 @@ const JUMP_VELOCITY = 4.5
 
 const DEFAULT_FOV = 75
 
+var _health : float = 100.0
+var _max_health : float = 100.0
+
 var sensitivity_multipliers : Dictionary[String, float] = {
 	"default" : 1.0,
 	"in_scope" : 0.5
@@ -95,6 +98,8 @@ func _physics_process(delta: float) -> void:
 	
 	_weapon_use_cooldown_timer -= delta
 	
+	$gui/health_left.text = str(roundi(_health))
+	
 	# Add the gravity.
 	if not is_on_floor() and flight == false:
 		velocity += get_gravity() * delta
@@ -111,10 +116,10 @@ func _physics_process(delta: float) -> void:
 
 	if _used_ammo.automatic == true:
 		if Input.is_action_pressed("shoot") and _selected_weapon_idx == 0 and _ammo[_used_ammo] > 0:
-			_auto_gun_timer += delta
-			if _auto_gun_timer > _used_ammo.shoot_delay:
+			_auto_gun_timer -= delta
+			if _auto_gun_timer < 0.0:
 				shoot()
-				_auto_gun_timer = 0
+				_auto_gun_timer = _used_ammo.shoot_delay
 	
 	if Input.is_key_pressed(KEY_CTRL) and flight:
 		position.y -= delta * 20
@@ -258,6 +263,10 @@ func toggle_scope_mode(state : bool) -> void:
 			sprinting = true
 			tween_camera_fov(DEFAULT_FOV + 20, 0.2)
 
+func get_hit(damage : float) -> void:
+	_health -= damage
+	
+
 func shoot() -> void:
 	_ammo[_used_ammo] -= 1
 	var _used_weapon : WeaponConfiguration = _get_currently_selected_weapon()
@@ -286,7 +295,7 @@ func shoot() -> void:
 		_hit_effect.global_position = shoot_ray.get_collision_point()
 		
 		if _shot_collider is Enemy or _shot_collider is Hittable or _shot_collider is Snowman or _shot_collider is SnowmanSegment:
-			var _dmg = _get_currently_selected_weapon().get_hit_damage()
+			var _dmg = _used_ammo.get_damage()
 			_shot_collider.hit(_dmg, global_position, 1)
 			HitMarkerManager.hit_at(shoot_ray.get_collision_point(), _dmg, preload("res://scenes/particle_effects/santa_gun_hit_standard.tscn"), get_parent())
 

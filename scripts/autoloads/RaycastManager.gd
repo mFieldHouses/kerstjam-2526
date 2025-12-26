@@ -11,6 +11,7 @@ func is_ray_free(from : Vector3, to : Vector3, mask : int = 1, ignore_player : b
 	var _result = world_3d.direct_space_state.intersect_ray(_parameters)
 	
 	if _result.has("collider"):
+		#print(_result.collider)
 		if _result.collider is Player and ignore_player:
 			return true
 		return false

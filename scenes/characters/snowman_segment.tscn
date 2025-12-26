@@ -3,16 +3,21 @@
 [ext_resource type="Script" uid="uid://bbbujc76rh6sa" path="res://scripts/snowman_segment.gd" id="1_nagnx"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_86qjn"]
+radius = 0.43022108
 
 [sub_resource type="SphereMesh" id="SphereMesh_86qjn"]
+radius = 0.44
+height = 0.88
 
 [node name="SnowmanSegment" type="CharacterBody3D"]
 script = ExtResource("1_nagnx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52559865, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41759336, 0)
 shape = SubResource("SphereShape3D_86qjn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49132055, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.40491635, 0)
 mesh = SubResource("SphereMesh_86qjn")
+
+[node name="navigator" type="NavigationAgent3D" parent="."]

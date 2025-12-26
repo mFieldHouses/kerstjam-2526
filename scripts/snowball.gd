@@ -12,4 +12,6 @@ func _physics_process(delta: float) -> void:
 
 func _splat(body) -> void:
 	#print('splat')
+	if body is Player:
+		body.get_hit(3.0)
 	queue_free()

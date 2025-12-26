@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://c7mirbyng2dow" path="res://scripts/hitmarker_text.gd" id="1_opeeb"]
 
 [node name="hitmarker_text" type="Label3D"]
+pixel_size = 0.002
 billboard = 1
 no_depth_test = true
+fixed_size = true
+text = "text"
 script = ExtResource("1_opeeb")

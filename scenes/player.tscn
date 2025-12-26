@@ -108,4 +108,11 @@ bbcode_enabled = true
 fit_content = true
 autowrap_mode = 0
 
+[node name="health_left" type="Label" parent="gui"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 30
+
 [node name="gun_sounds" type="AudioStreamPlayer" parent="."]
