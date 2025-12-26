@@ -24254,6 +24254,9 @@ size = Vector3(124, 36, 146)
 box_projection = true
 enable_shadows = true
 
+[node name="Rope-2" parent="." instance=ExtResource("9_h58ao")]
+transform = Transform3D(-0.08852137, -0.33036608, 0.9396926, 0.24321036, 0.9076735, 0.34202015, -0.96592593, 0.25881907, -4.222196e-08, 34, 7.8, -69)
+
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m50"]
