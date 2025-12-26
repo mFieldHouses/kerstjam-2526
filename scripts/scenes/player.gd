@@ -288,7 +288,8 @@ func shoot() -> void:
 		if _shot_collider is Enemy or _shot_collider is Hittable or _shot_collider is Snowman or _shot_collider is SnowmanSegment:
 			var _dmg = _get_currently_selected_weapon().get_hit_damage()
 			_shot_collider.hit(_dmg, global_position, 1)
-			HitMarkerManager.hit_at(shoot_ray.get_collision_point(), _dmg, preload("res://scenes/particle_effects/santa_gun_hit_standard.tscn"), get_parent())
+			# Debug hier, onderstaande regel geeft een fout, ps is het niet handiger om functies generiek te houden waar mogelijk? Zodat je scene naam meegeeft als parameter in de functie of een global variable of zo?
+			# HitMarkerManager.hit_at(shoot_ray.get_collision_point(), _dmg, preload("res://scenes/particle_effects/santa_gun_hit_standard.tscn"), get_parent())
 
 func get_distance_to_player(point : Vector3): ##Returns the distance between the player and said point.
 	return (global_position - point).length()
