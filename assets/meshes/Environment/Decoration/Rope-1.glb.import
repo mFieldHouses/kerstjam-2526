@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be5i2tw1jp1c4"
-path="res://.godot/imported/PileOfWood-1.glb-5bafcf3403ac8acadf58a6bed9f2b358.scn"
+uid="uid://uf5g1abnjfl5"
+path="res://.godot/imported/Rope-1.glb-12c72a17e4955ba582eab5b4c7127c0b.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Environment/Decoration/PileOfWood-1.glb"
-dest_files=["res://.godot/imported/PileOfWood-1.glb-5bafcf3403ac8acadf58a6bed9f2b358.scn"]
+source_file="res://assets/meshes/Environment/Decoration/Rope-1.glb"
+dest_files=["res://.godot/imported/Rope-1.glb-12c72a17e4955ba582eab5b4c7127c0b.scn"]
 
 [params]
 
@@ -37,14 +37,6 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"materials": {
-"Atlas-1": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://assets/materials/ChristMasColorAtlas.tres",
-"use_external/path": "uid://w07r2jd4pm7c"
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

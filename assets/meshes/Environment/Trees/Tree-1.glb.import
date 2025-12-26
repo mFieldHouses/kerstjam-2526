@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be5i2tw1jp1c4"
-path="res://.godot/imported/PileOfWood-1.glb-5bafcf3403ac8acadf58a6bed9f2b358.scn"
+uid="uid://c8unih57mu5w1"
+path="res://.godot/imported/Tree-1.glb-aa3e36ddfefd978915c750a855902849.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Environment/Decoration/PileOfWood-1.glb"
-dest_files=["res://.godot/imported/PileOfWood-1.glb-5bafcf3403ac8acadf58a6bed9f2b358.scn"]
+source_file="res://assets/meshes/Environment/Trees/Tree-1.glb"
+dest_files=["res://.godot/imported/Tree-1.glb-aa3e36ddfefd978915c750a855902849.scn"]
 
 [params]
 
@@ -39,10 +39,15 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"Atlas-1": {
+"Texture-Sheet-1": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/materials/ChristMasColorAtlas.tres",
-"use_external/path": "uid://w07r2jd4pm7c"
+"use_external/fallback_path": "res://assets/materials/Texture-Sheet-1.tres",
+"use_external/path": "uid://gqaoxy6yo14o"
+},
+"Wood": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/Wood-1.tres",
+"use_external/path": "uid://cjfb6diua0fr2"
 }
 }
 }

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1cplto5smkwq"]
+
+[ext_resource type="PackedScene" uid="uid://dem01mj4o0xaa" path="res://assets/meshes/Environment/IcePatches/Floor-Ice-1.glb" id="1_rk845"]
+[ext_resource type="Material" uid="uid://pv0thndks7gn" path="res://assets/materials/Ice-1.tres" id="2_aqs7k"]
+
+[node name="Floor-Ice-1" instance=ExtResource("1_rk845")]
+
+[node name="Ice" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, -3, -7.0216045, 1)
+surface_material_override/0 = ExtResource("2_aqs7k")
