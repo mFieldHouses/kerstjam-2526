@@ -5,7 +5,7 @@ extends Node3D
 func _ready() -> void:
 	await get_tree().create_timer(1.0).timeout
 	
-	#DialogManager.initiate_remote_dialog("exit_yeti_hollow", "Henkie", load("res://addons/GodotDevTools/module.svg"))
+	#DialogManager.initiate_remote_dialog(sss"exit_yeti_hollow", "Henkie", load("res://addons/GodotDevTools/module.svg"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

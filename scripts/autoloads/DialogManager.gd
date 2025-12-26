@@ -26,6 +26,8 @@ func initiate_remote_dialog(dialog_file_name : String, conversor_name : String, 
 		if _line.begins_with("*"):
 			dialog_queue.emit(dialog_file_name, _line.lstrip("* "))
 			continue
+		elif _line.begins_with("\\"):
+			_line = _line.lstrip("\\")
 			
 		#if _line.begins_with(">"):
 			#_line = tr(_line.lstrip("> "))
@@ -65,6 +67,8 @@ func initiate_dialog_with(dialog_file_name : String, with : Node3D, conversor_na
 		if _line.begins_with("*"):
 			dialog_queue.emit(dialog_file_name, _line.lstrip("* "))
 			continue
+		elif _line.begins_with("\\"):
+			_line = _line.lstrip("\\")
 		
 		#if _line.begins_with(">"):
 			#_line = tr(_line.lstrip("> "))

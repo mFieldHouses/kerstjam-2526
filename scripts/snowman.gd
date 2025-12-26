@@ -36,20 +36,22 @@ func _physics_process(delta: float) -> void:
 	shoot_timer += delta
 	_strafe_timer -= delta
 	
+	var _speed_mod : float = clamp(5.0 / PlayerState.get_distance_to_player(global_position) / (_health_left / 15.0), 0.1, 1.4)
+	
 	if shoot_timer >= shoot_cooldown:
 		_shoot()
 		shoot_timer = 0.0
 	
 	if _strafe_timer <= 0.0:
 		_strafe_dir = [-1, 1].pick_random()
-		_strafe_timer = randf_range(0.5, 2.0)
+		_strafe_timer = randf_range(0.5, 2.0 / _speed_mod)
 	
 	if _can_see_player():
 		look_at(PlayerState.player_instance.global_position)
 		rotation.x = 0
 		rotation.z = 0
 		
-		velocity = Vector3((global_basis.x * _strafe_dir * SPEED).x, velocity.y, (global_basis.x * _strafe_dir * SPEED).z)
+		velocity = Vector3((global_basis.x * _strafe_dir * SPEED * _speed_mod).x, velocity.y, (global_basis.x * _strafe_dir * SPEED * _speed_mod).z)
 	else:
 		_strafe_dir = 0
 	
@@ -63,6 +65,8 @@ func _physics_process(delta: float) -> void:
 
 func hit(damage : float, from : Vector3, knockback : float) -> void:
 	_health_left -= damage
+	if _frozen:
+		_frozen = false
 
 func _die() -> void:
 	for idx in 3:
@@ -74,7 +78,7 @@ func _die() -> void:
 func _shoot() -> void:
 	var _new_snowball : Snowball = preload("res://scenes/projectiles/snowball.tscn").instantiate()
 	get_parent().add_child(_new_snowball)
-	_new_snowball.global_position = global_position + Vector3(0.0, 1.0, 0.0) - global_basis.z
+	_new_snowball.global_position = $"snowball-origin".global_position
 	_new_snowball.velocity = -global_basis.z * PlayerState.player_instance.global_position.distance_to(global_position) * 2 + Vector3(0.0, PlayerState.player_instance.global_position.distance_to(global_position) * 0.3, 0.0)
 	print("shoot snowball")
 
@@ -83,4 +87,4 @@ func _can_see_player() -> bool:
 	var _angle_to_player = (-1.0 * global_basis.z).angle_to(_snowman_to_player)
 	var _distance_to_player = PlayerState.player_instance.global_position.distance_to(global_position) 
 	#print(RaycastManager.is_ray_free(global_position, PlayerState.player_instance.global_position, 1, true))
-	return (_angle_to_player < field_of_view) and RaycastManager.is_ray_free(global_position + Vector3(0.0, 1.0, 0.0), PlayerState.player_instance.global_position + Vector3(0.0, 1.0, 0.0), 1, true) and _distance_to_player <= sight_distance
+	return (_angle_to_player < field_of_view) and RaycastManager.is_ray_free($"snowball-origin".global_position, PlayerState.player_instance.global_position + Vector3(0.0, 1.0, 0.0), 1, true) and _distance_to_player <= sight_distance

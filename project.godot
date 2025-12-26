@@ -32,6 +32,7 @@ DisplayManager="*res://scripts/autoloads/DisplayManager.gd"
 PersistentControls="*res://scripts/autoloads/PersistentControls.gd"
 RaycastManager="*res://scripts/autoloads/RaycastManager.gd"
 DialogManager="*res://scripts/autoloads/DialogManager.gd"
+HitMarkerManager="*res://scripts/autoloads/HitMarkerManager.gd"
 
 [editor]
 
@@ -115,6 +116,8 @@ locale/locale_filter_mode=0
 3d_physics/layer_1="General Collisions"
 3d_physics/layer_2="General Interactables"
 3d_physics/layer_3="General Shootabless"
+3d_physics/layer_4="Player"
+3d_physics/layer_5="Enemy guardrails"
 
 [physics]
 

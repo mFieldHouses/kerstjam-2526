@@ -2,21 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bygvk1q845hvl"
-path.s3tc="res://.godot/imported/Brick-3-Normal.png-646878b2f74faf2814a5e3300d515a63.s3tc.ctex"
+uid="uid://bebowcwwiknj7"
+path="res://.godot/imported/SnowHigh-3_arctic_industrial_ow_color_atlas_256_2.png-77da7383d0548ea3ff1a9096f40afa31.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
+}
+generator_parameters={
+"md5": "624eccbad32517c64c85c34ed6a0436f"
 }
 
 [deps]
 
-source_file="res://assets/textures/walls/Brick-3-Normal.png"
-dest_files=["res://.godot/imported/Brick-3-Normal.png-646878b2f74faf2814a5e3300d515a63.s3tc.ctex"]
+source_file="res://assets/meshes/Environment/SnowHigh-3_arctic_industrial_ow_color_atlas_256_2.png"
+dest_files=["res://.godot/imported/SnowHigh-3_arctic_industrial_ow_color_atlas_256_2.png-77da7383d0548ea3ff1a9096f40afa31.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -38,4 +40,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

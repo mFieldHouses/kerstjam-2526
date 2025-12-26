@@ -2,21 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bygvk1q845hvl"
-path.s3tc="res://.godot/imported/Brick-3-Normal.png-646878b2f74faf2814a5e3300d515a63.s3tc.ctex"
+uid="uid://bquhyww3oguhl"
+path="res://.godot/imported/PileOfWood-1_christmas_color_atlas_full_blocks_gradients_256.png-d46707c5b87072034e0ce9fe7bfc5822.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
+}
+generator_parameters={
+"md5": "2612d0586cd4c28c0957dc09568f3f9d"
 }
 
 [deps]
 
-source_file="res://assets/textures/walls/Brick-3-Normal.png"
-dest_files=["res://.godot/imported/Brick-3-Normal.png-646878b2f74faf2814a5e3300d515a63.s3tc.ctex"]
+source_file="res://assets/meshes/Environment/Decoration/PileOfWood-1_christmas_color_atlas_full_blocks_gradients_256.png"
+dest_files=["res://.godot/imported/PileOfWood-1_christmas_color_atlas_full_blocks_gradients_256.png-d46707c5b87072034e0ce9fe7bfc5822.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -38,4 +40,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

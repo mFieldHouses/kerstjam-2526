@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=4 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=94 format=4 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://ceooxe2w7sgx8" path="res://assets/textures/misc/Snow-Line-2.png" id="19_4keet"]
 [ext_resource type="PackedScene" uid="uid://blny7d2mxqxwg" path="res://assets/meshes/Misc/StreetLantern-1.glb" id="19_4n3p1"]
 [ext_resource type="PackedScene" uid="uid://cmt43o30mx2hs" path="res://assets/meshes/SantaShop/Doors/door_normal_1.tscn" id="20_gnhr4"]
-[ext_resource type="PackedScene" uid="uid://3aixdblns36c" path="res://scenes/elements/window_tall_1.tscn" id="20_vlajn"]
+[ext_resource type="PackedScene" path="res://scenes/elements/window_tall_1.tscn" id="20_vlajn"]
 [ext_resource type="Script" uid="uid://c0xopaj8p04ph" path="res://scripts/scenes/flickering_streetlight.gd" id="20_ynkcq"]
 [ext_resource type="PackedScene" uid="uid://bpe7uo5td47p7" path="res://assets/meshes/Misc/PineTree-1.glb" id="21_4dun5"]
 [ext_resource type="PackedScene" uid="uid://bikd1xas7guuo" path="res://assets/meshes/SantaShop/Windows/window_normal_1.tscn" id="21_jbcui"]
@@ -39,44 +39,46 @@
 [ext_resource type="PackedScene" uid="uid://dwuy34xm1q4l8" path="res://assets/meshes/SantaShop/Decoration/Mok-1.glb" id="27_ti1ib"]
 [ext_resource type="Texture2D" uid="uid://cno282mv73mf8" path="res://assets/textures/misc/I-Santa.png" id="28_87l1b"]
 [ext_resource type="PackedScene" uid="uid://8qin0wvv51wp" path="res://assets/meshes/Sled/Sled-1.glb" id="28_ipl6n"]
-[ext_resource type="PackedScene" uid="uid://d8wbgo5c2a7e" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
+[ext_resource type="PackedScene" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
 [ext_resource type="PackedScene" uid="uid://ctj1pr4680eus" path="res://assets/meshes/Characters/Elf-SizeCheck-1.glb" id="29_ipl6n"]
 [ext_resource type="PackedScene" uid="uid://bpxoxrgixhkbp" path="res://assets/meshes/SantaShop/Floors/Plint-1.glb" id="30_8d78k"]
 [ext_resource type="Material" uid="uid://da7ow5w2larpw" path="res://assets/materials/Wood-2.tres" id="31_3fhnc"]
 [ext_resource type="PackedScene" uid="uid://d14kp2nm7cq1v" path="res://assets/meshes/SantaShop/Platforms/Supports/Support-1.glb" id="32_7xj8n"]
 [ext_resource type="PackedScene" uid="uid://bjg01dfvdatl2" path="res://assets/meshes/SantaShop/Platforms/Supports/PlatformSupport1-Electric-col.glb" id="33_dis63"]
 [ext_resource type="PackedScene" uid="uid://dvln5vd6exm4y" path="res://assets/meshes/SantaShop/Ladders/Ladder-1.glb" id="34_cjgns"]
-[ext_resource type="Material" uid="uid://c1n0fg1gi7d6m" path="res://assets/materials/Metal-SteelGreenBlue-1.tres" id="35_vlgpt"]
+[ext_resource type="Material" path="res://assets/materials/Metal-SteelGreenBlue-1.tres" id="35_vlgpt"]
 [ext_resource type="PackedScene" uid="uid://jc6hcju511fq" path="res://assets/meshes/SantaShop/Ladders/Ladder-End-1.glb" id="36_tfrpy"]
 [ext_resource type="PackedScene" uid="uid://c2idrwdaabkg2" path="res://assets/meshes/SantaShop/Platforms/Platform-1-1x2x02.glb" id="37_3fhnc"]
 [ext_resource type="PackedScene" uid="uid://dcolyse4bqfee" path="res://assets/meshes/Misc/WorkBench-1.glb" id="37_7dqpe"]
 [ext_resource type="PackedScene" uid="uid://gfxuk4g6ca4e" path="res://assets/meshes/SantaShop/Decoration/Lighting/Ceiling-Lamp-2.glb" id="38_c0op5"]
-[ext_resource type="Material" uid="uid://q8ibnub1ja58" path="res://assets/materials/WorkBench-1.tres" id="39_7xj8n"]
+[ext_resource type="Material" path="res://assets/materials/WorkBench-1.tres" id="39_7xj8n"]
 [ext_resource type="PackedScene" uid="uid://8v36r6sbpf2p" path="res://assets/meshes/SantaShop/Decoration/Vice-1.glb" id="40_dis63"]
 [ext_resource type="PackedScene" uid="uid://cogmnnofnvcg3" path="res://assets/meshes/SantaShop/Decoration/lamp_hanging_ceiling_1.tscn" id="40_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://bgru0h4cvr1vr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1.glb" id="41_jhtxq"]
-[ext_resource type="Material" uid="uid://cn451fvlr28am" path="res://assets/materials/Metal-SteelRed-1.tres" id="41_ouroh"]
-[ext_resource type="Material" uid="uid://brgjh3uq3yn2k" path="res://assets/materials/Metal-Steel-1.tres" id="42_evrpk"]
+[ext_resource type="Material" path="res://assets/materials/Metal-SteelRed-1.tres" id="41_ouroh"]
+[ext_resource type="Material" path="res://assets/materials/Metal-Steel-1.tres" id="42_evrpk"]
 [ext_resource type="Material" uid="uid://bo6ysfjfwynng" path="res://assets/materials/Floor-Wood-1.tres" id="42_mjwaw"]
 [ext_resource type="Texture2D" uid="uid://db5ek0ciwfy2m" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1_Floor-Wood-Baked-1.png" id="43_8d78k"]
 [ext_resource type="PackedScene" uid="uid://cppumb700vwwr" path="res://assets/meshes/Misc/Stool-1.glb" id="43_cjgns"]
 [ext_resource type="Texture2D" uid="uid://fl5qi1kb13nr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1_Floor-Wood-1-normal.png" id="44_3fhnc"]
-[ext_resource type="Material" uid="uid://dquf6x7y8mf53" path="res://assets/materials/brown-1.tres" id="44_n7477"]
+[ext_resource type="Material" path="res://assets/materials/brown-1.tres" id="44_n7477"]
 [ext_resource type="PackedScene" uid="uid://ddp8e2211v4nn" path="res://assets/meshes/SantaShop/Platforms/Platform-2-1x1x02.glb" id="48_dis63"]
 [ext_resource type="PackedScene" uid="uid://dwhgagkjgjfux" path="res://assets/meshes/SantaShop/Platforms/Platform-2-1x1x02-EndStop-1.glb" id="49_ouroh"]
 [ext_resource type="Material" uid="uid://bom3q2dvv1trg" path="res://assets/materials/Emit-Green-1.tres" id="50_evrpk"]
 [ext_resource type="PackedScene" uid="uid://dcgaosbqiq2ya" path="res://assets/meshes/SantaShop/Platforms/Fence-1.glb" id="54_p25ic"]
-[ext_resource type="Material" uid="uid://ce4huh81528hv" path="res://assets/materials/Glass-Orange-2.tres" id="55_cl0gn"]
+[ext_resource type="Material" path="res://assets/materials/Glass-Orange-2.tres" id="55_cl0gn"]
 [ext_resource type="PackedScene" uid="uid://c5sao4uo5graf" path="res://assets/meshes/SantaShop/Decoration/Computers/Computer-1.glb" id="56_cl0gn"]
 [ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="67_hph74"]
+[ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="67_sna10"]
 [ext_resource type="PackedScene" uid="uid://chaq4m8cgusm1" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-2.glb" id="67_urcp6"]
+[ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="68_6a1gd"]
 [ext_resource type="PackedScene" uid="uid://dem01mj4o0xaa" path="res://assets/meshes/Environment/IcePatches/Floor-Ice-1.glb" id="68_ad3co"]
 [ext_resource type="PackedScene" uid="uid://drw7r3wtmcqa8" path="res://assets/meshes/Environment/IcePatches/IceSpikes-1.glb" id="69_uljrr"]
 [ext_resource type="PackedScene" uid="uid://dfnh5u5toi70c" path="res://assets/meshes/Environment/IcePatches/IceArch-1-col.glb" id="70_3kejl"]
 [ext_resource type="PackedScene" uid="uid://cyn5bi6e0gs42" path="res://assets/meshes/Environment/SnowHigh-3.glb" id="72_3kejl"]
 [ext_resource type="PackedScene" uid="uid://be5i2tw1jp1c4" path="res://assets/meshes/Environment/Decoration/PileOfWood-1.glb" id="73_3kejl"]
 [ext_resource type="PackedScene" uid="uid://c8unih57mu5w1" path="res://assets/meshes/Environment/Trees/Tree-1.glb" id="74_ju5eo"]
-[ext_resource type="PackedScene" uid="uid://c1cplto5smkwq" path="res://assets/meshes/Environment/IcePatches/floor_ice_1.tscn" id="75_ydvgl"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Environment/IcePatches/floor_ice_1.tscn" id="75_ydvgl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0h4kg"]
 energy_multiplier = 0.1
@@ -189,6 +191,8 @@ shadow_mesh = SubResource("ArrayMesh_6kmlv")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jmilc"]
 clearcoat_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nj3uu"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -23972,8 +23976,25 @@ transform = Transform3D(0.018493906, 0, -0.39957222, 0, 0.4, 0, 0.39957222, 0, 0
 [node name="Elf-SizeCheck-4" parent="." instance=ExtResource("29_ipl6n")]
 transform = Transform3D(0.2952456, 0, 0.2698705, 0, 0.40000007, 0, -0.2698705, 0, 0.2952456, 0.9588171, 0.23582375, 11.645556)
 
-[node name="Elf-SizeCheck-3" parent="." instance=ExtResource("29_ipl6n")]
+[node name="henkie" parent="." instance=ExtResource("29_ipl6n")]
 transform = Transform3D(0.018493906, 0, -0.39957222, 0, 0.4, 0, 0.39957222, 0, 0.018493906, 17.540956, 5.4064336, 8.89661)
+
+[node name="DialogInitiator" type="Node3D" parent="henkie"]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1.1966562, 0)
+script = ExtResource("67_sna10")
+name_in_dialog = "henkie1"
+metadata/_custom_type_script = "uid://27xr8j11a8al"
+
+[node name="@Node3D@100815" type="Node3D" parent="henkie/DialogInitiator"]
+script = ExtResource("68_6a1gd")
+prompt_prefix = "Talk to"
+prompt_subject = "Henkie"
+
+[node name="@Area3D@100816" type="Area3D" parent="henkie/DialogInitiator/@Node3D@100815"]
+collision_layer = 2
+
+[node name="@CollisionShape3D@100817" type="CollisionShape3D" parent="henkie/DialogInitiator/@Node3D@100815/@Area3D@100816"]
+shape = SubResource("BoxShape3D_nj3uu")
 
 [node name="Sled-1" parent="." instance=ExtResource("28_ipl6n")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 9.398246, -0.019072056, 6.4615192)

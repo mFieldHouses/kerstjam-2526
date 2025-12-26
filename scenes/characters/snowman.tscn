@@ -8,6 +8,7 @@ radius = 0.47851563
 height = 1.753418
 
 [node name="Snowman" type="CharacterBody3D"]
+collision_layer = 17
 script = ExtResource("1_nldfl")
 
 [node name="Snowman-1" parent="." instance=ExtResource("1_28eu1")]
@@ -16,3 +17,6 @@ transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8619885, 0)
 shape = SubResource("CapsuleShape3D_28eu1")
+
+[node name="snowball-origin" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1829594, -0.7839138)

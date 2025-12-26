@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://cfufrt7a0cruc"]
+
+[ext_resource type="Script" uid="uid://cgayko6nfo5rq" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
+[ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_wu2bj"]
+[ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="3_bnj7l"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_22f0a"]
+sky_material = SubResource("ProceduralSkyMaterial_fo0y1")
+
+[sub_resource type="Environment" id="Environment_dqy33"]
+background_mode = 2
+sky = SubResource("Sky_22f0a")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
+size = Vector3(100, 0.497, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o4kk"]
+albedo_texture = ExtResource("2_wu2bj")
+uv1_scale = Vector3(20, 20, 20)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0su6h"]
+material = SubResource("StandardMaterial3D_1o4kk")
+size = Vector2(100, 100)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wx1sp"]
+
+[node name="Warehouse1" type="Node3D"]
+script = ExtResource("1_wx1sp")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dqy33")
+
+[node name="floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.7196975, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, -43.194565)
+shape = SubResource("BoxShape3D_2uw2f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -42.99329)
+mesh = SubResource("PlaneMesh_0su6h")
+skeleton = NodePath("../..")
+
+[node name="player" parent="." instance=ExtResource("3_bnj7l")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9145295, 0.40451908, 0, -0.40451908, 0.9145295, 0, 0, 0)
+shadow_enabled = true
+
+[node name="speaker" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6939697, -1.6644211, -7.282346)
+mesh = SubResource("BoxMesh_wx1sp")

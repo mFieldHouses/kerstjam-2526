@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://deyfnv3650ptg"]
+[gd_scene load_steps=38 format=3 uid="uid://deyfnv3650ptg"]
 
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="1_28ucp"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="3_1o4kk"]
@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="10_xd7gd"]
 [ext_resource type="PackedScene" uid="uid://bxlrivssc0tm0" path="res://scenes/ammo_crate.tscn" id="11_xd7gd"]
 [ext_resource type="Resource" uid="uid://bf4lpuapwa1nv" path="res://assets/resources/items/ammo/snow.tres" id="12_eew6s"]
+[ext_resource type="Shader" uid="uid://bq87cpup7pk1t" path="res://assets/shaders/snow_on_top.gdshader" id="13_a7fa8"]
+[ext_resource type="Texture2D" uid="uid://c0htb5gkxuc7c" path="res://assets/textures/floors/Floor-Wood-1.png" id="13_e0si4"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="13_l1jfg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wvqfc"]
@@ -26,7 +28,10 @@ sky = SubResource("Sky_78x8d")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a7fa8"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o4kk"]
+next_pass = SubResource("ShaderMaterial_a7fa8")
 albedo_texture = ExtResource("1_28ucp")
 uv1_scale = Vector3(20, 20, 20)
 texture_filter = 0
@@ -62,6 +67,40 @@ material = SubResource("StandardMaterial3D_rg2j8")
 [sub_resource type="BoxShape3D" id="BoxShape3D_me2a5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eew6s"]
+
+[sub_resource type="Gradient" id="Gradient_e0si4"]
+offsets = PackedFloat32Array(0.31304348, 0.5043478)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a7fa8"]
+frequency = 0.0023
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_e0si4"]
+noise = SubResource("FastNoiseLite_a7fa8")
+color_ramp = SubResource("Gradient_e0si4")
+seamless = true
+
+[sub_resource type="Gradient" id="Gradient_bivxe"]
+offsets = PackedFloat32Array(0.1826087, 0.46086955)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ygxmc"]
+gradient = SubResource("Gradient_bivxe")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l1jfg"]
+render_priority = 0
+shader = ExtResource("13_a7fa8")
+shader_parameter/snow_thickness = 0.1
+shader_parameter/snow_texture = ExtResource("6_qle0t")
+shader_parameter/snow_strength_ramp = SubResource("GradientTexture1D_ygxmc")
+shader_parameter/snow_strength_noise = SubResource("NoiseTexture2D_e0si4")
+shader_parameter/snow_strength_noise_scale = 5.575
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bivxe"]
+next_pass = SubResource("ShaderMaterial_l1jfg")
+albedo_color = Color(0.639888, 0.639888, 0.6398879, 1)
+albedo_texture = ExtResource("13_e0si4")
+
+[sub_resource type="SphereMesh" id="SphereMesh_ygxmc"]
+material = SubResource("StandardMaterial3D_bivxe")
 
 [node name="barn" type="Node3D"]
 
@@ -139,3 +178,7 @@ shape = SubResource("BoxShape3D_eew6s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.91809607, 0.19658203, 1.8183825)
 held_item = ExtResource("12_eew6s")
 count = 20
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1622286, 1.0312827, 3.675005)
+mesh = SubResource("SphereMesh_ygxmc")
