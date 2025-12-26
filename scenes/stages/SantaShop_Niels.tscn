@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=4 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=91 format=4 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
@@ -78,13 +78,37 @@
 [ext_resource type="PackedScene" uid="uid://c8unih57mu5w1" path="res://assets/meshes/Environment/Trees/Tree-1.glb" id="74_ju5eo"]
 [ext_resource type="PackedScene" uid="uid://c1cplto5smkwq" path="res://assets/meshes/Environment/IcePatches/floor_ice_1.tscn" id="75_ydvgl"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0h4kg"]
+energy_multiplier = 0.1
+
+[sub_resource type="Sky" id="Sky_h58ao"]
+sky_material = SubResource("ProceduralSkyMaterial_0h4kg")
+
 [sub_resource type="Environment" id="Environment_vk2yt"]
 resource_local_to_scene = true
+background_mode = 2
+background_energy_multiplier = 0.1
+sky = SubResource("Sky_h58ao")
+tonemap_mode = 2
 ssr_enabled = true
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 1.0
+glow_bloom = 0.2
 fog_enabled = true
+fog_light_color = Color(0.4434182, 0.5598078, 0.7060618, 1)
+fog_light_energy = 0.36
+fog_sky_affect = 0.02
+fog_height = 0.2
+fog_height_density = 5.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
+volumetric_fog_density = 0.03
+volumetric_fog_albedo = Color(0.7058824, 1, 1, 1)
 volumetric_fog_sky_affect = 0.586
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_0h4kg"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 60.31
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3bagg"]
 size = Vector3(20.504883, 0.49658203, 19.720459)
@@ -170,6 +194,7 @@ clearcoat_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vk2yt")
+camera_attributes = SubResource("CameraAttributesPractical_0h4kg")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(-0.16981284, -0.5752001, -0.8001928, -0.8492135, -0.32656536, 0.4149597, -0.50000006, 0.75, -0.43301266, 4.8888206, 24.743122, 11.761875)
@@ -325,14 +350,20 @@ transform = Transform3D(0.019999988, 0, 0.034641013, 0, 1.9999999, 0, -0.0346410
 [node name="Rope-1" parent="floor/CollisionShape3D" instance=ExtResource("8_0h4kg")]
 transform = Transform3D(0.01409131, 0, 0.037435744, 0, 2, 0, -0.037435744, 0, 0.01409131, 0.76306325, 3.1763184, -1.1875978)
 
+[node name="Rope-5" parent="floor/CollisionShape3D" instance=ExtResource("8_0h4kg")]
+transform = Transform3D(0.00851235, 0, 0.039083757, 0, 2, 0, -0.039083757, 0, 0.00851235, 0.95769477, 4.1293173, -1.5140306)
+
+[node name="Rope-6" parent="floor/CollisionShape3D" instance=ExtResource("8_0h4kg")]
+transform = Transform3D(0.026561229, 0, 0.029908216, 0, 2, 0, -0.029908216, 0, 0.026561229, 0.990871, 2.85622, -1.7616311)
+
 [node name="Rope-2" parent="floor/CollisionShape3D" instance=ExtResource("8_0h4kg")]
 transform = Transform3D(-0.0034862272, 0, 0.039847784, 0, 2, 0, -0.039847784, 0, -0.0034862272, 0.75199986, 3.1763184, -1.1199998)
 
 [node name="Rope-3" parent="floor/CollisionShape3D" instance=ExtResource("9_h58ao")]
-transform = Transform3D(0.04, 0, 0, 0, 2, 0, 0, 0, 0.04, 0.376, 3.5170898, -0.748)
+transform = Transform3D(0.039847784, 0, -0.003486229, 0, 2, 0, 0.003486229, 0, 0.039847784, 0.376, 3.5170898, -0.744)
 
 [node name="Rope-4" parent="floor/CollisionShape3D" instance=ExtResource("8_0h4kg")]
-transform = Transform3D(0.016904728, 0, 0.03625231, 0, 2, 0, -0.03625231, 0, 0.016904728, 0.33199996, 3.5170898, -0.7199999)
+transform = Transform3D(0, 0, 0.039999995, 0, 2, 0, -0.039999995, 0, 0, 0.34399998, 3.5170898, -0.7159999)
 
 [node name="SmallRoof-Wood" parent="." instance=ExtResource("13_qh1ma")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9418964, 2.7792485, -0.5885861)
