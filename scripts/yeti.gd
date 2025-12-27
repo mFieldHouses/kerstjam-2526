@@ -11,6 +11,9 @@ var _player_last_seen_state : Dictionary = {
 var _can_see_player : bool = false
 var _flags : Array[bool] = [false, false, false, false] #array of flags to keep track of when to play specific dialogs
 
+@onready var _model_scene = $"Yeti-2-1"
+@onready var _animation_player : AnimationPlayer = $"Yeti-2-1/Yeti-2-1/AnimationPlayer"
+
 enum BehaviorState {PATROL, CHASE, FOLLOW_TRAIL, SLEEP}
 var _current_behavior_state : BehaviorState = BehaviorState.SLEEP:
 	set(x):
@@ -33,12 +36,16 @@ func _ready() -> void:
 	DialogManager.dialog_queue.connect(func(did : String, qid : String): if did == "enter_yeti_hollow" and qid == "release_yeti": _current_behavior_state = BehaviorState.PATROL)
 	DialogManager.dialog_ended.connect(_dialog_end)
 	
+	_animation_player.play("Global/Idle-3")
+	_animation_player.get_animation("Global/Idle-3").loop_mode = Animation.LOOP_PINGPONG
+	
 func _dialog_end(did: String) -> void:
 	if did == "discover_yeti":
 		print("allow discover_yeti2")
 		_flags[1] = false
 
 func _physics_process(delta: float) -> void:
+	
 	if _current_behavior_state == BehaviorState.SLEEP:
 		return
 	
