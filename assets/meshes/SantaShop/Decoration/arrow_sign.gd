@@ -25,10 +25,10 @@ var _running := false
 
 func _ready() -> void:
 	_collect_lamps()
-	print("ArrowSignChase: gevonden lamps = ", _lamps.size())
+	#print("ArrowSignChase: gevonden lamps = ", _lamps.size())
 
 	_prepare_unique_materials()
-	print("ArrowSignChase: voorbereid mats = ", _mats.size())
+	#print("ArrowSignChase: voorbereid mats = ", _mats.size())
 
 	if _mats.is_empty():
 		push_warning("Geen lamp-materials gevonden (check names/surface_index/material type).")

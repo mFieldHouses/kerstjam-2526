@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://ceooxe2w7sgx8" path="res://assets/textures/misc/Snow-Line-2.png" id="19_4keet"]
 [ext_resource type="PackedScene" uid="uid://blny7d2mxqxwg" path="res://assets/meshes/Misc/StreetLantern-1.glb" id="19_4n3p1"]
 [ext_resource type="PackedScene" uid="uid://cmt43o30mx2hs" path="res://assets/meshes/SantaShop/Doors/door_normal_1.tscn" id="20_gnhr4"]
-[ext_resource type="PackedScene" uid="uid://3aixdblns36c" path="res://scenes/elements/window_tall_1.tscn" id="20_vlajn"]
+[ext_resource type="PackedScene" path="res://scenes/elements/window_tall_1.tscn" id="20_vlajn"]
 [ext_resource type="Script" uid="uid://c0xopaj8p04ph" path="res://scripts/scenes/flickering_streetlight.gd" id="20_ynkcq"]
 [ext_resource type="PackedScene" uid="uid://bpe7uo5td47p7" path="res://assets/meshes/Misc/PineTree-1.glb" id="21_4dun5"]
 [ext_resource type="PackedScene" uid="uid://bikd1xas7guuo" path="res://assets/meshes/SantaShop/Windows/window_normal_1.tscn" id="21_jbcui"]
@@ -38,34 +38,34 @@
 [ext_resource type="PackedScene" uid="uid://dwuy34xm1q4l8" path="res://assets/meshes/SantaShop/Decoration/Mok-1.glb" id="27_ti1ib"]
 [ext_resource type="Texture2D" uid="uid://cno282mv73mf8" path="res://assets/textures/misc/I-Santa.png" id="28_87l1b"]
 [ext_resource type="PackedScene" uid="uid://8qin0wvv51wp" path="res://assets/meshes/Sled/Sled-1.glb" id="28_ipl6n"]
-[ext_resource type="PackedScene" uid="uid://d8wbgo5c2a7e" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
+[ext_resource type="PackedScene" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
 [ext_resource type="PackedScene" uid="uid://ctj1pr4680eus" path="res://assets/meshes/Characters/Elf-SizeCheck-1.glb" id="29_ipl6n"]
 [ext_resource type="PackedScene" uid="uid://bpxoxrgixhkbp" path="res://assets/meshes/SantaShop/Floors/Plint-1.glb" id="30_8d78k"]
 [ext_resource type="Material" uid="uid://da7ow5w2larpw" path="res://assets/materials/Wood-2.tres" id="31_3fhnc"]
 [ext_resource type="PackedScene" uid="uid://d14kp2nm7cq1v" path="res://assets/meshes/SantaShop/Platforms/Supports/Support-1.glb" id="32_7xj8n"]
 [ext_resource type="PackedScene" uid="uid://bjg01dfvdatl2" path="res://assets/meshes/SantaShop/Platforms/Supports/PlatformSupport1-Electric-col.glb" id="33_dis63"]
 [ext_resource type="PackedScene" uid="uid://dvln5vd6exm4y" path="res://assets/meshes/SantaShop/Ladders/Ladder-1.glb" id="34_cjgns"]
-[ext_resource type="Material" uid="uid://c1n0fg1gi7d6m" path="res://assets/materials/Metal-SteelGreenBlue-1.tres" id="35_vlgpt"]
+[ext_resource type="Material" path="res://assets/materials/Metal-SteelGreenBlue-1.tres" id="35_vlgpt"]
 [ext_resource type="PackedScene" uid="uid://jc6hcju511fq" path="res://assets/meshes/SantaShop/Ladders/Ladder-End-1.glb" id="36_tfrpy"]
 [ext_resource type="PackedScene" uid="uid://c2idrwdaabkg2" path="res://assets/meshes/SantaShop/Platforms/Platform-1-1x2x02.glb" id="37_3fhnc"]
 [ext_resource type="PackedScene" uid="uid://dcolyse4bqfee" path="res://assets/meshes/Misc/WorkBench-1.glb" id="37_7dqpe"]
 [ext_resource type="PackedScene" uid="uid://gfxuk4g6ca4e" path="res://assets/meshes/SantaShop/Decoration/Lighting/Ceiling-Lamp-2.glb" id="38_c0op5"]
-[ext_resource type="Material" uid="uid://q8ibnub1ja58" path="res://assets/materials/WorkBench-1.tres" id="39_7xj8n"]
+[ext_resource type="Material" path="res://assets/materials/WorkBench-1.tres" id="39_7xj8n"]
 [ext_resource type="PackedScene" uid="uid://8v36r6sbpf2p" path="res://assets/meshes/SantaShop/Decoration/Vice-1.glb" id="40_dis63"]
 [ext_resource type="PackedScene" uid="uid://cogmnnofnvcg3" path="res://assets/meshes/SantaShop/Decoration/lamp_hanging_ceiling_1.tscn" id="40_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://bgru0h4cvr1vr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1.glb" id="41_jhtxq"]
-[ext_resource type="Material" uid="uid://cn451fvlr28am" path="res://assets/materials/Metal-SteelRed-1.tres" id="41_ouroh"]
-[ext_resource type="Material" uid="uid://brgjh3uq3yn2k" path="res://assets/materials/Metal-Steel-1.tres" id="42_evrpk"]
+[ext_resource type="Material" path="res://assets/materials/Metal-SteelRed-1.tres" id="41_ouroh"]
+[ext_resource type="Material" path="res://assets/materials/Metal-Steel-1.tres" id="42_evrpk"]
 [ext_resource type="Material" uid="uid://bo6ysfjfwynng" path="res://assets/materials/Floor-Wood-1.tres" id="42_mjwaw"]
 [ext_resource type="Texture2D" uid="uid://db5ek0ciwfy2m" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1_Floor-Wood-Baked-1.png" id="43_8d78k"]
 [ext_resource type="PackedScene" uid="uid://cppumb700vwwr" path="res://assets/meshes/Misc/Stool-1.glb" id="43_cjgns"]
 [ext_resource type="Texture2D" uid="uid://fl5qi1kb13nr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1_Floor-Wood-1-normal.png" id="44_3fhnc"]
-[ext_resource type="Material" uid="uid://dquf6x7y8mf53" path="res://assets/materials/brown-1.tres" id="44_n7477"]
+[ext_resource type="Material" path="res://assets/materials/brown-1.tres" id="44_n7477"]
 [ext_resource type="PackedScene" uid="uid://ddp8e2211v4nn" path="res://assets/meshes/SantaShop/Platforms/Platform-2-1x1x02.glb" id="48_dis63"]
 [ext_resource type="PackedScene" uid="uid://dwhgagkjgjfux" path="res://assets/meshes/SantaShop/Platforms/Platform-2-1x1x02-EndStop-1.glb" id="49_ouroh"]
 [ext_resource type="Material" uid="uid://bom3q2dvv1trg" path="res://assets/materials/Emit-Green-1.tres" id="50_evrpk"]
 [ext_resource type="PackedScene" uid="uid://dcgaosbqiq2ya" path="res://assets/meshes/SantaShop/Platforms/Fence-1.glb" id="54_p25ic"]
-[ext_resource type="Material" uid="uid://ce4huh81528hv" path="res://assets/materials/Glass-Orange-2.tres" id="55_cl0gn"]
+[ext_resource type="Material" path="res://assets/materials/Glass-Orange-2.tres" id="55_cl0gn"]
 [ext_resource type="PackedScene" uid="uid://c5sao4uo5graf" path="res://assets/meshes/SantaShop/Decoration/Computers/Computer-1.glb" id="56_cl0gn"]
 [ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="67_hph74"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="67_sna10"]
@@ -78,7 +78,7 @@
 [ext_resource type="PackedScene" uid="uid://be5i2tw1jp1c4" path="res://assets/meshes/Environment/Decoration/PileOfWood-1.glb" id="73_3kejl"]
 [ext_resource type="PackedScene" uid="uid://br834hg43qlrd" path="res://assets/meshes/Misc/FootStep-1.glb" id="73_6a1gd"]
 [ext_resource type="PackedScene" uid="uid://c8unih57mu5w1" path="res://assets/meshes/Environment/Trees/Tree-1.glb" id="74_ju5eo"]
-[ext_resource type="PackedScene" uid="uid://c1cplto5smkwq" path="res://assets/meshes/Environment/IcePatches/floor_ice_1.tscn" id="75_ydvgl"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Environment/IcePatches/floor_ice_1.tscn" id="75_ydvgl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0h4kg"]
 sky_top_color = Color(0.1890673, 0.7089767, 0.8090219, 1)
@@ -113,7 +113,9 @@ volumetric_fog_sky_affect = 0.586
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_0h4kg"]
 dof_blur_far_enabled = true
-dof_blur_far_distance = 60.31
+dof_blur_far_distance = 62.02
+dof_blur_far_transition = 50.0
+dof_blur_amount = 0.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h58ao"]
 albedo_color = Color(0.74978, 0.74978, 0.74977994, 0.5294118)
@@ -240,8 +242,8 @@ environment = SubResource("Environment_vk2yt")
 camera_attributes = SubResource("CameraAttributesPractical_0h4kg")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(-0.16981284, -0.5752001, -0.8001928, -0.8492135, -0.32656536, 0.4149597, -0.50000006, 0.75, -0.43301266, 4.8888206, 24.743122, 11.761875)
-visible = false
+transform = Transform3D(0.24245523, -0.35877782, -0.90138453, -0.83139366, -0.5556785, -0.0024524818, -0.50000006, 0.75, -0.4330127, 4.8888206, 24.743122, 11.761875)
+light_color = Color(1, 0.7411765, 0.6862745, 1)
 shadow_enabled = true
 shadow_opacity = 0.74
 shadow_blur = 10.0
@@ -342,27 +344,35 @@ mesh = SubResource("BoxMesh_3bagg")
 
 [node name="SnowHigh-4-col2" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.04, 0, 0, 0, 2, 0, 0, 0, 0.04, 1.5999999, 0.51708984, 0.24)
+visible = false
 
 [node name="SnowHigh-4-col6" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.039451424, 0, 0.006601904, 0, 2, 0, -0.006601904, 0, 0.039451424, 1.9199998, 0.51708984, 0.52)
+visible = false
 
 [node name="SnowHigh-4-col9" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.039451424, 0, 0.006601904, 0, 2, 0, -0.006601904, 0, 0.039451424, 2.36, 0.51708984, 0.52)
+visible = false
 
 [node name="SnowHigh-4-col10" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.030416237, 0, -0.02597792, 0, 2, 0, 0.02597792, 0, 0.030416237, 2.36, 0.51708984, 0.94)
+visible = false
 
 [node name="SnowHigh-4-col11" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(-0.014008294, 0, -0.037466887, 0, 2, 0, 0.037466887, 0, -0.014008294, 2.2399998, 0.51708984, 1.248)
+visible = false
 
 [node name="SnowHigh-4-col7" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.039451424, 0, 0.006601904, 0, 2, 0, -0.006601904, 0, 0.039451424, 1.9199998, -15.48291, 0.84)
+visible = false
 
 [node name="SnowHigh-4-col8" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.0038338315, 0, 0.039815847, 0, 2, 0, -0.039815847, 0, 0.0038338315, 1.9199998, -15.48291, 1.12)
+visible = false
 
 [node name="SnowHigh-4-col24" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.0038338315, 0, 0.039815847, 0, 2, 0, -0.039815847, 0, 0.0038338315, 1.5194327, -1.9892817, 1.12)
+visible = false
 
 [node name="SnowHigh-4-col25" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.038375907, 0, -0.0112822745, 0, 2, 0, 0.0112822745, 0, 0.038375907, 1.1061074, -1.9892817, 1.12)
@@ -375,12 +385,15 @@ transform = Transform3D(0.038375907, 0, -0.0112822745, 0, 2, 0, 0.0112822745, 0,
 
 [node name="SnowHigh-4-col3" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.04, 0, 0, 0, 2, 0, 0, 0, 0.04, 1.6799998, 0.51708984, -0.24)
+visible = false
 
 [node name="SnowHigh-4-col4" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.02828427, 0, -0.02828427, 0, 2, 0, 0.02828427, 0, 0.02828427, 1.6799998, 0.51708984, -0.68)
+visible = false
 
 [node name="SnowHigh-4-col22" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.02828427, 0, -0.02828427, 0, 2, 0, 0.02828427, 0, 0.02828427, 2.0399997, 16.51709, -0.68)
+visible = false
 
 [node name="SnowHigh-4-col23" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(1.7070771e-06, -0.018486802, 0.039998285, -0.00036973596, 1.9998288, 0.00036973602, -0.039998285, -0.018486802, -1.7070765e-06, 2.1599996, 16.51709, -1.0799999)
@@ -1327,6 +1340,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 3.25, 3.75)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.75, 3.25, 9.723)
 
 [node name="Roofs" type="Node3D" parent="SantasShop/Structure"]
+visible = false
 
 [node name="Roof-SideBuilding" type="Node3D" parent="SantasShop/Structure/Roofs"]
 
@@ -23983,6 +23997,7 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 27.763897, 0.044078827,
 
 [node name="PineTree-4" parent="Trees" instance=ExtResource("21_4dun5")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 38.763897, 0.044078827, -39.37237)
+visible = false
 
 [node name="PineTree-3" parent="Trees" instance=ExtResource("21_4dun5")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 27.763897, -0.15592118, -56.37237)
@@ -24310,6 +24325,7 @@ transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 11, -0.39999998, -25.4)
 
 [node name="Floor-Ice-25" parent="World/Ground (level 0)" instance=ExtResource("68_ad3co")]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 2.5500002, 45.7, -0.17759097, 9)
+visible = false
 
 [node name="Ground (level 1)" type="Node3D" parent="World"]
 
@@ -24462,6 +24478,7 @@ transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 124, -30, -38)
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 5, -17)
+visible = false
 update_mode = 1
 max_distance = 10.0
 size = Vector3(124, 36, 146)

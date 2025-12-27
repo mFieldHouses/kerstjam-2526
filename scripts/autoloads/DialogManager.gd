@@ -6,13 +6,16 @@ signal dialog_started(dialog_id : String)
 signal dialog_queue(dialog_id : String, queue_id : String)
 signal dialog_ended(dialog_id : String)
 
-func initiate_remote_dialog(dialog_file_name : String, conversor_name : String, thumbnail : Texture2D) -> void:
+func initiate_remote_dialog(dialog_file_name : String, conversor_name : String, thumbnail : Texture2D, freeze : bool = false) -> void:
 	var _dialog_file_path : String = _get_dialog_file_path(dialog_file_name)
 	if !FileAccess.file_exists(_dialog_file_path):
 		GameLogger.printerr_as_autoload(self, "Dialog file at " + _dialog_file_path + " does not exist, cannot initiate dialog. Aborting.")
 		return
 	else:
 		GameLogger.print_as_autoload(self, "Initiating dialog from dialog file at " + _dialog_file_path)
+	
+	if freeze:
+		PlayerState.toggle_sleep(true)
 	
 	dialog_started.emit(dialog_file_name)
 	
@@ -45,6 +48,8 @@ func initiate_remote_dialog(dialog_file_name : String, conversor_name : String, 
 	
 	PersistentUI.remote_dialog_line("", conversor_name, thumbnail) #hide again
 	dialog_ended.emit(dialog_file_name)
+	if freeze:
+		PlayerState.toggle_sleep(false)
 	
 func initiate_dialog_with(dialog_file_name : String, with : Node3D, conversor_name : String, thumbnail : Texture2D) -> void:
 	var _dialog_file_path : String = _get_dialog_file_path(dialog_file_name)
