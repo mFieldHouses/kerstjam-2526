@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccsosb3wod4io"]
+
+[ext_resource type="PackedScene" uid="uid://c8unih57mu5w1" path="res://assets/meshes/Environment/Trees/Tree-1.glb" id="1_pqgmv"]
+[ext_resource type="Material" uid="uid://gqaoxy6yo14o" path="res://assets/materials/Texture-Sheet-1.tres" id="2_lrxp0"]
+
+[node name="Tree-1" instance=ExtResource("1_pqgmv")]
+
+[node name="Plane_368" parent="Cylinder_208" index="0"]
+surface_material_override/0 = ExtResource("2_lrxp0")

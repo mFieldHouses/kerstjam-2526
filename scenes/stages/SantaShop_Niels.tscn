@@ -1,5 +1,6 @@
-[gd_scene load_steps=104 format=4 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=168 format=4 uid="uid://ceitmv68vaggj"]
 
+[ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="1_6a1gd"]
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
 [ext_resource type="PackedScene" uid="uid://b3xp6v5lsvndw" path="res://assets/meshes/SantaShop/Walls/Wall-1-45d-2x2x05m.fbx" id="2_ffmxs"]
@@ -11,10 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://bygvk1q845hvl" path="res://assets/textures/walls/Brick-3-Normal.png" id="5_r8clu"]
 [ext_resource type="PackedScene" uid="uid://c17fysllvfubf" path="res://assets/meshes/Environment/Sign-Operations_and_santasshop.glb" id="5_sna10"]
 [ext_resource type="PackedScene" uid="uid://bwjfxso0rka7u" path="res://assets/meshes/Environment/SnowHigh-4-col.glb" id="7_uljrr"]
+[ext_resource type="Material" uid="uid://cgf0ua2wdmgjr" path="res://assets/materials/arctic_industrial_color_atlas_256_2.tres" id="7_x7rey"]
 [ext_resource type="PackedScene" uid="uid://uf5g1abnjfl5" path="res://assets/meshes/Environment/Decoration/Rope-1.glb" id="8_0h4kg"]
+[ext_resource type="Texture2D" uid="uid://defh3td4er0t1" path="res://assets/textures/misc/arctic_industrial_color_atlas_256_2.png" id="8_qts4k"]
 [ext_resource type="PackedScene" uid="uid://bmm3oxaoe3to5" path="res://assets/meshes/Misc/RoofTile-1.glb" id="8_r8clu"]
 [ext_resource type="PackedScene" uid="uid://si757wnvnuw" path="res://assets/meshes/Environment/Decoration/Rope-2.glb" id="9_h58ao"]
 [ext_resource type="Material" uid="uid://dlkqvf0x4wews" path="res://assets/materials/BrickColor-1.tres" id="9_jmilc"]
+[ext_resource type="Script" uid="uid://bk1c23d0rcle0" path="res://assets/shaders/PerlinNoise.gd" id="9_vpjt7"]
 [ext_resource type="PackedScene" uid="uid://beeg1uomills8" path="res://assets/meshes/Misc/SticksAndLogs/TreeLog-2.glb" id="10_77j7p"]
 [ext_resource type="Material" uid="uid://dvcsb58dlj0yy" path="res://assets/materials/BrickColor-2.tres" id="10_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://lso2mbdefwrb" path="res://assets/meshes/Misc/Chimney-1.glb" id="11_3bagg"]
@@ -27,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://ceooxe2w7sgx8" path="res://assets/textures/misc/Snow-Line-2.png" id="19_4keet"]
 [ext_resource type="PackedScene" uid="uid://blny7d2mxqxwg" path="res://assets/meshes/Misc/StreetLantern-1.glb" id="19_4n3p1"]
 [ext_resource type="PackedScene" uid="uid://cmt43o30mx2hs" path="res://assets/meshes/SantaShop/Doors/door_normal_1.tscn" id="20_gnhr4"]
-[ext_resource type="PackedScene" path="res://scenes/elements/window_tall_1.tscn" id="20_vlajn"]
+[ext_resource type="PackedScene" uid="uid://3aixdblns36c" path="res://scenes/elements/window_tall_1.tscn" id="20_vlajn"]
 [ext_resource type="Script" uid="uid://c0xopaj8p04ph" path="res://scripts/scenes/flickering_streetlight.gd" id="20_ynkcq"]
 [ext_resource type="PackedScene" uid="uid://bpe7uo5td47p7" path="res://assets/meshes/Misc/PineTree-1.glb" id="21_4dun5"]
 [ext_resource type="PackedScene" uid="uid://bikd1xas7guuo" path="res://assets/meshes/SantaShop/Windows/window_normal_1.tscn" id="21_jbcui"]
@@ -38,34 +42,34 @@
 [ext_resource type="PackedScene" uid="uid://dwuy34xm1q4l8" path="res://assets/meshes/SantaShop/Decoration/Mok-1.glb" id="27_ti1ib"]
 [ext_resource type="Texture2D" uid="uid://cno282mv73mf8" path="res://assets/textures/misc/I-Santa.png" id="28_87l1b"]
 [ext_resource type="PackedScene" uid="uid://8qin0wvv51wp" path="res://assets/meshes/Sled/Sled-1.glb" id="28_ipl6n"]
-[ext_resource type="PackedScene" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
+[ext_resource type="PackedScene" uid="uid://d8wbgo5c2a7e" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
 [ext_resource type="PackedScene" uid="uid://ctj1pr4680eus" path="res://assets/meshes/Characters/Elf-SizeCheck-1.glb" id="29_ipl6n"]
 [ext_resource type="PackedScene" uid="uid://bpxoxrgixhkbp" path="res://assets/meshes/SantaShop/Floors/Plint-1.glb" id="30_8d78k"]
 [ext_resource type="Material" uid="uid://da7ow5w2larpw" path="res://assets/materials/Wood-2.tres" id="31_3fhnc"]
 [ext_resource type="PackedScene" uid="uid://d14kp2nm7cq1v" path="res://assets/meshes/SantaShop/Platforms/Supports/Support-1.glb" id="32_7xj8n"]
 [ext_resource type="PackedScene" uid="uid://bjg01dfvdatl2" path="res://assets/meshes/SantaShop/Platforms/Supports/PlatformSupport1-Electric-col.glb" id="33_dis63"]
 [ext_resource type="PackedScene" uid="uid://dvln5vd6exm4y" path="res://assets/meshes/SantaShop/Ladders/Ladder-1.glb" id="34_cjgns"]
-[ext_resource type="Material" path="res://assets/materials/Metal-SteelGreenBlue-1.tres" id="35_vlgpt"]
+[ext_resource type="Material" uid="uid://c1n0fg1gi7d6m" path="res://assets/materials/Metal-SteelGreenBlue-1.tres" id="35_vlgpt"]
 [ext_resource type="PackedScene" uid="uid://jc6hcju511fq" path="res://assets/meshes/SantaShop/Ladders/Ladder-End-1.glb" id="36_tfrpy"]
 [ext_resource type="PackedScene" uid="uid://c2idrwdaabkg2" path="res://assets/meshes/SantaShop/Platforms/Platform-1-1x2x02.glb" id="37_3fhnc"]
 [ext_resource type="PackedScene" uid="uid://dcolyse4bqfee" path="res://assets/meshes/Misc/WorkBench-1.glb" id="37_7dqpe"]
 [ext_resource type="PackedScene" uid="uid://gfxuk4g6ca4e" path="res://assets/meshes/SantaShop/Decoration/Lighting/Ceiling-Lamp-2.glb" id="38_c0op5"]
-[ext_resource type="Material" path="res://assets/materials/WorkBench-1.tres" id="39_7xj8n"]
+[ext_resource type="Material" uid="uid://q8ibnub1ja58" path="res://assets/materials/WorkBench-1.tres" id="39_7xj8n"]
 [ext_resource type="PackedScene" uid="uid://8v36r6sbpf2p" path="res://assets/meshes/SantaShop/Decoration/Vice-1.glb" id="40_dis63"]
 [ext_resource type="PackedScene" uid="uid://cogmnnofnvcg3" path="res://assets/meshes/SantaShop/Decoration/lamp_hanging_ceiling_1.tscn" id="40_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://bgru0h4cvr1vr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1.glb" id="41_jhtxq"]
-[ext_resource type="Material" path="res://assets/materials/Metal-SteelRed-1.tres" id="41_ouroh"]
-[ext_resource type="Material" path="res://assets/materials/Metal-Steel-1.tres" id="42_evrpk"]
+[ext_resource type="Material" uid="uid://cn451fvlr28am" path="res://assets/materials/Metal-SteelRed-1.tres" id="41_ouroh"]
+[ext_resource type="Material" uid="uid://brgjh3uq3yn2k" path="res://assets/materials/Metal-Steel-1.tres" id="42_evrpk"]
 [ext_resource type="Material" uid="uid://bo6ysfjfwynng" path="res://assets/materials/Floor-Wood-1.tres" id="42_mjwaw"]
 [ext_resource type="Texture2D" uid="uid://db5ek0ciwfy2m" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1_Floor-Wood-Baked-1.png" id="43_8d78k"]
 [ext_resource type="PackedScene" uid="uid://cppumb700vwwr" path="res://assets/meshes/Misc/Stool-1.glb" id="43_cjgns"]
 [ext_resource type="Texture2D" uid="uid://fl5qi1kb13nr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1_Floor-Wood-1-normal.png" id="44_3fhnc"]
-[ext_resource type="Material" path="res://assets/materials/brown-1.tres" id="44_n7477"]
+[ext_resource type="Material" uid="uid://dquf6x7y8mf53" path="res://assets/materials/brown-1.tres" id="44_n7477"]
 [ext_resource type="PackedScene" uid="uid://ddp8e2211v4nn" path="res://assets/meshes/SantaShop/Platforms/Platform-2-1x1x02.glb" id="48_dis63"]
 [ext_resource type="PackedScene" uid="uid://dwhgagkjgjfux" path="res://assets/meshes/SantaShop/Platforms/Platform-2-1x1x02-EndStop-1.glb" id="49_ouroh"]
 [ext_resource type="Material" uid="uid://bom3q2dvv1trg" path="res://assets/materials/Emit-Green-1.tres" id="50_evrpk"]
 [ext_resource type="PackedScene" uid="uid://dcgaosbqiq2ya" path="res://assets/meshes/SantaShop/Platforms/Fence-1.glb" id="54_p25ic"]
-[ext_resource type="Material" path="res://assets/materials/Glass-Orange-2.tres" id="55_cl0gn"]
+[ext_resource type="Material" uid="uid://ce4huh81528hv" path="res://assets/materials/Glass-Orange-2.tres" id="55_cl0gn"]
 [ext_resource type="PackedScene" uid="uid://c5sao4uo5graf" path="res://assets/meshes/SantaShop/Decoration/Computers/Computer-1.glb" id="56_cl0gn"]
 [ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="67_hph74"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="67_sna10"]
@@ -75,12 +79,13 @@
 [ext_resource type="PackedScene" uid="uid://drw7r3wtmcqa8" path="res://assets/meshes/Environment/IcePatches/IceSpikes-1.glb" id="69_uljrr"]
 [ext_resource type="PackedScene" uid="uid://dfnh5u5toi70c" path="res://assets/meshes/Environment/IcePatches/IceArch-1-col.glb" id="70_3kejl"]
 [ext_resource type="PackedScene" uid="uid://cyn5bi6e0gs42" path="res://assets/meshes/Environment/SnowHigh-3.glb" id="72_3kejl"]
-[ext_resource type="PackedScene" uid="uid://be5i2tw1jp1c4" path="res://assets/meshes/Environment/Decoration/PileOfWood-1.glb" id="73_3kejl"]
 [ext_resource type="PackedScene" uid="uid://br834hg43qlrd" path="res://assets/meshes/Misc/FootStep-1.glb" id="73_6a1gd"]
 [ext_resource type="PackedScene" uid="uid://c8unih57mu5w1" path="res://assets/meshes/Environment/Trees/Tree-1.glb" id="74_ju5eo"]
 [ext_resource type="PackedScene" path="res://assets/meshes/Environment/IcePatches/floor_ice_1.tscn" id="75_ydvgl"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="80_nj3uu"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="81_mydgr"]
+[ext_resource type="PackedScene" uid="uid://d3r6ngrcjihtk" path="res://scenes/elements/PileOfWood-1.tscn" id="75_6a1gd"]
+[ext_resource type="PackedScene" uid="uid://c1cplto5smkwq" path="res://assets/meshes/Environment/IcePatches/floor_ice_1.tscn" id="75_ydvgl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0h4kg"]
 sky_top_color = Color(0.1890673, 0.7089767, 0.8090219, 1)
@@ -102,22 +107,56 @@ glow_enabled = true
 glow_normalized = true
 glow_intensity = 1.0
 glow_bloom = 0.2
-fog_enabled = true
 fog_light_color = Color(0.4434182, 0.5598078, 0.7060618, 1)
 fog_light_energy = 0.36
 fog_sky_affect = 0.02
 fog_height = 0.2
 fog_height_density = 5.0
-volumetric_fog_density = 0.01
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1
 volumetric_fog_albedo = Color(0.7058824, 1, 1, 1)
+volumetric_fog_emission = Color(0.5647059, 0.7137255, 0.70980394, 1)
 volumetric_fog_emission_energy = 0.1
+volumetric_fog_ambient_inject = 0.2
 volumetric_fog_sky_affect = 0.586
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_0h4kg"]
 dof_blur_far_enabled = true
-dof_blur_far_distance = 62.02
-dof_blur_far_transition = 50.0
-dof_blur_amount = 0.05
+dof_blur_far_distance = 60.31
+
+[sub_resource type="Gradient" id="Gradient_nj3uu"]
+offsets = PackedFloat32Array(0.29192546, 0.66770184)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mydgr"]
+gradient = SubResource("Gradient_nj3uu")
+
+[sub_resource type="Curve" id="Curve_x7rey"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.46551722, 0.66138166), 0.0, 0.0, 0, 0, Vector2(0.81034476, 0.2491507), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_qts4k"]
+curve = SubResource("Curve_x7rey")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vpjt7"]
+emission_shape = 3
+emission_box_extents = Vector3(4, 4, 5)
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 0.099999994
+initial_velocity_max = 1.0
+gravity = Vector3(0, -5.5, 0)
+radial_accel_min = -4.0000024
+radial_accel_max = 3.9999976
+tangential_accel_min = -8.000002
+tangential_accel_max = 7.9999976
+damping_max = 4.0
+scale_min = 0.099999994
+scale_max = 0.29999998
+scale_curve = SubResource("CurveTexture_qts4k")
+color_ramp = SubResource("GradientTexture1D_mydgr")
+
+[sub_resource type="QuadMesh" id="QuadMesh_p1c80"]
+material = ExtResource("1_6a1gd")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h58ao"]
 albedo_color = Color(0.74978, 0.74978, 0.74977994, 0.5294118)
@@ -154,6 +193,773 @@ radius = 0.005
 height = 0.01
 radial_segments = 6
 rings = 6
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_p1c80"]
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_kvc07"]
+parameter_name = "Noise_Size"
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_wn5cl"]
+parameter_name = "Noise_Scale"
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_nvrd0"]
+default_input_values = [0, 0.0, 1, 0.5]
+operator = 2
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_08g2m"]
+default_input_values = [0, 0.0, 1, 0.5]
+operator = 2
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_5q8tg"]
+default_input_values = [0, 0.0, 1, 0.5]
+operator = 1
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_a5osd"]
+default_input_values = [0, 0.0, 1, 0.5]
+
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_7icyo"]
+output_port_for_preview = 0
+default_input_values = [2, 0.0, 3, 0.0]
+initialized = true
+script = ExtResource("9_vpjt7")
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_fskg7"]
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_metah"]
+parameter_name = "SnowSpeckle_Scale"
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_fbe8f"]
+parameter_name = "Base_Color"
+default_value_enabled = true
+
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_vdmlf"]
+constant = Color(0.8544648, 0.85637385, 0.8582835, 1)
+
+[sub_resource type="VisualShaderNodeClamp" id="VisualShaderNodeClamp_658c8"]
+
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_4ihkh"]
+
+[sub_resource type="VisualShaderNodeVectorFunc" id="VisualShaderNodeVectorFunc_j8ivk"]
+default_input_values = [0, Vector2(0, 0)]
+op_type = 0
+function = 1
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_uwsg6"]
+constant = 0.5
+
+[sub_resource type="VisualShaderNodeVaryingGetter" id="VisualShaderNodeVaryingGetter_48jep"]
+varying_name = "WorldPos"
+varying_type = 4
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_fu3u4"]
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_2clyl"]
+parameter_name = "Disolve_Height"
+
+[sub_resource type="VisualShaderNodeStep" id="VisualShaderNodeStep_ewr7c"]
+
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_e0s7q"]
+default_input_values = [2, 1.0, 3, 0.0]
+initialized = true
+script = ExtResource("9_vpjt7")
+
+[sub_resource type="VisualShaderNodeVaryingSetter" id="VisualShaderNodeVaryingSetter_1qpmu"]
+varying_name = "WorldPos"
+varying_type = 4
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_1ryxd"]
+input_name = "vertex"
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_xyksw"]
+input_name = "model_matrix"
+
+[sub_resource type="VisualShaderNodeTransformVecMult" id="VisualShaderNodeTransformVecMult_4wsio"]
+
+[sub_resource type="VisualShader" id="VisualShader_iu2ft"]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_disabled, diffuse_lambert, specular_schlick_ggx;
+
+
+// Varyings
+varying vec3 var_WorldPos;
+
+uniform float SnowSpeckle_Scale;
+uniform float Disolve_Height;
+uniform float Noise_Scale;
+uniform float Noise_Size;
+
+
+// PerlinNoise3D
+
+vec3 mod289_3(vec3 x) {
+	return x - floor(x * (1.0 / 289.0)) * 289.0;
+}
+
+vec4 mod289_4(vec4 x) {
+	return x - floor(x * (1.0 / 289.0)) * 289.0;
+}
+
+vec4 permute(vec4 x) {
+	return mod289_4(((x * 34.0) + 1.0) * x);
+}
+
+vec4 taylorInvSqrt(vec4 r) {
+	return 1.79284291400159 - 0.85373472095314 * r;
+}
+
+vec3 fade(vec3 t) {
+	return t * t * t * (t * (t * 6.0 - 15.0) + 10.0);
+}
+
+// Classic Perlin noise.
+float cnoise(vec3 P) {
+	vec3 Pi0 = floor(P); // Integer part for indexing.
+	vec3 Pi1 = Pi0 + vec3(1.0); // Integer part + 1.
+	Pi0 = mod289_3(Pi0);
+	Pi1 = mod289_3(Pi1);
+	vec3 Pf0 = fract(P); // Fractional part for interpolation.
+	vec3 Pf1 = Pf0 - vec3(1.0); // Fractional part - 1.0.
+	vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
+	vec4 iy = vec4(Pi0.yy, Pi1.yy);
+	vec4 iz0 = vec4(Pi0.z);
+	vec4 iz1 = vec4(Pi1.z);
+
+	vec4 ixy = permute(permute(ix) + iy);
+	vec4 ixy0 = permute(ixy + iz0);
+	vec4 ixy1 = permute(ixy + iz1);
+
+	vec4 gx0 = ixy0 * (1.0 / 7.0);
+	vec4 gy0 = fract(floor(gx0) * (1.0 / 7.0)) - 0.5;
+	gx0 = fract(gx0);
+	vec4 gz0 = vec4(0.5) - abs(gx0) - abs(gy0);
+	vec4 sz0 = step(gz0, vec4(0.0));
+	gx0 -= sz0 * (step(0.0, gx0) - 0.5);
+	gy0 -= sz0 * (step(0.0, gy0) - 0.5);
+
+	vec4 gx1 = ixy1 * (1.0 / 7.0);
+	vec4 gy1 = fract(floor(gx1) * (1.0 / 7.0)) - 0.5;
+	gx1 = fract(gx1);
+	vec4 gz1 = vec4(0.5) - abs(gx1) - abs(gy1);
+	vec4 sz1 = step(gz1, vec4(0.0));
+	gx1 -= sz1 * (step(0.0, gx1) - 0.5);
+	gy1 -= sz1 * (step(0.0, gy1) - 0.5);
+
+	vec3 g000 = vec3(gx0.x, gy0.x, gz0.x);
+	vec3 g100 = vec3(gx0.y, gy0.y, gz0.y);
+	vec3 g010 = vec3(gx0.z, gy0.z, gz0.z);
+	vec3 g110 = vec3(gx0.w, gy0.w, gz0.w);
+	vec3 g001 = vec3(gx1.x, gy1.x, gz1.x);
+	vec3 g101 = vec3(gx1.y, gy1.y, gz1.y);
+	vec3 g011 = vec3(gx1.z, gy1.z, gz1.z);
+	vec3 g111 = vec3(gx1.w, gy1.w, gz1.w);
+
+	vec4 norm0 = taylorInvSqrt(vec4(dot(g000, g000), dot(g010, g010), dot(g100, g100), dot(g110, g110)));
+	g000 *= norm0.x;
+	g010 *= norm0.y;
+	g100 *= norm0.z;
+	g110 *= norm0.w;
+	vec4 norm1 = taylorInvSqrt(vec4(dot(g001, g001), dot(g011, g011), dot(g101, g101), dot(g111, g111)));
+	g001 *= norm1.x;
+	g011 *= norm1.y;
+	g101 *= norm1.z;
+	g111 *= norm1.w;
+
+	float n000 = dot(g000, Pf0);
+	float n100 = dot(g100, vec3(Pf1.x, Pf0.yz));
+	float n010 = dot(g010, vec3(Pf0.x, Pf1.y, Pf0.z));
+	float n110 = dot(g110, vec3(Pf1.xy, Pf0.z));
+	float n001 = dot(g001, vec3(Pf0.xy, Pf1.z));
+	float n101 = dot(g101, vec3(Pf1.x, Pf0.y, Pf1.z));
+	float n011 = dot(g011, vec3(Pf0.x, Pf1.yz));
+	float n111 = dot(g111, Pf1);
+
+	vec3 fade_xyz = fade(Pf0);
+	vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
+	vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
+	float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x);
+	return 2.2 * n_xyz;
+}
+
+
+void vertex() {
+// Input:4
+	mat4 n_out4p0 = MODEL_MATRIX;
+
+
+// Input:3
+	vec3 n_out3p0 = VERTEX;
+
+
+// TransformVectorMult:5
+	vec3 n_out5p0 = (n_out4p0 * vec4(n_out3p0, 1.0)).xyz;
+
+
+// VaryingSetter:2
+	var_WorldPos = n_out5p0;
+
+
+}
+
+void fragment() {
+// ColorConstant:20
+	vec4 n_out20p0 = vec4(0.854465, 0.856374, 0.858284, 1.000000);
+
+
+// VaryingGetter:4
+	vec3 n_out4p0 = var_WorldPos;
+
+
+// FloatConstant:18
+	float n_out18p0 = 0.000000;
+
+
+// FloatParameter:19
+	float n_out19p0 = SnowSpeckle_Scale;
+
+
+	float n_out17p0;
+// PerlinNoise3D:17
+	{
+		n_out17p0 = cnoise(vec3((vec2(n_out4p0.xy) + vec2(n_out18p0)) * n_out19p0, n_out18p0)) * 0.5 + 0.5;
+	}
+
+
+// Clamp:22
+	float n_in22p1 = 0.00000;
+	float n_in22p2 = 1.00000;
+	float n_out22p0 = clamp(n_out17p0, n_in22p1, n_in22p2);
+
+
+// Mix:23
+	float n_in23p1 = 1.00000;
+	float n_out23p0 = mix(n_out20p0.x, n_in23p1, n_out22p0);
+
+
+// FloatParameter:6
+	float n_out6p0 = Disolve_Height;
+
+
+// FloatParameter:12
+	float n_out12p0 = Noise_Scale;
+
+
+// FloatConstant:10
+	float n_out10p0 = 0.000000;
+
+
+// FloatParameter:11
+	float n_out11p0 = Noise_Size;
+
+
+	float n_out9p0;
+// PerlinNoise3D:9
+	{
+		n_out9p0 = cnoise(vec3((vec2(n_out4p0.xy) + vec2(n_out10p0)) * n_out11p0, n_out10p0)) * 0.5 + 0.5;
+	}
+
+
+// FloatOp:14
+	float n_out14p0 = n_out12p0 * n_out9p0;
+
+
+// FloatOp:13
+	float n_in13p1 = 0.50000;
+	float n_out13p0 = n_out12p0 * n_in13p1;
+
+
+// FloatOp:15
+	float n_out15p0 = n_out14p0 - n_out13p0;
+
+
+// VectorDecompose:5
+	float n_out5p0 = n_out4p0.x;
+	float n_out5p1 = n_out4p0.y;
+	float n_out5p2 = n_out4p0.z;
+
+
+// FloatOp:16
+	float n_out16p0 = n_out15p0 + n_out5p1;
+
+
+// Step:7
+	float n_out7p0 = step(n_out6p0, n_out16p0);
+
+
+// VectorFunc:24
+	vec2 n_out24p0 = max(min(vec2(n_out23p0), vec2(1.0)), vec2(0.0));
+
+
+// FloatConstant:3
+	float n_out3p0 = 0.500000;
+
+
+// Output:0
+	ALBEDO = vec3(n_out23p0);
+	ALPHA = n_out7p0;
+	ROUGHNESS = n_out23p0;
+	NORMAL = vec3(n_out24p0, 0.0);
+	ALPHA_SCISSOR_THRESHOLD = n_out3p0;
+
+
+}
+"
+modes/cull = 2
+varyings/WorldPos = "0,4"
+nodes/vertex/0/position = Vector2(820, 80)
+nodes/vertex/2/node = SubResource("VisualShaderNodeVaryingSetter_1qpmu")
+nodes/vertex/2/position = Vector2(820, 560)
+nodes/vertex/3/node = SubResource("VisualShaderNodeInput_1ryxd")
+nodes/vertex/3/position = Vector2(-60, 400)
+nodes/vertex/4/node = SubResource("VisualShaderNodeInput_xyksw")
+nodes/vertex/4/position = Vector2(-20, 280)
+nodes/vertex/5/node = SubResource("VisualShaderNodeTransformVecMult_4wsio")
+nodes/vertex/5/position = Vector2(380, 280)
+nodes/vertex/connections = PackedInt32Array(4, 0, 5, 0, 3, 0, 5, 1, 5, 0, 2, 0)
+nodes/fragment/0/position = Vector2(920, 180)
+nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_fbe8f")
+nodes/fragment/2/position = Vector2(180, -60)
+nodes/fragment/3/node = SubResource("VisualShaderNodeFloatConstant_uwsg6")
+nodes/fragment/3/position = Vector2(-60, 800)
+nodes/fragment/4/node = SubResource("VisualShaderNodeVaryingGetter_48jep")
+nodes/fragment/4/position = Vector2(-1440, 740)
+nodes/fragment/5/node = SubResource("VisualShaderNodeVectorDecompose_fu3u4")
+nodes/fragment/5/position = Vector2(-1180, 440)
+nodes/fragment/6/node = SubResource("VisualShaderNodeFloatParameter_2clyl")
+nodes/fragment/6/position = Vector2(-1120, 120)
+nodes/fragment/7/node = SubResource("VisualShaderNodeStep_ewr7c")
+nodes/fragment/7/position = Vector2(420, 240)
+nodes/fragment/9/node = SubResource("VisualShaderNodeCustom_e0s7q")
+nodes/fragment/9/position = Vector2(-560, 700)
+nodes/fragment/10/node = SubResource("VisualShaderNodeFloatConstant_p1c80")
+nodes/fragment/10/position = Vector2(-780, 900)
+nodes/fragment/11/node = SubResource("VisualShaderNodeFloatParameter_kvc07")
+nodes/fragment/11/position = Vector2(-1100, 820)
+nodes/fragment/12/node = SubResource("VisualShaderNodeFloatParameter_wn5cl")
+nodes/fragment/12/position = Vector2(-960, 360)
+nodes/fragment/13/node = SubResource("VisualShaderNodeFloatOp_nvrd0")
+nodes/fragment/13/position = Vector2(-300, 380)
+nodes/fragment/14/node = SubResource("VisualShaderNodeFloatOp_08g2m")
+nodes/fragment/14/position = Vector2(-300, 560)
+nodes/fragment/15/node = SubResource("VisualShaderNodeFloatOp_5q8tg")
+nodes/fragment/15/position = Vector2(-20, 480)
+nodes/fragment/16/node = SubResource("VisualShaderNodeFloatOp_a5osd")
+nodes/fragment/16/position = Vector2(200, 580)
+nodes/fragment/17/node = SubResource("VisualShaderNodeCustom_7icyo")
+nodes/fragment/17/position = Vector2(660, -180)
+nodes/fragment/18/node = SubResource("VisualShaderNodeFloatConstant_fskg7")
+nodes/fragment/18/position = Vector2(406.54492, -306.52173)
+nodes/fragment/19/node = SubResource("VisualShaderNodeFloatParameter_metah")
+nodes/fragment/19/position = Vector2(-280, -280)
+nodes/fragment/20/node = SubResource("VisualShaderNodeColorConstant_vdmlf")
+nodes/fragment/20/position = Vector2(1120, -200)
+nodes/fragment/22/node = SubResource("VisualShaderNodeClamp_658c8")
+nodes/fragment/22/position = Vector2(1034.6274, -50.337414)
+nodes/fragment/23/node = SubResource("VisualShaderNodeMix_4ihkh")
+nodes/fragment/23/position = Vector2(1440, -80)
+nodes/fragment/24/node = SubResource("VisualShaderNodeVectorFunc_j8ivk")
+nodes/fragment/24/position = Vector2(1500, 220)
+nodes/fragment/connections = PackedInt32Array(3, 0, 0, 19, 4, 0, 5, 0, 6, 0, 7, 0, 10, 0, 9, 1, 10, 0, 9, 3, 4, 0, 9, 0, 11, 0, 9, 2, 12, 0, 13, 0, 14, 0, 15, 0, 13, 0, 15, 1, 15, 0, 16, 0, 5, 1, 16, 1, 16, 0, 7, 1, 9, 0, 14, 1, 12, 0, 14, 0, 7, 0, 0, 1, 4, 0, 17, 0, 18, 0, 17, 1, 18, 0, 17, 3, 19, 0, 17, 2, 17, 0, 22, 0, 22, 0, 23, 2, 20, 0, 23, 0, 23, 0, 0, 0, 23, 0, 0, 3, 23, 0, 24, 0, 24, 0, 0, 8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lsi2w"]
+render_priority = 0
+shader = SubResource("VisualShader_iu2ft")
+shader_parameter/SnowSpeckle_Scale = 500.45
+shader_parameter/Disolve_Height = 2.295
+shader_parameter/Noise_Scale = 0.165
+shader_parameter/Noise_Size = 21.735
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1m3y"]
+next_pass = SubResource("ShaderMaterial_lsi2w")
+albedo_texture = ExtResource("8_qts4k")
+metallic = 0.09
+metallic_specular = 1.0
+roughness = 0.3
+emission_enabled = true
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8prp3"]
+load_path = "res://.godot/imported/arctic_industrial_color_atlas_256_2.png-8501aeb9cd8892e7e6e2fc41e4012c6f.s3tc.ctex"
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_fipnr"]
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_61fv4"]
+parameter_name = "Noise_Size"
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_hcul4"]
+parameter_name = "Noise_Scale"
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_jrwrf"]
+default_input_values = [0, 0.0, 1, 0.5]
+operator = 2
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_2s5de"]
+default_input_values = [0, 0.0, 1, 0.5]
+operator = 2
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_rlod4"]
+default_input_values = [0, 0.0, 1, 0.5]
+operator = 1
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_mlkc5"]
+default_input_values = [0, 0.0, 1, 0.5]
+
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_5g4nv"]
+output_port_for_preview = 0
+default_input_values = [2, 0.0, 3, 0.0]
+initialized = true
+script = ExtResource("9_vpjt7")
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_cieex"]
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_xdobm"]
+parameter_name = "SnowSpeckle_Scale"
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_b0bw1"]
+parameter_name = "Base_Color"
+default_value_enabled = true
+
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_soevs"]
+constant = Color(0.8544648, 0.85637385, 0.8582835, 1)
+
+[sub_resource type="VisualShaderNodeClamp" id="VisualShaderNodeClamp_w62nk"]
+
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_1qkng"]
+
+[sub_resource type="VisualShaderNodeVectorFunc" id="VisualShaderNodeVectorFunc_t1npr"]
+default_input_values = [0, Vector2(0, 0)]
+op_type = 0
+function = 1
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_y5s7i"]
+constant = 0.5
+
+[sub_resource type="VisualShaderNodeVaryingGetter" id="VisualShaderNodeVaryingGetter_notew"]
+varying_name = "WorldPos"
+varying_type = 4
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_rfyjc"]
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_36te4"]
+parameter_name = "Disolve_Height"
+
+[sub_resource type="VisualShaderNodeStep" id="VisualShaderNodeStep_um1yc"]
+
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_gn0mi"]
+default_input_values = [2, 1.0, 3, 0.0]
+initialized = true
+script = ExtResource("9_vpjt7")
+
+[sub_resource type="VisualShaderNodeVaryingSetter" id="VisualShaderNodeVaryingSetter_d7ett"]
+varying_name = "WorldPos"
+varying_type = 4
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_oaf1d"]
+input_name = "vertex"
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_4mk10"]
+input_name = "model_matrix"
+
+[sub_resource type="VisualShaderNodeTransformVecMult" id="VisualShaderNodeTransformVecMult_7k3rh"]
+
+[sub_resource type="VisualShader" id="VisualShader_jb1g1"]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_disabled, diffuse_lambert, specular_schlick_ggx;
+
+
+// Varyings
+varying vec3 var_WorldPos;
+
+uniform float SnowSpeckle_Scale;
+uniform float Disolve_Height;
+uniform float Noise_Scale;
+uniform float Noise_Size;
+
+
+// PerlinNoise3D
+
+vec3 mod289_3(vec3 x) {
+	return x - floor(x * (1.0 / 289.0)) * 289.0;
+}
+
+vec4 mod289_4(vec4 x) {
+	return x - floor(x * (1.0 / 289.0)) * 289.0;
+}
+
+vec4 permute(vec4 x) {
+	return mod289_4(((x * 34.0) + 1.0) * x);
+}
+
+vec4 taylorInvSqrt(vec4 r) {
+	return 1.79284291400159 - 0.85373472095314 * r;
+}
+
+vec3 fade(vec3 t) {
+	return t * t * t * (t * (t * 6.0 - 15.0) + 10.0);
+}
+
+// Classic Perlin noise.
+float cnoise(vec3 P) {
+	vec3 Pi0 = floor(P); // Integer part for indexing.
+	vec3 Pi1 = Pi0 + vec3(1.0); // Integer part + 1.
+	Pi0 = mod289_3(Pi0);
+	Pi1 = mod289_3(Pi1);
+	vec3 Pf0 = fract(P); // Fractional part for interpolation.
+	vec3 Pf1 = Pf0 - vec3(1.0); // Fractional part - 1.0.
+	vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
+	vec4 iy = vec4(Pi0.yy, Pi1.yy);
+	vec4 iz0 = vec4(Pi0.z);
+	vec4 iz1 = vec4(Pi1.z);
+
+	vec4 ixy = permute(permute(ix) + iy);
+	vec4 ixy0 = permute(ixy + iz0);
+	vec4 ixy1 = permute(ixy + iz1);
+
+	vec4 gx0 = ixy0 * (1.0 / 7.0);
+	vec4 gy0 = fract(floor(gx0) * (1.0 / 7.0)) - 0.5;
+	gx0 = fract(gx0);
+	vec4 gz0 = vec4(0.5) - abs(gx0) - abs(gy0);
+	vec4 sz0 = step(gz0, vec4(0.0));
+	gx0 -= sz0 * (step(0.0, gx0) - 0.5);
+	gy0 -= sz0 * (step(0.0, gy0) - 0.5);
+
+	vec4 gx1 = ixy1 * (1.0 / 7.0);
+	vec4 gy1 = fract(floor(gx1) * (1.0 / 7.0)) - 0.5;
+	gx1 = fract(gx1);
+	vec4 gz1 = vec4(0.5) - abs(gx1) - abs(gy1);
+	vec4 sz1 = step(gz1, vec4(0.0));
+	gx1 -= sz1 * (step(0.0, gx1) - 0.5);
+	gy1 -= sz1 * (step(0.0, gy1) - 0.5);
+
+	vec3 g000 = vec3(gx0.x, gy0.x, gz0.x);
+	vec3 g100 = vec3(gx0.y, gy0.y, gz0.y);
+	vec3 g010 = vec3(gx0.z, gy0.z, gz0.z);
+	vec3 g110 = vec3(gx0.w, gy0.w, gz0.w);
+	vec3 g001 = vec3(gx1.x, gy1.x, gz1.x);
+	vec3 g101 = vec3(gx1.y, gy1.y, gz1.y);
+	vec3 g011 = vec3(gx1.z, gy1.z, gz1.z);
+	vec3 g111 = vec3(gx1.w, gy1.w, gz1.w);
+
+	vec4 norm0 = taylorInvSqrt(vec4(dot(g000, g000), dot(g010, g010), dot(g100, g100), dot(g110, g110)));
+	g000 *= norm0.x;
+	g010 *= norm0.y;
+	g100 *= norm0.z;
+	g110 *= norm0.w;
+	vec4 norm1 = taylorInvSqrt(vec4(dot(g001, g001), dot(g011, g011), dot(g101, g101), dot(g111, g111)));
+	g001 *= norm1.x;
+	g011 *= norm1.y;
+	g101 *= norm1.z;
+	g111 *= norm1.w;
+
+	float n000 = dot(g000, Pf0);
+	float n100 = dot(g100, vec3(Pf1.x, Pf0.yz));
+	float n010 = dot(g010, vec3(Pf0.x, Pf1.y, Pf0.z));
+	float n110 = dot(g110, vec3(Pf1.xy, Pf0.z));
+	float n001 = dot(g001, vec3(Pf0.xy, Pf1.z));
+	float n101 = dot(g101, vec3(Pf1.x, Pf0.y, Pf1.z));
+	float n011 = dot(g011, vec3(Pf0.x, Pf1.yz));
+	float n111 = dot(g111, Pf1);
+
+	vec3 fade_xyz = fade(Pf0);
+	vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
+	vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
+	float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x);
+	return 2.2 * n_xyz;
+}
+
+
+void vertex() {
+// Input:4
+	mat4 n_out4p0 = MODEL_MATRIX;
+
+
+// Input:3
+	vec3 n_out3p0 = VERTEX;
+
+
+// TransformVectorMult:5
+	vec3 n_out5p0 = (n_out4p0 * vec4(n_out3p0, 1.0)).xyz;
+
+
+// VaryingSetter:2
+	var_WorldPos = n_out5p0;
+
+
+}
+
+void fragment() {
+// ColorConstant:20
+	vec4 n_out20p0 = vec4(0.854465, 0.856374, 0.858284, 1.000000);
+
+
+// VaryingGetter:4
+	vec3 n_out4p0 = var_WorldPos;
+
+
+// FloatConstant:18
+	float n_out18p0 = 0.000000;
+
+
+// FloatParameter:19
+	float n_out19p0 = SnowSpeckle_Scale;
+
+
+	float n_out17p0;
+// PerlinNoise3D:17
+	{
+		n_out17p0 = cnoise(vec3((vec2(n_out4p0.xy) + vec2(n_out18p0)) * n_out19p0, n_out18p0)) * 0.5 + 0.5;
+	}
+
+
+// Clamp:22
+	float n_in22p1 = 0.00000;
+	float n_in22p2 = 1.00000;
+	float n_out22p0 = clamp(n_out17p0, n_in22p1, n_in22p2);
+
+
+// Mix:23
+	float n_in23p1 = 1.00000;
+	float n_out23p0 = mix(n_out20p0.x, n_in23p1, n_out22p0);
+
+
+// FloatParameter:6
+	float n_out6p0 = Disolve_Height;
+
+
+// FloatParameter:12
+	float n_out12p0 = Noise_Scale;
+
+
+// FloatConstant:10
+	float n_out10p0 = 0.000000;
+
+
+// FloatParameter:11
+	float n_out11p0 = Noise_Size;
+
+
+	float n_out9p0;
+// PerlinNoise3D:9
+	{
+		n_out9p0 = cnoise(vec3((vec2(n_out4p0.xy) + vec2(n_out10p0)) * n_out11p0, n_out10p0)) * 0.5 + 0.5;
+	}
+
+
+// FloatOp:14
+	float n_out14p0 = n_out12p0 * n_out9p0;
+
+
+// FloatOp:13
+	float n_in13p1 = 0.50000;
+	float n_out13p0 = n_out12p0 * n_in13p1;
+
+
+// FloatOp:15
+	float n_out15p0 = n_out14p0 - n_out13p0;
+
+
+// VectorDecompose:5
+	float n_out5p0 = n_out4p0.x;
+	float n_out5p1 = n_out4p0.y;
+	float n_out5p2 = n_out4p0.z;
+
+
+// FloatOp:16
+	float n_out16p0 = n_out15p0 + n_out5p1;
+
+
+// Step:7
+	float n_out7p0 = step(n_out6p0, n_out16p0);
+
+
+// VectorFunc:24
+	vec2 n_out24p0 = max(min(vec2(n_out23p0), vec2(1.0)), vec2(0.0));
+
+
+// FloatConstant:3
+	float n_out3p0 = 0.500000;
+
+
+// Output:0
+	ALBEDO = vec3(n_out23p0);
+	ALPHA = n_out7p0;
+	ROUGHNESS = n_out23p0;
+	NORMAL = vec3(n_out24p0, 0.0);
+	ALPHA_SCISSOR_THRESHOLD = n_out3p0;
+
+
+}
+"
+modes/cull = 2
+varyings/WorldPos = "0,4"
+nodes/vertex/0/position = Vector2(820, 80)
+nodes/vertex/2/node = SubResource("VisualShaderNodeVaryingSetter_d7ett")
+nodes/vertex/2/position = Vector2(820, 560)
+nodes/vertex/3/node = SubResource("VisualShaderNodeInput_oaf1d")
+nodes/vertex/3/position = Vector2(-60, 400)
+nodes/vertex/4/node = SubResource("VisualShaderNodeInput_4mk10")
+nodes/vertex/4/position = Vector2(-20, 280)
+nodes/vertex/5/node = SubResource("VisualShaderNodeTransformVecMult_7k3rh")
+nodes/vertex/5/position = Vector2(380, 280)
+nodes/vertex/connections = PackedInt32Array(4, 0, 5, 0, 3, 0, 5, 1, 5, 0, 2, 0)
+nodes/fragment/0/position = Vector2(920, 180)
+nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_b0bw1")
+nodes/fragment/2/position = Vector2(180, -60)
+nodes/fragment/3/node = SubResource("VisualShaderNodeFloatConstant_y5s7i")
+nodes/fragment/3/position = Vector2(-60, 800)
+nodes/fragment/4/node = SubResource("VisualShaderNodeVaryingGetter_notew")
+nodes/fragment/4/position = Vector2(-1440, 740)
+nodes/fragment/5/node = SubResource("VisualShaderNodeVectorDecompose_rfyjc")
+nodes/fragment/5/position = Vector2(-1180, 440)
+nodes/fragment/6/node = SubResource("VisualShaderNodeFloatParameter_36te4")
+nodes/fragment/6/position = Vector2(-1120, 120)
+nodes/fragment/7/node = SubResource("VisualShaderNodeStep_um1yc")
+nodes/fragment/7/position = Vector2(420, 240)
+nodes/fragment/9/node = SubResource("VisualShaderNodeCustom_gn0mi")
+nodes/fragment/9/position = Vector2(-560, 700)
+nodes/fragment/10/node = SubResource("VisualShaderNodeFloatConstant_fipnr")
+nodes/fragment/10/position = Vector2(-780, 900)
+nodes/fragment/11/node = SubResource("VisualShaderNodeFloatParameter_61fv4")
+nodes/fragment/11/position = Vector2(-1100, 820)
+nodes/fragment/12/node = SubResource("VisualShaderNodeFloatParameter_hcul4")
+nodes/fragment/12/position = Vector2(-960, 360)
+nodes/fragment/13/node = SubResource("VisualShaderNodeFloatOp_jrwrf")
+nodes/fragment/13/position = Vector2(-300, 380)
+nodes/fragment/14/node = SubResource("VisualShaderNodeFloatOp_2s5de")
+nodes/fragment/14/position = Vector2(-300, 560)
+nodes/fragment/15/node = SubResource("VisualShaderNodeFloatOp_rlod4")
+nodes/fragment/15/position = Vector2(-20, 480)
+nodes/fragment/16/node = SubResource("VisualShaderNodeFloatOp_mlkc5")
+nodes/fragment/16/position = Vector2(200, 580)
+nodes/fragment/17/node = SubResource("VisualShaderNodeCustom_5g4nv")
+nodes/fragment/17/position = Vector2(660, -180)
+nodes/fragment/18/node = SubResource("VisualShaderNodeFloatConstant_cieex")
+nodes/fragment/18/position = Vector2(406.54492, -306.52173)
+nodes/fragment/19/node = SubResource("VisualShaderNodeFloatParameter_xdobm")
+nodes/fragment/19/position = Vector2(-280, -280)
+nodes/fragment/20/node = SubResource("VisualShaderNodeColorConstant_soevs")
+nodes/fragment/20/position = Vector2(1120, -200)
+nodes/fragment/22/node = SubResource("VisualShaderNodeClamp_w62nk")
+nodes/fragment/22/position = Vector2(1034.6274, -50.337414)
+nodes/fragment/23/node = SubResource("VisualShaderNodeMix_1qkng")
+nodes/fragment/23/position = Vector2(1440, -80)
+nodes/fragment/24/node = SubResource("VisualShaderNodeVectorFunc_t1npr")
+nodes/fragment/24/position = Vector2(1500, 220)
+nodes/fragment/connections = PackedInt32Array(3, 0, 0, 19, 4, 0, 5, 0, 6, 0, 7, 0, 10, 0, 9, 1, 10, 0, 9, 3, 4, 0, 9, 0, 11, 0, 9, 2, 12, 0, 13, 0, 14, 0, 15, 0, 13, 0, 15, 1, 15, 0, 16, 0, 5, 1, 16, 1, 16, 0, 7, 1, 9, 0, 14, 1, 12, 0, 14, 0, 7, 0, 0, 1, 4, 0, 17, 0, 18, 0, 17, 1, 18, 0, 17, 3, 19, 0, 17, 2, 17, 0, 22, 0, 22, 0, 23, 2, 20, 0, 23, 0, 23, 0, 0, 0, 23, 0, 0, 3, 23, 0, 24, 0, 24, 0, 0, 8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3qk0l"]
+render_priority = 0
+shader = SubResource("VisualShader_jb1g1")
+shader_parameter/SnowSpeckle_Scale = 300.0
+shader_parameter/Disolve_Height = 1.9100000000000001
+shader_parameter/Noise_Scale = 0.57
+shader_parameter/Noise_Size = 15.125
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f80p7"]
+next_pass = SubResource("ShaderMaterial_3qk0l")
+albedo_texture = SubResource("CompressedTexture2D_8prp3")
+metallic = 0.09
+metallic_specular = 1.0
+roughness = 0.3
+emission_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3bagg"]
 size = Vector3(20.504883, 0.49658203, 19.720459)
@@ -247,12 +1053,20 @@ environment = SubResource("Environment_vk2yt")
 camera_attributes = SubResource("CameraAttributesPractical_0h4kg")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.24245523, -0.35877782, -0.90138453, -0.83139366, -0.5556785, -0.0024524818, -0.50000006, 0.75, -0.4330127, 4.8888206, 24.743122, 11.761875)
-light_color = Color(1, 0.7411765, 0.6862745, 1)
+transform = Transform3D(-0.16981284, -0.5752001, -0.8001928, -0.8492135, -0.32656536, 0.4149597, -0.50000006, 0.75, -0.43301266, 4.8888206, 24.743122, 11.761875)
+visible = false
 shadow_enabled = true
 shadow_opacity = 0.74
 shadow_blur = 10.0
 sky_mode = 1
+
+[node name="Snow" type="GPUParticles3D" parent="WorldEnvironment"]
+transform = Transform3D(15, 0, 0, 0, 7, 0, 0, 0, 15, 0, 0, 0)
+amount = 8000
+lifetime = 5.0
+collision_base_size = 1.22
+process_material = SubResource("ParticleProcessMaterial_vpjt7")
+draw_pass_1 = SubResource("QuadMesh_p1c80")
 
 [node name="WoodLogs" type="Node" parent="."]
 
@@ -332,6 +1146,15 @@ draw_pass_1 = SubResource("SphereMesh_mydgr")
 
 [node name="Sign-Operations_and_santasshop" parent="Chimney-2" instance=ExtResource("5_sna10")]
 transform = Transform3D(0.90118295, 0, 0.4334389, 0, 1, 0, -0.4334389, 0, 0.90118295, -7.098068, -5.833662, -7.7373943)
+
+[node name="Cube_313" parent="Chimney-2/Sign-Operations_and_santasshop/Cube_306" index="0"]
+surface_material_override/0 = ExtResource("7_x7rey")
+
+[node name="Cube_314" parent="Chimney-2/Sign-Operations_and_santasshop/Cube_306" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_g1m3y")
+
+[node name="Cube_315" parent="Chimney-2/Sign-Operations_and_santasshop/Cube_306" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_f80p7")
 
 [node name="player" parent="." instance=ExtResource("12_3bagg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.29828, 2.2337356, 1.5666488)
@@ -1334,7 +2157,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 3.25, 3.75)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.75, 3.25, 9.723)
 
 [node name="Roofs" type="Node3D" parent="SantasShop/Structure"]
-visible = false
 
 [node name="Roof-SideBuilding" type="Node3D" parent="SantasShop/Structure/Roofs"]
 
@@ -23991,7 +24813,6 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 27.763897, 0.044078827,
 
 [node name="PineTree-4" parent="Trees" instance=ExtResource("21_4dun5")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 38.763897, 0.044078827, -39.37237)
-visible = false
 
 [node name="PineTree-3" parent="Trees" instance=ExtResource("21_4dun5")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 27.763897, -0.15592118, -56.37237)
@@ -24079,7 +24900,7 @@ shape = SubResource("BoxShape3D_nj3uu")
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 9.398246, -0.019072056, 6.4615192)
 
 [node name="LampHangingCeiling-1" parent="." instance=ExtResource("40_iwwnf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7896595, 1.4916401, -2.9731727)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.789976, 1.4929373, -2.9727485)
 
 [node name="World" type="Node3D" parent="."]
 
@@ -24291,12 +25112,6 @@ transform = Transform3D(0.9803263, 0, -0.19738358, 0, 1, 0, 0.19738358, 0, 0.980
 [node name="Floor-IcePatch-61" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_urcp6")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -66.892746, 0, -12)
 
-[node name="FootStep-1" parent="World/Ground (level 0)/Ice-SnowPatches/Floor-IcePatch-61" instance=ExtResource("73_6a1gd")]
-transform = Transform3D(0.9897014, 0, 0.14314716, 0, 1, 0, -0.14314716, 0, 0.9897014, 1.1656218, 0.5404779, 1.1044512)
-
-[node name="FootStep-2" parent="World/Ground (level 0)/Ice-SnowPatches/Floor-IcePatch-61" instance=ExtResource("73_6a1gd")]
-transform = Transform3D(0.9988155, 0, -0.04865801, 0, 1, 0, 0.04865801, 0, 0.9988155, 1.3622832, 0.5478299, 0.7298479)
-
 [node name="Floor-IcePatch-62" parent="World/Ground (level 0)/Ice-SnowPatches" instance=ExtResource("67_urcp6")]
 transform = Transform3D(-0.42991662, 0, -9.990754, 0, 10, 0, 9.990754, 0, -0.42991662, -66.892746, 0, -72.63602)
 
@@ -24319,9 +25134,14 @@ transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 11, -0.39999998, -25.4)
 
 [node name="Floor-Ice-25" parent="World/Ground (level 0)" instance=ExtResource("68_ad3co")]
 transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 2.5500002, 45.7, -0.17759097, 9)
-visible = false
 
 [node name="Ground (level 1)" type="Node3D" parent="World"]
+
+[node name="PileOfWood-2-1" parent="World/Ground (level 1)" instance=ExtResource("75_6a1gd")]
+transform = Transform3D(0.35503235, 0, -0.40688086, 0, 0.54, 0, 0.40688086, 0, 0.35503235, 11.739319, 0.8151022, -15.555735)
+
+[node name="PileOfWood-1" parent="World/Ground (level 1)/PileOfWood-2-1/PileOfWood-1" index="0"]
+transform = Transform3D(3.1532342, 0, -0.16092224, 0, 0.34589946, 0, 1.6572409, 0, 0.306187, -2.525323, 0, 2.8941193)
 
 [node name="IceSpikes-1" parent="World" instance=ExtResource("69_uljrr")]
 transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 15, -0.25514197, -23)
@@ -24394,9 +25214,6 @@ transform = Transform3D(0.9374223, 0.22414388, -0.26645666, -0.25, 0.96592593, -
 
 [node name="SnowHigh-4-col4" parent="." instance=ExtResource("7_uljrr")]
 transform = Transform3D(-0.4203878, -0.23325318, 0.13735744, 0.24205205, -0.43750006, -0.0021296504, 0.1211813, 0.06470475, 0.4807582, 36.800003, 18.9, -82)
-
-[node name="PileOfWood-1" parent="." instance=ExtResource("73_3kejl")]
-transform = Transform3D(0.17101008, 0, -0.4698463, 0, 0.5, 0, 0.4698463, 0, 0.17101008, 10, 0.8, -16)
 
 [node name="Tree-1" parent="." instance=ExtResource("74_ju5eo")]
 transform = Transform3D(0.49809736, -0.04357787, 0, 0.04357787, 0.49809736, 0, 0, 0, 0.5, 31, 0.59999996, -42)
@@ -24472,7 +25289,6 @@ transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 124, -30, -38)
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 5, -17)
-visible = false
 update_mode = 1
 max_distance = 10.0
 size = Vector3(124, 36, 146)
@@ -24535,6 +25351,7 @@ transform = Transform3D(0.9722435, 0, -0.23397143, 0, 1, 0, 0.23397143, 0, 0.972
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6468897, 0)
 shape = SubResource("BoxShape3D_x7rey")
 
+[editable path="Chimney-2/Sign-Operations_and_santasshop"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m50"]
@@ -24580,3 +25397,6 @@ shape = SubResource("BoxShape3D_x7rey")
 [editable path="SantasShop/Platforms/Fences/Fence-9"]
 [editable path="SantasShop/Platforms/Fences/Fence-10"]
 [editable path="SantasShop/Platforms/Fences/Fence-11"]
+[editable path="Trees/PineTree-2"]
+[editable path="LampHangingCeiling-1"]
+[editable path="World/Ground (level 1)/PileOfWood-2-1"]
