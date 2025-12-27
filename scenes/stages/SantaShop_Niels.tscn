@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=4 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=104 format=4 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="PackedScene" uid="uid://d181hifco4yp6" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.fbx" id="1_bihwt"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="2_0o0or"]
@@ -79,6 +79,8 @@
 [ext_resource type="PackedScene" uid="uid://br834hg43qlrd" path="res://assets/meshes/Misc/FootStep-1.glb" id="73_6a1gd"]
 [ext_resource type="PackedScene" uid="uid://c8unih57mu5w1" path="res://assets/meshes/Environment/Trees/Tree-1.glb" id="74_ju5eo"]
 [ext_resource type="PackedScene" path="res://assets/meshes/Environment/IcePatches/floor_ice_1.tscn" id="75_ydvgl"]
+[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="80_nj3uu"]
+[ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="81_mydgr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0h4kg"]
 sky_top_color = Color(0.1890673, 0.7089767, 0.8090219, 1)
@@ -235,6 +237,9 @@ clearcoat_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nj3uu"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_x7rey"]
+size = Vector3(5.1696777, 2.1611328, 1)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -344,35 +349,27 @@ mesh = SubResource("BoxMesh_3bagg")
 
 [node name="SnowHigh-4-col2" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.04, 0, 0, 0, 2, 0, 0, 0, 0.04, 1.5999999, 0.51708984, 0.24)
-visible = false
 
 [node name="SnowHigh-4-col6" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.039451424, 0, 0.006601904, 0, 2, 0, -0.006601904, 0, 0.039451424, 1.9199998, 0.51708984, 0.52)
-visible = false
 
 [node name="SnowHigh-4-col9" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.039451424, 0, 0.006601904, 0, 2, 0, -0.006601904, 0, 0.039451424, 2.36, 0.51708984, 0.52)
-visible = false
 
 [node name="SnowHigh-4-col10" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.030416237, 0, -0.02597792, 0, 2, 0, 0.02597792, 0, 0.030416237, 2.36, 0.51708984, 0.94)
-visible = false
 
 [node name="SnowHigh-4-col11" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(-0.014008294, 0, -0.037466887, 0, 2, 0, 0.037466887, 0, -0.014008294, 2.2399998, 0.51708984, 1.248)
-visible = false
 
 [node name="SnowHigh-4-col7" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.039451424, 0, 0.006601904, 0, 2, 0, -0.006601904, 0, 0.039451424, 1.9199998, -15.48291, 0.84)
-visible = false
 
 [node name="SnowHigh-4-col8" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.0038338315, 0, 0.039815847, 0, 2, 0, -0.039815847, 0, 0.0038338315, 1.9199998, -15.48291, 1.12)
-visible = false
 
 [node name="SnowHigh-4-col24" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.0038338315, 0, 0.039815847, 0, 2, 0, -0.039815847, 0, 0.0038338315, 1.5194327, -1.9892817, 1.12)
-visible = false
 
 [node name="SnowHigh-4-col25" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.038375907, 0, -0.0112822745, 0, 2, 0, 0.0112822745, 0, 0.038375907, 1.1061074, -1.9892817, 1.12)
@@ -385,15 +382,12 @@ transform = Transform3D(0.038375907, 0, -0.0112822745, 0, 2, 0, 0.0112822745, 0,
 
 [node name="SnowHigh-4-col3" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.04, 0, 0, 0, 2, 0, 0, 0, 0.04, 1.6799998, 0.51708984, -0.24)
-visible = false
 
 [node name="SnowHigh-4-col4" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.02828427, 0, -0.02828427, 0, 2, 0, 0.02828427, 0, 0.02828427, 1.6799998, 0.51708984, -0.68)
-visible = false
 
 [node name="SnowHigh-4-col22" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(0.02828427, 0, -0.02828427, 0, 2, 0, 0.02828427, 0, 0.02828427, 2.0399997, 16.51709, -0.68)
-visible = false
 
 [node name="SnowHigh-4-col23" parent="floor/CollisionShape3D" instance=ExtResource("7_uljrr")]
 transform = Transform3D(1.7070771e-06, -0.018486802, 0.039998285, -0.00036973596, 1.9998288, 0.00036973602, -0.039998285, -0.018486802, -1.7070765e-06, 2.1599996, 16.51709, -1.0799999)
@@ -24523,6 +24517,23 @@ transform = Transform3D(-1.1924875e-08, 0, 1, 0, 1, 0, -1, 0, -1.1924875e-08, 9.
 
 [node name="Beam-1-Decoration-16" parent="." instance=ExtResource("18_53j7x")]
 transform = Transform3D(-1.1924875e-08, 0, 1, 1, -4.371139e-08, 1.1924875e-08, 4.371139e-08, 1, 5.2125285e-16, 10.059383, 2.2021587, -2.946695)
+
+[node name="StageLauncher" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.250183, 10.40283, -82.55981)
+script = ExtResource("80_nj3uu")
+stage_id = "yeti_hollow"
+metadata/_custom_type_script = "uid://dytis7djokgek"
+
+[node name="AreaTrigger" type="Node3D" parent="StageLauncher"]
+script = ExtResource("81_mydgr")
+metadata/_custom_type_script = "uid://b7dvxli4hd1ni"
+
+[node name="Area3D" type="Area3D" parent="StageLauncher/AreaTrigger"]
+transform = Transform3D(0.9722435, 0, -0.23397143, 0, 1, 0, 0.23397143, 0, 0.9722435, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StageLauncher/AreaTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6468897, 0)
+shape = SubResource("BoxShape3D_x7rey")
 
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49"]
