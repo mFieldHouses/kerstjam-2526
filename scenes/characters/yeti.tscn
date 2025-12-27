@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://byxx1uc6vr2m6"]
 
 [ext_resource type="Script" uid="uid://dmtep2wuuphce" path="res://scripts/yeti.gd" id="1_ejn5x"]
-[ext_resource type="PackedScene" path="res://assets/meshes/Enemies/Yeti-2-1.tscn" id="2_wf2ah"]
+[ext_resource type="PackedScene" uid="uid://mnccid1g0kng" path="res://assets/meshes/Enemies/Yeti-2-1.tscn" id="2_wf2ah"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wf2ah"]
 radius = 0.9550781
