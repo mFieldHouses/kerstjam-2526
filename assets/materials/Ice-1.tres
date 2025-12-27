@@ -7,18 +7,19 @@ frequency = 0.0003
 noise = SubResource("FastNoiseLite_fquhi")
 
 [resource]
-transparency = 3
-alpha_hash_scale = 0.85
-alpha_antialiasing_mode = 0
-albedo_color = Color(0.5058824, 0.9607843, 0.95686275, 0.7764706)
-metallic_specular = 0.15
-roughness = 0.49
+transparency = 2
+alpha_scissor_threshold = 0.691
+alpha_antialiasing_mode = 2
+alpha_antialiasing_edge = 0.3
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0, 1.8216597, 1.8216597, 1)
+roughness = 0.0
 emission = Color(0.8234978, 0.5845388, 0, 1)
 emission_energy_multiplier = 0.22
-normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_awjy3")
 clearcoat_enabled = true
 clearcoat_roughness = 1.0
 subsurf_scatter_strength = 0.31
 refraction_enabled = true
-refraction_scale = 0.32
+refraction_scale = 0.24

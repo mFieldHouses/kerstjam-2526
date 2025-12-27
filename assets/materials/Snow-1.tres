@@ -31,6 +31,7 @@ seamless_blend_skirt = 1.0
 bump_strength = 4.4
 
 [resource]
+transparency = 1
 metallic = 0.03
 metallic_specular = 1.0
 roughness_texture = SubResource("NoiseTexture2D_pu357")

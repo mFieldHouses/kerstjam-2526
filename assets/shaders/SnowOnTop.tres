@@ -1,92 +1,89 @@
-[gd_resource type="StandardMaterial3D" load_steps=30 format=3 uid="uid://cgf0ua2wdmgjr"]
+[gd_resource type="VisualShader" load_steps=27 format=3 uid="uid://cdqojeu3yxll2"]
 
-[ext_resource type="Script" uid="uid://bk1c23d0rcle0" path="res://assets/shaders/PerlinNoise.gd" id="1_nbbxd"]
+[ext_resource type="Script" uid="uid://bk1c23d0rcle0" path="res://assets/shaders/PerlinNoise.gd" id="1_tcbw1"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8prp3"]
-load_path = "res://.godot/imported/arctic_industrial_color_atlas_256_2.png-8501aeb9cd8892e7e6e2fc41e4012c6f.s3tc.ctex"
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_wf7q5"]
 
-[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_o2wd7"]
-
-[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_j80co"]
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_i3wnn"]
 parameter_name = "Noise_Size"
 
-[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_nkuuc"]
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_v4wwe"]
 parameter_name = "Noise_Scale"
 
-[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_bud1c"]
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_at3yn"]
 default_input_values = [0, 0.0, 1, 0.5]
 operator = 2
 
-[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_qhuh3"]
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_sy6ng"]
 default_input_values = [0, 0.0, 1, 0.5]
 operator = 2
 
-[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_tkp4o"]
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_siaf3"]
 default_input_values = [0, 0.0, 1, 0.5]
 operator = 1
 
-[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_baxl0"]
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_hs6xn"]
 default_input_values = [0, 0.0, 1, 0.5]
 
-[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_m5tat"]
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_tcbw1"]
 output_port_for_preview = 0
 default_input_values = [2, 0.0, 3, 0.0]
 initialized = true
-script = ExtResource("1_nbbxd")
+script = ExtResource("1_tcbw1")
 
-[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_oa2ha"]
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_i3wnn"]
 
-[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_xgjo6"]
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_at3yn"]
 parameter_name = "SnowSpeckle_Scale"
 
-[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_1glcg"]
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_6ipgt"]
 parameter_name = "Base_Color"
 default_value_enabled = true
 
-[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_3ntdu"]
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_sy6ng"]
 constant = Color(0.8544648, 0.85637385, 0.8582835, 1)
 
-[sub_resource type="VisualShaderNodeClamp" id="VisualShaderNodeClamp_qj453"]
+[sub_resource type="VisualShaderNodeClamp" id="VisualShaderNodeClamp_siaf3"]
 
-[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_pxdm3"]
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_hs6xn"]
 
-[sub_resource type="VisualShaderNodeVectorFunc" id="VisualShaderNodeVectorFunc_8cl8r"]
+[sub_resource type="VisualShaderNodeVectorFunc" id="VisualShaderNodeVectorFunc_xs8yh"]
 default_input_values = [0, Vector2(0, 0)]
 op_type = 0
 function = 1
 
-[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_gxs8t"]
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_tcbw1"]
 constant = 0.5
 
-[sub_resource type="VisualShaderNodeVaryingGetter" id="VisualShaderNodeVaryingGetter_upygx"]
+[sub_resource type="VisualShaderNodeVaryingGetter" id="VisualShaderNodeVaryingGetter_wf7q5"]
 varying_name = "WorldPos"
 varying_type = 4
 
-[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_csjnv"]
+[sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_i3wnn"]
 
-[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_roa10"]
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_3ygpd"]
 parameter_name = "Disolve_Height"
 
-[sub_resource type="VisualShaderNodeStep" id="VisualShaderNodeStep_8dbyw"]
+[sub_resource type="VisualShaderNodeStep" id="VisualShaderNodeStep_v4wwe"]
 
-[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_ob6rk"]
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_xs8yh"]
 default_input_values = [2, 1.0, 3, 0.0]
 initialized = true
-script = ExtResource("1_nbbxd")
+script = ExtResource("1_tcbw1")
 
-[sub_resource type="VisualShaderNodeVaryingSetter" id="VisualShaderNodeVaryingSetter_8q5cp"]
+[sub_resource type="VisualShaderNodeVaryingSetter" id="VisualShaderNodeVaryingSetter_sy6ng"]
 varying_name = "WorldPos"
 varying_type = 4
 
-[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_bn2a4"]
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_siaf3"]
 input_name = "vertex"
 
-[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_dch6a"]
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_hs6xn"]
 input_name = "model_matrix"
 
-[sub_resource type="VisualShaderNodeTransformVecMult" id="VisualShaderNodeTransformVecMult_u7bwd"]
+[sub_resource type="VisualShaderNodeTransformVecMult" id="VisualShaderNodeTransformVecMult_xs8yh"]
 
-[sub_resource type="VisualShader" id="VisualShader_01ja2"]
+[resource]
 code = "shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, depth_test_default, cull_disabled, diffuse_lambert, specular_schlick_ggx;
 
@@ -317,72 +314,56 @@ void fragment() {
 modes/cull = 2
 varyings/WorldPos = "0,4"
 nodes/vertex/0/position = Vector2(820, 80)
-nodes/vertex/2/node = SubResource("VisualShaderNodeVaryingSetter_8q5cp")
+nodes/vertex/2/node = SubResource("VisualShaderNodeVaryingSetter_sy6ng")
 nodes/vertex/2/position = Vector2(820, 560)
-nodes/vertex/3/node = SubResource("VisualShaderNodeInput_bn2a4")
+nodes/vertex/3/node = SubResource("VisualShaderNodeInput_siaf3")
 nodes/vertex/3/position = Vector2(-60, 400)
-nodes/vertex/4/node = SubResource("VisualShaderNodeInput_dch6a")
+nodes/vertex/4/node = SubResource("VisualShaderNodeInput_hs6xn")
 nodes/vertex/4/position = Vector2(-20, 280)
-nodes/vertex/5/node = SubResource("VisualShaderNodeTransformVecMult_u7bwd")
+nodes/vertex/5/node = SubResource("VisualShaderNodeTransformVecMult_xs8yh")
 nodes/vertex/5/position = Vector2(380, 280)
 nodes/vertex/connections = PackedInt32Array(4, 0, 5, 0, 3, 0, 5, 1, 5, 0, 2, 0)
 nodes/fragment/0/position = Vector2(920, 180)
-nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_1glcg")
+nodes/fragment/2/node = SubResource("VisualShaderNodeColorParameter_6ipgt")
 nodes/fragment/2/position = Vector2(180, -60)
-nodes/fragment/3/node = SubResource("VisualShaderNodeFloatConstant_gxs8t")
+nodes/fragment/3/node = SubResource("VisualShaderNodeFloatConstant_tcbw1")
 nodes/fragment/3/position = Vector2(-60, 800)
-nodes/fragment/4/node = SubResource("VisualShaderNodeVaryingGetter_upygx")
+nodes/fragment/4/node = SubResource("VisualShaderNodeVaryingGetter_wf7q5")
 nodes/fragment/4/position = Vector2(-1440, 740)
-nodes/fragment/5/node = SubResource("VisualShaderNodeVectorDecompose_csjnv")
+nodes/fragment/5/node = SubResource("VisualShaderNodeVectorDecompose_i3wnn")
 nodes/fragment/5/position = Vector2(-1180, 440)
-nodes/fragment/6/node = SubResource("VisualShaderNodeFloatParameter_roa10")
+nodes/fragment/6/node = SubResource("VisualShaderNodeFloatParameter_3ygpd")
 nodes/fragment/6/position = Vector2(-1120, 120)
-nodes/fragment/7/node = SubResource("VisualShaderNodeStep_8dbyw")
+nodes/fragment/7/node = SubResource("VisualShaderNodeStep_v4wwe")
 nodes/fragment/7/position = Vector2(420, 240)
-nodes/fragment/9/node = SubResource("VisualShaderNodeCustom_ob6rk")
+nodes/fragment/9/node = SubResource("VisualShaderNodeCustom_xs8yh")
 nodes/fragment/9/position = Vector2(-560, 700)
-nodes/fragment/10/node = SubResource("VisualShaderNodeFloatConstant_o2wd7")
+nodes/fragment/10/node = SubResource("VisualShaderNodeFloatConstant_wf7q5")
 nodes/fragment/10/position = Vector2(-780, 900)
-nodes/fragment/11/node = SubResource("VisualShaderNodeFloatParameter_j80co")
+nodes/fragment/11/node = SubResource("VisualShaderNodeFloatParameter_i3wnn")
 nodes/fragment/11/position = Vector2(-1100, 820)
-nodes/fragment/12/node = SubResource("VisualShaderNodeFloatParameter_nkuuc")
+nodes/fragment/12/node = SubResource("VisualShaderNodeFloatParameter_v4wwe")
 nodes/fragment/12/position = Vector2(-960, 360)
-nodes/fragment/13/node = SubResource("VisualShaderNodeFloatOp_bud1c")
+nodes/fragment/13/node = SubResource("VisualShaderNodeFloatOp_at3yn")
 nodes/fragment/13/position = Vector2(-300, 380)
-nodes/fragment/14/node = SubResource("VisualShaderNodeFloatOp_qhuh3")
+nodes/fragment/14/node = SubResource("VisualShaderNodeFloatOp_sy6ng")
 nodes/fragment/14/position = Vector2(-300, 560)
-nodes/fragment/15/node = SubResource("VisualShaderNodeFloatOp_tkp4o")
+nodes/fragment/15/node = SubResource("VisualShaderNodeFloatOp_siaf3")
 nodes/fragment/15/position = Vector2(-20, 480)
-nodes/fragment/16/node = SubResource("VisualShaderNodeFloatOp_baxl0")
+nodes/fragment/16/node = SubResource("VisualShaderNodeFloatOp_hs6xn")
 nodes/fragment/16/position = Vector2(200, 580)
-nodes/fragment/17/node = SubResource("VisualShaderNodeCustom_m5tat")
+nodes/fragment/17/node = SubResource("VisualShaderNodeCustom_tcbw1")
 nodes/fragment/17/position = Vector2(660, -180)
-nodes/fragment/18/node = SubResource("VisualShaderNodeFloatConstant_oa2ha")
+nodes/fragment/18/node = SubResource("VisualShaderNodeFloatConstant_i3wnn")
 nodes/fragment/18/position = Vector2(406.54492, -306.52173)
-nodes/fragment/19/node = SubResource("VisualShaderNodeFloatParameter_xgjo6")
+nodes/fragment/19/node = SubResource("VisualShaderNodeFloatParameter_at3yn")
 nodes/fragment/19/position = Vector2(-280, -280)
-nodes/fragment/20/node = SubResource("VisualShaderNodeColorConstant_3ntdu")
+nodes/fragment/20/node = SubResource("VisualShaderNodeColorConstant_sy6ng")
 nodes/fragment/20/position = Vector2(1120, -200)
-nodes/fragment/22/node = SubResource("VisualShaderNodeClamp_qj453")
+nodes/fragment/22/node = SubResource("VisualShaderNodeClamp_siaf3")
 nodes/fragment/22/position = Vector2(1034.6274, -50.337414)
-nodes/fragment/23/node = SubResource("VisualShaderNodeMix_pxdm3")
+nodes/fragment/23/node = SubResource("VisualShaderNodeMix_hs6xn")
 nodes/fragment/23/position = Vector2(1440, -80)
-nodes/fragment/24/node = SubResource("VisualShaderNodeVectorFunc_8cl8r")
+nodes/fragment/24/node = SubResource("VisualShaderNodeVectorFunc_xs8yh")
 nodes/fragment/24/position = Vector2(1500, 220)
 nodes/fragment/connections = PackedInt32Array(3, 0, 0, 19, 4, 0, 5, 0, 6, 0, 7, 0, 10, 0, 9, 1, 10, 0, 9, 3, 4, 0, 9, 0, 11, 0, 9, 2, 12, 0, 13, 0, 14, 0, 15, 0, 13, 0, 15, 1, 15, 0, 16, 0, 5, 1, 16, 1, 16, 0, 7, 1, 9, 0, 14, 1, 12, 0, 14, 0, 7, 0, 0, 1, 4, 0, 17, 0, 18, 0, 17, 1, 18, 0, 17, 3, 19, 0, 17, 2, 17, 0, 22, 0, 22, 0, 23, 2, 20, 0, 23, 0, 23, 0, 0, 0, 23, 0, 0, 3, 23, 0, 24, 0, 24, 0, 0, 8)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_srs1v"]
-render_priority = 0
-shader = SubResource("VisualShader_01ja2")
-shader_parameter/SnowSpeckle_Scale = 0.0
-shader_parameter/Disolve_Height = 2.1
-shader_parameter/Noise_Scale = 3.495
-shader_parameter/Noise_Size = 15.125
-
-[resource]
-next_pass = SubResource("ShaderMaterial_srs1v")
-albedo_texture = SubResource("CompressedTexture2D_8prp3")
-metallic = 0.09
-metallic_specular = 1.0
-roughness = 0.3
-emission_enabled = true

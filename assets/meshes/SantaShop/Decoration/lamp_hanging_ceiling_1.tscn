@@ -15,26 +15,20 @@ surface_material_override/0 = ExtResource("2_2s8ii")
 [node name="Cylinder_194" parent="." index="2"]
 surface_material_override/0 = ExtResource("3_86xp4")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Cylinder_194" index="0"]
-transform = Transform3D(1.4958266, 0, 0, 0, 1.4958266, 0, 0, 0, 1.4958266, 0, 0.17480683, 0)
-
 [node name="Cylinder_195" parent="." index="3"]
 surface_material_override/0 = ExtResource("3_86xp4")
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="Cylinder_195" index="0"]
-transform = Transform3D(1.4958266, 0, 0, 0, 1.4958266, 0, 0, 0, 1.4958266, 0.026153147, 0.17480683, 0.020609498)
 
 [node name="Cylinder_196" parent="." index="4"]
 surface_material_override/0 = ExtResource("3_86xp4")
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Cylinder_196" index="0"]
-transform = Transform3D(1.4941154, -0.07153226, 0, 0.07153226, 1.4941154, 0, 0, 0, 1.4958266, 0.016522527, 0.17480683, -0.009079516)
+transform = Transform3D(1.4941152, -0.07153223, 0, 0.07153223, 1.4941152, 0, 0, 0, 1.4958266, -0.37008902, -0.3138422, -0.26419818)
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+omni_range = 4.0
 
 [node name="Cylinder_197" parent="." index="5"]
 surface_material_override/0 = ExtResource("3_86xp4")
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="Cylinder_197" index="0"]
-transform = Transform3D(1.4941154, -0.07153225, 0, 0.07153225, 1.4941154, 0, 0, 0, 1.4958266, 0.011866838, 0.17480683, -0.0013750196)
 
 [node name="Circle_019" parent="." index="6"]
 surface_material_override/0 = ExtResource("2_2s8ii")
