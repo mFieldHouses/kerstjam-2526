@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bebowcwwiknj7"
-path="res://.godot/imported/SnowHigh-3_arctic_industrial_ow_color_atlas_256_2.png-77da7383d0548ea3ff1a9096f40afa31.ctex"
+path.s3tc="res://.godot/imported/SnowHigh-3_arctic_industrial_ow_color_atlas_256_2.png-77da7383d0548ea3ff1a9096f40afa31.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "624eccbad32517c64c85c34ed6a0436f"
@@ -14,11 +15,11 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/meshes/Environment/SnowHigh-3_arctic_industrial_ow_color_atlas_256_2.png"
-dest_files=["res://.godot/imported/SnowHigh-3_arctic_industrial_ow_color_atlas_256_2.png-77da7383d0548ea3ff1a9096f40afa31.ctex"]
+dest_files=["res://.godot/imported/SnowHigh-3_arctic_industrial_ow_color_atlas_256_2.png-77da7383d0548ea3ff1a9096f40afa31.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

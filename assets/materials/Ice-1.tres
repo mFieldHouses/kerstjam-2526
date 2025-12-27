@@ -7,7 +7,9 @@ frequency = 0.0003
 noise = SubResource("FastNoiseLite_fquhi")
 
 [resource]
-transparency = 1
+transparency = 3
+alpha_hash_scale = 0.85
+alpha_antialiasing_mode = 0
 albedo_color = Color(0.5058824, 0.9607843, 0.95686275, 0.7764706)
 metallic_specular = 0.15
 roughness = 0.49
