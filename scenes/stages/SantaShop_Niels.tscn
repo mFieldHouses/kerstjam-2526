@@ -81,6 +81,9 @@
 [ext_resource type="PackedScene" uid="uid://cyn5bi6e0gs42" path="res://assets/meshes/Environment/SnowHigh-3.glb" id="72_3kejl"]
 [ext_resource type="PackedScene" uid="uid://br834hg43qlrd" path="res://assets/meshes/Misc/FootStep-1.glb" id="73_6a1gd"]
 [ext_resource type="PackedScene" uid="uid://c8unih57mu5w1" path="res://assets/meshes/Environment/Trees/Tree-1.glb" id="74_ju5eo"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Environment/IcePatches/floor_ice_1.tscn" id="75_ydvgl"]
+[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="80_nj3uu"]
+[ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="81_mydgr"]
 [ext_resource type="PackedScene" uid="uid://d3r6ngrcjihtk" path="res://scenes/elements/PileOfWood-1.tscn" id="75_6a1gd"]
 [ext_resource type="PackedScene" uid="uid://c1cplto5smkwq" path="res://assets/meshes/Environment/IcePatches/floor_ice_1.tscn" id="75_ydvgl"]
 
@@ -1039,6 +1042,9 @@ shadow_mesh = SubResource("ArrayMesh_6kmlv")
 clearcoat_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nj3uu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x7rey"]
+size = Vector3(5.1696777, 2.1611328, 1)
 
 [node name="Node3D" type="Node3D"]
 
@@ -25327,6 +25333,23 @@ transform = Transform3D(-1.1924875e-08, 0, 1, 0, 1, 0, -1, 0, -1.1924875e-08, 9.
 
 [node name="Beam-1-Decoration-16" parent="." instance=ExtResource("18_53j7x")]
 transform = Transform3D(-1.1924875e-08, 0, 1, 1, -4.371139e-08, 1.1924875e-08, 4.371139e-08, 1, 5.2125285e-16, 10.059383, 2.2021587, -2.946695)
+
+[node name="StageLauncher" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.250183, 10.40283, -82.55981)
+script = ExtResource("80_nj3uu")
+stage_id = "yeti_hollow"
+metadata/_custom_type_script = "uid://dytis7djokgek"
+
+[node name="AreaTrigger" type="Node3D" parent="StageLauncher"]
+script = ExtResource("81_mydgr")
+metadata/_custom_type_script = "uid://b7dvxli4hd1ni"
+
+[node name="Area3D" type="Area3D" parent="StageLauncher/AreaTrigger"]
+transform = Transform3D(0.9722435, 0, -0.23397143, 0, 1, 0, 0.23397143, 0, 0.9722435, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StageLauncher/AreaTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6468897, 0)
+shape = SubResource("BoxShape3D_x7rey")
 
 [editable path="Chimney-2/Sign-Operations_and_santasshop"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m"]
