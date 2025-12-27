@@ -2,7 +2,5 @@ Ja, hier moet je zijn. Het signaal van de sterrenstof-condensator is hier erg st
 *show_distance_indicator
 Ik zal wel een indicatortje laten zien van hoe sterk het signaal is. Hoe voller de balk, hoe dichter bij je bent.
 Probeer zo snel mogelijk dat ding te vinden! Kerstavond is vanavond al!
-...?
-Wacht eens even, ik meet de aanwezigheid van een ander wezen. Hmmm....
-...wees maar voorzichtig!
+...euhhh, oh ja. De Yeti. Die woont hier. Hij houdt niet zo van bezoekers, geloof ik. Probeer hem niet boos te maken!
 *release_yeti

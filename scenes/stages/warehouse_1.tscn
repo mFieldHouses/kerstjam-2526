@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cfufrt7a0cruc"]
+[gd_scene load_steps=12 format=3 uid="uid://cfufrt7a0cruc"]
 
 [ext_resource type="Script" uid="uid://cgayko6nfo5rq" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_wu2bj"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="3_bnj7l"]
+[ext_resource type="PackedScene" uid="uid://c8lkvpa6shb2o" path="res://assets/meshes/Debug/warehouse_1.glb" id="4_w06of"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,6 +40,7 @@ environment = SubResource("Environment_dqy33")
 
 [node name="floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.7196975, 0)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, -43.194565)
@@ -58,3 +60,6 @@ shadow_enabled = true
 [node name="speaker" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6939697, -1.6644211, -7.282346)
 mesh = SubResource("BoxMesh_wx1sp")
+
+[node name="warehouse_1" parent="." instance=ExtResource("4_w06of")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, -6.005)
