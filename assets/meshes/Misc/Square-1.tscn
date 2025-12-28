@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwngx6t06w0q8"]
+
+[ext_resource type="PackedScene" uid="uid://cvqcs6if0yj7p" path="res://assets/meshes/Misc/Square-1.glb" id="1_q2xmc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hrq1a"]
+size = Vector3(3.8545227, 1, 4.3158264)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_q2xmc"]
+height = 2.2290535
+radius = 5.36084
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Square-1" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Square-1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Square-1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.896556, -0.44293037, 0, 0.44293037, 0.896556, -0.04573059, 0.34834996, 1.7961107)
+shape = SubResource("BoxShape3D_hrq1a")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Square-1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0366385, 0.46684194, -4.9971976)
+shape = SubResource("CylinderShape3D_q2xmc")
+
+[node name="Square-1" parent="Square-1" instance=ExtResource("1_q2xmc")]

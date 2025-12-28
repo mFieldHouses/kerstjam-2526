@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cl0vrnidaan1e"]
+
+[ext_resource type="Texture2D" uid="uid://bvdfwna81dori" path="res://assets/textures/misc/Crate-1-Texture.png" id="1_4flva"]
+[ext_resource type="Texture2D" uid="uid://bjhc7b1un4tj5" path="res://assets/textures/misc/Crate-1-Texture-Normal.png" id="2_ookrn"]
+[ext_resource type="Texture2D" uid="uid://i5dusykg16gb" path="res://assets/textures/misc/Crate-1-Texture-Normal-2.png" id="3_ookrn"]
+
+[resource]
+albedo_texture = ExtResource("1_4flva")
+metallic_specular = 0.0
+normal_enabled = true
+normal_scale = 0.74
+normal_texture = ExtResource("3_ookrn")
+heightmap_scale = 0.629
+heightmap_texture = ExtResource("2_ookrn")
