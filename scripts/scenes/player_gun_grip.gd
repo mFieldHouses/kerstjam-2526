@@ -12,10 +12,10 @@ func _ready() -> void:
 		_model.scale = _weapon_config.weapon_model_scale
 		_model.visible = false
 		
-		var _animation_player : AnimationPlayer = AnimationPlayer.new()
-		_model.add_child(_animation_player)
-		_animation_player.add_animation_library("weapon_use", _weapon_config.weapon_use_animation_library)
-	
+		#var _animation_player : AnimationPlayer = AnimationPlayer.new()
+		#_model.add_child(_animation_player)
+		#_animation_player.add_animation_library("weapon_use", _weapon_config.weapon_use_animation_library)
+	#
 	get_child(0).visible = true
 
 
@@ -32,3 +32,9 @@ func return_to_origin() -> void:
 	_influence = 0.0
 	position = lerp(position, Vector3(0.0, 0.0, 0.0), 0.1)
 	rotation = lerp(rotation, Vector3(0.0, 0.0, 0.0), 0.1)
+
+func play_shoot_animation(anim_name : String) -> void:
+	var _animplayer : AnimationPlayer = get_child(0).get_node("AnimationPlayer")
+	print(_animplayer.get_animation_list())
+	_animplayer.stop()
+	_animplayer.play(anim_name, -1)

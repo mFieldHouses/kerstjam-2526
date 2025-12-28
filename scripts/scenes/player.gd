@@ -294,13 +294,17 @@ func get_hit(damage : float) -> void:
 	
 
 func shoot() -> void:
+	
 	_ammo[_used_ammo] -= 1
 	var _used_weapon : WeaponConfiguration = _get_currently_selected_weapon()
 	_weapon_use_cooldown_timer = _get_currently_selected_weapon().weapon_use_cooldown
 	if _used_ammo.automatic == false:
 		_auto_gun_timer = _used_ammo.shoot_delay
+		$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.play_shoot_animation("Plane_001Action_001")
+	else:
+		$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.play_shoot_animation("Plane_001Action")
 	
-	var _animplayer : AnimationPlayer = Utility.get_children_of_type($gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child(_selected_weapon_idx), "AnimationPlayer")[0]
+#	var _animplayer : AnimationPlayer = Utility.get_children_of_type($gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child(_selected_weapon_idx), "AnimationPlayer")[0]
 	#_animplayer.play("weapon_use/shoot1")
 	
 	await get_tree().create_timer(_used_weapon.hit_delay).timeout
@@ -323,7 +327,6 @@ func shoot() -> void:
 		if _shot_collider is Enemy or _shot_collider is Hittable or _shot_collider is Snowman or _shot_collider is SnowmanSegment:
 			var _dmg = _used_ammo.get_damage()
 			_shot_collider.hit(_dmg, shoot_ray.get_collision_point(), 1)
-			# Debug hier, onderstaande regel geeft een fout, ps is het niet handiger om functies generiek te houden waar mogelijk? Zodat je scene naam meegeeft als parameter in de functie of een global variable of zo?
 			HitMarkerManager.hit_at(shoot_ray.get_collision_point(), _dmg, preload("res://scenes/particle_effects/santa_gun_hit_standard.tscn"), get_parent())
 
 func get_distance_to_player(point : Vector3): ##Returns the distance between the player and said point.
