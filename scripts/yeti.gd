@@ -12,7 +12,7 @@ var _can_see_player : bool = false
 var _flags : Array[bool] = [false, false, false, false] #array of flags to keep track of when to play specific dialogs
 
 @onready var _model_scene = $"Yeti-2-1"
-@onready var _animation_player : AnimationPlayer = $"Yeti-2-1/Yeti-2-1/AnimationPlayer"
+@onready var _animation_player : AnimationPlayer = $"Yeti-3-1/Yeti-2-1/AnimationPlayer"
 
 enum BehaviorState {PATROL, CHASE, FOLLOW_TRAIL, SLEEP}
 var _current_behavior_state : BehaviorState = BehaviorState.SLEEP:
