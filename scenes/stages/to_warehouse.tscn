@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="5_dqy33"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="6_0su6h"]
 [ext_resource type="PackedScene" uid="uid://b2yajy7wt0yx1" path="res://assets/meshes/Debug/to_warehouse.glb" id="6_dqy33"]
-[ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/projectiles/snowman.tscn" id="8_jbe65"]
+[ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="8_jbe65"]
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="9_fwfj0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]

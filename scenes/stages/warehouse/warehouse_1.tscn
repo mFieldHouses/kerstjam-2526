@@ -89,7 +89,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1511102, -58.99383)
 
 [node name="StageLauncher" type="Node3D" parent="large_doorway"]
 script = ExtResource("7_ikcrf")
-stage_id = "warehouse_2"
+stage_id = "warehouse/warehouse_2"
 metadata/_custom_type_script = "uid://dytis7djokgek"
 
 [node name="ActionPromptTrigger" type="Node3D" parent="large_doorway/StageLauncher"]

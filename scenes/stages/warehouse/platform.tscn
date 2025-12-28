@@ -32,6 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1263123, -0.055908203)
 shape = SubResource("BoxShape3D_cdqsp")
 
 [node name="lights" type="Node3D" parent="platform"]
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="platform/lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.8, 0.31574345, 0)

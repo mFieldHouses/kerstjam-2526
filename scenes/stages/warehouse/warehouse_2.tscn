@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwhxv2wqfr8d5"]
+[gd_scene load_steps=13 format=3 uid="uid://bwhxv2wqfr8d5"]
 
 [ext_resource type="PackedScene" uid="uid://buar51plgglsb" path="res://assets/meshes/Debug/warehouse_2.glb" id="1_urnwb"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_7ssc0"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cve1kqotnlkf6" path="res://scenes/stages/warehouse/platform.tscn" id="5_7ssc0"]
 [ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="6_3xavh"]
 [ext_resource type="Script" uid="uid://8f16emrbiraj" path="res://scripts/launcher.gd" id="7_wk4on"]
+[ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="8_wk4on"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxix6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -60,7 +61,7 @@ spot_angle = 29.292156
 [node name="OmniLight3D" type="SpotLight3D" parent="lights"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -34.35978, 4.837221, 0)
 light_energy = 0.482
-spot_range = 50.176132
+spot_range = 29.441868
 spot_angle = 81.56249
 
 [node name="DialogueInitiator" type="Node3D" parent="."]
@@ -83,7 +84,7 @@ collision_mask = 8
 shape = SubResource("BoxShape3D_sovhg")
 
 [node name="Platform" parent="." instance=ExtResource("5_7ssc0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, -10.56604, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, -4.4500403, 0)
 
 [node name="present_mimic" parent="." instance=ExtResource("6_3xavh")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -44.305874, -7.6596065, 1.1180242)
@@ -95,4 +96,22 @@ script = ExtResource("7_wk4on")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -44.305874, -7.6596065, 1.9351877)
 
 [node name="launcher" type="Node" parent="present_mimic2"]
+script = ExtResource("7_wk4on")
+
+[node name="present_mimic3" parent="." instance=ExtResource("6_3xavh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.09166, -13.659606, 10.383552)
+
+[node name="launcher" type="Node" parent="present_mimic3"]
+script = ExtResource("7_wk4on")
+
+[node name="Snowman" parent="." instance=ExtResource("8_wk4on")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -35.82959, -27.980196, -10.743846)
+
+[node name="launcher" type="Node" parent="Snowman"]
+script = ExtResource("7_wk4on")
+
+[node name="present_mimic4" parent="." instance=ExtResource("6_3xavh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.870363, -13.659607, 10.856412)
+
+[node name="launcher" type="Node" parent="present_mimic4"]
 script = ExtResource("7_wk4on")

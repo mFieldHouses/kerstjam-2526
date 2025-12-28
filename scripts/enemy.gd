@@ -15,9 +15,14 @@ class_name Enemy
 var _awaiting_scout : bool = true
 var _next_scout_timer : float = 2.0
 
+var freeze : bool = false
+
 @onready var navigator : NavigationAgent3D = $navigator
 
 func _physics_process(delta: float) -> void:
+	if freeze:
+		return
+	
 	velocity = Vector3(0, velocity.y, 0)
 	if not is_on_floor():
 		velocity += get_gravity() * delta
