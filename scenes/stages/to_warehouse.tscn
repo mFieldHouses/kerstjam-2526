@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=26 format=3 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
@@ -7,20 +7,8 @@
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="5_dqy33"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="6_0su6h"]
 [ext_resource type="PackedScene" uid="uid://b2yajy7wt0yx1" path="res://assets/meshes/Debug/to_warehouse.glb" id="6_dqy33"]
-[ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="8_jbe65"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_22f0a"]
-sky_material = SubResource("ProceduralSkyMaterial_fo0y1")
-
-[sub_resource type="Environment" id="Environment_dqy33"]
-background_mode = 2
-sky = SubResource("Sky_22f0a")
-tonemap_mode = 2
-glow_enabled = true
+[ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/projectiles/snowman.tscn" id="8_jbe65"]
+[ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="9_fwfj0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
 size = Vector3(100, 0.497, 100)
@@ -44,11 +32,78 @@ size = Vector3(34.79785, 5.66626, 4.5615234)
 vertices = PackedVector3Array(-1, 0, 1, 0.21674496, 0, -1.5832921, 0.21674496, 0, 1.5832921, 1.2955678, 0, 1.3155552, 1.2955678, 0, -1.3155552, -1, 0, -1, -2.4655163, 0.09088192, -0.12134454, -2.2832658, 0.09088192, 0.62381005, -4.2127724, 0, 0.08420691, -4.3192787, 0, 0.80249673, -5.200569, 0, -0.5084583, -5.607356, 0, 0.065106645, -5.789729, -0.28835034, -1.6767642, -6.4664783, -0.28835034, -1.4858123, -7.0655427, -0.28835034, -3.0523744, -7.466538, -0.28835034, -2.4747455, -8.940843, 0, -3.5690632, -9.049383, 0, -2.874318, -9.814319, 0, -6.6902623, -10.467928, 0, -0.9598863, -11.508473, -0.16461433, -0.9776213, -10.740807, -0.16461433, -7.254085, -12.532458, 0.09716262, -7.4641137, -12.86854, -0.18755485, -1.1299295, -14.060358, -0.13620932, -1.2228534, -15.254564, -0.16453747, -1.2587082, -19.199451, -0.13350381, -6.530105, -13.7383795, 0.15958643, -7.538212, -16.444803, 0, -1.2542303, -14.952604, -0.13350382, -9.321117, -18.67575, -0.052024424, -4.2942324, -18.341368, 0, -2.8666325, -19.199451, -0.13350381, -8.333071, -14.952604, 0.46227401, -11.322359, -19.199451, 0.17437954, -10.334312, -18.74092, 1.4367013, -13.458531, -14.245748, 1.4367013, -12.703777, -13.07595, 2.134976, -13.812991, -16.850971, 2.134976, -16.367483, -12.277371, 2.134976, -18.25485, -16.77381, 2.134976, -17.507671, -13.374095, 2.134976, -20.883837, -17.201866, 2.134976, -22.732523, -17.202642, 2.134976, -17.742104, -17.631475, 2.134976, -17.976536, -18.70116, 2.134976, -17.721066, -20.972294, 2.134976, -21.921772, -22.850079, 2.134976, -22.120722, -25.353256, 2.134976, -22.00331, -20.995598, 2.134976, -13.943349, -19.472874, 2.134976, -15.874214, -27.166973, 2.134976, -20.691332, -23.10284, 2.134976, -13.174278, -23.10284, 0.028166771, -13.174278, -27.166973, 0.028166771, -20.691332, -30.063541, 0.028166771, -19.287384, -25.999409, 0.028166771, -11.770329, -30.690086, 0.028166771, -15.441489, -31.319616, 0.028166771, -16.574287, -30.057533, 0.028166771, -14.30325, -29.15034, 0.028166771, -12.561975, -10.14446, 0, -3.7958233, -11.140823, -0.16461433, -3.9835372, -12.701531, -0.2092865, -4.2775736, -13.901072, -0.15236343, -4.3471375, -14.952604, 0.034716025, -7.5181518, -15.102216, -0.064007804, -4.4167953, -16.625452, -0.07075724, -4.5051317, -16.785648, -0.13350381, -7.387987, -16.785648, -0.13350381, -9.190953, -16.785648, 0.46227401, -11.192195, -16.687445, 1.4367013, -13.552354, -14.944209, 2.134976, -15.599489, -14.862307, 2.134976, -18.263792, -16.138735, 2.134976, -19.142265, -17.415163, 2.134976, -20.02074, -20.30316, 2.134976, -20.71771, -19.65095, 2.134976, -19.544102, -21.79214, 2.134976, -20.217031, -20.885221, 2.134976, -18.585096, -23.956177, 2.134976, -19.48936, -22.817972, 2.134976, -17.441238, -26.098644, 2.134976, -18.768946, -24.802464, 2.134976, -16.436554, -25.98755, 0.028166771, -18.569038, -24.802464, 0.028166771, -16.436554, -28.884119, 0.028166771, -17.16509, -27.699032, 0.028166771, -15.032605)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2), PackedInt32Array(1, 4, 3), PackedInt32Array(0, 5, 1), PackedInt32Array(0, 6, 5), PackedInt32Array(0, 7, 6), PackedInt32Array(7, 8, 6), PackedInt32Array(7, 9, 8), PackedInt32Array(9, 10, 8), PackedInt32Array(9, 11, 10), PackedInt32Array(11, 12, 10), PackedInt32Array(11, 13, 12), PackedInt32Array(13, 14, 12), PackedInt32Array(13, 15, 14), PackedInt32Array(15, 16, 14), PackedInt32Array(15, 17, 16), PackedInt32Array(17, 61, 16), PackedInt32Array(61, 18, 16), PackedInt32Array(17, 19, 61), PackedInt32Array(62, 18, 61), PackedInt32Array(19, 62, 61), PackedInt32Array(62, 21, 18), PackedInt32Array(19, 20, 62), PackedInt32Array(63, 21, 62), PackedInt32Array(20, 63, 62), PackedInt32Array(63, 22, 21), PackedInt32Array(20, 23, 63), PackedInt32Array(27, 22, 63), PackedInt32Array(63, 23, 24), PackedInt32Array(63, 24, 64), PackedInt32Array(27, 63, 64), PackedInt32Array(64, 24, 25), PackedInt32Array(65, 27, 64), PackedInt32Array(64, 25, 66), PackedInt32Array(65, 64, 66), PackedInt32Array(65, 29, 27), PackedInt32Array(25, 67, 66), PackedInt32Array(67, 65, 66), PackedInt32Array(25, 28, 67), PackedInt32Array(28, 30, 67), PackedInt32Array(28, 31, 30), PackedInt32Array(67, 68, 65), PackedInt32Array(30, 68, 67), PackedInt32Array(68, 29, 65), PackedInt32Array(30, 26, 68), PackedInt32Array(68, 69, 29), PackedInt32Array(26, 69, 68), PackedInt32Array(69, 33, 29), PackedInt32Array(26, 32, 69), PackedInt32Array(69, 70, 33), PackedInt32Array(32, 70, 69), PackedInt32Array(70, 36, 33), PackedInt32Array(32, 34, 70), PackedInt32Array(70, 71, 36), PackedInt32Array(34, 71, 70), PackedInt32Array(71, 37, 36), PackedInt32Array(34, 35, 71), PackedInt32Array(71, 72, 37), PackedInt32Array(35, 72, 71), PackedInt32Array(72, 39, 37), PackedInt32Array(35, 38, 72), PackedInt32Array(72, 73, 39), PackedInt32Array(38, 73, 72), PackedInt32Array(73, 41, 39), PackedInt32Array(38, 40, 73), PackedInt32Array(73, 74, 41), PackedInt32Array(40, 74, 73), PackedInt32Array(74, 42, 41), PackedInt32Array(40, 43, 74), PackedInt32Array(43, 75, 74), PackedInt32Array(74, 75, 42), PackedInt32Array(43, 44, 75), PackedInt32Array(76, 42, 75), PackedInt32Array(76, 46, 42), PackedInt32Array(44, 77, 75), PackedInt32Array(75, 77, 76), PackedInt32Array(44, 45, 77), PackedInt32Array(78, 46, 76), PackedInt32Array(77, 78, 76), PackedInt32Array(78, 47, 46), PackedInt32Array(45, 79, 77), PackedInt32Array(77, 79, 78), PackedInt32Array(45, 50, 79), PackedInt32Array(80, 47, 78), PackedInt32Array(79, 80, 78), PackedInt32Array(80, 48, 47), PackedInt32Array(50, 81, 79), PackedInt32Array(79, 81, 80), PackedInt32Array(50, 49, 81), PackedInt32Array(82, 48, 80), PackedInt32Array(81, 82, 80), PackedInt32Array(82, 51, 48), PackedInt32Array(49, 83, 81), PackedInt32Array(81, 83, 82), PackedInt32Array(49, 52, 83), PackedInt32Array(84, 51, 82), PackedInt32Array(83, 84, 82), PackedInt32Array(84, 54, 51), PackedInt32Array(84, 55, 54), PackedInt32Array(52, 85, 83), PackedInt32Array(83, 85, 84), PackedInt32Array(52, 53, 85), PackedInt32Array(84, 86, 55), PackedInt32Array(85, 86, 84), PackedInt32Array(86, 58, 55), PackedInt32Array(86, 57, 58), PackedInt32Array(85, 87, 86), PackedInt32Array(87, 57, 86), PackedInt32Array(53, 87, 85), PackedInt32Array(87, 59, 57), PackedInt32Array(53, 56, 87), PackedInt32Array(56, 59, 87), PackedInt32Array(56, 60, 59)]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iq7cf"]
+sky_top_color = Color(0.1890673, 0.7089767, 0.8090219, 1)
+sky_curve = 0.31057763
+sky_energy_multiplier = 0.5
+energy_multiplier = 1.2
+
+[sub_resource type="Sky" id="Sky_h58ao"]
+sky_material = SubResource("ProceduralSkyMaterial_iq7cf")
+
+[sub_resource type="Environment" id="Environment_2otec"]
+resource_local_to_scene = true
+background_mode = 2
+background_energy_multiplier = 1.21
+sky = SubResource("Sky_h58ao")
+tonemap_mode = 2
+ssr_enabled = true
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 1.0
+glow_bloom = 0.2
+fog_light_color = Color(0.4434182, 0.5598078, 0.7060618, 1)
+fog_light_energy = 0.36
+fog_sky_affect = 0.02
+fog_height = 0.2
+fog_height_density = 5.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.1
+volumetric_fog_albedo = Color(0.7058824, 1, 1, 1)
+volumetric_fog_emission = Color(0.5647059, 0.7137255, 0.70980394, 1)
+volumetric_fog_emission_energy = 0.1
+volumetric_fog_ambient_inject = 0.2
+volumetric_fog_sky_affect = 0.586
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_04tpn"]
+dof_blur_far_distance = 60.31
+
+[sub_resource type="Gradient" id="Gradient_xinbn"]
+offsets = PackedFloat32Array(0.29192546, 0.66770184)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mydgr"]
+gradient = SubResource("Gradient_xinbn")
+
+[sub_resource type="Curve" id="Curve_liylu"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.46551722, 0.66138166), 0.0, 0.0, 0, 0, Vector2(0.81034476, 0.2491507), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_qts4k"]
+curve = SubResource("Curve_liylu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4co2b"]
+emission_shape = 3
+emission_box_extents = Vector3(4, 4, 5)
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 0.099999994
+initial_velocity_max = 1.0
+gravity = Vector3(0, -5.5, 0)
+radial_accel_min = -4.0000024
+radial_accel_max = 3.9999976
+tangential_accel_min = -8.000002
+tangential_accel_max = 7.9999976
+damping_max = 4.0
+scale_min = 0.099999994
+scale_max = 0.29999998
+scale_curve = SubResource("CurveTexture_qts4k")
+color_ramp = SubResource("GradientTexture1D_mydgr")
+
+[sub_resource type="QuadMesh" id="QuadMesh_isx6m"]
+material = ExtResource("9_fwfj0")
+
 [node name="ToWarehouse" type="Node3D"]
 script = ExtResource("1_g5j8t")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_dqy33")
 
 [node name="floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.7196975, 0)
@@ -155,3 +210,55 @@ transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.
 
 [node name="Snowman8" parent="." instance=ExtResource("8_jbe65")]
 transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -63.57848, 2.5156732, -35.6394)
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2otec")
+camera_attributes = SubResource("CameraAttributesPractical_04tpn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment2"]
+transform = Transform3D(-0.16981284, -0.5752001, -0.8001928, -0.8492135, -0.32656536, 0.4149597, -0.50000006, 0.75, -0.43301266, 4.8888206, 24.743122, 11.761875)
+shadow_enabled = true
+shadow_opacity = 0.74
+shadow_blur = 10.0
+sky_mode = 1
+
+[node name="Snow" type="GPUParticles3D" parent="WorldEnvironment2"]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 5, -9.98733, 8.39287, 0)
+amount = 8000
+lifetime = 5.0
+collision_base_size = 1.22
+process_material = SubResource("ParticleProcessMaterial_4co2b")
+draw_pass_1 = SubResource("QuadMesh_isx6m")
+
+[node name="Snow2" type="GPUParticles3D" parent="WorldEnvironment2"]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 5, -56.90383, 8.39287, -16.430996)
+amount = 8000
+lifetime = 5.0
+collision_base_size = 1.22
+process_material = SubResource("ParticleProcessMaterial_4co2b")
+draw_pass_1 = SubResource("QuadMesh_isx6m")
+
+[node name="Snow3" type="GPUParticles3D" parent="WorldEnvironment2"]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 5, -58.3824, 12.162472, -62.87514)
+amount = 8000
+lifetime = 5.0
+collision_base_size = 1.22
+process_material = SubResource("ParticleProcessMaterial_4co2b")
+draw_pass_1 = SubResource("QuadMesh_isx6m")
+
+[node name="Snow4" type="GPUParticles3D" parent="WorldEnvironment2"]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 5, -103.967476, 12.162472, -62.87514)
+amount = 8000
+lifetime = 5.0
+collision_base_size = 1.22
+process_material = SubResource("ParticleProcessMaterial_4co2b")
+draw_pass_1 = SubResource("QuadMesh_isx6m")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.06678, 2.563548)
+light_color = Color(0.45882353, 0.8666667, 1, 1)
+light_energy = 0.256
+light_indirect_energy = 3.123
+light_volumetric_fog_energy = 10.0
+omni_range = 10.0
+omni_attenuation = 0.621

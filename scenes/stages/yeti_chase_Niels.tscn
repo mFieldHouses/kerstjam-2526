@@ -5,11 +5,11 @@
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="2_wtvri"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="3_jwnq0"]
 [ext_resource type="PackedScene" uid="uid://byxx1uc6vr2m6" path="res://scenes/characters/yeti.tscn" id="4_0i7ep"]
-[ext_resource type="PackedScene" path="res://scenes/ammo_crate.tscn" id="5_nkhk4"]
+[ext_resource type="PackedScene" uid="uid://bxlrivssc0tm0" path="res://scenes/ammo_crate.tscn" id="5_nkhk4"]
 [ext_resource type="Resource" uid="uid://bf4lpuapwa1nv" path="res://assets/resources/items/ammo/snow.tres" id="6_v6dy6"]
 [ext_resource type="Script" uid="uid://c1o611u1w5h24" path="res://scripts/part1.gd" id="7_aj23t"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="8_gdanf"]
-[ext_resource type="Script" path="res://classes/nodes/modules/StageLauncher.gd" id="9_nt3go"]
+[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_nt3go"]
 [ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="10_v6dy6"]
 [ext_resource type="PackedScene" uid="uid://ehhmeed2vnyk" path="res://assets/meshes/Environment/SnowHigh-2.glb" id="11_aj23t"]
 [ext_resource type="Material" uid="uid://pv0thndks7gn" path="res://assets/materials/Ice-1.tres" id="11_v6dy6"]
@@ -25,14 +25,14 @@ sky_curve = 0.31057763
 sky_energy_multiplier = 0.5
 energy_multiplier = 1.2
 
-[sub_resource type="Sky" id="Sky_h58ao"]
+[sub_resource type="Sky" id="Sky_wtvri"]
 sky_material = SubResource("ProceduralSkyMaterial_w7oa1")
 
 [sub_resource type="Environment" id="Environment_j5aua"]
 resource_local_to_scene = true
 background_mode = 2
 background_energy_multiplier = 1.21
-sky = SubResource("Sky_h58ao")
+sky = SubResource("Sky_wtvri")
 tonemap_mode = 2
 ssr_enabled = true
 glow_enabled = true
@@ -60,14 +60,14 @@ dof_blur_far_distance = 60.31
 offsets = PackedFloat32Array(0.29192546, 0.66770184)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_mydgr"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_w7oa1"]
 gradient = SubResource("Gradient_vftwx")
 
 [sub_resource type="Curve" id="Curve_tyfdp"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.46551722, 0.66138166), 0.0, 0.0, 0, 0, Vector2(0.81034476, 0.2491507), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_qts4k"]
+[sub_resource type="CurveTexture" id="CurveTexture_j5aua"]
 curve = SubResource("Curve_tyfdp")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xcb6l"]
@@ -84,8 +84,8 @@ tangential_accel_max = 7.9999976
 damping_max = 4.0
 scale_min = 0.099999994
 scale_max = 0.29999998
-scale_curve = SubResource("CurveTexture_qts4k")
-color_ramp = SubResource("GradientTexture1D_mydgr")
+scale_curve = SubResource("CurveTexture_j5aua")
+color_ramp = SubResource("GradientTexture1D_w7oa1")
 
 [sub_resource type="QuadMesh" id="QuadMesh_153p7"]
 material = ExtResource("2_wtvri")
@@ -201,6 +201,7 @@ sky_mode = 1
 
 [node name="Snow" type="GPUParticles3D" parent="WorldEnvironment2"]
 transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 5, -24.220583, 8.39287, 0)
+visible = false
 amount = 8000
 lifetime = 5.0
 collision_base_size = 1.22

@@ -1,0 +1,250 @@
+[gd_scene load_steps=16 format=3 uid="uid://cfufrt7a0cruc"]
+
+[ext_resource type="Script" uid="uid://cgayko6nfo5rq" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
+[ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_wu2bj"]
+[ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="3_bnj7l"]
+[ext_resource type="PackedScene" uid="uid://c8lkvpa6shb2o" path="res://assets/meshes/Debug/warehouse_1.glb" id="4_w06of"]
+[ext_resource type="Script" uid="uid://d8wom6sgj4gw" path="res://scripts/stages/warehouse/elevator.gd" id="5_8yt6b"]
+[ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="6_8yt6b"]
+[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="7_ikcrf"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+energy_multiplier = 0.0
+
+[sub_resource type="Sky" id="Sky_22f0a"]
+sky_material = SubResource("ProceduralSkyMaterial_fo0y1")
+
+[sub_resource type="Environment" id="Environment_dqy33"]
+background_mode = 2
+sky = SubResource("Sky_22f0a")
+ambient_light_source = 2
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
+size = Vector3(100, 0.497, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o4kk"]
+albedo_texture = ExtResource("2_wu2bj")
+uv1_scale = Vector3(20, 20, 20)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0su6h"]
+material = SubResource("StandardMaterial3D_1o4kk")
+size = Vector2(100, 100)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wx1sp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vwg43"]
+size = Vector3(6.0908203, 6.447693, 0.7508545)
+
+[node name="Warehouse1" type="Node3D"]
+script = ExtResource("1_wx1sp")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dqy33")
+
+[node name="floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.7196975, 0)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, -43.194565)
+shape = SubResource("BoxShape3D_2uw2f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -42.99329)
+mesh = SubResource("PlaneMesh_0su6h")
+skeleton = NodePath("../..")
+
+[node name="player" parent="." instance=ExtResource("3_bnj7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3274956)
+
+[node name="speaker" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6939697, 4.36113, -7.282346)
+mesh = SubResource("BoxMesh_wx1sp")
+
+[node name="warehouse_1" parent="." instance=ExtResource("4_w06of")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, -6.005)
+
+[node name="elevator" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.355262, -64.50115)
+script = ExtResource("5_8yt6b")
+
+[node name="ActionPromptTrigger" type="Node3D" parent="elevator"]
+script = ExtResource("6_8yt6b")
+metadata/_custom_type_script = "uid://c7ccd1128l7ea"
+
+[node name="Area3D" type="Area3D" parent="elevator/ActionPromptTrigger"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="elevator/ActionPromptTrigger/Area3D"]
+shape = SubResource("BoxShape3D_vwg43")
+
+[node name="large_doorway" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1511102, -58.99383)
+
+[node name="StageLauncher" type="Node3D" parent="large_doorway"]
+script = ExtResource("7_ikcrf")
+stage_id = "warehouse_2"
+metadata/_custom_type_script = "uid://dytis7djokgek"
+
+[node name="ActionPromptTrigger" type="Node3D" parent="large_doorway/StageLauncher"]
+script = ExtResource("6_8yt6b")
+enabled = false
+metadata/_custom_type_script = "uid://c7ccd1128l7ea"
+
+[node name="Area3D" type="Area3D" parent="large_doorway/StageLauncher/ActionPromptTrigger"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="large_doorway/StageLauncher/ActionPromptTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.033905, -0.124572754)
+shape = SubResource("BoxShape3D_vwg43")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.0907173, 10.6228895, -20.825703)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -12.012194, 10.6228895, -20.825703)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.0396137, 10.6228895, -28.798285)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.8471622, 10.6228895, -28.798285)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 12.040643, 10.6228895, -36.728874)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 12.040643, 10.6228895, -44.747097)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.8909779, 10.6228895, -44.747097)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.9519825, 10.6228895, -44.747097)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -12.057833, 10.6228895, -44.747097)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 12.040643, 10.6228895, -54.158314)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.8909779, 10.6228895, -54.158314)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D21" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5252934, 0.85092115, 0, -0.85092115, 0.5252934, 0.047897458, 10.6228895, -54.158314)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.9519825, 10.6228895, -54.158314)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -12.057833, 10.6228895, -54.158314)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 12.040643, 20.90469, -61.57707)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.8909779, 20.90469, -61.57707)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.9519825, 20.90469, -61.57707)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -12.057833, 20.90469, -61.57707)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -3.908167, 10.6228895, -35.63349)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.0907173, 10.6228895, -12.086527)
+shadow_enabled = true
+spot_range = 18.780334
+spot_angle = 23.592535
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2984114, 14.537597, -30.339828)
+light_energy = 0.3
+light_size = 1.0
+shadow_enabled = true
+omni_range = 40.204826
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12217367, 9.991356, -62.349182)
+light_color = Color(1, 0.120000005, 0.120000005, 1)
+light_energy = 0.3
+light_size = 1.0
+shadow_enabled = true
+omni_range = 40.204826
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.7495575, 0.49547648, -38.781403)
+light_energy = 0.3
+light_size = 1.0
+shadow_enabled = true
+shadow_normal_bias = 2.188
+shadow_blur = 0.0
+omni_range = 12.528

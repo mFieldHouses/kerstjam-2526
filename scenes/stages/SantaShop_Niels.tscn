@@ -25336,7 +25336,7 @@ transform = Transform3D(-1.1924875e-08, 0, 1, 1, -4.371139e-08, 1.1924875e-08, 4
 [node name="StageLauncher" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.250183, 10.40283, -82.55981)
 script = ExtResource("80_nj3uu")
-stage_id = "yeti_hollow"
+stage_id = "yeti_chase"
 metadata/_custom_type_script = "uid://dytis7djokgek"
 
 [node name="AreaTrigger" type="Node3D" parent="StageLauncher"]

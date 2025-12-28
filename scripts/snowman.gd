@@ -77,9 +77,10 @@ func _die() -> void:
 
 func _shoot() -> void:
 	var _new_snowball : Snowball = preload("res://scenes/projectiles/snowball.tscn").instantiate()
+	var _to_player : Vector3 = Vector3(PlayerState.player_instance.global_position - global_position)
 	get_parent().add_child(_new_snowball)
 	_new_snowball.global_position = $"snowball-origin".global_position
-	_new_snowball.velocity = -global_basis.z * PlayerState.player_instance.global_position.distance_to(global_position) * 2 + Vector3(0.0, PlayerState.player_instance.global_position.distance_to(global_position) * 0.3, 0.0)
+	_new_snowball.velocity = _to_player * 2 + Vector3(0.0, PlayerState.player_instance.global_position.distance_to(global_position) * 0.3, 0.0)
 	print("shoot snowball")
 
 func _can_see_player() -> bool:

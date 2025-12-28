@@ -32,7 +32,9 @@ func _physics_process(delta: float) -> void:
 	
 	if aggression_target:
 		navigator.target_position = aggression_target.global_position
-		velocity = (navigator.get_next_path_position() - global_position).normalized() * speed
+		var _dir : Vector3 = (navigator.get_next_path_position() - global_position).normalized() * speed
+		velocity = Vector3(_dir.x, velocity.y, _dir.z)
+
 		look_at(aggression_target.global_position)
 	else:
 		rotation.x = 0

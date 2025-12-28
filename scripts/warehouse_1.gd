@@ -5,7 +5,7 @@ extends Node3D
 func _ready() -> void:
 	await get_tree().create_timer(1.0).timeout
 	
-	DialogManager.initiate_dialog_with("enter_warehouse", $speaker, "Mysterieuze stem", load("res://addons/GodotDevTools/module.svg"))
+	#DialogManager.initiate_dialog_with("enter_warehouse", $speaker, "Mysterieuze stem", load("res://addons/GodotDevTools/module.svg"))
 	
 	await DialogManager.dialog_ended
 	

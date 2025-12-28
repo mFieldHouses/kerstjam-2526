@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cotqedi4mq2rs"]
+[gd_scene load_steps=9 format=3 uid="uid://cotqedi4mq2rs"]
 
 [ext_resource type="Script" uid="uid://p37eo2hx431" path="res://scripts/scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://t266m1x4e123" path="res://assets/textures/gui/crosshair.png" id="2_g2els"]
 [ext_resource type="Script" uid="uid://dg1n3v81irtsl" path="res://scripts/scenes/player_gun_grip.gd" id="2_qlg0r"]
 [ext_resource type="Script" uid="uid://cqd46xb7r6v6y" path="res://scripts/player_ui.gd" id="2_tuyoq"]
 [ext_resource type="Material" uid="uid://xtjmhhy5hj80" path="res://assets/resources/materials/invert.tres" id="4_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://cowivfljy5tex" path="res://icon.svg" id="6_tuyoq"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvqfc"]
 radius = 0.3
@@ -15,11 +16,12 @@ radius = 0.3
 height = 1.16
 
 [node name="player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19800603)
 collision_layer = 9
 script = ExtResource("1_3vyb7")
 
 [node name="camera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9532026, -0.019106388)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9532026, 0.09042883)
 
 [node name="shoot_ray" type="RayCast3D" parent="camera"]
 target_position = Vector3(0, 0, -100)
@@ -33,6 +35,12 @@ collision_mask = 4
 target_position = Vector3(0, 0, -2.5)
 collision_mask = 2
 collide_with_areas = true
+
+[node name="flashlight" type="SpotLight3D" parent="camera"]
+visible = false
+light_energy = 0.8
+spot_range = 31.440447
+spot_angle = 30.647566
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5946232, 0.3112511)
@@ -92,6 +100,7 @@ texture = ExtResource("2_g2els")
 expand_mode = 1
 
 [node name="prompt_label" type="RichTextLabel" parent="gui"]
+material = ExtResource("4_qlg0r")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -109,10 +118,80 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="health_left" type="Label" parent="gui"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -21.0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = 21.0
+grow_vertical = 2
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 30
+
+[node name="ammo_left" type="HBoxContainer" parent="gui"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="fast" type="VBoxContainer" parent="gui/ammo_left"]
+layout_mode = 2
+
+[node name="icon" type="TextureRect" parent="gui/ammo_left/fast"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("6_tuyoq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="amount" type="Label" parent="gui/ammo_left/fast"]
+layout_mode = 2
+text = "100"
+horizontal_alignment = 1
+
+[node name="big" type="VBoxContainer" parent="gui/ammo_left"]
+layout_mode = 2
+
+[node name="icon" type="TextureRect" parent="gui/ammo_left/big"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("6_tuyoq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="amount" type="Label" parent="gui/ammo_left/big"]
+layout_mode = 2
+text = "100"
+horizontal_alignment = 1
+
+[node name="explode" type="VBoxContainer" parent="gui/ammo_left"]
+layout_mode = 2
+
+[node name="icon" type="TextureRect" parent="gui/ammo_left/explode"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("6_tuyoq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="amount" type="Label" parent="gui/ammo_left/explode"]
+layout_mode = 2
+text = "100"
+horizontal_alignment = 1
+
+[node name="snow" type="VBoxContainer" parent="gui/ammo_left"]
+layout_mode = 2
+
+[node name="icon" type="TextureRect" parent="gui/ammo_left/snow"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("6_tuyoq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="amount" type="Label" parent="gui/ammo_left/snow"]
+layout_mode = 2
+text = "100"
+horizontal_alignment = 1
 
 [node name="gun_sounds" type="AudioStreamPlayer" parent="."]

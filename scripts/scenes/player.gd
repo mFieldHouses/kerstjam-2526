@@ -90,8 +90,12 @@ func _ready():
 	
 	PlayerState.player_instance = self
 	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_CAPTURED)
+	
+	_update_ammo_gui(0)
 
 func _physics_process(delta: float) -> void:
+	_update_ammo_counts()
+	
 	_weapon_selection_scroll_timer += delta
 	if _weapon_selection_scroll_timer >= _weapon_selection_scroll_timeout_time:
 		_weapon_selection_scroll_counter = 0
@@ -211,6 +215,9 @@ func _input(event):
 		elif event.is_action("scope") and _get_currently_selected_weapon().scopeable:
 			toggle_scope_mode(event.is_pressed())
 		
+		elif event.is_action("toggle_flashlight") and event.is_pressed():
+			$camera/flashlight.visible = !$camera/flashlight.visible
+		
 		elif event is InputEventMouseButton:
 			if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 				_weapon_selection_scroll_counter += 1
@@ -228,13 +235,32 @@ func _input(event):
 			match event.keycode:
 				KEY_1:
 					_used_ammo = preload("res://assets/resources/items/ammo/fast.tres")
+					_update_ammo_gui(0)
 				KEY_2:
 					_used_ammo = preload("res://assets/resources/items/ammo/big.tres")
+					_update_ammo_gui(1)
 				KEY_3:
 					_used_ammo = preload("res://assets/resources/items/ammo/explode.tres")
+					_update_ammo_gui(2)
 				KEY_4:
 					_used_ammo = preload("res://assets/resources/items/ammo/snow.tres")
+					_update_ammo_gui(3)
 			 
+
+func _update_ammo_gui(selected_idx : int) -> void:
+	var _idx : int = 0
+	for _child in $gui/ammo_left.get_children():
+		if _idx == selected_idx:
+			_child.modulate = Color(1.0, 1.0, 1.0, 1.0)
+		else:
+			_child.modulate = Color(1.0, 1.0, 1.0, 0.3)
+		
+		_idx += 1
+
+func _update_ammo_counts() -> void:
+	for _child in $gui/ammo_left.get_children():
+		var _ammo_id : String = _child.name
+		_child.get_node("amount").text = str(_ammo[load("res://assets/resources/items/ammo/" + _ammo_id + ".tres") as AmmoItemDescription])
 
 func tween_camera_fov(desired_fov : float, time : float):
 	var tween = get_tree().create_tween()

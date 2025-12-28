@@ -8,6 +8,12 @@ var _player_last_seen_state : Dictionary = {
 	"position" : null, #if null, there is no _player_last_seen that hasn't been checked out already
 	"velocity" : null
 }
+
+var _animation_names : Dictionary[String, String] = {
+	"idle":"yeti/Idle",
+	"walk":"yeti/Walking"
+}
+
 var _can_see_player : bool = false
 var _flags : Array[bool] = [false, false, false, false] #array of flags to keep track of when to play specific dialogs
 
@@ -36,10 +42,17 @@ func _ready() -> void:
 	DialogManager.dialog_queue.connect(func(did : String, qid : String): if did == "enter_yeti_hollow" and qid == "release_yeti": _current_behavior_state = BehaviorState.PATROL)
 	DialogManager.dialog_ended.connect(_dialog_end)
 	
-	var _test_anim_name : String = "yeti/Idle"
-	_animation_player.play(_test_anim_name)
-	_animation_player.get_animation(_test_anim_name).loop_mode = Animation.LOOP_PINGPONG #hij gaat dus "heen en weer" loopen, voor altijd
+
+	for _anim_name : String in _animation_names:
+		_animation_player.get_animation(_animation_names[_anim_name]).loop_mode = Animation.LOOP_LINEAR
 	
+	_animation_player.play(_animation_names["walk"])
+	
+#func _change_anim() -> void:
+	#var 
+	#
+	#_animation_player.play(_test_anim_name)
+
 func _dialog_end(did: String) -> void:
 	if did == "discover_yeti":
 		print("allow discover_yeti2")
