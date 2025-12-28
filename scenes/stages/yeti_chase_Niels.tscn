@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="10_v6dy6"]
 [ext_resource type="PackedScene" uid="uid://ehhmeed2vnyk" path="res://assets/meshes/Environment/SnowHigh-2.glb" id="11_aj23t"]
 [ext_resource type="Material" uid="uid://pv0thndks7gn" path="res://assets/materials/Ice-1.tres" id="11_v6dy6"]
-[ext_resource type="Material" uid="uid://b5vf3jj8j6rjk" path="res://assets/materials/Ice-2.tres" id="12_aj23t"]
+[ext_resource type="Material" uid="uid://b7k7icfls5rs7" path="res://assets/materials/Ice-2.tres" id="12_aj23t"]
 [ext_resource type="PackedScene" uid="uid://cyn5bi6e0gs42" path="res://assets/meshes/Environment/SnowHigh-3.glb" id="13_nt3go"]
 [ext_resource type="Material" uid="uid://cgf0ua2wdmgjr" path="res://assets/materials/arctic_industrial_color_atlas_256_2.tres" id="13_wtvri"]
 [ext_resource type="PackedScene" uid="uid://dfnh5u5toi70c" path="res://assets/meshes/Environment/IcePatches/IceArch-1-col.glb" id="14_wtvri"]

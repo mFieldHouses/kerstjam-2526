@@ -36,7 +36,7 @@ func _ready() -> void:
 	DialogManager.dialog_queue.connect(func(did : String, qid : String): if did == "enter_yeti_hollow" and qid == "release_yeti": _current_behavior_state = BehaviorState.PATROL)
 	DialogManager.dialog_ended.connect(_dialog_end)
 	
-	var _test_anim_name : String = "Global/Idle-3"
+	var _test_anim_name : String = "yeti/Idle"
 	_animation_player.play(_test_anim_name)
 	_animation_player.get_animation(_test_anim_name).loop_mode = Animation.LOOP_PINGPONG #hij gaat dus "heen en weer" loopen, voor altijd
 	
