@@ -1,19 +1,18 @@
-[gd_scene load_steps=41 format=4 uid="uid://duwpgixmsa24f"]
+[gd_scene load_steps=40 format=4 uid="uid://duwpgixmsa24f"]
 
 [ext_resource type="Script" uid="uid://domd8jiottmf8" path="res://scripts/yeti_chase_stage.gd" id="1_6mfev"]
 [ext_resource type="PackedScene" uid="uid://ba8ws6pahtdpd" path="res://assets/meshes/Debug/yeti_hollow.gltf" id="2_wm0a4"]
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="2_wtvri"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="3_jwnq0"]
 [ext_resource type="PackedScene" uid="uid://byxx1uc6vr2m6" path="res://scenes/characters/yeti.tscn" id="4_0i7ep"]
-[ext_resource type="PackedScene" uid="uid://bxlrivssc0tm0" path="res://scenes/ammo_crate.tscn" id="5_nkhk4"]
+[ext_resource type="PackedScene" path="res://scenes/ammo_crate.tscn" id="5_nkhk4"]
 [ext_resource type="Resource" uid="uid://bf4lpuapwa1nv" path="res://assets/resources/items/ammo/snow.tres" id="6_v6dy6"]
 [ext_resource type="Script" uid="uid://c1o611u1w5h24" path="res://scripts/part1.gd" id="7_aj23t"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="8_gdanf"]
-[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_nt3go"]
+[ext_resource type="Script" path="res://classes/nodes/modules/StageLauncher.gd" id="9_nt3go"]
 [ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="10_v6dy6"]
 [ext_resource type="PackedScene" uid="uid://ehhmeed2vnyk" path="res://assets/meshes/Environment/SnowHigh-2.glb" id="11_aj23t"]
-[ext_resource type="Material" uid="uid://pv0thndks7gn" path="res://assets/materials/Ice-1.tres" id="11_v6dy6"]
-[ext_resource type="Material" uid="uid://b7k7icfls5rs7" path="res://assets/materials/Ice-2.tres" id="12_aj23t"]
+[ext_resource type="Material" uid="uid://bcu5hcerl3fy" path="res://assets/materials/Ice-3.tres" id="12_nt3go"]
 [ext_resource type="PackedScene" uid="uid://cyn5bi6e0gs42" path="res://assets/meshes/Environment/SnowHigh-3.glb" id="13_nt3go"]
 [ext_resource type="Material" uid="uid://cgf0ua2wdmgjr" path="res://assets/materials/arctic_industrial_color_atlas_256_2.tres" id="13_wtvri"]
 [ext_resource type="PackedScene" uid="uid://dfnh5u5toi70c" path="res://assets/meshes/Environment/IcePatches/IceArch-1-col.glb" id="14_wtvri"]
@@ -441,23 +440,73 @@ transform = Transform3D(-0.4758391, 0, -0.8795323, 0, 1, 0, 0.8795323, 0, -0.475
 [node name="Floor-IcePatch-15" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
 transform = Transform3D(-0.9777722, 0, 0.20966971, 0, 1, 0, -0.20966971, 0, -0.9777722, -9.845795, -0.2426948, 16.132124)
 
+[node name="Floor-IcePatch-16" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-0.9777722, 0, 0.20966971, 0, 1, 0, -0.20966971, 0, -0.9777722, -14.045068, -0.2426948, 14.3056555)
+
+[node name="Floor-IcePatch-17" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-1.051199, 0, 0.28309646, 0, 1, 0, -0.22541507, 0, -1.32019, -18.10285, -0.2426948, 14.3056555)
+
+[node name="Floor-IcePatch-18" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-1.0418161, 0.13331161, 0.2805696, 0.14013703, 0.99107414, -0.037740048, -0.22541507, 0, -1.32019, -23.482615, 0.37231547, 17.692564)
+
+[node name="Floor-IcePatch-19" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-1.0418161, 0.13331161, 0.2805696, 0.14013703, 0.99107414, -0.037740048, -0.22541507, 0, -1.32019, -28.22056, 0.8724974, 17.692564)
+
+[node name="Floor-IcePatch-20" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-1.0511823, 0.0056373924, 0.28309196, 0.0059259986, 0.9999841, -0.0015959194, -0.22541505, -1.8460194e-09, -1.3201898, -33.869164, 1.1042624, 17.692564)
+
+[node name="Floor-IcePatch-21" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(0.081895664, -0.0015984664, -1.3462769, 0.005925999, 0.9999841, -0.0015959195, 1.0719558, -0.005406025, 0.10286212, -39.51046, 1.1042624, 17.692564)
+
+[node name="Floor-IcePatch-22" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(0.081895664, -0.0015984664, -1.3462769, 0.005925999, 0.9999841, -0.0015959195, 1.0719558, -0.005406025, 0.10286212, -35.369972, 1.1042624, 22.004515)
+
+[node name="Floor-IcePatch-23" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(0.081895664, -0.0015984664, -1.3462769, 0.005925999, 0.9999841, -0.0015959195, 1.0719558, -0.005406025, 0.10286212, -40.251293, 1.1042624, 22.004515)
+
+[node name="Floor-IcePatch-24" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-0.81326795, 0.0033966727, -0.8830726, 0.0059259995, 0.9999841, -0.0015959196, 0.7031296, -0.004499201, -1.0213836, -44.7361, 1.1042624, 13.496109)
+
+[node name="Floor-IcePatch-28" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-0.81326795, 0.0033966727, -0.8830726, 0.0059259995, 0.9999841, -0.0015959196, 0.7031296, -0.004499201, -1.0213836, -50.891693, 1.1042624, 15.215155)
+
+[node name="Floor-IcePatch-29" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-0.81326795, 0.0033966727, -0.8830726, 0.0059259995, 0.9999841, -0.0015959196, 0.7031296, -0.004499201, -1.0213836, -48.454178, 1.1042624, 8.956736)
+
+[node name="Floor-IcePatch-30" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-1.0360236, 0.005627541, 0.36061674, 0.005926, 0.9999841, -0.0015959193, -0.28714317, 0.00033315364, -1.3011525, -44.84943, 1.1042624, 6.4516354)
+
+[node name="Floor-IcePatch-31" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-1.0360236, 0.005627541, 0.36061674, 0.005926, 0.9999841, -0.0015959193, -0.28714317, 0.00033315364, -1.3011525, -44.616203, 1.1042624, 0.3301201)
+
+[node name="Floor-IcePatch-25" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-0.81326795, 0.0033966727, -0.8830726, 0.0059259995, 0.9999841, -0.0015959196, 0.7031296, -0.004499201, -1.0213836, -46.115517, 1.1042624, 19.018688)
+
+[node name="Floor-IcePatch-26" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-0.7030019, 0.004498668, 1.0215224, 0.005926, 0.9999841, -0.0015959193, -0.81337845, 0.00339738, -0.88291234, -44.92552, 1.1042624, 25.28142)
+
+[node name="Floor-IcePatch-27" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
+transform = Transform3D(-0.7030019, 0.004498668, 1.0215224, 0.005926, 0.9999841, -0.0015959193, -0.81337845, 0.00339738, -0.88291234, -51.141724, 1.1042624, 21.014523)
+
 [node name="Floor-IcePatch-10" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
 transform = Transform3D(1, 0, 0, 0, 0.9727516, 0.23184977, 0, -0.23184977, 0.9727516, 0.7769203, 4.756108, 7.2283)
 
 [node name="Floor-IcePatch-1" parent="Structure/Floors/Floor-IcePatch-10" index="0"]
-surface_material_override/0 = ExtResource("11_v6dy6")
+transform = Transform3D(-0.6993879, 0, 0.7147422, 0, 1, -1.4901161e-08, -0.7147422, 0, -0.69938785, 0, 1.8113482, 0.43172455)
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="Floor-IcePatch-11" parent="Structure/Floors" instance=ExtResource("10_v6dy6")]
 transform = Transform3D(1, 0, 0, 0, 0.9727516, 0.23184977, 0, -0.23184977, 0.9727516, 0.77774, 3.7696896, 2.9047232)
 
 [node name="Floor-IcePatch-1" parent="Structure/Floors/Floor-IcePatch-11" index="0"]
-surface_material_override/0 = ExtResource("12_aj23t")
+transform = Transform3D(-0.6993879, 0, 0.7147422, 0, 1, -1.4901161e-08, -0.7147422, 0, -0.69938785, 0, 1.9696317, 0.46945047)
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="Floor-IcePatch-4" type="MeshInstance3D" parent="Structure/Floors/Floor-IcePatch-11"]
-transform = Transform3D(-0.7152874, 0.13036893, 0.6865623, 0.09263269, 0.9914635, -0.09175725, -0.69266367, -0.0020346344, -0.7212576, -4.8691072, 0.85618114, -2.0991914)
+transform = Transform3D(-0.7152874, 0.13036893, 0.6865623, 0.09263269, 0.9914635, -0.09175728, -0.69266367, -0.0020346344, -0.7212576, -4.8691072, 2.940106, -1.6025)
 mesh = SubResource("ArrayMesh_fgkuc")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/Floors/Floor-IcePatch-11/Floor-IcePatch-4"]
 
@@ -465,10 +514,10 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_jv3qs")
 
 [node name="Floor-IcePatch-2" type="MeshInstance3D" parent="Structure/Floors/Floor-IcePatch-11"]
-transform = Transform3D(-0.6993879, 0, 0.7147422, 0.19226842, 0.9631392, 0.18813802, -0.6883962, 0.2690039, -0.6736078, 0, 0.9234166, -3.8742974)
+transform = Transform3D(-0.6993879, 0, 0.7147422, 0.19226842, 0.96313924, 0.18813802, -0.6883962, 0.26900393, -0.6736079, 0, 2.9045186, -3.4021132)
 mesh = SubResource("ArrayMesh_fgkuc")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/Floors/Floor-IcePatch-11/Floor-IcePatch-2"]
 
@@ -476,10 +525,10 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_jv3qs")
 
 [node name="Floor-IcePatch-3" type="MeshInstance3D" parent="Structure/Floors/Floor-IcePatch-11"]
-transform = Transform3D(-0.6993879, 0, 0.7147422, 0.19226842, 0.9631393, 0.18813802, -0.6883962, 0.26900396, -0.67360795, 0, 2.0281801, -7.431722)
+transform = Transform3D(-0.6993879, 0, 0.7147422, 0.19226842, 0.9631394, 0.18813802, -0.6883962, 0.26900402, -0.67360806, 0, 4.0746894, -6.9439487)
 mesh = SubResource("ArrayMesh_fgkuc")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/Floors/Floor-IcePatch-11/Floor-IcePatch-3"]
 
@@ -514,24 +563,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8765655, 0.074456215, -3.9
 
 [node name="SnowHigh-2" parent="Structure/SnowHigh-2" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1498394, 1.0414693)
-surface_material_override/0 = ExtResource("12_aj23t")
-
-[node name="SnowHigh-3" type="MeshInstance3D" parent="Structure/SnowHigh-2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72896576, 2.5945134, -2.0548956)
-mesh = SubResource("ArrayMesh_rjnhe")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/SnowHigh-2/SnowHigh-3/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_8ko2v")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="SnowHigh-4" type="MeshInstance3D" parent="Structure/SnowHigh-2"]
 transform = Transform3D(-0.6570858, 0, 0.75381577, 0, 1, 0, -0.75381577, 0, -0.6570858, -0.46791315, 2.5945134, -4.7934875)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-4"]
 
@@ -539,10 +577,10 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
 [node name="SnowHigh-5" type="MeshInstance3D" parent="Structure/SnowHigh-2"]
-transform = Transform3D(-0.76636976, 0, -0.64239985, -0.1661895, 0.96595746, 0.19826065, 0.6205309, 0.25870103, -0.74028057, 8.179413, 2.5945134, -0.19911551)
+transform = Transform3D(-0.76636976, 0, -0.64239985, -0.1661895, 0.96595746, 0.19826065, 0.6205309, 0.25870103, -0.74028057, 9.618254, 2.5945134, -0.19911551)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-5"]
 
@@ -553,7 +591,7 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(-0.76636976, 0, -0.64239985, -0.1661895, 0.96595746, 0.19826065, 0.6205309, 0.25870103, -0.74028057, 8.179413, 2.5945134, -3.3393848)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-9"]
 
@@ -561,10 +599,10 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
 [node name="SnowHigh-10" type="MeshInstance3D" parent="Structure/SnowHigh-2"]
-transform = Transform3D(0.9091494, 0.07223164, 0.41015875, -0.16618946, 0.9659574, 0.19826064, -0.38187516, -0.24841255, 0.89020365, 7.962752, 2.5945134, -6.3757887)
+transform = Transform3D(0.9091494, 0.07223164, 0.41015875, -0.16618946, 0.9659574, 0.19826064, -0.38187516, -0.24841255, 0.89020365, 8.77249, 2.5945134, -6.3757887)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-10"]
 
@@ -575,7 +613,7 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(0.9091494, 0.07223164, 0.41015875, -0.16618946, 0.9659574, 0.19826064, -0.38187516, -0.24841255, 0.89020365, 7.5350256, 2.5945134, -10.057561)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-11"]
 
@@ -586,18 +624,73 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(0.9091494, 0.07223164, 0.41015875, -0.16618946, 0.9659574, 0.19826064, -0.38187516, -0.24841255, 0.89020365, 5.5442986, 2.5945134, -13.7512455)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-12"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/SnowHigh-2/SnowHigh-12/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
+[node name="SnowHigh-13" type="MeshInstance3D" parent="Structure/SnowHigh-2"]
+transform = Transform3D(0.9241262, -0.115910135, 0.3640822, 0.104804285, 0.9932256, 0.05018805, -0.36743292, -0.008222669, 0.9300134, -7.735946, 2.5945134, -13.7512455)
+mesh = SubResource("ArrayMesh_rjnhe")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("12_nt3go")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/SnowHigh-2/SnowHigh-13/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8ko2v")
+
+[node name="SnowHigh-14" type="MeshInstance3D" parent="Structure/SnowHigh-2"]
+transform = Transform3D(0.9241262, -0.115910135, 0.3640822, 0.104804285, 0.9932256, 0.05018805, -0.36743292, -0.008222669, 0.9300134, -6.230183, 2.5945134, -9.828803)
+mesh = SubResource("ArrayMesh_rjnhe")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("12_nt3go")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/SnowHigh-2/SnowHigh-14/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8ko2v")
+
+[node name="SnowHigh-15" type="MeshInstance3D" parent="Structure/SnowHigh-2"]
+transform = Transform3D(0.9241262, -0.115910135, 0.3640822, 0.104804285, 0.9932256, 0.05018805, -0.36743292, -0.008222669, 0.9300134, -5.508183, 2.5945134, -5.6524715)
+mesh = SubResource("ArrayMesh_rjnhe")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("12_nt3go")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/SnowHigh-2/SnowHigh-15/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8ko2v")
+
+[node name="SnowHigh-16" type="MeshInstance3D" parent="Structure/SnowHigh-2"]
+transform = Transform3D(0.39129713, -0.087579496, 0.9160876, 0.10480429, 0.9932256, 0.050188053, -0.9142772, 0.07637149, 0.39782476, -5.508183, 2.5945134, -1.4920628)
+mesh = SubResource("ArrayMesh_rjnhe")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("12_nt3go")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/SnowHigh-2/SnowHigh-16/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8ko2v")
+
+[node name="SnowHigh-17" type="MeshInstance3D" parent="Structure/SnowHigh-2"]
+transform = Transform3D(0.39129713, -0.087579496, 0.9160876, 0.10480429, 0.9932256, 0.050188053, -0.9142772, 0.07637149, 0.39782476, -3.5871434, 2.5945134, -0.6815903)
+mesh = SubResource("ArrayMesh_rjnhe")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("12_nt3go")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/SnowHigh-2/SnowHigh-17/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8ko2v")
+
 [node name="SnowHigh-6" type="MeshInstance3D" parent="Structure/SnowHigh-2"]
 transform = Transform3D(-0.76636976, 0, -0.64239985, -0.1661895, 0.96595746, 0.19826065, 0.6205309, 0.25870103, -0.74028057, -1.204082, 2.5945134, -6.2288914)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-6"]
 
@@ -608,7 +701,7 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(0.86828107, 0.04804541, 0.49374062, -0.16618946, 0.9659574, 0.19826064, -0.4674068, -0.2542004, 0.8467071, -1.0168428, 2.5945134, -9.218609)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-7"]
 
@@ -619,7 +712,7 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(0.86828107, 0.04804541, 0.49374062, -0.16618946, 0.9659574, 0.19826064, -0.4674068, -0.2542004, 0.8467071, -2.1059747, 2.5945134, -12.646448)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-2/SnowHigh-8"]
 
@@ -630,13 +723,13 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(-0.42696336, 0, -0.9042689, 0, 1, 0, 0.9042689, 0, -0.42696336, -4.976171, 0.074456215, 3.916516)
 
 [node name="SnowHigh-2" parent="Structure/SnowHigh-3" index="0"]
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="SnowHigh-3" type="MeshInstance3D" parent="Structure/SnowHigh-3"]
 transform = Transform3D(0.24251457, 0, -0.9701478, 0, 1, 0, 0.9701478, 0, 0.24251457, -0.14568186, 1.5093482, -9.527898)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-3"]
 
@@ -647,7 +740,7 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(0.23953575, 0.050835326, -0.96955585, -0.116778806, 0.9928868, 0.023207566, 0.96383893, 0.10766453, 0.24376838, 3.3172235, 1.5093482, -11.162957)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-4"]
 
@@ -658,7 +751,7 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(-0.5065199, -0.039442096, -0.8613256, -0.1167788, 0.9928868, 0.023207566, 0.85428345, 0.112339675, -0.5075229, 5.6173, 1.5093482, -10.732692)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-5"]
 
@@ -666,10 +759,10 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
 [node name="SnowHigh-6" type="MeshInstance3D" parent="Structure/SnowHigh-3"]
-transform = Transform3D(-0.5065199, -0.0394421, -0.8613256, -0.1167788, 0.9928868, 0.023207566, 0.85428345, 0.11233967, -0.5075229, 8.69595, 1.5093482, -9.488819)
+transform = Transform3D(-0.5065199, -0.0394421, -0.8613256, -0.1167788, 0.9928868, 0.023207566, 0.85428345, 0.11233967, -0.5075229, 9.478575, 1.5093482, -10.7247505)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-6"]
 
@@ -677,10 +770,10 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
 [node name="SnowHigh-7" type="MeshInstance3D" parent="Structure/SnowHigh-3"]
-transform = Transform3D(-0.061448604, -0.15620026, -0.9858121, -0.3317846, 0.9347101, -0.12742206, 0.9413517, 0.31924742, -0.109261364, 11.53534, 2.8077297, -7.290535)
+transform = Transform3D(-0.061448604, -0.15620026, -0.9858121, -0.3317846, 0.9347101, -0.12742206, 0.94135183, 0.31924742, -0.109261364, 13.061006, 2.8077297, -9.754349)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-7"]
 
@@ -688,10 +781,10 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
 [node name="SnowHigh-8" type="MeshInstance3D" parent="Structure/SnowHigh-3"]
-transform = Transform3D(-0.54212, -0.07037564, -0.837349, -0.22254631, 0.9729291, 0.062311295, 0.8102958, 0.22012915, -0.54310596, 14.29432, 2.8077297, -5.2448688)
+transform = Transform3D(-0.54212, -0.07037565, -0.837349, -0.22254631, 0.9729291, 0.062311295, 0.8102958, 0.22012915, -0.54310596, 16.0295, 2.8077297, -6.8392286)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-8"]
 
@@ -699,10 +792,10 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
 [node name="SnowHigh-12" type="MeshInstance3D" parent="Structure/SnowHigh-3"]
-transform = Transform3D(-0.54212, -0.07037565, -0.837349, -0.22254631, 0.9729291, 0.062311295, 0.8102958, 0.22012915, -0.54310596, 28.602516, 2.8077297, 15.949145)
+transform = Transform3D(-0.54212, -0.07037565, -0.837349, -0.22254631, 0.9729291, 0.062311295, 0.8102958, 0.22012915, -0.54310596, 29.19028, 2.8077297, 15.671626)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-12"]
 
@@ -710,10 +803,10 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
 [node name="SnowHigh-13" type="MeshInstance3D" parent="Structure/SnowHigh-3"]
-transform = Transform3D(-0.54212, -0.07037565, -0.837349, -0.22254631, 0.9729291, 0.062311295, 0.8102958, 0.22012915, -0.54310596, 26.334423, 5.212969, 15.488091)
+transform = Transform3D(-0.54212, -0.07037565, -0.837349, -0.22254631, 0.9729291, 0.062311295, 0.8102958, 0.22012915, -0.54310596, 27.295086, 5.212969, 15.034501)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-13"]
 
@@ -721,21 +814,22 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
 [node name="SnowHigh-9" type="MeshInstance3D" parent="Structure/SnowHigh-3"]
-transform = Transform3D(-0.54212, -0.07037565, -0.837349, -0.22254631, 0.9729291, 0.062311295, 0.8102958, 0.22012915, -0.54310596, 15.695336, 2.8077297, -2.2776394)
+transform = Transform3D(-0.54212, -0.07037565, -0.837349, -0.22254631, 0.9729291, 0.062311295, 0.8102958, 0.22012915, -0.54310596, 16.18565, 2.8077297, -2.5091476)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-9"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/SnowHigh-3/SnowHigh-9/StaticBody3D"]
+transform = Transform3D(1, 1.4901161e-08, 0, 0, 1, -1.4901161e-08, 2.9802322e-08, 7.450581e-09, 1, -0.3493414, -0.0658524, -0.21945953)
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
 [node name="SnowHigh-10" type="MeshInstance3D" parent="Structure/SnowHigh-3"]
-transform = Transform3D(-0.8903108, -0.17677242, -0.83928126, -0.22254631, 0.9729288, 0.12462263, 0.39726552, 0.14886588, -1.8110979, 18.227093, 2.8077297, 3.0843935)
+transform = Transform3D(-0.8903108, -0.17677242, -0.83928126, -0.22254631, 0.9729288, 0.12462263, 0.39726552, 0.14886588, -1.8110979, 19.6459, 2.8077297, 0.7081423)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-10"]
 
@@ -743,10 +837,10 @@ surface_material_override/0 = ExtResource("12_aj23t")
 shape = SubResource("ConcavePolygonShape3D_8ko2v")
 
 [node name="SnowHigh-11" type="MeshInstance3D" parent="Structure/SnowHigh-3"]
-transform = Transform3D(-0.72947526, -0.123774916, -1.3454303, -0.22254631, 0.9729288, 0.124622636, 0.64679146, 0.19516478, -1.4745457, 22.611229, 2.8077297, 11.175016)
+transform = Transform3D(-0.72947526, -0.123774916, -1.3454303, -0.22254631, 0.9729288, 0.124622636, 0.64679146, 0.19516478, -1.4745457, 23.111538, 2.8077297, 9.832835)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-3/SnowHigh-11"]
 
@@ -757,13 +851,13 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(0.961377, 0, 0.27523473, 0, 1, 0, -0.27523473, 0, 0.961377, -4.976171, 0.074456215, 10.649554)
 
 [node name="SnowHigh-2" parent="Structure/SnowHigh-4" index="0"]
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="SnowHigh-3" type="MeshInstance3D" parent="Structure/SnowHigh-4"]
-transform = Transform3D(-0.90187794, 0, -0.4319914, 0, 1, 0, 0.4319914, 0, -0.90187794, -2.6396623, 5.1498394, 0.7542715)
+transform = Transform3D(-0.901878, 0, -0.43199146, 0, 1, 0, 0.43199146, 0, -0.901878, -2.3310027, 5.1498394, -0.3238573)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-4/SnowHigh-3"]
 
@@ -774,7 +868,7 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(0.9819404, -0.03171105, -0.18651575, 0.010281989, 0.9933406, -0.114754885, 0.18891269, 0.11076464, 0.9757274, -4.891024, 5.1498394, 0.109726906)
 mesh = SubResource("ArrayMesh_rjnhe")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Structure/SnowHigh-4/SnowHigh-4"]
 
@@ -785,20 +879,20 @@ shape = SubResource("ConcavePolygonShape3D_8ko2v")
 transform = Transform3D(-0.6507345, 0, 0.75930536, 0, 2, 0, -0.75930536, 0, -0.6507345, -2.2380004, -0.08487666, 5.278515)
 
 [node name="SnowHigh-3" parent="Structure/SnowHigh-5" index="0"]
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="IceArch-1-col2" parent="Structure" instance=ExtResource("14_wtvri")]
 transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 0.6873817, 1.0036049, 4.794507)
 
 [node name="IceArch-1" parent="Structure/IceArch-1-col2" index="0"]
 transform = Transform3D(0.9873046, 0, 0.15883815, 0, 1, 0, -0.15883815, 0, 0.9873046, 0, -0.21579933, 1.6764374)
-surface_material_override/0 = ExtResource("11_v6dy6")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [node name="IceArch-1-col3" parent="Structure" instance=ExtResource("14_wtvri")]
 transform = Transform3D(0.33484495, 0.05898194, 0, -0.05898194, 0.33484495, 0, 0, 0, 0.34, 0.6873817, 1.7196832, 10.025307)
 
 [node name="IceArch-1" parent="Structure/IceArch-1-col3" index="0"]
-surface_material_override/0 = ExtResource("12_aj23t")
+surface_material_override/0 = ExtResource("12_nt3go")
 
 [editable path="Structure/Floors/Floor-IcePatch-10"]
 [editable path="Structure/Floors/Floor-IcePatch-11"]
