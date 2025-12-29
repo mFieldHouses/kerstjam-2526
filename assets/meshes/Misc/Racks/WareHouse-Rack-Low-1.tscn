@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpucjcsixohb"]
+
+[ext_resource type="PackedScene" uid="uid://2bq3u10ac5jh" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-Low-1.glb" id="1_lmnm5"]
+
+[node name="Warehouse-Rack-Low-1" type="Node3D"]
+
+[node name="WareHouse-Rack-Low-1" parent="." instance=ExtResource("1_lmnm5")]

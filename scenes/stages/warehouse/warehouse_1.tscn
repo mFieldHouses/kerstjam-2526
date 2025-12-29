@@ -1,13 +1,16 @@
-[gd_scene load_steps=21 format=3 uid="uid://cfufrt7a0cruc"]
+[gd_scene load_steps=24 format=3 uid="uid://cfufrt7a0cruc"]
 
-[ext_resource type="Script" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
+[ext_resource type="Script" uid="uid://cgayko6nfo5rq" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_wu2bj"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="3_bnj7l"]
 [ext_resource type="PackedScene" uid="uid://c8lkvpa6shb2o" path="res://assets/meshes/Debug/warehouse_1.glb" id="4_w06of"]
 [ext_resource type="Script" uid="uid://d8wom6sgj4gw" path="res://scripts/stages/warehouse/elevator.gd" id="5_8yt6b"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="6_8yt6b"]
-[ext_resource type="Script" path="res://classes/nodes/modules/StageLauncher.gd" id="7_ikcrf"]
+[ext_resource type="PackedScene" uid="uid://ckw76onrbjigi" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-Hole-1.tscn" id="6_ipej6"]
+[ext_resource type="PackedScene" uid="uid://cpucjcsixohb" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-Low-1.tscn" id="7_8l4ym"]
+[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="7_ikcrf"]
 [ext_resource type="PackedScene" uid="uid://bdoi0xejcvx57" path="res://assets/meshes/Misc/Crates-Palets/Crate-1.tscn" id="8_qtl1u"]
+[ext_resource type="PackedScene" uid="uid://ofpqhlh5dxxj" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-Low-2.tscn" id="9_2g7c8"]
 [ext_resource type="PackedScene" uid="uid://s1s7r0bew5gq" path="res://assets/meshes/Misc/Crates-Palets/palet_1.tscn" id="9_4aq6d"]
 [ext_resource type="PackedScene" uid="uid://bq382ii6epxn4" path="res://assets/meshes/Misc/Crates-Palets/Crate-Lid-1.tscn" id="10_4aq6d"]
 [ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="11_1jfds"]
@@ -73,6 +76,143 @@ mesh = SubResource("BoxMesh_wx1sp")
 
 [node name="warehouse_1" parent="." instance=ExtResource("4_w06of")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.0018868446, 0.0063552856, -6.007277)
+
+[node name="Node3D" type="Node3D" parent="warehouse_1"]
+
+[node name="WareHouse-Rack-1" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3163913, -0.00044410676, -8.740904)
+
+[node name="WareHouse-Rack-2" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3163913, -0.00044410676, -18.740904)
+
+[node name="WareHouse-Rack-3" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1836087, -0.00044410676, -18.740904)
+
+[node name="WareHouse-Rack-4" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1836087, -0.00044410676, -8.740904)
+
+[node name="WareHouse-Rack-5" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.316392, -0.00044410676, -18.740904)
+
+[node name="WareHouse-Rack-7" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.816391, -0.00044410676, 1.2590961)
+
+[node name="WareHouse-Rack-8" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.816391, -0.00044410676, -8.740904)
+
+[node name="WareHouse-Rack-28" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.683609, -0.00044410676, -8.740904)
+
+[node name="WareHouse-Rack-29" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.683609, -0.00044410676, -8.740904)
+
+[node name="WareHouse-Rack-30" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.683609, -0.00044410676, 1.2590961)
+
+[node name="WareHouse-Rack-31" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.683609, -0.00044410676, -18.740904)
+
+[node name="WareHouse-Rack-32" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.683609, -0.00044410676, -28.740904)
+
+[node name="WareHouse-Rack-33" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.683609, -0.00044410676, -38.740906)
+
+[node name="WareHouse-Rack-34" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.683609, -0.00044410676, -48.740906)
+
+[node name="WareHouse-Rack-35" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.683609, -0.00044410676, -58.740913)
+
+[node name="WareHouse-Rack-15" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.816391, -0.00044410676, -18.740904)
+
+[node name="WareHouse-Rack-16" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.816391, -0.00044410676, -28.740904)
+
+[node name="WareHouse-Rack-25" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.816391, -0.00044410676, -38.740906)
+
+[node name="WareHouse-Rack-26" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.816391, -0.00044410676, -48.740906)
+
+[node name="WareHouse-Rack-27" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.816391, -0.00044410676, -58.74092)
+
+[node name="WareHouse-Rack-6" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.816391, -0.00044410676, -18.740904)
+
+[node name="WareHouse-Rack-9" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.683608, -0.00044410676, -18.740904)
+
+[node name="WareHouse-Rack-10" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.183608, -0.00044410676, -18.740904)
+
+[node name="WareHouse-Rack-11" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.683608, -0.00044410676, -8.740904)
+
+[node name="WareHouse-Rack-12" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.183608, -0.00044410676, -8.740904)
+
+[node name="WareHouse-Rack-13" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.683608, -0.00044410676, -28.740904)
+
+[node name="WareHouse-Rack-14" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.183608, -0.00044410676, -28.740904)
+
+[node name="WareHouse-Rack-19" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3163918, -0.00044410676, -38.740906)
+
+[node name="WareHouse-Rack-20" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1836082, -0.00044410676, -38.740906)
+
+[node name="WareHouse-Rack-21" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.316392, -0.00044410676, -38.740906)
+
+[node name="WareHouse-Rack-22" parent="warehouse_1/Node3D" instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.816392, -0.00044410676, -38.740906)
+
+[node name="Warehouse-Rack-Hole-1" parent="warehouse_1/Node3D" instance=ExtResource("6_ipej6")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -11.371424, 0, -8.714485)
+
+[node name="Warehouse-Rack-Hole-2" parent="warehouse_1/Node3D" instance=ExtResource("6_ipej6")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -8.871424, 0, -8.714485)
+
+[node name="Warehouse-Rack-Hole-3" parent="warehouse_1/Node3D" instance=ExtResource("6_ipej6")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 8.628576, 0, -38.714485)
+
+[node name="Warehouse-Rack-Hole-4" parent="warehouse_1/Node3D" instance=ExtResource("6_ipej6")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 11.128576, 0, -38.714485)
+
+[node name="Warehouse-Rack-Hole-5" parent="warehouse_1/Node3D" instance=ExtResource("6_ipej6")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 11.128576, 0, -48.714485)
+
+[node name="Warehouse-Rack-Hole-8" parent="warehouse_1/Node3D" instance=ExtResource("6_ipej6")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -1.3714236, 0, -48.714485)
+
+[node name="Warehouse-Rack-Hole-6" parent="warehouse_1/Node3D" instance=ExtResource("6_ipej6")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.628576, 0, -48.714485)
+
+[node name="Warehouse-Rack-Hole-7" parent="warehouse_1/Node3D" instance=ExtResource("6_ipej6")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1.1285764, 0, -48.714485)
+
+[node name="Warehouse-Rack-Low-1" parent="warehouse_1/Node3D" instance=ExtResource("7_8l4ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.326, 0, -28.7847)
+
+[node name="Warehouse-Rack-Low-2" parent="warehouse_1/Node3D" instance=ExtResource("7_8l4ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.826, 0, -28.7847)
+
+[node name="Warehouse-Rack-Low-3" parent="warehouse_1/Node3D" instance=ExtResource("7_8l4ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3260001, 0, -28.7847)
+
+[node name="Warehouse-Rack-Low-4" parent="warehouse_1/Node3D" instance=ExtResource("7_8l4ym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1739999, 0, -28.7847)
+
+[node name="Warehouse-Rack-Low-5" parent="warehouse_1/Node3D" instance=ExtResource("9_2g7c8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.693133, 0, -48.68074)
+
+[node name="Warehouse-Rack-Low-6" parent="warehouse_1/Node3D" instance=ExtResource("9_2g7c8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.193134, 0, -48.68074)
 
 [node name="elevator" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.355262, -64.50115)
@@ -262,8 +402,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0440054, 0.009669844, -2.2
 [node name="Crate-Lid-1" parent="." instance=ExtResource("10_4aq6d")]
 transform = Transform3D(0.905983, 0, 0.42331412, 0, 1, 0, -0.42331412, 0, 0.905983, -12.422538, 2.0385823, -3.0068583)
 
-[node name="ForkLift-1" parent="." instance=ExtResource("11_1jfds")]
-transform = Transform3D(0.71748227, 0, -0.6965768, 0, 1, 0, 0.6965768, 0, 0.71748227, 2.6013234, 0.011134505, -6.7897077)
+[node name="Crate-Lid-2" parent="." instance=ExtResource("10_4aq6d")]
+transform = Transform3D(1.6202683, 0, 0.17784885, 0, 1.63, 0, -0.17784885, 0, 1.6202683, -4.06915, 3.2327573, -26.006859)
 
-[node name="WareHouse-Rack-1" parent="." instance=ExtResource("12_2d1w7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.945494, 0.0063552856, -3.6031177)
+[node name="ForkLift-1" parent="." instance=ExtResource("11_1jfds")]
+transform = Transform3D(0.7445446, 0, -0.66757274, 0, 1, 0, 0.66757274, 0, 0.7445446, -12.309879, 0.011134505, -7.785687)
+
+[node name="ForkLift-2" parent="." instance=ExtResource("11_1jfds")]
+transform = Transform3D(-0.026857466, 0, -0.9996393, 0, 1, 0, 0.9996393, 0, -0.026857466, 3.695291, 0.011134505, -50.22516)
+
+[node name="global_light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.82864, 0.55939037, -0.020941058, -0.2387473, 0.387004, 0.8906335, 0.50631595, -0.73301464, 0.45423967, 0, 0, 0)
+light_energy = 0.11
+shadow_enabled = true
+shadow_opacity = 0.84
+
+[node name="Crate-2" parent="." instance=ExtResource("8_qtl1u")]
+transform = Transform3D(1.62, 0, 0, 0, 1.62, 0, 0, 0, 1.62, -4.13723, 0.02849549, -26.129477)
