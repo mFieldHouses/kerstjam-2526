@@ -1156,7 +1156,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_g1m3y")
 surface_material_override/0 = SubResource("StandardMaterial3D_f80p7")
 
 [node name="player" parent="." instance=ExtResource("12_3bagg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.29828, 2.2337356, 1.5666488)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.210331, 0.3130476, 8.99925)
+step_height = 0.4
 
 [node name="floor" type="StaticBody3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)

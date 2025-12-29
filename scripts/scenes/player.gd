@@ -12,6 +12,8 @@ const DEFAULT_FOV = 75
 var _health : float = 100.0
 var _max_health : float = 100.0
 
+@export var step_height : float = 0.3
+
 var sensitivity_multipliers : Dictionary[String, float] = {
 	"default" : 1.0,
 	"in_scope" : 0.5
@@ -166,6 +168,12 @@ func _physics_process(delta: float) -> void:
 	previous_camera_rotation_y = rotation.y
 	
 	$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera.global_rotation.y = camera.global_rotation.y
+	
+	$CollisionShape3D/step_ray.global_position = Vector3(velocity.x, 0.5, velocity.z).normalized() * 0.4 + $CollisionShape3D.global_position
+	if $CollisionShape3D/step_ray.get_collision_point() and $CollisionShape3D/step_ray.get_collider():
+		var _colpoint : Vector3 = $CollisionShape3D/step_ray.get_collision_point()
+		if _colpoint.y > global_position.y and _colpoint.y - global_position.y <= step_height:
+			global_position.y = _colpoint.y
 	
 	if !noclip:
 		var collision = move_and_slide()
