@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://ct7frpi2yxyeh" path="res://assets/meshes/Misc/Pakjes/pakje-2.tscn" id="18_flawf"]
 [ext_resource type="PackedScene" uid="uid://bycdmprdpjspp" path="res://assets/meshes/Misc/Pakjes/pakje-3.tscn" id="19_161pk"]
 [ext_resource type="PackedScene" uid="uid://c3b7hi8pcksci" path="res://assets/meshes/Misc/Pakjes/pakje-4.tscn" id="20_bwhjg"]
+[ext_resource type="PackedScene" uid="uid://dsk1rh2u3ifsb" path="res://assets/meshes/Misc/Speaker-1.glb" id="21_161pk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -48,8 +49,6 @@ texture_filter = 0
 material = SubResource("StandardMaterial3D_1o4kk")
 size = Vector2(100, 100)
 
-[sub_resource type="BoxMesh" id="BoxMesh_wx1sp"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_vwg43"]
 size = Vector3(6.0908203, 6.447693, 0.7508545)
 
@@ -74,10 +73,6 @@ skeleton = NodePath("../..")
 
 [node name="player" parent="." instance=ExtResource("3_bnj7l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3274956)
-
-[node name="speaker" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6939697, 4.36113, -7.282346)
-mesh = SubResource("BoxMesh_wx1sp")
 
 [node name="warehouse_1" parent="." instance=ExtResource("4_w06of")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.0018868446, 0.0063552856, -6.007277)
@@ -428,6 +423,57 @@ transform = Transform3D(1.62, 0, 0, 0, 1.62, 0, 0, 0, 1.62, -4.13723, 0.02849549
 [node name="Lamp-Hangend-Plafond-1" parent="." instance=ExtResource("16_70t0q")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -11.482518)
 
+[node name="Lamp-Hangend-Plafond-2" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -21.897352)
+
+[node name="Lamp-Hangend-Plafond-3" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -32.278183)
+
+[node name="Lamp-Hangend-Plafond-4" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -41.506374)
+
+[node name="Lamp-Hangend-Plafond-5" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -50.555523)
+
+[node name="Lamp-Hangend-Plafond-6" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -60.89656)
+
+[node name="Lamp-Hangend-Plafond-7" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.2477756, 17.076141, -11.482518)
+
+[node name="Lamp-Hangend-Plafond-8" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.2477756, 17.076141, -21.897352)
+
+[node name="Lamp-Hangend-Plafond-9" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.2477756, 17.076141, -32.278183)
+
+[node name="Lamp-Hangend-Plafond-10" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.2477756, 17.076141, -41.506374)
+
+[node name="Lamp-Hangend-Plafond-11" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.2477756, 17.076141, -50.555523)
+
+[node name="Lamp-Hangend-Plafond-12" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.2477756, 17.076141, -60.89656)
+
+[node name="Lamp-Hangend-Plafond-13" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.3842607, 17.076141, -11.482518)
+
+[node name="Lamp-Hangend-Plafond-14" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.3842607, 17.076141, -21.897352)
+
+[node name="Lamp-Hangend-Plafond-15" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.3842607, 17.076141, -32.278183)
+
+[node name="Lamp-Hangend-Plafond-16" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.3842607, 17.076141, -41.506374)
+
+[node name="Lamp-Hangend-Plafond-17" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.3842607, 17.076141, -50.555523)
+
+[node name="Lamp-Hangend-Plafond-18" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.3842607, 17.076141, -60.89656)
+
 [node name="Pakje-1" parent="." instance=ExtResource("17_yg01m")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.2639363, 0.59767354, -10.174525)
 
@@ -454,3 +500,6 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -7.067863, 0.5871386, -
 
 [node name="Pakje-9" parent="." instance=ExtResource("20_bwhjg")]
 transform = Transform3D(0.47092324, 0, -0.16802171, 0, 0.5, 0, 0.16802171, 0, 0.47092324, -1.1075132, 0.59635437, -18.365955)
+
+[node name="Speaker-1" parent="." instance=ExtResource("21_161pk")]
+transform = Transform3D(0.92681074, 0.3755288, 0, -0.3755288, 0.92681074, 0, 0, 0, 1, -6.856001, 4.0616603, -8.796248)
