@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3xius20n1uk8"]
+
+[ext_resource type="PackedScene" uid="uid://51sjwcrjw5qo" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-1.glb" id="1_v0qj8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w62rq"]
+size = Vector3(2.2988281, 14.969849, 10.484009)
+
+[node name="WareHouse-Rack-1" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1508789, 6.9849243, -0.015686035)
+shape = SubResource("BoxShape3D_w62rq")
+
+[node name="WareHouse-Rack-1" parent="StaticBody3D" instance=ExtResource("1_v0qj8")]

@@ -1,6 +1,6 @@
 [gd_resource type="VisualShader" load_steps=27 format=3 uid="uid://cdqojeu3yxll2"]
 
-[ext_resource type="Script" path="res://assets/shaders/PerlinNoise.gd" id="1_tcbw1"]
+[ext_resource type="Script" uid="uid://bk1c23d0rcle0" path="res://assets/shaders/PerlinNoise.gd" id="1_tcbw1"]
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_wf7q5"]
 

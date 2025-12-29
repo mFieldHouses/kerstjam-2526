@@ -1,12 +1,17 @@
-[gd_scene load_steps=16 format=3 uid="uid://cfufrt7a0cruc"]
+[gd_scene load_steps=21 format=3 uid="uid://cfufrt7a0cruc"]
 
-[ext_resource type="Script" uid="uid://cgayko6nfo5rq" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
+[ext_resource type="Script" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_wu2bj"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="3_bnj7l"]
 [ext_resource type="PackedScene" uid="uid://c8lkvpa6shb2o" path="res://assets/meshes/Debug/warehouse_1.glb" id="4_w06of"]
 [ext_resource type="Script" uid="uid://d8wom6sgj4gw" path="res://scripts/stages/warehouse/elevator.gd" id="5_8yt6b"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="6_8yt6b"]
-[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="7_ikcrf"]
+[ext_resource type="Script" path="res://classes/nodes/modules/StageLauncher.gd" id="7_ikcrf"]
+[ext_resource type="PackedScene" uid="uid://bdoi0xejcvx57" path="res://assets/meshes/Misc/Crates-Palets/Crate-1.tscn" id="8_qtl1u"]
+[ext_resource type="PackedScene" uid="uid://s1s7r0bew5gq" path="res://assets/meshes/Misc/Crates-Palets/palet_1.tscn" id="9_4aq6d"]
+[ext_resource type="PackedScene" uid="uid://bq382ii6epxn4" path="res://assets/meshes/Misc/Crates-Palets/Crate-Lid-1.tscn" id="10_4aq6d"]
+[ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="11_1jfds"]
+[ext_resource type="PackedScene" uid="uid://d3xius20n1uk8" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-1.tscn" id="12_2d1w7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -67,7 +72,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6939697, 4.36113, -7.28234
 mesh = SubResource("BoxMesh_wx1sp")
 
 [node name="warehouse_1" parent="." instance=ExtResource("4_w06of")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, -6.005)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.0018868446, 0.0063552856, -6.007277)
 
 [node name="elevator" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.355262, -64.50115)
@@ -90,7 +95,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1511102, -58.99383)
 [node name="StageLauncher" type="Node3D" parent="large_doorway"]
 script = ExtResource("7_ikcrf")
 stage_id = "warehouse/warehouse_2"
-metadata/_custom_type_script = "uid://dytis7djokgek"
 
 [node name="ActionPromptTrigger" type="Node3D" parent="large_doorway/StageLauncher"]
 script = ExtResource("6_8yt6b")
@@ -248,3 +252,18 @@ shadow_enabled = true
 shadow_normal_bias = 2.188
 shadow_blur = 0.0
 omni_range = 12.528
+
+[node name="Crate-1" parent="." instance=ExtResource("8_qtl1u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.436082, 0.022139728, -2.9802718)
+
+[node name="Palet-1" parent="." instance=ExtResource("9_4aq6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0440054, 0.009669844, -2.2543375)
+
+[node name="Crate-Lid-1" parent="." instance=ExtResource("10_4aq6d")]
+transform = Transform3D(0.905983, 0, 0.42331412, 0, 1, 0, -0.42331412, 0, 0.905983, -12.422538, 2.0385823, -3.0068583)
+
+[node name="ForkLift-1" parent="." instance=ExtResource("11_1jfds")]
+transform = Transform3D(0.71748227, 0, -0.6965768, 0, 1, 0, 0.6965768, 0, 0.71748227, 2.6013234, 0.011134505, -6.7897077)
+
+[node name="WareHouse-Rack-1" parent="." instance=ExtResource("12_2d1w7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.945494, 0.0063552856, -3.6031177)
