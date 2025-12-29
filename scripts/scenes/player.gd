@@ -172,7 +172,9 @@ func _physics_process(delta: float) -> void:
 	$CollisionShape3D/step_ray.global_position = Vector3(velocity.x, 0.5, velocity.z).normalized() * 0.4 + $CollisionShape3D.global_position
 	if $CollisionShape3D/step_ray.get_collision_point() and $CollisionShape3D/step_ray.get_collider():
 		var _colpoint : Vector3 = $CollisionShape3D/step_ray.get_collision_point()
-		if _colpoint.y > global_position.y and _colpoint.y - global_position.y <= step_height:
+		var _angle_to_up : float = Vector3.UP.angle_to($CollisionShape3D/step_ray.get_collision_normal())
+		#print(_angle_to_up / PI)
+		if _colpoint.y > global_position.y and _colpoint.y - global_position.y <= step_height and _angle_to_up < 0.05 * PI and is_on_floor():
 			global_position.y = _colpoint.y
 	
 	if !noclip:
@@ -332,7 +334,7 @@ func shoot() -> void:
 		add_child(_hit_effect)
 		_hit_effect.global_position = shoot_ray.get_collision_point()
 		
-		if _shot_collider is Enemy or _shot_collider is Hittable or _shot_collider is Snowman or _shot_collider is SnowmanSegment:
+		if _shot_collider is Enemy or _shot_collider is Hittable or _shot_collider is Snowman or _shot_collider is SnowmanSegment or _shot_collider is JumpingMimic:
 			var _dmg = _used_ammo.get_damage()
 			_shot_collider.hit(_dmg, shoot_ray.get_collision_point(), 1)
 			HitMarkerManager.hit_at(shoot_ray.get_collision_point(), _dmg, preload("res://scenes/particle_effects/santa_gun_hit_standard.tscn"), get_parent())

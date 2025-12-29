@@ -10,5 +10,8 @@ func _process(delta: float) -> void:
 	pass
 
 func _trigger(x) -> void:
-	DialogManager.initiate_remote_dialog("discover_elevator", "Henkie", load("res://icon.svg"))
-	$"../large_doorway/StageLauncher/ActionPromptTrigger".enabled = true
+	if GlobalGameFlags.has_flag("power_enabled"):
+		SceneManager.launch_stage("confrontation")
+	else:
+		DialogManager.initiate_remote_dialog("discover_elevator", "Henkie", load("res://icon.svg"))
+		$"../large_doorway/StageLauncher/ActionPromptTrigger".enabled = true

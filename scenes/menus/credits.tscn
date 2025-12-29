@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=3 uid="uid://beibcu2grf5we"]
+
+[ext_resource type="Script" uid="uid://c7qh4fc17t3dg" path="res://scripts/credits.gd" id="1_cu0al"]
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cu0al")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.5
+offset_top = -219.0
+offset_right = 117.5
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "AGENT 11"
+
+[node name="credits" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -193.0
+offset_top = -97.0
+offset_right = 193.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Models: Cairo555
+Textures: Cairo555
+Animation: Cairo555
+Programming: Mathias Veldhuizen
+Music & sound design: Mathias Veldhuizen
+Game/level design: Mathias Veldhuizen
+
+Software used: Godot, Blender, Krita and Ableton Live 12 Suite"
+horizontal_alignment = 1
+
+[node name="thanks" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = 156.0
+offset_right = 86.0
+offset_bottom = 179.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Thank you for playing!"
+
+[node name="exit" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = 182.0
+offset_right = 145.0
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "(Press anything to exit to main menu)"
