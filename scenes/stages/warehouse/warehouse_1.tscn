@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cfufrt7a0cruc"]
+[gd_scene load_steps=33 format=3 uid="uid://cfufrt7a0cruc"]
 
 [ext_resource type="Script" uid="uid://cgayko6nfo5rq" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_wu2bj"]
@@ -16,13 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="11_1jfds"]
 [ext_resource type="PackedScene" uid="uid://d3xius20n1uk8" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-1.tscn" id="12_2d1w7"]
 [ext_resource type="PackedScene" uid="uid://bfsij4nt4lxjq" path="res://assets/meshes/Misc/lamp_hangend_plafond_1.tscn" id="16_70t0q"]
-[ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="17_yg01m"]
-[ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="18_4xo74"]
-[ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="19_flawf"]
 [ext_resource type="PackedScene" uid="uid://cyplqp3bgblse" path="res://assets/meshes/Misc/Pakjes/pakje-1.tscn" id="17_yg01m"]
+[ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="18_4xo74"]
 [ext_resource type="PackedScene" uid="uid://ct7frpi2yxyeh" path="res://assets/meshes/Misc/Pakjes/pakje-2.tscn" id="18_flawf"]
 [ext_resource type="PackedScene" uid="uid://bycdmprdpjspp" path="res://assets/meshes/Misc/Pakjes/pakje-3.tscn" id="19_161pk"]
+[ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="19_flawf"]
 [ext_resource type="PackedScene" uid="uid://c3b7hi8pcksci" path="res://assets/meshes/Misc/Pakjes/pakje-4.tscn" id="20_bwhjg"]
+[ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="23_dwaqj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -229,9 +229,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.193134, 0, -48.68074)
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="warehouse_1"]
 transform = Transform3D(17.5, 0, 0, 0, 1, 0, 0, 0, 5.805, 0, 0, 2.3419409)
 navigation_mesh = SubResource("NavigationMesh_yg01m")
-
-[node name="present_mimic" parent="warehouse_1" instance=ExtResource("17_yg01m")]
-transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -6.7226243, 0, -38.358543)
 
 [node name="elevator" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.355262, -64.50115)
@@ -488,29 +485,11 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -4.0428, 10.805038, -20
 [node name="Lamp-Hangend-Plafond-16" parent="." instance=ExtResource("16_70t0q")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -4.0428, 10.805038, -12.130974)
 
-[node name="present_mimic" parent="." instance=ExtResource("17_yg01m")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -12.833369, 0.0063552856, -18.625954)
-
-[node name="present_mimic2" parent="." instance=ExtResource("17_yg01m")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.833369, 0.0063552856, -18.625954)
-
 [node name="Snowman" parent="." instance=ExtResource("18_4xo74")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.6856003, 0.026158184, -37.024513)
 
 [node name="jumping_mimic" parent="." instance=ExtResource("19_flawf")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.0856214, 0.0063552856, -35.40018)
-
-[node name="present_mimic3" parent="." instance=ExtResource("17_yg01m")]
-transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 10.019836, 0.0063552856, -37.706245)
-
-[node name="present_mimic4" parent="." instance=ExtResource("17_yg01m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.580101, 0.0063552856, -33.78741)
-
-[node name="present_mimic5" parent="." instance=ExtResource("17_yg01m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.128141, 0.0063552856, -32.736244)
-
-[node name="present_mimic6" parent="." instance=ExtResource("17_yg01m")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 4.1240435, 0.0063557625, -23.769781)
 
 [node name="jumping_mimic2" parent="." instance=ExtResource("19_flawf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.943935, 0.0063552856, -45.924328)
@@ -520,9 +499,6 @@ transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.2588
 
 [node name="jumping_mimic3" parent="." instance=ExtResource("19_flawf")]
 transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -3.6550949, 3.0878425, -39.188534)
-
-[node name="present_mimic7" parent="." instance=ExtResource("17_yg01m")]
-transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9659258, -4.2064476, 4.1417427, -41.02745)
 
 [node name="Snowman3" parent="." instance=ExtResource("18_4xo74")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6044216, 0.02615866, -56.535126)
@@ -537,7 +513,6 @@ transform = Transform3D(-0.25881916, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25
 transform = Transform3D(0.34272534, 0, 0.93943566, 0, 1, 0, -0.93943566, 0, 0.34272534, -7.9326253, 0.0063557625, -50.491238)
 
 [node name="present_mimic9" parent="." instance=ExtResource("17_yg01m")]
-transform = Transform3D(-0.14014089, 0, 0.99013156, 0, 1, 0, -0.99013156, 0, -0.14014089, -7.8765917, 0.006354809, -52.541172)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -11.482518)
 
 [node name="Pakje-1" parent="." instance=ExtResource("17_yg01m")]
@@ -566,3 +541,27 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -7.067863, 0.5871386, -
 
 [node name="Pakje-9" parent="." instance=ExtResource("20_bwhjg")]
 transform = Transform3D(0.47092324, 0, -0.16802171, 0, 0.5, 0, 0.16802171, 0, 0.47092324, -1.1075132, 0.59635437, -18.365955)
+
+[node name="present_mimic" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -13.059296, 0.006354809, -18.97249)
+
+[node name="present_mimic2" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -11.059296, 0.006354809, -18.97249)
+
+[node name="present_mimic7" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.255799, 4.460152, -41.578125)
+
+[node name="present_mimic10" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3354373, 0.006354809, -36.225468)
+
+[node name="present_mimic3" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 10.188904, 0.0063557625, -37.8018)
+
+[node name="present_mimic4" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 13.325283, 0.0063557625, -31.900919)
+
+[node name="present_mimic5" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.492304, 0.006355524, -31.828205)
+
+[node name="present_mimic6" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.116492, 0.0063552856, -23.845299)

@@ -4,7 +4,7 @@ var _timings : Dictionary = {
 	"title": {
 		"opacity": 1.0,
 		"fade": 2.0,
-		"wait": 3.5
+		"wait": 2.0
 	},
 	"credits": {
 		"opacity": 1.0,
@@ -30,7 +30,7 @@ func _ready() -> void:
 		if _child is Label:
 			_child.modulate.a = 0.0
 	
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	
 	for _id : String in _timings:
 		var _tween : Tween = create_tween()

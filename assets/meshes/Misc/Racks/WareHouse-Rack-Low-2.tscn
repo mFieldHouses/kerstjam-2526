@@ -1,7 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://ofpqhlh5dxxj"]
+[gd_scene load_steps=3 format=3 uid="uid://ofpqhlh5dxxj"]
 
+[ext_resource type="Script" uid="uid://dovu0lm7i1dhq" path="res://scripts/shelf_stocker.gd" id="1_18bch"]
 [ext_resource type="PackedScene" uid="uid://bc86qs2ha8x1y" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-Low-2.glb" id="1_gwkmt"]
 
 [node name="Warehouse-Rack-Low-1" type="Node3D"]
+script = ExtResource("1_18bch")
 
 [node name="WareHouse-Rack-Low-2" parent="." instance=ExtResource("1_gwkmt")]
+
+[node name="Marker3D" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74350655, -3.0009441)
+
+[node name="Marker3D2" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74350655, -1.0009441)
+
+[node name="Marker3D3" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74350655, 0.99905586)
+
+[node name="Marker3D4" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74350655, 2.9990559)
+
+[node name="Marker3D5" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081453, -3.0009441)
+
+[node name="Marker3D6" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081453, -1.0009441)
+
+[node name="Marker3D7" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081453, 0.99905586)
+
+[node name="Marker3D8" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081453, 2.9990559)
+
+[node name="Marker3D9" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.3979545, -2.219061)
+
+[node name="Marker3D13" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.757616, -2.219061)
+
+[node name="Marker3D17" type="Marker3D" parent="WareHouse-Rack-Low-2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.088504, -2.219061)

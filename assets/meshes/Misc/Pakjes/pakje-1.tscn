@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=4 uid="uid://cyplqp3bgblse"]
+[gd_scene load_steps=13 format=4 uid="uid://cyplqp3bgblse"]
 
+[ext_resource type="Script" uid="uid://banyqhj3txj0q" path="res://scripts/pakjes/pakje-1.gd" id="1_37nd4"]
 [ext_resource type="Material" uid="uid://bud3ig45nf6v7" path="res://assets/materials/GreenReflective.tres" id="1_tuiv8"]
 [ext_resource type="Material" uid="uid://c8j7wapbwxxo1" path="res://assets/materials/RedReflective.tres" id="2_37nd4"]
 
@@ -144,6 +145,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ltlv5")
 
 [node name="Pakje-1" type="Node3D"]
+script = ExtResource("1_37nd4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
