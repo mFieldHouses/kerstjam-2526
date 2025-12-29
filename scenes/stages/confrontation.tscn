@@ -1,0 +1,83 @@
+[gd_scene load_steps=15 format=3 uid="uid://c1dnotdac1qr3"]
+
+[ext_resource type="Script" uid="uid://b2iw6rsa4l7j7" path="res://scripts/stages/confrontation.gd" id="1_q58n8"]
+[ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_txjfn"]
+[ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_q8etp"]
+[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_jyk3o"]
+[ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="10_fbhbk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wvqfc"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_78x8d"]
+sky_material = SubResource("ProceduralSkyMaterial_wvqfc")
+
+[sub_resource type="Environment" id="Environment_28ucp"]
+background_mode = 2
+sky = SubResource("Sky_78x8d")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a7fa8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o4kk"]
+next_pass = SubResource("ShaderMaterial_a7fa8")
+albedo_texture = ExtResource("2_q8etp")
+uv1_scale = Vector3(20, 20, 20)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wvqfc"]
+material = SubResource("StandardMaterial3D_1o4kk")
+size = Vector2(20, 20)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_2rhon"]
+vertices = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, -10)
+polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_78x8d"]
+size = Vector3(20.504883, 0.49658203, 19.720459)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q58n8"]
+
+[node name="confrontation" type="Node3D"]
+script = ExtResource("1_q58n8")
+
+[node name="player" parent="." instance=ExtResource("1_txjfn")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_28ucp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_wvqfc")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="MeshInstance3D"]
+navigation_mesh = SubResource("NavigationMesh_2rhon")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.6848015, 0.7287296, 0, -0.7287296, -0.6848015, 0, 0, 0)
+shadow_enabled = true
+
+[node name="floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, 0)
+shape = SubResource("BoxShape3D_78x8d")
+
+[node name="StageLauncher" type="Node3D" parent="."]
+script = ExtResource("9_jyk3o")
+stage_id = "yeti_chase"
+metadata/_custom_type_script = "uid://dytis7djokgek"
+
+[node name="AreaTrigger" type="Node3D" parent="StageLauncher"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.336687, 0.6467581, 0)
+script = ExtResource("10_fbhbk")
+metadata/_custom_type_script = "uid://b7dvxli4hd1ni"
+
+[node name="Area3D" type="Area3D" parent="StageLauncher/AreaTrigger"]
+
+[node name="waves" type="Node3D" parent="."]
+
+[node name="philip" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.695903, 2.275742, -6.309591)
+mesh = SubResource("BoxMesh_q58n8")

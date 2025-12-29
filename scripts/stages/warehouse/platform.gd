@@ -20,4 +20,4 @@ func _trigger(x) -> void:
 	$lights.visible = true
 	
 	var _move_tween : Tween = create_tween()
-	_move_tween.tween_property(self, "position:y", -54, 2) #sequence van een minuut 
+	_move_tween.tween_property(self, "position:y", -54, 60) #sequence van een minuut 

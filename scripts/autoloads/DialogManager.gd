@@ -74,6 +74,12 @@ func initiate_dialog_with(dialog_file_name : String, with : Node3D, conversor_na
 			continue
 		elif _line.begins_with("\\"):
 			_line = _line.lstrip("\\")
+		elif _line.begins_with("set_name"):
+			conversor_name = _line.split(" ")[1]
+			continue
+		elif _line.begins_with("set_thumbnail"):
+			thumbnail = load(_line.split(" ")[1])
+			continue
 		
 		#if _line.begins_with(">"):
 			#_line = tr(_line.lstrip("> "))

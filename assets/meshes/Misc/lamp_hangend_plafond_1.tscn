@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=4 uid="uid://cvciuh02hphg1"]
+[gd_scene load_steps=11 format=4 uid="uid://bfsij4nt4lxjq"]
 
 [ext_resource type="Texture2D" uid="uid://bkpod0mi2c8jw" path="res://assets/meshes/Misc/HangendeLamp-1_TM-Metal-1.png" id="1_3fn6p"]
 [ext_resource type="Texture2D" uid="uid://bcud4h04h4bjq" path="res://assets/meshes/Misc/HangendeLamp-1_TM-Metal-Normal-1.png" id="2_8iks2"]
-[ext_resource type="Material" uid="uid://x4p7jlnstrfx" path="res://assets/materials/Emit-Yellow-1.tres" id="3_n0cnr"]
+[ext_resource type="Material" uid="uid://cd8bvypubtjkf" path="res://assets/materials/Emit-Yellow-1.tres" id="3_n0cnr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b3dew"]
 resource_name = "Crate-1.001"
@@ -134,3 +134,8 @@ surface_material_override/0 = ExtResource("3_n0cnr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50496805, 0)
 mesh = SubResource("ArrayMesh_0nkh0")
 skeleton = NodePath("")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29460096, 0)
+omni_range = 0.7027171
+omni_attenuation = 2.121

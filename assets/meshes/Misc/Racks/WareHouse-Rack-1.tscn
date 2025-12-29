@@ -1,7 +1,69 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3xius20n1uk8"]
+[gd_scene load_steps=3 format=3 uid="uid://d3xius20n1uk8"]
 
 [ext_resource type="PackedScene" uid="uid://51sjwcrjw5qo" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-1.glb" id="1_v0qj8"]
+[ext_resource type="Script" uid="uid://dovu0lm7i1dhq" path="res://scripts/shelf_stocker.gd" id="1_w62rq"]
 
 [node name="WareHouse-Rack-1" type="Node3D"]
+script = ExtResource("1_w62rq")
 
 [node name="WareHouse-Rack-1" parent="." instance=ExtResource("1_v0qj8")]
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74350655, -3.0009441)
+
+[node name="Marker3D2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74350655, -1.0009441)
+
+[node name="Marker3D3" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74350655, 0.99905586)
+
+[node name="Marker3D4" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74350655, 2.9990559)
+
+[node name="Marker3D5" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081453, -3.0009441)
+
+[node name="Marker3D6" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081453, -1.0009441)
+
+[node name="Marker3D7" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081453, 0.99905586)
+
+[node name="Marker3D8" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081453, 2.9990559)
+
+[node name="Marker3D9" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.3979545, -3.0009441)
+
+[node name="Marker3D10" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.3979545, -1.0009441)
+
+[node name="Marker3D11" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.3979545, 0.99905586)
+
+[node name="Marker3D12" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.3979545, 2.9990559)
+
+[node name="Marker3D13" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.757616, -3.0009441)
+
+[node name="Marker3D14" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.757616, -1.0009441)
+
+[node name="Marker3D15" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.757616, 0.99905586)
+
+[node name="Marker3D16" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.757616, 2.9990559)
+
+[node name="Marker3D17" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.088504, -3.0009441)
+
+[node name="Marker3D18" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.088504, -1.0009441)
+
+[node name="Marker3D19" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.088504, 0.99905586)
+
+[node name="Marker3D20" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.088504, 2.9990559)

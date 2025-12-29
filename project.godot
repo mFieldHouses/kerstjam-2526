@@ -33,6 +33,7 @@ PersistentControls="*res://scripts/autoloads/PersistentControls.gd"
 RaycastManager="*res://scripts/autoloads/RaycastManager.gd"
 DialogManager="*res://scripts/autoloads/DialogManager.gd"
 HitMarkerManager="*res://scripts/autoloads/HitMarkerManager.gd"
+GlobalGameFlags="*res://scripts/autoloads/GlobalGameFlags.gd"
 
 [editor]
 
