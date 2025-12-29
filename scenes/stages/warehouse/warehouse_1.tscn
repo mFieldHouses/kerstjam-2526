@@ -19,6 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="17_yg01m"]
 [ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="18_4xo74"]
 [ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="19_flawf"]
+[ext_resource type="PackedScene" uid="uid://cyplqp3bgblse" path="res://assets/meshes/Misc/Pakjes/pakje-1.tscn" id="17_yg01m"]
+[ext_resource type="PackedScene" uid="uid://ct7frpi2yxyeh" path="res://assets/meshes/Misc/Pakjes/pakje-2.tscn" id="18_flawf"]
+[ext_resource type="PackedScene" uid="uid://bycdmprdpjspp" path="res://assets/meshes/Misc/Pakjes/pakje-3.tscn" id="19_161pk"]
+[ext_resource type="PackedScene" uid="uid://c3b7hi8pcksci" path="res://assets/meshes/Misc/Pakjes/pakje-4.tscn" id="20_bwhjg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -534,3 +538,31 @@ transform = Transform3D(0.34272534, 0, 0.93943566, 0, 1, 0, -0.93943566, 0, 0.34
 
 [node name="present_mimic9" parent="." instance=ExtResource("17_yg01m")]
 transform = Transform3D(-0.14014089, 0, 0.99013156, 0, 1, 0, -0.99013156, 0, -0.14014089, -7.8765917, 0.006354809, -52.541172)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -11.482518)
+
+[node name="Pakje-1" parent="." instance=ExtResource("17_yg01m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.2639363, 0.59767354, -10.174525)
+
+[node name="Pakje-2" parent="." instance=ExtResource("17_yg01m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.286896, 0.59385496, -15.693302)
+
+[node name="Pakje-3" parent="." instance=ExtResource("17_yg01m")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -1.1118485, 0.60302734, -11.505398)
+
+[node name="Pakje-4" parent="." instance=ExtResource("18_flawf")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -6.791892, 0.46529382, -1.5315217)
+
+[node name="Pakje-5" parent="." instance=ExtResource("18_flawf")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -6.791892, 0.46529382, -2.1807384)
+
+[node name="Pakje-6" parent="." instance=ExtResource("18_flawf")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -6.791892, 0.46529382, -2.8070648)
+
+[node name="Pakje-7" parent="." instance=ExtResource("18_flawf")]
+transform = Transform3D(-1.3113416e-08, 0, 0.29999998, 0, 0.29999998, 0, -0.29999998, 0, -1.3113416e-08, -6.293268, 0.697625, -2.316175)
+
+[node name="Pakje-8" parent="." instance=ExtResource("19_161pk")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -7.067863, 0.5871386, -15.261101)
+
+[node name="Pakje-9" parent="." instance=ExtResource("20_bwhjg")]
+transform = Transform3D(0.47092324, 0, -0.16802171, 0, 0.5, 0, 0.16802171, 0, 0.47092324, -1.1075132, 0.59635437, -18.365955)
