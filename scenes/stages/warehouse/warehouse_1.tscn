@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cfufrt7a0cruc"]
+[gd_scene load_steps=25 format=3 uid="uid://cfufrt7a0cruc"]
 
 [ext_resource type="Script" uid="uid://cgayko6nfo5rq" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_wu2bj"]
@@ -8,13 +8,14 @@
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="6_8yt6b"]
 [ext_resource type="PackedScene" uid="uid://ckw76onrbjigi" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-Hole-1.tscn" id="6_ipej6"]
 [ext_resource type="PackedScene" uid="uid://cpucjcsixohb" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-Low-1.tscn" id="7_8l4ym"]
-[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="7_ikcrf"]
+[ext_resource type="Script" path="res://classes/nodes/modules/StageLauncher.gd" id="7_ikcrf"]
 [ext_resource type="PackedScene" uid="uid://bdoi0xejcvx57" path="res://assets/meshes/Misc/Crates-Palets/Crate-1.tscn" id="8_qtl1u"]
 [ext_resource type="PackedScene" uid="uid://ofpqhlh5dxxj" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-Low-2.tscn" id="9_2g7c8"]
 [ext_resource type="PackedScene" uid="uid://s1s7r0bew5gq" path="res://assets/meshes/Misc/Crates-Palets/palet_1.tscn" id="9_4aq6d"]
 [ext_resource type="PackedScene" uid="uid://bq382ii6epxn4" path="res://assets/meshes/Misc/Crates-Palets/Crate-Lid-1.tscn" id="10_4aq6d"]
 [ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="11_1jfds"]
 [ext_resource type="PackedScene" uid="uid://d3xius20n1uk8" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-1.tscn" id="12_2d1w7"]
+[ext_resource type="PackedScene" uid="uid://cvciuh02hphg1" path="res://assets/meshes/Misc/lamp_hangend_plafond_1.tscn" id="16_70t0q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -419,3 +420,6 @@ shadow_opacity = 0.84
 
 [node name="Crate-2" parent="." instance=ExtResource("8_qtl1u")]
 transform = Transform3D(1.62, 0, 0, 0, 1.62, 0, 0, 0, 1.62, -4.13723, 0.02849549, -26.129477)
+
+[node name="Lamp-Hangend-Plafond-1" parent="." instance=ExtResource("16_70t0q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -11.482518)
