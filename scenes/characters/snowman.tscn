@@ -8,7 +8,8 @@ radius = 0.47851563
 height = 1.753418
 
 [node name="Snowman" type="CharacterBody3D"]
-collision_layer = 17
+collision_layer = 4
+collision_mask = 17
 script = ExtResource("1_nldfl")
 
 [node name="Snowman-1" parent="." instance=ExtResource("1_28eu1")]

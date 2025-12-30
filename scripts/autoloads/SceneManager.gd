@@ -2,12 +2,11 @@ extends Node
 
 ##Autoload that manages loading menus and levels.
 
-var _last_loaded_stage_id : String = ""
+#var _last_loaded_stage_id : String = ""
 
 func launch_stage(stage_id : String) -> void: ##Launches the stage with name [param level_id] in [param res://scenes/stages/], replacing the whole scene tree.
 	get_tree().paused = false
-	_last_loaded_stage_id = stage_id
-	print("set var to ", stage_id)
+	#_last_loaded_stage_id = stage_id
 	PersistentUI.fade_black_wait(0.5, true)
 	await PersistentUI.fade_middle
 	get_tree().change_scene_to_file(DefaultPaths.stage_scenes_path + stage_id + ".tscn")
@@ -15,9 +14,11 @@ func launch_stage(stage_id : String) -> void: ##Launches the stage with name [pa
 	PersistentUI.continue_fade.emit()
 
 func restart_stage() -> void:
+	PersistentUI.fade_black_wait(0.5, true)
+	await PersistentUI.fade_middle
+	get_tree().reload_current_scene()
 	get_tree().paused = false
-	print("restarting stage ", _last_loaded_stage_id)
-	launch_stage(_last_loaded_stage_id)
+	PersistentUI.continue_fade.emit()
 	
 func launch_menu(menu_id : String) -> void: ##Launches the menu with name [param menu_id] in [param res://scenes/menus/], replacing the whole scene tree.
 	get_tree().paused = false

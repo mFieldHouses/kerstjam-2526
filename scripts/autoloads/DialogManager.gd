@@ -56,11 +56,22 @@ func initiate_dialog_with(dialog_file_name : String, with : Node3D, conversor_na
 	dialog_started.emit(_dialog_file_path.get_file().get_basename())
 	PlayerState.toggle_sleep(true)
 	PlayerState.player_instance.tween_camera_fov(40, 0.5)
+	PlayerUIState.set_ui_visibility(false)
 	if !FileAccess.file_exists(_dialog_file_path):
 		GameLogger.printerr_as_autoload(self, "Dialog file at " + _dialog_file_path + " does not exist, cannot initiate dialog. Aborting.")
 		return
 	else:
 		GameLogger.print_as_autoload(self, "Initiating dialog from dialog file at " + _dialog_file_path)
+	
+	var _previous_camera_transform : Transform3D = PlayerState.player_instance.camera.global_transform
+	var _target_camera_transform : Transform3D = _previous_camera_transform.looking_at(with.global_position)
+	
+	#PlayerState.player_instance.camera.top_level = true
+	var _transform_in_tween : Tween = create_tween()
+	_transform_in_tween.tween_property(PlayerState.player_instance.camera, "global_transform", _target_camera_transform, 0.5)
+	await _transform_in_tween.finished
+	
+	#PlayerState.player_instance.camera.global_transform = _target_camera_transform
 	
 	var _file = FileAccess.open(_dialog_file_path, FileAccess.READ)
 	var _text = _file.get_as_text()
@@ -99,6 +110,11 @@ func initiate_dialog_with(dialog_file_name : String, with : Node3D, conversor_na
 	PersistentUI.dialog_line("", conversor_name, thumbnail) #hide again
 	PlayerState.toggle_sleep(false)
 	PlayerState.player_instance.tween_camera_fov(PlayerState.player_instance.DEFAULT_FOV, 0.5)
+	PlayerUIState.set_ui_visibility(true)
+	
+	var _transform_out_tween : Tween = create_tween()
+	_transform_out_tween.tween_property(PlayerState.player_instance.camera, "global_transform", _previous_camera_transform, 0.5)
+	await _transform_out_tween.finished
 	
 	dialog_ended.emit(dialog_file_name)
 

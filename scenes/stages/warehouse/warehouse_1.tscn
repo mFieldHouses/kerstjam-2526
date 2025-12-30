@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cfufrt7a0cruc"]
+[gd_scene load_steps=36 format=3 uid="uid://cfufrt7a0cruc"]
 
 [ext_resource type="Script" uid="uid://cgayko6nfo5rq" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_wu2bj"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://c3b7hi8pcksci" path="res://assets/meshes/Misc/Pakjes/pakje-4.tscn" id="20_bwhjg"]
 [ext_resource type="PackedScene" uid="uid://dsk1rh2u3ifsb" path="res://assets/meshes/Misc/Speaker-1.glb" id="21_161pk"]
 [ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="23_dwaqj"]
+[ext_resource type="PackedScene" uid="uid://bmo2v6vkmad7c" path="res://assets/meshes/Weapons/Ammo/bullet_globe_1.tscn" id="25_eo7dm"]
+[ext_resource type="Resource" uid="uid://b060qwaalhnug" path="res://assets/resources/items/ammo/big.tres" id="26_hdkqg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -59,6 +61,9 @@ polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(0, 3, 1), PackedInt32Arr
 [sub_resource type="BoxShape3D" id="BoxShape3D_vwg43"]
 size = Vector3(6.0908203, 6.447693, 0.7508545)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_sd0ji"]
+size = Vector3(32.17462, 3.5155945, 0.4309082)
+
 [node name="Warehouse1" type="Node3D"]
 script = ExtResource("1_wx1sp")
 
@@ -79,7 +84,7 @@ mesh = SubResource("PlaneMesh_0su6h")
 skeleton = NodePath("../..")
 
 [node name="player" parent="." instance=ExtResource("3_bnj7l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.559365, -60.971455)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.730628, -1.479316)
 
 [node name="warehouse_1" parent="." instance=ExtResource("4_w06of")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.0018868446, 0.0063552856, -6.007277)
@@ -498,17 +503,20 @@ transform = Transform3D(-0.9659258, 0, -0.25881913, 0, 1, 0, 0.25881913, 0, -0.9
 [node name="Snowman3" parent="." instance=ExtResource("18_4xo74")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.6044216, 0.02615866, -56.535126)
 
+[node name="Snowman6" parent="." instance=ExtResource("18_4xo74")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1.6044216, 8.026158, -60.535126)
+
+[node name="Snowman7" parent="." instance=ExtResource("18_4xo74")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -5.5756283, 8.026158, -62.535126)
+
+[node name="Snowman5" parent="." instance=ExtResource("18_4xo74")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.395578, 0.02615866, -56.535126)
+
 [node name="Snowman4" parent="." instance=ExtResource("18_4xo74")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.931864, 0.02615866, -54.012783)
 
 [node name="jumping_mimic4" parent="." instance=ExtResource("19_flawf")]
 transform = Transform3D(-0.25881916, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881916, -0.9044843, 0.0063552856, -55.499073)
-
-[node name="present_mimic8" parent="." instance=ExtResource("17_yg01m")]
-transform = Transform3D(0.34272534, 0, 0.93943566, 0, 1, 0, -0.93943566, 0, 0.34272534, -7.9326253, 0.0063557625, -50.491238)
-
-[node name="present_mimic9" parent="." instance=ExtResource("17_yg01m")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -11.482518)
 
 [node name="Lamp-Hangend-Plafond-17" parent="." instance=ExtResource("16_70t0q")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.9499784, 17.076141, -21.897352)
@@ -613,4 +621,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.492304, 0.006355524, -31.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.116492, 0.0063552856, -23.845299)
 
 [node name="Speaker-1" parent="." instance=ExtResource("21_161pk")]
-transform = Transform3D(0.92681074, 0.3755288, 0, -0.3755288, 0.92681074, 0, 0, 0, 1, -6.856001, 4.0616603, -8.796248)
+transform = Transform3D(0.8748988, 0.18414813, 0.4479303, 0, 0.92489153, -0.3802311, -0.48430583, 0.33266374, 0.80918646, -6.112982, 3.9812539, -8.812776)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Speaker-1"]
+transform = Transform3D(0.7598843, -0.31997558, 0.56585467, 0.38271865, 0.92382634, 0.0084474385, -0.52545446, 0.21014404, 0.82446176, -3.9485483, 3.895638, -5.407351)
+top_level = true
+light_energy = 1.5
+spot_range = 17.50867
+spot_angle = 18.427021
+
+[node name="present_mimic11" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.30598474, 0.006355047, -54.310326)
+
+[node name="guardrail" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.8405323, -58.747063)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="guardrail"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7876892, 1.9481659, 0.107299805)
+shape = SubResource("BoxShape3D_sd0ji")
+
+[node name="Ammo-Bullet-Globe-1" parent="." instance=ExtResource("25_eo7dm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.790871, 0.31251785, -7.645172)
+held_item = ExtResource("26_hdkqg")
+count = 10
+
+[node name="present_mimic8" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(0.144218, 0, 0.98954594, 0, 1, 0, -0.98954594, 0, 0.144218, -7.3195047, 0.0063552856, -50.68535)
+
+[node name="present_mimic12" parent="." instance=ExtResource("23_dwaqj")]
+transform = Transform3D(0.144218, 0, 0.98954594, 0, 1, 0, -0.98954594, 0, 0.144218, -8.619435, 0.0063552856, -50.086918)

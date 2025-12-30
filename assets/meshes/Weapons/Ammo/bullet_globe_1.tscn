@@ -1,7 +1,8 @@
-[gd_scene load_steps=30 format=4 uid="uid://bmo2v6vkmad7c"]
+[gd_scene load_steps=32 format=4 uid="uid://bmo2v6vkmad7c"]
 
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="1_ofk2g"]
-[ext_resource type="Script" path="res://scripts/ammo_crate.gd" id="1_uph1u"]
+[ext_resource type="Script" uid="uid://d04qo38kmxj3q" path="res://scripts/ammo_crate.gd" id="1_uph1u"]
+[ext_resource type="PackedScene" uid="uid://rss8luv3fd3r" path="res://scenes/particle_effects/item_particles.tscn" id="3_fbolj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2bk0d"]
 resource_name = "Glass-Clear"
@@ -64,14 +65,14 @@ radius = 0.09203473
 offsets = PackedFloat32Array(0.29192546, 0.66770184)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_mydgr"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uph1u"]
 gradient = SubResource("Gradient_uph1u")
 
 [sub_resource type="Curve" id="Curve_fbolj"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.46551722, 0.66138166), 0.0, 0.0, 0, 0, Vector2(0.81034476, 0.2491507), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_qts4k"]
+[sub_resource type="CurveTexture" id="CurveTexture_fbolj"]
 curve = SubResource("Curve_fbolj")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_13chd"]
@@ -88,8 +89,8 @@ damping_min = 2.0
 damping_max = 7.0000005
 scale_min = 0.099999994
 scale_max = 0.29999998
-scale_curve = SubResource("CurveTexture_qts4k")
-color_ramp = SubResource("GradientTexture1D_mydgr")
+scale_curve = SubResource("CurveTexture_fbolj")
+color_ramp = SubResource("GradientTexture1D_uph1u")
 collision_mode = 1
 collision_friction = 0.0
 collision_bounce = 0.4
@@ -313,6 +314,21 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Animation" id="Animation_fbolj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path3D/PathFollow3D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_uph1u"]
 resource_name = "move"
 length = 3.0
@@ -330,33 +346,23 @@ tracks/0/keys = {
 "values": [0.0, 1.0]
 }
 
-[sub_resource type="Animation" id="Animation_fbolj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Path3D/PathFollow3D:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_13chd"]
 _data = {
 &"RESET": SubResource("Animation_fbolj"),
 &"move": SubResource("Animation_uph1u")
 }
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_fbolj"]
+radius = 0.23494165
+
 [node name="Ammo-Bullet-Globe-1" type="Node3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.30305475, 0)
 script = ExtResource("1_uph1u")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
-transform = Transform3D(1.71176e-08, 0.99999094, 0.004256669, -5.9618884e-08, 0.004256669, -0.99999094, -1, 1.6862938e-08, 5.96912e-08, -0.044639833, 0.046924673, 2.220446e-16)
+transform = Transform3D(1.71176e-08, 0.99999094, 0.004256669, -5.9618884e-08, 0.004256669, -0.99999094, -1, 1.6862938e-08, 5.96912e-08, -0.044639833, 0.046924666, 2.220446e-16)
+collision_layer = 0
+collision_mask = 0
 
 [node name="SnowGlobe" type="MeshInstance3D" parent="AnimatableBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0006351173, 0.043882452, 0)
@@ -369,7 +375,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.044757314, 0)
 shape = SubResource("SphereShape3D_rpqlu")
 
 [node name="Snow" type="GPUParticles3D" parent="AnimatableBody3D"]
-transform = Transform3D(1.711687e-10, -5.961888e-10, -0.01, 0.009999909, 4.2566688e-05, 1.6863667e-10, 4.2566688e-05, -0.009999909, 5.969121e-10, 7.2525763e-10, 0.0446422, -0.00046139583)
+transform = Transform3D(1.711687e-10, -5.961888e-10, -0.01, 0.009999909, 4.2566688e-05, 1.6863667e-10, 4.2566688e-05, -0.009999909, 5.969121e-10, -2.0624622e-09, 0.044841234, -0.047219977)
 amount = 100
 randomness = 1.0
 collision_base_size = 0.1
@@ -396,7 +402,7 @@ mesh = SubResource("ArrayMesh_hnbrx")
 skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2229513, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27188104, 0)
 light_color = Color(0.5842108, 0.41788873, 0, 1)
 light_energy = 0.3
 light_size = 0.015
@@ -404,7 +410,7 @@ light_specular = 86.565
 omni_range = 0.5
 
 [node name="SnowGlobeBase" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 1.39479525e-05, 3.920719e-10, -1.39479525e-05, 1, -1.9392488e-10, -3.9191253e-10, 1.9392132e-10, 1, 0.00046935305, -0.13376664, -2.650391e-11)
+transform = Transform3D(1, 1.39479525e-05, 3.920719e-10, -1.39479525e-05, 1, -1.9392488e-10, -3.9191253e-10, 1.9392132e-10, 1, 0.00046935305, -0.14878409, -2.650391e-11)
 mesh = SubResource("ArrayMesh_vb0nj")
 skeleton = NodePath("")
 
@@ -423,3 +429,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_13chd")
 }
 autoplay = "move"
+
+[node name="item_particles" parent="." instance=ExtResource("3_fbolj")]
+transform = Transform3D(1.0482334e-08, -4.6009518e-08, -0.61, 0.6099945, 0.002596568, 1.0286392e-08, 0.002596568, -0.6099945, 4.605372e-08, 0, 0, 0)
+
+[node name="collision" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collision"]
+shape = SubResource("SphereShape3D_fbolj")

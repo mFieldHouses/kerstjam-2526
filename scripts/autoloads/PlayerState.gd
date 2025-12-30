@@ -24,6 +24,13 @@ var weapons : Array[WeaponConfiguration] = [
 	load("res://assets/resources/weapon_configurations/axe.tres")
 ]
 
+var ammo : Dictionary = {
+	"fast": 0,
+	"big": 0,
+	"explode": 0,
+	"snow": 0
+}
+
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqa3a4la2kglf"]
+
+[ext_resource type="Script" uid="uid://dsft2vkou6yjx" path="res://scripts/explosive_penguin.gd" id="1_rx4bm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qtetr"]
+radius = 0.15
+
+[sub_resource type="SphereMesh" id="SphereMesh_qtetr"]
+radius = 0.15
+height = 0.3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rx4bm"]
+radius = 2.9671862
+
+[node name="ExplosivePenguin" type="Area3D"]
+collision_layer = 0
+collision_mask = 15
+script = ExtResource("1_rx4bm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_qtetr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_qtetr")
+
+[node name="explosion_area" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="explosion_area"]
+shape = SubResource("SphereShape3D_rx4bm")

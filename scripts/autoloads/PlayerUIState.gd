@@ -19,6 +19,9 @@ func hide_prompt():
 	if player_fp_ui_root_instance:
 		player_fp_ui_root_instance.hide_prompt()
 
+func set_ui_visibility(state : bool) -> void:
+	player_fp_ui_root_instance.visible = state 
+
 func toggle_player_menu(state : bool = true):
 	var player_menu_ui = player_fp_ui_root_instance.get_node("player_menu")
 	player_menu_ui.toggle(state)

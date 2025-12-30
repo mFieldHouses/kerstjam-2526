@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 
 func _trigger(x) -> void:
 	$lights.visible = true
+	$ActionPromptTrigger.enabled = false
 	
 	var _move_tween : Tween = create_tween()
-	_move_tween.tween_property(self, "position:y", -54, 60) #sequence van een minuut 
+	_move_tween.tween_property(self, "position:y", -54.5, 60) #sequence van een minuut 

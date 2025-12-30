@@ -3,6 +3,10 @@ extends Control
 var _top_dialog_open : bool = false
 var _bottom_dialog_open : bool = false
 
+func _process(delta: float) -> void:
+	$dialog/MarginContainer/HBoxContainer/henkie_video.custom_minimum_size.x = $dialog/MarginContainer/HBoxContainer/henkie_video.size.y
+	$remote_dialog/MarginContainer/HBoxContainer/henkie_video.custom_minimum_size.x = $remote_dialog/MarginContainer/HBoxContainer/henkie_video.size.y
+
 func dialog_line(line : String, conversor_name : String, thumbnail : Texture2D) -> void: ##Pass an empty line to hide the dialog box again.
 	var _move_tween : Tween = create_tween()
 	if !_bottom_dialog_open and line != "":
@@ -15,6 +19,13 @@ func dialog_line(line : String, conversor_name : String, thumbnail : Texture2D) 
 		_move_tween.tween_property($dialog, "position:y", get_viewport_rect().size.y, 0.3)
 		await _move_tween.finished
 	
+	if conversor_name == "Henkie":
+		$dialog/MarginContainer/HBoxContainer/henkie_video.visible = true
+		$dialog/MarginContainer/HBoxContainer/thumbnail.visible = false
+	else:
+		$dialog/MarginContainer/HBoxContainer/henkie_video.visible = false
+		$dialog/MarginContainer/HBoxContainer/thumbnail.visible = true
+	
 	$dialog/MarginContainer/HBoxContainer/VBoxContainer/contents.text = line
 	$dialog/MarginContainer/HBoxContainer/VBoxContainer/name.text = conversor_name
 	$dialog/MarginContainer/HBoxContainer/VBoxContainer/contents.visible_ratio = 0
@@ -25,6 +36,14 @@ func dialog_line(line : String, conversor_name : String, thumbnail : Texture2D) 
 
 
 func remote_dialog_line(line : String, conversor_name : String, thumbnail : Texture2D) -> void: ##Pass an empty line to hide the dialog box again.
+	
+	if conversor_name == "Henkie":
+		$remote_dialog/MarginContainer/HBoxContainer/henkie_video.visible = true
+		$remote_dialog/MarginContainer/HBoxContainer/thumbnail.visible = false
+	else:
+		$remote_dialog/MarginContainer/HBoxContainer/henkie_video.visible = false
+		$remote_dialog/MarginContainer/HBoxContainer/thumbnail.visible = true
+	
 	$remote_dialog/MarginContainer/HBoxContainer/VBoxContainer/contents.text = line
 	$remote_dialog/MarginContainer/HBoxContainer/VBoxContainer/name.text = conversor_name
 	$remote_dialog/MarginContainer/HBoxContainer/VBoxContainer/contents.visible_ratio = 0

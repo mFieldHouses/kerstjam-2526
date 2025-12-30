@@ -108,7 +108,9 @@ func _physics_process(delta: float) -> void:
 	
 	_weapon_use_cooldown_timer -= delta
 	
-	$gui/health_left.text = str(roundi(_health))
+	$gui/MarginContainer/health_left.text = str(roundi(_health)) + "/30"
+	$gui._health_shake_fac = clamp(1.0 - (_health / 12.0), 0.0, 1.0)
+	#$gui.size = get_viewport().size
 	
 	# Add the gravity.
 	if not is_on_floor() and flight == false:
@@ -166,9 +168,10 @@ func _physics_process(delta: float) -> void:
 	
 	var velocity_vector_length = Vector2(velocity.x, velocity.z).length()
 	
-	camera.rotation.x = lerp(previous_camera_rotation_x, desired_camera_rotation_x, 0.5)
-	rotation.y = lerp(previous_camera_rotation_y, desired_camera_rotation_y, 0.5)
-	
+	if controls_enabled:
+		camera.rotation.x = lerp(previous_camera_rotation_x, desired_camera_rotation_x, 0.5)
+		rotation.y = lerp(previous_camera_rotation_y, desired_camera_rotation_y, 0.5)
+		
 	#camera bobbing
 	#camera.position.x = (sin(camera_time * (13 + (int(sprinting) * 4))) * ((int(sprinting) * 0.02) + 0.02)) * int(Input.is_action_pressed("forward"))
 	#camera.position.y = 0.775 + (sin(camera_time * 16) * (int(sprinting) * 0.02) + 0.02)
@@ -313,6 +316,7 @@ func toggle_scope_mode(state : bool) -> void:
 
 func get_hit(damage : float) -> void:
 	_health -= damage
+	$gui._dmg_animation()
 	
 
 func shoot() -> void:
@@ -336,6 +340,14 @@ func shoot() -> void:
 		_new_snowball.position = $camera.global_position - $camera.global_basis.z
 		_new_snowball.velocity = -$camera.global_basis.z * 20
 		return
+		
+	elif _used_ammo.ammo_type_identifier == "explode" and _selected_weapon_idx == 0:
+		var _new_penguin : ExplosivePenguin = load("res://scenes/projectiles/explosive_penguin.tscn").instantiate()
+		get_parent().add_child(_new_penguin)
+		
+		_new_penguin.position = $camera.global_position - $camera.global_basis.z
+		_new_penguin.velocity = -$camera.global_basis.z * 30
+		return
 	
 	var _shot_collider = shoot_ray.get_collider()
 	if _shot_collider:
@@ -351,9 +363,10 @@ func shoot() -> void:
 
 func _die() -> void:
 	DisplayManager.set_mouse_captured(false)
-	get_tree().paused = true
 	$gui._die_prompt()
+	#_health = 0.0
 	PlayerState.toggle_sleep(true)
+	get_tree().set_deferred("paused", true)
 
 func get_distance_to_player(point : Vector3): ##Returns the distance between the player and said point.
 	return (global_position - point).length()

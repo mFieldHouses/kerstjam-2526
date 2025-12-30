@@ -3,8 +3,8 @@ class_name Enemy
 
 @export var speed : float = 2.0
 
-@export_range(0.0, 1.0, 0.5, "or_greater") var health_left : float = 10.0
-@export_range(0.0, 1.0, 0.5, "or_greater") var max_health : float = 10.0
+@export_range(0.0, 1.0, 0.5, "or_greater") var health_left : float = 17.0
+@export_range(0.0, 1.0, 0.5, "or_greater") var max_health : float = 17.0
 
 @export var behavior_configuration : EnemyAIConfiguration
 
@@ -19,6 +19,9 @@ var freeze : bool = false
 
 @onready var navigator : NavigationAgent3D = $navigator
 
+var _attack_timer : float = 0.0
+var _attack_timer_overflow : float = 3.0
+
 func _physics_process(delta: float) -> void:
 	if freeze:
 		return
@@ -27,6 +30,10 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
+	_attack_timer -= delta
+	if _attack_timer <= 0.0 and $attack_area.get_overlapping_bodies().size() > 0:
+		PlayerState.player_instance.get_hit(randi_range(1, 3))
+		_attack_timer = 3.0
 	
 	_evaluate_aggression()
 	
@@ -57,26 +64,24 @@ func hit(damage : float, from_pos : Vector3, knockback_intensity : float) -> voi
 		die()
 		return
 	
-	print("ouch")
-	
 
 func die() -> void:
-	print("ooooouch im dying")
 	queue_free()
 
 func scout() -> void:
-	_awaiting_scout = false
-	_next_scout_timer = randf_range(0.5, 4.0)
-	var _will_walk : bool = randf_range(0.0, 1.0) > 0.7
+	#_awaiting_scout = false
+	#_next_scout_timer = randf_range(0.5, 4.0)
+	#var _will_walk : bool = randf_range(0.0, 1.0) > 0.7
+	#
+	#var _turn_tween : Tween = create_tween()
+	#var _amount_to_turn = randf_range(-0.8 * PI, 0.8 * PI)
+	#_turn_tween.tween_property(self, "rotation:y", rotation.y + _amount_to_turn, _amount_to_turn * 0.3)
+	#
+	#await _turn_tween.finished
+	#
+	#_awaiting_scout = true
+	pass
 	
-	var _turn_tween : Tween = create_tween()
-	var _amount_to_turn = randf_range(-0.8 * PI, 0.8 * PI)
-	_turn_tween.tween_property(self, "rotation:y", rotation.y + _amount_to_turn, _amount_to_turn * 0.3)
-	
-	await _turn_tween.finished
-	
-	_awaiting_scout = true
-
 func _evaluate_aggression() -> void:
 	aggression = 0
 	for _modifier : AggressionModifier in behavior_configuration.aggression_modifiers:

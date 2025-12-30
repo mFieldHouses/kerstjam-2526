@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://rss8luv3fd3r"]
+
+[ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="1_2k3bh"]
+
+[sub_resource type="Gradient" id="Gradient_wl3n5"]
+offsets = PackedFloat32Array(0.71028036, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_shmh3"]
+gradient = SubResource("Gradient_wl3n5")
+
+[sub_resource type="Curve" id="Curve_0xm8p"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.43373495), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_qts4k"]
+curve = SubResource("Curve_0xm8p")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ceusu"]
+emission_shape = 2
+emission_sphere_radius = 0.3
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 0.01
+initial_velocity_max = 0.049999997
+gravity = Vector3(0, 4, 0)
+tangential_accel_min = -1.0000023
+tangential_accel_max = 2.9999976
+damping_min = 2.0
+damping_max = 2.0
+scale_min = 2.0
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_qts4k")
+color_ramp = SubResource("GradientTexture1D_shmh3")
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.4
+
+[sub_resource type="QuadMesh" id="QuadMesh_aonu6"]
+material = ExtResource("1_2k3bh")
+size = Vector2(0.1, 0.1)
+
+[node name="item_particles" type="GPUParticles3D"]
+transform = Transform3D(1.7184155e-08, -7.542544e-08, -1, 0.99999094, 0.004256669, 1.6862938e-08, 0.004256669, -0.99999094, 7.54979e-08, -2.0624622e-09, 0.044841234, -0.047219977)
+amount = 20
+randomness = 1.0
+collision_base_size = 0.1
+visibility_aabb = AABB(-4, -4, -4, 4, 4, 4)
+process_material = SubResource("ParticleProcessMaterial_ceusu")
+draw_pass_1 = SubResource("QuadMesh_aonu6")

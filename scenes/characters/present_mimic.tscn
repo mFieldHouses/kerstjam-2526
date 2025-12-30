@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://1k8qkabd1mqy"]
+[gd_scene load_steps=6 format=3 uid="uid://1k8qkabd1mqy"]
 
 [ext_resource type="Script" uid="uid://bttxst3xwdrvn" path="res://scripts/enemy.gd" id="1_fut4a"]
 [ext_resource type="PackedScene" uid="uid://dg0m6iv5odcgv" path="res://assets/meshes/Enemies/Mimic-1.glb" id="1_wk111"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wk111"]
 size = Vector3(0.5058594, 0.50439453, 0.51660156)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ydnvf"]
+radius = 0.7285711
 
 [node name="present_mimic" type="CharacterBody3D"]
 collision_layer = 4
@@ -21,3 +24,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24780273, 0)
 shape = SubResource("BoxShape3D_wk111")
 
 [node name="navigator" type="NavigationAgent3D" parent="."]
+
+[node name="attack_area" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="attack_area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22736797, 0)
+shape = SubResource("SphereShape3D_ydnvf")

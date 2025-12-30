@@ -72,25 +72,26 @@ func hit(damage : float, from_pos : Vector3, knockback_intensity : float) -> voi
 		die()
 		return
 	
-	print("ouch")
+	aggression_pos = PlayerState.player_instance.global_position
+	aggressive = true
 	
 
 func die() -> void:
-	print("ooooouch im dying")
 	queue_free()
 
 func scout() -> void:
-	_awaiting_scout = false
-	_next_scout_timer = randf_range(0.5, 4.0)
-	var _will_walk : bool = randf_range(0.0, 1.0) > 0.7
-	
-	var _turn_tween : Tween = create_tween()
-	var _amount_to_turn = randf_range(-0.8 * PI, 0.8 * PI)
-	_turn_tween.tween_property(self, "rotation:y", rotation.y + _amount_to_turn, _amount_to_turn * 0.3)
-	
-	await _turn_tween.finished
-	
-	_awaiting_scout = true
+	#_awaiting_scout = false
+	#_next_scout_timer = randf_range(0.5, 4.0)
+	#var _will_walk : bool = randf_range(0.0, 1.0) > 0.7
+	#
+	#var _turn_tween : Tween = create_tween()
+	#var _amount_to_turn = randf_range(-0.8 * PI, 0.8 * PI)
+	#_turn_tween.tween_property(self, "rotation:y", rotation.y + _amount_to_turn, _amount_to_turn * 0.3)
+	#
+	#await _turn_tween.finished
+	#
+	#_awaiting_scout = true
+	pass
 
 func _can_see_player() -> bool:
 	var _snowman_to_player = PlayerState.player_instance.global_position - global_position

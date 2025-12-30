@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cotqedi4mq2rs"]
+[gd_scene load_steps=13 format=3 uid="uid://cotqedi4mq2rs"]
 
 [ext_resource type="Script" uid="uid://p37eo2hx431" path="res://scripts/scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://t266m1x4e123" path="res://assets/textures/gui/crosshair.png" id="2_g2els"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://cqd46xb7r6v6y" path="res://scripts/player_ui.gd" id="2_tuyoq"]
 [ext_resource type="Material" uid="uid://xtjmhhy5hj80" path="res://assets/resources/materials/invert.tres" id="4_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://cowivfljy5tex" path="res://icon.svg" id="6_tuyoq"]
+[ext_resource type="Shader" uid="uid://bhrka5a75i6vx" path="res://assets/shaders/flash_white_canvas.gdshader" id="6_ur7pv"]
 [ext_resource type="PackedScene" uid="uid://b7uk7ng0f2fjl" path="res://scenes/menus/pause_menu.tscn" id="7_fjrip"]
 [ext_resource type="Script" uid="uid://blp4d747i6obe" path="res://scripts/you_died.gd" id="8_smehm"]
 
@@ -16,6 +17,10 @@ height = 1.175293
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u8vuu"]
 radius = 0.3
 height = 1.16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y4r1p"]
+shader = ExtResource("6_ur7pv")
+shader_parameter/fac = 0.0
 
 [node name="player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19800603)
@@ -58,7 +63,6 @@ mesh = SubResource("CapsuleMesh_u8vuu")
 [node name="gui" type="Control" parent="."]
 process_mode = 3
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -123,17 +127,40 @@ bbcode_enabled = true
 fit_content = true
 autowrap_mode = 0
 
-[node name="health_left" type="Label" parent="gui"]
+[node name="MarginContainer" type="MarginContainer" parent="gui"]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -21.0
-offset_right = 40.0
-offset_bottom = 21.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 15
+
+[node name="health_left" type="Label" parent="gui/MarginContainer"]
+material = SubResource("ShaderMaterial_y4r1p")
+layout_mode = 2
+size_flags_vertical = 1
 theme_override_constants/outline_size = 7
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
+text = "30/30"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="gui/MarginContainer/health_left"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.90300006
+anchor_top = 0.915
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.13604736
+offset_top = 0.10498047
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ammo_left" type="HBoxContainer" parent="gui"]
 layout_mode = 0
@@ -269,3 +296,7 @@ grow_vertical = 2
 text = "EXIT_BTN"
 
 [node name="gun_sounds" type="AudioStreamPlayer" parent="."]
+
+[node name="floor_ray" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18080086, 0.25)
+target_position = Vector3(0, -2, 0)
