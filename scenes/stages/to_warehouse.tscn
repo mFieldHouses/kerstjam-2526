@@ -119,6 +119,7 @@ mesh = SubResource("PlaneMesh_0su6h")
 skeleton = NodePath("../..")
 
 [node name="player" parent="." instance=ExtResource("2_ft2jl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.68442, 0, -61.981613)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.9145295, 0.40451908, 0, -0.40451908, 0.9145295, 0, 0, 0)
@@ -167,7 +168,7 @@ shape = SubResource("BoxShape3D_jbe65")
 [node name="to_warehouse2" type="Node3D" parent="."]
 transform = Transform3D(-0.46732825, 0, 0.88408387, 0, 1, 0, -0.88408387, 0, -0.46732825, -119.90802, 0.91564894, -59.19758)
 script = ExtResource("6_0su6h")
-stage_id = "warehouse_1"
+stage_id = "warehouse/warehouse_1"
 metadata/_custom_type_script = "uid://dytis7djokgek"
 
 [node name="AreaTrigger" type="Node3D" parent="to_warehouse2"]

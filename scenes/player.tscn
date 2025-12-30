@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cotqedi4mq2rs"]
+[gd_scene load_steps=11 format=3 uid="uid://cotqedi4mq2rs"]
 
 [ext_resource type="Script" uid="uid://p37eo2hx431" path="res://scripts/scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://t266m1x4e123" path="res://assets/textures/gui/crosshair.png" id="2_g2els"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://cqd46xb7r6v6y" path="res://scripts/player_ui.gd" id="2_tuyoq"]
 [ext_resource type="Material" uid="uid://xtjmhhy5hj80" path="res://assets/resources/materials/invert.tres" id="4_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://cowivfljy5tex" path="res://icon.svg" id="6_tuyoq"]
+[ext_resource type="PackedScene" uid="uid://b7uk7ng0f2fjl" path="res://scenes/menus/pause_menu.tscn" id="7_fjrip"]
+[ext_resource type="Script" uid="uid://blp4d747i6obe" path="res://scripts/you_died.gd" id="8_smehm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvqfc"]
 radius = 0.3
@@ -54,6 +56,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5944125, 0.3112511)
 mesh = SubResource("CapsuleMesh_u8vuu")
 
 [node name="gui" type="Control" parent="."]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -196,5 +199,73 @@ stretch_mode = 5
 layout_mode = 2
 text = "100"
 horizontal_alignment = 1
+
+[node name="PauseMenu" parent="gui" instance=ExtResource("7_fjrip")]
+visible = false
+layout_mode = 1
+
+[node name="you_died" type="Control" parent="gui"]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_smehm")
+
+[node name="Panel" type="Panel" parent="gui/you_died"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title" type="Label" parent="gui/you_died"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -88.0
+offset_right = 39.5
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU_DIED"
+
+[node name="restart" type="Button" parent="gui/you_died"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -15.5
+offset_right = 85.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "RESTART_STAGE_BTN"
+
+[node name="exit" type="Button" parent="gui/you_died"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = 28.0
+offset_right = 40.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EXIT_BTN"
 
 [node name="gun_sounds" type="AudioStreamPlayer" parent="."]

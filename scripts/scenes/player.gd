@@ -9,8 +9,12 @@ const JUMP_VELOCITY = 4.5
 
 const DEFAULT_FOV = 75
 
-var _health : float = 100.0
-var _max_health : float = 100.0
+var _health : float = 30.0:
+	set(x):
+		_health = x
+		if _health <= 0.0:
+			_die()
+var _max_health : float = 30.0
 
 @export var step_height : float = 0.3
 
@@ -91,7 +95,7 @@ var _auto_gun_timer : float = 0.0
 func _ready():
 	
 	PlayerState.player_instance = self
-	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_CAPTURED)
+	DisplayManager.set_mouse_captured()
 	
 	_update_ammo_gui(0)
 
@@ -120,9 +124,10 @@ func _physics_process(delta: float) -> void:
 			if is_on_floor() and controls_enabled:
 				velocity.y = JUMP_VELOCITY
 
+	_auto_gun_timer -= delta
+	
 	if _used_ammo.automatic == true:
 		if Input.is_action_pressed("shoot") and _selected_weapon_idx == 0 and _ammo[_used_ammo] > 0:
-			_auto_gun_timer -= delta
 			if _auto_gun_timer < 0.0:
 				shoot()
 				_auto_gun_timer = _used_ammo.shoot_delay
@@ -145,6 +150,10 @@ func _physics_process(delta: float) -> void:
 		#position.z += direction.z * delta * 20
 	else:
 		if direction and controls_enabled:
+			#if sprinting:
+				#tween_camera_fov(DEFAULT_FOV + 20, 0.2)
+			#else:
+				#tween_camera_fov(DEFAULT_FOV, 0.2)
 			_bobbing_anim_timer += delta + (float(sprinting == true) * delta)
 			$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.bob(_bobbing_anim_timer, 0.7 + (float(sprinting == true) * 0.4))
 			velocity.x = lerp(velocity.x, direction.x * SPEED * speed_multiplier + (direction.x * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
@@ -217,7 +226,10 @@ func _input(event):
 				tween_camera_fov(DEFAULT_FOV, 0.2)
 		
 		elif event.is_action("shoot"):
+			print('shoot action')
 			if event.is_pressed() and (_used_ammo.automatic == false or _selected_weapon_idx != 0):
+				print("condition 1")
+				print(_auto_gun_timer)
 				if _weapon_use_cooldown_timer <= 0.0 and (_auto_gun_timer <= 0.0 or _selected_weapon_idx != 0):
 					print('shoot single')
 					shoot()
@@ -304,6 +316,7 @@ func get_hit(damage : float) -> void:
 	
 
 func shoot() -> void:
+	print("shoot()")
 	
 	_ammo[_used_ammo] -= 1
 	var _used_weapon : WeaponConfiguration = _get_currently_selected_weapon()
@@ -313,10 +326,7 @@ func shoot() -> void:
 		$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.play_shoot_animation("Plane_001Action_001")
 	else:
 		$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.play_shoot_animation("Plane_001Action")
-	
-#	var _animplayer : AnimationPlayer = Utility.get_children_of_type($gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.get_child(_selected_weapon_idx), "AnimationPlayer")[0]
-	#_animplayer.play("weapon_use/shoot1")
-	
+
 	await get_tree().create_timer(_used_weapon.hit_delay).timeout
 	
 	if _used_ammo.ammo_type_identifier == "snow" and _selected_weapon_idx == 0:
@@ -338,6 +348,12 @@ func shoot() -> void:
 			var _dmg = _used_ammo.get_damage()
 			_shot_collider.hit(_dmg, shoot_ray.get_collision_point(), 1)
 			HitMarkerManager.hit_at(shoot_ray.get_collision_point(), _dmg, preload("res://scenes/particle_effects/santa_gun_hit_standard.tscn"), get_parent())
+
+func _die() -> void:
+	DisplayManager.set_mouse_captured(false)
+	get_tree().paused = true
+	$gui._die_prompt()
+	PlayerState.toggle_sleep(true)
 
 func get_distance_to_player(point : Vector3): ##Returns the distance between the player and said point.
 	return (global_position - point).length()

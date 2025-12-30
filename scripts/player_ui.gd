@@ -21,3 +21,7 @@ func hide_prompt():
 
 func toggle_inventory(state : bool = true):
 	$inventory.visible = state
+
+func _die_prompt() -> void:
+	$weapon_viewport.visible = false
+	$you_died.visible = true

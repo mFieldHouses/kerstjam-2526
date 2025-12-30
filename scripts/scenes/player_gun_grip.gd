@@ -35,6 +35,6 @@ func return_to_origin() -> void:
 
 func play_shoot_animation(anim_name : String) -> void:
 	var _animplayer : AnimationPlayer = get_child(0).get_node("AnimationPlayer")
-	print(_animplayer.get_animation_list())
+	#print(_animplayer.get_animation_list())
 	_animplayer.stop()
 	_animplayer.play(anim_name, -1)

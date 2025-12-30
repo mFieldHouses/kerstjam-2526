@@ -16,7 +16,7 @@ var _target : Player
 var _strafe_dir : int = 0
 var _strafe_timer : float = 1.0
 
-var _health_left : float = 15.0:
+var _health_left : float = 25.0:
 	set(x):
 		_health_left = x
 		

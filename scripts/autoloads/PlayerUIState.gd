@@ -23,8 +23,11 @@ func toggle_player_menu(state : bool = true):
 	var player_menu_ui = player_fp_ui_root_instance.get_node("player_menu")
 	player_menu_ui.toggle(state)
 
-func toggle_pause_menu(state : bool = true):
-	pass
+func toggle_pause_menu():
+	var _state : bool = !player_fp_ui_root_instance.get_node("PauseMenu").visible
+	player_fp_ui_root_instance.get_node("PauseMenu").visible = _state
+	PlayerState.toggle_sleep(_state)
+	DisplayManager.set_mouse_captured(!_state)
 
 func fade_black(slope_time : float = 0.3, halt_time : float = 0.0, show_loading_icon : bool = false):
 	PersistentUI.get_node("black/loading").visible = show_loading_icon

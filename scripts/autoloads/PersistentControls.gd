@@ -4,7 +4,8 @@ signal continue_dialog
 
 var _bindings : Dictionary[String, Callable] ={
 	"fullscreen_toggled": DisplayManager.toggle_fullscreen,
-	"dialog_continue": _signal_continue_dialog
+	"dialog_continue": _signal_continue_dialog,
+	"ui_cancel": PlayerUIState.toggle_pause_menu
 }
 
 func _process(delta: float) -> void:
