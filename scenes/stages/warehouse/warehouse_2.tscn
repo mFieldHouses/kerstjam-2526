@@ -146,6 +146,30 @@ transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -35.
 [node name="launcher" type="Node" parent="Snowman"]
 script = ExtResource("7_wk4on")
 
+[node name="Snowman2" parent="." instance=ExtResource("8_wk4on")]
+transform = Transform3D(-0.25881892, 0, 0.9659259, 0, 1, 0, -0.9659259, 0, -0.25881892, -23.381552, -39.980194, -3.0813723)
+
+[node name="launcher" type="Node" parent="Snowman2"]
+script = ExtResource("7_wk4on")
+
+[node name="Snowman4" parent="." instance=ExtResource("8_wk4on")]
+transform = Transform3D(-2.0861626e-07, 0, -1, 0, 1, 0, 1, 0, -2.0861626e-07, -44.906868, -39.980194, 1.9186277)
+
+[node name="launcher" type="Node" parent="Snowman4"]
+script = ExtResource("7_wk4on")
+
+[node name="Snowman3" parent="." instance=ExtResource("8_wk4on")]
+transform = Transform3D(-0.25881892, 0, 0.9659259, 0, 1, 0, -0.9659259, 0, -0.25881892, -23.381552, -46.980194, -3.0813723)
+
+[node name="launcher" type="Node" parent="Snowman3"]
+script = ExtResource("7_wk4on")
+
+[node name="Snowman5" parent="." instance=ExtResource("8_wk4on")]
+transform = Transform3D(-0.9996537, 0, -0.02631642, 0, 1, 0, 0.02631642, 0, -0.9996537, -32.92491, -46.980194, -10.907878)
+
+[node name="launcher" type="Node" parent="Snowman5"]
+script = ExtResource("7_wk4on")
+
 [node name="present_mimic4" parent="." instance=ExtResource("6_3xavh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.870363, -13.659607, 10.856412)
 
@@ -174,6 +198,18 @@ script = ExtResource("7_wk4on")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -22.752483, -25.62836, -3.1612148)
 
 [node name="launcher" type="Node" parent="present_mimic8"]
+script = ExtResource("7_wk4on")
+
+[node name="present_mimic11" parent="." instance=ExtResource("6_3xavh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -39.867867, -44.73245, -10.441043)
+
+[node name="launcher" type="Node" parent="present_mimic11"]
+script = ExtResource("7_wk4on")
+
+[node name="present_mimic12" parent="." instance=ExtResource("6_3xavh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -39.089165, -44.73245, -10.913905)
+
+[node name="launcher" type="Node" parent="present_mimic12"]
 script = ExtResource("7_wk4on")
 
 [node name="present_mimic9" parent="." instance=ExtResource("6_3xavh")]
@@ -207,6 +243,18 @@ script = ExtResource("7_wk4on")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.50837, -32.609276, 10.811918)
 
 [node name="launcher" type="Node" parent="jumping_mimic3"]
+script = ExtResource("7_wk4on")
+
+[node name="jumping_mimic5" parent="." instance=ExtResource("9_xr7sr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.41137, -44.609276, 10.811918)
+
+[node name="launcher" type="Node" parent="jumping_mimic5"]
+script = ExtResource("7_wk4on")
+
+[node name="jumping_mimic6" parent="." instance=ExtResource("9_xr7sr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.41137, -44.609276, 10.811918)
+
+[node name="launcher" type="Node" parent="jumping_mimic6"]
 script = ExtResource("7_wk4on")
 
 [node name="jumping_mimic4" parent="." instance=ExtResource("9_xr7sr")]

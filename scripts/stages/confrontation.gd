@@ -2,7 +2,10 @@ extends Node3D
 
 
 func _ready() -> void:
-	#DialogManager.initiate_dialog_with("confrontation1", $philip, "???", load("res://icon.svg"))
+	
+	await get_tree().create_timer(1.0).timeout
+	
+	DialogManager.initiate_dialog_with("confrontation1", $philip, "???", load("res://icon.svg"))
 	#pass
 	for x in 10:
 		for y in 10:

@@ -24,7 +24,7 @@ func _dialog_queue(did : String, qid : String) -> void:
 	if did == "enter_warehouse2":
 		if qid == "power_outage":
 			var _tween : Tween = create_tween()
-			_tween.tween_property($global_light, "light_energy", 0, 0.2)
+			_tween.tween_property($global_light, "light_energy", 0.0018, 0.2)
 
 func _dialog_start(did : String) -> void:
 	if did == "enter_warehouse":

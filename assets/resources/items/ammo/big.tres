@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="AmmoItemDescription" load_steps=2 format=3 uid="uid://b060qwaalhnug"]
+[gd_resource type="Resource" script_class="AmmoItemDescription" load_steps=3 format=3 uid="uid://b060qwaalhnug"]
 
 [ext_resource type="Script" uid="uid://d4epkoylgw48b" path="res://classes/resources/AmmoItemDescription.gd" id="1_g353f"]
+[ext_resource type="PackedScene" uid="uid://ds8c7awe3fc0s" path="res://assets/meshes/Weapons/Ammo/ShotGunShells-1.glb" id="1_nngu1"]
 
 [resource]
 script = ExtResource("1_g353f")
@@ -9,4 +10,5 @@ shoot_delay = 0.35
 max_damage = 7.0
 min_damage = 5.0
 item_name = "Snow Shooter Ammo"
+item_model = ExtResource("1_nngu1")
 metadata/_custom_type_script = "uid://d4epkoylgw48b"

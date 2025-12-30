@@ -97,6 +97,13 @@ func _ready():
 	PlayerState.player_instance = self
 	DisplayManager.set_mouse_captured()
 	
+	_ammo[preload("res://assets/resources/items/ammo/fast.tres")] = PlayerState.ammo["fast"]
+	_ammo[preload("res://assets/resources/items/ammo/big.tres")] = PlayerState.ammo["big"]
+	_ammo[preload("res://assets/resources/items/ammo/explode.tres")] = PlayerState.ammo["explode"]
+	_ammo[preload("res://assets/resources/items/ammo/snow.tres")] = PlayerState.ammo["snow"]
+	
+	_health = PlayerState.health
+	
 	_update_ammo_gui(0)
 
 func _physics_process(delta: float) -> void:
@@ -229,12 +236,8 @@ func _input(event):
 				tween_camera_fov(DEFAULT_FOV, 0.2)
 		
 		elif event.is_action("shoot"):
-			print('shoot action')
-			if event.is_pressed() and (_used_ammo.automatic == false or _selected_weapon_idx != 0):
-				print("condition 1")
-				print(_auto_gun_timer)
+			if event.is_pressed() and (_used_ammo.automatic == false or _selected_weapon_idx != 0) and _ammo[_used_ammo] > 0:
 				if _weapon_use_cooldown_timer <= 0.0 and (_auto_gun_timer <= 0.0 or _selected_weapon_idx != 0):
-					print('shoot single')
 					shoot()
 		
 		elif event.is_action("scope") and _get_currently_selected_weapon().scopeable:

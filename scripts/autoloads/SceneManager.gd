@@ -18,6 +18,7 @@ func restart_stage() -> void:
 	await PersistentUI.fade_middle
 	get_tree().reload_current_scene()
 	get_tree().paused = false
+	await get_tree().scene_changed
 	PersistentUI.continue_fade.emit()
 	
 func launch_menu(menu_id : String) -> void: ##Launches the menu with name [param menu_id] in [param res://scenes/menus/], replacing the whole scene tree.

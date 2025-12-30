@@ -24,12 +24,23 @@ var weapons : Array[WeaponConfiguration] = [
 	load("res://assets/resources/weapon_configurations/axe.tres")
 ]
 
+var health : float = 30.0
+
 var ammo : Dictionary = {
-	"fast": 0,
-	"big": 0,
-	"explode": 0,
-	"snow": 0
+	"fast": 200,
+	"big": 200,
+	"explode": 200,
+	"snow": 200
 }
+
+func _save_ammo() -> void:
+	ammo.fast = player_instance._ammo[preload("res://assets/resources/items/ammo/fast.tres")]
+	ammo.big = player_instance._ammo[preload("res://assets/resources/items/ammo/big.tres")]
+	ammo.explode = player_instance._ammo[preload("res://assets/resources/items/ammo/explode.tres")]
+	ammo.snow = player_instance._ammo[preload("res://assets/resources/items/ammo/snow.tres")]
+
+func _save_health() -> void:
+	health = player_instance._health
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
