@@ -11,6 +11,7 @@ func _enter_tree() -> void:
 	_create_item_button = preload("res://addons/GodotDevTools/scenes/create_item_button.tscn").instantiate()
 	
 	add_tool_menu_item("Create item...", _open_item_creation_menu)
+	add_tool_menu_item("Replace Scenes...", _open_scene_replacement_menu)
 	
 	var _add_action_prompt_button : Button = Button.new()
 	_add_action_prompt_button.text = "Setup action prompt for object"
@@ -53,6 +54,7 @@ func _process(delta: float) -> void:
 
 func _exit_tree() -> void:
 	remove_tool_menu_item("Create item...")
+	remove_tool_menu_item("Replace Scenes...")
 
 func _setup_action_prompt_for_object() -> void:
 	var _object = EditorInterface.get_selection().get_selected_nodes()[0]
@@ -75,3 +77,42 @@ func _setup_action_prompt_for_object() -> void:
 	_area3d.add_child(_cls)
 	_cls.owner = EditorInterface.get_edited_scene_root()
 	
+func _open_scene_replacement_menu() -> void:
+	var _new_menu : Window = preload("res://addons/GodotDevTools/scenes/scene_replacer.tscn").instantiate()
+	_new_menu.close_requested.connect(func(): _new_menu.queue_free())
+	
+	add_child(_new_menu)
+	_new_menu.popup_centered(Vector2i(400,450))
+	_new_menu.replace_scenes.connect(_replace_scenes)
+
+func _replace_scenes(parent_node : Node, path : String, substitute_path : String, copy_transforms : bool = true, remove : bool = false, recursive : bool = false) -> void:
+	var _nodes_to_check : Array[Node]
+	
+	if recursive:
+		_nodes_to_check = Utility.get_children_recursive(parent_node)
+	else:
+		_nodes_to_check = parent_node.get_children()
+	
+	for _child in _nodes_to_check:
+		if _child.scene_file_path == path:
+			var _transform : Transform3D
+			var _pos
+			if _child is Node3D:
+				_transform = _child.global_transform
+				_pos = _child.position
+			if _child is Node2D:
+				_pos = _child.position
+				
+			_child.queue_free()
+			
+			if remove:
+				continue
+			
+			var _new_scene : Node = load(substitute_path).instantiate()
+			parent_node.add_child(_new_scene)
+			
+			if _new_scene is Node2D or _new_scene is Node3D:
+				_new_scene.position = _pos
+			
+			if _new_scene is Node3D and copy_transforms:
+				_new_scene.global_transform = _transform
