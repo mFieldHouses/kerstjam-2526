@@ -1,4 +1,7 @@
-[gd_scene load_steps=0 format=3 uid="uid://b7uk7ng0f2fjl"]
+[gd_scene load_steps=3 format=3 uid="uid://b7uk7ng0f2fjl"]
+
+[ext_resource type="Script" uid="uid://y5crhwcahi43" path="res://scripts/pause_menu.gd" id="1_7unhi"]
+[ext_resource type="Script" uid="uid://c4xmmdmju3aio" path="res://scripts/settings.gd" id="1_fwndu"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -7,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7unhi")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(300, 500)
@@ -52,3 +56,51 @@ text = "RESTART_STAGE_BTN"
 [node name="exit" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "EXIT_BTN"
+
+[node name="settings" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fwndu")
+
+[node name="ColorRect" type="ColorRect" parent="settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078814976, 0.07881499, 0.078814976, 1)
+
+[node name="settings" type="VBoxContainer" parent="settings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.312
+anchor_right = 0.688
+anchor_bottom = 1.0
+offset_left = -0.42401123
+offset_right = 0.4239502
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="empty_property" type="HBoxContainer" parent="settings/settings"]
+visible = false
+layout_mode = 2
+
+[node name="property_name" type="Label" parent="settings/settings/empty_property"]
+modulate = Color(1, 1, 1, 0.5568628)
+layout_mode = 2
+text = "test test"
+
+[node name="back" type="Button" parent="settings"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "BACK_BTN"
+
+[connection signal="button_down" from="settings/back" to="settings" method="close_settings_panel"]
