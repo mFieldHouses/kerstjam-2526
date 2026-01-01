@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crg2b7h1aiks"
-path="res://.godot/imported/Snowman-1.glb-901b6dcfd42061e2d13786fa18685fc0.scn"
+uid="uid://u81o60fqcw76"
+path="res://.godot/imported/Snowman-1-MovingAttack.glb-c8198a807e023c5c93830f9f6f071083.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Enemies/Snowman-1.glb"
-dest_files=["res://.godot/imported/Snowman-1.glb-901b6dcfd42061e2d13786fa18685fc0.scn"]
+source_file="res://assets/meshes/Enemies/Snowman-1-MovingAttack.glb"
+dest_files=["res://.godot/imported/Snowman-1-MovingAttack.glb-c8198a807e023c5c93830f9f6f071083.scn"]
 
 [params]
 
@@ -43,7 +43,7 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/fallback_path": "res://assets/animations/SnowMan_Idle.res",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://cujocmr4ukghc",
+"save_to_file/path": "uid://8jo6334bfksc",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
