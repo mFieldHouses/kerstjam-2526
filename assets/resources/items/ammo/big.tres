@@ -1,10 +1,20 @@
-[gd_resource type="Resource" script_class="AmmoItemDescription" load_steps=3 format=3 uid="uid://b060qwaalhnug"]
+[gd_resource type="Resource" script_class="AmmoItemDescription" load_steps=7 format=3 uid="uid://b060qwaalhnug"]
 
 [ext_resource type="Script" uid="uid://d4epkoylgw48b" path="res://classes/resources/AmmoItemDescription.gd" id="1_g353f"]
 [ext_resource type="PackedScene" uid="uid://ds8c7awe3fc0s" path="res://assets/meshes/Weapons/Ammo/ShotGunShells-1.glb" id="1_nngu1"]
+[ext_resource type="AudioStream" uid="uid://csubdlvkgcldo" path="res://assets/sound/sfx/shoot/shoot_big1.wav" id="3_tmxp1"]
+[ext_resource type="AudioStream" uid="uid://bhvjy0va85jth" path="res://assets/sound/sfx/shoot/shoot_big2.wav" id="4_k8wn0"]
+[ext_resource type="AudioStream" uid="uid://ir1rceboop14" path="res://assets/sound/sfx/shoot/shoot_big3.wav" id="5_dnbaw"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pw3q2"]
+streams_count = 3
+stream_0/stream = ExtResource("3_tmxp1")
+stream_1/stream = ExtResource("4_k8wn0")
+stream_2/stream = ExtResource("5_dnbaw")
 
 [resource]
 script = ExtResource("1_g353f")
+shoot_audio_stream = SubResource("AudioStreamRandomizer_pw3q2")
 ammo_type_identifier = "big"
 shoot_delay = 0.35
 max_damage = 7.0

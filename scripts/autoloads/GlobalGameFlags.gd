@@ -1,6 +1,6 @@
 extends Node
 
-var _flags : Array[String] = ["power_enabled"]
+var _flags : Array[String] = []
 
 func has_flag(flag : String) -> bool:
 	return _flags.has(flag)

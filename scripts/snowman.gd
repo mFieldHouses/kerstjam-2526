@@ -76,6 +76,7 @@ func _die() -> void:
 	queue_free()
 
 func _shoot() -> void:
+	$shoot.play()
 	var _new_snowball : Snowball = preload("res://scenes/projectiles/snowball.tscn").instantiate()
 	var _to_player : Vector3 = Vector3(PlayerState.player_instance.global_position - global_position)
 	get_parent().add_child(_new_snowball)

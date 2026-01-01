@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwhxv2wqfr8d5"]
+[gd_scene load_steps=21 format=3 uid="uid://bwhxv2wqfr8d5"]
 
+[ext_resource type="Script" uid="uid://bvgudpbaauty8" path="res://scriptswarehouse_2.gd" id="1_dfkw8"]
 [ext_resource type="PackedScene" uid="uid://buar51plgglsb" path="res://assets/meshes/Debug/warehouse_2.glb" id="1_urnwb"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_7ssc0"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="3_1luqp"]
@@ -9,6 +10,12 @@
 [ext_resource type="Script" uid="uid://8f16emrbiraj" path="res://scripts/launcher.gd" id="7_wk4on"]
 [ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="8_wk4on"]
 [ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="9_xr7sr"]
+[ext_resource type="AudioStream" uid="uid://o7bfs0qmgvvy" path="res://assets/sound/soundtrack/warehouse_2.wav" id="10_uhofc"]
+[ext_resource type="Script" uid="uid://ubl2tl60pb8m" path="res://scripts/environment_audio.gd" id="11_h5j6d"]
+[ext_resource type="Script" uid="uid://br67v0qeo270u" path="res://scripts/musicplayer.gd" id="12_qs1vy"]
+[ext_resource type="AudioStream" uid="uid://cu0bfrb7geue1" path="res://assets/sound/soundtrack/elevator_intro.wav" id="13_mbewa"]
+[ext_resource type="AudioStream" uid="uid://bygssu2lp8xak" path="res://assets/sound/soundtrack/elevator_loop.wav" id="14_dfkw8"]
+[ext_resource type="Script" uid="uid://cq5y0kvnh684m" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/Trigger.gd" id="15_mbewa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxix6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,6 +36,7 @@ glow_enabled = true
 size = Vector3(1, 5.96875, 11.672852)
 
 [node name="Warehouse2" type="Node3D"]
+script = ExtResource("1_dfkw8")
 
 [node name="warehouse_2" parent="." instance=ExtResource("1_urnwb")]
 
@@ -262,3 +270,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.50837, -32.609276, 10.811
 
 [node name="launcher" type="Node" parent="jumping_mimic4"]
 script = ExtResource("7_wk4on")
+
+[node name="warehouse" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_uhofc")
+autoplay = true
+script = ExtResource("11_h5j6d")
+
+[node name="soundtrack" type="AudioStreamPlayer" parent="."]
+script = ExtResource("12_qs1vy")
+intro_stream = ExtResource("13_mbewa")
+loop_stream = ExtResource("14_dfkw8")
+
+[node name="Trigger" type="Node3D" parent="soundtrack"]
+script = ExtResource("15_mbewa")
+metadata/_custom_type_script = "uid://cq5y0kvnh684m"

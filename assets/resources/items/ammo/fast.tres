@@ -1,9 +1,21 @@
-[gd_resource type="Resource" script_class="AmmoItemDescription" load_steps=2 format=3 uid="uid://gwh384geqki4"]
+[gd_resource type="Resource" script_class="AmmoItemDescription" load_steps=7 format=3 uid="uid://gwh384geqki4"]
 
 [ext_resource type="Script" uid="uid://d4epkoylgw48b" path="res://classes/resources/AmmoItemDescription.gd" id="1_rxvep"]
+[ext_resource type="AudioStream" uid="uid://dauvlldo4hfjr" path="res://assets/sound/sfx/shoot/shoot_small1.wav" id="2_2602q"]
+[ext_resource type="AudioStream" uid="uid://gr3vn03x0qcb" path="res://assets/sound/sfx/shoot/shoot_small2.wav" id="3_ynf12"]
+[ext_resource type="AudioStream" uid="uid://f24j37io0k71" path="res://assets/sound/sfx/shoot/shoot_small3.wav" id="4_1ymvp"]
+[ext_resource type="AudioStream" uid="uid://cdpdfhx7aei6e" path="res://assets/sound/sfx/shoot/shoot_small4.wav" id="5_dw833"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cm6nr"]
+streams_count = 4
+stream_0/stream = ExtResource("2_2602q")
+stream_1/stream = ExtResource("3_ynf12")
+stream_2/stream = ExtResource("4_1ymvp")
+stream_3/stream = ExtResource("5_dw833")
 
 [resource]
 script = ExtResource("1_rxvep")
+shoot_audio_stream = SubResource("AudioStreamRandomizer_cm6nr")
 ammo_type_identifier = "fast"
 automatic = true
 shoot_delay = 0.11

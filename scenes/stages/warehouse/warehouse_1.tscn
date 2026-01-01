@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cfufrt7a0cruc"]
+[gd_scene load_steps=40 format=3 uid="uid://cfufrt7a0cruc"]
 
 [ext_resource type="Script" uid="uid://cgayko6nfo5rq" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_wu2bj"]
@@ -28,6 +28,8 @@
 [ext_resource type="Resource" uid="uid://gwh384geqki4" path="res://assets/resources/items/ammo/fast.tres" id="26_ffru6"]
 [ext_resource type="Resource" uid="uid://b060qwaalhnug" path="res://assets/resources/items/ammo/big.tres" id="26_hdkqg"]
 [ext_resource type="Resource" uid="uid://qxhttbpl2yph" path="res://assets/resources/items/ammo/explode.tres" id="27_nbf28"]
+[ext_resource type="AudioStream" uid="uid://bwjojdc2sncv3" path="res://assets/sound/soundtrack/warehouse_1.wav" id="29_lbisa"]
+[ext_resource type="Script" uid="uid://ubl2tl60pb8m" path="res://scripts/environment_audio.gd" id="30_urf3k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -712,3 +714,8 @@ transform = Transform3D(0.144218, 0, 0.98954594, 0, 1, 0, -0.98954594, 0, 0.1442
 
 [node name="present_mimic12" parent="." instance=ExtResource("23_dwaqj")]
 transform = Transform3D(0.144218, 0, 0.98954594, 0, 1, 0, -0.98954594, 0, 0.144218, -8.619435, 0.0063552856, -50.086918)
+
+[node name="warehouse" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_lbisa")
+autoplay = true
+script = ExtResource("30_urf3k")

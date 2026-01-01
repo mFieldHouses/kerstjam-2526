@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2igi16yoyihl"]
+[gd_scene load_steps=5 format=3 uid="uid://d2igi16yoyihl"]
 
 [ext_resource type="PackedScene" uid="uid://crg2b7h1aiks" path="res://assets/meshes/Enemies/Snowman-1.glb" id="1_28eu1"]
 [ext_resource type="Script" uid="uid://ct8syyffl5yxq" path="res://scripts/snowman.gd" id="1_nldfl"]
+[ext_resource type="AudioStream" uid="uid://bf2mcqvhuhjjo" path="res://assets/sound/sfx/shoot/launch_rocket.wav" id="3_n7n8s"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_28eu1"]
 radius = 0.47851563
@@ -21,3 +22,7 @@ shape = SubResource("CapsuleShape3D_28eu1")
 
 [node name="snowball-origin" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1829594, -0.7839138)
+
+[node name="shoot" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_n7n8s")
+pitch_scale = 1.5

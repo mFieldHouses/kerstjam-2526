@@ -5,3 +5,7 @@ extends Node
 var mouse_sensitivity : float = 1.0
 var weapon_selection_scroll_sensitivity : float = 1.0
 var invert_weapon_selection_scroll : bool = false
+
+var environment_volume : float = 1.0
+var sfx_volume : float = 1.0
+var music_volume : float = 1.0

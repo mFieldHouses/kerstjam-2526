@@ -230,7 +230,7 @@ func _input(event):
 		if event.is_action("sprint") and !in_scope:
 			if event.is_pressed():
 				sprinting = true
-				tween_camera_fov(DEFAULT_FOV + 8, 0.2)
+				tween_camera_fov(DEFAULT_FOV * 1.3, 0.2)
 			else:
 				sprinting = false
 				tween_camera_fov(DEFAULT_FOV, 0.2)
@@ -305,7 +305,7 @@ func toggle_scope_mode(state : bool) -> void:
 	in_scope = state
 	
 	if state:
-		tween_camera_fov(DEFAULT_FOV - 50, 0.2)
+		tween_camera_fov(DEFAULT_FOV * 0.2, 0.2)
 		sensitivity_multiplier = sensitivity_multipliers["in_scope"]
 		speed_multiplier = speed_multipliers["in_scope"]
 	else:
@@ -323,7 +323,16 @@ func get_hit(damage : float) -> void:
 	
 
 func shoot() -> void:
-	print("shoot()")
+	
+	if _selected_weapon_idx == 0:
+		%gun_sounds.stream = _used_ammo.shoot_audio_stream
+		
+		if _used_ammo.ammo_type_identifier == "snow":
+			%gun_sounds.pitch_scale = 3.0
+			%gun_sounds.play(0.1)
+		else:
+			%gun_sounds.pitch_scale = 1.0
+			%gun_sounds.play()
 	
 	_ammo[_used_ammo] -= 1
 	var _used_weapon : WeaponConfiguration = _get_currently_selected_weapon()

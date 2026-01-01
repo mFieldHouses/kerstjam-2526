@@ -4,6 +4,9 @@ var _light_energy_mult : float = 0.2
 var _light_timer : float = 0.0
 var _light_blink_speed : float = 10.0
 
+signal activate
+signal finished
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$ActionPromptTrigger.trigger.connect(_trigger)
@@ -20,5 +23,10 @@ func _trigger(x) -> void:
 	$lights.visible = true
 	$ActionPromptTrigger.enabled = false
 	
+	activate.emit()
+	
 	var _move_tween : Tween = create_tween()
 	_move_tween.tween_property(self, "position:y", -54.5, 60) #sequence van een minuut 
+	
+	await _move_tween.finished
+	finished.emit()
