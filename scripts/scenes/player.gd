@@ -7,7 +7,7 @@ const SPEED = 3.5
 const SPRINT_SPEED_DELTA = 2.0
 const JUMP_VELOCITY = 4.5
 
-const DEFAULT_FOV = 50
+const DEFAULT_FOV = 75
 
 var _health : float = 30.0:
 	set(x):
