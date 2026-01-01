@@ -7,7 +7,7 @@ const SPEED = 3.5
 const SPRINT_SPEED_DELTA = 2.0
 const JUMP_VELOCITY = 4.5
 
-const DEFAULT_FOV = 75
+const DEFAULT_FOV = 50
 
 var _health : float = 30.0:
 	set(x):
@@ -230,7 +230,7 @@ func _input(event):
 		if event.is_action("sprint") and !in_scope:
 			if event.is_pressed():
 				sprinting = true
-				tween_camera_fov(DEFAULT_FOV + 20, 0.2)
+				tween_camera_fov(DEFAULT_FOV + 8, 0.2)
 			else:
 				sprinting = false
 				tween_camera_fov(DEFAULT_FOV, 0.2)
@@ -315,7 +315,7 @@ func toggle_scope_mode(state : bool) -> void:
 		
 		if Input.is_action_pressed("sprint"):
 			sprinting = true
-			tween_camera_fov(DEFAULT_FOV + 20, 0.2)
+			tween_camera_fov(DEFAULT_FOV + 8, 0.2)
 
 func get_hit(damage : float) -> void:
 	_health -= damage

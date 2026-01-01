@@ -1,14 +1,17 @@
-[gd_scene load_steps=27 format=3 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=30 format=3 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="3_8to8g"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="4_22f0a"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="5_dqy33"]
-[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="6_0su6h"]
+[ext_resource type="Script" path="res://classes/nodes/modules/StageLauncher.gd" id="6_0su6h"]
 [ext_resource type="PackedScene" uid="uid://b2yajy7wt0yx1" path="res://assets/meshes/Debug/to_warehouse.glb" id="6_dqy33"]
+[ext_resource type="PackedScene" uid="uid://b4niaskal7nk1" path="res://assets/scenes/Buildings/building_warehouse.tscn" id="7_2otec"]
+[ext_resource type="PackedScene" uid="uid://bdoi0xejcvx57" path="res://assets/meshes/Misc/Crates-Palets/Crate-1.tscn" id="8_04tpn"]
 [ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="8_jbe65"]
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="9_fwfj0"]
+[ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="9_xinbn"]
 [ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="10_iq7cf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
@@ -169,7 +172,6 @@ shape = SubResource("BoxShape3D_jbe65")
 transform = Transform3D(-0.46732825, 0, 0.88408387, 0, 1, 0, -0.88408387, 0, -0.46732825, -119.90802, 0.91564894, -59.19758)
 script = ExtResource("6_0su6h")
 stage_id = "warehouse/warehouse_1"
-metadata/_custom_type_script = "uid://dytis7djokgek"
 
 [node name="AreaTrigger" type="Node3D" parent="to_warehouse2"]
 script = ExtResource("5_dqy33")
@@ -182,6 +184,36 @@ collision_mask = 8
 [node name="CollisionShape3D" type="CollisionShape3D" parent="to_warehouse2/AreaTrigger/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6064053, 0)
 shape = SubResource("BoxShape3D_0su6h")
+
+[node name="WareHouse-Building and Area" type="Node3D" parent="to_warehouse2/AreaTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.067657, -8.456994, 16.068138)
+
+[node name="Building-WareHouse" parent="to_warehouse2/AreaTrigger/Area3D/WareHouse-Building and Area" instance=ExtResource("7_2otec")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 13.699326, 7.7098227, -24.830215)
+
+[node name="Crate-1" parent="to_warehouse2/AreaTrigger/Area3D/WareHouse-Building and Area" instance=ExtResource("8_04tpn")]
+transform = Transform3D(0.9998262, 0.018638266, -9.1820955e-05, -0.018638268, 0.99977773, -0.00985222, -9.1820955e-05, 0.009852219, 0.9999515, 5.0639496, 7.4747715, -9.579895)
+randomize_lid_y_rotation = true
+random_y_min_deg = 55.0
+random_y_max_deg = 97.2
+
+[node name="Crate-2" parent="to_warehouse2/AreaTrigger/Area3D/WareHouse-Building and Area" instance=ExtResource("8_04tpn")]
+transform = Transform3D(0.9998262, 0.018638264, -9.1820955e-05, -0.018638268, 0.99977773, -0.00985222, -9.185076e-05, 0.0098522175, 0.9999515, 6.433182, 7.4747715, -12.170181)
+random_y_min_deg = 55.0
+random_y_max_deg = 97.2
+
+[node name="Crate-3" parent="to_warehouse2/AreaTrigger/Area3D/WareHouse-Building and Area" instance=ExtResource("8_04tpn")]
+transform = Transform3D(0.9998261, 0.018638264, -9.1820955e-05, -0.018638268, 0.99977773, -0.00985222, -9.199977e-05, 0.0098522175, 0.9999515, 4.1301117, 7.4747715, -12.113579)
+random_y_min_deg = 55.0
+random_y_max_deg = 97.2
+
+[node name="Crate-4" parent="to_warehouse2/AreaTrigger/Area3D/WareHouse-Building and Area" instance=ExtResource("8_04tpn")]
+transform = Transform3D(0.9998261, 0.018638264, -9.1820955e-05, -0.018638268, 0.99977773, -0.00985222, -9.202957e-05, 0.0098522175, 0.9999515, 5.2426453, 9.672901, -12.071877)
+random_y_min_deg = 55.0
+random_y_max_deg = 97.2
+
+[node name="ForkLift-1" parent="to_warehouse2/AreaTrigger/Area3D" instance=ExtResource("9_xinbn")]
+transform = Transform3D(-0.30376336, 0, -0.5746545, 0, 0.65, 0, 0.5746545, 0, -0.30376336, 11.795715, -0.7896267, 4.2311707)
 
 [node name="to_warehouse" parent="." instance=ExtResource("6_dqy33")]
 
