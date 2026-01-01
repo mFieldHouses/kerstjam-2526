@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://c1dnotdac1qr3"]
+[gd_scene load_steps=15 format=3 uid="uid://c1dnotdac1qr3"]
 
 [ext_resource type="Script" uid="uid://b2iw6rsa4l7j7" path="res://scripts/stages/confrontation.gd" id="1_q58n8"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_txjfn"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_q8etp"]
-[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_jyk3o"]
+[ext_resource type="PackedScene" uid="uid://cqtj3st2qdnea" path="res://assets/scenes/Characters/Enemies/nutcracker_eindbaas.tscn" id="6_06wq0"]
+[ext_resource type="Script" path="res://classes/nodes/modules/StageLauncher.gd" id="9_jyk3o"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="10_fbhbk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wvqfc"]
@@ -48,7 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.414629, -0.19800603)
 environment = SubResource("Environment_28ucp")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0.125, 0)
 navigation_mesh = SubResource("NavigationMesh_2rhon")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -58,7 +59,6 @@ shadow_enabled = true
 [node name="StageLauncher" type="Node3D" parent="."]
 script = ExtResource("9_jyk3o")
 stage_id = "yeti_chase"
-metadata/_custom_type_script = "uid://dytis7djokgek"
 
 [node name="AreaTrigger" type="Node3D" parent="StageLauncher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.336687, 0.6467581, 0)
@@ -82,3 +82,6 @@ shape = SubResource("BoxShape3D_q58n8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor_panels/floor"]
 mesh = SubResource("BoxMesh_06wq0")
+
+[node name="Nutcracker_Eindbaas" parent="." instance=ExtResource("6_06wq0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -22.370361, 0, 0)

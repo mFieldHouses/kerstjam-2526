@@ -4,5 +4,5 @@
 transparency = 1
 metallic = 0.5
 emission_enabled = true
-emission = Color(0.9999998, 0.7913635, 0.30474645, 1)
-emission_energy_multiplier = 100.0
+emission = Color(1, 0.80558807, 0.36591107, 1)
+emission_energy_multiplier = 200.0

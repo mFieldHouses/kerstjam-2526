@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://2pbpl80r7ufi"]
+[gd_scene load_steps=13 format=4 uid="uid://2pbpl80r7ufi"]
 
 [ext_resource type="Texture2D" uid="uid://xejgadyoxptb" path="res://assets/meshes/Environment/SnowHigh-4-col_arctic_industrial_ow_color_atlas_256_2.png" id="1_0f8at"]
-[ext_resource type="Material" uid="uid://cgf0ua2wdmgjr" path="res://assets/materials/arctic_industrial_color_atlas_256_2.tres" id="2_2tewt"]
+[ext_resource type="Material" uid="uid://cd8bvypubtjkf" path="res://assets/materials/Emit-Yellow-1.tres" id="2_0f8at"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pfsm"]
 resource_name = "Gradient-Atlas-2.001"
@@ -44,6 +44,38 @@ shadow_mesh = SubResource("ArrayMesh_ijnfy")
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_lvm3c"]
 radius = 1.2001953
 
+[sub_resource type="Curve" id="Curve_2tewt"]
+_data = [Vector2(0.094827585, 0), 0.0, 0.0, 0, 0, Vector2(0.3017241, 1), 0.0, 0.0, 0, 0, Vector2(0.93678147, 0.035673857), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_lvm3c"]
+curve = SubResource("Curve_2tewt")
+
+[sub_resource type="Curve" id="Curve_kv6np"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.4367816, 3), 0.0, 0.0, 0, 0, Vector2(0.81609195, 0.040770292), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_smild"]
+curve = SubResource("Curve_kv6np")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_arni1"]
+lifetime_randomness = 0.3
+emission_shape = 1
+emission_sphere_radius = 6.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.08
+scale_max = 0.29999998
+scale_over_velocity_curve = SubResource("CurveTexture_smild")
+emission_curve = SubResource("CurveTexture_lvm3c")
+
+[sub_resource type="SphereMesh" id="SphereMesh_2tewt"]
+material = ExtResource("2_0f8at")
+radius = 0.2
+height = 0.2
+radial_segments = 11
+rings = 6
+
 [node name="SnowHigh-4" type="Node3D"]
 
 [node name="SnowHigh-4" type="Node3D" parent="."]
@@ -51,7 +83,6 @@ radius = 1.2001953
 [node name="SnowHigh-4" type="MeshInstance3D" parent="SnowHigh-4"]
 mesh = SubResource("ArrayMesh_wq23a")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("2_2tewt")
 
 [node name="hitbox " type="StaticBody3D" parent="SnowHigh-4"]
 transform = Transform3D(6.4267025, 0, 0, 0, 6.4267025, 0, 0, 0, 6.4267025, 0, 6.3917913, 0)
@@ -59,3 +90,19 @@ transform = Transform3D(6.4267025, 0, 0, 0, 6.4267025, 0, 0, 0, 6.4267025, 0, 6.
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SnowHigh-4/hitbox "]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.07871109)
 shape = SubResource("CylinderShape3D_lvm3c")
+
+[node name="GPUParticles3D-Glitter" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29460335, 8.385786, 0.40577888)
+material_override = ExtResource("2_0f8at")
+amount = 50
+lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_arni1")
+draw_pass_1 = SubResource("SphereMesh_2tewt")
+
+[node name="GPUParticles3D-Glitter2" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29460335, 2.7575693, -2.6559234)
+material_override = ExtResource("2_0f8at")
+amount = 50
+lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_arni1")
+draw_pass_1 = SubResource("SphereMesh_2tewt")

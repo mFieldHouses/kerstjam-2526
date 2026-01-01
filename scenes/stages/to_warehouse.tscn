@@ -1,11 +1,11 @@
-[gd_scene load_steps=35 format=4 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=36 format=4 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="3_8to8g"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="4_22f0a"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="5_dqy33"]
-[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="6_0su6h"]
+[ext_resource type="Script" path="res://classes/nodes/modules/StageLauncher.gd" id="6_0su6h"]
 [ext_resource type="PackedScene" uid="uid://b2yajy7wt0yx1" path="res://assets/meshes/Debug/to_warehouse.glb" id="6_dqy33"]
 [ext_resource type="PackedScene" uid="uid://b4niaskal7nk1" path="res://assets/scenes/Buildings/building_warehouse.tscn" id="7_2otec"]
 [ext_resource type="PackedScene" uid="uid://bdoi0xejcvx57" path="res://assets/meshes/Misc/Crates-Palets/Crate-1.tscn" id="8_04tpn"]
@@ -14,8 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="9_xinbn"]
 [ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="10_iq7cf"]
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="14_4co2b"]
-[ext_resource type="Script" uid="uid://br67v0qeo270u" path="res://scripts/musicplayer.gd" id="15_4co2b"]
+[ext_resource type="Script" path="res://scripts/musicplayer.gd" id="15_4co2b"]
 [ext_resource type="AudioStream" uid="uid://dibmmriy23nuc" path="res://assets/sound/soundtrack/snowmen_intro.wav" id="15_isx6m"]
+[ext_resource type="PackedScene" uid="uid://c26fu388xfxr" path="res://assets/scenes/Walls/snow_high_4_convex.tscn" id="17_y3jff"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
 size = Vector3(100, 0.497, 100)
@@ -234,29 +235,34 @@ transform = Transform3D(-0.30376336, 0, -0.5746545, 0, 0.65, 0, 0.5746545, 0, -0
 transform = Transform3D(4.08, 0, 0, 0, 4.08, 0, 0, 0, 4.08, 0, 0, 0)
 navigation_mesh = SubResource("NavigationMesh_jbe65")
 
-[node name="Snowman" parent="." instance=ExtResource("8_jbe65")]
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="Snowman" parent="Enemies" instance=ExtResource("8_jbe65")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -50.93729, -0.84510565, -15.477971)
 
-[node name="Snowman4" parent="." instance=ExtResource("8_jbe65")]
+[node name="Snowman4" parent="Enemies" instance=ExtResource("8_jbe65")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -50.93729, -0.84510565, -17.504509)
 
-[node name="Snowman5" parent="." instance=ExtResource("8_jbe65")]
+[node name="Snowman5" parent="Enemies" instance=ExtResource("8_jbe65")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -50.93729, -0.84510565, -19.827152)
 
-[node name="Snowman6" parent="." instance=ExtResource("8_jbe65")]
+[node name="Snowman6" parent="Enemies" instance=ExtResource("8_jbe65")]
 transform = Transform3D(-0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, -0.9659258, -44.455322, -0.8402605, -26.6036)
 
-[node name="Snowman2" parent="." instance=ExtResource("8_jbe65")]
+[node name="Snowman2" parent="Enemies" instance=ExtResource("8_jbe65")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.202366, 0.019803366, -18.809216)
 
-[node name="Snowman3" parent="." instance=ExtResource("8_jbe65")]
+[node name="Snowman3" parent="Enemies" instance=ExtResource("8_jbe65")]
 transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -74.57847, 2.5156732, -34.74176)
 
-[node name="Snowman7" parent="." instance=ExtResource("8_jbe65")]
+[node name="Snowman7" parent="Enemies" instance=ExtResource("8_jbe65")]
 transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -72.6705, 2.5156732, -35.201054)
 
-[node name="Snowman8" parent="." instance=ExtResource("8_jbe65")]
+[node name="Snowman8" parent="Enemies" instance=ExtResource("8_jbe65")]
 transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -63.57848, 2.5156732, -35.6394)
+
+[node name="jumping_mimic" parent="Enemies" instance=ExtResource("10_iq7cf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.483739, -2.431168e-07, 1.7818755)
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2otec")
@@ -310,9 +316,6 @@ light_volumetric_fog_energy = 10.0
 omni_range = 10.0
 omni_attenuation = 0.621
 
-[node name="jumping_mimic" parent="." instance=ExtResource("10_iq7cf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.483739, -2.431168e-07, 1.7818755)
-
 [node name="wind" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_4co2b")
 autoplay = true
@@ -334,3 +337,8 @@ collision_mask = 8
 [node name="CollisionShape3D" type="CollisionShape3D" parent="music/AreaTrigger/Area3D"]
 transform = Transform3D(0.9329033, 0, -0.36012706, 0, 1, 0, 0.36012706, 0, 0.9329033, 0, 0, 0)
 shape = SubResource("BoxShape3D_isx6m")
+
+[node name="Walls and pillars" type="Node3D" parent="."]
+
+[node name="SnowHigh-4" parent="." instance=ExtResource("17_y3jff")]
+transform = Transform3D(0.15, 0, 0, 0, 0.25, 0, 0, 0, 0.15, -42.61668, -0.195063, -15.590584)
