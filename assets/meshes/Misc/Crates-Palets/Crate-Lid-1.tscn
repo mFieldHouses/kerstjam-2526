@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cy1r6fssewhq8" path="res://assets/meshes/Misc/Crates-Palets/Crate-Lid-1_Crate-1-Texture-Normal.png" id="2_ojtk8"]
 [ext_resource type="Material" uid="uid://cl0vrnidaan1e" path="res://assets/materials/Crate-1.tres" id="3_ojtk8"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0jv8d"]
+size = Vector3(2.1350098, 0.16311646, 2.3669434)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5qjj1"]
 resource_name = "Crate-1-Texture"
 cull_mode = 2
@@ -44,19 +47,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ytkhc")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_0jv8d"]
-size = Vector3(2.1350098, 0.16311646, 2.3669434)
-
 [node name="Crate-Lid-1" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
-[node name="Crate-Lid-1" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013065338, 0.0075081624, 0)
-mesh = SubResource("ArrayMesh_4yfi1")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("3_ojtk8")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008178711, 0.090408325, -0.05407715)
 shape = SubResource("BoxShape3D_0jv8d")
+
+[node name="Crate-Lid-1" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004886627, -0.08290017, 0.05407715)
+mesh = SubResource("ArrayMesh_4yfi1")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("3_ojtk8")

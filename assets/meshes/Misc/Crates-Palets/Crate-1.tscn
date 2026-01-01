@@ -1,10 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://bdoi0xejcvx57"]
+[gd_scene load_steps=10 format=4 uid="uid://bdoi0xejcvx57"]
 
-[ext_resource type="Texture2D" uid="uid://btvyj58cxdy0" path="res://assets/meshes/Misc/Crates/Crate-1_Crate-1-Texture.png" id="1_src3k"]
+[ext_resource type="Script" uid="uid://dirrw324os8kn" path="res://scripts/crate-1.gd" id="1_rp160"]
+[ext_resource type="Texture2D" uid="uid://btvyj58cxdy0" path="res://assets/meshes/Misc/Crates-Palets/Crate-1_Crate-1-Texture.png" id="1_src3k"]
 [ext_resource type="Material" uid="uid://cl0vrnidaan1e" path="res://assets/materials/Crate-1.tres" id="2_0r4h4"]
-[ext_resource type="Texture2D" uid="uid://cwsnxrvrner6q" path="res://assets/meshes/Misc/Crates/Crate-1_Crate-1-Texture-Normal.png" id="3_0r4h4"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_src3k"]
+[ext_resource type="Texture2D" uid="uid://cwsnxrvrner6q" path="res://assets/meshes/Misc/Crates-Palets/Crate-1_Crate-1-Texture-Normal.png" id="3_0r4h4"]
+[ext_resource type="PackedScene" uid="uid://bq382ii6epxn4" path="res://assets/meshes/Misc/Crates-Palets/Crate-Lid-1.tscn" id="5_0ctcy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0d1ag"]
 size = Vector3(2.1944275, 2.083374, 2.2032318)
@@ -50,15 +50,20 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_w0lu2")
 
 [node name="Crate-1" type="Node3D"]
+script = ExtResource("1_rp160")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
-physics_material_override = SubResource("PhysicsMaterial_src3k")
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047997236, 0, -0.0035972595)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009017944, 1.0099487, -0.033729553)
 shape = SubResource("BoxShape3D_0d1ag")
 
-[node name="Crate-1" type="MeshInstance3D" parent="RigidBody3D"]
+[node name="Crate-1" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009017944, -1.0099487, 0.033729553)
 material_override = ExtResource("2_0r4h4")
 mesh = SubResource("ArrayMesh_omgdt")
 skeleton = NodePath("")
+
+[node name="Crate-Lid-1" parent="StaticBody3D/CollisionShape3D" instance=ExtResource("5_0ctcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009017944, 0.9814781, 0.033729553)
