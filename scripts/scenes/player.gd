@@ -7,8 +7,6 @@ const SPEED = 3.5
 const SPRINT_SPEED_DELTA = 2.0
 const JUMP_VELOCITY = 4.5
 
-const DEFAULT_FOV = 75
-
 var _health : float = 30.0:
 	set(x):
 		_health = x
@@ -97,6 +95,8 @@ func _ready():
 	PlayerState.player_instance = self
 	DisplayManager.set_mouse_captured()
 	
+	camera.fov = ConfigurableValues.fov
+	
 	_ammo[preload("res://assets/resources/items/ammo/fast.tres")] = PlayerState.ammo["fast"]
 	_ammo[preload("res://assets/resources/items/ammo/big.tres")] = PlayerState.ammo["big"]
 	_ammo[preload("res://assets/resources/items/ammo/explode.tres")] = PlayerState.ammo["explode"]
@@ -126,7 +126,7 @@ func _physics_process(delta: float) -> void:
 		camera_time += delta
 
 	# Handle jump.
-	if Input.is_action_pressed("jump"):
+	if Input.is_action_pressed("jump") and controls_enabled:
 		if flight:
 			position.y += delta * 20
 		else:
@@ -136,7 +136,7 @@ func _physics_process(delta: float) -> void:
 	_auto_gun_timer -= delta
 	
 	if _used_ammo.automatic == true:
-		if Input.is_action_pressed("shoot") and _selected_weapon_idx == 0 and _ammo[_used_ammo] > 0:
+		if Input.is_action_pressed("shoot") and _selected_weapon_idx == 0 and _ammo[_used_ammo] > 0 and controls_enabled:
 			if _auto_gun_timer < 0.0:
 				shoot()
 				_auto_gun_timer = _used_ammo.shoot_delay
@@ -230,10 +230,10 @@ func _input(event):
 		if event.is_action("sprint") and !in_scope:
 			if event.is_pressed():
 				sprinting = true
-				tween_camera_fov(DEFAULT_FOV * 1.3, 0.2)
+				tween_camera_fov(ConfigurableValues.fov * 1.3, 0.2)
 			else:
 				sprinting = false
-				tween_camera_fov(DEFAULT_FOV, 0.2)
+				tween_camera_fov(ConfigurableValues.fov, 0.2)
 		
 		elif event.is_action("shoot"):
 			if event.is_pressed() and (_used_ammo.automatic == false or _selected_weapon_idx != 0) and _ammo[_used_ammo] > 0:
@@ -305,17 +305,17 @@ func toggle_scope_mode(state : bool) -> void:
 	in_scope = state
 	
 	if state:
-		tween_camera_fov(DEFAULT_FOV * 0.2, 0.2)
+		tween_camera_fov(ConfigurableValues.fov * 0.2, 0.2)
 		sensitivity_multiplier = sensitivity_multipliers["in_scope"]
 		speed_multiplier = speed_multipliers["in_scope"]
 	else:
-		tween_camera_fov(DEFAULT_FOV, 0.2)
+		tween_camera_fov(ConfigurableValues.fov, 0.2)
 		sensitivity_multiplier = sensitivity_multipliers["default"]
 		speed_multiplier = speed_multipliers["default"]
 		
 		if Input.is_action_pressed("sprint"):
 			sprinting = true
-			tween_camera_fov(DEFAULT_FOV + 8, 0.2)
+			tween_camera_fov(ConfigurableValues.fov + 8, 0.2)
 
 func get_hit(damage : float) -> void:
 	_health -= damage

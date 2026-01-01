@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=34 format=4 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="8_jbe65"]
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="9_fwfj0"]
 [ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="9_xinbn"]
-[ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="10_iq7cf"]
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="14_4co2b"]
 [ext_resource type="Script" uid="uid://br67v0qeo270u" path="res://scripts/musicplayer.gd" id="15_4co2b"]
 [ext_resource type="AudioStream" uid="uid://dibmmriy23nuc" path="res://assets/sound/soundtrack/snowmen_intro.wav" id="15_isx6m"]
@@ -309,9 +308,6 @@ light_indirect_energy = 3.123
 light_volumetric_fog_energy = 10.0
 omni_range = 10.0
 omni_attenuation = 0.621
-
-[node name="jumping_mimic" parent="." instance=ExtResource("10_iq7cf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.483739, -2.431168e-07, 1.7818755)
 
 [node name="wind" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_4co2b")
