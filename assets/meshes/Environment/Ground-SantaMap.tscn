@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgm2yd6wh5peu"]
+
+[ext_resource type="PackedScene" uid="uid://m4k23gqkhit7" path="res://assets/meshes/SantaShop/Ground/Ground-SantaMap.glb" id="1_thqk4"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Ground-SantaMap2" parent="." instance=ExtResource("1_thqk4")]
