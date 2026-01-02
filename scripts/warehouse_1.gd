@@ -3,6 +3,8 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SaveFileManager._unlocked_stages.warehouse_1 = true
+	
 	DialogManager.dialog_queue.connect(_dialog_queue)
 	DialogManager.dialog_started.connect(_dialog_start)
 	DialogManager.dialog_ended.connect(_dialog_end)

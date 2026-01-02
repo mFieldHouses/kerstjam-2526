@@ -4,6 +4,8 @@ var _player_trail_points : Array[PlayerTrailPoint] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SaveFileManager._unlocked_stages.yeti_chase = true
+	
 	_create_new_trail_point(Vector3.ZERO)
 	
 	await get_tree().create_timer(1.0).timeout

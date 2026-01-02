@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7gqgiwmu6ix8"]
+[gd_scene load_steps=3 format=3 uid="uid://b7gqgiwmu6ix8"]
 
 [ext_resource type="Script" uid="uid://y6qmsqubyjsu" path="res://scripts/scenes/select_stage.gd" id="1_gu5v2"]
+[ext_resource type="Script" uid="uid://ds7yvfjfu3ckc" path="res://scripts/stage_select_button.gd" id="2_nph0k"]
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -32,10 +33,37 @@ text = "TUTORIAL_STAGE_BTN"
 [node name="stage1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "STAGE_1_BTN"
+script = ExtResource("2_nph0k")
+stage_check_id = "yeti_chase"
+stage_launch_id = "yeti_chase_Niels"
 
 [node name="stage2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "STAGE_2_BTN"
+script = ExtResource("2_nph0k")
+stage_check_id = "to_warehouse"
+stage_launch_id = "to_warehouse"
+
+[node name="stage3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "STAGE_3_BTN"
+script = ExtResource("2_nph0k")
+stage_check_id = "warehouse_1"
+stage_launch_id = "warehouse/warehouse_1"
+
+[node name="stage4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "STAGE_4_BTN"
+script = ExtResource("2_nph0k")
+stage_check_id = "warehouse_2"
+stage_launch_id = "warehouse/warehouse_2"
+
+[node name="stage5" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "STAGE_5_BTN"
+script = ExtResource("2_nph0k")
+stage_check_id = "confrontation"
+stage_launch_id = "confrontation"
 
 [node name="back" type="Button" parent="."]
 layout_mode = 0
@@ -46,3 +74,4 @@ offset_bottom = 39.0
 text = "BACK_BTN"
 
 [connection signal="button_down" from="VBoxContainer/tutorial" to="." method="_on_tutorial_button_down"]
+[connection signal="button_down" from="back" to="." method="_on_back_button_down"]

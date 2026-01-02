@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="3_8to8g"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="4_22f0a"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="5_dqy33"]
-[ext_resource type="Script" path="res://classes/nodes/modules/StageLauncher.gd" id="6_0su6h"]
+[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="6_0su6h"]
 [ext_resource type="PackedScene" uid="uid://b2yajy7wt0yx1" path="res://assets/meshes/Debug/to_warehouse.glb" id="6_dqy33"]
 [ext_resource type="PackedScene" uid="uid://b4niaskal7nk1" path="res://assets/scenes/Buildings/building_warehouse.tscn" id="7_2otec"]
 [ext_resource type="PackedScene" uid="uid://bdoi0xejcvx57" path="res://assets/meshes/Misc/Crates-Palets/Crate-1.tscn" id="8_04tpn"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="9_xinbn"]
 [ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="10_iq7cf"]
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="14_4co2b"]
-[ext_resource type="Script" path="res://scripts/musicplayer.gd" id="15_4co2b"]
+[ext_resource type="Script" uid="uid://br67v0qeo270u" path="res://scripts/musicplayer.gd" id="15_4co2b"]
 [ext_resource type="AudioStream" uid="uid://dibmmriy23nuc" path="res://assets/sound/soundtrack/snowmen_intro.wav" id="15_isx6m"]
 [ext_resource type="PackedScene" uid="uid://c26fu388xfxr" path="res://assets/scenes/Walls/snow_high_4_convex.tscn" id="17_y3jff"]
 

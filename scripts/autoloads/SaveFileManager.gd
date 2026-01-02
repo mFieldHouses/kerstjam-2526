@@ -1,14 +1,17 @@
 extends Node
 
 var _unlocked_stages : Dictionary = {
+	"introduction": true,
 	"yeti_chase": false,
 	"to_warehouse": false,
 	"warehouse_1": false,
 	"warehouse_2": false,
-	"bossfight": false
+	"confrontation": false
 }
 
 var _save_data : Dictionary
+
+signal done_saving
 
 func _ready() -> void:
 	save_game()
@@ -27,6 +30,8 @@ func save_game() -> void:
 	}
 	
 	_fa.store_string(_json.stringify(_save_obj, "  "))
+	
+	#done_saving.emit()
 	
 
 func retrieve_save_data() -> Dictionary:

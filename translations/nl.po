@@ -18,20 +18,40 @@ msgstr "< Terug"
 
 #: Tutorial
 msgid "TUTORIAL_STAGE_BTN"
-msgstr "Instructie-level"
+msgstr "Introductie"
 
 #: Stage 1
 msgid "STAGE_1_BTN"
 msgstr "Level 1: De Achtervolging"
 
 #: Stage 2
-#, fuzzy
 msgid "STAGE_2_BTN"
-msgstr "Level 2: __"
+msgstr "Level 2: De Sneeuwpoppen"
+
+#: Stage 3
+msgid "STAGE_3_BTN"
+msgstr "Level 3: Het Pakhuis"
+
+#: Stage 4
+msgid "STAGE_4_BTN"
+msgstr "Level 4: De Kelder"
+
+#: Stage 5
+msgid "STAGE_5_BTN"
+msgstr "Level 5: De Confrontatie"
 
 #: Play
 msgid "PLAY_BTN"
-msgstr "Speel"
+msgstr "Spelen"
+
+msgid "CONTINUE_BTN"
+msgstr "Verderspelen"
+
+msgid "EXIT_BTN"
+msgstr "Stoppen"
+
+msgid "SETTINGS_BTN"
+msgstr "Instellingen"
 
 msgid "CUBE_DIALOG"
 msgstr ""

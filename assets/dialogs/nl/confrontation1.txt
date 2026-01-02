@@ -1,6 +1,5 @@
 Daar ben je! Het werd tijd!
 set_name Philip
-set_thumbnail res://icon.svg
 Nu zal ik mijzelf eens introduceren. Ik ben Philip, en ik heb zeer kwaaie plannetjes om kerst te verpesten!
 Ik heb die onderdelen van jullie gestolen om mijn eigen slee te bouwen! En daarmee ga ik de slechtste cadeautjes ooit aan kinderen geven.
 Nu ik de teleportatiespoel en de sterrenstof-condensator heb, ga ik-
@@ -9,5 +8,8 @@ Hoe heb JIJ nou weer de sterrenstof-condensator in handen?! Die zat toch echt in
 Ah. Er zit ook een gat in mijn tas.
 MAAR dat maakt niet uit! Want ik schakel jou ter plekke uit, en dan heb ik alle onderdelen die ik nodig heb!
 Als dat mij niet lukt, dan geef ik jou de onderelen terug! Maar dat gaat toch niet gebeuren! NIHAHAhahahaH!!
-Nu mag je lekker gaan stoeien met mijn hulpjes! Veel plezier!
-*start_waves
+Het valt je misschien op dat ik een mega-robot onder mijn beschikking heb! Die was ik nu net aan het opladen, misschien merkte je daar al wat van! Maar toen heb jij de stroom weer teruggeschakeld. Dat was niet zo beleefd. 
+Daarom ga ik jou wat klappen uitdelen!!! HAhahaha! De kansen vallen niet bepaald in jouw voordeel! Als je wilt, mag je je nog overgeven. Dan geef ik je wat minder klappen!
+...nee?? Vooruit dan maar!
+Veel plezier!! Hoehahahahaaa!!
+*start_fight

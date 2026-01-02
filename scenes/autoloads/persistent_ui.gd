@@ -4,8 +4,8 @@ var _top_dialog_open : bool = false
 var _bottom_dialog_open : bool = false
 
 func _process(delta: float) -> void:
-	$dialog/MarginContainer/HBoxContainer/henkie_video.custom_minimum_size.x = $dialog/MarginContainer/HBoxContainer/henkie_video.size.y
-	$remote_dialog/MarginContainer/HBoxContainer/henkie_video.custom_minimum_size.x = $remote_dialog/MarginContainer/HBoxContainer/henkie_video.size.y
+	$dialog/MarginContainer/HBoxContainer/video.custom_minimum_size.x = $dialog/MarginContainer/HBoxContainer/video.size.y
+	$remote_dialog/MarginContainer/HBoxContainer/video.custom_minimum_size.x = $remote_dialog/MarginContainer/HBoxContainer/video.size.y
 
 func dialog_line(line : String, conversor_name : String, thumbnail : Texture2D) -> void: ##Pass an empty line to hide the dialog box again.
 	var _move_tween : Tween = create_tween()
@@ -19,11 +19,22 @@ func dialog_line(line : String, conversor_name : String, thumbnail : Texture2D) 
 		_move_tween.tween_property($dialog, "position:y", get_viewport_rect().size.y, 0.3)
 		await _move_tween.finished
 	
-	if conversor_name == "Henkie":
-		$dialog/MarginContainer/HBoxContainer/henkie_video.visible = true
+	if conversor_name == "Henkie" or conversor_name == "Philip":
+		$dialog/MarginContainer/HBoxContainer/video.visible = true
 		$dialog/MarginContainer/HBoxContainer/thumbnail.visible = false
+		
+		match conversor_name:
+			"Henkie":
+				if !$dialog/MarginContainer/HBoxContainer/video.stream.resource_path == "res://assets/textures/thumbnails/henkie.ogv":
+					$dialog/MarginContainer/HBoxContainer/video.stream = load("res://assets/textures/thumbnails/henkie.ogv")
+			"Philip":
+				if !$dialog/MarginContainer/HBoxContainer/video.stream.resource_path == "res://assets/textures/thumbnails/philip.ogv":
+					$dialog/MarginContainer/HBoxContainer/video.stream = load("res://assets/textures/thumbnails/philip.ogv")
+	
+		$dialog/MarginContainer/HBoxContainer/video.play()
+	
 	else:
-		$dialog/MarginContainer/HBoxContainer/henkie_video.visible = false
+		$dialog/MarginContainer/HBoxContainer/video.visible = false
 		$dialog/MarginContainer/HBoxContainer/thumbnail.visible = true
 	
 	$dialog/MarginContainer/HBoxContainer/VBoxContainer/contents.text = line
@@ -37,11 +48,22 @@ func dialog_line(line : String, conversor_name : String, thumbnail : Texture2D) 
 
 func remote_dialog_line(line : String, conversor_name : String, thumbnail : Texture2D) -> void: ##Pass an empty line to hide the dialog box again.
 	
-	if conversor_name == "Henkie":
-		$remote_dialog/MarginContainer/HBoxContainer/henkie_video.visible = true
+	if conversor_name == "Henkie" or conversor_name == "Philip":
+		$remote_dialog/MarginContainer/HBoxContainer/video.visible = true
 		$remote_dialog/MarginContainer/HBoxContainer/thumbnail.visible = false
+		
+		match conversor_name:
+			"Henkie":
+				if !$remote_dialog/MarginContainer/HBoxContainer/video.stream.resource_path == "res://assets/textures/thumbnails/henkie.ogv":
+					$remote_dialog/MarginContainer/HBoxContainer/video.stream = load("res://assets/textures/thumbnails/henkie.ogv")
+			"Philip":
+				if !$remote_dialog/MarginContainer/HBoxContainer/video.stream.resource_path == "res://assets/textures/thumbnails/philip.ogv":
+					$remote_dialog/MarginContainer/HBoxContainer/video.stream = load("res://assets/textures/thumbnails/philip.ogv")
+		
+		$remote_dialog/MarginContainer/HBoxContainer/video.play()
+		
 	else:
-		$remote_dialog/MarginContainer/HBoxContainer/henkie_video.visible = false
+		$remote_dialog/MarginContainer/HBoxContainer/video.visible = false
 		$remote_dialog/MarginContainer/HBoxContainer/thumbnail.visible = true
 	
 	$remote_dialog/MarginContainer/HBoxContainer/VBoxContainer/contents.text = line

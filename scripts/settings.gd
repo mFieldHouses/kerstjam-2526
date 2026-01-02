@@ -2,6 +2,8 @@ extends Control
 
 func open_settings_page() -> void:
 	visible = true
+	
+func _ready() -> void:
 	var _values : Dictionary[String, Array] = ConfigurableValues.get_configurable_values()
 	
 	for _value_cat : String in _values:

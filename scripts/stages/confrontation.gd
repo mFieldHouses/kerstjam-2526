@@ -3,15 +3,18 @@ extends Node3D
 
 func _ready() -> void:
 	
-	await get_tree().create_timer(1.0).timeout
+	SaveFileManager._unlocked_stages.confrontation = true
 	
-	DialogManager.initiate_dialog_with("confrontation1", $philip, "???", load("res://icon.svg"))
-	#pass
 	for x in 10:
 		for y in 10:
 			var _new_colshape = $floor_panels/floor.duplicate()
 			$floor_panels.add_child(_new_colshape)
 			_new_colshape.position = Vector3(x * 2 - 9, 0.0, y * 2 - 9)
+	
+	await get_tree().create_timer(1.0).timeout
+	
+	DialogManager.initiate_dialog_with("confrontation1", $Nutcracker_Eindbaas/philip_head, "???", load("res://icon.svg"))
+	#pass
 	
 	$floor_panels/floor.queue_free()
 	
