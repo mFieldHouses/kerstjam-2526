@@ -18,15 +18,15 @@ func shoot_up() -> void:
 	await _animplayer.animation_finished
 	return
 
-func laser_shoot() -> void:
+func laser_shoot(mult : float) -> void:
 	_lasers.visible = true
 	
 	var _tween : Tween = create_tween()
 	_tween.tween_property(self, "position:y", -4, 2.2)
 	
-	_animplayer.play("laser_shoot1")
+	_animplayer.play("laser_shoot1", -1, 1.0 + (mult * 0.5))
 	
-	await get_tree().create_timer(2.5).timeout
+	await get_tree().create_timer(2.5 * (1.0 - (2.0 * mult))).timeout
 	
 	_lasers_mat.emission_energy_multiplier = 1.0
 	_lasers.get_node("particles").emitting = true
@@ -57,3 +57,6 @@ func spawn_monsters_timeout() -> void:
 		await _animplayer.animation_finished
 	
 	return
+
+func ascend() -> void:
+	_animplayer.play("ascend")

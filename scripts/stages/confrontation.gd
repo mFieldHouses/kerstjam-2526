@@ -1,7 +1,7 @@
 extends Node3D
 
 var _first_round : bool = true
-var _wave_idx : int = 1
+var _wave_idx : int = 0
 
 func _ready() -> void:
 	
@@ -15,23 +15,25 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(1.0).timeout
 	
-	#DialogManager.initiate_dialog_with("confrontation1", $Nutcracker_Eindbaas/philip_head, "???", load("res://icon.svg"))
+	DialogManager.initiate_dialog_with("confrontation1", $Nutcracker_Eindbaas/philip_head, "???", load("res://icon.svg"))
+	
+	await DialogManager.dialog_ended
 	
 	$floor_panels/floor.queue_free()
 	
-	while true:
+	for i in 1:
 		
 		if _first_round:
 			DialogManager.initiate_remote_dialog("fireballs", "Philip", null)
 		await $Nutcracker_Eindbaas.shoot_up()
 		
-		await fireballs(2.5, 3.0)
+		await fireballs(2.5 + (_wave_idx * 1.5), 3.0)
 		
 		await get_tree().create_timer(2).timeout
 		
 		if _first_round:
 			DialogManager.initiate_remote_dialog("lasers", "Philip", null)
-		await $Nutcracker_Eindbaas.laser_shoot()
+		await $Nutcracker_Eindbaas.laser_shoot(_wave_idx)
 		
 		if _first_round:
 			DialogManager.initiate_remote_dialog("timeout", "Philip", null)
@@ -44,6 +46,8 @@ func _ready() -> void:
 		_wave_idx += 1
 		
 		_first_round = false
+	
+	$Nutcracker_Eindbaas.ascend()
 		
 func _floor_fall(count : int) -> void:
 	for _idx in count:

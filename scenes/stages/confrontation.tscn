@@ -81,4 +81,4 @@ mesh = SubResource("BoxMesh_06wq0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012, 4, -15.737)
 
 [node name="philip_head" type="Marker3D" parent="Nutcracker_Eindbaas"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.548478e-08, 13.93158, 0.5830231)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.514571e-08, 5.207223, 0.5830231)
