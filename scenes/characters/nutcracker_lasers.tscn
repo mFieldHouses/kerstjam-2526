@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://u6iufunmj7fe"]
+
+[ext_resource type="Script" uid="uid://cin4wbxgryotf" path="res://scripts/nutcracker_lasers.gd" id="1_tcfwf"]
+
+[sub_resource type="Gradient" id="Gradient_y1md5"]
+offsets = PackedFloat32Array(0, 0.1981982, 0.6846847)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.29000002, 0.29000002, 0.0627451, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tcfwf"]
+gradient = SubResource("Gradient_y1md5")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjapg"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("GradientTexture2D_tcfwf")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_neq7w"]
+material = SubResource("StandardMaterial3D_jjapg")
+
+[sub_resource type="Gradient" id="Gradient_dobfo"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y1md5"]
+transparency = 4
+albedo_color = Color(1, 0, 0, 0.5686275)
+emission_enabled = true
+emission = Color(0.96505195, 4.379898e-06, 1.540184e-06, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_y1md5"]
+material = SubResource("StandardMaterial3D_y1md5")
+size = Vector3(0.05, 0.05, 50)
+
+[node name="nutcracker_lasers" type="Node3D"]
+script = ExtResource("1_tcfwf")
+
+[node name="particles" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 3.354979e-21, -8.458721e-21, -2.9076857e-21, 0.9986295, 0.05233596, 8.622715e-21, -0.05233596, 0.9986295, 0.2144326, 9.840601, 25.766935)
+emitting = false
+amount = 300
+lifetime = 0.6
+speed_scale = 1.5
+mesh = SubResource("QuadMesh_neq7w")
+emission_shape = 3
+emission_box_extents = Vector3(0.845, 0.03, 25)
+direction = Vector3(0, 1, 0)
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+scale_amount_min = 0.5
+color_ramp = SubResource("Gradient_dobfo")
+
+[node name="right_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 3.354979e-21, -8.458721e-21, -2.9076857e-21, 0.9986295, 0.05233596, 8.622715e-21, -0.05233596, 0.9986295, -0.48931837, 9.840601, 25.766935)
+mesh = SubResource("BoxMesh_y1md5")
+
+[node name="left_mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 3.3549793e-21, -8.458721e-21, -2.9076857e-21, 0.9986295, 0.05233596, 8.622715e-21, -0.05233596, 0.9986295, 0.8746314, 9.840601, 25.766935)
+mesh = SubResource("BoxMesh_y1md5")
+
+[node name="hit" type="RayCast3D" parent="."]
+transform = Transform3D(1, 3.4436397e-21, -1.0150465e-20, -2.9076859e-21, 0.9986295, 0.05233596, 1.0316781e-20, -0.05233596, 0.9986295, 0.16745579, 8.532202, 0.8011964)
+enabled = false
+target_position = Vector3(0, 0, 50)
+collision_mask = 8

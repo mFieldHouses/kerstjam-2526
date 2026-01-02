@@ -1,16 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqtj3st2qdnea"]
+[gd_scene load_steps=3 format=3 uid="uid://cqtj3st2qdnea"]
 
+[ext_resource type="Script" uid="uid://bbvs2d3c2snel" path="res://scripts/nutcracker_eindbaas.gd" id="1_ma040"]
 [ext_resource type="PackedScene" uid="uid://c623bxbpfwl7k" path="res://assets/meshes/Enemies/NutCracker-1.glb" id="1_ysms2"]
 
 [node name="Nutcracker_Eindbaas" type="Node3D"]
+script = ExtResource("1_ma040")
 
 [node name="NutCracker-1" parent="." instance=ExtResource("1_ysms2")]
-
-[node name="OmniLight3D" type="OmniLight3D" parent="NutCracker-1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.308955, 1.7225578)
-light_energy = 0.697
-light_size = 0.171
-light_specular = 0.0
-shadow_enabled = true
-shadow_opacity = 0.91
-shadow_blur = 10.0

@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://cg56gcpfds3a"]
+
+[ext_resource type="Script" uid="uid://daq32053dp4ap" path="res://scripts/scenes/fireball.gd" id="1_1gl40"]
+[ext_resource type="Texture2D" uid="uid://cowivfljy5tex" path="res://icon.svg" id="1_3s14c"]
+[ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="3_cb14k"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cb14k"]
+radius = 1.6752336
+
+[sub_resource type="Gradient" id="Gradient_7kba2"]
+offsets = PackedFloat32Array(0, 0.1495327, 0.48598132, 0.8411215, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.8666667, 0, 1, 1, 0.5450001, 0.22000003, 1, 1, 0, 0, 0.5137255, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_43lgj"]
+gradient = SubResource("Gradient_7kba2")
+
+[sub_resource type="Curve" id="Curve_vqoxj"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1.7349396), 0.0, 0.0, 0, 0, Vector2(1, 3), 6.168299, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_86oub"]
+curve = SubResource("Curve_vqoxj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qaphm"]
+emission_shape = 1
+emission_sphere_radius = 0.5
+inherit_velocity_ratio = 0.753
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 0.01
+initial_velocity_max = 0.01
+gravity = Vector3(0, 4, 0)
+linear_accel_min = 4.9999976
+linear_accel_max = 6.9999976
+tangential_accel_min = -1.0000023
+tangential_accel_max = 1.9999977
+damping_min = 2.0
+damping_max = 2.0
+attractor_interaction_enabled = false
+scale_min = 1.9
+scale_max = 1.9
+scale_curve = SubResource("CurveTexture_86oub")
+color_ramp = SubResource("GradientTexture1D_43lgj")
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.4
+
+[sub_resource type="QuadMesh" id="QuadMesh_aonu6"]
+material = ExtResource("3_cb14k")
+size = Vector2(0.1, 0.1)
+
+[node name="fireball" type="Node3D"]
+script = ExtResource("1_1gl40")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+texture = ExtResource("1_3s14c")
+
+[node name="hit_area" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hit_area"]
+shape = SubResource("SphereShape3D_cb14k")
+
+[node name="fire_particles" type="GPUParticles3D" parent="."]
+transform = Transform3D(1.0482334e-08, -4.6009518e-08, -0.61, 0.6099945, 0.002596568, 1.0286392e-08, 0.002596568, -0.6099945, 4.605372e-08, 0, 80.3698, 0)
+amount = 500
+lifetime = 2.0
+randomness = 1.0
+fixed_fps = 60
+collision_base_size = 0.1
+visibility_aabb = AABB(-0.55855715, -10.439301, -10.722703, 30.05463, 21.511541, 23.204666)
+process_material = SubResource("ParticleProcessMaterial_qaphm")
+draw_pass_1 = SubResource("QuadMesh_aonu6")
+
+[node name="tile_raycast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42450815, 0)

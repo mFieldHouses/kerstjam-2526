@@ -1,0 +1,59 @@
+extends Node3D
+
+@onready var _animplayer : AnimationPlayer = $"NutCracker-1/AnimationPlayer"
+
+var _lasers : Node3D
+var _lasers_mat : StandardMaterial3D
+
+func _ready() -> void:
+	_lasers = preload("res://scenes/characters/nutcracker_lasers.tscn").instantiate()
+	_lasers.player_entered.connect(PlayerState.player_instance.get_hit.bind(5))
+	_lasers.visible = false
+	_lasers_mat = _lasers.get_node("right_mesh").get_active_material(0)
+	$"NutCracker-1/robot/Skeleton3D/head_top/Cube_049/Eyes_001".add_child(_lasers)
+
+func shoot_up() -> void:
+	_animplayer.play("shoot_up")
+	
+	await _animplayer.animation_finished
+	return
+
+func laser_shoot() -> void:
+	_lasers.visible = true
+	
+	var _tween : Tween = create_tween()
+	_tween.tween_property(self, "position:y", -4, 2.2)
+	
+	_animplayer.play("laser_shoot1")
+	
+	await get_tree().create_timer(2.5).timeout
+	
+	_lasers_mat.emission_energy_multiplier = 1.0
+	_lasers.get_node("particles").emitting = true
+	_lasers.get_node("hit").enabled = true
+	
+	#_tween = create_tween()
+	#_tween.tween_property(self, "position:y", 4, 2.2)
+	#await _tween.finished
+	
+	await _animplayer.animation_finished
+	
+	_tween = create_tween()
+	_tween.tween_property(self, "position:y", 4, 2.2)
+	
+	_lasers_mat.emission_energy_multiplier = 0.0
+	_lasers.get_node("particles").emitting = false
+	_lasers.visible = false
+	_lasers.get_node("hit").enabled = false
+	
+	await get_tree().create_timer(4.0).timeout
+	
+	return
+
+func spawn_monsters_timeout() -> void:
+	for i in 4:
+		_animplayer.play("timeout", -1, 2)
+		
+		await _animplayer.animation_finished
+	
+	return
