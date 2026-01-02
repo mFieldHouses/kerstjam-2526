@@ -5,11 +5,23 @@ extends Node3D
 var _lasers : Node3D
 var _lasers_mat : StandardMaterial3D
 
+var _health_left : float = 200.0:
+	set(x):
+		_health_left = x
+		
+		_destruction_level = int((200.0 - _health_left) / 70.0)
+		
+var _destruction_level : int = 0:
+	set(x):
+		_destruction_level = x
+		print("destruction level is ", x)
+
 func _ready() -> void:
 	_lasers = preload("res://scenes/characters/nutcracker_lasers.tscn").instantiate()
 	_lasers.player_entered.connect(PlayerState.player_instance.get_hit.bind(5))
-	_lasers.visible = false
-	_lasers_mat = _lasers.get_node("right_mesh").get_active_material(0)
+	_lasers.get_node("meshes").visible = false
+	_lasers.get_node("button").got_hit.connect(func(dmg_amount : float): _health_left -= dmg_amount)
+	_lasers_mat = _lasers.get_node("meshes/right_mesh").get_active_material(0)
 	$"NutCracker-1/robot/Skeleton3D/head_top/Cube_049/Eyes_001".add_child(_lasers)
 
 func shoot_up() -> void:
@@ -19,7 +31,7 @@ func shoot_up() -> void:
 	return
 
 func laser_shoot(mult : float) -> void:
-	_lasers.visible = true
+	_lasers.get_node("meshes").visible = true
 	
 	var _tween : Tween = create_tween()
 	_tween.tween_property(self, "position:y", -4, 2.2)
@@ -43,7 +55,7 @@ func laser_shoot(mult : float) -> void:
 	
 	_lasers_mat.emission_energy_multiplier = 0.0
 	_lasers.get_node("particles").emitting = false
-	_lasers.visible = false
+	_lasers.get_node("meshes").visible = false
 	_lasers.get_node("hit").enabled = false
 	
 	await get_tree().create_timer(4.0).timeout

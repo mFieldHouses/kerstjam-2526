@@ -15,13 +15,13 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(1.0).timeout
 	
-	DialogManager.initiate_dialog_with("confrontation1", $Nutcracker_Eindbaas/philip_head, "???", load("res://icon.svg"))
+	#DialogManager.initiate_dialog_with("confrontation1", $Nutcracker_Eindbaas/philip_head, "???", load("res://icon.svg"))
 	
-	await DialogManager.dialog_ended
+	#await DialogManager.dialog_ended
 	
 	$floor_panels/floor.queue_free()
 	
-	for i in 1:
+	while $Nutcracker_Eindbaas._health_left > 10:
 		
 		if _first_round:
 			DialogManager.initiate_remote_dialog("fireballs", "Philip", null)
@@ -47,7 +47,11 @@ func _ready() -> void:
 		
 		_first_round = false
 	
+	DialogManager.initiate_remote_dialog("nutcracker_ascend", "Philip", null)
+	await DialogManager.dialog_ended
+	
 	$Nutcracker_Eindbaas.ascend()
+	
 		
 func _floor_fall(count : int) -> void:
 	for _idx in count:
