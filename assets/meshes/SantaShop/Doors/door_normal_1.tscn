@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmt43o30mx2hs"]
+[gd_scene load_steps=12 format=3 uid="uid://cmt43o30mx2hs"]
 
 [ext_resource type="PackedScene" uid="uid://pdv7a2hf7yhf" path="res://assets/meshes/SantaShop/Doors/Door-Normal-1.glb" id="1_yg42h"]
 [ext_resource type="Material" uid="uid://bdfblnw3d5ot" path="res://assets/materials/Concrete-1.tres" id="2_2nt6g"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="2_a5bl6"]
+[ext_resource type="Material" uid="uid://dvcsb58dlj0yy" path="res://assets/materials/BrickColor-2.tres" id="2_hdmee"]
 [ext_resource type="Script" uid="uid://dnjwa0xk782tk" path="res://addons/GodotDevTools/classes/nodes/modules/DoorController.gd" id="2_ydwos"]
 [ext_resource type="Material" uid="uid://dn6kf4xctrw2a" path="res://assets/materials/Metal-Brons-1.tres" id="3_ydwos"]
 [ext_resource type="PackedScene" uid="uid://jqr5jx3r8a3e" path="res://assets/meshes/SantaShop/Decoration/hanging_lamp_1.tscn" id="5_ydwos"]
@@ -28,6 +29,9 @@ roughness_texture = SubResource("NoiseTexture2D_a5bl6")
 size = Vector3(1, 1, 1.0820313)
 
 [node name="Door-Normal-1" instance=ExtResource("1_yg42h")]
+
+[node name="Wall-1-2x2x05" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_hdmee")
 
 [node name="Cube_551_Cutout_002" parent="Wall-1-2x2x05" index="0"]
 visible = false
