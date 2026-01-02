@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0c88sowfi8qr"]
+
+[ext_resource type="Material" uid="uid://dvcsb58dlj0yy" path="res://assets/materials/BrickColor-2.tres" id="1_t0ba5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t0ba5"]
+size = Vector3(2.057373, 2.0437012, 0.55810547)
+
+[sub_resource type="BoxMesh" id="BoxMesh_14rbl"]
+
+[node name="Wall-1-2x2x05m" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006958008, 0.006958008, -0.0036621094)
+shape = SubResource("BoxShape3D_t0ba5")
+
+[node name="Wall-1-2x2x05m" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, -2.1855694e-08, 2, 0, -0.5, -8.742278e-08, 0, 0, 0)
+mesh = SubResource("BoxMesh_14rbl")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("1_t0ba5")
