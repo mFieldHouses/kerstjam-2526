@@ -1,4 +1,5 @@
 [gd_scene load_steps=52 format=4 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=47 format=4 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
@@ -33,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://cgu8uvxmypxlr" path="res://assets/meshes/Environment/Ramps/ramp_1.tscn" id="26_p1by1"]
 [ext_resource type="Resource" uid="uid://gwh384geqki4" path="res://assets/resources/items/ammo/fast.tres" id="27_pntd1"]
 [ext_resource type="Resource" uid="uid://qxhttbpl2yph" path="res://assets/resources/items/ammo/explode.tres" id="28_5clna"]
+[ext_resource type="PackedScene" uid="uid://bhsm1hvnphg7o" path="res://assets/meshes/Buildings/ginger_bread_house_1.tscn" id="28_1g8sq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
 size = Vector3(100, 0.497, 100)
@@ -261,6 +263,18 @@ visible = false
 visible = false
 
 [node name="cover2 " parent="to_warehouse" index="6"]
+visible = false
+
+[node name="playercover1 " parent="to_warehouse" index="7"]
+visible = false
+
+[node name="walls1 " parent="to_warehouse" index="8"]
+visible = false
+
+[node name="walls1 _001" parent="to_warehouse" index="11"]
+visible = false
+
+[node name="Cube _001" parent="to_warehouse" index="13"]
 visible = false
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="to_warehouse"]
@@ -818,5 +832,18 @@ count = 5
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -43.14948, -0.1686846, -25.655817)
 held_item = ExtResource("27_pntd1")
 is_health_pack = true
+[node name="Buildings" type="Node3D" parent="World"]
+
+[node name="GingerBreadHouse-1" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
+transform = Transform3D(0.99957526, -0.029142871, 0, 0.029142871, 0.99957526, 0, 0, 0, 1, -59.34923, 7.9811697, -64.24695)
+
+[node name="GingerBreadHouse-2" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
+transform = Transform3D(0.25870913, -0.007542731, -0.9659258, 0.029142871, 0.99957526, 0, 0.96551555, -0.028149853, 0.25881907, -59.34923, 7.9811697, -80.25214)
+
+[node name="GingerBreadHouse-3" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
+transform = Transform3D(0.95813453, -0.02793466, 0.2849524, 0.029142871, 0.99957526, 0, -0.28483135, 0.008304331, 0.9585417, -75.91118, 7.9811697, -85.48823)
+
+[node name="GingerBreadHouse-4" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
+transform = Transform3D(0.95813453, -0.02793466, 0.2849524, 0.029142871, 0.99957526, 0, -0.28483135, 0.008304331, 0.9585417, -88.61685, 7.9811697, -84.02244)
 
 [editable path="to_warehouse"]

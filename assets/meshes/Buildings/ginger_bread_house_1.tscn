@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://bhsm1hvnphg7o"]
+
+[ext_resource type="PackedScene" uid="uid://ccxco2txmk1cu" path="res://assets/meshes/Buildings/GingerBread-House-1.glb" id="1_b01o5"]
+[ext_resource type="Material" uid="uid://bhh3walfom1lq" path="res://assets/materials/smoke-1.tres" id="2_4yaav"]
+[ext_resource type="Material" uid="uid://cd8bvypubtjkf" path="res://assets/materials/Emit-Yellow-1.tres" id="3_qvasr"]
+
+[sub_resource type="Curve" id="Curve_lx65v"]
+_limits = [0.0, 100.0, 0.0, 1.0]
+_data = [Vector2(0.4511494, 0), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_ltuf4"]
+curve = SubResource("Curve_lx65v")
+
+[sub_resource type="Curve" id="Curve_fggen"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_i171t"]
+curve = SubResource("Curve_fggen")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vxt0h"]
+direction = Vector3(10, 0, 0)
+spread = 36.828
+gravity = Vector3(0, 50, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = 3.9999976
+scale_curve = SubResource("CurveTexture_i171t")
+emission_curve = SubResource("CurveTexture_ltuf4")
+turbulence_enabled = true
+turbulence_noise_scale = 3.41
+
+[sub_resource type="QuadMesh" id="QuadMesh_76v6f"]
+material = ExtResource("2_4yaav")
+
+[node name="GingerBreadHouse-1" type="Node3D"]
+
+[node name="GingerBread-House-1" parent="." instance=ExtResource("1_b01o5")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="GPUParticles3D-Smoke2" type="GPUParticles3D" parent="GingerBread-House-1/ Schoorsteen_001" index="0"]
+transform = Transform3D(0.07380691, 0, 0, 0, 1, 0, 0, 0, 0.07479659, 0.084812164, 1.4438066, 0.081759214)
+amount = 50
+amount_ratio = 0.5
+lifetime = 0.99
+speed_scale = 0.5
+randomness = 0.11
+collision_base_size = 0.1
+visibility_aabb = AABB(-2, -1, -2, 4, 2, 4)
+trail_lifetime = 5.31
+process_material = SubResource("ParticleProcessMaterial_vxt0h")
+draw_pass_1 = SubResource("QuadMesh_76v6f")
+
+[node name="GlassTopWindow_001" parent="GingerBread-House-1/TopWindowFrame_001" index="0"]
+surface_material_override/0 = ExtResource("3_qvasr")
+
+[editable path="GingerBread-House-1"]
