@@ -349,7 +349,7 @@ shape = SubResource("BoxShape3D_isx6m")
 [node name="Walls and pillars" type="Node3D" parent="."]
 
 [node name="Brick-Wall-1" parent="Walls and pillars" instance=ExtResource("18_1g8sq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.41532, 0, -16.347786)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.41532, -0.5378599, -16.347786)
 
 [node name="World" type="Node3D" parent="."]
 
