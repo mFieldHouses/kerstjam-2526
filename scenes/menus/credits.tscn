@@ -57,11 +57,11 @@ Textures: Cairo555
 Animation: Cairo555
 Programming: Mathias Veldhuizen
 Music & sound design: Mathias Veldhuizen
-Game/level design: Mathias Veldhuizen
+Game/level design: Mathias Veldhuizen & Cairo555
 
 Software used: Godot, Blender, Krita and Ableton Live 12 Suite
 
-All assets, except certain sound clips were made by ourselves."
+All assets, except certain sound clips, were made by ourselves."
 horizontal_alignment = 1
 
 [node name="thanks" type="Label" parent="."]

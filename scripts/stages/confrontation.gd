@@ -78,6 +78,8 @@ func _floor_fall(count : int) -> void:
 
 func _fall_single_panel(panel : Node3D, delay : float) -> void:
 	
+	panel.reparent(self)
+	
 	await get_tree().create_timer(delay).timeout
 	
 	var _tween : Tween = create_tween()
@@ -120,7 +122,7 @@ func get_closest_floor_panel_distance() -> float:
 
 func dialog_queue(did : String, qid : String) -> void:
 	if did == "nutcracker_ascend" and qid == "end":
-		SceneManager.launch_menu("credits")
+		SceneManager.launch_menu("credits", true, 3.0)
 
 
 func _on_fall_area_body_entered(body: Node3D) -> void:

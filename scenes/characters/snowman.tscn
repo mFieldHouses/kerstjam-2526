@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://crg2b7h1aiks" path="res://assets/meshes/Enemies/Snowman-1.glb" id="1_28eu1"]
 [ext_resource type="Script" uid="uid://ct8syyffl5yxq" path="res://scripts/snowman.gd" id="1_nldfl"]
-[ext_resource type="Animation" uid="uid://8jo6334bfksc" path="res://assets/animations/SnowMan_Idle.res" id="3_n7n8s"]
+[ext_resource type="Animation" uid="uid://cujocmr4ukghc" path="res://assets/animations/SnowMan_Idle.res" id="3_n7n8s"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ixgv1"]
 _data = {
@@ -35,5 +35,4 @@ shape = SubResource("CapsuleShape3D_28eu1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1829594, -0.7839138)
 
 [node name="shoot" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("3_n7n8s")
 pitch_scale = 1.5

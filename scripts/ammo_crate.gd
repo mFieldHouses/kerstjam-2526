@@ -48,9 +48,14 @@ func _ready() -> void:
 
 func pickup(body) -> void:
 	if held_item == null:
-		return
+		pass
 	elif is_health_pack:
+		if PlayerState.player_instance._health == 30.0:
+			return
+					
 		PlayerState.player_instance._health += health_amount
 	else:
 		PlayerState.add_item_to_inventory(held_item, count)
-		queue_free()
+		PlayerState.player_instance._play_ammo_pickup_sound()
+	
+	queue_free()

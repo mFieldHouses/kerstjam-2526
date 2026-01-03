@@ -26,12 +26,18 @@ func restart_stage() -> void:
 	await get_tree().scene_changed
 	PersistentUI.continue_fade.emit()
 	
-func launch_menu(menu_id : String) -> void: ##Launches the menu with name [param menu_id] in [param res://scenes/menus/], replacing the whole scene tree.
+func launch_menu(menu_id : String, fade : bool = false, fade_time : float = 0.5) -> void: ##Launches the menu with name [param menu_id] in [param res://scenes/menus/], replacing the whole scene tree.
 	
 	DisplayManager.set_mouse_captured(false)
 	
+	if fade:
+		await PersistentUI._fade_in_black(fade_time)
+		
+	
 	get_tree().paused = false
 	get_tree().change_scene_to_file(DefaultPaths.menu_scenes_path + menu_id + ".tscn")
+	
+	PersistentUI._fade_out_black(fade_time)
 	
 func launch_overlay_menu(menu_id : String) -> void: ##Launches the scene with name [param menu_id] in [param res://scenes/overlay_menus/], overlaying it over the current scene, and destroying it when the menu is exited.
 	pass

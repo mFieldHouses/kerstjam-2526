@@ -78,7 +78,7 @@ var _ammo : Dictionary[AmmoItemDescription, int] = {
 	preload("res://assets/resources/items/ammo/big.tres") : 100,
 	preload("res://assets/resources/items/ammo/explode.tres") : 100
 	}
-@onready var _used_ammo : AmmoItemDescription = load("res://assets/resources/items/ammo/snow.tres")
+@onready var _used_ammo : AmmoItemDescription = load("res://assets/resources/items/ammo/fast.tres")
 
 @onready var camera : Camera3D = get_node("camera")
 @onready var crosshair_sprite : TextureRect = $gui/CenterContainer/crosshair
@@ -382,3 +382,6 @@ func get_distance_to_player(point : Vector3): ##Returns the distance between the
 
 func _get_currently_selected_weapon() -> WeaponConfiguration:
 	return PlayerState.weapons[_selected_weapon_idx]
+
+func _play_ammo_pickup_sound() -> void:
+	$ammo_pickup_sounds.play()

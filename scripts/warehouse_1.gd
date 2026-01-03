@@ -3,6 +3,11 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if GlobalGameFlags.has_flag("power_enabled"):
+		$player.position = Vector3(0.0, 8.0, -62)
+		$enemies.queue_free()
+		return	
+	
 	SaveFileManager._unlocked_stages.warehouse_1 = true
 	
 	DialogManager.dialog_queue.connect(_dialog_queue)

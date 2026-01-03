@@ -32,6 +32,9 @@ func _physics_process(delta: float) -> void:
 		else:
 			return
 	
+	if !_can_see_player():
+		_frozen = true
+		return
 	
 	shoot_timer += delta
 	_strafe_timer -= delta

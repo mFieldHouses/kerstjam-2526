@@ -53,6 +53,12 @@ msgstr "Stoppen"
 msgid "SETTINGS_BTN"
 msgstr "Instellingen"
 
+msgid "RESTART_STAGE_BTN"
+msgstr "Level opnieuw proberen"
+
+msgid "YOU_DIED"
+msgstr "Je bent doodgegaan!"
+
 msgid "CUBE_DIALOG"
 msgstr ""
 "Zeg, wat moet dat?\n"
