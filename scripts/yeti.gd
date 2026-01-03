@@ -120,6 +120,7 @@ func _get_visible_trail_points() -> Array[PlayerTrailPoint]:
 		if RaycastManager.is_ray_free(_point.global_position + Vector3(0.0, 0.5, 0.0), $eyes.global_position, 1):
 			_result.append(_point)
 	
+	print(_result)
 	return _result
 
 func _get_closest_visible_trail_point() -> PlayerTrailPoint:

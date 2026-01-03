@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=4 uid="uid://clhqabefp2kqq"]
 
 [ext_resource type="Material" uid="uid://dn6kf4xctrw2a" path="res://assets/materials/Metal-Brons-1.tres" id="1_3pu22"]
-[ext_resource type="Material" uid="uid://brgjh3uq3yn2k" path="res://assets/materials/Metal-Steel-1.tres" id="2_rhvmq"]
+[ext_resource type="Material" path="res://assets/materials/Metal-Steel-1.tres" id="2_rhvmq"]
 [ext_resource type="Material" uid="uid://bdfblnw3d5ot" path="res://assets/materials/Concrete-1.tres" id="3_rvg24"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hv6jr"]
