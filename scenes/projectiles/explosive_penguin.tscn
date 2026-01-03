@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqa3a4la2kglf"]
+[gd_scene load_steps=5 format=3 uid="uid://dqa3a4la2kglf"]
 
 [ext_resource type="Script" uid="uid://dsft2vkou6yjx" path="res://scripts/explosive_penguin.gd" id="1_rx4bm"]
-[ext_resource type="AudioStream" uid="uid://bw3g5xo3gdeec" path="res://assets/sound/sfx/shoot/my-first-recorded-explosion-103816.mp3" id="2_674cl"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_qtetr"]
 radius = 0.15
@@ -30,9 +29,3 @@ collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="explosion_area"]
 shape = SubResource("SphereShape3D_rx4bm")
-
-[node name="explosion" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("2_674cl")
-volume_db = -9.0
-unit_size = 57.62
-max_db = -3.0

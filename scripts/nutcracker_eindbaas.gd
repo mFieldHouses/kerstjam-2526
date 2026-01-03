@@ -13,8 +13,8 @@ var _health_left : float = 200.0:
 		
 var _destruction_level : int = 0:
 	set(x):
-		if _destruction_level > 0 and _destruction_level < 2 and _destruction_level != x:
-			var _particles = get_node("destruct_" + str(_destruction_level))
+		if _destruction_level >= 0 and _destruction_level < 2 and _destruction_level != x:
+			var _particles = get_node("destruct_" + str(x))
 			
 			for _child : GPUParticles3D in _particles.get_children():
 				_child.emitting = true

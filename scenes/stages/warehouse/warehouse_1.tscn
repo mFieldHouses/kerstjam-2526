@@ -708,6 +708,7 @@ count = 30
 transform = Transform3D(-1.6567857, 0, -1.120295, 0, 2, 0, 1.120295, 0, -1.6567857, -3.8061867, 0.31251785, -22.558098)
 held_item = ExtResource("26_hdkqg")
 count = 50
+is_health_pack = true
 
 [node name="present_mimic8" parent="." instance=ExtResource("23_dwaqj")]
 transform = Transform3D(0.144218, 0, 0.98954594, 0, 1, 0, -0.98954594, 0, 0.144218, -7.3195047, 0.0063552856, -50.68535)

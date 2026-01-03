@@ -9,9 +9,10 @@ const JUMP_VELOCITY = 4.5
 
 var _health : float = 30.0:
 	set(x):
-		_health = x
-		if _health <= 0.0:
+		_health = clamp(x, 0.0, _max_health)
+		if _health == 0.0:
 			_die()
+
 var _max_health : float = 30.0
 
 @export var step_height : float = 0.3

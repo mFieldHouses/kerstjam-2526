@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dhuselcred40f"]
+[gd_scene load_steps=14 format=3 uid="uid://dhuselcred40f"]
 
 [ext_resource type="Texture2D" uid="uid://b20iswe7adxk" path="res://assets/textures/misc/explosion.png" id="1_17npe"]
+[ext_resource type="AudioStream" uid="uid://bw3g5xo3gdeec" path="res://assets/sound/sfx/shoot/my-first-recorded-explosion-103816.mp3" id="2_nfeox"]
 
 [sub_resource type="Curve" id="Curve_17npe"]
 _limits = [-360.0, 360.0, 0.0, 1.0]
@@ -72,3 +73,10 @@ explosiveness = 1.0
 fract_delta = false
 process_material = SubResource("ParticleProcessMaterial_xfoey")
 draw_pass_1 = SubResource("QuadMesh_cun36")
+
+[node name="explosion" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_nfeox")
+volume_db = -9.0
+unit_size = 57.62
+max_db = -3.0
+autoplay = true

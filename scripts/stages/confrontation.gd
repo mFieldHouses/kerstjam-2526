@@ -23,7 +23,6 @@ func _ready() -> void:
 	$floor_panels/floor.queue_free()
 	
 	while $Nutcracker_Eindbaas._health_left > 10:
-		
 		if _first_round:
 			DialogManager.initiate_remote_dialog("fireballs", "Philip", null)
 		await $Nutcracker_Eindbaas.shoot_up()
