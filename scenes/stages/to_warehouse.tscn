@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=53 format=4 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cu7hu48g5k7q1" path="res://assets/meshes/Environment/Rocks/Rock-2.tscn" id="18_k2ha0"]
 [ext_resource type="PackedScene" uid="uid://dhbkkvbc7ybvl" path="res://assets/meshes/Environment/Rocks/Rock-1.tscn" id="19_5tvbr"]
 [ext_resource type="PackedScene" uid="uid://bouff7sjsg00g" path="res://assets/meshes/Environment/Rocks/Cliff-1.tscn" id="20_85pda"]
-[ext_resource type="PackedScene" path="res://scenes/elements/PineTree-1.tscn" id="21_n8mv0"]
+[ext_resource type="PackedScene" uid="uid://ccsosb3wod4io" path="res://scenes/elements/PineTree-1.tscn" id="21_n8mv0"]
 [ext_resource type="PackedScene" uid="uid://qxybtmsai5wu" path="res://assets/meshes/Environment/SnowPatches/snow_1.tscn" id="22_p1by1"]
 [ext_resource type="PackedScene" uid="uid://bl0c2j771w8fa" path="res://assets/meshes/Environment/IcePatches/IceArc-1.tscn" id="23_5tvbr"]
 [ext_resource type="PackedScene" uid="uid://bo214ivrou8cb" path="res://assets/meshes/Environment/Barricades/barricade_2.tscn" id="24_85pda"]
@@ -32,8 +32,8 @@
 [ext_resource type="Resource" uid="uid://b060qwaalhnug" path="res://assets/resources/items/ammo/big.tres" id="26_1g8sq"]
 [ext_resource type="PackedScene" uid="uid://cgu8uvxmypxlr" path="res://assets/meshes/Environment/Ramps/ramp_1.tscn" id="26_p1by1"]
 [ext_resource type="Resource" uid="uid://gwh384geqki4" path="res://assets/resources/items/ammo/fast.tres" id="27_pntd1"]
+[ext_resource type="PackedScene" uid="uid://bv0rihnbecmi0" path="res://assets/meshes/Buildings/ginger_bread_house_1.tscn" id="28_1g8sq"]
 [ext_resource type="Resource" uid="uid://qxhttbpl2yph" path="res://assets/resources/items/ammo/explode.tres" id="28_5clna"]
-[ext_resource type="PackedScene" uid="uid://bhsm1hvnphg7o" path="res://assets/meshes/Buildings/ginger_bread_house_1.tscn" id="28_1g8sq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
 size = Vector3(100, 0.497, 100)
@@ -252,28 +252,91 @@ transform = Transform3D(-0.30376336, 0, -0.5746545, 0, 0.65, 0, 0.5746545, 0, -0
 [node name="hek " parent="to_warehouse" index="2"]
 visible = false
 
+[node name="StaticBody3D" parent="to_warehouse/hek " index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="to_warehouse/hek /StaticBody3D" index="0"]
+visible = false
+
 [node name="ramp2 " parent="to_warehouse" index="3"]
+visible = false
+
+[node name="StaticBody3D" parent="to_warehouse/ramp2 " index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="to_warehouse/ramp2 /StaticBody3D" index="0"]
 visible = false
 
 [node name="ramp1 " parent="to_warehouse" index="4"]
 visible = false
 
+[node name="StaticBody3D" parent="to_warehouse/ramp1 " index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="to_warehouse/ramp1 /StaticBody3D" index="0"]
+visible = false
+
 [node name="cover1 " parent="to_warehouse" index="5"]
+visible = false
+
+[node name="StaticBody3D" parent="to_warehouse/cover1 " index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="to_warehouse/cover1 /StaticBody3D" index="0"]
 visible = false
 
 [node name="cover2 " parent="to_warehouse" index="6"]
 visible = false
 
-[node name="playercover1 " parent="to_warehouse" index="7"]
+[node name="StaticBody3D" parent="to_warehouse/cover2 " index="0"]
 visible = false
 
-[node name="walls1 " parent="to_warehouse" index="8"]
+[node name="CollisionShape3D" parent="to_warehouse/cover2 /StaticBody3D" index="0"]
 visible = false
 
-[node name="walls1 _001" parent="to_warehouse" index="11"]
+[node name="Cube " parent="to_warehouse" index="7"]
 visible = false
 
-[node name="Cube _001" parent="to_warehouse" index="13"]
+[node name="StaticBody3D" parent="to_warehouse/Cube " index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="to_warehouse/Cube /StaticBody3D" index="0"]
+visible = false
+
+[node name="cover2 _001" parent="to_warehouse" index="8"]
+visible = false
+
+[node name="StaticBody3D" parent="to_warehouse/cover2 _001" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="to_warehouse/cover2 _001/StaticBody3D" index="0"]
+visible = false
+
+[node name="walls1 _001" parent="to_warehouse" index="9"]
+visible = false
+
+[node name="StaticBody3D" parent="to_warehouse/walls1 _001" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="to_warehouse/walls1 _001/StaticBody3D" index="0"]
+visible = false
+
+[node name="cover2 _002" parent="to_warehouse" index="10"]
+visible = false
+
+[node name="StaticBody3D" parent="to_warehouse/cover2 _002" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="to_warehouse/cover2 _002/StaticBody3D" index="0"]
+visible = false
+
+[node name="Cube _001" parent="to_warehouse" index="11"]
+visible = false
+
+[node name="StaticBody3D" parent="to_warehouse/Cube _001" index="0"]
+visible = false
+
+[node name="CollisionShape3D" parent="to_warehouse/Cube _001/StaticBody3D" index="0"]
 visible = false
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="to_warehouse"]
@@ -282,6 +345,15 @@ navigation_mesh = SubResource("NavigationMesh_jbe65")
 
 [node name="Gate-1" parent="to_warehouse" instance=ExtResource("11_ocxps")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.85887, -1.2149334, -36.131516)
+
+[node name="SnowPile-1" parent="to_warehouse" instance=ExtResource("24_pntd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.29445, -0.21786237, -34.154472)
+
+[node name="SnowPile-3" parent="to_warehouse" instance=ExtResource("24_pntd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.70193, -0.21786237, -38.56179)
+
+[node name="SnowPile-2" parent="to_warehouse" instance=ExtResource("24_pntd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.96028, -0.34038734, -34.154472)
 
 [node name="Enemies2" type="Node3D" parent="."]
 
@@ -433,6 +505,12 @@ transform = Transform3D(-0.5403768, -0.1179668, 0.8331126, 0.16376297, 0.9564446
 
 [node name="StaticBody3D7" parent="World/Rocks" instance=ExtResource("19_5tvbr")]
 transform = Transform3D(0.59298474, -0.29120284, 0.750713, 0.16376297, 0.9564446, 0.24165091, -0.7883848, -0.020356327, 0.61484534, -2.3669963, 0.21867049, 4.207946)
+
+[node name="Rock-1" parent="World/Rocks" instance=ExtResource("19_5tvbr")]
+transform = Transform3D(0.9926035, 0.1214016, 0, -0.1214016, 0.9926035, 0, 0, 0, 1, -68.86405, -0.90572155, -18.263288)
+
+[node name="Rock-2" parent="World/Rocks" instance=ExtResource("19_5tvbr")]
+transform = Transform3D(-0.721617, -0.08825826, 0.6866436, -0.17712012, 0.98236644, -0.059872314, -0.6692514, -0.16482328, -0.72452456, -65.5612, -0.90572155, -11.048067)
 
 [node name="Cliffs" type="Node3D" parent="World"]
 
@@ -631,6 +709,96 @@ transform = Transform3D(-0.36885062, -0.080162466, -0.9260254, -0.12630168, 0.99
 [node name="Cliff-24" parent="World/Cliffs" instance=ExtResource("20_85pda")]
 transform = Transform3D(-0.36885062, -0.080162466, -0.9260254, -0.12630168, 0.99135625, -0.035509996, 0.9208675, 0.103860565, -0.37578753, -51.051975, 3.8825493, -29.713982)
 
+[node name="Cliff-68" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.36885062, -0.080162466, -0.9260254, -0.12630168, 0.99135625, -0.035509996, 0.9208675, 0.103860565, -0.37578753, -53.89274, 3.8825493, -30.879969)
+
+[node name="Cliff-71" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.99160767, -0.12716782, -0.023289323, -0.12630166, 0.9913562, -0.03550999, 0.027604222, -0.03227042, -0.999098, -57.47373, 3.8825493, -32.77551)
+
+[node name="Cliff-72" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.9915865, 0.1255658, -0.031451944, 0.12646735, 0.9915604, -0.028532915, 0.027604217, -0.032270417, -0.99909794, -59.904263, 3.8825493, -40.50124)
+
+[node name="Cliff-92" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.9916861, -0.12706785, -0.020304332, 0.12857024, 0.98493576, 0.11563496, 0.005304521, -0.11728422, 0.9930842, -59.904263, 3.336904, -44.55197)
+
+[node name="Cliff-93" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.9916861, -0.12706785, -0.020304332, 0.12857024, 0.98493576, 0.11563496, 0.005304521, -0.11728422, 0.9930842, -59.904263, 2.3637013, -49.02296)
+
+[node name="Cliff-94" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.9630005, -0.32934505, -0.21333773, 0.12017013, 1.9418633, -0.2070045, 0.24122432, 0.34741724, 0.9547964, -58.910686, -0.329957, -53.314014)
+
+[node name="Cliff-95" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.72751975, -0.4560099, -0.64709246, 0.12017014, 1.9418633, -0.2070045, 0.67548066, 0.14567742, 0.7337715, -55.23641, 1.7075593, -55.60871)
+
+[node name="Cliff-96" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.96903396, -0.32005715, -0.18805313, 0.12017014, 1.9418631, -0.20700447, 0.21571347, 0.35599208, 0.9600964, -50.442772, 8.266527, -74.946594)
+
+[node name="Cliff-97" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.96903396, -0.32005715, -0.18805313, 0.12017014, 1.9418631, -0.20700447, 0.21571347, 0.35599208, 0.9600964, -50.442772, 8.266527, -70.69575)
+
+[node name="Cliff-73" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.9915865, 0.1255658, -0.031451944, 0.12646735, 0.9915604, -0.028532915, 0.027604217, -0.032270417, -0.99909794, -78.515396, 3.3630219, -40.02578)
+
+[node name="Cliff-74" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.9915865, 0.1255658, -0.031451944, 0.12646735, 0.9915604, -0.028532915, 0.027604217, -0.032270417, -0.99909794, -78.515396, 5.1672564, -44.38204)
+
+[node name="Cliff-75" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.9915865, 0.1255658, -0.031451948, 0.11784796, 0.97621864, 0.18195932, 0.05355227, 0.17672196, -0.982803, -78.515396, 5.6519375, -48.33345)
+
+[node name="Cliff-76" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.9915865, 0.1255658, -0.031451948, 0.11784796, 0.97621864, 0.18195932, 0.05355227, 0.17672196, -0.982803, -77.57916, 7.464777, -52.42936)
+
+[node name="Cliff-77" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.95421535, 0.060594212, 0.2929189, 0.1335111, 0.9625857, 0.23580404, -0.26767072, 0.26411593, -0.92660403, -76.04343, 8.365025, -56.810654)
+
+[node name="Cliff-78" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.76311255, -0.051958635, 0.6441738, 0.1335111, 0.9625857, 0.23580402, -0.6323241, 0.26594958, -0.727624, -74.06702, 8.365025, -59.97124)
+
+[node name="Cliff-79" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.90693307, -0.20558542, -0.36770582, 0.1293522, 0.96657276, -0.22137123, 0.40092456, 0.15320513, 0.90320957, -71.67608, 8.539813, -62.595478)
+
+[node name="Cliff-80" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.801583, -0.2333445, -0.55046886, 0.12935221, 0.96657276, -0.2213712, 0.5837234, 0.106242806, 0.8049716, -69.6073, 10.477074, -66.63565)
+
+[node name="Cliff-90" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(1.6031656, -0.46668863, -1.1009367, 0.2587044, 1.9331454, -0.4427421, 1.1674466, 0.21248586, 1.6099434, -74.27391, 18.087923, -66.63565)
+
+[node name="Cliff-91" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(1.6031656, -0.46668863, -1.1009367, 0.2587044, 1.9331454, -0.4427421, 1.1674466, 0.21248586, 1.6099434, -77.694756, 15.66164, -60.972576)
+
+[node name="Cliff-81" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.61249167, -0.17831342, 0.77010274, 0.2532519, 0.9671384, 0.022514835, -0.7488109, 0.18123983, 0.63752276, -69.79802, 10.477074, -70.51618)
+
+[node name="Cliff-82" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.09321642, -0.0012305826, -0.9956454, 0.2532519, 0.9671384, 0.02251484, 0.96289897, -0.25424796, 0.090464264, -72.773796, 10.477074, -71.92556)
+
+[node name="Cliff-83" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.58088, 0.13341393, 0.802982, 0.2532519, 0.9671385, 0.022514848, -0.7735903, 0.21643528, -0.5955784, -75.56116, 10.477074, -71.514984)
+
+[node name="Cliff-84" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.86845094, -0.21703303, -0.445747, 0.2532519, 0.9671385, 0.022514848, 0.4262118, -0.13243952, 0.8948761, -77.20761, 10.477074, -68.48458)
+
+[node name="Cliff-85" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.793584, 0.19438286, 0.5765766, 0.2532519, 0.9671385, 0.022514852, -0.55325216, 0.16388679, -0.81673306, -79.95264, 11.489202, -65.17307)
+
+[node name="Cliff-86" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.73690355, -0.17778006, -0.6522026, 0.2532519, 0.9671385, 0.022514842, 0.6267668, -0.18176302, 0.7577105, -82.765045, 11.489202, -61.845398)
+
+[node name="Cliff-87" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.51983327, 0.11642003, 0.8462983, 0.25325194, 0.96713865, 0.022514865, -0.8158659, 0.22603083, -0.5322337, -86.15182, 11.489202, -59.688957)
+
+[node name="Cliff-88" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.4686132, -0.10228221, -0.87746274, 0.25325194, 0.96713865, 0.022514865, 0.84632456, -0.23277007, 0.47911644, -90.03699, 11.612252, -58.220222)
+
+[node name="Cliff-89" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.4686132, -0.10228221, -0.87746274, 0.25325194, 0.96713865, 0.022514865, 0.84632456, -0.23277007, 0.47911644, -93.336334, 11.612252, -55.972088)
+
+[node name="Cliff-69" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-1.8371593, -0.10608125, -0.3917046, -0.3789051, 0.99135613, -0.017754987, 2.341213, 0.07720007, -0.3102456, -58.262493, 2.4292283, -29.049623)
+
+[node name="Cliff-70" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-1.8374667, -0.13040027, -0.18636312, -0.25260344, 0.99135613, -0.017754985, 0.74826986, 0.014451772, -0.46363083, -61.231083, 2.4292283, -26.757816)
+
 [node name="Cliff-10" parent="World/Cliffs" instance=ExtResource("20_85pda")]
 transform = Transform3D(-0.41087773, -0.1256457, -0.9029909, -0.25527027, 0.96669555, -0.018357072, 0.87522364, 0.22296412, -0.42926735, -16.5314, -5.6693573, -3.7567205)
 
@@ -744,6 +912,12 @@ transform = Transform3D(0.06874662, 0, 0.9976342, 0, 1, 0, -0.9976342, 0, 0.0687
 [node name="Barricade-2" parent="World/Barricades" instance=ExtResource("24_85pda")]
 transform = Transform3D(0.6942725, -0.08935723, -0.00093308435, 0.08935716, 0.6942732, -0.00012009371, 0.000940781, 0, 0.69999933, -43.722042, -0.82613534, -24.106617)
 
+[node name="Barricade-3" parent="World/Barricades" instance=ExtResource("24_85pda")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.1815, 0.3724301, -42.120487)
+
+[node name="Barricade-4" parent="World/Barricades" instance=ExtResource("24_85pda")]
+transform = Transform3D(0.9583226, 0, -0.28568837, 0, 1, 0, 0.28568837, 0, 0.9583226, -66.69459, 4.608549, -52.891766)
+
 [node name="Ramps" type="Node3D" parent="World"]
 
 [node name="Ramp-2" parent="World/Ramps" instance=ExtResource("25_n8mv0")]
@@ -751,6 +925,42 @@ transform = Transform3D(0.9914198, 0, -0.13071653, 0, 1, 0, 0.13071653, 0, 0.991
 
 [node name="Ramp-1" parent="World/Ramps" instance=ExtResource("26_p1by1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.161186, -1.4301956, -10.008049)
+
+[node name="Buildings" type="Node3D" parent="World"]
+
+[node name="GingerBreadHouse-1" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
+transform = Transform3D(0.99957526, -0.029142871, 0, 0.029142871, 0.99957526, 0, 0, 0, 1, -59.34923, 7.9811697, -64.24695)
+
+[node name="GingerBreadHouse-2" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
+transform = Transform3D(0.25870913, -0.007542731, -0.9659258, 0.029142871, 0.99957526, 0, 0.96551555, -0.028149853, 0.25881907, -59.34923, 7.9811697, -80.25214)
+
+[node name="GingerBreadHouse-3" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
+transform = Transform3D(0.95813453, -0.02793466, 0.2849524, 0.029142871, 0.99957526, 0, -0.28483135, 0.008304331, 0.9585417, -75.91118, 7.9811697, -85.48823)
+
+[node name="GingerBreadHouse-4" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
+transform = Transform3D(0.95813453, -0.02793466, 0.2849524, 0.029142871, 0.99957526, 0, -0.28483135, 0.008304331, 0.9585417, -88.61685, 7.9811697, -84.02244)
+
+[node name="Crates" type="Node3D" parent="World"]
+
+[node name="Crate-1" parent="World/Crates" instance=ExtResource("8_04tpn")]
+transform = Transform3D(0.47551715, 0.14776596, 0.04526287, -0.1107582, 0.4279784, -0.23359603, -0.107778125, 0.2121313, 0.43975466, -60.919685, -0.2897835, -24.42903)
+enable_lid = false
+
+[node name="Crate-2" parent="World/Crates" instance=ExtResource("8_04tpn")]
+transform = Transform3D(0.45328066, -0.12388078, 0.1708515, 0.18144026, 0.4354927, -0.16560678, -0.107778125, 0.2121313, 0.43975466, -62.11999, -0.2897835, -24.42903)
+enable_lid = false
+
+[node name="Crate-3" parent="World/Crates" instance=ExtResource("8_04tpn")]
+transform = Transform3D(0.4632055, 0.014117903, 0.18772721, -0.029244205, 0.49793565, 0.034711454, -0.18597198, -0.043137014, 0.46211863, -74.10922, -0.6405282, -32.179077)
+randomize_lid_y_rotation = true
+random_y_min_deg = 37.5
+random_y_max_deg = 129.7
+
+[node name="Crate-4" parent="World/Crates" instance=ExtResource("8_04tpn")]
+transform = Transform3D(0.4632055, 0.014117903, 0.18772721, -0.029244205, 0.49793565, 0.034711454, -0.18597198, -0.043137014, 0.46211863, -66.939644, 8.2360115, -64.881256)
+randomize_lid_y_rotation = true
+random_y_min_deg = 37.5
+random_y_max_deg = 129.7
 
 [node name="Ammo-Bullet-Globe-1" parent="." instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.052666, -0.83267796, -11.291683)
@@ -831,18 +1041,5 @@ count = 5
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -43.14948, -0.1686846, -25.655817)
 held_item = ExtResource("27_pntd1")
 is_health_pack = true
-[node name="Buildings" type="Node3D" parent="World"]
-
-[node name="GingerBreadHouse-1" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
-transform = Transform3D(0.99957526, -0.029142871, 0, 0.029142871, 0.99957526, 0, 0, 0, 1, -59.34923, 7.9811697, -64.24695)
-
-[node name="GingerBreadHouse-2" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
-transform = Transform3D(0.25870913, -0.007542731, -0.9659258, 0.029142871, 0.99957526, 0, 0.96551555, -0.028149853, 0.25881907, -59.34923, 7.9811697, -80.25214)
-
-[node name="GingerBreadHouse-3" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
-transform = Transform3D(0.95813453, -0.02793466, 0.2849524, 0.029142871, 0.99957526, 0, -0.28483135, 0.008304331, 0.9585417, -75.91118, 7.9811697, -85.48823)
-
-[node name="GingerBreadHouse-4" parent="World/Buildings" instance=ExtResource("28_1g8sq")]
-transform = Transform3D(0.95813453, -0.02793466, 0.2849524, 0.029142871, 0.99957526, 0, -0.28483135, 0.008304331, 0.9585417, -88.61685, 7.9811697, -84.02244)
 
 [editable path="to_warehouse"]

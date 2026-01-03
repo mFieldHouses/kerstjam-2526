@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhsm1hvnphg7o"]
+[gd_scene load_steps=10 format=3 uid="uid://bv0rihnbecmi0"]
 
 [ext_resource type="PackedScene" uid="uid://ccxco2txmk1cu" path="res://assets/meshes/Buildings/GingerBread-House-1.glb" id="1_b01o5"]
 [ext_resource type="Material" uid="uid://bhh3walfom1lq" path="res://assets/materials/smoke-1.tres" id="2_4yaav"]
