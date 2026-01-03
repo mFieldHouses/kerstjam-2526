@@ -5,3 +5,7 @@ func summon_explosion(at : Vector3, parent_node_3d : Node3D) -> void:
 	parent_node_3d.add_child(_expl)
 	_expl.global_position = at
 	_expl.emitting = true
+	
+	await get_tree().create_timer(2.0).timeout
+	
+	_expl.queue_free()

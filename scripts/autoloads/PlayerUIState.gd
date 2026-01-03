@@ -28,6 +28,7 @@ func toggle_player_menu(state : bool = true):
 
 func toggle_pause_menu():
 	var _state : bool = !player_fp_ui_root_instance.get_node("PauseMenu").visible
+	get_tree().paused = _state
 	player_fp_ui_root_instance.get_node("PauseMenu").visible = _state
 	PlayerState.toggle_sleep(_state)
 	DisplayManager.set_mouse_captured(!_state)

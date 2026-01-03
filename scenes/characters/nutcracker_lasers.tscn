@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://u6iufunmj7fe"]
+[gd_scene load_steps=14 format=3 uid="uid://u6iufunmj7fe"]
 
 [ext_resource type="Script" uid="uid://cin4wbxgryotf" path="res://scripts/nutcracker_lasers.gd" id="1_tcfwf"]
 [ext_resource type="Script" uid="uid://dix13kw0ki87g" path="res://scripts/nutcracker_button.gd" id="2_jjapg"]
@@ -49,6 +49,9 @@ emission_energy_multiplier = 6.85
 
 [sub_resource type="SphereMesh" id="SphereMesh_tcfwf"]
 material = SubResource("StandardMaterial3D_tcfwf")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jjapg"]
+size = Vector3(4.194336, 3.6503906, 0.66259766)
 
 [node name="nutcracker_lasers" type="Node3D"]
 script = ExtResource("1_tcfwf")
@@ -102,3 +105,10 @@ shape = SubResource("SphereShape3D_neq7w")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007822871, -0.009947777, -0.004533291)
 mesh = SubResource("SphereMesh_tcfwf")
 skeleton = NodePath("../../..")
+
+[node name="button_shield" type="RigidBody3D" parent="."]
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button_shield"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.518149, -0.7458496)
+shape = SubResource("BoxShape3D_jjapg")

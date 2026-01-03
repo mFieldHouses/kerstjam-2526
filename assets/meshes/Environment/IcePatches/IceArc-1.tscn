@@ -41,10 +41,10 @@ shadow_mesh = SubResource("ArrayMesh_2krsx")
 size = Vector3(16.12149, 2.9267578, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5xl1a"]
-size = Vector3(3.8922882, 9.781677, 1)
+size = Vector3(2.1131363, 7.891327, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wrs1h"]
-size = Vector3(3.8922882, 9.781677, 1)
+size = Vector3(2.8158455, 6.5428314, 1)
 
 [node name="IceArc-1" type="Node3D"]
 
@@ -61,9 +61,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08510974, 9.476135, -1.301
 shape = SubResource("BoxShape3D_wpg5o")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="IceArch-1/StaticBody3D"]
-transform = Transform3D(0.9193154, 0.39330748, -0.0129805505, -0.39330754, 0.9172272, -0.06327556, -0.01298058, 0.063275546, 0.99791163, -7.2669864, 4.8548017, -1.4733198)
+transform = Transform3D(0.9193154, 0.39330748, -0.0129805505, -0.39330754, 0.9172272, -0.06327556, -0.01298058, 0.063275546, 0.99791163, -6.077442, 5.3718653, -1.4250605)
 shape = SubResource("BoxShape3D_5xl1a")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="IceArch-1/StaticBody3D"]
-transform = Transform3D(0.9413538, -0.33728957, -0.009435013, 0.33728942, 0.9398358, 0.054263346, -0.009435028, -0.05426335, 0.9984818, 6.3288527, 4.8548017, 0.713987)
+transform = Transform3D(0.99398017, -0.1095573, -0.0009689331, 0.109557174, 0.9938242, 0.017625704, -0.00096848607, -0.017625654, 0.9998425, 6.1457253, 4.892973, 0.6813384)
 shape = SubResource("BoxShape3D_wrs1h")

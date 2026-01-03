@@ -82,3 +82,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012, 4, -15.737)
 
 [node name="philip_head" type="Marker3D" parent="Nutcracker_Eindbaas"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.514571e-08, 5.207223, 0.5830231)
+
+[node name="gui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="gui"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.287
+anchor_right = 0.71300006
+offset_left = 0.37600708
+offset_right = -0.37609863
+offset_bottom = 24.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="gui/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="health_bar" type="ColorRect" parent="gui/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0

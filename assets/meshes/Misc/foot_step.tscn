@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://bjiy5x2ks2mfg"]
+[gd_scene load_steps=10 format=4 uid="uid://cvxrtuu2m0i2w"]
 
 [ext_resource type="Material" uid="uid://ccfno20jitc2j" path="res://assets/materials/SterrenStof.tres" id="1_io6v0"]
 
@@ -36,6 +36,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gkx1k")
 
+[sub_resource type="Gradient" id="Gradient_io6v0"]
+offsets = PackedFloat32Array(0, 0.53271025, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kuw8e"]
+gradient = SubResource("Gradient_io6v0")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kuw8e"]
 emission_shape = 1
 emission_sphere_radius = 0.1
@@ -45,6 +52,7 @@ radial_accel_max = -2.2351742e-06
 tangential_accel_min = -2.2351742e-06
 tangential_accel_max = 0.09999776
 scale_min = 0.099999994
+color_ramp = SubResource("GradientTexture1D_kuw8e")
 
 [sub_resource type="Curve" id="Curve_5j7du"]
 _data = [Vector2(0.04473684, 0.24974465), 0.0, 0.0, 0, 0, Vector2(0.27368423, 0.9269663), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -67,6 +75,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0069366097)
 amount = 20
 lifetime = 0.5
-trail_lifetime = 0.09999999999999999
+trail_lifetime = 0.1
 process_material = SubResource("ParticleProcessMaterial_kuw8e")
 draw_pass_1 = SubResource("RibbonTrailMesh_oqe32")

@@ -8,6 +8,8 @@ func launch_stage(stage_id : String) -> void: ##Launches the stage with name [pa
 	get_tree().paused = false
 	#_last_loaded_stage_id = stage_id
 	PersistentUI.fade_black_wait(0.5, true)
+	PlayerState._save_health()
+	PlayerState._save_ammo()
 	await PersistentUI.fade_middle
 	get_tree().change_scene_to_file(DefaultPaths.stage_scenes_path + stage_id + ".tscn")
 	await get_tree().create_timer(0.1).timeout

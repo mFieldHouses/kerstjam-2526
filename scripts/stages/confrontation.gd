@@ -52,7 +52,10 @@ func _ready() -> void:
 	
 	$Nutcracker_Eindbaas.ascend()
 	
-		
+
+func _process(delta: float) -> void:
+	$gui/Panel/MarginContainer/health_bar.size.x = ($gui/Panel/MarginContainer.size.x - 14) * ($Nutcracker_Eindbaas._health_left / 200.0)
+
 func _floor_fall(count : int) -> void:
 	for _idx in count:
 		if get_closest_floor_panel_distance() > 3.0 and $player.is_on_floor():

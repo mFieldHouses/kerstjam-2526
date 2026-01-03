@@ -43,7 +43,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ijnfy")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_lvm3c"]
-radius = 1.2001953
+radius = 0.97509766
 
 [sub_resource type="Curve" id="Curve_2tewt"]
 _data = [Vector2(0.094827585, 0), 0.0, 0.0, 0, 0, Vector2(0.3017241, 1), 0.0, 0.0, 0, 0, Vector2(0.93678147, 0.035673857), 0.0, 0.0, 0, 0]
@@ -90,7 +90,7 @@ surface_material_override/0 = ExtResource("2_2tewt")
 transform = Transform3D(6.4267025, 0, 0, 0, 6.4267025, 0, 0, 0, 6.4267025, 0, 6.3917913, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SnowHigh-4/hitbox "]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.07871109)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27832612, 0, -0.04852374)
 shape = SubResource("CylinderShape3D_lvm3c")
 
 [node name="GPUParticles3D-Glitter" type="GPUParticles3D" parent="."]

@@ -97,11 +97,7 @@ func _ready():
 	
 	camera.fov = ConfigurableValues.fov
 	
-	_ammo[preload("res://assets/resources/items/ammo/fast.tres")] = PlayerState.ammo["fast"]
-	_ammo[preload("res://assets/resources/items/ammo/big.tres")] = PlayerState.ammo["big"]
-	_ammo[preload("res://assets/resources/items/ammo/explode.tres")] = PlayerState.ammo["explode"]
-	_ammo[preload("res://assets/resources/items/ammo/snow.tres")] = PlayerState.ammo["snow"]
-	
+	_ammo = PlayerState.ammo.duplicate()
 	_health = PlayerState.health
 	
 	_update_ammo_gui(0)

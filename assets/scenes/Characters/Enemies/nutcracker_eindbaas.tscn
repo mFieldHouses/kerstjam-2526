@@ -1,9 +1,120 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqtj3st2qdnea"]
+[gd_scene load_steps=18 format=3 uid="uid://cqtj3st2qdnea"]
 
 [ext_resource type="Script" uid="uid://bbvs2d3c2snel" path="res://scripts/nutcracker_eindbaas.gd" id="1_ma040"]
 [ext_resource type="PackedScene" uid="uid://c623bxbpfwl7k" path="res://assets/meshes/Enemies/NutCracker-1.glb" id="1_ysms2"]
+[ext_resource type="Texture2D" uid="uid://b20iswe7adxk" path="res://assets/textures/misc/explosion.png" id="3_wcjfm"]
+
+[sub_resource type="Gradient" id="Gradient_fe112"]
+offsets = PackedFloat32Array(0, 0.1682243, 0.5420561, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.7372549, 0, 0, 0, 0.8, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_makbk"]
+gradient = SubResource("Gradient_fe112")
+
+[sub_resource type="Curve" id="Curve_5yn4b"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0.36144567), 0.0, 0.0, 0, 0, Vector2(1, 1.9156625), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8telw"]
+curve = SubResource("Curve_5yn4b")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e0lyl"]
+angular_velocity_min = -200.00002
+angular_velocity_max = 199.99998
+gravity = Vector3(0, 3, 0)
+attractor_interaction_enabled = false
+scale_curve = SubResource("CurveTexture_8telw")
+color_ramp = SubResource("GradientTexture1D_makbk")
+turbulence_noise_strength = 0.2
+turbulence_noise_speed = Vector3(8.365, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x27vf"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("3_wcjfm")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_xlyy3"]
+material = SubResource("StandardMaterial3D_x27vf")
+
+[sub_resource type="Curve" id="Curve_wcjfm"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_fe112"]
+curve = SubResource("Curve_wcjfm")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_10ac5"]
+direction = Vector3(0, 1, 0)
+spread = 90.0
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, -20, 0)
+scale_min = 0.5
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_fe112")
+
+[sub_resource type="Gradient" id="Gradient_d7es4"]
+offsets = PackedFloat32Array(0, 0.3963964)
+colors = PackedColorArray(1, 1, 1, 1, 0, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qmxq3"]
+gradient = SubResource("Gradient_d7es4")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gk0nj"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("GradientTexture2D_qmxq3")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_168dx"]
+material = SubResource("StandardMaterial3D_gk0nj")
 
 [node name="Nutcracker_Eindbaas" type="Node3D"]
 script = ExtResource("1_ma040")
 
 [node name="NutCracker-1" parent="." instance=ExtResource("1_ysms2")]
+
+[node name="destruct_1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3689542, 5.220364, 0)
+
+[node name="smoke1" type="GPUParticles3D" parent="destruct_1"]
+emitting = false
+amount = 20
+lifetime = 2.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_e0lyl")
+draw_pass_1 = SubResource("QuadMesh_xlyy3")
+
+[node name="destruct_2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3689542, 5.220364, 0)
+
+[node name="smoke1" type="GPUParticles3D" parent="destruct_2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2915044, 0, -1.7762804)
+emitting = false
+amount = 20
+lifetime = 3.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_e0lyl")
+draw_pass_1 = SubResource("QuadMesh_xlyy3")
+
+[node name="sparks" type="GPUParticles3D" parent="destruct_2"]
+transform = Transform3D(0.11342864, -0.8271424, -0.5504265, 0, 0.554002, -0.8325155, 0.99354625, 0.094431095, 0.062839694, 1.3700349, -4.6536894, -0.74433756)
+emitting = false
+amount = 50
+speed_scale = 2.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_10ac5")
+draw_pass_1 = SubResource("QuadMesh_168dx")

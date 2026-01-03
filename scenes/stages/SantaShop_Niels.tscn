@@ -15,13 +15,13 @@
 [ext_resource type="PackedScene" uid="uid://bxxankmgh5hfl" path="res://assets/meshes/Environment/SnowHigh-1-col.glb" id="22_h8udn"]
 [ext_resource type="PackedScene" uid="uid://cklh0pte3sm2y" path="res://assets/scenes/Buildings/building_santas_workshop.tscn" id="27_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://8qin0wvv51wp" path="res://assets/meshes/Sled/Sled-1.glb" id="28_ipl6n"]
-[ext_resource type="PackedScene" uid="uid://d8wbgo5c2a7e" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
-[ext_resource type="PackedScene" uid="uid://cgm2yd6wh5peu" path="res://assets/meshes/Environment/Ground-SantaMap.tscn" id="28_xguq7"]
+[ext_resource type="PackedScene" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Environment/Ground-SantaMap.tscn" id="28_xguq7"]
 [ext_resource type="PackedScene" uid="uid://ctj1pr4680eus" path="res://assets/meshes/Characters/Elf-SizeCheck-1.glb" id="29_ipl6n"]
 [ext_resource type="PackedScene" uid="uid://ctplqojdl2sbt" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-2.tscn" id="32_8tf0k"]
-[ext_resource type="PackedScene" uid="uid://bjiy5x2ks2mfg" path="res://assets/meshes/Misc/foot_step.tscn" id="32_iwwnf"]
+[ext_resource type="PackedScene" uid="uid://cvxrtuu2m0i2w" path="res://assets/meshes/Misc/foot_step.tscn" id="32_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://d3r5tdaxn7kxi" path="res://assets/scenes/Characters/NPC/ginger_bread_man_walking_around.tscn" id="40_jhtxq"]
-[ext_resource type="PackedScene" uid="uid://dtdywsc3tdm34" path="res://assets/meshes/Environment/IcePatches/IceSpikes-1.tscn" id="41_xguq7"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Environment/IcePatches/IceSpikes-1.tscn" id="41_xguq7"]
 [ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="67_hph74"]
 [ext_resource type="PackedScene" uid="uid://bpbi16h0l5bks" path="res://assets/scenes/Characters/Enemies/ginger_bread_man.tscn" id="67_qts4k"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="67_sna10"]
@@ -32,18 +32,18 @@
 [ext_resource type="PackedScene" uid="uid://cyn5bi6e0gs42" path="res://assets/meshes/Environment/SnowHigh-3.glb" id="72_3kejl"]
 [ext_resource type="PackedScene" uid="uid://c0rpx2wuktd0h" path="res://assets/scenes/floors/floor-icepatch-1.tscn" id="73_x7rey"]
 [ext_resource type="PackedScene" uid="uid://c8unih57mu5w1" path="res://assets/meshes/Environment/Trees/Tree-1.glb" id="74_ju5eo"]
-[ext_resource type="PackedScene" uid="uid://d3r6ngrcjihtk" path="res://scenes/elements/PileOfWood-1.tscn" id="75_6a1gd"]
+[ext_resource type="PackedScene" path="res://scenes/elements/PileOfWood-1.tscn" id="75_6a1gd"]
 [ext_resource type="PackedScene" uid="uid://2pbpl80r7ufi" path="res://assets/scenes/Walls/snow_high_4.tscn" id="78_vpjt7"]
-[ext_resource type="Script" path="res://classes/nodes/modules/StageLauncher.gd" id="80_nj3uu"]
+[ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="80_nj3uu"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="81_mydgr"]
 [ext_resource type="PackedScene" uid="uid://cft5l71757amh" path="res://assets/meshes/Environment/sign_operations_and_santasshop.tscn" id="82_mydgr"]
 [ext_resource type="PackedScene" uid="uid://cotqsfdgwp8nq" path="res://assets/scenes/Characters/NPC/henkie.tscn" id="83_qts4k"]
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="86_kvc07"]
-[ext_resource type="Script" path="res://scripts/environment_audio.gd" id="87_wn5cl"]
+[ext_resource type="Script" uid="uid://ubl2tl60pb8m" path="res://scripts/environment_audio.gd" id="87_wn5cl"]
 [ext_resource type="AudioStream" uid="uid://c7m3i8ydt67cq" path="res://assets/sound/soundtrack/barn.wav" id="88_08g2m"]
 [ext_resource type="AudioStream" uid="uid://ccuspj5jg5te" path="res://assets/sound/soundtrack/seagulls.wav" id="88_wn5cl"]
-[ext_resource type="Script" path="res://scripts/barn_soundmixer.gd" id="89_5q8tg"]
-[ext_resource type="Script" path="res://scripts/environment_audio_3d.gd" id="89_nvrd0"]
+[ext_resource type="Script" uid="uid://26bliay7thhf" path="res://scripts/barn_soundmixer.gd" id="89_5q8tg"]
+[ext_resource type="Script" uid="uid://mbvui4xgijps" path="res://scripts/environment_audio_3d.gd" id="89_nvrd0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0h4kg"]
 sky_top_color = Color(0.00049372524, 0.0371885, 0.28080407, 1)
@@ -175,7 +175,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -8.211363, 81.59166, 18.89
 [node name="StageLauncher" type="Node3D" parent="Environmental Setup"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.250183, 10.40283, -82.55981)
 script = ExtResource("80_nj3uu")
-stage_id = "yeti_chase"
+stage_id = "yeti_chase_Niels"
 
 [node name="AreaTrigger" type="Node3D" parent="Environmental Setup/StageLauncher"]
 script = ExtResource("81_mydgr")
