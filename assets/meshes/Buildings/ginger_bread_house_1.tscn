@@ -1,8 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bv0rihnbecmi0"]
+[gd_scene load_steps=11 format=3 uid="uid://bv0rihnbecmi0"]
 
 [ext_resource type="PackedScene" uid="uid://ccxco2txmk1cu" path="res://assets/meshes/Buildings/GingerBread-House-1.glb" id="1_b01o5"]
 [ext_resource type="Material" uid="uid://bhh3walfom1lq" path="res://assets/materials/smoke-1.tres" id="2_4yaav"]
 [ext_resource type="Material" uid="uid://cd8bvypubtjkf" path="res://assets/materials/Emit-Yellow-1.tres" id="3_qvasr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4yaav"]
+size = Vector3(5.4541016, 7.5791626, 6.8271484)
 
 [sub_resource type="Curve" id="Curve_lx65v"]
 _limits = [0.0, 100.0, 0.0, 1.0]
@@ -35,6 +38,12 @@ material = ExtResource("2_4yaav")
 
 [node name="GingerBreadHouse-1" type="Node3D"]
 
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017089844, 3.660736, 0.46240234)
+shape = SubResource("BoxShape3D_4yaav")
+
 [node name="GingerBread-House-1" parent="." instance=ExtResource("1_b01o5")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
@@ -50,6 +59,12 @@ visibility_aabb = AABB(-2, -1, -2, 4, 2, 4)
 trail_lifetime = 5.31
 process_material = SubResource("ParticleProcessMaterial_vxt0h")
 draw_pass_1 = SubResource("QuadMesh_76v6f")
+
+[node name="Cube_024" parent="GingerBread-House-1" index="34"]
+surface_material_override/1 = ExtResource("3_qvasr")
+
+[node name="Cube_025" parent="GingerBread-House-1" index="35"]
+surface_material_override/1 = ExtResource("3_qvasr")
 
 [node name="GlassTopWindow_001" parent="GingerBread-House-1/TopWindowFrame_001" index="0"]
 surface_material_override/0 = ExtResource("3_qvasr")

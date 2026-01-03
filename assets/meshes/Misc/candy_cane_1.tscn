@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnvtnl8bbkw7t"]
+
+[ext_resource type="PackedScene" uid="uid://cj1rf52n2yyoy" path="res://assets/meshes/Misc/CandyCane-1.glb" id="1_7t35a"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lp3vb"]
+height = 3.3242188
+
+[node name="CandyCane-1" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22437298, 1.5316862, 0)
+shape = SubResource("CapsuleShape3D_lp3vb")
+
+[node name="CandyCane-1" parent="StaticBody3D" instance=ExtResource("1_7t35a")]

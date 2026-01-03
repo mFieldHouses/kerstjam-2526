@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=56 format=4 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="14_4co2b"]
 [ext_resource type="Script" uid="uid://br67v0qeo270u" path="res://scripts/musicplayer.gd" id="15_4co2b"]
 [ext_resource type="AudioStream" uid="uid://dibmmriy23nuc" path="res://assets/sound/soundtrack/snowmen_intro.wav" id="15_isx6m"]
+[ext_resource type="VoxelGIData" uid="uid://h54j7l1md7t0" path="res://assets/VoxelGI-Data/to_warehouse.VoxelGI_data.res" id="17_4xwuc"]
 [ext_resource type="PackedScene" uid="uid://dlets1p6u4oq7" path="res://assets/meshes/Environment/Walls/brick_wall_1.tscn" id="18_1g8sq"]
 [ext_resource type="PackedScene" uid="uid://cu7hu48g5k7q1" path="res://assets/meshes/Environment/Rocks/Rock-2.tscn" id="18_k2ha0"]
 [ext_resource type="PackedScene" uid="uid://dhbkkvbc7ybvl" path="res://assets/meshes/Environment/Rocks/Rock-1.tscn" id="19_5tvbr"]
@@ -34,6 +35,8 @@
 [ext_resource type="Resource" uid="uid://gwh384geqki4" path="res://assets/resources/items/ammo/fast.tres" id="27_pntd1"]
 [ext_resource type="PackedScene" uid="uid://bv0rihnbecmi0" path="res://assets/meshes/Buildings/ginger_bread_house_1.tscn" id="28_1g8sq"]
 [ext_resource type="Resource" uid="uid://qxhttbpl2yph" path="res://assets/resources/items/ammo/explode.tres" id="28_5clna"]
+[ext_resource type="PackedScene" uid="uid://dnvtnl8bbkw7t" path="res://assets/meshes/Misc/candy_cane_1.tscn" id="35_wlr7d"]
+[ext_resource type="PackedScene" uid="uid://cvxrtuu2m0i2w" path="res://assets/meshes/Misc/foot_step.tscn" id="36_ew4ol"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
 size = Vector3(100, 0.497, 100)
@@ -453,6 +456,11 @@ light_indirect_energy = 3.123
 light_volumetric_fog_energy = 10.0
 omni_range = 10.0
 omni_attenuation = 0.621
+
+[node name="VoxelGI" type="VoxelGI" parent="WorldEnvironment2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.93799, 13.582092, -41.131836)
+size = Vector3(185.87598, 47.164185, 102.26367)
+data = ExtResource("17_4xwuc")
 
 [node name="wind" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_4co2b")
@@ -962,84 +970,111 @@ randomize_lid_y_rotation = true
 random_y_min_deg = 37.5
 random_y_max_deg = 129.7
 
-[node name="Ammo-Bullet-Globe-1" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo" type="Node3D" parent="World"]
+
+[node name="Ammo-Bullet-Globe-1" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.052666, -0.83267796, -11.291683)
 held_item = ExtResource("26_1g8sq")
 count = 50
 
-[node name="Ammo-Bullet-Globe-3" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-3" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.966204, -0.83267796, -10.936001)
 held_item = ExtResource("27_pntd1")
 count = 100
 
-[node name="Ammo-Bullet-Globe-2" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-2" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -30.033567, -0.79701984, -11.971261)
 held_item = ExtResource("28_5clna")
 count = 5
 
-[node name="Ammo-Bullet-Globe-4" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-4" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -68.51729, -0.23837578, -35.149216)
 held_item = ExtResource("26_1g8sq")
 count = 30
 
-[node name="Ammo-Bullet-Globe-12" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-12" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -68.80557, -0.23837578, -35.646553)
 held_item = ExtResource("26_1g8sq")
 count = 30
 
-[node name="Ammo-Bullet-Globe-5" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-5" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -69.31317, -0.23837578, -35.149216)
 held_item = ExtResource("27_pntd1")
 count = 20
 
-[node name="Ammo-Bullet-Globe-11" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-11" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -68.28503, -0.23837578, -36.084057)
 held_item = ExtResource("27_pntd1")
 count = 20
 
-[node name="Ammo-Bullet-Globe-6" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-6" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -67.668655, 1.5888373, -43.815887)
 held_item = ExtResource("27_pntd1")
 count = 20
 is_health_pack = true
 
-[node name="Ammo-Bullet-Globe-10" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-10" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -68.31685, 1.5888373, -43.815887)
 held_item = ExtResource("27_pntd1")
 count = 20
 is_health_pack = true
 
-[node name="Ammo-Bullet-Globe-7" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-7" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -68.25758, -0.23837578, -34.162777)
 held_item = ExtResource("27_pntd1")
 count = 20
 is_health_pack = true
 
-[node name="Ammo-Bullet-Globe-8" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-8" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -65.66455, 0.04365444, -19.204895)
 held_item = ExtResource("27_pntd1")
 count = 20
 is_health_pack = true
 
-[node name="Ammo-Bullet-Globe-9" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-9" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -64.792816, 0.04365444, -18.645126)
 held_item = ExtResource("27_pntd1")
 count = 20
 is_health_pack = true
 
-[node name="Ammo-Bullet-Globe-13" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-13" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -50.616657, -0.5156415, -16.632305)
 held_item = ExtResource("26_1g8sq")
 count = 30
 
-[node name="Ammo-Bullet-Globe-14" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-14" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -50.374805, -0.5156415, -16.228203)
 held_item = ExtResource("28_5clna")
 count = 5
 
-[node name="Ammo-Bullet-Globe-15" parent="." instance=ExtResource("25_p1by1")]
+[node name="Ammo-Bullet-Globe-15" parent="World/Ammo" instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -43.14948, -0.1686846, -25.655817)
 held_item = ExtResource("27_pntd1")
 is_health_pack = true
+
+[node name="CandyCane" type="Node3D" parent="World"]
+
+[node name="CandyCane-1" parent="World" instance=ExtResource("35_wlr7d")]
+transform = Transform3D(0.49370307, -0.23021755, -0.2515096, 0.25357094, 0.5437846, 0, 0.2279451, -0.10629256, 0.5447411, -45, -1, -8)
+
+[node name="CandyCane-2" parent="World" instance=ExtResource("35_wlr7d")]
+transform = Transform3D(0.49370307, -0.23021755, -0.2515096, 0.25357094, 0.5437846, 0, 0.2279451, -0.10629256, 0.5447411, -55.928486, -1, -8)
+
+[node name="CandyCane-3" parent="World" instance=ExtResource("35_wlr7d")]
+transform = Transform3D(0.24940658, -0.11630022, -0.5331703, 0.25357094, 0.5437846, 7.49557e-09, 0.48321635, -0.22532752, 0.2751897, -69.77959, -1, -28.106165)
+
+[node name="FootSteps" type="Node3D" parent="World"]
+
+[node name="FootStep" parent="World/FootSteps" instance=ExtResource("36_ew4ol")]
+transform = Transform3D(-0.22675332, 0, 0.97395223, 0, 1, 0, -0.97395223, 0, -0.22675332, 1.8261011, 0.03045696, -0.28552532)
+
+[node name="FootStep2" parent="World/FootSteps" instance=ExtResource("36_ew4ol")]
+transform = Transform3D(-0.22675332, 0, 0.97395223, 0, 1, 0, -0.97395223, 0, -0.22675332, -0.57643867, 0.00845629, -0.28552532)
+
+[node name="FootStep3" parent="World/FootSteps" instance=ExtResource("36_ew4ol")]
+transform = Transform3D(-0.22675332, 0, 0.97395223, 0, 1, 0, -0.97395223, 0, -0.22675332, -2.233905, 0.00845629, 0.11473417)
+
+[node name="FootStep4" parent="World/FootSteps" instance=ExtResource("36_ew4ol")]
+transform = Transform3D(-0.22675332, 0, 0.97395223, 0, 1, 0, -0.97395223, 0, -0.22675332, -7.5827627, 0.00845629, 0.7394171)
 
 [editable path="to_warehouse"]
