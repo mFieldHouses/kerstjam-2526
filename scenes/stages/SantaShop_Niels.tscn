@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=61 format=3 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="1_6a1gd"]
 [ext_resource type="VoxelGIData" uid="uid://dc6d5f712t31g" path="res://assets/VoxelGI-Data/SantaShop_Niels.VoxelGI-map_data.res" id="1_8tf0k"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://ctj1pr4680eus" path="res://assets/meshes/Characters/Elf-SizeCheck-1.glb" id="29_ipl6n"]
 [ext_resource type="PackedScene" uid="uid://ctplqojdl2sbt" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-2.tscn" id="32_8tf0k"]
 [ext_resource type="PackedScene" uid="uid://bjiy5x2ks2mfg" path="res://assets/meshes/Misc/foot_step.tscn" id="32_iwwnf"]
+[ext_resource type="PackedScene" uid="uid://d3r5tdaxn7kxi" path="res://assets/scenes/Characters/NPC/ginger_bread_man_walking_around.tscn" id="40_jhtxq"]
 [ext_resource type="PackedScene" uid="uid://dtdywsc3tdm34" path="res://assets/meshes/Environment/IcePatches/IceSpikes-1.tscn" id="41_xguq7"]
 [ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="67_hph74"]
 [ext_resource type="PackedScene" uid="uid://bpbi16h0l5bks" path="res://assets/scenes/Characters/Enemies/ginger_bread_man.tscn" id="67_qts4k"]
@@ -258,10 +259,13 @@ collision_layer = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.022155762, 0)
 shape = SubResource("BoxShape3D_nj3uu")
 
+[node name="GingerBreadMan" parent="Characters/NPC" instance=ExtResource("67_qts4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4956323, 0, -10.063209)
+
 [node name="Enemies" type="Node3D" parent="Characters"]
 
 [node name="player" parent="Characters" instance=ExtResource("12_3bagg")]
-transform = Transform3D(0.8343382, 0, -0.5512529, 0, 1, 0, 0.5512529, 0, 0.8343382, 15.6898155, 0.68869305, 11.054928)
+transform = Transform3D(0.8343382, 0, -0.5512529, 0, 1, 0, 0.5512529, 0, 0.8343382, 4.967539, 0.68869305, -11.238204)
 step_height = 0.4
 
 [node name="SnowHigh" type="Node" parent="."]
@@ -783,11 +787,6 @@ transform = Transform3D(0.9945884, -0.07909521, -0.06736592, 0.07157503, 0.99162
 [node name="FootStep27" parent="World/Ground (level 1)/Footsteps (quest)" instance=ExtResource("32_iwwnf")]
 transform = Transform3D(0.9945884, -0.079095215, -0.06736592, 0.07941245, 0.99683917, 0.0020411238, 0.066991575, -0.0073795915, 0.99772626, 35.335056, 10.156682, -80.64777)
 
-[node name="World-Characters" type="Node3D" parent="World"]
-
-[node name="GingerBreadMan" parent="World/World-Characters" instance=ExtResource("67_qts4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4956323, 0, -10.063209)
-
 [node name="Walls" type="Node3D" parent="World"]
 
 [node name="SnowHigh-4" parent="World/Walls" instance=ExtResource("78_vpjt7")]
@@ -847,6 +846,9 @@ transform = Transform3D(0.9958923, 0, -0.090545654, 0, 1, 0, 0.090545654, 0, 0.9
 
 [node name="Node3D" parent="World" instance=ExtResource("28_xguq7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.7683716e-07, 0)
+
+[node name="GingerBreadMan_walking_around" parent="World" instance=ExtResource("40_jhtxq")]
+transform = Transform3D(-0.9124985, 0, 0.4089289, 0, 1, 0, -0.4089289, 0, -0.9124985, 12.276518, 0.305883, -11.396023)
 
 [node name="IceArch-1-col2" parent="." instance=ExtResource("70_3kejl")]
 transform = Transform3D(0.4829629, 0, -0.12940952, 0, 0.5, 0, 0.12940952, 0, 0.4829629, 36, 8.495497, -80)

@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://bpbi16h0l5bks"]
+[gd_scene load_steps=15 format=4 uid="uid://d3r5tdaxn7kxi"]
 
-[ext_resource type="Animation" uid="uid://bhkgb5a5rt26y" path="res://assets/animations/GingerBreadMan-Walk.res" id="1_27iyt"]
-[ext_resource type="Animation" uid="uid://d00woyden7sui" path="res://assets/animations/GingerBreadMan-CrazyMoves-1.res" id="1_oamxd"]
+[ext_resource type="Animation" uid="uid://d00woyden7sui" path="res://assets/animations/GingerBreadMan-CrazyMoves-1.res" id="1_0dyco"]
+[ext_resource type="Script" uid="uid://rp81ma4g7cgu" path="res://assets/scenes/Characters/NPC/path_follow3D.gd" id="1_37trn"]
+[ext_resource type="Animation" uid="uid://bhkgb5a5rt26y" path="res://assets/animations/GingerBreadMan-Walk.res" id="2_7rymy"]
+[ext_resource type="Script" uid="uid://rsbu3kiu5wbf" path="res://scripts/NPC_follow_path.gd" id="3_7rymy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_621da"]
 resource_name = "CookieGingerBreadMan-Body"
@@ -159,24 +161,41 @@ bind/14/pose = Transform3D(0.9891217, 0.14710017, -2.7925984e-07, 0.14710017, -0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ymrnr"]
 _data = {
-&"GingerBreadMan-CrazyMoves-1": ExtResource("1_oamxd"),
-&"GingerBreadMan-Walk": ExtResource("1_27iyt")
+&"GingerBreadMan-CrazyMoves-1": ExtResource("1_0dyco"),
+&"GingerBreadMan-Walk": ExtResource("2_7rymy")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_oamxd"]
-size = Vector3(3.8243408, 4.0284424, 0.16641235)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ly70w"]
+radius = 2.364746
+height = 10.251953
 
-[node name="GingerBreadMan" type="Node3D"]
+[sub_resource type="Curve3D" id="Curve3D_0dyco"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.9827225, 0, -0.032259416, 0, 0, 0, 0, 0, 0, -3.9445899, 0, -1.2444763, 0, 0, 0, 0, 0, 0, -3.5361254, 0, -2.6675136, 0, 0, 0, 0, 0, 0, -2.2843802, 0, -3.8402014, 0, 0, 0, 0, 0, 0, -0.17617726, 0, -4.3013706, 0, 0, 0, 0, 0, 0, 3.4736488, 0, -4.604425, 0, 0, 0, 0, 0, 0, 5.1865644, 0, -4.169608, 0, 0, 0, 0, 0, 0, 6.306546, 0, -2.6806898, 0, 0, 0, 0, 0, 0, 6.2143145, 0, -0.87554103, 0, 0, 0, 0, 0, 0, 5.581853, 0, 0.20491342, 0, 0, 0, 0, 0, 0, 2.9465988, 0, 0.2707947),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 11
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
+[node name="World" type="Node3D"]
 
-[node name="GingerBreadMan-1" type="Node3D" parent="RigidBody3D"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." node_paths=PackedStringArray("path")]
+floor_stop_on_slope = false
+script = ExtResource("1_37trn")
+path = NodePath("../Path3D")
+speed_mps = 0.6
+lookahead_meters = 1.2
 
-[node name="Armature" type="Node3D" parent="RigidBody3D/GingerBreadMan-1"]
+[node name="GingerBreadMan_walking_around" type="Node3D" parent="CharacterBody3D"]
+
+[node name="Visuals" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9827225, 0, -0.032259416)
+
+[node name="Armature" type="Node3D" parent="CharacterBody3D/Visuals"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3512619, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="RigidBody3D/GingerBreadMan-1/Armature"]
+[node name="Skeleton3D" type="Skeleton3D" parent="CharacterBody3D/Visuals/Armature"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -2.018906, 0)
 bones/0/name = "Bone"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -217,7 +236,7 @@ bones/5/parent = 4
 bones/5/rest = Transform3D(0.9366968, -0.35014153, 1.2606012e-08, 0.35014153, 0.9366968, -8.818435e-10, -1.1499241e-08, 5.2399085e-09, 1, -3.7252903e-08, 0.67930424, -3.996803e-15)
 bones/5/enabled = true
 bones/5/position = Vector3(-3.7252903e-08, 0.67930424, -3.996803e-15)
-bones/5/rotation = Quaternion(0.02110431, -0.05584804, -0.49382532, 0.8675092)
+bones/5/rotation = Quaternion(-0.10654017, 0.2819352, -0.4717037, 0.8286479)
 bones/5/scale = Vector3(1, 1, 1)
 bones/6/name = "Arm.001.L"
 bones/6/parent = 5
@@ -252,7 +271,7 @@ bones/10/parent = 9
 bones/10/rest = Transform3D(0.94673026, 0.32202747, 2.990774e-08, -0.32202747, 0.9467302, -1.6934015e-07, -8.2846746e-08, 1.5068834e-07, 1, -2.9802322e-08, 0.7983336, -1.7763568e-15)
 bones/10/enabled = true
 bones/10/position = Vector3(-2.9802322e-08, 0.7983336, -1.7763568e-15)
-bones/10/rotation = Quaternion(0.24561809, -0.09549485, -0.15743288, 0.9517181)
+bones/10/rotation = Quaternion(0.033123948, -0.012878338, -0.16309868, 0.98596954)
 bones/10/scale = Vector3(0.99999994, 0.9999999, 1)
 bones/11/name = "Leg.001.R"
 bones/11/parent = 10
@@ -273,26 +292,33 @@ bones/13/parent = 12
 bones/13/rest = Transform3D(0.94673026, -0.32202747, -2.990774e-08, 0.32202747, 0.9467302, -1.6934015e-07, 8.2846746e-08, 1.5068834e-07, 1, 2.9802322e-08, 0.7983336, -1.7763568e-15)
 bones/13/enabled = true
 bones/13/position = Vector3(2.9802322e-08, 0.7983336, -1.7763568e-15)
-bones/13/rotation = Quaternion(0.1638394, 0.06369977, 0.16066043, 0.97122985)
+bones/13/rotation = Quaternion(-0.39118367, -0.15208998, 0.1481315, 0.89548934)
 bones/13/scale = Vector3(0.99999994, 0.9999999, 1)
 bones/14/name = "Leg.001.L"
 bones/14/parent = 13
 bones/14/rest = Transform3D(0.99824595, -0.05920344, -1.1245913e-07, 0.05920344, 0.99824595, -1.656651e-08, 1.13242656e-07, 9.879486e-09, 1, 5.960465e-08, 0.43730682, 0)
 bones/14/enabled = true
 bones/14/position = Vector3(5.960465e-08, 0.43730682, 0)
-bones/14/rotation = Quaternion(-0.026614973, -0.0047677387, 0.029603872, 0.99919593)
+bones/14/rotation = Quaternion(0.23970349, 0.04293921, 0.02872322, 0.9694708)
 bones/14/scale = Vector3(1, 1, 1)
 
-[node name="Plane_030" type="MeshInstance3D" parent="RigidBody3D/GingerBreadMan-1/Armature/Skeleton3D"]
+[node name="Plane_030" type="MeshInstance3D" parent="CharacterBody3D/Visuals/Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_8nby4")
 skin = SubResource("Skin_14hty")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RigidBody3D/GingerBreadMan-1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D/Visuals"]
 libraries = {
 &"GingerBreadMan": SubResource("AnimationLibrary_ymrnr")
 }
-autoplay = "GingerBreadMan/GingerBreadMan-CrazyMoves-1"
+autoplay = "GingerBreadMan/GingerBreadMan-Walk"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 6.1035156e-05, 0.62335074, 0.04298401)
-shape = SubResource("BoxShape3D_oamxd")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(-0.0633723, 0, -0.07735479, 0, 0.1, 0, 0.07735479, 0, -0.0633723, -3.0160115, 0.47081167, -0.059452154)
+shape = SubResource("CapsuleShape3D_ly70w")
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_0dyco")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.78334737, 0, 0.62156886, 0, 1, 0, -0.62156886, 0, 0.78334737, -2.9827225, 0, -0.032259416)
+script = ExtResource("3_7rymy")
