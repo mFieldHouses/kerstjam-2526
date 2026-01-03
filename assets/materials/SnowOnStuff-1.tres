@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d3tgm6vvwk00q"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4ht2j"]
+noise_type = 3
+frequency = 0.2581
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_c14mi"]
+width = 1024
+height = 1024
+noise = SubResource("FastNoiseLite_4ht2j")
+normalize = false
+
+[resource]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+heightmap_scale = 16.0
+heightmap_texture = SubResource("NoiseTexture2D_c14mi")
+billboard_keep_scale = true

@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://2pbpl80r7ufi"]
+[gd_scene load_steps=14 format=4 uid="uid://2pbpl80r7ufi"]
 
 [ext_resource type="Texture2D" uid="uid://xejgadyoxptb" path="res://assets/meshes/Environment/SnowHigh-4-col_arctic_industrial_ow_color_atlas_256_2.png" id="1_0f8at"]
 [ext_resource type="Material" uid="uid://cd8bvypubtjkf" path="res://assets/materials/Emit-Yellow-1.tres" id="2_0f8at"]
+[ext_resource type="Material" uid="uid://bcu5hcerl3fy" path="res://assets/materials/Ice-3.tres" id="2_2tewt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pfsm"]
 resource_name = "Gradient-Atlas-2.001"
@@ -23,7 +24,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wq23a"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_lvm3c"]
 resource_name = "SnowHigh-4-col_Cube_261"
 _surfaces = [{
 "aabb": AABB(-6.502872, -0.57341176, -6.2130194, 14.024991, 16.415403, 13.008322),
@@ -81,8 +82,9 @@ rings = 6
 [node name="SnowHigh-4" type="Node3D" parent="."]
 
 [node name="SnowHigh-4" type="MeshInstance3D" parent="SnowHigh-4"]
-mesh = SubResource("ArrayMesh_wq23a")
+mesh = SubResource("ArrayMesh_lvm3c")
 skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_2tewt")
 
 [node name="hitbox " type="StaticBody3D" parent="SnowHigh-4"]
 transform = Transform3D(6.4267025, 0, 0, 0, 6.4267025, 0, 0, 0, 6.4267025, 0, 6.3917913, 0)
