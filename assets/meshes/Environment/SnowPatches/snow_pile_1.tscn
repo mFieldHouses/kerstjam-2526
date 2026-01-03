@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1ooow55l40e0"]
+
+[ext_resource type="PackedScene" uid="uid://cq477xb85tykj" path="res://assets/meshes/Environment/SnowPatches/SnowPile-1.glb" id="1_3h3j1"]
+
+[node name="SnowPile-1" type="Node3D"]
+
+[node name="SnowPile-1" parent="." instance=ExtResource("1_3h3j1")]

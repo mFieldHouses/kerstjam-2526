@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjaryyad2lvnx"]
+
+[ext_resource type="PackedScene" uid="uid://c4knrjrmwj1ir" path="res://assets/meshes/SantaShop/Windows/WindowTall-1.glb" id="1_yht7a"]
+[ext_resource type="Texture2D" uid="uid://1ig47fgqlqds" path="res://assets/textures/misc/Snow-Square-1.png" id="2_0pmoh"]
+[ext_resource type="Material" uid="uid://dvcsb58dlj0yy" path="res://assets/materials/BrickColor-2.tres" id="2_fg5rj"]
+[ext_resource type="Material" uid="uid://dp518jf7gfjkn" path="res://assets/materials/Glass-Orange-1.tres" id="3_fg5rj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fg5rj"]
+size = Vector3(2.0412598, 4.0494537, 0.6343994)
+
+[node name="Window_Tall_1" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0748291, 2.0089493, 0.0446167)
+shape = SubResource("BoxShape3D_fg5rj")
+
+[node name="WindowTall-1" parent="StaticBody3D" instance=ExtResource("1_yht7a")]
+
+[node name="WindowTall-1-Bot_001" parent="StaticBody3D/WindowTall-1" index="0"]
+surface_material_override/0 = ExtResource("2_fg5rj")
+
+[node name="Glass_001" parent="StaticBody3D/WindowTall-1/WindowTall-1-Bot_001" index="0"]
+surface_material_override/0 = ExtResource("3_fg5rj")
+
+[node name="WindowTall-1-Top_001" parent="StaticBody3D/WindowTall-1/WindowTall-1-Bot_001" index="2"]
+surface_material_override/0 = ExtResource("2_fg5rj")
+
+[node name="Decal" type="Decal" parent="StaticBody3D/WindowTall-1"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.07885742, 1.8169732, 0.3630981)
+size = Vector3(1.4272461, 0.17041016, 2.7059479)
+texture_albedo = ExtResource("2_0pmoh")
+
+[editable path="StaticBody3D/WindowTall-1"]

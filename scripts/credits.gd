@@ -23,6 +23,8 @@ var _timings : Dictionary = {
 	}
 }
 
+var _time : float = 0.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
@@ -38,6 +40,10 @@ func _ready() -> void:
 		await _tween.finished
 		await get_tree().create_timer(_timings[_id].wait).timeout
 
+func _process(delta: float) -> void:
+	_time += delta
+
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton or event is InputEventKey:
-		SceneManager.launch_menu("start_menu")
+	if event is InputEventMouseButton or event is InputEventKey and _time > 5.0:
+		if event.is_pressed():
+			SceneManager.launch_menu("start_menu")

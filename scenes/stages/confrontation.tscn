@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://c1dnotdac1qr3"]
+[gd_scene load_steps=15 format=3 uid="uid://c1dnotdac1qr3"]
 
 [ext_resource type="Script" uid="uid://b2iw6rsa4l7j7" path="res://scripts/stages/confrontation.gd" id="1_q58n8"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_txjfn"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_q8etp"]
+[ext_resource type="PackedScene" uid="uid://cqtj3st2qdnea" path="res://assets/scenes/Characters/Enemies/nutcracker_eindbaas.tscn" id="6_06wq0"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_jyk3o"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="10_fbhbk"]
 
@@ -23,8 +24,6 @@ glow_enabled = true
 vertices = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, -10)
 polygons = [PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 2)]
 
-[sub_resource type="BoxMesh" id="BoxMesh_q58n8"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_q58n8"]
 size = Vector3(2, 0.25, 2)
 
@@ -38,8 +37,45 @@ lightmap_size_hint = Vector2i(24, 18)
 material = SubResource("StandardMaterial3D_q58n8")
 size = Vector3(2, 0.25, 2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_06wq0"]
+size = Vector3(66.15405, 1, 56.957275)
+
 [node name="confrontation" type="Node3D"]
 script = ExtResource("1_q58n8")
+
+[node name="gui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="gui"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.287
+anchor_right = 0.71300006
+offset_left = 0.37600708
+offset_right = -0.37609863
+offset_bottom = 24.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="gui/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="health_bar" type="ColorRect" parent="gui/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
 
 [node name="player" parent="." instance=ExtResource("1_txjfn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.414629, -0.19800603)
@@ -58,7 +94,6 @@ shadow_enabled = true
 [node name="StageLauncher" type="Node3D" parent="."]
 script = ExtResource("9_jyk3o")
 stage_id = "yeti_chase"
-metadata/_custom_type_script = "uid://dytis7djokgek"
 
 [node name="AreaTrigger" type="Node3D" parent="StageLauncher"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.336687, 0.6467581, 0)
@@ -69,10 +104,6 @@ metadata/_custom_type_script = "uid://b7dvxli4hd1ni"
 
 [node name="waves" type="Node3D" parent="."]
 
-[node name="philip" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.695903, 2.275742, -6.309591)
-mesh = SubResource("BoxMesh_q58n8")
-
 [node name="floor_panels" type="Node3D" parent="."]
 
 [node name="floor" type="StaticBody3D" parent="floor_panels"]
@@ -82,3 +113,19 @@ shape = SubResource("BoxShape3D_q58n8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor_panels/floor"]
 mesh = SubResource("BoxMesh_06wq0")
+
+[node name="Nutcracker_Eindbaas" parent="." instance=ExtResource("6_06wq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012, 4, -15.737)
+
+[node name="philip_head" type="Marker3D" parent="Nutcracker_Eindbaas"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.514571e-08, 5.207223, 0.5830231)
+
+[node name="fall_area" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.855711, 0)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fall_area"]
+shape = SubResource("BoxShape3D_06wq0")
+
+[connection signal="body_entered" from="fall_area" to="." method="_on_fall_area_body_entered"]

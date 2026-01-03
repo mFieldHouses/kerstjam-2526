@@ -7,5 +7,5 @@ func _ready() -> void:
 	setup_triggers(_trigger)
 	get_child(0).toggle.connect(_trigger)
 
-func _trigger(x, y) -> void:
+func _trigger(x) -> void:
 	SceneManager.launch_stage(stage_id)

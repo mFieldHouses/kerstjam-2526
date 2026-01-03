@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://bpbi16h0l5bks"]
 
-[ext_resource type="Animation" uid="uid://cufqmygjnugax" path="res://assets/animations/GingerBreadMan-Walk.res" id="1_27iyt"]
-[ext_resource type="Animation" uid="uid://dbx8c1gwdwqwr" path="res://assets/animations/GingerBreadMan-CrazyMoves-1.res" id="1_oamxd"]
+[ext_resource type="Animation" uid="uid://bhkgb5a5rt26y" path="res://assets/animations/GingerBreadMan-Walk.res" id="1_27iyt"]
+[ext_resource type="Animation" uid="uid://d00woyden7sui" path="res://assets/animations/GingerBreadMan-CrazyMoves-1.res" id="1_oamxd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_621da"]
 resource_name = "CookieGingerBreadMan-Body"
@@ -196,14 +196,14 @@ bones/2/parent = 1
 bones/2/rest = Transform3D(0.9366968, 0.35014153, -1.2606012e-08, -0.35014153, 0.9366968, -8.818435e-10, 1.1499241e-08, 5.2399085e-09, 1, 3.7252903e-08, 0.67930424, -3.996803e-15)
 bones/2/enabled = true
 bones/2/position = Vector3(3.7252903e-08, 0.67930424, -3.996803e-15)
-bones/2/rotation = Quaternion(0.09012737, 0.29586753, 0.41525418, 0.8555136)
+bones/2/rotation = Quaternion(1.5552493e-09, -6.124009e-09, -0.17790893, 0.98404694)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/name = "Arm.001.R"
 bones/3/parent = 2
 bones/3/rest = Transform3D(0.9162672, 0.4005676, -1.877181e-08, -0.4005676, 0.9162672, 7.105482e-09, 2.0046219e-08, 1.0088592e-09, 1, -2.3841858e-07, 0.37618542, 2.797762e-14)
 bones/3/enabled = true
 bones/3/position = Vector3(-2.3841858e-07, 0.37618542, 2.797762e-14)
-bones/3/rotation = Quaternion(-0.04203792, -0.026956353, 0.25002247, 0.9669514)
+bones/3/rotation = Quaternion(-1.5571008e-09, -9.914264e-09, -0.20461279, 0.978843)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "Shoulder.L"
 bones/4/parent = 0
@@ -224,7 +224,7 @@ bones/6/parent = 5
 bones/6/rest = Transform3D(0.9162672, -0.4005676, 1.877181e-08, 0.4005676, 0.9162672, 7.105482e-09, -2.0046219e-08, 1.0088592e-09, 1, 2.3841858e-07, 0.37618542, 2.797762e-14)
 bones/6/enabled = true
 bones/6/position = Vector3(2.3841858e-07, 0.37618542, 2.797762e-14)
-bones/6/rotation = Quaternion(0.04026582, -0.021511724, -0.19976553, 0.9787797)
+bones/6/rotation = Quaternion(-1.5571008e-09, 9.914264e-09, 0.20461279, 0.978843)
 bones/6/scale = Vector3(1, 1, 1)
 bones/7/name = "Bone.001"
 bones/7/parent = 0
@@ -259,7 +259,7 @@ bones/11/parent = 10
 bones/11/rest = Transform3D(0.99824595, 0.05920344, 1.1245913e-07, -0.05920344, 0.99824595, -1.656651e-08, -1.13242656e-07, 9.879486e-09, 1, -5.960465e-08, 0.43730682, 0)
 bones/11/enabled = true
 bones/11/position = Vector3(-5.960465e-08, 0.43730682, 0)
-bones/11/rotation = Quaternion(0.21440801, -0.038407914, -0.028903626, 0.9755607)
+bones/11/rotation = Quaternion(6.6143984e-09, 5.64502e-08, -0.029614706, 0.99956137)
 bones/11/scale = Vector3(1, 1, 1)
 bones/12/name = "Hip.L"
 bones/12/parent = -1
@@ -291,7 +291,7 @@ skin = SubResource("Skin_14hty")
 libraries = {
 &"GingerBreadMan": SubResource("AnimationLibrary_ymrnr")
 }
-autoplay = "GingerBreadMan-CrazyMoves-1"
+autoplay = "GingerBreadMan/GingerBreadMan-CrazyMoves-1"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 6.1035156e-05, 0.62335074, 0.04298401)

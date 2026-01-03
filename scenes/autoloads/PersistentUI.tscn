@@ -83,7 +83,7 @@ layout_mode = 2
 texture = ExtResource("2_qbks3")
 expand_mode = 2
 
-[node name="henkie_video" type="VideoStreamPlayer" parent="remote_dialog/MarginContainer/HBoxContainer"]
+[node name="video" type="VideoStreamPlayer" parent="remote_dialog/MarginContainer/HBoxContainer"]
 visible = false
 layout_mode = 2
 stream = ExtResource("4_vyw3n")
@@ -142,7 +142,7 @@ layout_mode = 2
 texture = ExtResource("2_qbks3")
 expand_mode = 2
 
-[node name="henkie_video" type="VideoStreamPlayer" parent="dialog/MarginContainer/HBoxContainer"]
+[node name="video" type="VideoStreamPlayer" parent="dialog/MarginContainer/HBoxContainer"]
 visible = false
 layout_mode = 2
 stream = ExtResource("4_vyw3n")

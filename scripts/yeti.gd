@@ -26,14 +26,15 @@ var _current_behavior_state : BehaviorState = BehaviorState.SLEEP:
 		
 		match x:
 			BehaviorState.PATROL:
-				%yeti_state.text = "Patrol"
+				%music.desired_state = 0
 			BehaviorState.CHASE:
-				%yeti_state.text = "Chase"
+				%music.desired_state = 2
 			BehaviorState.FOLLOW_TRAIL:
 				if _flags[0] == true and _flags[1] == false and _flags[2] == false:
 					DialogManager.initiate_remote_dialog("discover_yeti2", "Henkie", load("res://icon.svg"))
 					_flags[2] = true
-				%yeti_state.text = "Follow Trail"
+				
+				%music.desired_state = 1
 		
 		_current_behavior_state = x
 
@@ -119,6 +120,7 @@ func _get_visible_trail_points() -> Array[PlayerTrailPoint]:
 		if RaycastManager.is_ray_free(_point.global_position + Vector3(0.0, 0.5, 0.0), $eyes.global_position, 1):
 			_result.append(_point)
 	
+	print(_result)
 	return _result
 
 func _get_closest_visible_trail_point() -> PlayerTrailPoint:

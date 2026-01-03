@@ -7,13 +7,12 @@ const SPEED = 3.5
 const SPRINT_SPEED_DELTA = 2.0
 const JUMP_VELOCITY = 4.5
 
-const DEFAULT_FOV = 50
-
 var _health : float = 30.0:
 	set(x):
-		_health = x
-		if _health <= 0.0:
+		_health = clamp(x, 0.0, _max_health)
+		if _health == 0.0:
 			_die()
+
 var _max_health : float = 30.0
 
 @export var step_height : float = 0.3
@@ -79,7 +78,7 @@ var _ammo : Dictionary[AmmoItemDescription, int] = {
 	preload("res://assets/resources/items/ammo/big.tres") : 100,
 	preload("res://assets/resources/items/ammo/explode.tres") : 100
 	}
-@onready var _used_ammo : AmmoItemDescription = load("res://assets/resources/items/ammo/snow.tres")
+@onready var _used_ammo : AmmoItemDescription = load("res://assets/resources/items/ammo/fast.tres")
 
 @onready var camera : Camera3D = get_node("camera")
 @onready var crosshair_sprite : TextureRect = $gui/CenterContainer/crosshair
@@ -97,11 +96,9 @@ func _ready():
 	PlayerState.player_instance = self
 	DisplayManager.set_mouse_captured()
 	
-	_ammo[preload("res://assets/resources/items/ammo/fast.tres")] = PlayerState.ammo["fast"]
-	_ammo[preload("res://assets/resources/items/ammo/big.tres")] = PlayerState.ammo["big"]
-	_ammo[preload("res://assets/resources/items/ammo/explode.tres")] = PlayerState.ammo["explode"]
-	_ammo[preload("res://assets/resources/items/ammo/snow.tres")] = PlayerState.ammo["snow"]
+	camera.fov = ConfigurableValues.fov
 	
+	_ammo = PlayerState.ammo.duplicate()
 	_health = PlayerState.health
 	
 	_update_ammo_gui(0)
@@ -126,7 +123,7 @@ func _physics_process(delta: float) -> void:
 		camera_time += delta
 
 	# Handle jump.
-	if Input.is_action_pressed("jump"):
+	if Input.is_action_pressed("jump") and controls_enabled:
 		if flight:
 			position.y += delta * 20
 		else:
@@ -136,7 +133,7 @@ func _physics_process(delta: float) -> void:
 	_auto_gun_timer -= delta
 	
 	if _used_ammo.automatic == true:
-		if Input.is_action_pressed("shoot") and _selected_weapon_idx == 0 and _ammo[_used_ammo] > 0:
+		if Input.is_action_pressed("shoot") and _selected_weapon_idx == 0 and _ammo[_used_ammo] > 0 and controls_enabled:
 			if _auto_gun_timer < 0.0:
 				shoot()
 				_auto_gun_timer = _used_ammo.shoot_delay
@@ -230,10 +227,10 @@ func _input(event):
 		if event.is_action("sprint") and !in_scope:
 			if event.is_pressed():
 				sprinting = true
-				tween_camera_fov(DEFAULT_FOV + 8, 0.2)
+				tween_camera_fov(ConfigurableValues.fov * 1.3, 0.2)
 			else:
 				sprinting = false
-				tween_camera_fov(DEFAULT_FOV, 0.2)
+				tween_camera_fov(ConfigurableValues.fov, 0.2)
 		
 		elif event.is_action("shoot"):
 			if event.is_pressed() and (_used_ammo.automatic == false or _selected_weapon_idx != 0) and _ammo[_used_ammo] > 0:
@@ -305,17 +302,17 @@ func toggle_scope_mode(state : bool) -> void:
 	in_scope = state
 	
 	if state:
-		tween_camera_fov(DEFAULT_FOV - 50, 0.2)
+		tween_camera_fov(ConfigurableValues.fov * 0.2, 0.2)
 		sensitivity_multiplier = sensitivity_multipliers["in_scope"]
 		speed_multiplier = speed_multipliers["in_scope"]
 	else:
-		tween_camera_fov(DEFAULT_FOV, 0.2)
+		tween_camera_fov(ConfigurableValues.fov, 0.2)
 		sensitivity_multiplier = sensitivity_multipliers["default"]
 		speed_multiplier = speed_multipliers["default"]
 		
 		if Input.is_action_pressed("sprint"):
 			sprinting = true
-			tween_camera_fov(DEFAULT_FOV + 8, 0.2)
+			tween_camera_fov(ConfigurableValues.fov + 8, 0.2)
 
 func get_hit(damage : float) -> void:
 	_health -= damage
@@ -323,7 +320,16 @@ func get_hit(damage : float) -> void:
 	
 
 func shoot() -> void:
-	print("shoot()")
+	
+	if _selected_weapon_idx == 0:
+		%gun_sounds.stream = _used_ammo.shoot_audio_stream
+		
+		if _used_ammo.ammo_type_identifier == "snow":
+			%gun_sounds.pitch_scale = 3.0
+			%gun_sounds.play(0.1)
+		else:
+			%gun_sounds.pitch_scale = 1.0
+			%gun_sounds.play()
 	
 	_ammo[_used_ammo] -= 1
 	var _used_weapon : WeaponConfiguration = _get_currently_selected_weapon()
@@ -376,3 +382,6 @@ func get_distance_to_player(point : Vector3): ##Returns the distance between the
 
 func _get_currently_selected_weapon() -> WeaponConfiguration:
 	return PlayerState.weapons[_selected_weapon_idx]
+
+func _play_ammo_pickup_sound() -> void:
+	$ammo_pickup_sounds.play()

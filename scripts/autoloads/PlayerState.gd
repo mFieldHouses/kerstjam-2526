@@ -26,21 +26,21 @@ var weapons : Array[WeaponConfiguration] = [
 
 var health : float = 30.0
 
-var ammo : Dictionary = {
-	"fast": 200,
-	"big": 200,
-	"explode": 200,
-	"snow": 200
-}
-
-func _save_ammo() -> void:
-	ammo.fast = player_instance._ammo[preload("res://assets/resources/items/ammo/fast.tres")]
-	ammo.big = player_instance._ammo[preload("res://assets/resources/items/ammo/big.tres")]
-	ammo.explode = player_instance._ammo[preload("res://assets/resources/items/ammo/explode.tres")]
-	ammo.snow = player_instance._ammo[preload("res://assets/resources/items/ammo/snow.tres")]
+var ammo : Dictionary[AmmoItemDescription, int] = {
+	preload("res://assets/resources/items/ammo/snow.tres") : 200,
+	preload("res://assets/resources/items/ammo/fast.tres") : 200,
+	preload("res://assets/resources/items/ammo/big.tres") : 200,
+	preload("res://assets/resources/items/ammo/explode.tres") : 200
+	}
+@onready var used_ammo : AmmoItemDescription = load("res://assets/resources/items/ammo/snow.tres")
 
 func _save_health() -> void:
-	health = player_instance._health
+	if player_instance:
+		health = player_instance._health
+
+func _save_ammo() -> void:
+	if player_instance:
+		ammo = player_instance._ammo
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS

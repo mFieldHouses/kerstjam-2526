@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://bwsq2exlij0tn"]
+
+[ext_resource type="Material" uid="uid://cd8bvypubtjkf" path="res://assets/materials/Emit-Yellow-1.tres" id="1_83wyw"]
+
+[sub_resource type="Curve" id="Curve_od5hx"]
+_data = [Vector2(0.094827585, 0), 0.0, 0.0, 0, 0, Vector2(0.3017241, 1), 0.0, 0.0, 0, 0, Vector2(0.93678147, 0.035673857), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_lvm3c"]
+curve = SubResource("Curve_od5hx")
+
+[sub_resource type="Curve" id="Curve_a3dj6"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.4482758, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_302w4"]
+curve = SubResource("Curve_a3dj6")
+
+[sub_resource type="Curve" id="Curve_j78c3"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.4367816, 3), 0.0, 0.0, 0, 0, Vector2(0.81609195, 0.040770292), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_smild"]
+curve = SubResource("Curve_j78c3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6j7g8"]
+lifetime_randomness = 0.3
+emission_shape_scale = Vector3(10, 0.35, 10)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_302w4")
+scale_over_velocity_curve = SubResource("CurveTexture_smild")
+emission_curve = SubResource("CurveTexture_lvm3c")
+
+[sub_resource type="SphereMesh" id="SphereMesh_wa7ht"]
+material = ExtResource("1_83wyw")
+radius = 0.1
+height = 0.2
+radial_segments = 11
+rings = 46
+
+[node name="Glitter Fog" type="Node3D"]
+
+[node name="GPUParticles3D-Glitter2" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29460335, 0.45630813, -2.6559234)
+visible = false
+material_override = ExtResource("1_83wyw")
+amount = 500
+amount_ratio = 0.1564
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_6j7g8")
+draw_pass_1 = SubResource("SphereMesh_wa7ht")
+
+[node name="GPUParticles3D-Stars" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29460335, 0.45630813, -2.6559234)
+material_override = ExtResource("1_83wyw")
+amount = 500
+amount_ratio = 0.1564
+lifetime = 10.0
+process_material = SubResource("ParticleProcessMaterial_6j7g8")
+draw_pass_1 = SubResource("SphereMesh_wa7ht")

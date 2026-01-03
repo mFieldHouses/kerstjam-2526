@@ -32,6 +32,9 @@ func _physics_process(delta: float) -> void:
 		else:
 			return
 	
+	if !_can_see_player():
+		_frozen = true
+		return
 	
 	shoot_timer += delta
 	_strafe_timer -= delta
@@ -76,6 +79,7 @@ func _die() -> void:
 	queue_free()
 
 func _shoot() -> void:
+	$shoot.play()
 	var _new_snowball : Snowball = preload("res://scenes/projectiles/snowball.tscn").instantiate()
 	var _to_player : Vector3 = Vector3(PlayerState.player_instance.global_position - global_position)
 	get_parent().add_child(_new_snowball)

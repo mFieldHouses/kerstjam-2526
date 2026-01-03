@@ -4,6 +4,8 @@ var _player_trail_points : Array[PlayerTrailPoint] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SaveFileManager._unlocked_stages.yeti_chase = true
+	
 	_create_new_trail_point(Vector3.ZERO)
 	
 	await get_tree().create_timer(1.0).timeout
@@ -23,9 +25,7 @@ func _process(delta: float) -> void:
 		$Control/distance_indicator/MarginContainer/ColorRect.custom_minimum_size.x = ($Control/distance_indicator.size.x - 10) * _distance_fac
 
 func _queue(did: String, qid: String) -> void:
-	if did == "enter_yeti_hollow" and qid == "show_distance_indicator":
-		$Control/distance_indicator.visible = true
-	elif did == "find_part_1" and qid == "hide_distance_indicator":
+	if did == "find_part_1" and qid == "hide_distance_indicator":
 		$Control/distance_indicator.visible = false
 
 func _create_new_trail_point(at_position : Vector3) -> void:

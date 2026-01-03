@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bmo2v6vkmad7c"]
+[gd_scene load_steps=31 format=4 uid="uid://bmo2v6vkmad7c"]
 
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="1_ofk2g"]
 [ext_resource type="Script" uid="uid://d04qo38kmxj3q" path="res://scripts/ammo_crate.gd" id="1_uph1u"]
@@ -57,9 +57,6 @@ clearcoat_enabled = true
 clearcoat_roughness = 1.0
 refraction_enabled = true
 refraction_scale = 0.07
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_rpqlu"]
-radius = 0.09203473
 
 [sub_resource type="Gradient" id="Gradient_uph1u"]
 offsets = PackedFloat32Array(0.29192546, 0.66770184)
@@ -370,10 +367,6 @@ mesh = SubResource("ArrayMesh_7aodh")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_7q035")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.044757314, 0)
-shape = SubResource("SphereShape3D_rpqlu")
-
 [node name="Snow" type="GPUParticles3D" parent="AnimatableBody3D"]
 transform = Transform3D(1.711687e-10, -5.961888e-10, -0.01, 0.009999909, 4.2566688e-05, 1.6863667e-10, 4.2566688e-05, -0.009999909, 5.969121e-10, -2.0624622e-09, 0.044841234, -0.047219977)
 amount = 100
@@ -402,7 +395,7 @@ mesh = SubResource("ArrayMesh_hnbrx")
 skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.27160853, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.11466876, 0)
 light_color = Color(0.5842108, 0.41788873, 0, 1)
 light_energy = 0.3
 light_size = 0.015

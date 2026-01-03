@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://3aixdblns36c"]
+[gd_scene load_steps=5 format=3 uid="uid://3aixdblns36c"]
 
 [ext_resource type="PackedScene" uid="uid://c4knrjrmwj1ir" path="res://assets/meshes/SantaShop/Windows/WindowTall-1.glb" id="1_gs6q6"]
 [ext_resource type="Material" uid="uid://dp518jf7gfjkn" path="res://assets/materials/Glass-Orange-1.tres" id="2_73wwd"]
+[ext_resource type="Material" uid="uid://dvcsb58dlj0yy" path="res://assets/materials/BrickColor-2.tres" id="2_n3mtg"]
 [ext_resource type="Texture2D" uid="uid://1ig47fgqlqds" path="res://assets/textures/misc/Snow-Square-1.png" id="3_n3mtg"]
 
 [node name="WindowTall-1" instance=ExtResource("1_gs6q6")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="WindowTall-1" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_n3mtg")
 surface_material_override/2 = ExtResource("2_73wwd")
 
 [node name="Decal" type="Decal" parent="WindowTall-1/StaticBody3D" index="1"]

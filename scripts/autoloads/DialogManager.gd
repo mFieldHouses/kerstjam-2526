@@ -109,7 +109,7 @@ func initiate_dialog_with(dialog_file_name : String, with : Node3D, conversor_na
 	
 	PersistentUI.dialog_line("", conversor_name, thumbnail) #hide again
 	PlayerState.toggle_sleep(false)
-	PlayerState.player_instance.tween_camera_fov(PlayerState.player_instance.DEFAULT_FOV, 0.5)
+	PlayerState.player_instance.tween_camera_fov(ConfigurableValues.fov, 0.5)
 	PlayerUIState.set_ui_visibility(true)
 	
 	var _transform_out_tween : Tween = create_tween()
