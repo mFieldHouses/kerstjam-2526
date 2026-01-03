@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0p0pqic3u8ab"]
+[gd_scene load_steps=4 format=3 uid="uid://dpcaxyaw48fao"]
 
 [ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="1_466hm"]
 [ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="2_h683m"]
@@ -25,13 +25,13 @@ transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25
 transform = Transform3D(-0.86602545, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.86602545, -63.202366, -0.59363955, -27.809216)
 
 [node name="Snowman3" parent="." instance=ExtResource("1_466hm")]
-transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -74.57847, 2.5156732, -34.74176)
+transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -76.93378, 5.2852244, -34.74176)
 
 [node name="Snowman7" parent="." instance=ExtResource("1_466hm")]
-transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -72.6705, 2.5156732, -35.201054)
+transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -73.33702, 5.2852244, -35.201054)
 
 [node name="Snowman8" parent="." instance=ExtResource("1_466hm")]
-transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -63.57848, 2.5156732, -35.6394)
+transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -61.93048, 5.2852244, -34.017147)
 
 [node name="Snowman10" parent="." instance=ExtResource("1_466hm")]
 transform = Transform3D(-0.9701181, 0, 0.24263318, 0, 1, 0, -0.24263318, 0, -0.9701181, -69.82382, 1.5202701, -44.28651)
