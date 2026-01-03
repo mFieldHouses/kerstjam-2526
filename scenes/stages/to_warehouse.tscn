@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=47 format=4 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="14_4co2b"]
 [ext_resource type="Script" uid="uid://br67v0qeo270u" path="res://scripts/musicplayer.gd" id="15_4co2b"]
 [ext_resource type="AudioStream" uid="uid://dibmmriy23nuc" path="res://assets/sound/soundtrack/snowmen_intro.wav" id="15_isx6m"]
+[ext_resource type="PackedScene" uid="uid://dlets1p6u4oq7" path="res://assets/meshes/Environment/Walls/brick_wall_1.tscn" id="18_1g8sq"]
 [ext_resource type="PackedScene" uid="uid://cu7hu48g5k7q1" path="res://assets/meshes/Environment/Rocks/Rock-2.tscn" id="18_k2ha0"]
 [ext_resource type="PackedScene" uid="uid://dhbkkvbc7ybvl" path="res://assets/meshes/Environment/Rocks/Rock-1.tscn" id="19_5tvbr"]
 [ext_resource type="PackedScene" uid="uid://bouff7sjsg00g" path="res://assets/meshes/Environment/Rocks/Cliff-1.tscn" id="20_85pda"]
@@ -22,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://qxybtmsai5wu" path="res://assets/meshes/Environment/SnowPatches/snow_1.tscn" id="22_p1by1"]
 [ext_resource type="PackedScene" uid="uid://bl0c2j771w8fa" path="res://assets/meshes/Environment/IcePatches/IceArc-1.tscn" id="23_5tvbr"]
 [ext_resource type="PackedScene" uid="uid://bo214ivrou8cb" path="res://assets/meshes/Environment/Barricades/barricade_2.tscn" id="24_85pda"]
+[ext_resource type="PackedScene" uid="uid://c1ooow55l40e0" path="res://assets/meshes/Environment/SnowPatches/snow_pile_1.tscn" id="24_pntd1"]
 [ext_resource type="PackedScene" uid="uid://mylpm1jatb3h" path="res://assets/meshes/Environment/Ramps/ramp_2.tscn" id="25_n8mv0"]
 [ext_resource type="PackedScene" uid="uid://cgu8uvxmypxlr" path="res://assets/meshes/Environment/Ramps/ramp_1.tscn" id="26_p1by1"]
 
@@ -239,6 +241,9 @@ transform = Transform3D(-0.30376336, 0, -0.5746545, 0, 0.65, 0, 0.5746545, 0, -0
 
 [node name="to_warehouse" parent="." instance=ExtResource("6_dqy33")]
 
+[node name="hek " parent="to_warehouse" index="2"]
+visible = false
+
 [node name="ramp2 " parent="to_warehouse" index="3"]
 visible = false
 
@@ -335,6 +340,9 @@ transform = Transform3D(0.9329033, 0, -0.36012706, 0, 1, 0, 0.36012706, 0, 0.932
 shape = SubResource("BoxShape3D_isx6m")
 
 [node name="Walls and pillars" type="Node3D" parent="."]
+
+[node name="Brick-Wall-1" parent="Walls and pillars" instance=ExtResource("18_1g8sq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.41532, 0, -16.347786)
 
 [node name="World" type="Node3D" parent="."]
 
@@ -628,6 +636,27 @@ transform = Transform3D(0.48685446, 0, 1.4067674, 0, 1, 0, -1.049653, 0, 0.65249
 [node name="Snow-7" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
 transform = Transform3D(0.48685446, 0, 1.4067674, 0, 1, 0, -1.049653, 0, 0.65249264, -50.77878, 5.3939147, -29.269554)
 
+[node name="SnowPile-1" parent="World/SnowPatches" instance=ExtResource("24_pntd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.907322, -0.7504997, -19.0831)
+
+[node name="SnowPile-2" parent="World/SnowPatches" instance=ExtResource("24_pntd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.50547, -0.102295876, -17.17017)
+
+[node name="SnowPile-3" parent="World/SnowPatches" instance=ExtResource("24_pntd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.396317, -0.102295876, -8.452881)
+
+[node name="SnowPile-4" parent="World/SnowPatches" instance=ExtResource("24_pntd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.85019, -0.102295876, -7.649899)
+
+[node name="SnowPile-5" parent="World/SnowPatches" instance=ExtResource("24_pntd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.35803, -0.102295876, -6.8100586)
+
+[node name="SnowPile-6" parent="World/SnowPatches" instance=ExtResource("24_pntd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.147964, -0.102295876, -8.945412)
+
+[node name="SnowPile-7" parent="World/SnowPatches" instance=ExtResource("24_pntd1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.85861, 3.5341067, -6.219917)
+
 [node name="IceArcs" type="Node3D" parent="World"]
 
 [node name="IceArc-1" parent="World/IceArcs" instance=ExtResource("23_5tvbr")]
@@ -655,7 +684,7 @@ transform = Transform3D(0.6942725, -0.08935723, -0.00093308435, 0.08935716, 0.69
 [node name="Ramp-2" parent="World/Ramps" instance=ExtResource("25_n8mv0")]
 transform = Transform3D(0.9914198, 0, -0.13071653, 0, 1, 0, 0.13071653, 0, 0.9914198, -53.6967, -0.9914563, -25.220396)
 
-[node name="Ramp-1" parent="." instance=ExtResource("26_p1by1")]
+[node name="Ramp-1" parent="World/Ramps" instance=ExtResource("26_p1by1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.161186, -1.4301956, -10.008049)
 
 [editable path="to_warehouse"]
