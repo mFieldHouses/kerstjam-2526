@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=46 format=4 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
@@ -11,7 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bdoi0xejcvx57" path="res://assets/meshes/Misc/Crates-Palets/Crate-1.tscn" id="8_04tpn"]
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="9_fwfj0"]
 [ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="9_xinbn"]
-[ext_resource type="PackedScene" uid="uid://c0p0pqic3u8ab" path="res://scenes/stages/to_warehouse_enemies.tscn" id="11_k2ha0"]
+[ext_resource type="PackedScene" uid="uid://dpcaxyaw48fao" path="res://scenes/stages/to_warehouse_enemies.tscn" id="11_k2ha0"]
+[ext_resource type="PackedScene" uid="uid://clhqabefp2kqq" path="res://assets/meshes/Environment/Gates/gate_1.tscn" id="11_ocxps"]
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="14_4co2b"]
 [ext_resource type="Script" uid="uid://br67v0qeo270u" path="res://scripts/musicplayer.gd" id="15_4co2b"]
 [ext_resource type="AudioStream" uid="uid://dibmmriy23nuc" path="res://assets/sound/soundtrack/snowmen_intro.wav" id="15_isx6m"]
@@ -23,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://qxybtmsai5wu" path="res://assets/meshes/Environment/SnowPatches/snow_1.tscn" id="22_p1by1"]
 [ext_resource type="PackedScene" uid="uid://bl0c2j771w8fa" path="res://assets/meshes/Environment/IcePatches/IceArc-1.tscn" id="23_5tvbr"]
 [ext_resource type="PackedScene" uid="uid://bo214ivrou8cb" path="res://assets/meshes/Environment/Barricades/barricade_2.tscn" id="24_85pda"]
-[ext_resource type="PackedScene" uid="uid://c1ooow55l40e0" path="res://assets/meshes/Environment/SnowPatches/snow_pile_1.tscn" id="24_pntd1"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Environment/SnowPatches/snow_pile_1.tscn" id="24_pntd1"]
 [ext_resource type="PackedScene" uid="uid://mylpm1jatb3h" path="res://assets/meshes/Environment/Ramps/ramp_2.tscn" id="25_n8mv0"]
 [ext_resource type="PackedScene" uid="uid://cgu8uvxmypxlr" path="res://assets/meshes/Environment/Ramps/ramp_1.tscn" id="26_p1by1"]
 
@@ -259,9 +260,15 @@ visible = false
 [node name="playercover1 " parent="to_warehouse" index="7"]
 visible = false
 
+[node name="walls1 " parent="to_warehouse" index="8"]
+visible = false
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="to_warehouse"]
 transform = Transform3D(4.08, 0, 0, 0, 4.08, 0, 0, 0, 4.08, 0, 0, 0)
 navigation_mesh = SubResource("NavigationMesh_jbe65")
+
+[node name="Gate-1" parent="to_warehouse" instance=ExtResource("11_ocxps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.85887, -1.2149334, -36.131516)
 
 [node name="Enemies" parent="." instance=ExtResource("11_k2ha0")]
 
