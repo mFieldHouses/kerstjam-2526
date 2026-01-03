@@ -3,11 +3,14 @@ extends AudioStreamPlayer
 @export var intro_stream : AudioStream
 @export var loop_stream : AudioStream
 
+@export var auto : bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	stream = intro_stream
 	
-	await get_child(0).trigger
+	if !auto:
+		await get_child(0).trigger
 	
 	play()
 	

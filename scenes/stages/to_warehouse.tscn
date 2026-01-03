@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=43 format=4 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
@@ -13,6 +13,7 @@
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="9_fwfj0"]
 [ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="9_xinbn"]
 [ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="10_iq7cf"]
+[ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="12_85pda"]
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="14_4co2b"]
 [ext_resource type="Script" uid="uid://br67v0qeo270u" path="res://scripts/musicplayer.gd" id="15_4co2b"]
 [ext_resource type="AudioStream" uid="uid://dibmmriy23nuc" path="res://assets/sound/soundtrack/snowmen_intro.wav" id="15_isx6m"]
@@ -131,6 +132,7 @@ script = ExtResource("1_g5j8t")
 
 [node name="floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.7196975, 0)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25170898, -43.194565)
@@ -256,7 +258,10 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -50.
 transform = Transform3D(-0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, -0.9659258, -44.455322, -0.8402605, -26.6036)
 
 [node name="Snowman2" parent="Enemies" instance=ExtResource("8_jbe65")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.202366, 0.019803366, -18.809216)
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, -58.202366, -0.59363955, -18.809216)
+
+[node name="Snowman9" parent="Enemies" instance=ExtResource("8_jbe65")]
+transform = Transform3D(-0.86602545, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.86602545, -63.202366, -0.59363955, -27.809216)
 
 [node name="Snowman3" parent="Enemies" instance=ExtResource("8_jbe65")]
 transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -74.57847, 2.5156732, -34.74176)
@@ -267,8 +272,23 @@ transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.
 [node name="Snowman8" parent="Enemies" instance=ExtResource("8_jbe65")]
 transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -63.57848, 2.5156732, -35.6394)
 
+[node name="Snowman10" parent="Enemies" instance=ExtResource("8_jbe65")]
+transform = Transform3D(-0.9701181, 0, 0.24263318, 0, 1, 0, -0.24263318, 0, -0.9701181, -69.82382, 1.5202701, -44.28651)
+
+[node name="Snowman11" parent="Enemies" instance=ExtResource("8_jbe65")]
+transform = Transform3D(-0.99131453, 0, -0.13151237, 0, 1, 0, 0.13151237, 0, -0.99131453, -68.011475, 1.5202701, -44.28651)
+
+[node name="present_mimic" parent="Enemies" instance=ExtResource("12_85pda")]
+transform = Transform3D(-0.78695655, 0, -0.6170085, 0, 1, 0, 0.6170085, 0, -0.78695655, -71.08071, -0.40548524, -22.808355)
+
+[node name="present_mimic2" parent="Enemies" instance=ExtResource("12_85pda")]
+transform = Transform3D(-0.75374687, 0, -0.6571649, 0, 1, 0, 0.6571649, 0, -0.75374687, -69.08071, -0.40548524, -24.999985)
+
 [node name="jumping_mimic" parent="Enemies" instance=ExtResource("10_iq7cf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.483739, -2.431168e-07, 1.7818755)
+transform = Transform3D(-0.99656695, 0, 0.0827909, 0, 1, 0, -0.0827909, 0, -0.99656695, -72.843925, 3.7892687, -49.73239)
+
+[node name="jumping_mimic2" parent="Enemies" instance=ExtResource("10_iq7cf")]
+transform = Transform3D(-0.9055984, 0, 0.42413625, 0, 1, 0, -0.42413625, 0, -0.9055984, -62.973816, 3.7892687, -48.272617)
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2otec")

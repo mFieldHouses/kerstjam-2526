@@ -13,15 +13,15 @@ var _health_left : float = 200.0:
 		
 var _destruction_level : int = 0:
 	set(x):
-		_destruction_level = x
-		
-		if _destruction_level > 0 and _destruction_level < 2:
+		if _destruction_level > 0 and _destruction_level < 2 and _destruction_level != x:
 			var _particles = get_node("destruct_" + str(_destruction_level))
 			
 			for _child : GPUParticles3D in _particles.get_children():
 				_child.emitting = true
 				ExplosionManager.summon_explosion(_child.global_position, _child.get_parent())
 
+		_destruction_level = x
+		
 func _ready() -> void:
 	_lasers = preload("res://scenes/characters/nutcracker_lasers.tscn").instantiate()
 	_lasers.player_entered.connect(PlayerState.player_instance.get_hit.bind(5))

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c1dnotdac1qr3"]
+[gd_scene load_steps=15 format=3 uid="uid://c1dnotdac1qr3"]
 
 [ext_resource type="Script" uid="uid://b2iw6rsa4l7j7" path="res://scripts/stages/confrontation.gd" id="1_q58n8"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_txjfn"]
@@ -37,8 +37,45 @@ lightmap_size_hint = Vector2i(24, 18)
 material = SubResource("StandardMaterial3D_q58n8")
 size = Vector3(2, 0.25, 2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_06wq0"]
+size = Vector3(66.15405, 1, 56.957275)
+
 [node name="confrontation" type="Node3D"]
 script = ExtResource("1_q58n8")
+
+[node name="gui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="gui"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.287
+anchor_right = 0.71300006
+offset_left = 0.37600708
+offset_right = -0.37609863
+offset_bottom = 24.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="gui/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="health_bar" type="ColorRect" parent="gui/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
 
 [node name="player" parent="." instance=ExtResource("1_txjfn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.414629, -0.19800603)
@@ -83,36 +120,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012, 4, -15.737)
 [node name="philip_head" type="Marker3D" parent="Nutcracker_Eindbaas"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.514571e-08, 5.207223, 0.5830231)
 
-[node name="gui" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="fall_area" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.855711, 0)
+collision_layer = 0
+collision_mask = 8
 
-[node name="Panel" type="Panel" parent="gui"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.287
-anchor_right = 0.71300006
-offset_left = 0.37600708
-offset_right = -0.37609863
-offset_bottom = 24.0
-grow_horizontal = 2
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fall_area"]
+shape = SubResource("BoxShape3D_06wq0")
 
-[node name="MarginContainer" type="MarginContainer" parent="gui/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 7
-theme_override_constants/margin_top = 7
-theme_override_constants/margin_right = 7
-theme_override_constants/margin_bottom = 7
-
-[node name="health_bar" type="ColorRect" parent="gui/Panel/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
+[connection signal="body_entered" from="fall_area" to="." method="_on_fall_area_body_entered"]

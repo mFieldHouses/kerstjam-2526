@@ -6,6 +6,7 @@ var _wave_idx : int = 0
 func _ready() -> void:
 	
 	SaveFileManager._unlocked_stages.confrontation = true
+	DialogManager.dialog_queue.connect(dialog_queue)
 	
 	for x in 10:
 		for y in 10:
@@ -56,6 +57,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$gui/Panel/MarginContainer/health_bar.size.x = ($gui/Panel/MarginContainer.size.x - 14) * ($Nutcracker_Eindbaas._health_left / 200.0)
 
+
 func _floor_fall(count : int) -> void:
 	for _idx in count:
 		if get_closest_floor_panel_distance() > 3.0 and $player.is_on_floor():
@@ -73,6 +75,7 @@ func _floor_fall(count : int) -> void:
 		_panel.queue_free()
 	
 	return
+
 
 func _fall_single_panel(panel : Node3D, delay : float) -> void:
 	
@@ -114,3 +117,12 @@ func get_closest_floor_panel_distance() -> float:
 			_closest_distance = _dist
 	
 	return _closest_distance
+
+
+func dialog_queue(did : String, qid : String) -> void:
+	if did == "nutcracker_ascend" and qid == "end":
+		SceneManager.launch_menu("credits")
+
+
+func _on_fall_area_body_entered(body: Node3D) -> void:
+	PlayerState.player_instance._die()

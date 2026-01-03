@@ -35,10 +35,12 @@ var ammo : Dictionary[AmmoItemDescription, int] = {
 @onready var used_ammo : AmmoItemDescription = load("res://assets/resources/items/ammo/snow.tres")
 
 func _save_health() -> void:
-	health = player_instance._health
+	if player_instance:
+		health = player_instance._health
 
 func _save_ammo() -> void:
-	ammo = player_instance._ammo
+	if player_instance:
+		ammo = player_instance._ammo
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS

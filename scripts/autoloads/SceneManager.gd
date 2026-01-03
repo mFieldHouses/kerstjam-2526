@@ -6,6 +6,9 @@ extends Node
 
 func launch_stage(stage_id : String) -> void: ##Launches the stage with name [param level_id] in [param res://scenes/stages/], replacing the whole scene tree.
 	get_tree().paused = false
+	
+	DisplayManager.set_mouse_captured(true)
+	
 	#_last_loaded_stage_id = stage_id
 	PersistentUI.fade_black_wait(0.5, true)
 	PlayerState._save_health()
@@ -24,6 +27,9 @@ func restart_stage() -> void:
 	PersistentUI.continue_fade.emit()
 	
 func launch_menu(menu_id : String) -> void: ##Launches the menu with name [param menu_id] in [param res://scenes/menus/], replacing the whole scene tree.
+	
+	DisplayManager.set_mouse_captured(false)
+	
 	get_tree().paused = false
 	get_tree().change_scene_to_file(DefaultPaths.menu_scenes_path + menu_id + ".tscn")
 	
