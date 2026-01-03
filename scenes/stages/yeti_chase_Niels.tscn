@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://duwpgixmsa24f"]
+[gd_scene load_steps=41 format=4 uid="uid://duwpgixmsa24f"]
 
 [ext_resource type="Script" uid="uid://domd8jiottmf8" path="res://scripts/yeti_chase_stage.gd" id="1_6mfev"]
 [ext_resource type="PackedScene" uid="uid://ba8ws6pahtdpd" path="res://assets/meshes/Debug/yeti_hollow.gltf" id="2_wm0a4"]
@@ -17,7 +17,10 @@
 [ext_resource type="Material" uid="uid://d3tgm6vvwk00q" path="res://assets/materials/SnowOnStuff-1.tres" id="18_w7oa1"]
 [ext_resource type="PackedScene" uid="uid://bmo2v6vkmad7c" path="res://assets/meshes/Weapons/Ammo/bullet_globe_1.tscn" id="18_wtvri"]
 [ext_resource type="AudioStream" uid="uid://dpuklwvu8d7bs" path="res://assets/sound/soundtrack/yeti_cave.wav" id="19_j5aua"]
+[ext_resource type="Script" uid="uid://m0xiiw5uj6yn" path="res://scripts/yeti_cave_music.gd" id="19_w7oa1"]
 [ext_resource type="Script" uid="uid://ubl2tl60pb8m" path="res://scripts/environment_audio.gd" id="20_805qa"]
+[ext_resource type="AudioStream" uid="uid://dymur32cmc7x1" path="res://assets/sound/soundtrack/chase1.wav" id="20_vftwx"]
+[ext_resource type="AudioStream" uid="uid://ce3r134p83ck7" path="res://assets/sound/soundtrack/chase2.wav" id="21_tyfdp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w7oa1"]
 sky_top_color = Color(0.1890673, 0.7089767, 0.8090219, 1)
@@ -761,5 +764,12 @@ unique_name_in_owner = true
 stream = ExtResource("19_j5aua")
 autoplay = true
 script = ExtResource("20_805qa")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("20_vftwx")
+script = ExtResource("19_w7oa1")
+chase_1_track = ExtResource("20_vftwx")
+chase_2_track = ExtResource("21_tyfdp")
 
 [editable path="CornerSnow-12"]

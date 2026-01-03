@@ -26,14 +26,15 @@ var _current_behavior_state : BehaviorState = BehaviorState.SLEEP:
 		
 		match x:
 			BehaviorState.PATROL:
-				%yeti_state.text = "Patrol"
+				%music.desired_state = 0
 			BehaviorState.CHASE:
-				%yeti_state.text = "Chase"
+				%music.desired_state = 2
 			BehaviorState.FOLLOW_TRAIL:
 				if _flags[0] == true and _flags[1] == false and _flags[2] == false:
 					DialogManager.initiate_remote_dialog("discover_yeti2", "Henkie", load("res://icon.svg"))
 					_flags[2] = true
-				%yeti_state.text = "Follow Trail"
+				
+				%music.desired_state = 1
 		
 		_current_behavior_state = x
 

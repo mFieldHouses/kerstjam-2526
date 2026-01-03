@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=53 format=4 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
@@ -12,10 +12,10 @@
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="9_fwfj0"]
 [ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="9_xinbn"]
 [ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="11_5clna"]
+[ext_resource type="PackedScene" uid="uid://c0p0pqic3u8ab" path="res://scenes/stages/to_warehouse_enemies.tscn" id="11_k2ha0"]
+[ext_resource type="PackedScene" uid="uid://clhqabefp2kqq" path="res://assets/meshes/Environment/Gates/gate_1.tscn" id="11_ocxps"]
 [ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="12_8s20x"]
 [ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="13_881o1"]
-[ext_resource type="PackedScene" uid="uid://dpcaxyaw48fao" path="res://scenes/stages/to_warehouse_enemies.tscn" id="11_k2ha0"]
-[ext_resource type="PackedScene" uid="uid://clhqabefp2kqq" path="res://assets/meshes/Environment/Gates/gate_1.tscn" id="11_ocxps"]
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="14_4co2b"]
 [ext_resource type="Script" uid="uid://br67v0qeo270u" path="res://scripts/musicplayer.gd" id="15_4co2b"]
 [ext_resource type="AudioStream" uid="uid://dibmmriy23nuc" path="res://assets/sound/soundtrack/snowmen_intro.wav" id="15_isx6m"]
@@ -264,44 +264,23 @@ visible = false
 [node name="cover2 " parent="to_warehouse" index="6"]
 visible = false
 
-[node name="playercover1 " parent="to_warehouse" index="7"]
-visible = false
-
-[node name="walls1 " parent="to_warehouse" index="8"]
+[node name="walls1 " parent="to_warehouse" index="7"]
 visible = false
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="to_warehouse"]
 transform = Transform3D(4.08, 0, 0, 0, 4.08, 0, 0, 0, 4.08, 0, 0, 0)
 navigation_mesh = SubResource("NavigationMesh_jbe65")
 
+[node name="Gate-1" parent="to_warehouse" instance=ExtResource("11_ocxps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.85887, -1.2149334, -36.131516)
+
 [node name="Enemies" type="Node3D" parent="."]
-
-[node name="Snowman" parent="Enemies" instance=ExtResource("11_5clna")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -50.93729, -0.84510565, -15.477971)
-
-[node name="Snowman4" parent="Enemies" instance=ExtResource("11_5clna")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -50.93729, -0.84510565, -17.504509)
-
-[node name="Snowman5" parent="Enemies" instance=ExtResource("11_5clna")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -50.93729, -0.84510565, -19.827152)
-
-[node name="Snowman6" parent="Enemies" instance=ExtResource("11_5clna")]
-transform = Transform3D(-0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, -0.9659258, -44.455322, -0.8402605, -26.6036)
-
-[node name="Snowman2" parent="Enemies" instance=ExtResource("11_5clna")]
-transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, -58.202366, -0.59363955, -18.809216)
 
 [node name="Snowman9" parent="Enemies" instance=ExtResource("11_5clna")]
 transform = Transform3D(-0.86602545, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.86602545, -63.202366, -0.59363955, -27.809216)
 
-[node name="Snowman3" parent="Enemies" instance=ExtResource("11_5clna")]
-transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -74.57847, 2.5156732, -34.74176)
-
-[node name="Snowman7" parent="Enemies" instance=ExtResource("11_5clna")]
-transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -72.6705, 2.5156732, -35.201054)
-
 [node name="Snowman8" parent="Enemies" instance=ExtResource("11_5clna")]
-transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -63.57848, 2.5156732, -35.6394)
+transform = Transform3D(-0.97222716, 0, -0.23403922, 0, 1, 0, 0.23403922, 0, -0.97222716, -59.586826, 5.091232, -34.39037)
 
 [node name="Snowman10" parent="Enemies" instance=ExtResource("11_5clna")]
 transform = Transform3D(-0.9701181, 0, 0.24263318, 0, 1, 0, -0.24263318, 0, -0.9701181, -69.82382, 1.5202701, -44.28651)
@@ -320,10 +299,8 @@ transform = Transform3D(-0.99656695, 0, 0.0827909, 0, 1, 0, -0.0827909, 0, -0.99
 
 [node name="jumping_mimic2" parent="Enemies" instance=ExtResource("13_881o1")]
 transform = Transform3D(-0.9055984, 0, 0.42413625, 0, 1, 0, -0.42413625, 0, -0.9055984, -62.973816, 3.7892687, -48.272617)
-[node name="Gate-1" parent="to_warehouse" instance=ExtResource("11_ocxps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.85887, -1.2149334, -36.131516)
 
-[node name="Enemies" parent="." instance=ExtResource("11_k2ha0")]
+[node name="Enemies2" parent="." instance=ExtResource("11_k2ha0")]
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2otec")
@@ -824,6 +801,7 @@ count = 5
 
 [node name="Ammo-Bullet-Globe-15" parent="." instance=ExtResource("25_p1by1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -43.14948, -0.1686846, -25.655817)
+held_item = ExtResource("27_pntd1")
 is_health_pack = true
 
 [editable path="to_warehouse"]

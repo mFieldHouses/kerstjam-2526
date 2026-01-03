@@ -3,6 +3,8 @@ extends Node3D
 var _first_round : bool = true
 var _wave_idx : int = 0
 
+var _floor_panels_left : Array[Node3D] = []
+
 func _ready() -> void:
 	
 	SaveFileManager._unlocked_stages.confrontation = true
@@ -12,6 +14,7 @@ func _ready() -> void:
 		for y in 10:
 			var _new_colshape = $floor_panels/floor.duplicate()
 			$floor_panels.add_child(_new_colshape)
+			_floor_panels_left.append(_new_colshape)
 			_new_colshape.position = Vector3(x * 2 - 9, 0.0, y * 2 - 9)
 	
 	await get_tree().create_timer(1.0).timeout
@@ -63,7 +66,7 @@ func _floor_fall(count : int) -> void:
 			print("on island")
 			return
 		
-		var _panel = $floor_panels.get_children().pick_random()
+		var _panel = _floor_panels_left.pick_random()
 		var _tween : Tween = create_tween()
 		_tween.set_trans(Tween.TRANS_QUINT)
 		_tween.set_ease(Tween.EASE_IN)
@@ -78,7 +81,7 @@ func _floor_fall(count : int) -> void:
 
 func _fall_single_panel(panel : Node3D, delay : float) -> void:
 	
-	panel.reparent(self)
+	_floor_panels_left.erase(panel)
 	
 	await get_tree().create_timer(delay).timeout
 	
@@ -87,9 +90,7 @@ func _fall_single_panel(panel : Node3D, delay : float) -> void:
 	_tween.set_ease(Tween.EASE_IN)
 	_tween.tween_property(panel, "position:y", -10, 0.75)
 	await _tween.finished
-	
-	if !panel:
-		return
+
 	panel.visible = false
 	panel.reparent(self)
 	panel.queue_free()
