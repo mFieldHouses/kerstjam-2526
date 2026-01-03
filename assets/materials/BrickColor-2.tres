@@ -18,7 +18,8 @@ as_normal_map = true
 
 [resource]
 albedo_color = Color(0.5084457, 0.09783863, 0.10847891, 1)
-metallic_specular = 1.0
+metallic_specular = 0.41
+roughness = 0.55
 normal_enabled = true
 normal_texture = SubResource("NoiseTexture2D_44h8i")
 heightmap_enabled = true
