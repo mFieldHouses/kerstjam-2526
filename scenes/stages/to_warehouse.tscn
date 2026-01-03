@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://dj36hldakta6k"]
+[gd_scene load_steps=42 format=4 uid="uid://dj36hldakta6k"]
 
 [ext_resource type="Script" uid="uid://bh1hxv7xhu0xm" path="res://scripts/to_warehouse.gd" id="1_g5j8t"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_ft2jl"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bouff7sjsg00g" path="res://assets/meshes/Environment/Rocks/Cliff-1.tscn" id="20_85pda"]
 [ext_resource type="PackedScene" path="res://scenes/elements/PineTree-1.tscn" id="21_n8mv0"]
 [ext_resource type="PackedScene" uid="uid://qxybtmsai5wu" path="res://assets/meshes/Environment/SnowPatches/snow_1.tscn" id="22_p1by1"]
+[ext_resource type="PackedScene" uid="uid://bl0c2j771w8fa" path="res://assets/meshes/Environment/IcePatches/IceArc-1.tscn" id="23_5tvbr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
 size = Vector3(100, 0.497, 100)
@@ -402,6 +403,138 @@ transform = Transform3D(0.11439868, 0.011345033, -0.9933701, -0.25527027, 0.9666
 [node name="Cliff-9" parent="World/Cliffs" instance=ExtResource("20_85pda")]
 transform = Transform3D(-0.41087773, -0.1256457, -0.9029909, -0.25527027, 0.96669555, -0.018357072, 0.87522364, 0.22296412, -0.42926735, -18.848282, -2.9668586, -1.7704847)
 
+[node name="Cliff-12" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.8757335, -0.30227175, -0.37646037, -0.3099341, 0.949844, -0.041681312, 0.3701777, 0.08017619, -0.9254947, -21.156809, -3.4679964, -2.8558674)
+
+[node name="Cliff-13" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.7087039, -0.36212808, -0.6054766, -0.38202974, 0.9184847, -0.1021726, 0.5931205, 0.15889992, -0.7892775, -21.911036, -3.4679964, -6.789914)
+
+[node name="Cliff-14" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.7402741, -0.1768133, -0.64863765, -0.24286704, 0.9699756, 0.012770743, 0.62690467, 0.16698655, -0.7609902, -24.950203, -3.8677073, -9.78688)
+
+[node name="Cliff-15" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.7402741, -0.1768133, -0.64863765, -0.24286704, 0.9699756, 0.012770743, 0.62690467, 0.16698655, -0.7609902, -26.63432, -3.8677073, -11.881528)
+
+[node name="Cliff-16" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.06905693, -0.0041563064, -0.99760413, -0.24286707, 0.9699757, 0.01277074, 0.9675982, 0.24316695, -0.06799334, -31.236685, -3.4972959, -14.346975)
+
+[node name="Cliff-17" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.06905693, -0.0041563064, -0.99760413, -0.24286707, 0.9699757, 0.01277074, 0.9675982, 0.24316695, -0.06799334, -35.39427, -2.921052, -15.10968)
+
+[node name="Cliff-18" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.95217603, -0.23585273, -0.19425178, -0.24286705, 0.9699757, 0.01277074, 0.18540773, 0.05933741, -0.9808687, -37.22863, -2.921052, -17.642153)
+
+[node name="Cliff-19" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.95217603, -0.23585273, -0.19425178, -0.24286705, 0.9699757, 0.01277074, 0.18540773, 0.05933741, -0.9808687, -38.15532, -2.921052, -21.578789)
+
+[node name="Cliff-20" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.95217603, -0.23585273, -0.19425178, -0.24286705, 0.9699757, 0.01277074, 0.18540773, 0.05933741, -0.9808687, -39.638943, -2.921052, -25.992975)
+
+[node name="Cliff-21" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.3688506, -0.080162466, -0.9260254, -0.24286704, 0.9699757, 0.012770747, 0.8971981, 0.22961146, -0.3772454, -41.55734, -0.51827145, -28.807486)
+
+[node name="Cliff-26" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.15837316, -0.026659098, -0.9870194, -0.24286704, 0.9699757, 0.012770746, 0.95704406, 0.24173693, -0.16009319, -45.518623, 1.4868217, -3.754839)
+
+[node name="Cliff-27" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.697823, -0.18383868, 0.6922764, 0.112822965, 0.92622477, 0.35969234, -0.70732856, 0.32910642, -0.6255996, -41.227196, 1.4868217, -4.570981)
+
+[node name="Cliff-28" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.697823, -0.18383868, 0.6922764, 0.112822965, 0.92622477, 0.35969234, -0.70732856, 0.32910642, -0.6255996, -38.135693, 1.4868217, -7.9347954)
+
+[node name="Cliff-29" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.10526813, -0.37110883, 0.92260337, 0.11282297, 0.9262249, 0.3596924, -0.98802286, 0.06622683, 0.1393719, -35.93633, 2.2544165, -10.17188)
+
+[node name="Cliff-30" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.10526813, -0.37110883, 0.92260337, 0.11282297, 0.9262249, 0.3596924, -0.98802286, 0.06622683, 0.1393719, -33.218124, 2.2544165, -9.398705)
+
+[node name="Cliff-31" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.50188386, -0.36555228, 0.78389025, 0.112822995, 0.9262249, 0.35969242, -0.85754484, -0.092082985, 0.5061004, -30.407814, 1.6221671, -8.021312)
+
+[node name="Cliff-34" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.752826, -0.54832834, 1.1758355, 0.16923454, 1.3893372, 0.5395387, -1.2863176, -0.13812451, 0.7591501, -30.407814, 4.474544, -4.62002)
+
+[node name="Cliff-55" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.752826, -0.54832834, 1.1758355, 0.16923454, 1.3893372, 0.5395387, -1.2863176, -0.13812451, 0.7591501, -54.679207, 3.2880783, -4.62002)
+
+[node name="Cliff-32" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.84926045, -0.27780515, 0.44897717, 0.11282301, 0.926225, 0.35969248, -0.5157783, -0.25481775, 0.8179495, -27.580912, -1.553082, -5.2504697)
+
+[node name="Cliff-33" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.78537107, -0.304881, 0.5387387, 0.112823024, 0.926225, 0.35969245, -0.60865664, -0.22171003, 0.76182824, -25.609156, 1.1942649, -1.8344564)
+
+[node name="Cliff-35" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.6066983, 0.041717198, 0.7938366, -0.13633017, 0.9892873, 0.052203633, -0.7831544, -0.13989572, 0.6058867, -23.082705, 2.1713834, 1.1340165)
+
+[node name="Cliff-36" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.3868987, 0.0046585165, 0.92211044, -0.13633017, 0.9892873, 0.05220362, -0.9119887, -0.14590901, 0.3833896, -19.334402, 2.1713834, 3.5416665)
+
+[node name="Cliff-37" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.087764174, 0.064549185, -0.99404794, -0.13633017, 0.98928726, 0.05220362, 0.9867681, 0.13093719, 0.09562346, -14.646882, 2.1713834, 4.6036086)
+
+[node name="Cliff-38" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.087764174, 0.064549185, -0.99404794, -0.13633017, 0.98928726, 0.05220362, 0.9867681, 0.13093719, 0.09562346, -10.413401, 2.1713834, 4.6036086)
+
+[node name="Cliff-39" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.0613316, -0.04416596, 0.99714, -0.13633016, 0.98928726, 0.052203614, -0.9887632, -0.13914207, 0.05465395, -7.348534, 2.1713834, 4.6036086)
+
+[node name="Cliff-40" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(0.0613316, -0.04416596, 0.99714, -0.13633016, 0.98928726, 0.052203614, -0.9887632, -0.13914207, 0.05465395, -4.9425974, 2.1713834, 4.6036086)
+
+[node name="Cliff-41" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.32823735, -0.09482661, 0.9398238, -0.13633013, 0.9892872, 0.05220361, -0.93470556, -0.11099125, -0.33764824, 5.3089094, 4.629993, 7.726089)
+
+[node name="Cliff-42" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.42213437, -0.07179576, 0.25816262, -0.068165064, 0.49464354, 0.026101736, -0.25914496, -0.013158461, -0.42740002, 5.3089094, 2.1484108, 2.6771042)
+
+[node name="Cliff-43" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.38668776, -0.036674056, -0.31484532, -0.06816506, 0.4946435, 0.026101733, 0.3095579, 0.063109346, -0.38754493, 4.83843, 2.1484108, -5.661237)
+
+[node name="Cliff-44" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.16096525, 0.0027972944, -0.47337335, -0.068165064, 0.49464354, 0.026101736, 0.46844822, 0.07293802, -0.15885948, 5.80844, 2.1484108, -3.9349656)
+
+[node name="Cliff-45" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.48544365, -0.061473228, -0.10278879, -0.06816506, 0.4946435, 0.026101734, 0.098478526, 0.039355054, -0.4886237, 7.531805, 2.1484108, -2.540904)
+
+[node name="Cliff-46" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.48544365, -0.061473228, -0.10278879, -0.06816506, 0.4946435, 0.026101734, 0.098478526, 0.039355054, -0.4886237, 7.531805, 2.1484108, -0.0916481)
+
+[node name="Cliff-54" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.48544365, -0.061473228, -0.10278879, -0.06816506, 0.4946435, 0.026101734, 0.098478526, 0.039355054, -0.4886237, 7.531805, 2.1484108, -1.1537788)
+
+[node name="Cliff-47" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.48544365, -0.061473228, -0.10278879, -0.06816506, 0.4946435, 0.026101734, 0.098478526, 0.039355054, -0.4886237, 6.662098, 2.1484108, 2.2011833)
+
+[node name="Cliff-48" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.11956505, -0.13736817, 0.46565458, -0.47598618, -0.06127613, -0.14029425, 0.09561095, -0.47683877, -0.1161177, 5.5816193, 3.6125069, 0.57195663)
+
+[node name="Cliff-49" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.11956505, -0.13736819, 0.46565458, -0.48152325, -0.027654845, -0.13179772, 0.06196482, -0.47996372, -0.1256788, 5.5816193, 3.7608585, -2.849506)
+
+[node name="Cliff-50" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.11956505, -0.13736819, 0.46565458, -0.48152325, -0.027654845, -0.13179772, 0.06196482, -0.47996372, -0.1256788, 5.5816193, -0.7029314, -2.849506)
+
+[node name="Cliff-51" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.11956505, -0.13736819, 0.46565458, -0.48152325, -0.027654845, -0.13179772, 0.06196482, -0.47996372, -0.1256788, 7.3571916, -0.7029314, -2.849506)
+
+[node name="Cliff-52" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.11956505, -0.13736819, 0.46565458, -0.48152325, -0.027654845, -0.13179772, 0.06196482, -0.47996372, -0.1256788, 5.5816193, -0.7029314, 0.7677312)
+
+[node name="Cliff-53" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.11956505, -0.13736819, 0.46565458, -0.48152325, -0.027654845, -0.13179772, 0.06196482, -0.47996372, -0.1256788, 7.3571916, -0.7029314, 0.7677312)
+
+[node name="Cliff-22" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.3688506, -0.080162466, -0.9260254, -0.24286704, 0.9699757, 0.012770747, 0.8971981, 0.22961146, -0.3772454, -44.67199, 1.4084816, -29.62799)
+
+[node name="Cliff-25" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.5252768, -0.21420346, 0.8235301, 0.051352102, -0.97401404, -0.22059076, 0.84938014, -0.07358141, 0.5226264, -49.15895, -2.3826509, -4.580022)
+
+[node name="Cliff-23" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.36885062, -0.080162466, -0.9260254, -0.12630168, 0.99135625, -0.035509996, 0.9208675, 0.103860565, -0.37578753, -47.74581, 1.4084816, -29.713982)
+
+[node name="Cliff-24" parent="World/Cliffs" instance=ExtResource("20_85pda")]
+transform = Transform3D(-0.36885062, -0.080162466, -0.9260254, -0.12630168, 0.99135625, -0.035509996, 0.9208675, 0.103860565, -0.37578753, -51.051975, 3.8825493, -29.713982)
+
 [node name="Cliff-10" parent="World/Cliffs" instance=ExtResource("20_85pda")]
 transform = Transform3D(-0.41087773, -0.1256457, -0.9029909, -0.25527027, 0.96669555, -0.018357072, 0.87522364, 0.22296412, -0.42926735, -16.5314, -5.6693573, -3.7567205)
 
@@ -429,3 +562,59 @@ transform = Transform3D(0.31733802, 0, 1.4912604, 0, 1, 0, -1.112697, 0, 0.42530
 
 [node name="Snow-3" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
 transform = Transform3D(-0.47100788, 0, 1.4164243, 0, 1, 0, -1.0568585, 0, -0.6312549, -9.418155, -1.4269398, -0.76840067)
+
+[node name="Snow-8" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(-0.47100788, 0, 1.4164243, 0, 1, 0, -1.0568585, 0, -0.6312549, -9.418155, 3.6561446, 4.4899073)
+
+[node name="Snow-11" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(-0.47100788, 0, 1.4164243, 0, 1, 0, -1.0568585, 0, -0.6312549, -14.517746, 3.6561446, 4.4899073)
+
+[node name="Snow-12" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(-0.09213105, 0, 1.545799, 0, 1, 0, -1.1533909, 0, -0.12347615, -19.477798, 3.6561446, 3.1776624)
+
+[node name="Snow-13" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(0.74019825, 0, 1.191897, 0, 1, 0, -0.88932854, 0, 0.99202937, -22.488638, 3.6561446, 1.2889338)
+
+[node name="Snow-14" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(0.9790892, 0, 0.8263662, -0.09090356, 0.98907256, 0.19345663, -0.60985166, -0.14742965, 1.2978573, -25.812311, 2.7833643, -1.4981523)
+
+[node name="Snow-15" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(0.9829238, -0.064154446, 0.81207794, -0.1464656, 0.9388031, 0.49677712, -0.59262717, -0.3384273, 1.2241251, -31.048296, 3.3142, -7.5928445)
+
+[node name="Snow-9" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(0.093640864, 0, 1.5456362, 0, 1, 0, -1.1532693, 0, 0.12549937, -4.370149, 3.6561446, 4.4899073)
+
+[node name="Snow-16" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(1.1567115, 0, -0.03832052, 0, 1, 0, 0.028592758, 0, 1.5502495, 5.2865357, 2.8028374, -2.62392)
+
+[node name="Snow-17" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(-1.1528621, 0, 0.13205339, 0, 1, 0, -0.0985311, 0, -1.5450902, 5.2865357, 2.8028374, 0.5110924)
+
+[node name="Snow-10" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(-0.62242275, 0, -1.3072406, 0, 1, 0, 0.9753916, 0, -0.8341843, -6.4117975, 3.7291875, 4.6499844)
+
+[node name="Snow-4" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(-0.47100788, 0, 1.4164243, 0, 1, 0, -1.0568585, 0, -0.6312549, -41.384422, 1.1923523, -28.467165)
+
+[node name="Snow-5" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(-0.16275215, 0, -1.5353055, 0, 1, 0, 1.1455612, 0, -0.2181238, -44.619766, 2.934721, -28.954016)
+
+[node name="Snow-6" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(0.48685446, 0, 1.4067674, 0, 1, 0, -1.049653, 0, 0.65249264, -47.58153, 2.934721, -29.269554)
+
+[node name="Snow-7" parent="World/SnowPatches" instance=ExtResource("22_p1by1")]
+transform = Transform3D(0.48685446, 0, 1.4067674, 0, 1, 0, -1.049653, 0, 0.65249264, -50.77878, 5.3939147, -29.269554)
+
+[node name="IceArcs" type="Node3D" parent="World"]
+
+[node name="IceArc-1" parent="World/IceArcs" instance=ExtResource("23_5tvbr")]
+transform = Transform3D(-0.0077906623, 0, 0.39992413, 0, 0.4, 0, -0.39992413, 0, -0.0077906623, 5.087095, 0.15541075, -1.5975244)
+
+[node name="IceArc-2" parent="World/IceArcs" instance=ExtResource("23_5tvbr")]
+transform = Transform3D(-0.0068168296, 0, 0.34993362, 0, 0.35, 0, -0.34993362, 0, -0.0068168296, 5.5228324, 0.15541075, -1.5975244)
+
+[node name="IceArc-3" parent="World/IceArcs" instance=ExtResource("23_5tvbr")]
+transform = Transform3D(-0.0058429968, 0, 0.29994312, 0, 0.3, 0, -0.29994312, 0, -0.0058429968, 6.1444616, 0.15541075, -1.5975244)
+
+[node name="IceArc-4" parent="World/IceArcs" instance=ExtResource("23_5tvbr")]
+transform = Transform3D(-0.004869164, 0, 0.24995258, 0, 0.25, 0, -0.24995258, 0, -0.004869164, 6.6715374, 0.15541075, -1.5975244)

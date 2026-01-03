@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://cklh0pte3sm2y"]
+[gd_scene load_steps=67 format=4 uid="uid://cklh0pte3sm2y"]
 
 [ext_resource type="PackedScene" uid="uid://e11s1uc2rpys" path="res://assets/meshes/SantaShop/Walls/CornerStones-1-04x04x03m.fbx" id="1_js2rw"]
 [ext_resource type="PackedScene" uid="uid://0dys61sp3ccr" path="res://assets/meshes/Misc/ladder.tscn" id="1_qwucj"]
@@ -55,6 +55,7 @@
 [ext_resource type="PackedScene" uid="uid://cou4ahx653a70" path="res://assets/meshes/SantaShop/Walls/wall_1_door_corner_1.tscn" id="53_qwucj"]
 [ext_resource type="PackedScene" uid="uid://plgrmg3pf5bw" path="res://assets/meshes/Weapons/Axe-1/Axe-1.glb" id="54_mi583"]
 [ext_resource type="PackedScene" uid="uid://beeg1uomills8" path="res://assets/meshes/Misc/SticksAndLogs/TreeLog-2.glb" id="55_0gs78"]
+[ext_resource type="PackedScene" uid="uid://cr0c56w56ll67" path="res://assets/meshes/SantaShop/Doors/door_normal_2.tscn" id="56_1helu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q23m3"]
 
@@ -2515,9 +2516,6 @@ texture_albedo = ExtResource("15_2j3wo")
 upper_fade = 1e-05
 lower_fade = 0.06306803
 
-[node name="Door-Normal-1" parent="SantasShop/Structure/Doors" instance=ExtResource("16_c0iao")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.25, 0, -3.25)
-
 [node name="Door-Normal-2" parent="SantasShop/Structure/Doors" instance=ExtResource("16_c0iao")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, 0)
 
@@ -4491,6 +4489,9 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5.53
 
 [node name="SmallRoof-Wood" parent="Environment" instance=ExtResource("52_1bisa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9418964, 2.7792485, -0.5885861)
+
+[node name="Door-Normal-2" parent="." instance=ExtResource("56_1helu")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.25, 0, -3.25)
 
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49"]
