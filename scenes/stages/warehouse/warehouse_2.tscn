@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bwhxv2wqfr8d5"]
+[gd_scene load_steps=28 format=3 uid="uid://bwhxv2wqfr8d5"]
 
 [ext_resource type="Script" uid="uid://bvgudpbaauty8" path="res://scriptswarehouse_2.gd" id="1_dfkw8"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_7ssc0"]
@@ -6,7 +6,10 @@
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="4_3xavh"]
 [ext_resource type="PackedScene" uid="uid://cve1kqotnlkf6" path="res://scenes/stages/warehouse/platform.tscn" id="5_7ssc0"]
 [ext_resource type="PackedScene" uid="uid://1k8qkabd1mqy" path="res://scenes/characters/present_mimic.tscn" id="6_3xavh"]
+[ext_resource type="PackedScene" uid="uid://bmo2v6vkmad7c" path="res://assets/meshes/Weapons/Ammo/bullet_globe_1.tscn" id="6_4thge"]
+[ext_resource type="Resource" uid="uid://b060qwaalhnug" path="res://assets/resources/items/ammo/big.tres" id="7_285t1"]
 [ext_resource type="Script" uid="uid://8f16emrbiraj" path="res://scripts/launcher.gd" id="7_wk4on"]
+[ext_resource type="Resource" uid="uid://gwh384geqki4" path="res://assets/resources/items/ammo/fast.tres" id="8_drj3l"]
 [ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="8_wk4on"]
 [ext_resource type="PackedScene" uid="uid://djlvvtsinu2c" path="res://scenes/characters/jumping_mimic.tscn" id="9_xr7sr"]
 [ext_resource type="AudioStream" uid="uid://o7bfs0qmgvvy" path="res://assets/sound/soundtrack/warehouse_2.wav" id="10_uhofc"]
@@ -134,6 +137,64 @@ shape = SubResource("BoxShape3D_sovhg")
 
 [node name="Platform" parent="." instance=ExtResource("5_7ssc0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, -4.4500403, 0)
+
+[node name="Ammo-Bullet-Globe-1" parent="Platform" instance=ExtResource("6_4thge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.5546968, 0)
+held_item = ExtResource("7_285t1")
+count = 100
+
+[node name="Ammo-Bullet-Globe-2" parent="Platform" instance=ExtResource("6_4thge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.4912262, 0.5546968, 0.19629419)
+held_item = ExtResource("8_drj3l")
+count = 200
+
+[node name="Ammo-Bullet-Globe-3" parent="Platform" instance=ExtResource("6_4thge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.032470703, 0.5546968, 0.6564472)
+held_item = ExtResource("8_drj3l")
+count = 200
+is_health_pack = true
+
+[node name="Ammo-Bullet-Globe-4" parent="Platform" instance=ExtResource("6_4thge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.032470703, 0.5546968, -1.8839357)
+held_item = ExtResource("8_drj3l")
+count = 200
+is_health_pack = true
+
+[node name="Ammo-Bullet-Globe-5" parent="Platform" instance=ExtResource("6_4thge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.2263145, 0.5546963, -3.6451716)
+held_item = ExtResource("8_drj3l")
+count = 200
+is_health_pack = true
+
+[node name="Ammo-Bullet-Globe-7" parent="Platform" instance=ExtResource("6_4thge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.460266, 0.5546963, -6.2487893)
+held_item = ExtResource("8_drj3l")
+count = 200
+is_health_pack = true
+
+[node name="Ammo-Bullet-Globe-8" parent="Platform" instance=ExtResource("6_4thge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.487011, 0.5546963, 5.450873)
+held_item = ExtResource("8_drj3l")
+count = 200
+is_health_pack = true
+
+[node name="Ammo-Bullet-Globe-9" parent="Platform" instance=ExtResource("6_4thge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.8982735, 0.5546963, 3.1792092)
+held_item = ExtResource("8_drj3l")
+count = 200
+is_health_pack = true
+
+[node name="Ammo-Bullet-Globe-10" parent="Platform" instance=ExtResource("6_4thge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.8643188, 0.5546963, 6.134838)
+held_item = ExtResource("8_drj3l")
+count = 200
+is_health_pack = true
+
+[node name="Ammo-Bullet-Globe-6" parent="Platform" instance=ExtResource("6_4thge")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.6888466, 0.5546968, 1.0815427)
+held_item = ExtResource("8_drj3l")
+count = 200
+is_health_pack = true
 
 [node name="present_mimic" parent="." instance=ExtResource("6_3xavh")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -44.305874, -7.6596065, 1.1180242)
