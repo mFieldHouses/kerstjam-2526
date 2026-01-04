@@ -14,7 +14,9 @@ var invert_weapon_selection_scroll : bool = false
 var low_graphics_mode : bool = false
 
 @export_group("Audial")
-@export_range(0.1, 5.0, 0.01) var environment_volume : float = 1.0
+@export_range(0.1, 5.0, 0.01) var environment_volume : float = 1.0:
+	set(x):
+		_update_audio_levels()
 @export_range(0.1, 5.0, 0.01) var sfx_volume : float = 1.0
 @export_range(0.1, 5.0, 0.01) var music_volume : float = 1.0
 
@@ -60,3 +62,6 @@ func get_configurable_values() -> Dictionary[String, Array]:
 			_result.erase(_group)
 	
 	return _result
+
+func _update_audio_levels() -> void:
+	pass

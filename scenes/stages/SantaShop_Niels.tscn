@@ -155,7 +155,7 @@ script = ExtResource("1_mjwaw")
 curve = SubResource("Curve3D_mjwaw")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="intro_cam_path"]
-transform = Transform3D(0.033228934, 0, -0.9994171, 0, 0.99999744, 0, 0.9994171, 0, 0.033228934, 9.2089405, 9.482788, -17.891994)
+transform = Transform3D(0.033228926, 0, -0.9994169, 0, 0.99999744, 0, 0.9994169, 0, 0.033228926, 9.2089405, 9.482788, -17.891994)
 rotation_mode = 1
 use_model_front = true
 
@@ -720,6 +720,7 @@ transform = Transform3D(0.35503235, 0, -0.40688086, 0, 0.54, 0, 0.40688086, 0, 0
 transform = Transform3D(3.1532342, 0, -0.16092224, 0, 0.34589946, 0, 1.6572409, 0, 0.306187, -2.525323, 0, 2.8941193)
 
 [node name="Footsteps (quest)" type="Node3D" parent="World/Ground (level 1)"]
+visible = false
 
 [node name="FootStep" parent="World/Ground (level 1)/Footsteps (quest)" instance=ExtResource("32_iwwnf")]
 transform = Transform3D(0.99028265, 0, 0.1390694, 0, 1, 0, -0.1390694, 0, 0.99028265, 5.5978355, 0, -4.1278815)

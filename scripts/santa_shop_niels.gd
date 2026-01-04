@@ -42,3 +42,7 @@ func _end_game(x,y) -> void:
 	
 	await get_tree().create_timer(2.0).timeout
 	DialogManager.end_dialog()	
+
+func _dialog_queue(did : String, qid : String) -> void:
+	if did == "henkie1" and qid == "show_footsteps":
+		$"World/Ground (level 1)/Footsteps (quest)".visible = true
