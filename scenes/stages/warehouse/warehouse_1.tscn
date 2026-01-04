@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cfufrt7a0cruc"]
+[gd_scene load_steps=41 format=3 uid="uid://cfufrt7a0cruc"]
 
 [ext_resource type="Script" uid="uid://cgayko6nfo5rq" path="res://scripts/warehouse_1.gd" id="1_wx1sp"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_wu2bj"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bq382ii6epxn4" path="res://assets/meshes/Misc/Crates-Palets/Crate-Lid-1.tscn" id="10_4aq6d"]
 [ext_resource type="PackedScene" uid="uid://u27fvubvumgl" path="res://assets/meshes/Misc/ForkLifts/ForkLift-1.tscn" id="11_1jfds"]
 [ext_resource type="PackedScene" uid="uid://d3xius20n1uk8" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-1.tscn" id="12_2d1w7"]
+[ext_resource type="PackedScene" uid="uid://cmnsom0hly46i" path="res://assets/meshes/Warehouse/ware_house_double_door.tscn" id="12_k2at1"]
 [ext_resource type="PackedScene" uid="uid://bfsij4nt4lxjq" path="res://assets/meshes/Misc/lamp_hangend_plafond_1.tscn" id="16_70t0q"]
 [ext_resource type="PackedScene" uid="uid://cyplqp3bgblse" path="res://assets/meshes/Misc/Pakjes/pakje-1.tscn" id="17_yg01m"]
 [ext_resource type="PackedScene" uid="uid://d2igi16yoyihl" path="res://scenes/characters/snowman.tscn" id="18_4xo74"]
@@ -29,7 +30,7 @@
 [ext_resource type="Resource" uid="uid://b060qwaalhnug" path="res://assets/resources/items/ammo/big.tres" id="26_hdkqg"]
 [ext_resource type="Resource" uid="uid://qxhttbpl2yph" path="res://assets/resources/items/ammo/explode.tres" id="27_nbf28"]
 [ext_resource type="AudioStream" uid="uid://bwjojdc2sncv3" path="res://assets/sound/soundtrack/warehouse_1.wav" id="29_lbisa"]
-[ext_resource type="Script" uid="uid://ubl2tl60pb8m" path="res://scripts/environment_audio.gd" id="30_urf3k"]
+[ext_resource type="Script" path="res://scripts/environment_audio.gd" id="30_urf3k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo0y1"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -250,7 +251,7 @@ collision_mask = 2
 shape = SubResource("BoxShape3D_vwg43")
 
 [node name="large_doorway" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1511102, -58.99383)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1511102, -58.704144)
 
 [node name="StageLauncher" type="Node3D" parent="large_doorway"]
 script = ExtResource("7_ikcrf")
@@ -268,6 +269,9 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="large_doorway/StageLauncher/ActionPromptTrigger/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.033905, -0.124572754)
 shape = SubResource("BoxShape3D_vwg43")
+
+[node name="WareHouse_DoubleDoor" parent="large_doorway" instance=ExtResource("12_k2at1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.183309, 0.46652222)
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.0907173, 10.6228895, -20.825703)
