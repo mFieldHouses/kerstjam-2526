@@ -2,7 +2,7 @@
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_pdt8r"]
 noise_type = 3
-frequency = 0.86360407
+frequency = 0.5137
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tkfmq"]
 noise = SubResource("FastNoiseLite_pdt8r")
