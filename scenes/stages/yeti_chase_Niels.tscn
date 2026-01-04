@@ -758,11 +758,13 @@ surface_material_override/0 = ExtResource("18_w7oa1")
 unique_name_in_owner = true
 stream = ExtResource("19_j5aua")
 autoplay = true
+bus = &"Environment"
 script = ExtResource("20_805qa")
 
 [node name="music" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("20_vftwx")
+bus = &"Music"
 script = ExtResource("19_w7oa1")
 chase_1_track = ExtResource("20_vftwx")
 chase_2_track = ExtResource("21_tyfdp")
@@ -771,5 +773,6 @@ chase_2_track = ExtResource("21_tyfdp")
 unique_name_in_owner = true
 stream = ExtResource("22_vftwx")
 autoplay = true
+bus = &"Environment"
 
 [editable path="CornerSnow-12"]

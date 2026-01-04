@@ -80,3 +80,4 @@ volume_db = -9.0
 unit_size = 57.62
 max_db = -3.0
 autoplay = true
+bus = &"Sound Effects"

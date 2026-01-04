@@ -286,9 +286,11 @@ script = ExtResource("7_wk4on")
 [node name="warehouse" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_uhofc")
 autoplay = true
+bus = &"Environment"
 script = ExtResource("11_h5j6d")
 
 [node name="soundtrack" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
 script = ExtResource("12_qs1vy")
 intro_stream = ExtResource("13_mbewa")
 loop_stream = ExtResource("14_dfkw8")
