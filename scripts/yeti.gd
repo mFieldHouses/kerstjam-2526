@@ -94,6 +94,8 @@ func _physics_process(delta: float) -> void:
 				$NavigationAgent3D.target_position = get_parent()._player_trail_points[0].global_position
 			else:
 				_current_behavior_state = BehaviorState.PATROL
+		elif _get_visible_trail_points().size() == 0:
+			_current_behavior_state = BehaviorState.PATROL
 	
 	elif _current_behavior_state == BehaviorState.PATROL:
 		if $NavigationAgent3D.is_navigation_finished():

@@ -3,6 +3,15 @@ extends Control
 var _top_dialog_open : bool = false
 var _bottom_dialog_open : bool = false
 
+var _talk_time : float
+
+func _ready() -> void:
+	$talk.stream.loop_mode = 1
+	$talk.stream.loop_end = $talk.stream.mix_rate * $talk.stream.get_length()
+	
+	$talk.play()
+	$talk.stream_paused = true
+
 func _process(delta: float) -> void:
 	$dialog/MarginContainer/HBoxContainer/video.custom_minimum_size.x = $dialog/MarginContainer/HBoxContainer/video.size.y
 	$remote_dialog/MarginContainer/HBoxContainer/video.custom_minimum_size.x = $remote_dialog/MarginContainer/HBoxContainer/video.size.y
@@ -42,9 +51,14 @@ func dialog_line(line : String, conversor_name : String, thumbnail : Texture2D) 
 	$dialog/MarginContainer/HBoxContainer/VBoxContainer/contents.visible_ratio = 0
 	$dialog/MarginContainer/HBoxContainer/thumbnail.texture = thumbnail
 	
+	$talk.stream_paused = false
 	var _text_tween : Tween = create_tween()
 	_text_tween.tween_property($dialog/MarginContainer/HBoxContainer/VBoxContainer/contents, "visible_ratio", 1.0, 0.01 * line.length())
-
+	
+	await _text_tween.finished
+	
+	$talk.stream_paused = true
+	
 
 func remote_dialog_line(line : String, conversor_name : String, thumbnail : Texture2D) -> void: ##Pass an empty line to hide the dialog box again.
 	
@@ -82,9 +96,15 @@ func remote_dialog_line(line : String, conversor_name : String, thumbnail : Text
 		_move_tween.tween_property($remote_dialog, "position:y", - $remote_dialog.size.y, 0.3)
 		await _move_tween.finished
 	
+	$talk.stream_paused = false
+	
 	var _text_tween : Tween = create_tween()
 	_text_tween.tween_property($remote_dialog/MarginContainer/HBoxContainer/VBoxContainer/contents, "visible_ratio", 1.0, 0.01 * line.length())
-
+	
+	await _text_tween.finished
+	
+	$talk.stream_paused = true
+	
 signal fade_middle
 signal fade_end
 

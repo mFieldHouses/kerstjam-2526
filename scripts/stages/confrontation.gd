@@ -16,7 +16,7 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(1.0).timeout
 	
-	DialogManager.initiate_dialog_with("confrontation1", $Nutcracker_Eindbaas/philip_head, "???", load("res://icon.svg"))
+	DialogManager.initiate_dialog_with("confrontation1", $Nutcracker_Eindbaas/philip_head, "???", load("res://assets/textures/thumbnails/unknown.png"))
 	
 	await DialogManager.dialog_ended
 	

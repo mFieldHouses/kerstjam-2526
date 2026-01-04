@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcg8qxkedeekp"]
+[gd_scene load_steps=7 format=3 uid="uid://dcg8qxkedeekp"]
 
 [ext_resource type="Script" uid="uid://5cgj6vfrassi" path="res://scripts/rotate_control.gd" id="1_05ad7"]
 [ext_resource type="Script" uid="uid://behc03krddp0w" path="res://scenes/autoloads/persistent_ui.gd" id="1_gpka8"]
 [ext_resource type="Texture2D" uid="uid://cowivfljy5tex" path="res://icon.svg" id="2_qbks3"]
 [ext_resource type="VideoStream" uid="uid://dy1kx1wya18pj" path="res://assets/textures/thumbnails/henkie.ogv" id="4_vyw3n"]
+[ext_resource type="AudioStream" uid="uid://fg37gbry438s" path="res://assets/sound/sfx/talk_normal.wav" id="5_t3bvp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uchyk"]
 bg_color = Color(0, 0, 0, 1)
@@ -166,3 +167,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
 text = "test test"
+
+[node name="talk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_t3bvp")

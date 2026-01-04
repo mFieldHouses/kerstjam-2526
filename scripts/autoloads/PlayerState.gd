@@ -27,10 +27,10 @@ var weapons : Array[WeaponConfiguration] = [
 var health : float = 30.0
 
 var ammo : Dictionary[AmmoItemDescription, int] = {
-	preload("res://assets/resources/items/ammo/snow.tres") : 200,
-	preload("res://assets/resources/items/ammo/fast.tres") : 200,
-	preload("res://assets/resources/items/ammo/big.tres") : 200,
-	preload("res://assets/resources/items/ammo/explode.tres") : 200
+	preload("res://assets/resources/items/ammo/snow.tres") : 0,
+	preload("res://assets/resources/items/ammo/fast.tres") : 0,
+	preload("res://assets/resources/items/ammo/big.tres") : 0,
+	preload("res://assets/resources/items/ammo/explode.tres") : 0
 	}
 @onready var used_ammo : AmmoItemDescription = load("res://assets/resources/items/ammo/snow.tres")
 
