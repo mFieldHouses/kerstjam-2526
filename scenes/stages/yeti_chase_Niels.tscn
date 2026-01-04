@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://duwpgixmsa24f"]
+[gd_scene load_steps=41 format=4 uid="uid://duwpgixmsa24f"]
 
 [ext_resource type="Script" uid="uid://domd8jiottmf8" path="res://scripts/yeti_chase_stage.gd" id="1_6mfev"]
 [ext_resource type="PackedScene" uid="uid://ba8ws6pahtdpd" path="res://assets/meshes/Debug/yeti_hollow.gltf" id="2_wm0a4"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="8_gdanf"]
 [ext_resource type="PackedScene" uid="uid://darf1g5s0adew" path="res://assets/meshes/Misc/SterrenStofCondensator-1.glb" id="8_vftwx"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_nt3go"]
+[ext_resource type="Script" uid="uid://c1o611u1w5h24" path="res://scripts/part1.gd" id="9_tyfdp"]
 [ext_resource type="PackedScene" uid="uid://uf5g1abnjfl5" path="res://assets/meshes/Environment/Decoration/Rope-1.glb" id="10_gdanf"]
 [ext_resource type="PackedScene" uid="uid://bl0c2j771w8fa" path="res://assets/meshes/Environment/IcePatches/IceArc-1.tscn" id="11_aj23t"]
 [ext_resource type="PackedScene" uid="uid://2pbpl80r7ufi" path="res://assets/scenes/Walls/snow_high_4.tscn" id="12_nkhk4"]
@@ -306,6 +307,7 @@ count = 50
 
 [node name="part" parent="." instance=ExtResource("8_vftwx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.199184, -0.14381099, -20.788906)
+script = ExtResource("9_tyfdp")
 
 [node name="AreaTrigger" type="Node3D" parent="part"]
 transform = Transform3D(0.99999994, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 0.99999994, 0, 0, 0)

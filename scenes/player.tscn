@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cotqedi4mq2rs"]
+[gd_scene load_steps=51 format=3 uid="uid://cotqedi4mq2rs"]
 
 [ext_resource type="Script" uid="uid://p37eo2hx431" path="res://scripts/scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://t266m1x4e123" path="res://assets/textures/gui/crosshair.png" id="2_g2els"]
@@ -37,6 +37,11 @@
 [ext_resource type="AudioStream" uid="uid://bf4tci8ij5265" path="res://assets/sound/sfx/walk/metal/walk_metal_3.wav" id="27_hax0n"]
 [ext_resource type="AudioStream" uid="uid://27jlwuqdt0tx" path="res://assets/sound/sfx/walk/metal/walk_metal_4.wav" id="28_t4otl"]
 [ext_resource type="AudioStream" uid="uid://c0nmah40y65rf" path="res://assets/sound/sfx/walk/metal/walk_metal_5.wav" id="29_j2b1d"]
+[ext_resource type="AudioStream" uid="uid://dv58dj7fytek2" path="res://assets/sound/sfx/hurt/hurt1.wav" id="38_giy8y"]
+[ext_resource type="AudioStream" uid="uid://b0tu1d30fywdf" path="res://assets/sound/sfx/hurt/hurt2.wav" id="39_fdfoy"]
+[ext_resource type="AudioStream" uid="uid://b00utgc7efjqm" path="res://assets/sound/sfx/hurt/hurt3.wav" id="40_hhpqf"]
+[ext_resource type="AudioStream" uid="uid://djpi5uulnmysf" path="res://assets/sound/sfx/hurt/hurt4.wav" id="41_g5jhy"]
+[ext_resource type="AudioStream" uid="uid://btigay04s8kab" path="res://assets/sound/sfx/hurt/hurt5.wav" id="42_holxr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvqfc"]
 radius = 0.3
@@ -81,6 +86,14 @@ stream_1/stream = ExtResource("13_qfm1y")
 stream_2/stream = ExtResource("14_fulsm")
 stream_3/stream = ExtResource("15_4r5pv")
 stream_4/stream = ExtResource("16_60mlk")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mx1m4"]
+streams_count = 5
+stream_0/stream = ExtResource("38_giy8y")
+stream_1/stream = ExtResource("39_fdfoy")
+stream_2/stream = ExtResource("40_hhpqf")
+stream_3/stream = ExtResource("41_g5jhy")
+stream_4/stream = ExtResource("42_holxr")
 
 [node name="player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19800603)
@@ -390,3 +403,7 @@ ExtResource("19_pf23h"): SubResource("AudioStreamRandomizer_487ah"),
 ExtResource("24_md1ol"): SubResource("AudioStreamRandomizer_bj30b")
 })
 misc_footsteps = SubResource("AudioStreamRandomizer_i4ail")
+
+[node name="hurt_sounds" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_mx1m4")
+bus = &"Sound Effects"

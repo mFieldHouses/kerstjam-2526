@@ -320,6 +320,9 @@ func toggle_scope_mode(state : bool) -> void:
 			tween_camera_fov(ConfigurableValues.fov + 8, 0.2)
 
 func get_hit(damage : float) -> void:
+	
+	$hurt_sounds.play()
+	
 	_health -= damage
 	$gui._dmg_animation()
 	
