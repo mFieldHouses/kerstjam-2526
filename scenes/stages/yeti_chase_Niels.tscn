@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://duwpgixmsa24f"]
+[gd_scene load_steps=42 format=4 uid="uid://duwpgixmsa24f"]
 
 [ext_resource type="Script" uid="uid://domd8jiottmf8" path="res://scripts/yeti_chase_stage.gd" id="1_6mfev"]
 [ext_resource type="PackedScene" uid="uid://ba8ws6pahtdpd" path="res://assets/meshes/Debug/yeti_hollow.gltf" id="2_wm0a4"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://ubl2tl60pb8m" path="res://scripts/environment_audio.gd" id="20_805qa"]
 [ext_resource type="AudioStream" uid="uid://dymur32cmc7x1" path="res://assets/sound/soundtrack/chase1.wav" id="20_vftwx"]
 [ext_resource type="AudioStream" uid="uid://ce3r134p83ck7" path="res://assets/sound/soundtrack/chase2.wav" id="21_tyfdp"]
+[ext_resource type="AudioStream" uid="uid://ds2idnqomo33" path="res://assets/sound/soundtrack/yeti_groans.wav" id="22_vftwx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w7oa1"]
 sky_top_color = Color(0.1890673, 0.7089767, 0.8090219, 1)
@@ -771,5 +772,10 @@ stream = ExtResource("20_vftwx")
 script = ExtResource("19_w7oa1")
 chase_1_track = ExtResource("20_vftwx")
 chase_2_track = ExtResource("21_tyfdp")
+
+[node name="groans" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("22_vftwx")
+autoplay = true
 
 [editable path="CornerSnow-12"]

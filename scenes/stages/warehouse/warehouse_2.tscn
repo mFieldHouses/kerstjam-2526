@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bwhxv2wqfr8d5"]
+[gd_scene load_steps=24 format=3 uid="uid://bwhxv2wqfr8d5"]
 
 [ext_resource type="Script" uid="uid://bvgudpbaauty8" path="res://scriptswarehouse_2.gd" id="1_dfkw8"]
 [ext_resource type="PackedScene" uid="uid://buar51plgglsb" path="res://assets/meshes/Debug/warehouse_2.glb" id="1_urnwb"]
@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://bygssu2lp8xak" path="res://assets/sound/soundtrack/elevator_loop.wav" id="14_dfkw8"]
 [ext_resource type="Script" uid="uid://cq5y0kvnh684m" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/Trigger.gd" id="15_mbewa"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="17_bys0d"]
-[ext_resource type="Script" uid="uid://44jklcto3p8q" path="res://scripts/generator.gd" id="17_ej86v"]
+[ext_resource type="PackedScene" uid="uid://c5sao4uo5graf" path="res://assets/meshes/SantaShop/Decoration/Computers/Computer-1.glb" id="17_ej86v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxix6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -37,9 +37,8 @@ glow_enabled = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_sovhg"]
 size = Vector3(1, 5.96875, 11.672852)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ej86v"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_h46xh"]
+size = Vector3(0.5548096, 1, 1)
 
 [node name="Warehouse2" type="Node3D"]
 script = ExtResource("1_dfkw8")
@@ -297,20 +296,20 @@ loop_stream = ExtResource("14_dfkw8")
 script = ExtResource("15_mbewa")
 metadata/_custom_type_script = "uid://cq5y0kvnh684m"
 
-[node name="generator" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.242584, -72.67855, -12.277819)
-mesh = SubResource("BoxMesh_ej86v")
-script = ExtResource("17_ej86v")
+[node name="Computer-1" parent="." instance=ExtResource("17_ej86v")]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -83.5098, -73.2, -12.27087)
 
-[node name="ActionPromptTrigger" type="Node3D" parent="generator"]
+[node name="ActionPromptTrigger" type="Node3D" parent="Computer-1"]
+transform = Transform3D(-1, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -1, 0, 0.66064453, 0)
 script = ExtResource("17_bys0d")
 prompt_prefix = "Reactivate"
 prompt_subject = "power"
 metadata/_custom_type_script = "uid://c7ccd1128l7ea"
 
-[node name="Area3D" type="Area3D" parent="generator/ActionPromptTrigger"]
+[node name="Area3D" type="Area3D" parent="Computer-1/ActionPromptTrigger"]
 collision_layer = 2
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="generator/ActionPromptTrigger/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Computer-1/ActionPromptTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22259521, 0, 0)
 shape = SubResource("BoxShape3D_h46xh")

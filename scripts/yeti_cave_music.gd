@@ -3,7 +3,15 @@ extends AudioStreamPlayer
 @export var chase_1_track : AudioStream
 @export var chase_2_track : AudioStream
 
-var playing_state : int = 0
+var playing_state : int = 0:
+	set(x):
+		playing_state = x
+		
+		if x == 0:
+			%groans.play()
+		else:
+			%groans.stop()
+		
 var desired_state : int = 0
 
 var _next_switch_opportunity : float = 0.0
@@ -17,6 +25,9 @@ func _ready() -> void:
 	
 	chase_2_track.loop_mode = AudioStreamWAV.LoopMode.LOOP_FORWARD
 	chase_2_track.loop_end = chase_2_track.mix_rate * chase_2_track.get_length()
+	
+	%groans.stream.loop_mode = AudioStreamWAV.LoopMode.LOOP_FORWARD
+	%groans.stream.loop_end = %groans.stream.mix_rate * %groans.stream.get_length()
 
 func _process(delta: float) -> void:
 	if desired_state != playing_state:

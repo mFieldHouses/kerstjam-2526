@@ -1,10 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://c1dnotdac1qr3"]
+[gd_scene load_steps=17 format=3 uid="uid://c1dnotdac1qr3"]
 
 [ext_resource type="Script" uid="uid://b2iw6rsa4l7j7" path="res://scripts/stages/confrontation.gd" id="1_q58n8"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_txjfn"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_q8etp"]
 [ext_resource type="PackedScene" uid="uid://cqtj3st2qdnea" path="res://assets/scenes/Characters/Enemies/nutcracker_eindbaas.tscn" id="6_06wq0"]
-[ext_resource type="PackedScene" uid="uid://b0fbv1wnisor4" path="res://assets/meshes/Buildings/rd_lab.tscn" id="7_7ocgb"]
+[ext_resource type="PackedScene" uid="uid://flo8i64cabk2" path="res://assets/meshes/Buildings/rd_lab.tscn" id="7_7ocgb"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_jyk3o"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="10_fbhbk"]
 
@@ -40,6 +40,9 @@ size = Vector3(2, 0.25, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_06wq0"]
 size = Vector3(66.15405, 1, 56.957275)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ocgb"]
+size = Vector3(20.920898, 7.555786, 19.11499)
 
 [node name="confrontation" type="Node3D"]
 script = ExtResource("1_q58n8")
@@ -79,7 +82,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 
 [node name="player" parent="." instance=ExtResource("1_txjfn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.414629, -0.19800603)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.372904, 6.0445967)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_28ucp")
@@ -136,5 +139,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
 
 [node name="RD-Lab" parent="World/Base_MapLayout" instance=ExtResource("7_7ocgb")]
 transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, -0.102264404, -11.765558, 57.523003)
+
+[node name="start_fight" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="start_fight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.277893, 0)
+shape = SubResource("BoxShape3D_7ocgb")
 
 [connection signal="body_entered" from="fall_area" to="." method="_on_fall_area_body_entered"]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AmmoItemDescription" load_steps=4 format=3 uid="uid://qxhttbpl2yph"]
 
 [ext_resource type="Script" uid="uid://d4epkoylgw48b" path="res://classes/resources/AmmoItemDescription.gd" id="1_6uemx"]
-[ext_resource type="PackedScene" uid="uid://ds8c7awe3fc0s" path="res://assets/meshes/Weapons/Ammo/ShotGunShells-1.glb" id="1_faakv"]
+[ext_resource type="PackedScene" uid="uid://bbfo7wgxryc8d" path="res://assets/meshes/Weapons/Ammo/Ammo-Rocket-1.glb" id="1_utwww"]
 [ext_resource type="AudioStream" uid="uid://bf2mcqvhuhjjo" path="res://assets/sound/sfx/shoot/launch_rocket.wav" id="3_utwww"]
 
 [resource]
@@ -10,5 +10,5 @@ shoot_audio_stream = ExtResource("3_utwww")
 ammo_type_identifier = "explode"
 shoot_delay = 1.7
 item_name = "Snow Shooter Ammo"
-item_model = ExtResource("1_faakv")
+item_model = ExtResource("1_utwww")
 metadata/_custom_type_script = "uid://d4epkoylgw48b"

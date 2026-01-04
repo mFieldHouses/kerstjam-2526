@@ -120,3 +120,7 @@ func initiate_dialog_with(dialog_file_name : String, with : Node3D, conversor_na
 
 func _get_dialog_file_path(file_name : String) -> String:
 	return DefaultPaths.dialog_files_path + ProjectSettings.get_setting("internationalization/locale/test").split("_")[0] + "/" + file_name + ".txt"
+
+func end_dialog() -> void:
+	PersistentUI.dialog_line("", "", null)
+	PersistentUI.remote_dialog_line("", "", null)

@@ -21,8 +21,5 @@ func _explode(body) -> void:
 			_body.hit(_dmg, Vector3.ZERO, 0.0)
 		HitMarkerManager.hit_at(_body.global_position, _dmg, load("res://scenes/particle_effects/santa_gun_hit_standard.tscn"), get_parent())
 	
-	if $explosion:
-		$explosion.play()
-		$explosion.reparent(get_parent())
-	
 	queue_free()
+	

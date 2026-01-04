@@ -4,6 +4,8 @@ var _player_trail_points : Array[PlayerTrailPoint] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	AudioServer.set_bus_effect_enabled(AudioServer.get_bus_index("Sound Effects"), 0, true)
+	
 	SaveFileManager._unlocked_stages.yeti_chase = true
 	
 	_create_new_trail_point(Vector3.ZERO)
@@ -36,6 +38,9 @@ func _create_new_trail_point(at_position : Vector3) -> void:
 	_player_trail_points.append(_new_point)
 	_new_point.wipe_out_from_point.connect(_wipe_trail_from_point.bind(_new_point))
 	_new_point.wipe_out_this_point.connect(_wipe_out_point.bind(_new_point))
+
+func _exit_tree() -> void:
+	AudioServer.set_bus_effect_enabled(AudioServer.get_bus_index("Sound Effects"), 0, false)
 
 func _wipe_trail_from_point(point : PlayerTrailPoint) -> void:
 	var _point_idx : int = _player_trail_points.find(point)

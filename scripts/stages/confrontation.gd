@@ -7,6 +7,8 @@ var _floor_panels_left : Array[Node3D] = []
 
 func _ready() -> void:
 	
+	$start_fight.body_entered.connect($"World/Base_MapLayout/RD-Lab".open_roof.unbind(1))
+	
 	SaveFileManager._unlocked_stages.confrontation = true
 	DialogManager.dialog_queue.connect(dialog_queue)
 	
@@ -62,10 +64,6 @@ func _process(delta: float) -> void:
 
 func _floor_fall(count : int) -> void:
 	for _idx in count:
-		if get_closest_floor_panel_distance() > 3.0 and $player.is_on_floor():
-			print("on island")
-			return
-		
 		var _panel = _floor_panels_left.pick_random()
 		var _tween : Tween = create_tween()
 		_tween.set_trans(Tween.TRANS_QUINT)
@@ -88,9 +86,16 @@ func _fall_single_panel(panel : Node3D, delay : float) -> void:
 	var _tween : Tween = create_tween()
 	_tween.set_trans(Tween.TRANS_QUINT)
 	_tween.set_ease(Tween.EASE_IN)
+	
+	if !panel:
+		return
+	
 	_tween.tween_property(panel, "position:y", -10, 0.75)
 	await _tween.finished
-
+	
+	if !panel:
+		return
+	
 	panel.visible = false
 	panel.reparent(self)
 	panel.queue_free()
@@ -99,7 +104,7 @@ func fireballs(frequency : float, time : float) -> void:
 	for _idx in int(frequency * time):
 		var _new_fireball = preload("res://scenes/fireball.tscn").instantiate()
 		add_child(_new_fireball)
-		var _panel = $floor_panels.get_children().pick_random()
+		var _panel = _floor_panels_left.pick_random()
 		var _pos : Vector3 = _panel.global_position
 		_new_fireball.position = Vector3(_pos.x, 0.126, _pos.z)
 		
@@ -123,7 +128,7 @@ func get_closest_floor_panel_distance() -> float:
 
 func dialog_queue(did : String, qid : String) -> void:
 	if did == "nutcracker_ascend" and qid == "end":
-		SceneManager.launch_menu("credits", true, 3.0)
+		SceneManager.launch_stage("SantaShop-Niels")
 
 
 func _on_fall_area_body_entered(body: Node3D) -> void:

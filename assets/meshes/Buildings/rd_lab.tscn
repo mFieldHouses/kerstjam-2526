@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0fbv1wnisor4"]
+[gd_scene load_steps=3 format=3 uid="uid://flo8i64cabk2"]
 
+[ext_resource type="Script" uid="uid://de78e4v41e1xf" path="res://scripts/rd_lab.gd" id="1_en62c"]
 [ext_resource type="PackedScene" uid="uid://dxs5x5bpr8oun" path="res://assets/meshes/Buildings/RD-1.glb" id="1_mfafg"]
 
 [node name="RD-Lab" type="Node3D"]
+script = ExtResource("1_en62c")
 
 [node name="RD-1" parent="." instance=ExtResource("1_mfafg")]
