@@ -42,7 +42,7 @@ size = Vector3(2, 0.25, 2)
 size = Vector3(66.15405, 1, 56.957275)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ocgb"]
-size = Vector3(20.920898, 7.555786, 19.11499)
+size = Vector3(31.730469, 7.555786, 30.125244)
 
 [node name="confrontation" type="Node3D"]
 script = ExtResource("1_q58n8")

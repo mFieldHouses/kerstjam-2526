@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c623bxbpfwl7k"
-valid=false
+path="res://.godot/imported/NutCracker-1.glb-b66ed48a69144895c1c2cffeffa13a3f.scn"
 
 [deps]
 
 source_file="res://assets/meshes/Enemies/NutCracker-1.glb"
+dest_files=["res://.godot/imported/NutCracker-1.glb-b66ed48a69144895c1c2cffeffa13a3f.scn"]
 
 [params]
 
