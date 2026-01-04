@@ -1,10 +1,11 @@
-[gd_scene load_steps=69 format=4 uid="uid://cklh0pte3sm2y"]
+[gd_scene load_steps=71 format=4 uid="uid://cklh0pte3sm2y"]
 
 [ext_resource type="PackedScene" uid="uid://e11s1uc2rpys" path="res://assets/meshes/SantaShop/Walls/CornerStones-1-04x04x03m.fbx" id="1_js2rw"]
 [ext_resource type="PackedScene" uid="uid://0dys61sp3ccr" path="res://assets/meshes/Misc/ladder.tscn" id="1_qwucj"]
 [ext_resource type="Material" uid="uid://dlkqvf0x4wews" path="res://assets/materials/BrickColor-1.tres" id="2_6vo2e"]
 [ext_resource type="Material" uid="uid://dvcsb58dlj0yy" path="res://assets/materials/BrickColor-2.tres" id="3_jpxid"]
 [ext_resource type="Texture2D" uid="uid://cscdic1nob47s" path="res://assets/textures/walls/Brick-1.png" id="5_vtuc5"]
+[ext_resource type="PackedScene" uid="uid://d7pfkmu3cjbe" path="res://assets/meshes/SantaShop/Decoration/krans_lijn.tscn" id="6_rf2qs"]
 [ext_resource type="PackedScene" uid="uid://c0c88sowfi8qr" path="res://assets/meshes/SantaShop/Walls/Wall-1-2x2x05m.tscn" id="8_vtuc5"]
 [ext_resource type="PackedScene" uid="uid://b3xp6v5lsvndw" path="res://assets/meshes/SantaShop/Walls/Wall-1-45d-2x2x05m.fbx" id="9_mi583"]
 [ext_resource type="PackedScene" uid="uid://bmm3oxaoe3to5" path="res://assets/meshes/Misc/RoofTile-1.glb" id="11_l8l02"]
@@ -20,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://t5k7r1engkkq" path="res://assets/scenes/floors/floor_wood_1.tscn" id="23_eexlg"]
 [ext_resource type="PackedScene" uid="uid://d14kp2nm7cq1v" path="res://assets/meshes/SantaShop/Platforms/Supports/Support-1.glb" id="24_5qfep"]
 [ext_resource type="PackedScene" uid="uid://bjg01dfvdatl2" path="res://assets/meshes/SantaShop/Platforms/Supports/PlatformSupport1-Electric-col.glb" id="25_tkrun"]
-[ext_resource type="Material" path="res://assets/materials/Metal-SteelGreenBlue-1.tres" id="27_x1nh3"]
+[ext_resource type="Material" uid="uid://c1n0fg1gi7d6m" path="res://assets/materials/Metal-SteelGreenBlue-1.tres" id="27_x1nh3"]
 [ext_resource type="PackedScene" uid="uid://bdo60w50wvoit" path="res://assets/meshes/SantaShop/Walls/WallDecoration/Beam-1-Decoration-1.glb" id="29_g0e5h"]
 [ext_resource type="PackedScene" uid="uid://lso2mbdefwrb" path="res://assets/meshes/Misc/Chimney-1.glb" id="29_jpxid"]
 [ext_resource type="PackedScene" uid="uid://2p8ccpuk0532" path="res://assets/meshes/SantaShop/Decoration/sign_arrow_1.tscn" id="30_3umg8"]
@@ -33,23 +34,24 @@
 [ext_resource type="PackedScene" uid="uid://dcolyse4bqfee" path="res://assets/meshes/Misc/WorkBench-1.glb" id="35_7o16b"]
 [ext_resource type="PackedScene" uid="uid://gfxuk4g6ca4e" path="res://assets/meshes/SantaShop/Decoration/Lighting/Ceiling-Lamp-2.glb" id="36_drmql"]
 [ext_resource type="Material" uid="uid://bcu5hcerl3fy" path="res://assets/materials/Ice-3.tres" id="36_mi583"]
-[ext_resource type="Material" path="res://assets/materials/WorkBench-1.tres" id="37_u8rdd"]
+[ext_resource type="Material" uid="uid://q8ibnub1ja58" path="res://assets/materials/WorkBench-1.tres" id="37_u8rdd"]
 [ext_resource type="PackedScene" uid="uid://8v36r6sbpf2p" path="res://assets/meshes/SantaShop/Decoration/Vice-1.glb" id="38_kll50"]
 [ext_resource type="Material" uid="uid://b7n3oi2plbimd" path="res://assets/materials/Black.tres" id="38_mi583"]
 [ext_resource type="Material" uid="uid://cn451fvlr28am" path="res://assets/materials/Metal-SteelRed-1.tres" id="39_nng1t"]
 [ext_resource type="PackedScene" uid="uid://cppumb700vwwr" path="res://assets/meshes/Misc/Stool-1.glb" id="41_lyvan"]
-[ext_resource type="Material" path="res://assets/materials/brown-1.tres" id="42_qf7y7"]
+[ext_resource type="Material" uid="uid://dquf6x7y8mf53" path="res://assets/materials/brown-1.tres" id="42_qf7y7"]
 [ext_resource type="PackedScene" uid="uid://c2idrwdaabkg2" path="res://assets/meshes/SantaShop/Platforms/Platform-1-1x2x02.glb" id="43_hc11k"]
 [ext_resource type="PackedScene" uid="uid://ddp8e2211v4nn" path="res://assets/meshes/SantaShop/Platforms/Platform-2-1x1x02.glb" id="44_fwcjx"]
 [ext_resource type="PackedScene" uid="uid://dwhgagkjgjfux" path="res://assets/meshes/SantaShop/Platforms/Platform-2-1x1x02-EndStop-1.glb" id="45_fow3n"]
 [ext_resource type="Material" uid="uid://c87jc3r11ihwp" path="res://assets/materials/Ice-Sparkle.tres" id="46_a2v0n"]
 [ext_resource type="PackedScene" uid="uid://dcgaosbqiq2ya" path="res://assets/meshes/SantaShop/Platforms/Fence-1.glb" id="47_mhtex"]
 [ext_resource type="PackedScene" uid="uid://dxakl3a78inaa" path="res://assets/meshes/SantaShop/LaunchSystem/launch_system.tscn" id="48_qwucj"]
-[ext_resource type="Material" path="res://assets/materials/Glass-Orange-2.tres" id="48_v86rp"]
+[ext_resource type="Material" uid="uid://ce4huh81528hv" path="res://assets/materials/Glass-Orange-2.tres" id="48_v86rp"]
 [ext_resource type="PackedScene" uid="uid://c5sao4uo5graf" path="res://assets/meshes/SantaShop/Decoration/Computers/Computer-1.glb" id="49_xj4t7"]
 [ext_resource type="PackedScene" uid="uid://dsyhlw5qw1yn8" path="res://assets/meshes/SantaShop/Decoration/Computers/computer_4.tscn" id="51_0gs78"]
 [ext_resource type="PackedScene" uid="uid://cgd6m2bp1ktg0" path="res://assets/meshes/Misc/krans_1.tscn" id="51_1bisa"]
 [ext_resource type="PackedScene" uid="uid://coqgbgox4wuqd" path="res://scenes/elements/SmallWoodenSupportedRoof-1.tscn" id="52_1bisa"]
+[ext_resource type="PackedScene" uid="uid://dhdrnnh5dix1i" path="res://assets/meshes/SantaShop/Decoration/Computers/computer_5.tscn" id="52_l8l02"]
 [ext_resource type="PackedScene" uid="uid://cjaryyad2lvnx" path="res://assets/meshes/SantaShop/Windows/window_tall_1.tscn" id="52_vtuc5"]
 [ext_resource type="PackedScene" uid="uid://cogmnnofnvcg3" path="res://assets/meshes/SantaShop/Decoration/lamp_hanging_ceiling_1.tscn" id="53_1helu"]
 [ext_resource type="PackedScene" uid="uid://cou4ahx653a70" path="res://assets/meshes/SantaShop/Walls/wall_1_door_corner_1.tscn" id="53_qwucj"]
@@ -489,14 +491,29 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 19, 
 [node name="Wall-1-45d-2x2x05m20" parent="SantasShop/Structure/Walls" instance=ExtResource("9_mi583")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.75, 8, 0.75)
 
+[node name="Cube_039" parent="SantasShop/Structure/Walls/Wall-1-45d-2x2x05m20" index="0"]
+surface_material_override/0 = ExtResource("3_jpxid")
+
 [node name="Wall-1-45d-2x2x05m22" parent="SantasShop/Structure/Walls" instance=ExtResource("9_mi583")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.75, 9.945436, 2.75)
+
+[node name="Cube_039" parent="SantasShop/Structure/Walls/Wall-1-45d-2x2x05m22" index="0"]
+surface_material_override/0 = ExtResource("3_jpxid")
 
 [node name="Wall-1-45d-2x2x05m21" parent="SantasShop/Structure/Walls" instance=ExtResource("9_mi583")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 8, 12.75)
 
+[node name="Cube_039" parent="SantasShop/Structure/Walls/Wall-1-45d-2x2x05m21" index="0"]
+surface_material_override/0 = ExtResource("3_jpxid")
+
 [node name="Wall-1-45d-2x2x05m23" parent="SantasShop/Structure/Walls" instance=ExtResource("9_mi583")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 10, 10.75)
+
+[node name="Cube_039" parent="SantasShop/Structure/Walls/Wall-1-45d-2x2x05m23" index="0"]
+surface_material_override/0 = ExtResource("3_jpxid")
+
+[node name="Krans-Lijn" parent="SantasShop/Structure/Walls/Wall-1-45d-2x2x05m23" instance=ExtResource("6_rf2qs")]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -0.25, -2, -4.440957)
 
 [node name="Wall-1-45d-2x2x05m5" parent="SantasShop/Structure/Walls" instance=ExtResource("9_mi583")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.75, 4, -5.25)
@@ -762,6 +779,15 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.7
 
 [node name="Wall-1-2x2x05m104" parent="SantasShop/Structure/Walls/New_Walls/MainBuilding" instance=ExtResource("8_vtuc5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75, 7, 4.75)
+
+[node name="Wall-1-2x2x05m127" parent="SantasShop/Structure/Walls/New_Walls/MainBuilding" instance=ExtResource("8_vtuc5")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75, 9, 8.75)
+
+[node name="Wall-1-2x2x05m128" parent="SantasShop/Structure/Walls/New_Walls/MainBuilding" instance=ExtResource("8_vtuc5")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75, 9, 6.75)
+
+[node name="Wall-1-2x2x05m129" parent="SantasShop/Structure/Walls/New_Walls/MainBuilding" instance=ExtResource("8_vtuc5")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75, 9, 4.75)
 
 [node name="Wall-1-2x2x05m105" parent="SantasShop/Structure/Walls/New_Walls/MainBuilding" instance=ExtResource("8_vtuc5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.75, 7, 2.75)
@@ -2668,64 +2694,64 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 
 [node name="Floor-Wood-31" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-42" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-43" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-44" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-45" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-46" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-47" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-48" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-49" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-32" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-33" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-34" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-35" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-36" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-37" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-38" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-39" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-40" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.014534, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.014534, 0.034901325, 0.35031933)
 
 [node name="Floor-Wood-41" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 2" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.014533997, 0.26469174, 0.35031933)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.014533997, 0.034901325, 0.35031933)
 
 [node name="Row 3" type="Node3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.27979043, 1)
 
 [node name="Floor-Wood-31" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 3" instance=ExtResource("23_eexlg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.26469174, 0.35031933)
@@ -2785,7 +2811,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.01
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.014533997, 0.26469174, 0.35031933)
 
 [node name="Row 4" type="Node3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.27979043, 2)
 
 [node name="Floor-Wood-31" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 4" instance=ExtResource("23_eexlg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.26469174, 0.35031933)
@@ -2887,7 +2913,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.01
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.014533997, 0.26469174, 0.35031933)
 
 [node name="Row 5" type="Node3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 13)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.27979043, 13)
 
 [node name="Floor-Wood-31" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 5" instance=ExtResource("23_eexlg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.26469174, 0.35031933)
@@ -2947,7 +2973,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.01
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.014533997, 0.26469174, 0.35031933)
 
 [node name="Row 6" type="Node3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.27979043, 12)
 
 [node name="Floor-Wood-31" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 6" instance=ExtResource("23_eexlg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.26469174, 0.35031933)
@@ -3007,7 +3033,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.01
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.014533997, 0.26469174, 0.35031933)
 
 [node name="Row 7" type="Node3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.27979043, 11)
 
 [node name="Floor-Wood-31" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 7" instance=ExtResource("23_eexlg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.26469174, 0.35031933)
@@ -3067,7 +3093,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.01
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.014533997, 0.26469174, 0.35031933)
 
 [node name="Row 8" type="Node3D" parent="SantasShop/Structure/Floors/Floor-LargeShop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.27979043, 10)
 
 [node name="Floor-Wood-31" parent="SantasShop/Structure/Floors/Floor-LargeShop/Row 8" instance=ExtResource("23_eexlg")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.26469174, 0.35031933)
@@ -3129,94 +3155,94 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.01
 [node name="FloorWorkshop" type="Node3D" parent="SantasShop/Structure/Floors"]
 
 [node name="Floor-Wood-1" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.014534, 0.26469174, -0.6496807)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.014534, 0.039964765, -0.6496807)
 
 [node name="Floor-Wood-4" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.014534, 0.26469174, -1.6496806)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.014534, 0.039964765, -1.6496806)
 
 [node name="Floor-Wood-2" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.014534, 0.26469174, -0.6496807)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.014534, 0.039964765, -0.6496807)
 
 [node name="Floor-Wood-7" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.014534, 0.26469174, -1.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.014534, 0.039964765, -1.6496806)
 
 [node name="Floor-Wood-8" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.014534, 0.26469174, -1.6496806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.014534, 0.039964765, -1.6496806)
 
 [node name="Floor-Wood-9" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.014534, 0.26469174, -1.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.014534, 0.039964765, -1.6496806)
 
 [node name="Floor-Wood-10" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.014534, 0.26469174, -1.6496806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.014534, 0.039964765, -1.6496806)
 
 [node name="Floor-Wood-11" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.014534, 0.26469174, -3.6496806)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.014534, 0.039964765, -3.6496806)
 
 [node name="Floor-Wood-12" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.014534, 0.26469174, -3.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.014534, 0.039964765, -3.6496806)
 
 [node name="Floor-Wood-13" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.014534, 0.26469174, -3.6496806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.014534, 0.039964765, -3.6496806)
 
 [node name="Floor-Wood-14" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.014534, 0.26469174, -3.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.014534, 0.039964765, -3.6496806)
 
 [node name="Floor-Wood-15" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.014534, 0.26469174, -3.6496806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.014534, 0.039964765, -3.6496806)
 
 [node name="Floor-Wood-16" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.014534, 0.26469174, -5.6496806)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.014534, 0.039964765, -5.6496806)
 
 [node name="Floor-Wood-17" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.014534, 0.26469174, -5.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.014534, 0.039964765, -5.6496806)
 
 [node name="Floor-Wood-18" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.014534, 0.26469174, -5.6496806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.014534, 0.039964765, -5.6496806)
 
 [node name="Floor-Wood-19" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.014534, 0.26469174, -5.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.014534, 0.039964765, -5.6496806)
 
 [node name="Floor-Wood-20" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.014534, 0.26469174, -5.6496806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.014534, 0.039964765, -5.6496806)
 
 [node name="Floor-Wood-3" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.26469174, -0.6496807)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.039964765, -0.6496807)
 
 [node name="Floor-Wood-5" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.014534, 0.26469174, -0.6496807)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.014534, 0.039964765, -0.6496807)
 
 [node name="Floor-Wood-6" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.014534, 0.26469174, -0.6496807)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.014534, 0.039964765, -0.6496807)
 
 [node name="Floor-Wood-21" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.014534, 0.26469174, -2.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.014534, 0.039964765, -2.6496806)
 
 [node name="Floor-Wood-22" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.014534, 0.26469174, -2.6496806)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.014534, 0.039964765, -2.6496806)
 
 [node name="Floor-Wood-23" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.26469174, -2.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.039964765, -2.6496806)
 
 [node name="Floor-Wood-24" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.014534, 0.26469174, -2.6496806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.014534, 0.039964765, -2.6496806)
 
 [node name="Floor-Wood-25" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.014534, 0.26469174, -2.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.014534, 0.039964765, -2.6496806)
 
 [node name="Floor-Wood-26" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.014534, 0.26469174, -4.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.014534, 0.039964765, -4.6496806)
 
 [node name="Floor-Wood-27" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.014534, 0.26469174, -4.6496806)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 9.014534, 0.039964765, -4.6496806)
 
 [node name="Floor-Wood-28" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.26469174, -4.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.014534, 0.039964765, -4.6496806)
 
 [node name="Floor-Wood-29" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.014534, 0.26469174, -4.6496806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.014534, 0.039964765, -4.6496806)
 
 [node name="Floor-Wood-30" parent="SantasShop/Structure/Floors/FloorWorkshop" instance=ExtResource("23_eexlg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.014534, 0.26469174, -4.6496806)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.014534, 0.039964765, -4.6496806)
 
 [node name="Platforms" type="Node3D" parent="SantasShop/Structure"]
 
@@ -3461,13 +3487,13 @@ transform = Transform3D(1, 0, 0, 0, 0.99533075, 0.09652328, 0, -0.09652328, 0.99
 transform = Transform3D(-4.3711385e-08, 0, 1.0000001, 0, 1, 0, -0.9999999, 0, -4.3711392e-08, 10.015937, 1.9240263, 0.29843104)
 
 [node name="Table-Square-1" parent="SantasShop/Decoration" instance=ExtResource("32_3nrxj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.25749612, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.038903326, -3)
 
 [node name="Mok-12" parent="SantasShop/Decoration" instance=ExtResource("33_4dfml")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.764524, 0.8035081, -3.258751)
 
 [node name="Mok-1" parent="SantasShop/Decoration/Mok-12" index="0"]
-transform = Transform3D(0.06942609, 0, -0.02165771, 0, 0.07272577, 0, 0.02165771, 0, 0.06942609, 0, 0, -0.45478535)
+transform = Transform3D(0.06942609, 0, -0.02165771, 0, 0.07272577, 0, 0.02165771, 0, 0.06942609, 0, -0.45323277, -0.45478535)
 surface_material_override/0 = SubResource("StandardMaterial3D_o3lkp")
 
 [node name="Decal" type="Decal" parent="SantasShop/Decoration/Mok-12/Mok-1" index="0"]
@@ -4462,11 +4488,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2, 5.216126, 7)
 [node name="Computer-4" parent="SantasShop/Platforms/Computers" instance=ExtResource("51_0gs78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.336712, 5.447607, 4.9507647)
 
+[node name="Computer-5" parent="SantasShop/Platforms/Computers" instance=ExtResource("51_0gs78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.336712, 5.447607, 8.499215)
+
+[node name="Computer-6" parent="SantasShop/Platforms/Computers" instance=ExtResource("51_0gs78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.336712, 5.447607, 9.079586)
+
 [node name="Computer-2" parent="SantasShop/Platforms/Computers" instance=ExtResource("56_mi583")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.50258, 5.41166, 6.177593)
 
 [node name="Computer-3" parent="SantasShop/Platforms/Computers" instance=ExtResource("57_0gs78")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.515839, 5.432577, 5.675341)
+
+[node name="Computer-7" parent="SantasShop/Platforms/Computers" instance=ExtResource("52_l8l02")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 15.329247, 5.439186, 6.7839427)
+
+[node name="Computer-9" parent="SantasShop/Platforms/Computers" instance=ExtResource("52_l8l02")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 15.329247, 5.439186, 6.2844763)
+
+[node name="Computer-8" parent="SantasShop/Platforms/Computers" instance=ExtResource("52_l8l02")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 15.329247, 5.439186, 7.2841187)
 
 [node name="LaunchPlatform" type="Node3D" parent="SantasShop"]
 
@@ -4564,6 +4605,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.509178, 5.4053507, 3.74578
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m59"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m60"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m61"]
+[editable path="SantasShop/Structure/Walls/Wall-1-45d-2x2x05m20"]
+[editable path="SantasShop/Structure/Walls/Wall-1-45d-2x2x05m22"]
+[editable path="SantasShop/Structure/Walls/Wall-1-45d-2x2x05m21"]
+[editable path="SantasShop/Structure/Walls/Wall-1-45d-2x2x05m23"]
 [editable path="SantasShop/Structure/Floors/Wood-Floor-1-Workshop"]
 [editable path="SantasShop/Structure/Floors/Wood-Floor-1-Workshop/Plint-12"]
 [editable path="SantasShop/Decoration/Mok-12"]
