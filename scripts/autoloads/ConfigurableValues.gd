@@ -14,9 +14,22 @@ var invert_weapon_selection_scroll : bool = false
 var low_graphics_mode : bool = false
 
 @export_group("Audial")
-@export_range(0.1, 5.0, 0.01) var environment_volume : float = 1.0
-@export_range(0.1, 5.0, 0.01) var sfx_volume : float = 1.0
-@export_range(0.1, 5.0, 0.01) var music_volume : float = 1.0
+@export_range(0.0, 5.0, 0.01) var environment_volume : float = 1.0:
+	set(x):
+		environment_volume = x
+		_update_audio_levels()
+@export_range(0.0, 5.0, 0.01) var sfx_volume : float = 1.0:
+	set(x):
+		sfx_volume = x
+		_update_audio_levels()
+@export_range(0.0, 5.0, 0.01) var music_volume : float = 1.0:
+	set(x):
+		music_volume = x
+		_update_audio_levels()
+@export_range(0.0, 5.0, 0.01) var master_volume : float = 1.0:
+	set(x):
+		master_volume = x
+		_update_audio_levels()
 
 func _ready() -> void:
 	var _save_data : Dictionary = SaveFileManager.retrieve_save_data()
@@ -60,3 +73,9 @@ func get_configurable_values() -> Dictionary[String, Array]:
 			_result.erase(_group)
 	
 	return _result
+
+func _update_audio_levels() -> void:
+	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Master"), master_volume)
+	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Environment"), environment_volume)
+	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Sound Effects"), sfx_volume)
+	AudioServer.set_bus_volume_linear(AudioServer.get_bus_index("Music"), music_volume)

@@ -447,8 +447,10 @@ data = ExtResource("17_4xwuc")
 [node name="wind" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_4co2b")
 autoplay = true
+bus = &"Environment"
 
 [node name="music" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
 script = ExtResource("15_4co2b")
 intro_stream = ExtResource("15_isx6m")
 loop_stream = SubResource("AudioStreamWAV_isx6m")

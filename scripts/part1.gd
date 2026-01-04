@@ -1,10 +1,10 @@
-extends MeshInstance3D
+extends Node3D
 
 var found : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_child(0).toggle.connect(_trigger)
+	get_node("AreaTrigger").toggle.connect(_trigger)
 
 func _trigger(x,y) -> void:
 	if found:
