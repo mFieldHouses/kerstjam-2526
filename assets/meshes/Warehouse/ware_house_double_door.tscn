@@ -240,7 +240,7 @@ shadow_mesh = SubResource("ArrayMesh_yq4ej")
 [node name="WareHouse_DoubleDoor" type="Node3D"]
 
 [node name="Cube_159" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 1.640861, 2.9894567, -0.37243938)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 1.1192513, 2.4912138, 0.07028961)
 mesh = SubResource("ArrayMesh_xeqvn")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_ijsqa")
@@ -252,7 +252,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_ftytv")
 
 [node name="Cube_490" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.6121914, 2.9894567, -0.37243938)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -1.5916255, 2.4912138, 0.07028961)
 mesh = SubResource("ArrayMesh_p1m8c")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_ijsqa")
@@ -264,19 +264,19 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_ftytv")
 
 [node name="Cube_492" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.086396575, 6.4018664, 0.8775501)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -0.17613578, 5.334888, 1.111948)
 mesh = SubResource("ArrayMesh_av5m2")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("3_tyn66")
 
 [node name="Cube_493" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.711001, 7.3485236, 0.29076576)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -3.3406334, 6.2528114, 0.62296104)
 mesh = SubResource("ArrayMesh_wr540")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("4_ps03u")
 
 [node name="Cube_494" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3.4911542, 7.3485236, 0.29076576)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 2.6611624, 6.2528114, 0.62296104)
 mesh = SubResource("ArrayMesh_swd4y")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("4_ps03u")

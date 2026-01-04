@@ -271,7 +271,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.033905, -0.124572754)
 shape = SubResource("BoxShape3D_vwg43")
 
 [node name="WareHouse_DoubleDoor" parent="large_doorway" instance=ExtResource("12_k2at1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.183309, 0.46652222)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.183309, 0.076797485)
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.0907173, 10.6228895, -20.825703)
