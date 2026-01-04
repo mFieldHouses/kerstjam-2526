@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_txjfn"]
 [ext_resource type="Texture2D" uid="uid://wpbcu5ni4v05" path="res://assets/textures/debug/editor_grid.png" id="2_q8etp"]
 [ext_resource type="PackedScene" uid="uid://cqtj3st2qdnea" path="res://assets/scenes/Characters/Enemies/nutcracker_eindbaas.tscn" id="6_06wq0"]
-[ext_resource type="PackedScene" uid="uid://flo8i64cabk2" path="res://assets/meshes/Buildings/rd_lab.tscn" id="7_7ocgb"]
+[ext_resource type="PackedScene" uid="uid://b0fbv1wnisor4" path="res://assets/meshes/Buildings/rd_lab.tscn" id="7_7ocgb"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_jyk3o"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="10_fbhbk"]
 
@@ -82,13 +82,13 @@ layout_mode = 2
 size_flags_horizontal = 0
 
 [node name="player" parent="." instance=ExtResource("1_txjfn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.372904, 6.0445967)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.080839, 58.5353)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_28ucp")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.7800856, 0)
 navigation_mesh = SubResource("NavigationMesh_2rhon")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -116,6 +116,7 @@ metadata/_custom_type_script = "uid://b7dvxli4hd1ni"
 shape = SubResource("BoxShape3D_q58n8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor_panels/floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.9148893, 0)
 mesh = SubResource("BoxMesh_06wq0")
 
 [node name="Nutcracker_Eindbaas" parent="." instance=ExtResource("6_06wq0")]
@@ -135,10 +136,14 @@ shape = SubResource("BoxShape3D_06wq0")
 [node name="World" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
 
+[node name="Template" type="Node3D" parent="World"]
+
 [node name="Base_MapLayout" type="Node3D" parent="World"]
 
 [node name="RD-Lab" parent="World/Base_MapLayout" instance=ExtResource("7_7ocgb")]
 transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, -0.102264404, -11.765558, 57.523003)
+
+[node name="Mountains" type="Node3D" parent="World"]
 
 [node name="start_fight" type="Area3D" parent="."]
 collision_layer = 0
