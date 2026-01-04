@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://1k78qshb7ndh"]
+
+[ext_resource type="PackedScene" uid="uid://c6tqvwsm1bxpu" path="res://assets/meshes/Warehouse/Walls/BackWall_Top_Lift_1.glb" id="1_5335o"]
+[ext_resource type="Material" uid="uid://dquf6x7y8mf53" path="res://assets/materials/brown-1.tres" id="2_kydqc"]
+
+[node name="BackWall_Top_Lift_1" type="Node3D"]
+
+[node name="BackWall_Top_Lift_12" parent="." instance=ExtResource("1_5335o")]
+
+[node name="BackWall_Top_Lift_1_001" parent="BackWall_Top_Lift_12" index="0"]
+surface_material_override/0 = ExtResource("2_kydqc")
+
+[editable path="BackWall_Top_Lift_12"]

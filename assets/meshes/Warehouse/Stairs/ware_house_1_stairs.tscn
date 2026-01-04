@@ -1,0 +1,3541 @@
+[gd_scene load_steps=8 format=4 uid="uid://bquoalbeovu3v"]
+
+[ext_resource type="Material" uid="uid://btnls0um24u2i" path="res://assets/meshes/SantaShop/Platforms/Platform-2-TexturePainted.tres" id="1_oaqix"]
+[ext_resource type="Material" uid="uid://cvarxu01aloq7" path="res://assets/materials/Metal-Grate.tres" id="2_u2xh4"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_askgi"]
+_surfaces = [{
+"aabb": AABB(-0.5, 7.450581e-09, -0.50000006, 1, 0.20000002, 1),
+"format": 34896613377,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAADAAQABQADAAAABQAGAAMAAgAFAAAAAAAEAAcAAAAHAAEABwAEAAgACQAIAAYABwAIAAkACQAGAAUABwAKAAEABwAJAAoACQAFAAsACQALAAoAAgALAAUACgAMAAEAAQANAAIAAQAMAA0ACgAOAAwACwAOAAoADAAPAA0ADAAQAA8ADgAQAAwADQAPABEADgASABAAAgANABMADQARABMAAgATAAsAEwARABIACwATAA4AEwASAA4A"),
+"name": "Platform-2-TexturePainted",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAfhEAAIDuAAB+EQAAfhEAAP//AAD//wAAgO4AAIDuAAAAAAAAAAAAAIDuAAB+EQAA//8AAAAAAAD/////AAAAAP///////wAA2RCP/dkQAADZEI/9Je8AACXvj/3ZEAAA2RAAACXvAADZEAAA2RAAACXvAAAl7wAAJe8AANkQAAAl74/9Je8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_skmg2"]
+resource_name = "Platform-2-1x1x02_Cube_001"
+_surfaces = [{
+"aabb": AABB(-0.5, 7.450581e-09, -0.50000006, 1, 0.20000002, 1),
+"attribute_data": PackedByteArray("gsoLny63ev8utwufgsp6/4LKkj0utwGeLreSPYLKAZ6My3r/4d4Mn+Heev+MywyfhAB6/89aHfksYXr/z1ovpeEGHfksYdKehADSnuEGL6WEACE9Hwctl4QAyJ2RWi2XHwe8QyxhyJ0sYSE9kVq8Q+HelT2MywKejMuVPeHeAp7q3/ZWEPOzqurfs6oQ8/ZW6t8wAhDz7FXq3+xVEPMwAurfvasQ83r/6t96/xDzvas2Ys0BW3WKVTZiilVbdc0B"),
+"format": 34896613399,
+"index_count": 96,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADgANAA8ADAAQAA0ADgAPABEAEgAQAAwAEQAPABMAEgATABAAEQATABIAFAAVABYAFgAVABcAFAAYABUAFgAXABkAGgAYABQAGQAXABsAGgAbABgAGQAbABoAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
+"material": ExtResource("1_oaqix"),
+"name": "Platform-2-TexturePainted",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD//wAA//////+///8AAP///78AAAAA////v/////////+/////////AtYl74/92RBU1f////8AAFTV2RCP/dkQp9Ql74/9Je8C1gAA//8AAKfUAAD/////VNXZEI/9Je9U1f//AAD//1TVfhEAAIDuVNUAAAAA//9U1X4RAAB+EVTVgO4AAIDuVNUAAAAAAABU1f//AAAAAFTVgO4AAH4RVNX//wAAAABU1f///////1TV/////wAAVNX//wAA//9U1dkQj/0l7///Je8AACXv//8l74/9Je///9kQAAAl7///Je+P/dkQ/7/ZEAAA2RD/v9kQj/3ZEP+/Je8AANkQ/78l74/9Je9U1SXvAADZEFTVJe+P/dkQVNUl7wAAJe9U1dkQj/3ZEFTV2RAAACXvVNXZEI/9Je9U1dkQAADZEFTVVFWqqlRVqqpUVaqqVFWqqv8//7//P/+//z//v/8//7//f/9//3//f/9//3//f/9/iNUSK/LVqyry1asqH9VAKojVEisf1UAqt9SrKrfUqypVVVRVVVVUVVVVVFVVVVRVVVVUVVVVVFVUVVVVVFVVVaqqVVWqqlVVqqpUVaqqVVX/P/+//z//v/8//7//P/+//3//f/9//3//f/9//3//f1RVqapUVamqVFWpqlRVqqqqqlRVqqpUVaqqVFWqqlRV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_askgi")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1y2g0"]
+size = Vector3(1, 0.21118164, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vdj53"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "baked",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_13vaf"]
+resource_name = "Platform-2-1x1x02_Plane"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAA=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": ExtResource("2_u2xh4"),
+"name": "baked",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP///7///wAAAAD/v///AAD///+/AAAAAAAA/7////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vdj53")
+
+[node name="WareHouse-1-Stairs" type="Node3D"]
+
+[node name="Platform-2-1x1x02" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x02"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x02/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x02/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x02"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x02"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x02/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x02/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x02"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x03" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 0.36364228, 0.15044513, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x03"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x03/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x03/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x03"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x03"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x03/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x03/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x03"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x04" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x04"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x04/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x04/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x04"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x04"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x04/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x04/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x04"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x05" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 0.36364228, 0.15044513, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x05"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x05/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x05/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x05"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x05"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x05/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x05/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x05"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x06" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 0.7645247, 0.3078856, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x06"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x06/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x06/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x06"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x06"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x06/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x06/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x06"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x07" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 1.1281669, 0.45833072, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x07"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x07/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x07/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x07"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x07"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x07/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x07/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x07"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x08" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 0.7645247, 0.3078856, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x08"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x08/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x08/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x08"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x08"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x08/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x08/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x08"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x09" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 1.1281669, 0.45833072, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x09"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x09/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x09/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x09"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x09"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x09/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x09/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x09"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x10" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 1.5290493, 0.615771, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x10"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x10/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x10/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x10"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x10"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x10/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x10/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x10"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x11" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 1.8926916, 0.76621616, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x11"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x11/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x11/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x11"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x11"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x11/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x11/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x11"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x12" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 1.5290493, 0.615771, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x12"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x12/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x12/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x12"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x12"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x12/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x12/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x12"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x13" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 1.8926916, 0.76621616, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x13"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x13/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x13/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x13"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x13"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x13/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x13/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x13"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x14" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 2.2935739, 0.9236566, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x14"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x14/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x14/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x14"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x14"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x14/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x14/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x14"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x15" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 2.657216, 1.0741017, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x15"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x15/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x15/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x15"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x15"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x15/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x15/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x15"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x16" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 2.2935739, 0.9236566, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x16"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x16/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x16/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x16"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x16"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x16/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x16/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x16"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x17" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 2.657216, 1.0741017, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x17"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x17/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x17/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x17"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x17"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x17/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x17/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x17"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x18" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 3.0511804, 1.259217, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x18"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x18/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x18/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x18"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x18"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x18/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x18/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x18"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x19" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 3.4148226, 1.4096621, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x19"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x19/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x19/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x19"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x19"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x19/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x19/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x19"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x20" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 3.0511804, 1.259217, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x20"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x20/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x20/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x20"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x20"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x20/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x20/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x20"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x21" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 3.4148226, 1.4096621, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x21"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x21/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x21/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x21"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x21"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x21/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x21/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x21"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x22" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 3.815705, 1.5671027, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x22"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x22/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x22/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x22"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x22"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x22/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x22/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x22"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x23" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 4.179347, 1.7175478, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x23"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x23/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x23/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x23"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x23"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x23/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x23/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x23"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x24" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 3.815705, 1.5671027, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x24"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x24/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x24/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x24"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x24"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x24/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x24/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x24"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x25" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 4.179347, 1.7175478, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x25"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x25/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x25/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x25"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x25"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x25/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x25/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x25"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x26" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 4.5802298, 1.8749881, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x26"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x26/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x26/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x26"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x26"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x26/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x26/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x26"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x27" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 4.943872, 2.025433, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x27"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x27/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x27/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x27"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x27"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x27/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x27/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x27"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x28" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 4.5802298, 1.8749881, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x28"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x28/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x28/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x28"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x28"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x28/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x28/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x28"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x29" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 4.943872, 2.025433, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x29"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x29/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x29/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x29"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x29"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x29/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x29/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x29"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x30" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 5.344754, 2.1828737, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x30"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x30/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x30/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x30"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x30"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x30/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x30/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x30"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x31" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 5.7083964, 2.3333187, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x31"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x31/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x31/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x31"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x31"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x31/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x31/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x31"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x32" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 5.344754, 2.1828737, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x32"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x32/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x32/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x32"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x32"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x32/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x32/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x32"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x33" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 5.7083964, 2.3333187, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x33"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x33/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x33/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x33"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x33"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x33/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x33/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x33"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x34" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 6.09957, 2.5132499, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x34"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x34/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x34/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x34"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x34"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x34/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x34/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x34"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x35" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 6.463212, 2.663695, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x35"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x35/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x35/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x35"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x35"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x35/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x35/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x35"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x36" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 6.09957, 2.5132499, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x36"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x36/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x36/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x36"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x36"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x36/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x36/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x36"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x37" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 6.463212, 2.663695, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x37"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x37/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x37/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x37"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x37"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x37/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x37/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x37"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x38" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 6.8640947, 2.8211355, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x38"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x38/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x38/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x38"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x38"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x38/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x38/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x38"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x39" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 7.2277365, 2.9715807, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x39"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x39/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x39/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x39"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x39"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x39/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x39/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x39"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x40" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 6.8640947, 2.8211355, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x40"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x40/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x40/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x40"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x40"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x40/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x40/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x40"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x41" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 7.2277365, 2.9715807, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x41"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x41/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x41/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x41"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x41"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x41/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x41/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x41"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x42" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 7.628619, 3.129021, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x42"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x42/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x42/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x42"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x42"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x42/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x42/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x42"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x43" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 7.9922614, 3.2794662, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x43"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x43/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x43/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x43"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x43"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x43/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x43/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x43"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x44" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 7.628619, 3.129021, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x44"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x44/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x44/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x44"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x44"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x44/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x44/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x44"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x45" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 7.9922614, 3.2794662, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x45"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x45/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x45/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x45"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x45"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x45/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x45/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x45"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x46" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 8.393144, 3.4369066, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x46"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x46/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x46/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x46"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x46"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x46/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x46/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x46"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x47" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 8.756786, 3.5873518, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x47"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x47/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x47/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x47"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x47"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x47/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x47/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x47"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x48" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 8.393144, 3.4369066, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x48"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x48/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x48/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x48"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x48"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x48/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x48/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x48"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x49" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 8.756786, 3.5873518, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x49"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x49/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x49/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x49"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x49"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x49/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x49/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x49"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x50" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 9.15075, 3.7724671, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x50"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x50/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x50/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x50"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x50"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x50/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x50/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x50"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x51" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 9.514393, 3.9229121, 0)
+
+[node name="Platform-2-1x1x52" type="Node3D" parent="."]
+transform = Transform3D(0.3532536, 0, 0, 0, 0.38017416, 0, 0, 0, 1, 9.15075, 3.7724671, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x52"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x52/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x52/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x52"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x52"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x52/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x52/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x52"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x55" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, -0.6857811, 4.873976, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x55"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.3283064e-08, 1, 0, 0, 0, 1, 0.02254343, 6.3331003, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x55/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x55/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x55"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -8.8475645e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.02254343, 6.5014944, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x55"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.3283064e-08, 1, 0, 0, 0, 1, 0.02254343, 6.3331003, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x55/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x55/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x55"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -8.8475645e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.02254343, 6.5014944, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x56" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, -0.29463685, 4.8306675, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x56"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.2817403e-08, 1, 0, 0, 0, 1, 0.024802685, 6.046797, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x56/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x56/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x56"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -8.614734e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.024802148, 6.215189, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x56"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.2817403e-08, 1, 0, 0, 0, 1, 0.024802685, 6.046797, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x56/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x56/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x56"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -8.614734e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.024802148, 6.215189, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x57" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, -0.6857811, 4.873976, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x57"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.3283064e-08, 1, 0, 0, 0, 1, 0.02254343, 6.3331003, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x57/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x57/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x57"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -8.8475645e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.02254343, 6.5014944, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x57"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.3283064e-08, 1, 0, 0, 0, 1, 0.02254343, 6.3331003, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x57/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x57/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x57"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -8.8475645e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.02254343, 6.5014944, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x58" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, -0.29463685, 4.8306675, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x58"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.2817403e-08, 1, 0, 0, 0, 1, 0.024802685, 6.046797, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x58/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x58/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x58"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -8.614734e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.024802148, 6.215189, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x58"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.2817403e-08, 1, 0, 0, 0, 1, 0.024802685, 6.046797, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x58/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x58/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x58"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -8.614734e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.024802148, 6.215189, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x59" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 0.13251294, 4.7755513, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x59"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.142042e-08, 1, 0, 0, 0, 1, 0.026928008, 5.777334, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x59/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x59/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x59"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.916242e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.02692771, 5.945719, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x59"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.142042e-08, 1, 0, 0, 0, 1, 0.026928008, 5.777334, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x59/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x59/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x59"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.916242e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.02692771, 5.945719, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x60" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 0.5236567, 4.7322426, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x60"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.0954758e-08, 1, 0, 0, 0, 1, 0.029319406, 5.474185, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x60/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x60/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x60"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.683411e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.029319644, 5.6425714, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x60"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.0954758e-08, 1, 0, 0, 0, 1, 0.029319406, 5.474185, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x60/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x60/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x60"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.683411e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.029319644, 5.6425714, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x61" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 0.13251294, 4.7755513, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x61"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.142042e-08, 1, 0, 0, 0, 1, 0.026928008, 5.777334, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x61/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x61/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x61"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.916242e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.02692771, 5.945719, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x61"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.142042e-08, 1, 0, 0, 0, 1, 0.026928008, 5.777334, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x61/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x61/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x61"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.916242e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.02692771, 5.945719, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x62" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 0.5236567, 4.7322426, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x62"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.0954758e-08, 1, 0, 0, 0, 1, 0.029319406, 5.474185, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x62/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x62/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x62"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.683411e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.029319644, 5.6425714, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x62"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.0954758e-08, 1, 0, 0, 0, 1, 0.029319406, 5.474185, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x62/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x62/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x62"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.683411e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.029319644, 5.6425714, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x63" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 0.950806, 4.677127, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x63"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.0023435e-08, 1, 0, 0, 0, 1, 0.031444788, 5.204686, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x63/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x63/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x63"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.21775e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.031445265, 5.3730783, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x63"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.0023435e-08, 1, 0, 0, 0, 1, 0.031444788, 5.204686, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x63/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x63/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x63"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.21775e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.031445265, 5.3730783, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x64" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 1.3419502, 4.6338177, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x64"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.9092113e-08, 1, 0, 0, 0, 1, 0.033438206, 4.9520674, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x64/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x64/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x64"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.9849193e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.033438683, 5.1204576, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x64"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.9092113e-08, 1, 0, 0, 0, 1, 0.033438206, 4.9520674, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x64/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x64/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x64"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.9849193e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.033438683, 5.1204576, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x65" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 0.950806, 4.677127, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x65"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.0023435e-08, 1, 0, 0, 0, 1, 0.031444788, 5.204686, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x65/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x65/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x65"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.21775e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.031445265, 5.3730783, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x65"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.0023435e-08, 1, 0, 0, 0, 1, 0.031444788, 5.204686, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x65/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x65/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x65"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -7.21775e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.031445265, 5.3730783, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x66" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 1.3419502, 4.6338177, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x66"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.9092113e-08, 1, 0, 0, 0, 1, 0.033438206, 4.9520674, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x66/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x66/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x66"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.9849193e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.033438683, 5.1204576, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x66"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.9092113e-08, 1, 0, 0, 0, 1, 0.033438206, 4.9520674, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x66/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x66/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x66"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.9849193e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.033438683, 5.1204576, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x67" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 1.7690992, 4.578702, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x67"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.816079e-08, 1, 0, 0, 0, 1, 0.03529787, 4.7162724, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x67/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x67/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x67"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.7520887e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.035298347, 4.8846626, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x67"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.816079e-08, 1, 0, 0, 0, 1, 0.03529787, 4.7162724, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x67/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x67/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x67"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.7520887e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.035298347, 4.8846626, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x68" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 2.1602433, 4.535393, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x68"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.7229468e-08, 1, 0, 0, 0, 1, 0.036890507, 4.5141783, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x68/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x68/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x68"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.519258e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.03689146, 4.682582, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x68"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.7229468e-08, 1, 0, 0, 0, 1, 0.036890507, 4.5141783, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x68/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x68/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x68"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.519258e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.03689146, 4.682582, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x69" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 1.7690992, 4.578702, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x69"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.816079e-08, 1, 0, 0, 0, 1, 0.03529787, 4.7162724, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x69/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x69/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x69"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.7520887e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.035298347, 4.8846626, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x69"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.816079e-08, 1, 0, 0, 0, 1, 0.03529787, 4.7162724, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x69/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x69/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x69"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.7520887e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.035298347, 4.8846626, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x70" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 2.1602433, 4.535393, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x70"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.7229468e-08, 1, 0, 0, 0, 1, 0.036890507, 4.5141783, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x70/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x70/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x70"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.519258e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.03689146, 4.682582, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x70"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.7229468e-08, 1, 0, 0, 0, 1, 0.036890507, 4.5141783, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x70/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x70/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x70"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.519258e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.03689146, 4.682582, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x71" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 2.5946596, 4.5078626, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x71"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.6298145e-08, 1, 0, 0, 0, 1, 0.038884163, 4.2615385, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x71/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x71/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x71"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.0535967e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.038884163, 4.4299383, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x71"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.6298145e-08, 1, 0, 0, 0, 1, 0.038884163, 4.2615385, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x71/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x71/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x71"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.0535967e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.038884163, 4.4299383, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x72" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 2.9858038, 4.4645534, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x72"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.5366822e-08, 1, 0, 0, 0, 1, 0.040745735, 4.0257387, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x72/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x72/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x72"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.820766e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.04074478, 4.1941357, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x72"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.5366822e-08, 1, 0, 0, 0, 1, 0.040745735, 4.0257387, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x72/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x72/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x72"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.820766e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.04074478, 4.1941357, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x73" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 2.5946596, 4.5078626, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x73"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.6298145e-08, 1, 0, 0, 0, 1, 0.038884163, 4.2615385, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x73/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x73/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x73"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.0535967e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.038884163, 4.4299383, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x73"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.6298145e-08, 1, 0, 0, 0, 1, 0.038884163, 4.2615385, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x73/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x73/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x73"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -6.0535967e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.038884163, 4.4299383, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x74" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 2.9858038, 4.4645534, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x74"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.5366822e-08, 1, 0, 0, 0, 1, 0.040745735, 4.0257387, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x74/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x74/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x74"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.820766e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.04074478, 4.1941357, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x74"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.5366822e-08, 1, 0, 0, 0, 1, 0.040745735, 4.0257387, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x74/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x74/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x74"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.820766e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.04074478, 4.1941357, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x75" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 3.4129531, 4.409438, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x75"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.44355e-08, 1, 0, 0, 0, 1, 0.04233837, 3.8236446, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x75/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x75/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x75"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.5879354e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.042339325, 3.9920359, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x75"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.44355e-08, 1, 0, 0, 0, 1, 0.04233837, 3.8236446, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x75/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x75/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x75"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.5879354e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.042339325, 3.9920359, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x76" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 3.804097, 4.366129, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x76"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.3504177e-08, 1, 0, 0, 0, 1, 0.04421234, 3.5878553, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x76/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x76/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x76"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.122274e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.044211388, 3.7562485, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x76"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.3504177e-08, 1, 0, 0, 0, 1, 0.04421234, 3.5878553, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x76/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x76/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x76"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.122274e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.044211388, 3.7562485, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x77" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 3.4129531, 4.409438, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x77"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.44355e-08, 1, 0, 0, 0, 1, 0.04233837, 3.8236446, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x77/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x77/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x77"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.5879354e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.042339325, 3.9920359, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x77"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.44355e-08, 1, 0, 0, 0, 1, 0.04233837, 3.8236446, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x77/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x77/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x77"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.5879354e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.042339325, 3.9920359, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x78" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 3.804097, 4.366129, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x78"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.3504177e-08, 1, 0, 0, 0, 1, 0.04421234, 3.5878553, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x78/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x78/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x78"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.122274e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.044211388, 3.7562485, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x78"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.3504177e-08, 1, 0, 0, 0, 1, 0.04421234, 3.5878553, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x78/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x78/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x78"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -5.122274e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.044211388, 3.7562485, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x79" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 4.2312465, 4.3110127, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x79"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.2572855e-08, 1, 0, 0, 0, 1, 0.04619217, 3.3352242, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x79/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x79/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x79"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.8894435e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.046193123, 3.503623, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x79"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.2572855e-08, 1, 0, 0, 0, 1, 0.04619217, 3.3352242, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x79/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x79/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x79"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.8894435e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.046193123, 3.503623, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x80" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 4.6223907, 4.267704, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x80"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.1641532e-08, 1, 0, 0, 0, 1, 0.048851013, 2.998373, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x80/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x80/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x80"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.656613e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.048851967, 3.1667728, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x80"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.1641532e-08, 1, 0, 0, 0, 1, 0.048851013, 2.998373, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x80/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x80/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x80"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.656613e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.048851967, 3.1667728, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x81" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 4.2312465, 4.3110127, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x81"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.2572855e-08, 1, 0, 0, 0, 1, 0.04619217, 3.3352242, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x81/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x81/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x81"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.8894435e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.046193123, 3.503623, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x81"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.2572855e-08, 1, 0, 0, 0, 1, 0.04619217, 3.3352242, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x81/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x81/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x81"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.8894435e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.046193123, 3.503623, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x82" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 4.6223907, 4.267704, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x82"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.1641532e-08, 1, 0, 0, 0, 1, 0.048851013, 2.998373, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x82/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x82/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x82"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.656613e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.048851967, 3.1667728, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x82"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.1641532e-08, 1, 0, 0, 0, 1, 0.048851013, 2.998373, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x82/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x82/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x82"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.656613e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.048851967, 3.1667728, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x83" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 5.04954, 4.212589, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x83"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.1175871e-08, 1, 0, 0, 0, 1, 0.05057907, 2.779437, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x83/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x83/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x83"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.1909516e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.050582886, 2.9478254, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x83"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.1175871e-08, 1, 0, 0, 0, 1, 0.05057907, 2.779437, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x83/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x83/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x83"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.1909516e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.050582886, 2.9478254, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x84" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 5.4406843, 4.1692796, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x84"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.071021e-08, 1, 0, 0, 0, 1, 0.053235054, 2.4425955, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x84/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x84/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x84"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.958121e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.053236008, 2.6109838, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x84"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.071021e-08, 1, 0, 0, 0, 1, 0.053235054, 2.4425955, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x84/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x84/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x84"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.958121e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.053236008, 2.6109838, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x85" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 5.04954, 4.212589, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x85"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.1175871e-08, 1, 0, 0, 0, 1, 0.05057907, 2.779437, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x85/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x85/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x85"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.1909516e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.050582886, 2.9478254, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x85"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.1175871e-08, 1, 0, 0, 0, 1, 0.05057907, 2.779437, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x85/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x85/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x85"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -4.1909516e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.050582886, 2.9478254, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x86" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 5.4406843, 4.1692796, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x86"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.071021e-08, 1, 0, 0, 0, 1, 0.053235054, 2.4425955, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x86/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x86/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x86"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.958121e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.053236008, 2.6109838, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x86"]
+transform = Transform3D(1, -9.313226e-10, 0, -1.071021e-08, 1, 0, 0, 0, 1, 0.053235054, 2.4425955, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x86/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x86/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x86"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.958121e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.053236008, 2.6109838, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x87" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 5.8701572, 4.13855, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x87"]
+transform = Transform3D(1, -9.313226e-10, 0, -9.778887e-09, 1, 0, 0, 0, 1, 0.055351257, 2.1731253, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x87/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x87/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x87"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.7252903e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.055355072, 2.3415165, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x87"]
+transform = Transform3D(1, -9.313226e-10, 0, -9.778887e-09, 1, 0, 0, 0, 1, 0.055351257, 2.1731253, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x87/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x87/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x87"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.7252903e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.055355072, 2.3415165, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x88" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 6.261302, 4.095241, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x88"]
+transform = Transform3D(1, -9.313226e-10, 0, -9.313226e-09, 1, 0, 0, 0, 1, 0.057619095, 1.8868046, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x88/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x88/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x88"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.259629e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.057619095, 2.0552006, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x88"]
+transform = Transform3D(1, -9.313226e-10, 0, -9.313226e-09, 1, 0, 0, 0, 1, 0.057619095, 1.8868046, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x88/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x88/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x88"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.259629e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.057619095, 2.0552006, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x89" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 5.8701572, 4.13855, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x89"]
+transform = Transform3D(1, -9.313226e-10, 0, -9.778887e-09, 1, 0, 0, 0, 1, 0.055351257, 2.1731253, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x89/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x89/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x89"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.7252903e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.055355072, 2.3415165, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x89"]
+transform = Transform3D(1, -9.313226e-10, 0, -9.778887e-09, 1, 0, 0, 0, 1, 0.055351257, 2.1731253, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x89/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x89/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x89"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.7252903e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.055355072, 2.3415165, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x90" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 6.261302, 4.095241, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x90"]
+transform = Transform3D(1, -9.313226e-10, 0, -9.313226e-09, 1, 0, 0, 0, 1, 0.057619095, 1.8868046, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x90/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x90/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x90"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.259629e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.057619095, 2.0552006, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x90"]
+transform = Transform3D(1, -9.313226e-10, 0, -9.313226e-09, 1, 0, 0, 0, 1, 0.057619095, 1.8868046, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x90/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x90/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x90"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.259629e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.057619095, 2.0552006, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x91" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 6.6884513, 4.0401254, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x91"]
+transform = Transform3D(1, -9.313226e-10, 0, -8.381903e-09, 1, 0, 0, 0, 1, 0.05988121, 1.6004839, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x91/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x91/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x91"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.0267984e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.05988121, 1.768878, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x91"]
+transform = Transform3D(1, -9.313226e-10, 0, -8.381903e-09, 1, 0, 0, 0, 1, 0.05988121, 1.6004839, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x91/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x91/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x91"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.0267984e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.05988121, 1.768878, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x92" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 7.0795946, 3.9968169, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x92"]
+transform = Transform3D(1, -9.313226e-10, 0, -7.450581e-09, 1, 0, 0, 0, 1, 0.06252861, 1.263649, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x92/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x92/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x92"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.7939677e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06252861, 1.4320393, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x92"]
+transform = Transform3D(1, -9.313226e-10, 0, -7.450581e-09, 1, 0, 0, 0, 1, 0.06252861, 1.263649, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x92/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x92/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x92"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.7939677e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06252861, 1.4320393, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x93" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 6.6884513, 4.0401254, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x93"]
+transform = Transform3D(1, -9.313226e-10, 0, -8.381903e-09, 1, 0, 0, 0, 1, 0.05988121, 1.6004839, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x93/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x93/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x93"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.0267984e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.05988121, 1.768878, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x93"]
+transform = Transform3D(1, -9.313226e-10, 0, -8.381903e-09, 1, 0, 0, 0, 1, 0.05988121, 1.6004839, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x93/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x93/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x93"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -3.0267984e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.05988121, 1.768878, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x94" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 7.0795946, 3.9968169, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x94"]
+transform = Transform3D(1, -9.313226e-10, 0, -7.450581e-09, 1, 0, 0, 0, 1, 0.06252861, 1.263649, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x94/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x94/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x94"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.7939677e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06252861, 1.4320393, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x94"]
+transform = Transform3D(1, -9.313226e-10, 0, -7.450581e-09, 1, 0, 0, 0, 1, 0.06252861, 1.263649, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x94/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x94/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x94"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.7939677e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06252861, 1.4320393, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x95" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 7.5067444, 3.9417007, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x95"]
+transform = Transform3D(1, -9.313226e-10, 0, -6.519258e-09, 1, 0, 0, 0, 1, 0.06439781, 1.0278606, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x95/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x95/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x95"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.3283064e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.064395905, 1.1962528, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x95"]
+transform = Transform3D(1, -9.313226e-10, 0, -6.519258e-09, 1, 0, 0, 0, 1, 0.06439781, 1.0278606, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x95/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x95/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x95"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.3283064e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.064395905, 1.1962528, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x96" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 7.897888, 3.8983915, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x96"]
+transform = Transform3D(1, -9.313226e-10, 0, -5.5879354e-09, 1, 0, 0, 0, 1, 0.06706047, 0.69101906, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x96/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x96/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x96"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.0954758e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06705475, 0.8594141, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x96"]
+transform = Transform3D(1, -9.313226e-10, 0, -5.5879354e-09, 1, 0, 0, 0, 1, 0.06706047, 0.69101906, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x96/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x96/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x96"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.0954758e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06705475, 0.8594141, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x97" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 7.5067444, 3.9417007, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x97"]
+transform = Transform3D(1, -9.313226e-10, 0, -6.519258e-09, 1, 0, 0, 0, 1, 0.06439781, 1.0278606, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x97/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x97/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x97"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.3283064e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.064395905, 1.1962528, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x97"]
+transform = Transform3D(1, -9.313226e-10, 0, -6.519258e-09, 1, 0, 0, 0, 1, 0.06439781, 1.0278606, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x97/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x97/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x97"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.3283064e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.064395905, 1.1962528, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x98" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 7.897888, 3.8983915, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x98"]
+transform = Transform3D(1, -9.313226e-10, 0, -5.5879354e-09, 1, 0, 0, 0, 1, 0.06706047, 0.69101906, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x98/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x98/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x98"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.0954758e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06705475, 0.8594141, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x98"]
+transform = Transform3D(1, -9.313226e-10, 0, -5.5879354e-09, 1, 0, 0, 0, 1, 0.06706047, 0.69101906, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x98/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x98/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x98"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -2.0954758e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06705475, 0.8594141, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x99" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 8.325038, 3.8432763, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x99"]
+transform = Transform3D(1, -9.313226e-10, 0, -4.656613e-09, 1, 0, 0, 0, 1, 0.0686512, 0.48891163, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x99/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x99/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x99"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -1.8626451e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06864929, 0.6573038, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x99"]
+transform = Transform3D(1, -9.313226e-10, 0, -4.656613e-09, 1, 0, 0, 0, 1, 0.0686512, 0.48891163, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x99/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x99/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x99"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -1.8626451e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06864929, 0.6573038, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x100" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 8.716182, 3.7999675, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x100"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.7939677e-09, 1, 0, 0, 0, 1, -0.0019931793, 0.25263023, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x100/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x100/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x100"]
+transform = Transform3D(0.451935, -9.313226e-10, 0, -1.1641532e-09, 0.45193514, 0, 0, 0, 0.4519351, -0.0019931793, 0.4210205, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x100"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.7939677e-09, 1, 0, 0, 0, 1, -0.0019931793, 0.25263023, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x100/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x100/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x100"]
+transform = Transform3D(0.451935, -9.313226e-10, 0, -1.1641532e-09, 0.45193514, 0, 0, 0, 0.4519351, -0.0019931793, 0.4210205, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x101" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 8.325038, 3.8432763, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x101"]
+transform = Transform3D(1, -9.313226e-10, 0, -4.656613e-09, 1, 0, 0, 0, 1, 0.0686512, 0.48891163, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x101/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x101/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x101"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -1.8626451e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06864929, 0.6573038, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x101"]
+transform = Transform3D(1, -9.313226e-10, 0, -4.656613e-09, 1, 0, 0, 0, 1, 0.0686512, 0.48891163, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x101/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x101/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x101"]
+transform = Transform3D(0.451935, -1.3969839e-09, 0, -1.8626451e-09, 0.45193517, 0, 0, 0, 0.4519351, 0.06864929, 0.6573038, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x102" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 8.716182, 3.7999675, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x102"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.7939677e-09, 1, 0, 0, 0, 1, -0.0019931793, 0.25263023, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x102/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x102/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x102"]
+transform = Transform3D(0.451935, -9.313226e-10, 0, -1.1641532e-09, 0.45193514, 0, 0, 0, 0.4519351, -0.0019931793, 0.4210205, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x102"]
+transform = Transform3D(1, -9.313226e-10, 0, -2.7939677e-09, 1, 0, 0, 0, 1, -0.0019931793, 0.25263023, 0)
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x102/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x102/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x102"]
+transform = Transform3D(0.451935, -9.313226e-10, 0, -1.1641532e-09, 0.45193514, 0, 0, 0, 0.4519351, -0.0019931793, 0.4210205, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x103" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 9.150598, 3.7724369, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x103"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x103/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x103/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x103"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x103"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x103/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x103/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x103"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x104" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 9.541743, 3.7291276, -1.0986834)
+
+[node name="Platform-2-1x1x105" type="Node3D" parent="."]
+transform = Transform3D(0.35324413, 0.0027868152, 0, -0.002589479, 0.38016394, 0, 0, 0, 1, 9.150598, 3.7724369, -1.0986834)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x105"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x105/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x105/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x105"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x105"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x105/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x105/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x105"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x53" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 9.921113, 3.7724671, 0)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x53"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x53/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x53/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x53"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x53"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x53/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x53/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x53"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-1x1x54" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 9.921113, 3.7724671, -1.0198662)
+
+[node name="Platform-2-HighPoly_001" type="MeshInstance3D" parent="Platform-2-1x1x54"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x54/Platform-2-HighPoly_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x54/Platform-2-HighPoly_001/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane" type="MeshInstance3D" parent="Platform-2-1x1x54"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")
+
+[node name="Platform-2-HighPoly_002" type="MeshInstance3D" parent="Platform-2-1x1x54"]
+mesh = SubResource("ArrayMesh_skmg2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platform-2-1x1x54/Platform-2-HighPoly_002"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform-2-1x1x54/Platform-2-HighPoly_002/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.096069336, 0)
+shape = SubResource("BoxShape3D_1y2g0")
+
+[node name="Plane2" type="MeshInstance3D" parent="Platform-2-1x1x54"]
+transform = Transform3D(0.45193505, 0, 0, 0, 0.45193505, 0, 0, 0, 0.45193505, 0, 0.16839164, 0)
+mesh = SubResource("ArrayMesh_13vaf")
+skeleton = NodePath("")

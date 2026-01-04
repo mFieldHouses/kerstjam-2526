@@ -3512,10 +3512,10 @@ surface_material_override/0 = ExtResource("36_mi583")
 [node name="Circuit" type="Node3D" parent="SantasShop/WorkStations"]
 
 [node name="WorkBench-1" parent="SantasShop/WorkStations/Circuit" instance=ExtResource("35_7o16b")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.6998161, 0.22330868, 12.793294)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.6998161, -0.03775835, 12.793294)
 
 [node name="WorkBench-2" parent="SantasShop/WorkStations/Circuit" instance=ExtResource("35_7o16b")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.551584, 0.22330868, 12.160483)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.551584, -0.020439327, 12.160483)
 
 [node name="Ceiling-Lamp-2" parent="SantasShop/WorkStations/Circuit" instance=ExtResource("36_drmql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 1.866, 11.38)
@@ -3541,7 +3541,7 @@ omni_range = 2.0
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.7045603, 0.24555057, 12.160483)
 
 [node name="Cube_630" parent="SantasShop/WorkStations/Forge/WorkBench-3" index="0"]
-transform = Transform3D(0.55792964, 0, 0, 0, 0.55792964, 0, 0, 0, 0.5974151, 0, 1.0787706, 0)
+transform = Transform3D(0.55792964, 0, 0, 0, 0.55792964, 0, 0, 0, 0.5974151, 0, 0.83390886, 0)
 surface_material_override/0 = ExtResource("37_u8rdd")
 
 [node name="Ceiling-Lamp-4" parent="SantasShop/WorkStations/Forge" instance=ExtResource("36_drmql")]
@@ -3557,7 +3557,7 @@ omni_range = 2.0
 transform = Transform3D(-3.4969112e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.4969112e-08, 6.500173, 0.9159603, 12.586892)
 
 [node name="Cube_636" parent="SantasShop/WorkStations/Forge/Vice-1" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00067424774, 0.040908575, -0.003692627)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0006752014, -0.31193048, -0.003692627)
 surface_material_override/0 = ExtResource("39_nng1t")
 
 [node name="Cube_637" parent="SantasShop/WorkStations/Forge/Vice-1" index="1"]
@@ -3578,7 +3578,7 @@ surface_material_override/0 = ExtResource("38_mi583")
 [node name="Assembly" type="Node3D" parent="SantasShop/WorkStations"]
 
 [node name="WorkBench-4" parent="SantasShop/WorkStations/Assembly" instance=ExtResource("35_7o16b")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.619073, 0.22377574, 12.160483)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.619073, -0.03518951, 12.160483)
 
 [node name="Ceiling-Lamp-5" parent="SantasShop/WorkStations/Assembly" instance=ExtResource("36_drmql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.186, 1.866, 11.38)
@@ -3592,7 +3592,7 @@ omni_range = 2.0
 [node name="Clockwork" type="Node3D" parent="SantasShop/WorkStations"]
 
 [node name="WorkBench-5" parent="SantasShop/WorkStations/Clockwork" instance=ExtResource("35_7o16b")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.657948, 0.22261897, 12.160483)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.657948, -0.018255085, 12.160483)
 
 [node name="Ceiling-Lamp-6" parent="SantasShop/WorkStations/Clockwork" instance=ExtResource("36_drmql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.328, 1.866, 11.38)
@@ -3629,7 +3629,7 @@ omni_range = 2.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6361526, 0.26499897, 12.048068)
 
 [node name="Stool-1" parent="SantasShop/WorkStations/Arcane/Stool-13" index="0"]
-transform = Transform3D(0.6405973, 0, 0, 0, 1, 0, 0, 0, 0.6405973, 0.2863754, 0.1826526, -0.075891495)
+transform = Transform3D(0.6405973, 0, 0, 0, 1, 0, 0, 0, 0.6405973, 0.2863754, -0.09909022, -0.075891495)
 surface_material_override/0 = ExtResource("42_qf7y7")
 
 [node name="Ceiling-Lamp-7" parent="SantasShop/WorkStations/Arcane" instance=ExtResource("36_drmql")]
