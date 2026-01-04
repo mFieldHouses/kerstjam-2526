@@ -156,15 +156,20 @@ func _physics_process(delta: float) -> void:
 		#position.z += direction.z * delta * 20
 	else:
 		if direction and controls_enabled:
-			#if sprinting:
-				#tween_camera_fov(DEFAULT_FOV + 20, 0.2)
-			#else:
-				#tween_camera_fov(DEFAULT_FOV, 0.2)
+			$footstep_sounds.is_walking = true
+			if sprinting:
+				$footstep_sounds.timer_mult = 1.5
+			else:
+				$footstep_sounds.timer_mult = 1.0
+			
 			_bobbing_anim_timer += delta + (float(sprinting == true) * delta)
 			$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.bob(_bobbing_anim_timer, 0.7 + (float(sprinting == true) * 0.4))
 			velocity.x = lerp(velocity.x, direction.x * SPEED * speed_multiplier + (direction.x * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
 			velocity.z = lerp(velocity.z, direction.z * SPEED * speed_multiplier + (direction.z * SPRINT_SPEED_DELTA * int(sprinting)), 0.3)
 		else:
+			$footstep_sounds.is_walking = false
+			$footstep_sounds.timer_mult = 1.0
+			
 			_bobbing_anim_timer = 0
 			$gui/weapon_viewport/SubViewport/Node3D/weapon_viewport_camera/gun_grip.return_to_origin()
 			velocity.x *= 0.8

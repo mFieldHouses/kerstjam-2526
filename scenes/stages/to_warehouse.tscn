@@ -18,12 +18,12 @@
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="14_4co2b"]
 [ext_resource type="Script" uid="uid://br67v0qeo270u" path="res://scripts/musicplayer.gd" id="15_4co2b"]
 [ext_resource type="AudioStream" uid="uid://dibmmriy23nuc" path="res://assets/sound/soundtrack/snowmen_intro.wav" id="15_isx6m"]
-[ext_resource type="VoxelGIData" uid="uid://h54j7l1md7t0" path="res://assets/VoxelGI-Data/to_warehouse.VoxelGI_data.res" id="17_4xwuc"]
+[ext_resource type="VoxelGIData" path="res://assets/VoxelGI-Data/to_warehouse.VoxelGI_data.res" id="17_4xwuc"]
 [ext_resource type="PackedScene" uid="uid://dlets1p6u4oq7" path="res://assets/meshes/Environment/Walls/brick_wall_1.tscn" id="18_1g8sq"]
 [ext_resource type="PackedScene" uid="uid://cu7hu48g5k7q1" path="res://assets/meshes/Environment/Rocks/Rock-2.tscn" id="18_k2ha0"]
 [ext_resource type="PackedScene" uid="uid://dhbkkvbc7ybvl" path="res://assets/meshes/Environment/Rocks/Rock-1.tscn" id="19_5tvbr"]
 [ext_resource type="PackedScene" uid="uid://bouff7sjsg00g" path="res://assets/meshes/Environment/Rocks/Cliff-1.tscn" id="20_85pda"]
-[ext_resource type="PackedScene" uid="uid://ccsosb3wod4io" path="res://scenes/elements/PineTree-1.tscn" id="21_n8mv0"]
+[ext_resource type="PackedScene" path="res://scenes/elements/PineTree-1.tscn" id="21_n8mv0"]
 [ext_resource type="PackedScene" uid="uid://qxybtmsai5wu" path="res://assets/meshes/Environment/SnowPatches/snow_1.tscn" id="22_p1by1"]
 [ext_resource type="PackedScene" uid="uid://bl0c2j771w8fa" path="res://assets/meshes/Environment/IcePatches/IceArc-1.tscn" id="23_5tvbr"]
 [ext_resource type="PackedScene" uid="uid://bo214ivrou8cb" path="res://assets/meshes/Environment/Barricades/barricade_2.tscn" id="24_85pda"]
@@ -33,9 +33,9 @@
 [ext_resource type="Resource" uid="uid://b060qwaalhnug" path="res://assets/resources/items/ammo/big.tres" id="26_1g8sq"]
 [ext_resource type="PackedScene" uid="uid://cgu8uvxmypxlr" path="res://assets/meshes/Environment/Ramps/ramp_1.tscn" id="26_p1by1"]
 [ext_resource type="Resource" uid="uid://gwh384geqki4" path="res://assets/resources/items/ammo/fast.tres" id="27_pntd1"]
-[ext_resource type="PackedScene" uid="uid://bv0rihnbecmi0" path="res://assets/meshes/Buildings/ginger_bread_house_1.tscn" id="28_1g8sq"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Buildings/ginger_bread_house_1.tscn" id="28_1g8sq"]
 [ext_resource type="Resource" uid="uid://qxhttbpl2yph" path="res://assets/resources/items/ammo/explode.tres" id="28_5clna"]
-[ext_resource type="PackedScene" uid="uid://dnvtnl8bbkw7t" path="res://assets/meshes/Misc/candy_cane_1.tscn" id="35_wlr7d"]
+[ext_resource type="PackedScene" path="res://assets/meshes/Misc/candy_cane_1.tscn" id="35_wlr7d"]
 [ext_resource type="PackedScene" uid="uid://cvxrtuu2m0i2w" path="res://assets/meshes/Misc/foot_step.tscn" id="36_ew4ol"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uw2f"]
@@ -297,7 +297,7 @@ visible = false
 [node name="CollisionShape3D" parent="to_warehouse/cover2 /StaticBody3D" index="0"]
 visible = false
 
-[node name="Cube " parent="to_warehouse" index="7"]
+[node name="Cube " parent="to_warehouse" index="8"]
 visible = false
 
 [node name="StaticBody3D" parent="to_warehouse/Cube " index="0"]
@@ -306,22 +306,13 @@ visible = false
 [node name="CollisionShape3D" parent="to_warehouse/Cube /StaticBody3D" index="0"]
 visible = false
 
-[node name="cover2 _001" parent="to_warehouse" index="8"]
+[node name="cover2 _001" parent="to_warehouse" index="9"]
 visible = false
 
 [node name="StaticBody3D" parent="to_warehouse/cover2 _001" index="0"]
 visible = false
 
 [node name="CollisionShape3D" parent="to_warehouse/cover2 _001/StaticBody3D" index="0"]
-visible = false
-
-[node name="walls1 _001" parent="to_warehouse" index="9"]
-visible = false
-
-[node name="StaticBody3D" parent="to_warehouse/walls1 _001" index="0"]
-visible = false
-
-[node name="CollisionShape3D" parent="to_warehouse/walls1 _001/StaticBody3D" index="0"]
 visible = false
 
 [node name="cover2 _002" parent="to_warehouse" index="10"]
@@ -331,15 +322,6 @@ visible = false
 visible = false
 
 [node name="CollisionShape3D" parent="to_warehouse/cover2 _002/StaticBody3D" index="0"]
-visible = false
-
-[node name="Cube _001" parent="to_warehouse" index="11"]
-visible = false
-
-[node name="StaticBody3D" parent="to_warehouse/Cube _001" index="0"]
-visible = false
-
-[node name="CollisionShape3D" parent="to_warehouse/Cube _001/StaticBody3D" index="0"]
 visible = false
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="to_warehouse"]

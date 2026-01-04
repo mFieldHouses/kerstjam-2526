@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cotqedi4mq2rs"]
+[gd_scene load_steps=42 format=3 uid="uid://cotqedi4mq2rs"]
 
 [ext_resource type="Script" uid="uid://p37eo2hx431" path="res://scripts/scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://t266m1x4e123" path="res://assets/textures/gui/crosshair.png" id="2_g2els"]
@@ -10,6 +10,30 @@
 [ext_resource type="PackedScene" uid="uid://b7uk7ng0f2fjl" path="res://scenes/menus/pause_menu.tscn" id="7_fjrip"]
 [ext_resource type="Script" uid="uid://blp4d747i6obe" path="res://scripts/you_died.gd" id="8_smehm"]
 [ext_resource type="AudioStream" uid="uid://bg6j3vcacgd0k" path="res://assets/sound/sfx/shoot/ammo_pickup.wav" id="10_y4r1p"]
+[ext_resource type="Script" uid="uid://dmdqgnpfll6em" path="res://scripts/footstep_sounds.gd" id="11_d2wvv"]
+[ext_resource type="Material" uid="uid://cvghhhcukvfhk" path="res://assets/materials/Snow-1.tres" id="12_4ni07"]
+[ext_resource type="AudioStream" uid="uid://bwqjul1hb50a0" path="res://assets/sound/sfx/walk/misc/walk_misc_1.wav" id="12_a8ls1"]
+[ext_resource type="AudioStream" uid="uid://cj4y3dllx0pfr" path="res://assets/sound/sfx/walk/snow/walk_snow_1.wav" id="13_l71n6"]
+[ext_resource type="AudioStream" uid="uid://w7mcco1ctnfs" path="res://assets/sound/sfx/walk/misc/walk_misc_2.wav" id="13_qfm1y"]
+[ext_resource type="AudioStream" uid="uid://cw4qcvl2d63vb" path="res://assets/sound/sfx/walk/misc/walk_misc_3.wav" id="14_fulsm"]
+[ext_resource type="AudioStream" uid="uid://i2iw1haj3w64" path="res://assets/sound/sfx/walk/snow/walk_snow_2.wav" id="14_ke2ow"]
+[ext_resource type="AudioStream" uid="uid://djudyryhmxxg5" path="res://assets/sound/sfx/walk/misc/walk_misc_4.wav" id="15_4r5pv"]
+[ext_resource type="AudioStream" uid="uid://c5c0d2lhv5ljk" path="res://assets/sound/sfx/walk/snow/walk_snow_3.wav" id="15_ujl30"]
+[ext_resource type="AudioStream" uid="uid://cfqkt7d1hgm6w" path="res://assets/sound/sfx/walk/snow/walk_snow_4.wav" id="16_31cv2"]
+[ext_resource type="AudioStream" uid="uid://dim4i0ks71q7o" path="res://assets/sound/sfx/walk/misc/walk_misc_5.wav" id="16_60mlk"]
+[ext_resource type="AudioStream" uid="uid://d0fof0fuv40up" path="res://assets/sound/sfx/walk/snow/walk_snow_5.wav" id="17_pf23h"]
+[ext_resource type="AudioStream" uid="uid://dpxbf1oppyho4" path="res://assets/sound/sfx/walk/snow/walk_snow_6.wav" id="18_dt7fs"]
+[ext_resource type="Material" uid="uid://bo6ysfjfwynng" path="res://assets/materials/Floor-Wood-1.tres" id="19_pf23h"]
+[ext_resource type="AudioStream" uid="uid://5m110pl1tq54" path="res://assets/sound/sfx/walk/wood/walk_wood_1.wav" id="20_dt7fs"]
+[ext_resource type="AudioStream" uid="uid://bu3xokh6210s7" path="res://assets/sound/sfx/walk/wood/walk_wood_2.wav" id="21_wqfne"]
+[ext_resource type="AudioStream" uid="uid://dfiy0ca6lywa5" path="res://assets/sound/sfx/walk/wood/walk_wood_3.wav" id="22_wnwbv"]
+[ext_resource type="AudioStream" uid="uid://c5tumacmctbiu" path="res://assets/sound/sfx/walk/wood/walk_wood_4.wav" id="23_gl8cc"]
+[ext_resource type="Material" uid="uid://btnls0um24u2i" path="res://assets/meshes/SantaShop/Platforms/Platform-2-TexturePainted.tres" id="24_md1ol"]
+[ext_resource type="AudioStream" uid="uid://cdilj2oni4n55" path="res://assets/sound/sfx/walk/metal/walk_metal_1.wav" id="25_bj30b"]
+[ext_resource type="AudioStream" uid="uid://uruhdfl1kbge" path="res://assets/sound/sfx/walk/metal/walk_metal_2.wav" id="26_jc3p3"]
+[ext_resource type="AudioStream" uid="uid://dnuax2pojnpo6" path="res://assets/sound/sfx/walk/metal/walk_metal_3.wav" id="27_hax0n"]
+[ext_resource type="AudioStream" uid="uid://d1gog626j7xm3" path="res://assets/sound/sfx/walk/metal/walk_metal_4.wav" id="28_t4otl"]
+[ext_resource type="AudioStream" uid="uid://cmqfc1plkm1gm" path="res://assets/sound/sfx/walk/metal/walk_metal_5.wav" id="29_j2b1d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvqfc"]
 radius = 0.3
@@ -22,6 +46,38 @@ height = 1.16
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y4r1p"]
 shader = ExtResource("6_ur7pv")
 shader_parameter/fac = 0.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wqfne"]
+streams_count = 6
+stream_0/stream = ExtResource("13_l71n6")
+stream_1/stream = ExtResource("14_ke2ow")
+stream_2/stream = ExtResource("15_ujl30")
+stream_3/stream = ExtResource("16_31cv2")
+stream_4/stream = ExtResource("17_pf23h")
+stream_5/stream = ExtResource("18_dt7fs")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_487ah"]
+streams_count = 4
+stream_0/stream = ExtResource("20_dt7fs")
+stream_1/stream = ExtResource("21_wqfne")
+stream_2/stream = ExtResource("22_wnwbv")
+stream_3/stream = ExtResource("23_gl8cc")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bj30b"]
+streams_count = 5
+stream_0/stream = ExtResource("25_bj30b")
+stream_1/stream = ExtResource("26_jc3p3")
+stream_2/stream = ExtResource("27_hax0n")
+stream_3/stream = ExtResource("28_t4otl")
+stream_4/stream = ExtResource("29_j2b1d")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_i4ail"]
+streams_count = 5
+stream_0/stream = ExtResource("12_a8ls1")
+stream_1/stream = ExtResource("13_qfm1y")
+stream_2/stream = ExtResource("14_fulsm")
+stream_3/stream = ExtResource("15_4r5pv")
+stream_4/stream = ExtResource("16_60mlk")
 
 [node name="player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19800603)
@@ -315,5 +371,16 @@ stream = ExtResource("10_y4r1p")
 volume_db = -5.0
 
 [node name="floor_ray" type="RayCast3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18080086, 0.25)
 target_position = Vector3(0, -2, 0)
+
+[node name="footstep_sounds" type="AudioStreamPlayer" parent="."]
+script = ExtResource("11_d2wvv")
+footstep_delay = 0.45
+material_links = Dictionary[Material, AudioStreamRandomizer]({
+ExtResource("12_4ni07"): SubResource("AudioStreamRandomizer_wqfne"),
+ExtResource("19_pf23h"): SubResource("AudioStreamRandomizer_487ah"),
+ExtResource("24_md1ol"): SubResource("AudioStreamRandomizer_bj30b")
+})
+misc_footsteps = SubResource("AudioStreamRandomizer_i4ail")
