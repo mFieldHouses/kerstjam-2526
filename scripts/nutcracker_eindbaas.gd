@@ -40,7 +40,7 @@ func laser_shoot(mult : float) -> void:
 	_lasers.get_node("meshes").visible = true
 	
 	var _tween : Tween = create_tween()
-	_tween.tween_property(self, "position:y", -4, 2.2)
+	_tween.tween_property(self, "position:y", -2.4, 2.2)
 	
 	_animplayer.play("laser_shoot1", -1, 1.0 + (mult * 0.5))
 	

@@ -63,8 +63,8 @@ func initiate_dialog_with(dialog_file_name : String, with : Node3D, conversor_na
 	else:
 		GameLogger.print_as_autoload(self, "Initiating dialog from dialog file at " + _dialog_file_path)
 	
-	var _previous_camera_transform : Transform3D = PlayerState.player_instance.camera.global_transform
-	var _target_camera_transform : Transform3D = _previous_camera_transform.looking_at(with.global_position)
+	var _previous_camera_transform : Transform3D = PlayerState.player_instance.camera.transform
+	var _target_camera_transform : Transform3D = PlayerState.player_instance.camera.global_transform.looking_at(with.global_position)
 	
 	#PlayerState.player_instance.camera.top_level = true
 	var _transform_in_tween : Tween = create_tween()
@@ -108,13 +108,14 @@ func initiate_dialog_with(dialog_file_name : String, with : Node3D, conversor_na
 		_idx += 1
 	
 	PersistentUI.dialog_line("", conversor_name, thumbnail) #hide again
-	PlayerState.toggle_sleep(false)
 	PlayerState.player_instance.tween_camera_fov(ConfigurableValues.fov, 0.5)
 	PlayerUIState.set_ui_visibility(true)
 	
 	var _transform_out_tween : Tween = create_tween()
-	_transform_out_tween.tween_property(PlayerState.player_instance.camera, "global_transform", _previous_camera_transform, 0.5)
+	_transform_out_tween.tween_property(PlayerState.player_instance.camera, "transform", _previous_camera_transform, 0.5)
 	await _transform_out_tween.finished
+	
+	PlayerState.toggle_sleep(false)
 	
 	dialog_ended.emit(dialog_file_name)
 

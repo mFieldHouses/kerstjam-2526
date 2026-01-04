@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bwhxv2wqfr8d5"]
+[gd_scene load_steps=25 format=3 uid="uid://bwhxv2wqfr8d5"]
 
 [ext_resource type="Script" uid="uid://bvgudpbaauty8" path="res://scriptswarehouse_2.gd" id="1_dfkw8"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_7ssc0"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="17_bys0d"]
 [ext_resource type="PackedScene" uid="uid://c5sao4uo5graf" path="res://assets/meshes/SantaShop/Decoration/Computers/Computer-1.glb" id="17_ej86v"]
 [ext_resource type="PackedScene" uid="uid://ccx8wrsjewg2x" path="res://assets/meshes/Debug/warehouse_2.gltf" id="18_ej86v"]
+[ext_resource type="PackedScene" uid="uid://d3xius20n1uk8" path="res://assets/meshes/Misc/Racks/WareHouse-Rack-1.tscn" id="19_h46xh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxix6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -85,11 +86,11 @@ spot_range = 18.539104
 spot_angle = 31.70854
 
 [node name="SpotLight3D6" type="SpotLight3D" parent="lights"]
-transform = Transform3D(1, 8.351872e-23, 4.371139e-08, -4.371139e-08, 1.9106855e-15, 1, 0, -1, 1.9106855e-15, -89.824486, -59.379, -4.735285)
+transform = Transform3D(1, 8.351872e-23, 4.371139e-08, -4.371139e-08, 1.9106855e-15, 1, 0, -1, 1.9106855e-15, -89.824486, -52.224606, -4.735285)
 light_energy = 0.35
 shadow_enabled = true
 spot_range = 28.873837
-spot_angle = 47.71374
+spot_angle = 35.490105
 
 [node name="SpotLight3D7" type="SpotLight3D" parent="lights"]
 transform = Transform3D(1, 8.351872e-23, 4.371139e-08, -4.371139e-08, 1.9106855e-15, 1, 0, -1, 1.9106855e-15, -89.824486, -66.3795, -43.015617)
@@ -298,3 +299,99 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22259521, 0, 0)
 shape = SubResource("BoxShape3D_h46xh")
 
 [node name="warehouse_2" parent="." instance=ExtResource("18_ej86v")]
+
+[node name="WareHouse-Rack-20" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -99.71226, -68.24335, -13.895527)
+
+[node name="WareHouse-Rack-21" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -109.71226, -68.24335, -13.895527)
+
+[node name="WareHouse-Rack-22" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -118.71226, -68.24335, -13.895527)
+
+[node name="WareHouse-Rack-23" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -128.71225, -68.24335, -13.895527)
+
+[node name="WareHouse-Rack-24" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -99.71226, -68.24335, -8.895527)
+
+[node name="WareHouse-Rack-25" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -109.71226, -68.24335, -8.895527)
+
+[node name="WareHouse-Rack-26" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -118.71226, -68.24335, -8.895527)
+
+[node name="WareHouse-Rack-27" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -128.71225, -68.24335, -8.895527)
+
+[node name="WareHouse-Rack-28" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -99.71226, -68.24335, -6.895527)
+
+[node name="WareHouse-Rack-29" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -109.71226, -68.24335, -6.895527)
+
+[node name="WareHouse-Rack-30" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -118.71226, -68.24335, -6.895527)
+
+[node name="WareHouse-Rack-31" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -128.71225, -68.24335, -6.895527)
+
+[node name="WareHouse-Rack-32" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -99.71226, -68.24335, -0.8955269)
+
+[node name="WareHouse-Rack-33" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -109.71226, -68.24335, -0.8955269)
+
+[node name="WareHouse-Rack-34" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -118.71226, -68.24335, -0.8955269)
+
+[node name="WareHouse-Rack-35" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -128.71225, -68.24335, -0.8955269)
+
+[node name="WareHouse-Rack-36" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -99.71226, -68.24335, 1.1044731)
+
+[node name="WareHouse-Rack-37" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -109.71226, -68.24335, 1.1044731)
+
+[node name="WareHouse-Rack-38" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -118.71226, -68.24335, 1.1044731)
+
+[node name="WareHouse-Rack-39" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -128.71225, -68.24335, 1.1044731)
+
+[node name="WareHouse-Rack-40" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -99.71226, -68.24335, 7.104473)
+
+[node name="WareHouse-Rack-41" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -109.71226, -68.24335, 7.104473)
+
+[node name="WareHouse-Rack-42" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -118.71226, -68.24335, 7.104473)
+
+[node name="WareHouse-Rack-43" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -128.71225, -68.24335, 7.104473)
+
+[node name="WareHouse-Rack-44" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -99.71226, -68.24335, 9.104473)
+
+[node name="WareHouse-Rack-45" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -109.71226, -68.24335, 9.104473)
+
+[node name="WareHouse-Rack-46" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -118.71226, -68.24335, 9.104473)
+
+[node name="WareHouse-Rack-47" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -128.71225, -68.24335, 9.104473)
+
+[node name="WareHouse-Rack-48" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -99.71226, -68.24335, 11.743095)
+
+[node name="WareHouse-Rack-49" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -109.71226, -68.24335, 11.743095)
+
+[node name="WareHouse-Rack-50" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -118.71226, -68.24335, 11.743095)
+
+[node name="WareHouse-Rack-51" parent="." instance=ExtResource("19_h46xh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -128.71225, -68.24335, 11.743095)

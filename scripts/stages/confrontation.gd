@@ -6,28 +6,22 @@ var _wave_idx : int = 0
 var _floor_panels_left : Array[Node3D] = []
 
 func _ready() -> void:
-	
-	$start_fight.body_entered.connect($"World/Base_MapLayout/RD-Lab".open_roof.unbind(1))
-	
 	SaveFileManager._unlocked_stages.confrontation = true
 	DialogManager.dialog_queue.connect(dialog_queue)
 	
-	for x in 10:
-		for y in 10:
-			var _new_colshape = $floor_panels/floor.duplicate()
-			$floor_panels.add_child(_new_colshape)
-			_floor_panels_left.append(_new_colshape)
-			_new_colshape.position = Vector3(x * 2 - 9, 0.0, y * 2 - 9)
+	for _platform : MeshInstance3D in $"RD-1-DroppingPlatforms".get_children():
+		_floor_panels_left.append(_platform)
+	
+	await $start_fight.body_entered
 	
 	await get_tree().create_timer(1.0).timeout
 	
-	#DialogManager.initiate_dialog_with("confrontation1", $Nutcracker_Eindbaas/philip_head, "???", load("res://icon.svg"))
+	DialogManager.initiate_dialog_with("confrontation1", $Nutcracker_Eindbaas/philip_head, "???", load("res://icon.svg"))
 	
-	#await DialogManager.dialog_ended
+	await DialogManager.dialog_ended
 	
-	$floor_panels/floor.queue_free()
-	
-	await $start_fight.body_entered
+	$"World/Base_MapLayout/RD-Lab".open_roof()
+	$open_roof.play()
 	
 	while $Nutcracker_Eindbaas._health_left > 10:
 		if _first_round:
@@ -110,7 +104,7 @@ func fireballs(frequency : float, time : float) -> void:
 		add_child(_new_fireball)
 		var _panel = _floor_panels_left.pick_random()
 		var _pos : Vector3 = _panel.global_position
-		_new_fireball.position = Vector3(_pos.x, 0.126, _pos.z)
+		_new_fireball.position = Vector3(_pos.x, 1.8, _pos.z)
 		
 		await get_tree().create_timer(1.0 / frequency).timeout
 		
