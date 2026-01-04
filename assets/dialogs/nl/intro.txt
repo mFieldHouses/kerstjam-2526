@@ -1,0 +1,9 @@
+In de werkplaats van de Kerstman is vanochtend iets vreselijks ontdekt...
+Een aantal onderdelen van de kerstslee zijn verdwenen!
+Dit betekent dat de kerstman geen cadeau's rond zou kunnen brengen. Daar moet dus iets aan gedaan worden.
+Nu heeft de Kerstman jou persoonlijk opgebeld dit op te lossen.
+Jij bent namelijk Agent 11, de beste agent die de geheime dienst van de Kerstman te bieden heeft. En het is jouw taak de onderdelen terug te vinden.
+Je bent zojuist aangekomen bij de werkplaats. Het is lang geleden dat jij hier zelf hebt gestaan.
+De Kerstman heeft je verteld dat je voor meer informatie bij Henkie, de toezichthouder van de werkplaats moet zijn.
+Er is werk aan de winkel, agent. Veel geluk.
+*end_intro

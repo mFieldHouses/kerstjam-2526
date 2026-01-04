@@ -122,5 +122,6 @@ func _get_dialog_file_path(file_name : String) -> String:
 	return DefaultPaths.dialog_files_path + ProjectSettings.get_setting("internationalization/locale/test").split("_")[0] + "/" + file_name + ".txt"
 
 func end_dialog() -> void:
+	PersistentControls.continue_dialog
 	PersistentUI.dialog_line("", "", null)
 	PersistentUI.remote_dialog_line("", "", null)

@@ -13,6 +13,26 @@ func _ready() -> void:
 	else:
 		$Characters/player2.queue_free()
 		$Characters/player1._ready()
+		
+		PlayerState.toggle_sleep(true)
+		PlayerUIState.set_ui_visibility(false)
+		
+		$intro_cam_path/PathFollow3D/intro_cam_pivot/Camera3D.current = true
+		
+		var _cam_tween : Tween = create_tween()
+		_cam_tween.tween_property($intro_cam_path/PathFollow3D, "progress_ratio", 1.0, 90.0)
+		
+		DialogManager.initiate_remote_dialog("intro", "", null, false)
+		
+		await DialogManager.dialog_ended
+		
+		PersistentUI.fade_black(1.0)
+		
+		await PersistentUI.fade_middle
+		
+		PlayerState.toggle_sleep(false)
+		PlayerUIState.set_ui_visibility(true)
+		$Characters/player1.camera.current = true
 
 func _end_game(x,y) -> void:
 	

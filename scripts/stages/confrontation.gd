@@ -42,6 +42,8 @@ func _ready() -> void:
 		
 		if _first_round:
 			DialogManager.initiate_remote_dialog("timeout", "Philip", null)
+			await DialogManager.dialog_ended
+			DialogManager.initiate_remote_dialog("timeout_henkie", "Henkie", null)
 		await $Nutcracker_Eindbaas.spawn_monsters_timeout()
 		
 		await get_tree().create_timer(1).timeout
@@ -128,7 +130,11 @@ func get_closest_floor_panel_distance() -> float:
 
 func dialog_queue(did : String, qid : String) -> void:
 	if did == "nutcracker_ascend" and qid == "end":
-		SceneManager.launch_stage("SantaShop-Niels")
+		GlobalGameFlags.add_flag("game_completed")
+		
+		await get_tree().create_timer(2.0).timeout
+		
+		SceneManager.launch_stage("SantaShop_Niels")
 
 
 func _on_fall_area_body_entered(body: Node3D) -> void:

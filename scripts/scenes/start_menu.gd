@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_play_button_down() -> void:
-	SceneManager.launch_stage("confrontation")
+	SceneManager.launch_menu("select_stage", true, 0.3)
 
 
 func _on_exit_button_down() -> void:

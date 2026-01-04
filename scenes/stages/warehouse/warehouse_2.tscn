@@ -130,6 +130,7 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueInitiator/AreaTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.578311, 0)
 shape = SubResource("BoxShape3D_sovhg")
 
 [node name="Platform" parent="." instance=ExtResource("5_7ssc0")]

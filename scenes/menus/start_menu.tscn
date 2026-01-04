@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cli4mcpwy7htl"]
+[gd_scene load_steps=3 format=3 uid="uid://cli4mcpwy7htl"]
 
 [ext_resource type="Script" uid="uid://cydxyx2vh78nd" path="res://scripts/scenes/start_menu.gd" id="1_8tuso"]
+[ext_resource type="Texture2D" uid="uid://2eueh34dy6ea" path="res://assets/textures/backdrops/title.png" id="2_r2ayf"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -11,6 +12,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8tuso")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_r2ayf")
+expand_mode = 3
+
 [node name="options" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -19,9 +30,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -192.0
-offset_top = -20.0
+offset_top = 21.0
 offset_right = 192.0
-offset_bottom = 20.0
+offset_bottom = 87.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -32,6 +43,22 @@ text = "PLAY_BTN"
 [node name="exit" type="Button" parent="options"]
 layout_mode = 2
 text = "EXIT_BTN"
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.5
+offset_top = -133.0
+offset_right = 105.5
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Agent 11"
 
 [connection signal="button_down" from="options/play" to="." method="_on_play_button_down"]
 [connection signal="button_down" from="options/exit" to="." method="_on_exit_button_down"]

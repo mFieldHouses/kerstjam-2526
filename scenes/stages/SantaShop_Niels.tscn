@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://ceitmv68vaggj"]
+[gd_scene load_steps=63 format=3 uid="uid://ceitmv68vaggj"]
 
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="1_6a1gd"]
 [ext_resource type="VoxelGIData" uid="uid://dc6d5f712t31g" path="res://assets/VoxelGI-Data/SantaShop_Niels.VoxelGI-map_data.res" id="1_8tf0k"]
@@ -45,6 +45,13 @@
 [ext_resource type="AudioStream" uid="uid://ccuspj5jg5te" path="res://assets/sound/soundtrack/seagulls.wav" id="88_wn5cl"]
 [ext_resource type="Script" uid="uid://26bliay7thhf" path="res://scripts/barn_soundmixer.gd" id="89_5q8tg"]
 [ext_resource type="Script" uid="uid://mbvui4xgijps" path="res://scripts/environment_audio_3d.gd" id="89_nvrd0"]
+
+[sub_resource type="Curve3D" id="Curve3D_mjwaw"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 9.2089405, 9.482788, -17.891994, 5.9310875, 1.0817871, -4.7093954, -5.9310875, -1.0817871, 4.7093954, -5.0785246, 8.044434, -12.904763, -3.00068, 0.680542, -8.920932, 3.00068, -0.680542, 8.920932, -13.269557, 5.624634, 12.560444),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0h4kg"]
 sky_top_color = Color(0.00049372524, 0.0371885, 0.28080407, 1)
@@ -143,6 +150,24 @@ size = Vector3(20.504883, 0.49658203, 19.720459)
 
 [node name="Map-SantasShop" type="Node3D"]
 script = ExtResource("1_mjwaw")
+
+[node name="intro_cam_path" type="Path3D" parent="."]
+curve = SubResource("Curve3D_mjwaw")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="intro_cam_path"]
+transform = Transform3D(0.033228934, 0, -0.9994171, 0, 0.99999744, 0, 0.9994171, 0, 0.033228934, 9.2089405, 9.482788, -17.891994)
+rotation_mode = 1
+use_model_front = true
+
+[node name="intro_cam_pivot" type="Marker3D" parent="intro_cam_path/PathFollow3D"]
+transform = Transform3D(-0.21284279, 0.15236151, 0.96513414, 0, 0.9877674, -0.15593451, -0.9770864, -0.033189543, -0.21023917, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="intro_cam_path/PathFollow3D/intro_cam_pivot"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.677657e-07, -4.7683716e-07, -6.5223503)
+current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="intro_cam_path/PathFollow3D/intro_cam_pivot/Camera3D"]
+target_position = Vector3(0, 0, -100)
 
 [node name="Environmental Setup" type="Node3D" parent="."]
 

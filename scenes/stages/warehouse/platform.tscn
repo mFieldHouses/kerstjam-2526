@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cve1kqotnlkf6"]
+[gd_scene load_steps=7 format=3 uid="uid://cve1kqotnlkf6"]
 
 [ext_resource type="PackedScene" uid="uid://dyv70yht34g2p" path="res://assets/meshes/Debug/platform.glb" id="1_lggoy"]
 [ext_resource type="Script" uid="uid://ckncv3t7r50n7" path="res://scripts/stages/warehouse/platform.gd" id="2_drij7"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="3_0c51y"]
+[ext_resource type="PackedScene" uid="uid://dsyhlw5qw1yn8" path="res://assets/meshes/SantaShop/Decoration/Computers/computer_4.tscn" id="4_drij7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cdqsp"]
 size = Vector3(1, 1.7398071, 1.1118164)
@@ -93,3 +94,6 @@ omni_range = 13.21
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="platform"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25890827, 0)
 navigation_mesh = SubResource("NavigationMesh_lggoy")
+
+[node name="Computer-4" parent="platform" instance=ExtResource("4_drij7")]
+transform = Transform3D(-1.86, 0, -2.808522e-07, 0, 1.86, 0, 2.808522e-07, 0, -1.86, -8.578, 0.25, 8.386)
