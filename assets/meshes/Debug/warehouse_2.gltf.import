@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c623bxbpfwl7k"
-valid=false
+uid="uid://ccx8wrsjewg2x"
+path="res://.godot/imported/warehouse_2.gltf-2ee26c88f226b4cfc5cd9e193fbdcda5.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Enemies/NutCracker-1.glb"
+source_file="res://assets/meshes/Debug/warehouse_2.gltf"
+dest_files=["res://.godot/imported/warehouse_2.gltf-2ee26c88f226b4cfc5cd9e193fbdcda5.scn"]
 
 [params]
 

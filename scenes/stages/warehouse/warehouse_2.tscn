@@ -1,7 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://bwhxv2wqfr8d5"]
 
 [ext_resource type="Script" uid="uid://bvgudpbaauty8" path="res://scriptswarehouse_2.gd" id="1_dfkw8"]
-[ext_resource type="PackedScene" uid="uid://buar51plgglsb" path="res://assets/meshes/Debug/warehouse_2.glb" id="1_urnwb"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="2_7ssc0"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="3_1luqp"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="4_3xavh"]
@@ -18,6 +17,7 @@
 [ext_resource type="Script" uid="uid://cq5y0kvnh684m" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/Trigger.gd" id="15_mbewa"]
 [ext_resource type="Script" uid="uid://c7ccd1128l7ea" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/ActionPromptTrigger.gd" id="17_bys0d"]
 [ext_resource type="PackedScene" uid="uid://c5sao4uo5graf" path="res://assets/meshes/SantaShop/Decoration/Computers/Computer-1.glb" id="17_ej86v"]
+[ext_resource type="PackedScene" uid="uid://ccx8wrsjewg2x" path="res://assets/meshes/Debug/warehouse_2.gltf" id="18_ej86v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxix6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,8 +42,6 @@ size = Vector3(0.5548096, 1, 1)
 
 [node name="Warehouse2" type="Node3D"]
 script = ExtResource("1_dfkw8")
-
-[node name="warehouse_2" parent="." instance=ExtResource("1_urnwb")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tr1qn")
@@ -172,12 +170,6 @@ transform = Transform3D(-0.25881892, 0, 0.9659259, 0, 1, 0, -0.9659259, 0, -0.25
 [node name="launcher" type="Node" parent="Snowman3"]
 script = ExtResource("7_wk4on")
 
-[node name="Snowman5" parent="." instance=ExtResource("8_wk4on")]
-transform = Transform3D(-0.9996537, 0, -0.02631642, 0, 1, 0, 0.02631642, 0, -0.9996537, -32.92491, -46.980194, -10.907878)
-
-[node name="launcher" type="Node" parent="Snowman5"]
-script = ExtResource("7_wk4on")
-
 [node name="present_mimic4" parent="." instance=ExtResource("6_3xavh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.870363, -14.659607, 10.856412)
 
@@ -218,18 +210,6 @@ script = ExtResource("7_wk4on")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -22.752483, -36.62836, 4.838785)
 
 [node name="launcher" type="Node" parent="present_mimic14"]
-script = ExtResource("7_wk4on")
-
-[node name="present_mimic11" parent="." instance=ExtResource("6_3xavh")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -39.867867, -44.73245, -10.441043)
-
-[node name="launcher" type="Node" parent="present_mimic11"]
-script = ExtResource("7_wk4on")
-
-[node name="present_mimic12" parent="." instance=ExtResource("6_3xavh")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -39.089165, -44.73245, -10.913905)
-
-[node name="launcher" type="Node" parent="present_mimic12"]
 script = ExtResource("7_wk4on")
 
 [node name="present_mimic9" parent="." instance=ExtResource("6_3xavh")]
@@ -316,3 +296,5 @@ collision_mask = 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Computer-1/ActionPromptTrigger/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22259521, 0, 0)
 shape = SubResource("BoxShape3D_h46xh")
+
+[node name="warehouse_2" parent="." instance=ExtResource("18_ej86v")]
