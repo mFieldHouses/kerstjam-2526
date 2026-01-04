@@ -15,13 +15,13 @@
 [ext_resource type="PackedScene" uid="uid://bxxankmgh5hfl" path="res://assets/meshes/Environment/SnowHigh-1-col.glb" id="22_h8udn"]
 [ext_resource type="PackedScene" uid="uid://cklh0pte3sm2y" path="res://assets/scenes/Buildings/building_santas_workshop.tscn" id="27_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://8qin0wvv51wp" path="res://assets/meshes/Sled/Sled-1.glb" id="28_ipl6n"]
-[ext_resource type="PackedScene" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
-[ext_resource type="PackedScene" path="res://assets/meshes/Environment/Ground-SantaMap.tscn" id="28_xguq7"]
-[ext_resource type="PackedScene" uid="uid://ctj1pr4680eus" path="res://assets/meshes/Characters/Elf-SizeCheck-1.glb" id="29_ipl6n"]
+[ext_resource type="PackedScene" uid="uid://d8wbgo5c2a7e" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
+[ext_resource type="PackedScene" uid="uid://cgm2yd6wh5peu" path="res://assets/meshes/Environment/Ground-SantaMap.tscn" id="28_xguq7"]
 [ext_resource type="PackedScene" uid="uid://ctplqojdl2sbt" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-2.tscn" id="32_8tf0k"]
 [ext_resource type="PackedScene" uid="uid://cvxrtuu2m0i2w" path="res://assets/meshes/Misc/foot_step.tscn" id="32_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://d3r5tdaxn7kxi" path="res://assets/scenes/Characters/NPC/ginger_bread_man_walking_around.tscn" id="40_jhtxq"]
-[ext_resource type="PackedScene" path="res://assets/meshes/Environment/IcePatches/IceSpikes-1.tscn" id="41_xguq7"]
+[ext_resource type="PackedScene" uid="uid://cj1rf52n2yyoy" path="res://assets/meshes/Misc/CandyCane-1.glb" id="40_mjwaw"]
+[ext_resource type="PackedScene" uid="uid://dtdywsc3tdm34" path="res://assets/meshes/Environment/IcePatches/IceSpikes-1.tscn" id="41_xguq7"]
 [ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="67_hph74"]
 [ext_resource type="PackedScene" uid="uid://bpbi16h0l5bks" path="res://assets/scenes/Characters/Enemies/ginger_bread_man.tscn" id="67_qts4k"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="67_sna10"]
@@ -32,18 +32,18 @@
 [ext_resource type="PackedScene" uid="uid://cyn5bi6e0gs42" path="res://assets/meshes/Environment/SnowHigh-3.glb" id="72_3kejl"]
 [ext_resource type="PackedScene" uid="uid://c0rpx2wuktd0h" path="res://assets/scenes/floors/floor-icepatch-1.tscn" id="73_x7rey"]
 [ext_resource type="PackedScene" uid="uid://c8unih57mu5w1" path="res://assets/meshes/Environment/Trees/Tree-1.glb" id="74_ju5eo"]
-[ext_resource type="PackedScene" path="res://scenes/elements/PileOfWood-1.tscn" id="75_6a1gd"]
+[ext_resource type="PackedScene" uid="uid://d3r6ngrcjihtk" path="res://scenes/elements/PileOfWood-1.tscn" id="75_6a1gd"]
 [ext_resource type="PackedScene" uid="uid://2pbpl80r7ufi" path="res://assets/scenes/Walls/snow_high_4.tscn" id="78_vpjt7"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="80_nj3uu"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="81_mydgr"]
 [ext_resource type="PackedScene" uid="uid://cft5l71757amh" path="res://assets/meshes/Environment/sign_operations_and_santasshop.tscn" id="82_mydgr"]
 [ext_resource type="PackedScene" uid="uid://cotqsfdgwp8nq" path="res://assets/scenes/Characters/NPC/henkie.tscn" id="83_qts4k"]
 [ext_resource type="AudioStream" uid="uid://cceofr7x5is3t" path="res://assets/sound/soundtrack/wind.wav" id="86_kvc07"]
-[ext_resource type="Script" uid="uid://ubl2tl60pb8m" path="res://scripts/environment_audio.gd" id="87_wn5cl"]
+[ext_resource type="Script" path="res://scripts/environment_audio.gd" id="87_wn5cl"]
 [ext_resource type="AudioStream" uid="uid://c7m3i8ydt67cq" path="res://assets/sound/soundtrack/barn.wav" id="88_08g2m"]
 [ext_resource type="AudioStream" uid="uid://ccuspj5jg5te" path="res://assets/sound/soundtrack/seagulls.wav" id="88_wn5cl"]
-[ext_resource type="Script" uid="uid://26bliay7thhf" path="res://scripts/barn_soundmixer.gd" id="89_5q8tg"]
-[ext_resource type="Script" uid="uid://mbvui4xgijps" path="res://scripts/environment_audio_3d.gd" id="89_nvrd0"]
+[ext_resource type="Script" path="res://scripts/barn_soundmixer.gd" id="89_5q8tg"]
+[ext_resource type="Script" path="res://scripts/environment_audio_3d.gd" id="89_nvrd0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0h4kg"]
 sky_top_color = Color(0.00049372524, 0.0371885, 0.28080407, 1)
@@ -470,9 +470,6 @@ transform = Transform3D(0.034794893, 0, -0.9993945, 0, 1, 0, 0.9993945, 0, 0.034
 [node name="Pavment-15" parent="SteppingStones" instance=ExtResource("28_l2h6s")]
 transform = Transform3D(-0.7143505, 0, -0.6997881, 0, 1, 0, 0.6997881, 0, -0.7143505, -2.3720467, -0.046820164, -1.6374223)
 
-[node name="Elf-SizeCheck-1" parent="." instance=ExtResource("29_ipl6n")]
-transform = Transform3D(0.018493906, 0, -0.39957222, 0, 0.4, 0, 0.39957222, 0, 0.018493906, -3.1745718, 0.2001754, 1.8800335)
-
 [node name="Sled-1" parent="." instance=ExtResource("28_ipl6n")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 9.398246, -0.019072056, 6.4615192)
 
@@ -844,11 +841,23 @@ transform = Transform3D(0.9958923, 0, -0.090545654, 0, 1, 0, 0.090545654, 0, 0.9
 
 [node name="Santas-Workshop" parent="World/Buildings" instance=ExtResource("27_iwwnf")]
 
-[node name="Node3D" parent="World" instance=ExtResource("28_xguq7")]
+[node name="ChristmasDecoration" parent="World" instance=ExtResource("28_xguq7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.7683716e-07, 0)
 
 [node name="GingerBreadMan_walking_around" parent="World" instance=ExtResource("40_jhtxq")]
 transform = Transform3D(-0.9124985, 0, 0.4089289, 0, 1, 0, -0.4089289, 0, -0.9124985, 12.276518, 0.305883, -11.396023)
+
+[node name="CandyCane-1" parent="World" instance=ExtResource("40_mjwaw")]
+transform = Transform3D(0.296815, -0.13608682, 0.37865716, 0.20838633, 0.45450538, 0, -0.34420344, 0.15781395, 0.3265253, 14.281733, -0.358788, -13.288757)
+
+[node name="CandyCane-4" parent="World" instance=ExtResource("40_mjwaw")]
+transform = Transform3D(0.296815, -0.13608682, 0.37865716, 0.20838633, 0.45450538, 0, -0.34420344, 0.15781395, 0.3265253, 19.816673, 0.5167793, -33.213753)
+
+[node name="CandyCane-2" parent="World" instance=ExtResource("40_mjwaw")]
+transform = Transform3D(0.29681498, -0.1360868, 0.37865713, 0.03722574, 0.47780398, 0.14253967, -0.4006434, -0.05642426, 0.29377067, 14.281733, -0.358788, -6.905471)
+
+[node name="CandyCane-3" parent="World" instance=ExtResource("40_mjwaw")]
+transform = Transform3D(0.29681498, -0.1360868, 0.37865713, 0.03722574, 0.47780398, 0.14253967, -0.4006434, -0.05642426, 0.29377067, -6.5755253, -0.358788, -6.905471)
 
 [node name="IceArch-1-col2" parent="." instance=ExtResource("70_3kejl")]
 transform = Transform3D(0.4829629, 0, -0.12940952, 0, 0.5, 0, 0.12940952, 0, 0.4829629, 36, 8.495497, -80)

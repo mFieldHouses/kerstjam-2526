@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://cklh0pte3sm2y"]
+[gd_scene load_steps=68 format=4 uid="uid://cklh0pte3sm2y"]
 
 [ext_resource type="PackedScene" uid="uid://e11s1uc2rpys" path="res://assets/meshes/SantaShop/Walls/CornerStones-1-04x04x03m.fbx" id="1_js2rw"]
 [ext_resource type="PackedScene" uid="uid://0dys61sp3ccr" path="res://assets/meshes/Misc/ladder.tscn" id="1_qwucj"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dtl71bvlancg7" path="res://assets/meshes/SantaShop/Doors/BigDoor-R-Detailed.glb" id="13_448k1"]
 [ext_resource type="PackedScene" uid="uid://myxxjf7k6b3b" path="res://assets/meshes/SantaShop/Doors/BigDoor-L-Detailed.glb" id="14_wn5a2"]
 [ext_resource type="Texture2D" uid="uid://ceooxe2w7sgx8" path="res://assets/textures/misc/Snow-Line-2.png" id="15_2j3wo"]
-[ext_resource type="PackedScene" uid="uid://cmt43o30mx2hs" path="res://assets/meshes/SantaShop/Doors/door_normal_1.tscn" id="16_c0iao"]
 [ext_resource type="PackedScene" uid="uid://bikd1xas7guuo" path="res://assets/meshes/SantaShop/Windows/window_normal_1.tscn" id="18_0mru6"]
 [ext_resource type="PackedScene" uid="uid://bgru0h4cvr1vr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1.glb" id="19_86ayv"]
 [ext_resource type="Material" uid="uid://bo6ysfjfwynng" path="res://assets/materials/Floor-Wood-1.tres" id="20_gjqmn"]
@@ -36,8 +35,8 @@
 [ext_resource type="Material" uid="uid://bcu5hcerl3fy" path="res://assets/materials/Ice-3.tres" id="36_mi583"]
 [ext_resource type="Material" uid="uid://q8ibnub1ja58" path="res://assets/materials/WorkBench-1.tres" id="37_u8rdd"]
 [ext_resource type="PackedScene" uid="uid://8v36r6sbpf2p" path="res://assets/meshes/SantaShop/Decoration/Vice-1.glb" id="38_kll50"]
+[ext_resource type="Material" uid="uid://b7n3oi2plbimd" path="res://assets/materials/Black.tres" id="38_mi583"]
 [ext_resource type="Material" uid="uid://cn451fvlr28am" path="res://assets/materials/Metal-SteelRed-1.tres" id="39_nng1t"]
-[ext_resource type="Material" uid="uid://brgjh3uq3yn2k" path="res://assets/materials/Metal-Steel-1.tres" id="40_yk64e"]
 [ext_resource type="PackedScene" uid="uid://cppumb700vwwr" path="res://assets/meshes/Misc/Stool-1.glb" id="41_lyvan"]
 [ext_resource type="Material" uid="uid://dquf6x7y8mf53" path="res://assets/materials/brown-1.tres" id="42_qf7y7"]
 [ext_resource type="PackedScene" uid="uid://c2idrwdaabkg2" path="res://assets/meshes/SantaShop/Platforms/Platform-1-1x2x02.glb" id="43_hc11k"]
@@ -56,6 +55,8 @@
 [ext_resource type="PackedScene" uid="uid://plgrmg3pf5bw" path="res://assets/meshes/Weapons/Axe-1/Axe-1.glb" id="54_mi583"]
 [ext_resource type="PackedScene" uid="uid://beeg1uomills8" path="res://assets/meshes/Misc/SticksAndLogs/TreeLog-2.glb" id="55_0gs78"]
 [ext_resource type="PackedScene" uid="uid://cr0c56w56ll67" path="res://assets/meshes/SantaShop/Doors/door_normal_2.tscn" id="56_1helu"]
+[ext_resource type="PackedScene" uid="uid://4qaeo3afy8tm" path="res://assets/meshes/SantaShop/Decoration/Computers/computer_2.tscn" id="56_mi583"]
+[ext_resource type="PackedScene" uid="uid://cbdtqeevoa8ly" path="res://assets/meshes/SantaShop/Decoration/Computers/computer_3.tscn" id="57_0gs78"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q23m3"]
 
@@ -2516,9 +2517,6 @@ texture_albedo = ExtResource("15_2j3wo")
 upper_fade = 1e-05
 lower_fade = 0.06306803
 
-[node name="Door-Normal-2" parent="SantasShop/Structure/Doors" instance=ExtResource("16_c0iao")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, 0)
-
 [node name="Windows" type="Node3D" parent="SantasShop/Structure"]
 
 [node name="WindowNormal-1" parent="SantasShop/Structure/Windows" instance=ExtResource("18_0mru6")]
@@ -3515,16 +3513,16 @@ surface_material_override/0 = ExtResource("39_nng1t")
 surface_material_override/0 = ExtResource("39_nng1t")
 
 [node name="Cylinder_204" parent="SantasShop/WorkStations/Forge/Vice-1" index="2"]
-surface_material_override/0 = ExtResource("40_yk64e")
+surface_material_override/0 = ExtResource("38_mi583")
 
 [node name="Cylinder_205" parent="SantasShop/WorkStations/Forge/Vice-1" index="3"]
-surface_material_override/0 = ExtResource("40_yk64e")
+surface_material_override/0 = ExtResource("38_mi583")
 
 [node name="Cube_638" parent="SantasShop/WorkStations/Forge/Vice-1" index="4"]
-surface_material_override/0 = ExtResource("40_yk64e")
+surface_material_override/0 = ExtResource("38_mi583")
 
 [node name="Cylinder_206" parent="SantasShop/WorkStations/Forge/Vice-1" index="5"]
-surface_material_override/0 = ExtResource("40_yk64e")
+surface_material_override/0 = ExtResource("38_mi583")
 
 [node name="Assembly" type="Node3D" parent="SantasShop/WorkStations"]
 
@@ -4422,10 +4420,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2, 5.216126, 7)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.059094, 11.871497, 6.7719245)
 
 [node name="Krans-1" parent="SantasShop" instance=ExtResource("51_1bisa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.83690965, 3.331968, 5.0174193)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.99395597, 3.331968, 5.4312234)
 
 [node name="Krans-2" parent="SantasShop" instance=ExtResource("51_1bisa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.83690965, 3.331968, 7.936765)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.0207211, 3.331968, 8.210953)
 
 [node name="Werkplaats" type="Node3D" parent="."]
 
@@ -4492,6 +4490,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9418964, 2.7792485, -0.5885
 
 [node name="Door-Normal-2" parent="." instance=ExtResource("56_1helu")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.25, 0, -3.25)
+
+[node name="Door-Normal-3" parent="." instance=ExtResource("56_1helu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, 0)
+
+[node name="Computer-2" parent="." instance=ExtResource("56_mi583")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.50258, 5.41166, 6.177593)
+
+[node name="Computer-3" parent="." instance=ExtResource("57_0gs78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.515839, 5.432577, 5.675341)
 
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49"]

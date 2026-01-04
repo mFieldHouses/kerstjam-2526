@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://4qaeo3afy8tm"]
+
+[ext_resource type="PackedScene" uid="uid://cl42q4p10rguv" path="res://assets/meshes/SantaShop/Decoration/Computers/Computer-2.glb" id="1_11hl4"]
+[ext_resource type="Material" uid="uid://dn6kf4xctrw2a" path="res://assets/materials/Metal-Brons-1.tres" id="2_tf10t"]
+[ext_resource type="Material" uid="uid://dquf6x7y8mf53" path="res://assets/materials/brown-1.tres" id="3_e8abe"]
+[ext_resource type="Material" uid="uid://qvc1hl6sw071" path="res://assets/materials/GreenMonitorReflective.tres" id="4_fyvqj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rtfan"]
+size = Vector3(2.6447754, 2.018982, 0.9970703)
+
+[sub_resource type="Animation" id="Animation_tf10t"]
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Computer-2-MainMonitor:surface_material_override/0:roughness_texture:noise:frequency")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5137, 0.9715]
+}
+
+[sub_resource type="Animation" id="Animation_11hl4"]
+resource_name = "ScreenNoise"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Computer-2-MainMonitor:surface_material_override/0:roughness_texture:noise:frequency")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5137, 0.9715]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e8abe"]
+_data = {
+&"RESET": SubResource("Animation_tf10t"),
+&"ScreenNoise": SubResource("Animation_11hl4")
+}
+
+[node name="Computer-2" type="Node3D"]
+
+[node name="Computer-3" parent="." instance=ExtResource("1_11hl4")]
+
+[node name="Cylinder_288" parent="Computer-3" index="1"]
+surface_material_override/0 = ExtResource("2_tf10t")
+
+[node name="Computer-1" parent="Computer-3" index="2"]
+surface_material_override/0 = ExtResource("3_e8abe")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Computer-3/Computer-1/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09729007, 1.0108948, -0.44850665)
+shape = SubResource("BoxShape3D_rtfan")
+
+[node name="Computer-2-MainMonitor" parent="Computer-3" index="3"]
+surface_material_override/0 = ExtResource("4_fyvqj")
+
+[node name="Computer-2-SmallScreen-1" parent="Computer-3" index="4"]
+surface_material_override/0 = ExtResource("4_fyvqj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Computer-3"]
+libraries = {
+&"": SubResource("AnimationLibrary_e8abe")
+}
+autoplay = "RESET"
+
+[editable path="Computer-3"]
