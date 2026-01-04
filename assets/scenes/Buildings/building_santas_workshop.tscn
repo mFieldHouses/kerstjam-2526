@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=4 uid="uid://cklh0pte3sm2y"]
+[gd_scene load_steps=69 format=4 uid="uid://cklh0pte3sm2y"]
 
 [ext_resource type="PackedScene" uid="uid://e11s1uc2rpys" path="res://assets/meshes/SantaShop/Walls/CornerStones-1-04x04x03m.fbx" id="1_js2rw"]
 [ext_resource type="PackedScene" uid="uid://0dys61sp3ccr" path="res://assets/meshes/Misc/ladder.tscn" id="1_qwucj"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dtl71bvlancg7" path="res://assets/meshes/SantaShop/Doors/BigDoor-R-Detailed.glb" id="13_448k1"]
 [ext_resource type="PackedScene" uid="uid://myxxjf7k6b3b" path="res://assets/meshes/SantaShop/Doors/BigDoor-L-Detailed.glb" id="14_wn5a2"]
 [ext_resource type="Texture2D" uid="uid://ceooxe2w7sgx8" path="res://assets/textures/misc/Snow-Line-2.png" id="15_2j3wo"]
-[ext_resource type="PackedScene" uid="uid://cmt43o30mx2hs" path="res://assets/meshes/SantaShop/Doors/door_normal_1.tscn" id="16_c0iao"]
 [ext_resource type="PackedScene" uid="uid://bikd1xas7guuo" path="res://assets/meshes/SantaShop/Windows/window_normal_1.tscn" id="18_0mru6"]
 [ext_resource type="PackedScene" uid="uid://bgru0h4cvr1vr" path="res://assets/meshes/SantaShop/Floors/Wood-Floor-1.glb" id="19_86ayv"]
 [ext_resource type="Material" uid="uid://bo6ysfjfwynng" path="res://assets/materials/Floor-Wood-1.tres" id="20_gjqmn"]
@@ -36,8 +35,8 @@
 [ext_resource type="Material" uid="uid://bcu5hcerl3fy" path="res://assets/materials/Ice-3.tres" id="36_mi583"]
 [ext_resource type="Material" path="res://assets/materials/WorkBench-1.tres" id="37_u8rdd"]
 [ext_resource type="PackedScene" uid="uid://8v36r6sbpf2p" path="res://assets/meshes/SantaShop/Decoration/Vice-1.glb" id="38_kll50"]
-[ext_resource type="Material" path="res://assets/materials/Metal-SteelRed-1.tres" id="39_nng1t"]
-[ext_resource type="Material" path="res://assets/materials/Metal-Steel-1.tres" id="40_yk64e"]
+[ext_resource type="Material" uid="uid://b7n3oi2plbimd" path="res://assets/materials/Black.tres" id="38_mi583"]
+[ext_resource type="Material" uid="uid://cn451fvlr28am" path="res://assets/materials/Metal-SteelRed-1.tres" id="39_nng1t"]
 [ext_resource type="PackedScene" uid="uid://cppumb700vwwr" path="res://assets/meshes/Misc/Stool-1.glb" id="41_lyvan"]
 [ext_resource type="Material" path="res://assets/materials/brown-1.tres" id="42_qf7y7"]
 [ext_resource type="PackedScene" uid="uid://c2idrwdaabkg2" path="res://assets/meshes/SantaShop/Platforms/Platform-1-1x2x02.glb" id="43_hc11k"]
@@ -48,6 +47,7 @@
 [ext_resource type="PackedScene" uid="uid://dxakl3a78inaa" path="res://assets/meshes/SantaShop/LaunchSystem/launch_system.tscn" id="48_qwucj"]
 [ext_resource type="Material" path="res://assets/materials/Glass-Orange-2.tres" id="48_v86rp"]
 [ext_resource type="PackedScene" uid="uid://c5sao4uo5graf" path="res://assets/meshes/SantaShop/Decoration/Computers/Computer-1.glb" id="49_xj4t7"]
+[ext_resource type="PackedScene" uid="uid://dsyhlw5qw1yn8" path="res://assets/meshes/SantaShop/Decoration/Computers/computer_4.tscn" id="51_0gs78"]
 [ext_resource type="PackedScene" uid="uid://cgd6m2bp1ktg0" path="res://assets/meshes/Misc/krans_1.tscn" id="51_1bisa"]
 [ext_resource type="PackedScene" uid="uid://coqgbgox4wuqd" path="res://scenes/elements/SmallWoodenSupportedRoof-1.tscn" id="52_1bisa"]
 [ext_resource type="PackedScene" uid="uid://cjaryyad2lvnx" path="res://assets/meshes/SantaShop/Windows/window_tall_1.tscn" id="52_vtuc5"]
@@ -56,6 +56,8 @@
 [ext_resource type="PackedScene" uid="uid://plgrmg3pf5bw" path="res://assets/meshes/Weapons/Axe-1/Axe-1.glb" id="54_mi583"]
 [ext_resource type="PackedScene" uid="uid://beeg1uomills8" path="res://assets/meshes/Misc/SticksAndLogs/TreeLog-2.glb" id="55_0gs78"]
 [ext_resource type="PackedScene" uid="uid://cr0c56w56ll67" path="res://assets/meshes/SantaShop/Doors/door_normal_2.tscn" id="56_1helu"]
+[ext_resource type="PackedScene" uid="uid://4qaeo3afy8tm" path="res://assets/meshes/SantaShop/Decoration/Computers/computer_2.tscn" id="56_mi583"]
+[ext_resource type="PackedScene" uid="uid://cbdtqeevoa8ly" path="res://assets/meshes/SantaShop/Decoration/Computers/computer_3.tscn" id="57_0gs78"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q23m3"]
 
@@ -2516,9 +2518,6 @@ texture_albedo = ExtResource("15_2j3wo")
 upper_fade = 1e-05
 lower_fade = 0.06306803
 
-[node name="Door-Normal-2" parent="SantasShop/Structure/Doors" instance=ExtResource("16_c0iao")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, 0)
-
 [node name="Windows" type="Node3D" parent="SantasShop/Structure"]
 
 [node name="WindowNormal-1" parent="SantasShop/Structure/Windows" instance=ExtResource("18_0mru6")]
@@ -3298,6 +3297,18 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.7
 [node name="Support-10" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("24_5qfep")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 16.945477, 5.952284, 13.070771)
 
+[node name="Support-35" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("24_5qfep")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.645477, 8.952284, 9.767956)
+
+[node name="Support-36" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("24_5qfep")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.645477, 8.952284, 7.7978973)
+
+[node name="Support-37" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("24_5qfep")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.645477, 8.952284, 5.801752)
+
+[node name="Support-38" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("24_5qfep")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.645477, 8.952284, 3.7850676)
+
 [node name="PlatformSupport1-Electric-col2" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("25_tkrun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6062324, 5.0101004, 11.384996)
 
@@ -3327,6 +3338,18 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 12.5
 
 [node name="PlatformSupport1-Electric-col7" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("25_tkrun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.585377, 5.0101004, 11.386765)
+
+[node name="PlatformSupport1-Electric-col9" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("25_tkrun")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.366888, 10.619656, 9.787403)
+
+[node name="PlatformSupport1-Electric-col10" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("25_tkrun")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.366888, 10.619656, 7.787403)
+
+[node name="PlatformSupport1-Electric-col11" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("25_tkrun")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.366888, 10.619656, 5.787403)
+
+[node name="PlatformSupport1-Electric-col12" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("25_tkrun")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.366888, 10.619656, 3.787403)
 
 [node name="Support-22" parent="SantasShop/Structure/Platforms/Supports" instance=ExtResource("24_5qfep")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 14.598029, 3.2968948, 13.070771)
@@ -3515,16 +3538,16 @@ surface_material_override/0 = ExtResource("39_nng1t")
 surface_material_override/0 = ExtResource("39_nng1t")
 
 [node name="Cylinder_204" parent="SantasShop/WorkStations/Forge/Vice-1" index="2"]
-surface_material_override/0 = ExtResource("40_yk64e")
+surface_material_override/0 = ExtResource("38_mi583")
 
 [node name="Cylinder_205" parent="SantasShop/WorkStations/Forge/Vice-1" index="3"]
-surface_material_override/0 = ExtResource("40_yk64e")
+surface_material_override/0 = ExtResource("38_mi583")
 
 [node name="Cube_638" parent="SantasShop/WorkStations/Forge/Vice-1" index="4"]
-surface_material_override/0 = ExtResource("40_yk64e")
+surface_material_override/0 = ExtResource("38_mi583")
 
 [node name="Cylinder_206" parent="SantasShop/WorkStations/Forge/Vice-1" index="5"]
-surface_material_override/0 = ExtResource("40_yk64e")
+surface_material_override/0 = ExtResource("38_mi583")
 
 [node name="Assembly" type="Node3D" parent="SantasShop/WorkStations"]
 
@@ -3549,6 +3572,26 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.6
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.328, 1.866, 11.38)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SantasShop/WorkStations/Clockwork/Ceiling-Lamp-6"]
+shadow_enabled = true
+shadow_opacity = 0.45
+shadow_blur = 10.0
+omni_range = 2.0
+
+[node name="Ceiling-Lamp-7" parent="SantasShop/WorkStations/Clockwork" instance=ExtResource("36_drmql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.361324, 7.4668994, 8.652498)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SantasShop/WorkStations/Clockwork/Ceiling-Lamp-7"]
+light_energy = 3.0
+shadow_enabled = true
+shadow_opacity = 0.45
+shadow_blur = 10.0
+omni_range = 2.0
+
+[node name="Ceiling-Lamp-8" parent="SantasShop/WorkStations/Clockwork" instance=ExtResource("36_drmql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.361324, 7.4668994, 4.598905)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SantasShop/WorkStations/Clockwork/Ceiling-Lamp-8"]
+light_energy = 3.0
 shadow_enabled = true
 shadow_opacity = 0.45
 shadow_blur = 10.0
@@ -4416,16 +4459,25 @@ surface_material_override/0 = ExtResource("48_v86rp")
 [node name="Computer-1" parent="SantasShop/Platforms/Computers" instance=ExtResource("49_xj4t7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2, 5.216126, 7)
 
+[node name="Computer-4" parent="SantasShop/Platforms/Computers" instance=ExtResource("51_0gs78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.336712, 5.447607, 4.9507647)
+
+[node name="Computer-2" parent="SantasShop/Platforms/Computers" instance=ExtResource("56_mi583")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.50258, 5.41166, 6.177593)
+
+[node name="Computer-3" parent="SantasShop/Platforms/Computers" instance=ExtResource("57_0gs78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.515839, 5.432577, 5.675341)
+
 [node name="LaunchPlatform" type="Node3D" parent="SantasShop"]
 
 [node name="LaunchSystem" parent="SantasShop/LaunchPlatform" instance=ExtResource("48_qwucj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.059094, 11.871497, 6.7719245)
 
 [node name="Krans-1" parent="SantasShop" instance=ExtResource("51_1bisa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.83690965, 3.331968, 5.0174193)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.99395597, 3.331968, 5.4312234)
 
 [node name="Krans-2" parent="SantasShop" instance=ExtResource("51_1bisa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.83690965, 3.331968, 7.936765)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.0207211, 3.331968, 8.210953)
 
 [node name="Werkplaats" type="Node3D" parent="."]
 
@@ -4492,6 +4544,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9418964, 2.7792485, -0.5885
 
 [node name="Door-Normal-2" parent="." instance=ExtResource("56_1helu")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.25, 0, -3.25)
+
+[node name="Door-Normal-3" parent="." instance=ExtResource("56_1helu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10, 0, 0)
+
+[node name="Computer-3" parent="." instance=ExtResource("57_0gs78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.509178, 5.4053507, 3.7457843)
 
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m"]
 [editable path="SantasShop/Structure/Walls/CornerStones/CornerStones-1-04x04x03m49"]
