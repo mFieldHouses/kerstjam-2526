@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://xy0jaufa0o2v"]
+[gd_scene load_steps=8 format=3 uid="uid://xy0jaufa0o2v"]
 
 [ext_resource type="PackedScene" uid="uid://bouff7sjsg00g" path="res://assets/meshes/Environment/Rocks/Cliff-1.tscn" id="1_fhb0r"]
+[ext_resource type="PackedScene" uid="uid://dhbkkvbc7ybvl" path="res://assets/meshes/Environment/Rocks/Rock-1.tscn" id="2_3vweq"]
+[ext_resource type="Shader" uid="uid://r2mlubhtdmgb" path="res://assets/shaders/water.gdshader" id="3_2s5wo"]
+[ext_resource type="PackedScene" uid="uid://ccsosb3wod4io" path="res://scenes/elements/PineTree-1.tscn" id="4_jmry1"]
+[ext_resource type="PackedScene" uid="uid://bv0rihnbecmi0" path="res://assets/meshes/Buildings/ginger_bread_house_1.tscn" id="5_y0ml6"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_csju6"]
+subdivide_width = 100
+subdivide_depth = 100
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iyfi8"]
+render_priority = 0
+shader = ExtResource("3_2s5wo")
 
 [node name="Outside_R&D" type="Node3D"]
 
@@ -25,3 +37,106 @@ transform = Transform3D(18.94624, -3.0040867, 2.7497976, -0.440187, 11.068329, 7
 
 [node name="Cliff-3" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
 transform = Transform3D(4.91543, 0, -0.9157246, 0.2954394, 4.732627, 1.5858607, 0.8667566, -1.613146, 4.65258, 0, 0, 49.244694)
+
+[node name="Cliff-7" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(1.0698407, 0, 4.884203, 0, 5, 0, -4.884203, 0, 1.0698407, -108.327545, -41.52147, -72.26366)
+
+[node name="Cliff-8" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(-1.0694151, 0, 4.884296, 0, 5, 0, -4.884296, 0, -1.0694151, -86.3147, -41.52147, -67.44194)
+
+[node name="Cliff-9" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(-4.277661, 0, 10.745452, 0, 15, 0, -19.537184, 0, -2.3527133, -90.0461, -12.897305, -50.406784)
+
+[node name="Cliff-10" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(-3.4829721, 6.305341, 9.795393, 3.597031, 13.540132, -4.30029, -19.363115, 1.3811277, -2.560815, -106.32244, -25.05851, -4.2669067)
+
+[node name="Cliff-19" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(-3.4829721, 6.305341, 9.795393, 3.597031, 13.540132, -4.30029, -19.363115, 1.3811277, -2.560815, -106.32244, 65.758415, 47.407913)
+
+[node name="Cliff-20" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(-11.20697, 6.032024, -7.964919, 6.3818336, 13.673352, 2.8524728, 15.286464, -1.2861272, -7.0301814, -58.551624, 69.058846, 3.0697632)
+
+[node name="Cliff-11" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(-2.189197, -10.086737, 8.052046, -0.4401871, 11.068327, 7.4201994, -19.874949, 0.8659005, -1.0512618, -45.80587, -25.05851, -38.11579)
+
+[node name="Cliff-12" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(1.8984284, -1.5757867, 4.3488927, 0.29543945, 4.7326264, 1.5858608, -4.6161337, -0.3451616, 1.8900208, -60.223324, -41.52147, -61.726856)
+
+[node name="Cliff-13" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(1.0698409, 0, 4.8842034, -1.5467892, 4.7426424, 0.33881027, -4.6328053, -1.5834612, 1.0147744, -108.327545, -45.862892, 133.9666)
+
+[node name="Cliff-14" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(-1.0694151, 0, 4.884296, -1.5468183, 4.7426414, -0.33867538, -4.632893, -1.583461, -1.0143706, -86.3147, -44.33589, 138.54013)
+
+[node name="Cliff-15" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(-4.277661, 0, 10.745452, -6.187273, 14.227924, -0.7450859, -18.531572, -4.750383, -2.2316155, -90.0461, -11.790159, 145.6334)
+
+[node name="Cliff-16" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(-3.482972, 6.305341, 9.795393, -2.720262, 13.280591, -4.889937, -19.505617, -2.9780152, -1.0671372, -106.32244, -23.630894, 148.56981)
+
+[node name="Cliff-17" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(-2.1891973, -10.086737, 8.052046, 0.25543976, 11.031258, 7.452438, -19.878185, 1.2526155, -0.79100966, -45.80587, 2.6186047, 126.638794)
+
+[node name="Cliff-18" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(1.8984284, -1.5757867, 4.3488927, -1.1816609, 4.37972, 2.1027887, -4.4720974, -1.8261814, 1.2905085, -60.223324, -42.52597, 143.96106)
+
+[node name="Rock-1" parent="World" instance=ExtResource("2_3vweq")]
+transform = Transform3D(50, 0, 0, 0, 80, 0, 0, 0, 50, -131.18478, 8.855347, 138.94337)
+
+[node name="Rock-2" parent="World" instance=ExtResource("2_3vweq")]
+transform = Transform3D(50, 0, 0, 0, 80, 0, 0, 0, 50, -131.18478, -18.285572, -46.42894)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
+transform = Transform3D(1000, 0, 0, 0, 10, 0, 0, 0, 1000, 0, 0, 0)
+mesh = SubResource("PlaneMesh_csju6")
+surface_material_override/0 = SubResource("ShaderMaterial_iyfi8")
+
+[node name="Trees" type="Node3D" parent="World"]
+
+[node name="Tree-1" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9065237, 62.792458, 53.790955)
+
+[node name="Tree-2" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.97201025, 0.23493853, 0, -0.23493853, 0.97201025, 0, 0, 0, 1, -3.7898207, 60.220005, 53.790955)
+
+[node name="Tree-3" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.00182, 62.792458, 60.93174)
+
+[node name="Tree-4" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.97201025, 0.23493853, 0, -0.23493853, 0.97201025, 0, 0, 0, 1, -14.885118, 60.220005, 60.93174)
+
+[node name="Tree-5" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.9349248, 0, -0.35484588, 0, 1, 0, 0.35484588, 0, 0.9349248, -18.867872, 62.792458, 54.688103)
+
+[node name="Tree-6" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.90875643, 0.21964984, -0.35484585, -0.23493852, 0.9720102, 0, 0.34491384, 0.08336697, 0.9349248, -15.019065, 60.220005, 56.148895)
+
+[node name="Tree-7" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.9349248, 0, -0.35484588, 0, 1, 0, 0.35484588, 0, 0.9349248, -18.867872, 72.96827, 33.27926)
+
+[node name="Tree-8" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.9385742, -0.019347386, -0.34453496, -0.010634497, 0.99633104, -0.084919244, 0.34491384, 0.08336697, 0.9349248, -15.019065, 73.486015, 35.061954)
+
+[node name="Tree-9" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.9349248, 0, -0.35484588, 0, 1, 0, 0.35484588, 0, 0.9349248, -11.482256, 72.96827, 33.27926)
+
+[node name="Tree-10" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.9385742, -0.019347386, -0.34453496, -0.010634497, 0.99633104, -0.084919244, 0.34491384, 0.08336697, 0.9349248, -7.633448, 73.486015, 35.061954)
+
+[node name="Tree-11" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.9349248, 0, -0.35484588, 0, 1, 0, 0.35484588, 0, 0.9349248, -11.482256, 72.96827, 27.165436)
+
+[node name="Tree-12" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.9385742, -0.019347386, -0.34453496, -0.010634497, 0.99633104, -0.084919244, 0.34491384, 0.08336697, 0.9349248, -7.633448, 73.486015, 28.948132)
+
+[node name="Tree-13" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.9349248, 0, -0.35484588, 0, 1, 0, 0.35484588, 0, 0.9349248, -6.809627, 72.96827, 27.165436)
+
+[node name="Tree-14" parent="World/Trees" instance=ExtResource("4_jmry1")]
+transform = Transform3D(0.9385742, -0.019347386, -0.34453496, -0.010634497, 0.99633104, -0.084919244, 0.34491384, 0.08336697, 0.9349248, -2.9608192, 73.486015, 28.948132)
+
+[node name="GingerBreadHouse-1" parent="World/Trees" instance=ExtResource("5_y0ml6")]
+transform = Transform3D(0.30002326, 0, 0.95393187, 0, 1, 0, -0.95393187, 0, 0.30002326, -20.57497, 72.68904, 39.959755)
+
+[node name="GingerBreadHouse-2" parent="World/Trees" instance=ExtResource("5_y0ml6")]
+transform = Transform3D(0.86660075, 0, 0.49900204, 0, 1, 0, -0.49900204, 0, 0.86660075, -9.347909, 72.68904, 16.137438)

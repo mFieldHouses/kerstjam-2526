@@ -1,29 +1,96 @@
-[gd_scene load_steps=17 format=3 uid="uid://c1dnotdac1qr3"]
+[gd_scene load_steps=27 format=3 uid="uid://c1dnotdac1qr3"]
 
 [ext_resource type="Script" uid="uid://b2iw6rsa4l7j7" path="res://scripts/stages/confrontation.gd" id="1_q58n8"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="1_txjfn"]
+[ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="3_bas4q"]
+[ext_resource type="PackedScene" uid="uid://bwsq2exlij0tn" path="res://assets/scenes/Environmental/glitter_fog.tscn" id="4_swyor"]
 [ext_resource type="PackedScene" uid="uid://cqtj3st2qdnea" path="res://assets/scenes/Characters/Enemies/nutcracker_eindbaas.tscn" id="6_06wq0"]
 [ext_resource type="PackedScene" uid="uid://bf7gxeej6ok40" path="res://assets/meshes/Confrontation/RD-1-DroppingPlatforms.glb" id="6_nl8qr"]
 [ext_resource type="PackedScene" uid="uid://b0fbv1wnisor4" path="res://assets/meshes/Buildings/rd_lab.tscn" id="7_7ocgb"]
 [ext_resource type="PackedScene" uid="uid://bmo2v6vkmad7c" path="res://assets/meshes/Weapons/Ammo/bullet_globe_1.tscn" id="8_bas4q"]
+[ext_resource type="PackedScene" uid="uid://xy0jaufa0o2v" path="res://assets/scenes/Environmental/Confrontation_Outdoors/outside_r&d.tscn" id="9_5vnlg"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_jyk3o"]
 [ext_resource type="Resource" uid="uid://gwh384geqki4" path="res://assets/resources/items/ammo/fast.tres" id="9_swyor"]
 [ext_resource type="Resource" uid="uid://b060qwaalhnug" path="res://assets/resources/items/ammo/big.tres" id="10_84t4l"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="10_fbhbk"]
 [ext_resource type="AudioStream" uid="uid://ow0irwby64sh" path="res://assets/sound/sfx/open_roof.wav" id="11_txjfn"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wvqfc"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_txjfn"]
+sky_top_color = Color(0.00049372524, 0.0371885, 0.28080407, 1)
+sky_horizon_color = Color(0.05461114, 0.83493805, 0.5045899, 1)
+sky_curve = 0.038822234
+sky_energy_multiplier = 0.5
+sky_cover_modulate = Color(0, 0.29411766, 0, 1)
+ground_horizon_color = Color(0, 0.41960785, 0.30980393, 1)
+energy_multiplier = 1.2
 
-[sub_resource type="Sky" id="Sky_78x8d"]
-sky_material = SubResource("ProceduralSkyMaterial_wvqfc")
+[sub_resource type="Sky" id="Sky_q8etp"]
+sky_material = SubResource("ProceduralSkyMaterial_txjfn")
 
-[sub_resource type="Environment" id="Environment_28ucp"]
+[sub_resource type="Environment" id="Environment_wmo8r"]
+resource_local_to_scene = true
 background_mode = 2
-sky = SubResource("Sky_78x8d")
+background_energy_multiplier = 1.21
+sky = SubResource("Sky_q8etp")
+ambient_light_source = 3
+ambient_light_color = Color(0.0034168442, 0.087270536, 0.19660836, 1)
+ambient_light_sky_contribution = 0.49
+ambient_light_energy = 1.24
 tonemap_mode = 2
+ssr_enabled = true
 glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.56
+glow_strength = 0.7
+glow_bloom = 0.2
+fog_light_color = Color(0.4434182, 0.5598078, 0.7060618, 1)
+fog_light_energy = 0.36
+fog_sky_affect = 0.02
+fog_height = 0.2
+fog_height_density = 5.0
+volumetric_fog_density = 0.1
+volumetric_fog_albedo = Color(0.7058824, 1, 1, 1)
+volumetric_fog_emission = Color(0.5647059, 0.7137255, 0.70980394, 1)
+volumetric_fog_emission_energy = 0.1
+volumetric_fog_ambient_inject = 0.2
+volumetric_fog_sky_affect = 0.586
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_epqss"]
+dof_blur_far_distance = 60.31
+
+[sub_resource type="Gradient" id="Gradient_78f14"]
+offsets = PackedFloat32Array(0.29192546, 0.66770184)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ffmrv"]
+gradient = SubResource("Gradient_78f14")
+
+[sub_resource type="Curve" id="Curve_jgady"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.46551722, 0.66138166), 0.0, 0.0, 0, 0, Vector2(0.81034476, 0.2491507), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_kkcq3"]
+curve = SubResource("Curve_jgady")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jyk3o"]
+emission_shape = 3
+emission_box_extents = Vector3(4, 4, 5)
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 0.099999994
+initial_velocity_max = 1.0
+gravity = Vector3(0, -5.5, 0)
+radial_accel_min = -4.0000024
+radial_accel_max = 3.9999976
+tangential_accel_min = -8.000002
+tangential_accel_max = 7.9999976
+damping_max = 4.0
+scale_min = 0.099999994
+scale_max = 0.29999998
+scale_curve = SubResource("CurveTexture_kkcq3")
+color_ramp = SubResource("GradientTexture1D_ffmrv")
+
+[sub_resource type="QuadMesh" id="QuadMesh_fbhbk"]
+material = ExtResource("3_bas4q")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_06wq0"]
 size = Vector3(66.15405, 1, 45.518677)
@@ -72,7 +139,27 @@ size_flags_horizontal = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.080839, 58.5353)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_28ucp")
+environment = SubResource("Environment_wmo8r")
+camera_attributes = SubResource("CameraAttributesPractical_epqss")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-0.16981284, -0.5752001, -0.8001928, -0.8492135, -0.32656536, 0.4149597, -0.50000006, 0.75, -0.43301266, 4.8888206, 24.743122, 11.761875)
+light_energy = 0.1
+shadow_enabled = true
+shadow_opacity = 0.74
+shadow_blur = 10.0
+sky_mode = 1
+
+[node name="Snow" type="GPUParticles3D" parent="WorldEnvironment"]
+transform = Transform3D(15, 0, 0, 0, 7, 0, 0, 0, 15, 0, 0, 0)
+amount = 8000
+lifetime = 5.0
+collision_base_size = 1.22
+process_material = SubResource("ParticleProcessMaterial_jyk3o")
+draw_pass_1 = SubResource("QuadMesh_fbhbk")
+
+[node name="Stars" parent="WorldEnvironment" instance=ExtResource("4_swyor")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -8.211363, 81.59166, 18.892782)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.6848015, 0.7287296, 0, -0.7287296, -0.6848015, 0, 0, 0)
@@ -154,5 +241,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.832396, 0)
 stream = ExtResource("11_txjfn")
 volume_db = -8.0
 unit_size = 93.55
+
+[node name="Outside_R&D" parent="." instance=ExtResource("9_5vnlg")]
+transform = Transform3D(0.047176152, 0, -0.9988866, 0, 1, 0, 0.9988866, 0, 0.047176152, 84.83584, -50.52699, -484.47034)
 
 [connection signal="body_entered" from="fall_area" to="." method="_on_fall_area_body_entered"]
