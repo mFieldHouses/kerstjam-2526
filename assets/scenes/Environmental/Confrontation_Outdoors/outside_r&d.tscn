@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://xy0jaufa0o2v"]
+
+[ext_resource type="PackedScene" uid="uid://bouff7sjsg00g" path="res://assets/meshes/Environment/Rocks/Cliff-1.tscn" id="1_fhb0r"]
+
+[node name="Outside_R&D" type="Node3D"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Mountains" type="Node3D" parent="World"]
+
+[node name="Cliff-1" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="Cliff-2" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(4.5423584, 0, 2.089732, 0, 5, 0, -2.089732, 0, 4.5423584, 0, 0, 22.534737)
+
+[node name="Cliff-4" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(18.169434, 0, 4.59741, 0, 15, 0, -8.358928, 0, 9.993189, -17.43903, 28.624165, 22.534737)
+
+[node name="Cliff-5" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(18.169434, 0, 4.59741, 3.5970309, 13.540132, -4.3002896, -7.5453987, 6.4548306, 9.020606, -19.979374, 16.46296, 6.428936)
+
+[node name="Cliff-6" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(18.94624, -3.0040867, 2.7497976, -0.440187, 11.068329, 7.4201994, -6.3911023, -9.66786, 7.6406307, -19.979374, 16.46296, 68.380264)
+
+[node name="Cliff-3" parent="World/Mountains" instance=ExtResource("1_fhb0r")]
+transform = Transform3D(4.91543, 0, -0.9157246, 0.2954394, 4.732627, 1.5858607, 0.8667566, -1.613146, 4.65258, 0, 0, 49.244694)
