@@ -60,11 +60,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		progress_ratio = clamp(progress_ratio, 0.0, 1.0)
 
-	if rotate_to_path:
-		# PathFollow3D kan zelf roteren met "rotation_mode",
-		# maar hieronder forceren we extra smooth draaien (optioneel).
-		# Zet in Inspector van PathFollow3D ook gerust rotation_mode = ORIENTED.
-		var target_basis := global_transform.basis
-		var current := global_transform
-		current.basis = current.basis.slerp(target_basis, clamp(rotate_lerp_speed * delta, 0.0, 1.0))
-		global_transform = current
+	#if rotate_to_path:
+		## PathFollow3D kan zelf roteren met "rotation_mode",
+		## maar hieronder forceren we extra smooth draaien (optioneel).
+		## Zet in Inspector van PathFollow3D ook gerust rotation_mode = ORIENTED.
+		#var target_basis := global_transform.basis
+		#var current := global_transform
+		#current.basis = current.basis.slerp(target_basis, clamp(rotate_lerp_speed * delta, 0.0, 1.0))
+		#global_transform = current
