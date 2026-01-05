@@ -16,7 +16,7 @@ signal done_saving
 func _ready() -> void:
 	save_game()
 	
-	_unlocked_stages = retrieve_save_data()["unlocked_stages"]
+	_unlocked_stages = (await retrieve_save_data())["unlocked_stages"]
 
 func save_game() -> void:
 	DirAccess.make_dir_absolute("user://savedata")
@@ -37,7 +37,7 @@ func save_game() -> void:
 func retrieve_save_data() -> Dictionary:
 	if _save_data:
 		return _save_data
-	
+		
 	var _fa : FileAccess = FileAccess.open("user://savedata/save.json", FileAccess.READ)
 	var _json : JSON = JSON.new()
 	

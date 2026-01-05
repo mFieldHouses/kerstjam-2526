@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+SaveFileManager="*res://scripts/autoloads/SaveFileManager.gd"
 GameConsole="*res://addons/GodotDevTools/scripts/autoloads/GameConsole.gd"
 GameConsoleCommandManager="*res://addons/GodotDevTools/scripts/autoloads/GameConsoleCommandManager.gd"
 GameLogger="*res://addons/GodotDevTools/scripts/autoloads/GameLogger.gd"
@@ -34,7 +35,6 @@ RaycastManager="*res://scripts/autoloads/RaycastManager.gd"
 DialogManager="*res://scripts/autoloads/DialogManager.gd"
 HitMarkerManager="*res://scripts/autoloads/HitMarkerManager.gd"
 GlobalGameFlags="*res://scripts/autoloads/GlobalGameFlags.gd"
-SaveFileManager="*res://scripts/autoloads/SaveFileManager.gd"
 ExplosionManager="*res://scripts/autoloads/ExplosionManager.gd"
 
 [editor]

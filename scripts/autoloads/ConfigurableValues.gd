@@ -7,11 +7,11 @@ extends Node
 @export_group("Controls")
 @export_range(0.1, 3.0, 0.01) var mouse_sensitivity : float = 1.0
 @export_range(0.1, 3.0, 0.01) var weapon_selection_scroll_sensitivity : float = 1.0
-var invert_weapon_selection_scroll : bool = false
+#var invert_weapon_selection_scroll : bool = false
 
 @export_group("Visual")
 @export_range(30, 170, 0.1) var fov : float = 75.0
-var low_graphics_mode : bool = false
+#var low_graphics_mode : bool = false
 
 @export_group("Audial")
 @export_range(0.0, 5.0, 0.01) var environment_volume : float = 1.0:
@@ -32,7 +32,7 @@ var low_graphics_mode : bool = false
 		_update_audio_levels()
 
 func _ready() -> void:
-	var _save_data : Dictionary = SaveFileManager.retrieve_save_data()
+	var _save_data : Dictionary = await SaveFileManager.retrieve_save_data()
 	
 	if !_save_data.has("configurable_values"):
 		return
