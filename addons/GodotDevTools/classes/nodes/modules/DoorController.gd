@@ -53,7 +53,6 @@ func _ready() -> void:
 		_debug_audio_state("ready")
 
 func toggle_door(toggled_with_key, state : bool):
-	print("toggle ", state)
 
 	# Play ONLY on opening
 	if state:
@@ -106,18 +105,6 @@ func _debug_audio_state(tag: String) -> void:
 		has_stream = (sfx_player.stream != null) or (door_sfx != null)
 		max_dist = sfx_player.max_distance
 		unit_size = sfx_player.unit_size
-
-	print("[DoorController audio:", tag, "] ",
-		"player=", sfx_player,
-		" has_stream=", has_stream,
-		" bus=", bus,
-		" volume_db=", vol,
-		" max_distance=", max_dist,
-		" unit_size=", unit_size,
-		" playing=", playing
-	)
-
-
 
 # -----------------------------------------
 # (Your old animation-player code remains untouched below.)
