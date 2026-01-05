@@ -16,16 +16,13 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(1.0).timeout
 	
-	DialogManager.initiate_dialog_with("enter_warehouse", $"Speaker-1", "Mysterieuze stem", load("res://addons/GodotDevTools/module.svg"))
+	DialogManager.initiate_dialog_with("enter_warehouse", $"Speaker-1", "Mysterieuze stem", load("res://assets/textures/thumbnails/unknown.png"))
 	
 	await DialogManager.dialog_ended
 	
 	await get_tree().create_timer(1.0).timeout
-	DialogManager.initiate_remote_dialog("enter_warehouse2", "Henkie", load("res://addons/GodotDevTools/module.svg"), true)
+	DialogManager.initiate_remote_dialog("enter_warehouse2", "Henkie", load("res://assets/textures/thumbnails/unknown.png"), true)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func _dialog_queue(did : String, qid : String) -> void:
 	if did == "enter_warehouse2":
