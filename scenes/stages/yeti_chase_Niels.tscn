@@ -5,6 +5,7 @@
 [ext_resource type="Material" uid="uid://qwubr3rg6pgm" path="res://assets/materials/snow_falling.tres" id="2_wtvri"]
 [ext_resource type="PackedScene" uid="uid://cotqedi4mq2rs" path="res://scenes/player.tscn" id="3_jwnq0"]
 [ext_resource type="PackedScene" uid="uid://byxx1uc6vr2m6" path="res://scenes/characters/yeti.tscn" id="4_0i7ep"]
+[ext_resource type="Resource" uid="uid://bf4lpuapwa1nv" path="res://assets/resources/items/ammo/snow.tres" id="7_tyfdp"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="8_gdanf"]
 [ext_resource type="PackedScene" uid="uid://darf1g5s0adew" path="res://assets/meshes/Misc/SterrenStofCondensator-1.glb" id="8_vftwx"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="9_nt3go"]
@@ -12,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://uf5g1abnjfl5" path="res://assets/meshes/Environment/Decoration/Rope-1.glb" id="10_gdanf"]
 [ext_resource type="PackedScene" uid="uid://bl0c2j771w8fa" path="res://assets/meshes/Environment/IcePatches/IceArc-1.tscn" id="11_aj23t"]
 [ext_resource type="PackedScene" uid="uid://2pbpl80r7ufi" path="res://assets/scenes/Walls/snow_high_4.tscn" id="12_nkhk4"]
-[ext_resource type="Resource" uid="uid://gwh384geqki4" path="res://assets/resources/items/ammo/fast.tres" id="15_aj23t"]
 [ext_resource type="PackedScene" uid="uid://v7wtl3jnht33" path="res://assets/meshes/Environment/IcePatches/ice_ceiling_1.tscn" id="15_gdanf"]
 [ext_resource type="PackedScene" uid="uid://pyv6r8asw4dc" path="res://assets/meshes/Environment/CornerSnow-1.glb" id="17_wtvri"]
 [ext_resource type="Material" uid="uid://d3tgm6vvwk00q" path="res://assets/materials/SnowOnStuff-1.tres" id="18_w7oa1"]
@@ -195,7 +195,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.900978, -0.11287606, -0.0
 navigation_mesh = SubResource("NavigationMesh_j5aua")
 
 [node name="player" parent="." instance=ExtResource("3_jwnq0")]
-transform = Transform3D(-0.067667045, 0, 0.99770796, 0, 1, 0, -0.99770796, 0, -0.067667045, -0.49437213, 0.98690087, 0.11800122)
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -0.49437213, 0.98690087, 0.11800122)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.9957601, 0.07802917, 0.04871639, -0.09198825, 0.844655, 0.52734816, 0, -0.5295936, 0.8482515, 0, 0, 0)
@@ -297,42 +297,42 @@ size_flags_horizontal = 4
 
 [node name="Ammo-Bullet-Globe-1" parent="ammo_crates" instance=ExtResource("18_wtvri")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -12.589524, 0.11126341, -0.5307212)
-held_item = ExtResource("15_aj23t")
+held_item = ExtResource("7_tyfdp")
 count = 50
 
 [node name="Ammo-Bullet-Globe-3" parent="ammo_crates" instance=ExtResource("18_wtvri")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -12.589524, 0.11126341, 0.07398653)
-held_item = ExtResource("15_aj23t")
+held_item = ExtResource("7_tyfdp")
 count = 50
 
 [node name="Ammo-Bullet-Globe-4" parent="ammo_crates" instance=ExtResource("18_wtvri")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -15.794237, 0.11126341, -6.627561)
-held_item = ExtResource("15_aj23t")
+held_item = ExtResource("7_tyfdp")
 count = 50
 
 [node name="Ammo-Bullet-Globe-5" parent="ammo_crates" instance=ExtResource("18_wtvri")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -18.344973, 0.11126341, -16.928879)
-held_item = ExtResource("15_aj23t")
+held_item = ExtResource("7_tyfdp")
 count = 50
 
 [node name="Ammo-Bullet-Globe-6" parent="ammo_crates" instance=ExtResource("18_wtvri")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -36.56575, 0.11126341, -12.435953)
-held_item = ExtResource("15_aj23t")
+held_item = ExtResource("7_tyfdp")
 count = 50
 
 [node name="Ammo-Bullet-Globe-7" parent="ammo_crates" instance=ExtResource("18_wtvri")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -31.842133, 0.11126365, 4.289419)
-held_item = ExtResource("15_aj23t")
+held_item = ExtResource("7_tyfdp")
 count = 50
 
 [node name="Ammo-Bullet-Globe-8" parent="ammo_crates" instance=ExtResource("18_wtvri")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -18.425116, 0.11126365, 16.328682)
-held_item = ExtResource("15_aj23t")
+held_item = ExtResource("7_tyfdp")
 count = 50
 
 [node name="Ammo-Bullet-Globe-2" parent="ammo_crates" instance=ExtResource("18_wtvri")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -22.790668, 0.113291115, 2.5429542)
-held_item = ExtResource("15_aj23t")
+held_item = ExtResource("7_tyfdp")
 count = 50
 
 [node name="part" parent="." instance=ExtResource("8_vftwx")]
