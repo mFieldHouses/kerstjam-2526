@@ -16,13 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://bxxankmgh5hfl" path="res://assets/meshes/Environment/SnowHigh-1-col.glb" id="22_h8udn"]
 [ext_resource type="PackedScene" uid="uid://cklh0pte3sm2y" path="res://assets/scenes/Buildings/building_santas_workshop.tscn" id="27_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://8qin0wvv51wp" path="res://assets/meshes/Sled/Sled-1.glb" id="28_ipl6n"]
-[ext_resource type="PackedScene" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
-[ext_resource type="PackedScene" path="res://assets/meshes/Environment/Ground-SantaMap.tscn" id="28_xguq7"]
+[ext_resource type="PackedScene" uid="uid://d8wbgo5c2a7e" path="res://scenes/elements/Pavment-1.tscn" id="28_l2h6s"]
+[ext_resource type="PackedScene" uid="uid://cgm2yd6wh5peu" path="res://assets/meshes/Environment/Ground-SantaMap.tscn" id="28_xguq7"]
 [ext_resource type="PackedScene" uid="uid://ctplqojdl2sbt" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-2.tscn" id="32_8tf0k"]
 [ext_resource type="PackedScene" uid="uid://cvxrtuu2m0i2w" path="res://assets/meshes/Misc/foot_step.tscn" id="32_iwwnf"]
 [ext_resource type="PackedScene" uid="uid://d3r5tdaxn7kxi" path="res://assets/scenes/Characters/NPC/ginger_bread_man_walking_around.tscn" id="40_jhtxq"]
 [ext_resource type="PackedScene" uid="uid://cj1rf52n2yyoy" path="res://assets/meshes/Misc/CandyCane-1.glb" id="40_mjwaw"]
-[ext_resource type="PackedScene" path="res://assets/meshes/Environment/IcePatches/IceSpikes-1.tscn" id="41_xguq7"]
+[ext_resource type="PackedScene" uid="uid://dtdywsc3tdm34" path="res://assets/meshes/Environment/IcePatches/IceSpikes-1.tscn" id="41_xguq7"]
 [ext_resource type="PackedScene" uid="uid://55uyehy4lgeh" path="res://assets/meshes/Environment/IcePatches/Floor-IcePatch-1.glb" id="67_hph74"]
 [ext_resource type="PackedScene" uid="uid://bpbi16h0l5bks" path="res://assets/scenes/Characters/Enemies/ginger_bread_man.tscn" id="67_qts4k"]
 [ext_resource type="Script" uid="uid://27xr8j11a8al" path="res://classes/nodes/modules/DialogueInitiator.gd" id="67_sna10"]
@@ -33,7 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://cyn5bi6e0gs42" path="res://assets/meshes/Environment/SnowHigh-3.glb" id="72_3kejl"]
 [ext_resource type="PackedScene" uid="uid://c0rpx2wuktd0h" path="res://assets/scenes/floors/floor-icepatch-1.tscn" id="73_x7rey"]
 [ext_resource type="PackedScene" uid="uid://c8unih57mu5w1" path="res://assets/meshes/Environment/Trees/Tree-1.glb" id="74_ju5eo"]
-[ext_resource type="PackedScene" path="res://scenes/elements/PileOfWood-1.tscn" id="75_6a1gd"]
+[ext_resource type="PackedScene" uid="uid://d3r6ngrcjihtk" path="res://scenes/elements/PileOfWood-1.tscn" id="75_6a1gd"]
 [ext_resource type="PackedScene" uid="uid://2pbpl80r7ufi" path="res://assets/scenes/Walls/snow_high_4.tscn" id="78_vpjt7"]
 [ext_resource type="Script" uid="uid://dytis7djokgek" path="res://classes/nodes/modules/StageLauncher.gd" id="80_nj3uu"]
 [ext_resource type="Script" uid="uid://b7dvxli4hd1ni" path="res://addons/GodotDevTools/classes/nodes/modules/triggers/AreaTrigger.gd" id="81_mydgr"]
@@ -155,7 +155,7 @@ script = ExtResource("1_mjwaw")
 curve = SubResource("Curve3D_mjwaw")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="intro_cam_path"]
-transform = Transform3D(0.033228923, 0, -0.99941677, 0, 0.99999744, 0, 0.99941677, 0, 0.033228923, 9.2089405, 9.482788, -17.891994)
+transform = Transform3D(0.033228923, 0, -0.9994167, 0, 0.99999744, 0, 0.9994167, 0, 0.033228923, 9.2089405, 9.482788, -17.891994)
 rotation_mode = 1
 use_model_front = true
 

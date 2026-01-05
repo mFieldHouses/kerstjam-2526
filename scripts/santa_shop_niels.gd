@@ -3,6 +3,8 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	DialogManager.dialog_queue.connect(_dialog_queue)
+	
 	if GlobalGameFlags.has_flag("game_completed"):
 		$Characters/player1.queue_free()
 		$Characters/player2._ready()
