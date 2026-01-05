@@ -300,6 +300,36 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -12.589524, 0.11126341,
 held_item = ExtResource("15_aj23t")
 count = 50
 
+[node name="Ammo-Bullet-Globe-3" parent="ammo_crates" instance=ExtResource("18_wtvri")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -12.589524, 0.11126341, 0.07398653)
+held_item = ExtResource("15_aj23t")
+count = 50
+
+[node name="Ammo-Bullet-Globe-4" parent="ammo_crates" instance=ExtResource("18_wtvri")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -15.794237, 0.11126341, -6.627561)
+held_item = ExtResource("15_aj23t")
+count = 50
+
+[node name="Ammo-Bullet-Globe-5" parent="ammo_crates" instance=ExtResource("18_wtvri")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -18.344973, 0.11126341, -16.928879)
+held_item = ExtResource("15_aj23t")
+count = 50
+
+[node name="Ammo-Bullet-Globe-6" parent="ammo_crates" instance=ExtResource("18_wtvri")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -36.56575, 0.11126341, -12.435953)
+held_item = ExtResource("15_aj23t")
+count = 50
+
+[node name="Ammo-Bullet-Globe-7" parent="ammo_crates" instance=ExtResource("18_wtvri")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -31.842133, 0.11126365, 4.289419)
+held_item = ExtResource("15_aj23t")
+count = 50
+
+[node name="Ammo-Bullet-Globe-8" parent="ammo_crates" instance=ExtResource("18_wtvri")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -18.425116, 0.11126365, 16.328682)
+held_item = ExtResource("15_aj23t")
+count = 50
+
 [node name="Ammo-Bullet-Globe-2" parent="ammo_crates" instance=ExtResource("18_wtvri")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -22.790668, 0.113291115, 2.5429542)
 held_item = ExtResource("15_aj23t")
