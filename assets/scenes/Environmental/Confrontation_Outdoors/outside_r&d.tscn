@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://xy0jaufa0o2v"]
+[gd_scene load_steps=7 format=3 uid="uid://xy0jaufa0o2v"]
 
 [ext_resource type="PackedScene" uid="uid://bouff7sjsg00g" path="res://assets/meshes/Environment/Rocks/Cliff-1.tscn" id="1_fhb0r"]
 [ext_resource type="PackedScene" uid="uid://dhbkkvbc7ybvl" path="res://assets/meshes/Environment/Rocks/Rock-1.tscn" id="2_3vweq"]
-[ext_resource type="Shader" uid="uid://r2mlubhtdmgb" path="res://assets/shaders/water.gdshader" id="3_2s5wo"]
 [ext_resource type="PackedScene" uid="uid://ccsosb3wod4io" path="res://scenes/elements/PineTree-1.tscn" id="4_jmry1"]
 [ext_resource type="PackedScene" uid="uid://bv0rihnbecmi0" path="res://assets/meshes/Buildings/ginger_bread_house_1.tscn" id="5_y0ml6"]
 
@@ -10,9 +9,8 @@
 subdivide_width = 100
 subdivide_depth = 100
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iyfi8"]
-render_priority = 0
-shader = ExtResource("3_2s5wo")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_csju6"]
+albedo_color = Color(0.28235295, 0.49803922, 1, 1)
 
 [node name="Outside_R&D" type="Node3D"]
 
@@ -89,7 +87,7 @@ transform = Transform3D(50, 0, 0, 0, 80, 0, 0, 0, 50, -131.18478, -18.285572, -4
 [node name="MeshInstance3D" type="MeshInstance3D" parent="World"]
 transform = Transform3D(1000, 0, 0, 0, 10, 0, 0, 0, 1000, 0, 0, 0)
 mesh = SubResource("PlaneMesh_csju6")
-surface_material_override/0 = SubResource("ShaderMaterial_iyfi8")
+surface_material_override/0 = SubResource("StandardMaterial3D_csju6")
 
 [node name="Trees" type="Node3D" parent="World"]
 

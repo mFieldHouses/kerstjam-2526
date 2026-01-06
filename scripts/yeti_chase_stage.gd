@@ -10,6 +10,8 @@ func _ready() -> void:
 	
 	_create_new_trail_point(Vector3.ZERO)
 	
+	$player.desired_camera_rotation_y = 0.5 * PI
+	
 	await get_tree().create_timer(1.0).timeout
 	
 	DialogManager.initiate_remote_dialog("enter_yeti_hollow", "Henkie", load("res://addons/GodotDevTools/module.svg"), true)
@@ -35,6 +37,7 @@ func _create_new_trail_point(at_position : Vector3) -> void:
 	var _new_point : PlayerTrailPoint = preload("res://scenes/player_trail_point.tscn").instantiate()
 	$player_trail_points.add_child(_new_point)
 	_new_point.position = at_position
+	_new_point.look_at(PlayerState.player_instance.velocity + at_position)
 	_player_trail_points.append(_new_point)
 	_new_point.wipe_out_from_point.connect(_wipe_trail_from_point.bind(_new_point))
 	_new_point.wipe_out_this_point.connect(_wipe_out_point.bind(_new_point))

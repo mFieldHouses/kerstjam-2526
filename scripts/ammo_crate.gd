@@ -37,7 +37,8 @@ func _ready() -> void:
 				pass
 		
 		if held_item.ammo_type_identifier != "fast":
-			$AnimatableBody3D.add_child(held_item.item_model.instantiate())
+			if held_item.item_model:
+				$AnimatableBody3D.add_child(held_item.item_model.instantiate())
 	
 	if is_health_pack:
 		print("is health pack")
