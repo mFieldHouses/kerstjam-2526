@@ -26,7 +26,7 @@ func _trigger(x) -> void:
 	activate.emit()
 	
 	var _move_tween : Tween = create_tween()
-	_move_tween.tween_property(get_parent(), "position:y", -54.5, 60) #sequence van een minuut 
+	_move_tween.tween_property(get_parent(), "position:y", -59, 60) #sequence van een minuut 
 	
 	await _move_tween.finished
 	finished.emit()

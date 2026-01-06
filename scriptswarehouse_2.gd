@@ -7,6 +7,8 @@ func _ready() -> void:
 	
 	$Platform/platform.activate.connect(func(): $soundtrack/Trigger.trigger.emit())
 	$Platform/platform.finished.connect($soundtrack.fade_out)
+	
+	$"Computer-1/ActionPromptTrigger".trigger.connect(_reactivate_power.unbind(1))
 
 func _reactivate_power() -> void:
 	GlobalGameFlags.add_flag("power_enabled")

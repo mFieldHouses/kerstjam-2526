@@ -155,7 +155,7 @@ script = ExtResource("1_mjwaw")
 curve = SubResource("Curve3D_mjwaw")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="intro_cam_path"]
-transform = Transform3D(0.033228923, 0, -0.99941677, 0, 0.99999744, 0, 0.99941677, 0, 0.033228923, 9.2089405, 9.482788, -17.891994)
+transform = Transform3D(0.033228915, 0, -0.9994166, 0, 0.99999744, 0, 0.9994166, 0, 0.033228915, 9.2089405, 9.482788, -17.891994)
 rotation_mode = 1
 use_model_front = true
 

@@ -6,6 +6,7 @@ func _ready() -> void:
 	if GlobalGameFlags.has_flag("game_completed"):
 		$Characters/player1.queue_free()
 		$Characters/player2._ready()
+		$Characters/player2.camera.current = true
 		
 		DialogManager.initiate_dialog_with("final", $Characters/NPC/Henkie2/Marker3D, "Henkie", null)
 		
